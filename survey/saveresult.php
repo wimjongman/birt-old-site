@@ -21,6 +21,11 @@ $line .= "\n";
 
 ignore_user_abort(true);
 $f = fopen( "results.csv", "a+t" );
+if ( ! $f )
+{
+	echo "Could not open results file!\n";
+	return;
+}
 flock( $f, LOCK_EX );
 
 // In case some other script has appended to the file while we were 
