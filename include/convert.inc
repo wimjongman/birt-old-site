@@ -473,6 +473,16 @@ function bodyPassTwo( )
 			else
 				echo $tokenText;
 		}
+		else if ( $tagName == "ul" )
+		{
+			$class = getClass( );
+			if ( $class == "arrow-list" )
+			{
+				arrowList( SIMPLE_ARROW_LIST );
+			}
+			else
+				echo $tokenText;
+		}
 		else
 			emitTag( );
 	}
@@ -490,7 +500,7 @@ function arrowList( $type )
 		{
 			// Ignore comments
 		}
-		else if ( $tagName == "/dl" )
+		else if ( $tagName == "/dl"  ||  $tagName == "/ul" )
 			break;
 		else if ( $tagName == "dt" )
 		{
@@ -503,7 +513,14 @@ function arrowList( $type )
 			copyItemText( );
 			endBullet( );
 		}
-		else if ( $tagName == "/dd"  ||  $tagName == "/dt" )
+		else if ( $tagName == "li" )
+		{
+			startBullet( );
+			copyItemText( );
+			endBullet( );
+		}
+		else if ( $tagName == "/dd"  ||  $tagName == "/dt"  ||
+		 		  $tagName == "/li" )
 		{
 			// Ignore the end tags
 		}
@@ -527,7 +544,8 @@ function copyItemText( )
 		}
 		else if ( $tagName == $tag )
 			break;
-		else if ( $tagName == "dt"  ||  $tagName == "dd"  ||  $tagName == "/dl" )
+		else if ( $tagName == "dt"  ||  $tagName == "dd"  ||  $tagName == "/dl" ||
+				  $tagName == "li"  ||  $tagName == "/li" ||  $tagName == "/ul" )
 		{
 			pushToken( $token );
 			break;
