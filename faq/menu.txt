@@ -5,7 +5,8 @@
 <item name="parameters" page="params.html"/>
 <item name="scripting" page="scripting.html"/>
 <item name="extensions" page="extensions.html"/>
-<item name="chart" page="chart.html"/>
+<item name="chart 1" page="chart.html"/>
+<item name="chart 2" url="Charts_FAQ.doc"/>
 <item name="deployment" page="deploy.html"/>
 <item name="output" page="output.html"/>
 <item name="internationalization" page="i18n.html"/>
