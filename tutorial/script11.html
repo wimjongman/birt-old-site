@@ -43,19 +43,15 @@ body tag.
 and without the quotes. (This is a style name defined by BIRT itself.)
 <li>In the Font page, choose "sans serif" as the font type.
 <li>Click OK.
-<li>All items in your report will change to sans-serif font.
 </ul>
+All items in your report will change to sans-serif font.
 <p>
 The names "serif" and "sans-serif" are defined by CSS: they are generic font
-styles that don't depend on the specific fonts installed on a machine. This helps
-to avoid depending on specific fonts, especially if your reports will be appear
-as part of a public web site.
-<p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-The new style does not appear in the preview, though it does appear in the
-layout view. This is a known problem.
-Note: this has been fixed in the S20050314 stable build.
-</div>
+styles that don't depend on the specific fonts installed on a machine. CSS 
+generic font names avoid dependencies on specific fonts installed on the browser 
+machine; something that is important if your reports will be appear
+as part of a public web site. You can also use font lists as in CSS. For 
+example: &quot;Helvetica, Arial, sans-serif&quot;.<p>
 
 <h1>Other Default Styles</h1>
 <p>
@@ -67,7 +63,13 @@ for the complete list.
 <p>
 Let's click the preview tab to see how our report looks after the formatting.
 Not bad, but we still need the report heading.
+<p class="caution"><span class="caution-head">Build S20050328 Note:</span> The 
+report style does not work in this build; your report will continue to appear 
+with the browser's default font. This is a known issue that will be addressed 
+shortly.</p>
+
 <p>
+&nbsp;<p>
 
 </body>
 </html>

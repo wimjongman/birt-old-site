@@ -14,24 +14,23 @@
 
 <h1>About Styles</h1>
 <p>
-We just mentioned that BIRT uses CSS to define the styles for report items. BIRT
-also allows you to define the properties in a separate style sheet, then to apply the
+We mentioned that BIRT uses CSS to define the styles for report items. BIRT
+also allows you to define the properties in a  style sheet, then to apply the
 style to a report item, just as in HTML. The result is that you create the style once
 and use it multiple times. If you need to change the look of a report, you can
-change the style in one place rather then in many different report items. Again,
-if you've defined your own styles when creating HTML pages, you're well on your
+change the style in one place rather then in many different report items. If you've defined your own styles when creating HTML pages, you're well on your
 way to understanding the BIRT style system.
-<p>
-<div class="caution"><span class="caution-head">Release 1.0 Note:</span> 
+</p>
+<p class="caution"><span class="caution-head">Release 1.0 Note:</span> 
 Styles in the first BIRT release work only within a
 single report (though you can copy &amp; paste them across reports.) A later BIRT
-release will create separate <i>style sheet</i> files that let you share styles
+release will create separate style sheet files that let you share styles
 across a suite of reports. BIRT style sheets will be very similar to the external 
-style sheet files in CSS.</div>
+style sheet files in CSS.</p>
 
 <h1>Creating a Style</h1>
 <p>
-Let's use the style feature to format the report header. Let's make the report
+Let's use the style feature to format the table header. Let's make the table
 header a blue bar with contrasting text. Instead of formatting each label one-by-one,
 we'll define a style, then apply it.
 
@@ -39,14 +38,12 @@ we'll define a style, then apply it.
 <li>Select the first label in the Table Header band.
 <li>Select Style&rarr;Add Style from the context menu.
 <li>The Style Properties dialog appears.
-<li>Switch to the General page.
-<li>Enter "Header" in the Name field.
-<li>Switch to the Background page.
+<li>Enter &quot;Header&quot; in the Name field on the General page.<li>Switch to the Background page.
 <li>Click the Background color button and choose the same blue: third from the right
 in the top row.
 <li>Switch to the Font page.
-<li>Set the Font color to white.
-<li>Set the Font weight to Bold.
+<li>Set the Color to white.
+<li>Set the Weight to Bold.
 <li>Click OK.
 </ul>
 <p>
@@ -59,10 +56,9 @@ this in a single step by selecting all four when we defined the style. We're
 doing it in two steps just to show how it's done.)
 
 <ul>
-<li>Select the three labels: click on the first, then use Ctrl+Click to add
+<li>Select the other three labels: click on the City label, then use Ctrl+click to add
 the other two to the selection.
-<li>Choose Style&rarr;Apply Style Rule from the context menu.
-<li>Choose Header from the list of styles that appears.
+<li>Choose Style&rarr;Apply Style Rule&#8594;Header from the context menu.
 </ul>
 <p>
 The other three cells are now also formatted.

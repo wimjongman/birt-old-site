@@ -14,28 +14,32 @@
 
 <h1>Create a Project</h1>
 <p>
-The first step with Eclipse is to create a new project. Eclipse uses projects to
-organize your files. For this demo, let's create a project called "My Reports":
+Eclipse uses projects to organize your files. So, the first step is to create a new project.  For this demo, let's create a project called "My Reports":
 
 <ul>
 <li>Choose File&rarr;New&rarr;Project. The new project dialog appears.
 <li>Open the "Business Intelligence and Reporting Tools" group and choose 
-"Report Project.
+"Report Project&quot;.
 <li>Click Next.
 <li>Type "My Reports" (without the quotes) as the project name.
 <li>Click Finish.
-<li>Click OK when asked to switch to the Report Design perspective.
-</ul>
+<li>Click OK if asked to switch to the Report Design perspective. (This occurs 
+if you create a BIRT project while in a perspective other than Report Design.)</ul>
 
 <h1>Create a Report</h1>
 <p>
-We're now ready to create our first report.
-
-<ul>
+We're now ready to create our first report:<ul>
 <li>Choose File&rarr;New&rarr;Report. The new report dialog appears.
 <li>In the tree view, choose the project we just created: My Reports.
-<li>Enter the following in the file name field: Customers.rptdesign
-<li>Click Next.
+<li>Enter the following in the file name field: Customers.rptdesign.<li>Click Next.</ul>
+
+<p>You can create a report in three ways: as a blank report, by using a 
+BIRT-defined template, or by copying one of your report designs. The second page 
+of the New Report dialog provides two of these options. Since we want to use a 
+template, do the following:</p>
+<ul>
+  <li>Select &quot;Create Report from a predefined template&quot;</li>
+  <li>Click Next.</li>
 </ul>
 
 <h1>Choose a Template</h1>
@@ -66,7 +70,7 @@ sets of related data in a single report.
 <dt>Side by Side Chart &amp; Listing
 <dd>A visual variation of the above.
 
-<dt>Mailing Lables
+<dt>Mailing Labels
 <dd>Prints mailing labels on special
 label stock on your printer.
 
@@ -75,17 +79,20 @@ label stock on your printer.
 text. The letter text can be formatted using a subset of HTML.
 </dl>
 <p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note</span>: 
+<p class="caution"><span class="caution-head">Release 1.0M1 Note</span>: 
 Only the Blank Report, Simple Listing and Grouped Listing and
-Letter work in this build.</div>
+Letter work in this build.</p>
+<p class="caution"><span class="caution-head">Build S20050328 Note</span>:
+All templates
+work as of this build, but a few are scheduled for additional improvements.</p>
 <p>
 We're now ready to choose our template:
 
 <ul>
 <li>Select the Grouped Listing.
-<li>Click Finish.
-</ul>
+<li>Click Finish.</ul>
+
+<p>BIRT opens your new report in the Eclipse workspace.</p>
 
 </body>
 </html>
-

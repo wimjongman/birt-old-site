@@ -21,31 +21,39 @@ left, the report title in the center, and the run date on the right.
 The easiest way to create such a layout is to use a grid. A grid is like an
 HTML table, it tells BIRT the desired layout, and BIRT does the work to make it
 happen. In this case, we want a one-row grid with three columns each 1/3 the
-width of the table.
+width of the page.
 
 <ul>
 <li>Drag a Grid item from the palette into your report above your table.
 <p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-It is currently difficult to drop the grid in
-the right place. Watch for a vertical black line to the left of the table. If
-all else fails, drop it under the table, in the right half of the page, then move
-it above the table.</div>
 <p>
-<li>Delete the last row by clicking the Grid's tab, then on the gray header
+<li>Delete the last row by displaying the grid tab, clicking on the tab, then on the 
+shaded header
 to the left of the row. Press Delete.
-<li>Delete the second row the same way.
+</ul>
+
+<h1>Row Properties</h1>
+We want the contents of the header to be top-aligned. And we'll use the second 
+row as a spacer between the header proper and the report body:<ul>
+<li>Select the entire first row.<li>In the General page of the Property Editor, 
+set the vertical alignment to Top.<li>Select the second row.
+<li>In the General page of the Property Editor, set the height to 0.25 in.</ul>
+
+<h1>Column Properties</h1>
+<p>We want each of the three columns to be 1/3 the width of the page, and we 
+want them to be left, center and right aligned:</p>
+
+<ul>
 <li>Select the three column headers.
-<p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
+<p class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
 The current build does not support multiple
-selection of columns. For now, just set each column individually.</div>
+selection of columns. For now, just set each column individually.</p>
 <p>
 <li>Switch to the General tab in the Property Editor. Notice that the width
 is unset. As in HTML,
 if the column width is not set, BIRT will size the column to its content.
 <li>Set the column widths to 33%. Do this by typing "33" in the width field,
-then selecting "%" from the adjacent pulldown.
+then selecting "%" from the adjacent pull-down.
 <li>Select the middle column. In the General page of the Property Editor,
 set the text alignment to Center.
 <li>Select the rightmost column. In the General page of the Property Editor,
@@ -54,10 +62,8 @@ set the text alignment to Right.
 
 <h1>Insert an Image</h1>
 <p>
-Next, let's add the company logo to the heading. We'll link to an image on the
-BIRT web site; but you can also <i>embed</i> an image located on your local disk.
-
-<ul>
+Next, let's add the company logo to the heading. We'll link to an image on the 
+BIRT web site:<ul>
 <li>Drag an Image item from the palette into the left-most cell of your grid.
 <li>The Image Builder dialog appears.
 <li>Ensure that the URL radio button is selected.
@@ -66,6 +72,9 @@ BIRT web site; but you can also <i>embed</i> an image located on your local disk
 <li>Click Insert to add the image to your report.
 </ul>
 
+<p>You can also embed an image from your local disk. Embedding the image copies 
+the image into the report design. Using a URL is more efficient.</p>
+
 <h1>Insert the Run Date</h1>
 <p>
 Next, let's display the current date in the right-most cell in the heading.
@@ -73,20 +82,16 @@ Next, let's display the current date in the right-most cell in the heading.
 <ul>
 <li>Drag a Data item from the Palette into the right-most cell of your grid.
 <li>The expression builder will appear.
-<li>Display the current date.
-<p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-The current date functionality is not
-yet available. For now, simulate it by typing "Mar. 1, 2005" with the quotes.</div>
-<p>
+<li>Type &quot;new Date( )&quot; (without the quotes) to display the current date.
 <li>Click OK.
 <li>Set the date format. Select the Format page within the Property Editor.
 <li>Choose "Medium Date" for the date format.
+<li>Select the cell that contains the date.
 </ul>
 <p>
 BIRT uses Java formatting (based on Microsoft Excel) for dates, numbers and 
 strings. In
-addition, BIRT adds a number of specialized, locale-independent date formats
+addition, BIRT adds a number of specialized, locale-aware date formats
 described in the
 <a href="/birt/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>.
 <p>

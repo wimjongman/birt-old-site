@@ -14,8 +14,9 @@
 
 <h1>Edit a Data Set</h1>
 <p>
-Like the data source, the data set appears in the Data Explorer. We can use the
-data set editor to both change and test the data set.
+Your new data set appears in the Data Explorer along with your data source. We can use the
+data set editor to  change the data set, and to test it to make sure it returns 
+the correct data.
 
 <ul>
 <li>Find or open the Data Explorer.
@@ -31,37 +32,32 @@ The data set editor provides the following pages:
 <dt>Query
 <dd>Displays your SQL SELECT statement. You can edit this
 statement to add a WHERE clause, adjust the set of selected columns, and
-more.
-
-<dt>Computed Columns
+more. Use the SQL editor to add computed columns that are to be calculated by 
+the database engine. Give such columns a name using the SQL ALIAS clause.<dt>Computed Columns
 <dd>Computed columns are calculated by BIRT and appear
 to the rest of the report just like any other column. You can use JavaScript
-expressions, and even call into Java for advanced business logic.
-
-<dt>Input Parameters
-<dd>SQL SELECT statements can include <i>input
-parameters</i> that pass data into the query. They are marked using the SQL ?
+expressions, and even call into Java for advanced business logic.<dt>Parameters
+<dd>SQL SELECT statements can include input
+parameters that pass data into the query. They are marked using the SQL &quot;?&quot;
 symbol in the query. This page lets you give the parameters a name, a default
-value, and so on. There must be a one-to-one coorespondence between entries
-on this page and the ? symbols in your query.
+value, and so on. There must be a one-to-one correspondence between entries
+on this page and the &quot;?&quot; symbols in your query.
 
 <dt>Filters
-<dd>Additional filters applied to your data. Filters restrict
+<dd>Additional filters that BIRT applies to your data. Filters restrict
 the data passed to the report. The WHERE clause
 is also a filter: one executed by the database. This tab lets you define additional
 filters using BIRT (JavaScript) scripting.
 
 <dt>Output Columns
 <dd>Shows the columns within the query, and lets you define
-a column <i>alias</i> for use in the report. Note that this view shows the columns
+a column alias for use in the report. Note that this view shows the columns
 as the report will see them. The Query page shows the columns as selected from
 the database.
 
 <dt>Preview Results
 <dd>Lets you test your query and see the output. Very handy
-to make sure that the data is right before you proceed with report design.
-
-</dl>
+to make sure that the data is right before you proceed with report design.</dl>
 
 For now, we're just going to test our query.
 

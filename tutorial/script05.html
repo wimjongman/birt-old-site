@@ -39,19 +39,33 @@ The next page lets you select one or more tables for your query. For our first
 report, we'll select just one table: Customers.
 
 <ul>
-<li>Choose "Tables" within the Select Type field.
-<li>Type "%" (without the quotes) into the Apply Filter field.
-<li>Click Apply Filter to find all tables.
 <li>Select the customers table.
 <li>Click the &gt; button to add it to the query.
-<li>Click Next.
-</ul>
+<li>Click Next.</ul>
+
+<h2>Table Filters</h2>
+<p>The sample schema is small, so all tables appear in the table list. However, 
+if your own schema is large, it may be too large to display all at once. You can 
+search within your schema using the filter controls:</p>
+
+<ul>
+<li>Choose "Tables" or &quot;Joins&quot; within the Select Type field.
+<li>Type a search criteria into the  Filter field. You can use &quot;-&quot; (dash) to 
+match any one character, or &quot;%&quot; to match any number of characters. For example, 
+to find all tables that start with &quot;o&quot;, type &quot;o%&quot;.<li>Click Apply Filter to run 
+the search.</ul>
+
+<h2>Table Joins</h2>
+<p>Our sample query uses just one table. However, most real-world queries use 
+many tables joined together. To create a join, just add each of your tables. 
+Then, specify joins by dragging the join columns from one table image to 
+another.</p>
 
 <h1>Choose Columns</h1>
 <p>
 You can choose any number of columns to appear in your report. Normally, you would
 choose only those columns that are actually needed by the report. For our first
-report, we'll choose all columns.
+report, however, we'll choose all columns.
 
 <ul>
 <li>Scroll the list of columns up so you can see the customers table entry.

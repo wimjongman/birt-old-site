@@ -9,6 +9,7 @@
 <step name="table" 				page="script07.html"	title="Building a Table"/>
 <step name="testing your report" page="script08.html"	title="Testing a Report"/>
 <step name="visual properties" 	page="script09.html"	title="Setting Visual Properties"/>
+<step name="data properties" 	page="script09a.html"	title="Setting Data Properties"/>
 <step name="styles" 			page="script10.html"	title="Using Styles"/>
 <step name="cascading styles" 	page="script11.html"	title="Cascading Styles"/>
 <step name="grid" 				page="script12.html"	title="Using a Grid"/>
