@@ -134,6 +134,14 @@ servlet mapping does not work in this build.</p>
 <p>See below for a list of available parameters. The parameters allow you to 
 control which of the three frames appear in the resulting web page.</p>
 
+<p>When you issue this command, the viewer will do one of two things:</p>
+
+<ul>
+  <li>Run and display the report if it has no parameters, or</li>
+  <li>Display the parameter page and ask you to enter parameters. You can then 
+  click the Run Report button to run the report.</li>
+</ul>
+
 <h1>Viewer Parameters</h1>
 
 <p>Both Viewer operations take a set of required and optional parameters. They include both report&nbsp; and viewer parameters. Report parameters are 
@@ -190,7 +198,7 @@ customized viewer that supports the POST method.</p>
     <td>html or pdf</td>
     <td>html</td>
     <td>Y</td>
-    <td>Y</td>
+    <td>N</td>
   </tr>
   <tr>
     <td>__frame</td>
@@ -274,7 +282,7 @@ frames: Report data, parameter page (depending on the __navigation parameter)
   and toolbar (depending on the __toolbar parameter).</li>
   <li><code>false</code> &ndash; The report is 
 displayed as a single page. The parameter UI and tool bar are aggregated into 
-  the report page. The report itself is put into an embedded HTML iframe since 
+  the report page using an HTML table. The report itself is put into an embedded HTML iframe since 
   it is a complete HTML page.</li>
 </ul>
 
@@ -286,13 +294,10 @@ insensitive. </p>
 <p>Use the <code>__locale</code> parameter to specify both the locale for report 
 parameter 
 values, and the locale for the report output. The locale must be a valid Java 
-locale such as <code>en-us</code>, etc.</p>
-
-<div class="caution">
-<span class="caution-head">Release 1.0M1 Note</span>: If you do not specify a 
-locale, the locale defaults to <code>en</code>. A future version may default the 
-locale to 
-that of your app server or operating system.</div>
+locale such as <code>en-us</code>, etc. as specified in the
+<a href="http://java.sun.com/j2se/1.4.2/docs/guide/intl/locale.doc.html">Sun 
+Java locale guidelines</a>. If you do not specify a locale, it defaults to the 
+locale set in the Java virtual machine (JVM.)</p>
 
 <h2>The <code>__navigation</code> Parameter</h2>
 
@@ -311,13 +316,10 @@ releases, hence the name.) Choices are:</p>
 
 <h2>The <code>__report</code> Parameter</h2>
 
-<p>The <code>__report</code> parameter gives the absolute path name of the 
-report design on the local system. It must be an absolute file path name.</p>
-
-<div class="caution">
-<span class="caution-head">Release 1.0M1 Note</span>: The viewer currently 
-requires an absolute path to the report on the server machine. Upcoming versions 
-will support relative paths.</div>
+<p>The <code>__report</code> parameter names the 
+report design to run. The parameter can be an absolute or relative path. If 
+relative, the looks in the directory specified in the <code>BIRT_VIEWER_REPORT_ROOT</code> 
+property in the viewer's <code>web.xml</code> file.</p>
 
 <h2>The <code>__toolbar</code> Parameter</h2>
 
@@ -361,8 +363,8 @@ are defined as follows:</p>
     <td>Boolean</td>
     <td>true, false</td>
     <td>Must use the value true for a true value, all other values 
-    (including 1) are treated as false. (Uses the Java Boolean.parse( ) method 
-    for parsing.)</td>
+    (including 1) are treated as false. (Uses the Java Boolean.parse() method 
+    for parsing.) Values are case-insensitive.</td>
   </tr>
   <tr>
     <td>Number</td>
