@@ -45,7 +45,7 @@ into your "C:\Program Files" directory. This will create a subdirectory called e
 To make it easier to start Eclipse, create a shortcut to Eclipse on your desktop:
 
 <ul>
-<li>From the desktop, right click, choose New?Shortcut.
+<li>From the desktop, right click, choose New&rarr;Shortcut.
 <li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)
 <li>Click Next.
 <li>Enter “Eclipse” for the shortcut name.
@@ -117,6 +117,25 @@ eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 You can optionally add a <code>&lt;Location></code> element to specify the
 location of the JDBC driver files.
 </div>
+
+<h1>Updating a BIRT Installation</h1>
+<p>
+If you have a version of BIRT installed, and want to install a newer version,
+simply do the following:
+
+<ul>
+<li>Close Eclipse.
+<li>Locate your Eclipse plugins directory. If you installed on Windows in the
+default location, this is "C:\program files\eclipse\plugins".
+<li>If you added any custom JDBC drivers, save a copy of these drivers, and
+the modified odaconfig.xml file, from 
+eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
+<li>Delete all directories that start with "org.eclipse.birt".
+<li>Download and install BIRT as described in the BIRT section above.
+<li>Copy your custom JDBC drivers and and odaconfig.xml file from your temporary
+location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
+<li>Restart Eclipse.
+</ul>
 
 </body>
 </html>
