@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Stable Build S20050314</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Stable Build S20050314</p>
+<p class="subhead">New &amp; Noteworthy</p>
+
+<h1>Report Designer</h1>
+
+<ul class="arrow-list">
+<li>Implemented the extension system with charts.
+<li>Added JavaScript native objects corresponding to some of the ROM elements. 
+<li>Added a validation framework to handle checks across multiple properties.
+<li>Drag &amp; drop will insert a new element at the insert position even if the
+mouse cursor is in the margin area of the designer.
+<li>Changed the look and feel of margin border. Made it similar to Word.
+<li>Made the margin area visible if the element is expanded within the content area.
+<li>Implemented column and row back ground color.
+<li>Added edit action to the context menu of label item, text item, etc.
+</ul>
+
+<h1>Report Engine</h1>
+
+<ul class="arrow-list">
+<li>FOP customization. Now users can customize FOP through a config file 
+birt_fop.xml. They can ask FOP to use additional font when rendering. 
+This addresses a newsgroup question about supporting Chines characters in PDF 
+output. 
+<li>Handling spaces in textual items. Consecutive space characters in HTML input for 
+text items are trimmed, while consecutive space characters entered as plain text are 
+preserved. 
+<li>Migrated to Java 1.4 logging framework as suggested by a user in the
+newsgroup. The engine now uses Java 1.4 logging framework. 
+<li>Completed simple master page support, including two new properties footerHeight 
+and headerHeight.
+</ul>
+
+<h1>Data Engine</h1>
+<p>
+Tested the following JDBC drivers:
+
+<table class="simple-table">
+<thead><tr>
+ <td>Driver<td>Driver Version<td>Database(es)<td>Driver Name
+</tr></thead>
+<tbody>
+<tr>
+ <td>Jdbc-odbc<td>2.1	
+	<td>ODBC
+		<td>sun.jdbc.odbc.JdbcOdbcDriver
+<tr>
+ <td>jTDS <td>0.9
+	<td>MS SQLServer 8.0, 
+	Sybase 12.5
+		<td>net.sourceforge.jtds.jdbc.Driver
+<tr>
+ <td>MySql <td>3.0
+	<td>MySql
+		<td>com.mysql.jdbcDriver
+<tr>
+ <td>DB2 <td>2.4
+	<td>Derby, 
+	DB2 7.2
+		<td>com.ibm.db2.jcc.DB2Driver
+<tr>
+ <td>Oracle <td>9.0.2
+	<td>Oracle 9.2
+		<td>oracle.jdbc.driver.OracleDriver
+<tr>
+ <td>Postgres <td>8.0
+	<td>Postgres
+		<td>org.postgresql.Driver
+</tbody>
+</table>
+
+
+</body>
+</html>

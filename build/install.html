@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Installing BIRT</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Installing BIRT</p>
+<p class="subhead">A step-by-step guide</p>
+
+<h1>Introduction</h1>
+<p>
+Below are complete instructions for installing BIRT. If you are already
+familiar with Eclipse plugins, you might want to follow the abbreviated
+requirements and instructions on the
+<a href="http://download.eclipse.org/birt/downloads">
+download page</a>.
+Otherwise, follow along below for detailed steps for installing BIRT.
+
+<h1>Java</h1>
+<p>
+You'll need a <a href="http://java.sun.com">Java</a> J2SE 1.4 JRE. The latest version, 
+at the time of writing, is 1.4.2_07. Download
+<a href="http://java.sun.com/j2se/1.4.2/download.html">J2SE v 1.4.2_07 JRE</a>
+and install it.
+
+<h1>Eclipse</h1>
+<p>
+BIRT is compatible with Eclipse 3.0.1. BIRT will not run with Eclipse 2.x; and has
+known problems with the Eclipse 3.1 milestone builds. BIRT has not been tested with
+the Eclipse 3.0 release. Download and install the
+<a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
+Eclipse Platform 3.0.1 Release</a>.
+<p>
+(Note: Eclipse, EMF, GEF and BIRT are all available from the
+<a href="http://www.eclipse.org/downloads/index.php">Eclipse download page</a>.)
+<p>
+Eclipse comes as a zip file or tar file. On Windows, unzip the install file
+into your "C:\Program Files" directory. This will create a subdirectory called eclipse.
+<p>
+To make it easier to start Eclipse, create a shortcut to Eclipse on your desktop:
+
+<ul>
+<li>From the desktop, right click, choose New?Shortcut.
+<li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)
+<li>Click Next.
+<li>Enter “Eclipse” for the shortcut name.
+</ul>
+
+<h1>GEF</h1>
+<p>
+GEF is the "Graphic Editor Framework", an Eclipse plugin used by the BIRT UI.
+Download the
+<a href="/birt/frameizer.php?page=http://www.eclipse.org/downloads/download.php?file=/tools/gef/downloads/index.php">
+GEF 3.0.1 Release, GEF Runtime</a>.
+<p>
+GEF comes as a zip file. Unzip GEF into directory that contains Eclipse. If you
+installed Eclipse into the standard location on Windows, then unzip GEF into
+"C:\Program Files".
+
+<h1>EMF</h1>
+<p>
+The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
+<a href="http://download.eclipse.org/tools/emf/scripts/downloads.php">
+EMF & SDO RT version 2.0.1</a>. Look in the Latest Releases sections of the
+download page.
+<p>
+EMF also comes as a zip file. Unzip EMF into directory that contains Eclipse.
+This is the same directory you used for GEF.
+
+<h1>BIRT</h1>
+<p>
+Download the
+<a href="http://download.eclipse.org/birt/downloads/">
+Latest milestone or stable build</a> (whichever is newer). Download only the
+BIRT designer: "birt-designer-XXX.zip".
+<p>
+BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
+
+<div class="caution"><span class="caution-head">Release 1.0M1 Note</span>:
+For BIRT 1.0M1 <i>only</i>, unzip BIRT into the plugins directory:
+eclipse/plugins. If you installed BIRT on Windows in the default location,
+then put BIRT into "C:\program files\eclipse\plugins". Later builds use the
+same zip location as GEF and EMF.</div>
+
+<h1>JDBC Driver</h1>
+<p>
+You will likely want to use your own JDBC driver with BIRT. Here's how. BIRT
+includes the Open Data Access (ODA) framework for data access. To add a JDBC driver,
+include the driver's jar file name in the JDBC ODA driver's configuration 
+file: odaconfig.xml. The configuration file is in the plugin directory for
+the JDBC ODA plugin: eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
+<p>
+Use any text editor to edit the configuration file. You will find the following 
+starting at line 26:
+
+<pre class="code-block">
+&lt;DriverLibraries>
+ &lt;LibrariesForOS>
+  &lt;OSType>All&lt;/OSType>
+  &lt;LibraryName>oda-jdbc.jar&lt;/LibraryName>
+  &lt;LibraryName>jtds-0.9.jar&lt;/LibraryName>
+ &lt;/LibrariesForOS>
+</pre>
+
+Simply add another <code>&lt;LibraryName></code> element for each 
+additional JDBC driver jar file that might be needed.
+<br><br>
+By default, a driver's library files must be in the JDBC plugin directory.
+So, copy your jdbc driver jar into 
+eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
+<br><br>
+You can optionally add a <code>&lt;Location></code> element to specify the
+location of the JDBC driver files.
+</div>
+
+</body>
+</html>

@@ -2,23 +2,9 @@
 <html>
 
 <head>
-<title>BIRT Example Reports</title>
+<title>BIRT Build Information</title>
 <link rel="stylesheet" href="../style/compose.css" type="text/css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<style>
-	.mytable
-	{
-		border: 1pt ridge silver;
-		border-collapse: collapse;
-		margin: 10pt;
-	}
-
-	.mytable td, .mytable th
-	{
-		border: 1pt ridge silver;
-		padding: 5pt;
-	}
-</style>
 </head>
 
 <body>
@@ -26,16 +12,21 @@
 <p class="head">BIRT Builds</p>
 <p class="subhead"></p>
 
-<h1>CVS Information</h1>
+<h1>Installing BIRT</h1>
+<p>
+BIRT is an Eclipse plugin and installs like other plugins. Detailed instructions
+are available on the <a href="install.html">download page</a>.
 
+<h1>CVS Information</h1>
+<p>
 All BIRT code resides in Eclipse CVS.
 
 <dl class="arrow-list">
-<dt><a href="frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi">CVS Information</a>
+<dt><a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi">CVS Information</a>
 <dd>Provides a web interface to Eclipse CVS. Instructions for using CVS with
 Eclipse. CVS documentation. A good place to start.
 
-<dt><a href="frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/?cvsroot=BIRT_Project">
+<dt><a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/?cvsroot=BIRT_Project">
 BIRT Source</a>
 <dd>BIRT source resides in the "source" subdirectory.
 
@@ -43,12 +34,12 @@ BIRT Source</a>
 <dd>See the <a href="build_instr.html">build instructions</a> for details.
 Briefly:
 <br><br>
-<table border=0 class="mytable">
-<tr><td>Connection type:</td><td>pserver</td></tr>
-<tr><td>User:</td><td>anonymous</td></tr>
-<tr><td>Password:</td><td></td></tr>
+<table border=0 class="simple-table">
 <tr><td>Host:</td><td>dev.eclipse.org</td></tr>
 <tr><td>Repository path:</td><td>/home/birt</td></tr>
+<tr><td>User:</td><td>anonymous</td></tr>
+<tr><td>Password:</td><td></td></tr>
+<tr><td>Connection type:</td><td>pserver</td></tr>
 <tr><td>Use Default Port:</td><td>yes</td></tr>
 </table>
 
@@ -67,6 +58,13 @@ the source.
 <dt><a href="build_instr.html">Building BIRT</a>
 <dd>Provides complete instructions for building BIRT within Eclipse.
 </dl>
+
+<h1>Build Notes</h1>
+
+<ul class="arrow-list">
+<li><a href="S20050314.html">S20050314</a>
+<li>1.0M1: First BIRT release.
+</ul>
 
 </body>
 </html>
