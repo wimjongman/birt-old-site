@@ -14,47 +14,71 @@
 
 <h1>Integration Points</h1>
 
-<p>The BIRT reporting solution provides two main solutions for integrating
-with your application:</p>
+<p>BIRT reporting provides a variety of integration points to accomplish various tasks:</p>
 <ul>
-  <li>Using the <a href="#viewer">BIRT Viewer</a> web application,
-  or a customized version</li>
-  <li>Using the BIRT Report Engine in your
-  application.</li>
+  <li><a href="#runtime">Runtime integration</a></li>
+  <li><a href="#design">Design-time integration</a></li>
+  <li><a href="#extensions">Extensions to BIRT</a></li>
 </ul>
 
-<h1>BIRT Reporting APIs</h1>
-<p>
-BIRT a number of APIs to accomplish a variety of tasks:
+<p>BIRT charting APIs are described elsewhere. (Not yet available.)
 </p>
-<dl class="arrow-list">
+
+<h1><a name="runtime">Runtime Integration</a></h1>
+
+<p>Your application can integrate the BIRT web and engine runtimes:</p>
+<dl class="break-list">
 <dt><a href="#viewer">BIRT Report Viewer</a></dt>
 <dd>A series of URLs that your application can
 use to display a parameter page, run and display a report, etc.
 </dd>
 
-<dt>Report Engine API</dt>
+<dt><a href="#engine-api">Report Engine API</a> (Not yet available.) </dt>
 <dd>A Java interface used to embed the BIRT report engine within your application.
 The engine behavior can be customized for use in a web app, RCP app, command
 line app, etc.</dd>
+</dl>
 
-<dt>Design Engine API</dt>
+<h1><a name="design">Design-Time Integration</a></h1>
+
+<p>Your application can explore or create BIRT XML report designs:</p>
+<dl class="break-list">
+
+<dt><a href="#deapi">Design Engine API</a></dt>
 <dd>Provides access to a BIRT report design. You can explore the design,
 modify it and so on. Use this API to create your own custom report designer,
 or to perform batch tasks on designs.</dd>
-
-<dt>BIRT Model Extension API</dt>
-<dd>The BIRT model is extensible; you can add new report items. Use this
-API to include design-time, run-time or presentation-time behavior.</dd>
-
-<dt>Open Data Access (ODA) Extension API</dt>
-<dd>BIRT provides certain data source. Use the ODA API to create custom
-data sources drivers. Each driver has run-time behavior along with
-optional design-time UI.</dd>
+<dt><a href="viewer-php.html">Generate a Report Design Directly</a></dt>
+<dd>If you can write XML files, or with  templates, you can generate report 
+designs based on an application-specific report designer. This technique is 
+ideal for non-Java scripting environments such as PHP.</dd>
 </dl>
 
-<p>BIRT charting APIs are described elsewhere. (Documents not yet available.)
-</p>
+<h1><a name="extensions">Extending BIRT</a></h1>
+
+<p>Your application can extend BIRT for your specific needs:</p>
+<dl class="break-list">
+
+<dt><a href="../ref/ROM_Scripting_SPEC.pdf">Scripting</a> (Reference only 
+currently available.)</dt>
+<dd>BIRT provides extensive scripting support. You can create anything from 
+computed columns to sophisticated business logic to extensive integration with 
+existing Java code.</dd>
+
+<dt>Open Data Access (ODA) Extension API (Not yet available.) </dt>
+<dd>BIRT provides a JDBC data source. Use the ODA API to create custom
+data sources drivers. Each driver has run-time behavior along with
+optional design-time UI.</dd>
+<dt>Scripted Data Source (Not yet available.)</dt>
+<dd>The scripted data source and data set elements allow you to access custom 
+data sources directly from your report without the need to create an ODA driver. 
+This solution is ideal for one-off data sources, prototypes, and the like.</dd>
+
+<dt>BIRT Model Extension API (Not yet available.) </dt>
+<dd>The BIRT model is extensible; you can add new report items. Use this
+API to include design-time, run-time or presentation-time behavior.</dd>
+</dl>
+
 <h1>Status</h1>
 <p>
 The deployment portions of the BIRT project are still being refined. The information
@@ -79,7 +103,8 @@ the <a href="../community.html">news group</a>.
 </ul>
 
 <p>The BIRT viewer is a web application included with BIRT to perform the report 
-preview operation within Eclipse.</p>
+preview operation within Eclipse. It is also a sample of how to integrate birt 
+with a web application.</p>
 
 <ul class="arrow-list">
   <li><a href="viewer-deploy.html">Integrating the BIRT Viewer</a> explains how to 
@@ -88,7 +113,8 @@ preview operation within Eclipse.</p>
   <li><a href="viewer-use.html">Using the BIRT Viewer</a> discusses 
   the viewer operation URLs and their parameters.</li>
   <li><a href="viewer-php.html">Using the Viewer from PHP</a> discusses how to
-  run BIRT reports from a non-Java scripting environment such as PHP.</li>
+  run BIRT reports from a non-Java scripting environment such as PHP. Also 
+  briefly summarizes how to use PHP to generate custom report designs.</li>
   <li>Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
   <li>The viewer code itself is available in the BIRT CVS repository in the
   <a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project">
@@ -96,6 +122,22 @@ preview operation within Eclipse.</p>
   <a href="../build/build_instr.html">BIRT build instructions</a> for 
   information on how to access CVS and build the viewer.</li>
 </ul>
+
+<h1><a name="engine-api">Report Engine API</a></h1>
+<p>Use the Report Engine API to run BIRT reports directly from Java code or to 
+create a custom web application front end for BIRT.</p>
+<p>BIRT will provide an engine SDK, and an engine runtime. The engine SDK will 
+be part of the BIRT designer download, while the runtime will be a separate 
+download.</p>
+<h1><a name="deapi">Design Engine API</a></h1>
+<p>Use the Design Engine API (DE API) to create a custom report designer tool, 
+or to explore or modify BIRT report designs. The BIRT Designer is built using 
+this API. This API is described in Javadoc in the <code>org.eclipse.birt.report.model.api</code> 
+package within the <code>org.eclipse.birt.report.model project</code>. Read the package 
+overview for general information about getting started with this API.</p>
+<p>At present, you'll need to download the project source code and build the 
+Javadoc yourself. In time, the Javadoc, and the model JARs, will be available as 
+part of a BIRT download.</p>
 
 </body>
 </html>
