@@ -6,4 +6,4 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
 ?>
-Hello, world!
+Hello, world!!
