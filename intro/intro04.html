@@ -9,7 +9,7 @@
 <p class="head">Developing with BIRT</p>
 
 <h1>Data Customization</h1>
-
+<p>
 As mentioned above, reports often require additional business logic to prepare
 data for presentation. BIRT provides a number of tools to help:
 
@@ -44,7 +44,7 @@ logic into your report.
 </dl>
 
 <h1>Conditional Formatting</h1>
-
+<p>
 While some reports have a fixed format, others require conditional formatting.
 For example, a report that lists transactions may want to present a sale diffently
 than a return. Or, a customer service report may want to show colors that indicate
@@ -71,7 +71,7 @@ above plan, and red to show those below plan.
 </dl>
 
 <h1>Scripting</h1>
-
+<p>
 BIRT provides scripting based on JavaScript (formally known as ECMAScript).
 JavaScript is often thought of as a client-side scripting language, but it works
 just as well on a server for expressing report logic. In particular, JavaScript
@@ -84,14 +84,14 @@ allowing complete control of the report to handle even the most complex report
 formatting tasks.
 
 <h1>Project Management</h1>
-
+<p>
 BIRT integrates with the Eclipse project management features to organize related
 reports. BIRT also works with Eclipse CVS support for source management. BIRT's
 XML report design format makes it easy to compare two reports, or two versions of
 the same report, to track changes.
 
 <h1>Styles</h1>
-
+<p>
 Anyone who has designed a web page knows that the same visual styles get used
 over and over. Cascading Style Sheets (CSS) allow web designers to extract style
 information from content, and to reuse style over and over.
@@ -102,7 +102,7 @@ BIRT styles cascade, allowing you to set a style in one place and have it affect
 the entire report, a section of the report, or a single report item.
 
 <h1>Libraries</h1>
-
+<p>
 Typical applications include many related reports. A simple customer application
 may include an alphabetical customer listing, customers sorted by geography,
 customers assigned to specific sales reps, customers filtered by status and more.
@@ -118,7 +118,7 @@ shared resources. Libraries can contain any report element including styles,
 data sources, report items, scripts and so on.
 
 <h1>Internationalization</h1>
-
+<p>
 The web allows worldwide access to your application. BIRT provides excellent
 support for internationalization and localization.
 
@@ -134,8 +134,9 @@ the correct translations of your text.
 in mm/dd/yy format for US users, and dd-mm-yy format for Europeans.
 
 <dt>Dynamic Formatting
-<dd>Chinese text is very compact, English of medium size, and German is often
-quite lengthy. BIRT automatically adjusts the size of report items to fit their
+<dd>Chinese text is very compact, German is often quite lengthy,
+and English of medium size.
+BIRT automatically adjusts the size of report items to fit their
 content to avoid the need to test the report with every possible translation. BIRT
 works like HTML in this regard: the size of content expands as needed to hold its
 data.
