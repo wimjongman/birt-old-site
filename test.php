@@ -8,7 +8,7 @@
 
 <body>
 <?php
-$doc = xmldocfile( "community.html" );
+$doc = htmldocfile( "community.html" );
 if ( $doc == null )
 	echo "NULL<br>/n";
 else
