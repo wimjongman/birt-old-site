@@ -6,15 +6,4 @@ TO DO:
 * Wiki support
 
 Old Files to Retire:
-* chart1.jpg
-* charter.html
-* contributors.html
-* description.html
-* index.html
-* main.html
-* nav.html
-* pmc.hmtl
-* principles.html
-* project_plan_R1_0.html
-* summarhy_plan.html
 * attachments/* -- replace birtbuild.html with a redirect
