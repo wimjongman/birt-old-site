@@ -1,0 +1,39 @@
+p, table, td, th, body {
+	font-family: arial, helvetica, geneva, sans-serif;
+	font-size: 10pt
+}
+
+h1 {
+	background-color: #0080C0;
+	color: white;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 2px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	margin-top: 12pt;
+}
+
+h2 {
+	color: #0080C0;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+h3 {
+	color: #0080C0;
+	font-size: 9pt;
+}
+
+.head {
+	font-size: x-large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+.subhead {
+	font-size: large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #8080FF;
+}

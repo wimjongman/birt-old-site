@@ -394,7 +394,7 @@ function showMenu( )
 	if ( $line != "<birt-menu>" )
 		return;
 		
-	$thisDoc = str_ireplace( $pageDir . "/", "", $pageName );
+	$thisDoc = str_replace( $pageDir . "/", "", $pageName );
 	while ( ! feof( $file ) )
 	{
 		$line = trim( fgets( $file ) );

@@ -1,0 +1,155 @@
+/* BIRT styles. Derived from Eclipse styles, adjusted for use outside of frames.
+*/
+
+/* What is this for? */
+
+/*
+.input {background: "#ffffcc";color: "#000000" ;font-weight: normal;}
+*/
+
+/* From nav_style.css */
+
+/* Used for the bold items in the left-hand menu, and for the links
+   at the bottom of each page. */
+
+.navhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small; color: white;
+	font-weight: bold;
+}
+a.navhead:link { text-decoration: none; color: white; }
+a.navhead:visited { text-decoration: none; color: white; }
+a.navhead:hover { text-decoration: underline; color: white; }
+
+/* Style for other items in the left-hand menu. */
+
+
+a.nav:link { text-decoration: none; color: black; }
+a.nav:visited { text-decoration: none; color: black; }
+a.nav:hover { text-decoration: underline; color: black; }
+
+a.birt:link { text-decoration: none; color: white; }
+a.birt:visited { text-decoration: none; color: white; }
+a.birt:hover { text-decoration: underline; color: white; }
+
+/* Standard styles. From default_style.css */
+
+body {
+	font-family: arial, helvetica, geneva;
+	font-size: 10pt;
+	color: black;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	font-size: 10pt;
+}
+
+.bullet {
+	font-size: 9pt;
+}
+
+/*
+a:link { color: #0000ee; }
+a:visited { color: #551a8b; }
+a:hover { color: red; }
+*/
+
+.menu-area {
+	color: black;
+	background-color: #6699CC;
+}
+
+.menu-table {
+	background-color: #90C8FF;
+	font-size: 9pt;
+}
+
+.banner-area {
+	background-color: #006699;
+}
+
+/*
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+*/
+
+h1 {
+	background-color: #0080C0;
+	color: white;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 2px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	margin-top: 12pt;
+}
+
+h2 {
+	color: #0080C0;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+h3 {
+	color: #0080C0;
+	font-size: 9pt;
+}
+
+dt {
+	padding-bottom: 6pt;
+}
+
+dd {
+	padding-bottom: 10pt;
+}
+
+/*
+
+h2 { font-size: 18pt; font-weight: bold ; line-height: 14px}
+
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+
+sup {  font-size: 10px}
+
+h3 {  font-size: 14pt; font-weight: bold}
+*/
+
+/*
+li {  font-family: arial, helvetica, geneva; font-size: 10pt}
+
+
+h1 {  font-family: arial, helvetica, geneva; font-size: 28px; font-weight: bold}
+body {  font-family: arial, helvetica, geneva; font-size: 10pt; clip:   rect(   ); margin-top: 0mm; margin-left: 0mm; margin-right: 0mm; }
+*/
+
+
+.indextop {
+	font-size: x-large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.indexsub {
+	font-size: large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #8080FF;
+}
+
+a.bar { color: white }
+a.bar:link { color: white; text-decoration: none; }
+a.bar:visited {color: white; text-decoration: none; }
+a.bar:hover { color: white; text-decoration: underline; }
+
+
+.jump { font-size: smaller; color: #8080FF; text-decoration: none; }
+a.jump:visited { color: #8080FF; text-decoration: none; }
+a.jump:link { color: #8080FF; text-decoration: none; }
+a.jump:hover { color: blue; text-decoration: underline; }
+
+.toc { font-size: small; color: #8080FF; text-decoration: none; }
+a.toc:visited { color: #8080FF; text-decoration: none; }
+a.toc:link { color: #8080FF; text-decoration: none; }
+a.toc:hover { color: blue; text-decoration: underline; }
+
+
