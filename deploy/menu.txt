@@ -2,4 +2,5 @@
 <top name="deploy" page="../deploy"/>
 <item name="viewer setup" page="viewer-deploy.html"/>
 <item name="viewer usage" page="viewer-use.html"/>
+<item name="using PHP" page="viewer-php.html"/>
 </birt-menu>

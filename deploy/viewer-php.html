@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Deploying BIRT</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Integrating BIRT</p>
+
+<p class="subhead">Integrating BIRT with PHP</p>
+
+<h1>Motivation</h1>
+<p>
+BIRT is designed to be integrated into a J2EE web application. But, what if your
+chosen development environment is something else, such as PHP? Can you still use
+BIRT? Yes, you can.&nbsp; This page discusses how to use BIRT from PHP, but the techniques apply to 
+any server-side scripting environment.<p>
+It turns out that the Eclipse website itself uses PHP for its web infrastructure. 
+This note explains what the BIRT team discovers as we figure out how to 
+integrate BIRT reporting with the PHP website infrastructure.</p>
+
+<h1>Setup</h1>
+<p>
+PHP has the ability to call Java classes. So, one integration option is to have 
+the PHP engine call BIRT directly. However, this would require changes to
+Eclipse web server. Another option is to host BIRT on its own app server, such 
+as Tomcat, and use the <a href="viewer-use.html">BIRT Viewer URLs</a> to work 
+with BIRT.<p>
+The first step is to <a href="viewer-deploy.html">install Tomcat and the BIRT 
+viewer</a>. Let's assume that you've set up Tomcat on the same machine as the 
+web server running Apache, and that Tomcat listens on port 8080. Once the setup 
+works, we're ready to focus on the PHP side.<h1>
+Running a Report</h1>
+<p>
+Next step is to run a report from within a PHP script. Let's run the sample 
+report used to test the BIRT viewer install: <code>test.rptdesign</code> stored
+in <code>C:/temp</code>. 
+We use a browser redirect to run the report. The redirect appears in an HTML 
+header. Headers must be written before adding any content to the page:</p>
+
+<pre class="code-block">$fname = &quot;c:/temp/test.rptdesign&quot;;
+// Redirect browser
+$dest = &quot;http://localhost:8080/birt-viewer/run?__report=&quot;;
+$dest .= urlencode( realpath( $fname ) );
+header(&quot;Location: $dest&quot; );
+</pre>
+<p>
+The name of the report is given as an absolute path, but a relative path is also 
+allowed once you set up the <code>BIRT_VIEWER_REPORT_ROOT</code>
+configuration variable in the BIRT viewer web app's <code>web.xml </code>file. Be sure to 
+encode the file name for use in a URL.</p>
+
+<p>That's all there is to it!</p>
+
+<h1>Passing Parameters</h1>
+
+<p>Suppose your report takes parameters. The test report above has one parameter 
+called <code>sample</code>. We simply  add them to the report URL in the form 
+described in <a href="viewer-use.html">Using the Report Viewer</a>.</p>
+<p>
+<pre class="code-block">$fname = &quot;c:/temp/test.rptdesign&quot;;
+$paramValue = &quot;Hi there!&quot;;
+// Redirect browser
+$dest = &quot;http://localhost:8080/birt-viewer/run?__report=&quot;;
+$dest .= urlencode( realpath( $fname ) );
+$dest .= &quot;;sample=&quot; . urlencode( $paramValue );
+header(&quot;Location: $dest&quot; );
+</pre>
+
+<p>
+The parameter value must also be encoded when placed into the URL.</p>
+
+<h1>Parameter Form</h1>
+<p>Ideally, we could use PHP to create a UI form that prompts for the report 
+parameters. The BIRT viewer creates this form in Java using information in the 
+report design. Unfortunately, at present, there is no way to retrieve the raw 
+parameter descriptions from the BIRT viewer using a URL. Instead, there are two alternatives 
+we can use.</p>
+<p>First, if we know the parameters ahead of time, we can design a custom form 
+in PHP that prompts the user for them. This works if we have a small number of 
+reports, or if we need to create a specialized parameter page for each report 
+anyway.</p>
+<p>Second, we can let the BIRT viewer display the parameter page using the 
+<code>frameset</code> URL.</p>
+
+<h1>Generating Reports Dynamically</h1>
+
+<p>Finally, PHP provides one additional BIRT integration option: the ability to 
+generate report designs dynamically for a specific task. For example, suppose you 
+have a bug tracking system, and you'd like your user to create their own reports 
+via the web. You can ask the user for the columns to display, then use PHP to create a BIRT report design customized 
+to display those columns. PHP is 
+ideal for this: it allows us to insert scripting directly into HTML. Since a 
+BIRT design is XML, and XML is close enough to HTML for PHP, we can &quot;trick&quot; PHP 
+into generating a BIRT report design instead of an HTML page.</p>
+<p>To generate a report design, do the following:</p>
+<ul>
+  <li>Create a BIRT report design typical of the kind of report you want to 
+  create.</li>
+  <li>Create a PHP template file that contains this design. Insert the contents 
+  of the design file in place of the HTML you'd usually put into a PHP file.</li>
+  <li>Redirect PHP's output from the template file into a report design file.</li>
+  <li>Use PHP to generate BIRT XML for the table headings and cells the user wants. Use your 
+  report design as a template for what is needed. Consult the ROM spec for 
+  details on various elements and properties.</li>
+  <li>Within the data set in your template, create an SQL query that fetches the required columns. 
+  (Works with other data set types as well.)</li>
+  <li>Use the code above to redirect the browser to run that report using the 
+  BIRT viewer.</li>
+</ul>
+<p>The following PHP code  redirects the output of a PHP page, <code>template.inc</code>, 
+into a report design called <code>temp.rptdesign</code>:</p>
+
+<pre class="code-block">ob_start( );
+require &quot;template.inc&quot;;
+$page = ob_get_contents( );
+ob_end_clean( );
+$fw = fopen( &quot;temp.rptdesign&quot;, &quot;w&quot; );
+fputs( $fw, $page, strlen( $page ) );
+fclose( $fw );
+</pre>
+</p>
+
+</body></html>
