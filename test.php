@@ -8,7 +8,7 @@
 
 <body>
 <?php
-$doc = domxml_open_file( "community.html" );
+$doc = xmldocfile( "community.html" );
 if ( $doc == null ) echo "NULL<br>/n";
 else echo "Worked<br>/n";
 
