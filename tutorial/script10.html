@@ -13,10 +13,10 @@
 <p class="subhead">Using Styles</p>
 
 <h1>About Styles</h1>
-
+<p>
 We just mentioned that BIRT uses CSS to define the styles for report items. BIRT
-also allows you to define the properties in a separate style sheet, then apply the
-style to a report item, just as in HTML. This allows you to create the style once
+also allows you to define the properties in a separate style sheet, then to apply the
+style to a report item, just as in HTML. The result is that you create the style once
 and use it multiple times. If you need to change the look of a report, you can
 change the style in one place rather then in many different report items. Again,
 if you've defined your own styles when creating HTML pages, you're well on your
@@ -26,18 +26,18 @@ way to understanding the BIRT style system.
 Styles in the first BIRT release work only within a
 single report (though you can copy &amp; paste them across reports.) A later BIRT
 release will create separate <i>style sheet</i> files that let you share styles
-across a suite of reports. This is very similar to the external style sheet files
-in CSS.</div>
+across a suite of reports. BIRT style sheets will be very similar to the external 
+style sheet files in CSS.</div>
 
 <h1>Creating a Style</h1>
-
-Let's use the style concept to format the report header. Let's make the report
+<p>
+Let's use the style feature to format the report header. Let's make the report
 header a blue bar with contrasting text. Instead of formatting each label one-by-one,
 we'll define a style, then apply it.
 
 <ul>
-<li>Select the first label in the table Header band.
-<li>Select Style--&gt;Add Style from the context menu.
+<li>Select the first label in the Table Header band.
+<li>Select Style&rarr;Add Style from the context menu.
 <li>The Style Properties dialog appears.
 <li>Switch to the General page.
 <li>Enter "Header" in the Name field.
@@ -49,11 +49,11 @@ in the top row.
 <li>Set the Font weight to Bold.
 <li>Click OK.
 </ul>
-
+<p>
 Notice that the new style has been applied to the label.
 
 <h1>Applying a Style</h1>
-
+<p>
 Next, let's apply the style to the other three header labels. (We could have done
 this in a single step by selecting all four when we defined the style. We're
 doing it in two steps just to show how it's done.)
@@ -61,14 +61,14 @@ doing it in two steps just to show how it's done.)
 <ul>
 <li>Select the three labels: click on the first, then use Ctrl+Click to add
 the other two to the selection.
-<li>Choose Style--&gt;Apply Style from the context menu.
+<li>Choose Style&rarr;Apply Style Rule from the context menu.
 <li>Choose Header from the list of styles that appears.
 </ul>
-
+<p>
 The other three cells are now also formatted.
 
 <h1>Editing a Style</h1>
-
+<p>
 Suppose we wanted to change the style we just created. Here's how we find
 and change it.
 

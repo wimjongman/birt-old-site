@@ -13,61 +13,60 @@
 <p class="subhead">Cascading Styles</p>
 
 <h1>About Style Cascade</h1>
-
+<p>
 We've mentioned that BIRT uses CSS to define the styles for report items,
-and we saw how to define and apply our own styles. BIRT also follows the
+and we saw how to define and apply our own style. BIRT also follows the
 "cascade" part of Cascading Style Sheets: you can set a property once for the
 report, or a container, and have that value <i>cascade</i> down through the
 contents of the container.
 <p>
-In BIRT, a Grid, a List and a Table are containers: they can hold other
+In BIRT, Grid, List and Table items are containers: they can hold other
 report items. The report itself is the ultimate container for all report items.
 
 <h1>Setting Report-Wide Properties</h1>
-
-Our report currently uses the default font: a serif style. Let's use a sans-serif
+<p>
+Our report currently uses the default font: a serif style. (Actually, by default
+BIRT uses the font set in your browser. Many browsers use a serif style by default,
+but if you've changed your default browser font, that is how the report will
+appear.)
+<p>
+Let's use a sans-serif
 style instead. We do this by creating a style using a BIRT-defined style name.
-If you familiar with CSS, this is like defining a style for an HTML tag: p, h1,
-etc.
+If you familiar with CSS, this is like defining a style that selects the HTML
+body tag.
 
 <ul>
 <li>Open or locate the Outline view.
-<li>Scroll down to the bottom to find the Styles node
-<li>Use the context menu and select New Style
-<li>In the General page, enter the name "report". It must be all lower case.
+<li>Scroll down to the bottom to find the Styles node.
+<li>Use the context menu and select New Style.
+<li>In the General page, enter the name "report". It must be all lower case,
+and without the quotes. (This is a style name defined by BIRT itself.)
 <li>In the Font page, choose "sans serif" as the font type.
 <li>Click OK.
 <li>All items in your report will change to sans-serif font.
 </ul>
-
+<p>
 The names "serif" and "sans-serif" are defined by CSS: they are generic font
-styles that don't depend on the specific fonts installed in a browser. This helps
-to avoid depending on specific fonts, especially if your reports will be on a
-public web site.
+styles that don't depend on the specific fonts installed on a machine. This helps
+to avoid depending on specific fonts, especially if your reports will be appear
+as part of a public web site.
 <p>
 <div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-A number of bugs currently prevent the above
-from working perfectly.
-
-<ul>
-<li>The layout view won't show the new font until you close the design and
-reopen it.
-<li>The header won't show the new font because of some problems with the way
-new styles are defined.
-</ul>
-These are known problems that will be fixed soon.
+The new style does not appear in the preview, though it does appear in the
+layout view. This is a known problem that will be fixed soon.
 </div>
 
 <h1>Other Default Styles</h1>
-
+<p>
 BIRT defines default styles for most report items and for list and table bands.
 See the <a href="/birt/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>
 for the complete list.
 
 <h1>Check the Report</h1>
-
+<p>
 Let's click the preview tab to see how our report looks after the formatting.
 Not bad, but we still need the report heading.
+<p>
 
 </body>
 </html>

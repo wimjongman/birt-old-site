@@ -53,9 +53,10 @@ li {
 	background-color: #E0E0E0;
 	padding-top: 4pt;
 	padding-bottom: 4pt;
-	padding-left: 2pt;
+	padding-left: 4pt;
 	padding-right: 2pt;
-	margin-right: 0.5in;
+	margin-left: 4pt;
+	margin-right: 4pt;
 }
 
 .caution-head {

@@ -13,30 +13,31 @@
 <p class="subhead">Setting Visual Properties</p>
 
 <h1>Resizing Table Columns</h1>
-
-Let's start by adjusting the size of the table columns. Tables &amp; columns can
+<p>
+Let's adjust the size of the table columns. Tables &amp; columns can
 be sized using absolute sizes (inches, centimeters), or relative sizes (percentage
 of the width of the page.) Here, we'll adjust the column widths by directly
 changing the size.
 
 <ul>
-<li>Click on the Table tab for the table to display the "scaffolding."
+<li>Click the Layout tab to switch back to the report layout.
+<li>Click on any empty cell within the table to display the "scaffolding."
 <li>Find the black line that separates the two column headings.
 <li>With the cursor over this line, hold down the left mouse button and
 resize the column to be about big enough to hold the two-letter state
-codes.
-<li>Repeat the above to resize the state column.
+code.
+<li>Repeat the above to resize the city column.
 </ul>
 
 <h1>Setting the Background Color</h1>
-
+<p>
 Let's dress up the state heading. Let's give it
 a color band by setting the row's background color.
 
 <ul>
 <li>Select the state group header row by clicking on the gray box to the left
 of the row. (Remember to click on an empty cell to display the scaffolding.)
-<li>Locate or open the Property Editor
+<li>Locate or open the Property Editor.
 <li>A list of property types appears at the left of the view. Click on the General
 group.
 <li>Find the Background color field. Click on the empty gray button to display the
@@ -55,8 +56,8 @@ view in the current build. However, the property was set and will appear in the
 preview.</div>
 
 <h1>Setting the Font</h1>
-
-Now, let's give the state a bold font. Weill also dress up the city group heading
+<p>
+Now, let's give the state a bold font. We'll also dress up the city group heading
 by giving it a dark blue, bold, larger font.
 
 <ul>
@@ -74,34 +75,30 @@ in the top row.
 </ul>
 
 <h1>Formatting Data</h1>
-
+<p>
 We want to format the phone numbers so that they have correct North American
 format: (123) 555-1212. We do this by applying a string format to the phone number
 field. Formats are also available for dates and numbers.
 
 <ul>
-<li>Select the phone number item
+<li>Select the phone number item.
 <li>Switch to the Format group in the Property Editor.
 <li>Enter the following for the String Format: (@@@) @@@-@@@@.
 </ul>
 
 <div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-For now, you must click into some other field in
-the Property Editor after you type in a value such as the format above. If you
+For now, you must press Enter after you type in a value such as the format above.
+If you
 directly click into the Layout view, BIRT will discard your changes. This is a
 known issue.</div>
-<p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-Setting formats does not seem to work in this build. 
-A workaround is to create a named style, and set the format
-on the named style instead. See the next page of the tutorial.</div>
 
 <h1>Setting a Border</h1>
-
+<p>
 Next, let's put a "drop shadow" border around our table.
 
 <ul>
-<li>Select the table by clicking on the Table tab.
+<li>Select the table by moving your cursor over the table, then
+clicking on the Table tab that appears.
 <li>Select the Borders page in the Property Editor.
 <li>Set the Style field to a solid line.
 <li>Set the Color field to a black. (Use the color name pulldown, or choose the
@@ -119,13 +116,16 @@ but the UI does not display them. This is a known issue that will be fixed
 shortly.</div>
 
 <h1>More on Properties</h1>
-
+<p>
 BIRT provide a wide variety of properties for formatting report items. The properties
-are based on the W3C CSS (Cascading Style Sheet) standard. If you've ever used CSS
+are based on the
+<a href="http://www.w3.org/TR/CSS21/">W3C CSS<a>
+(Cascading Style Sheet) standard. If you've ever used CSS
 to format HTML, you are well on your way to understanding formatting in BIRT.
 <p>
 BIRT adds additional, report-specific properties such as the date, number and string
 formatting that we just set. However, even these act just like CSS properties.
+<p>
 
 </body>
 </html>
