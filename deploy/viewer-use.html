@@ -9,9 +9,9 @@
 
 <body>
 
-<p class="head">Deploying BIRT</p>
+<p class="head">Integrating BIRT</p>
 
-<p class="subhead">The Sample Viewer</p>
+<p class="subhead">Using the BIRT Report Viewer</p>
 
 <h1>Overview</h1>
 
@@ -22,8 +22,8 @@ and view reports. Your report viewer application must be in Java so that it has 
 BIRT engine.</p>
 
 <p class="caution">
-<span class="caution-head">Build S20050314 Note</span>: The viewer described here is preliminary; work is ongoing to refine the viewer
-and the URLs, servelet mappings, parameters and other details are subject to change.
+<span class="caution-head">Build S20050328 Note</span>: The viewer described here is preliminary. 
+Work is ongoing to refine the viewer. URLs, servelet mappings, parameters and other details are subject to change.
 </p>
 
 <p>The Viewer performs three distinct operations, of which one is internal and 
@@ -38,8 +38,9 @@ not visible to your application:</p>
   (Internal operation.)</li>
 </ul>
 
-<p>You can use a full-feature Viewer that displays a parameter form and runs the 
-report. Or, you can supply the parameter values and simply run the report.</p>
+<p>You can use a full-feature Viewer frameset that displays a parameter form and 
+runs the report. Or, you can supply the parameter values and simply run the 
+report to produce a simple HTML or PDF output page.</p>
 
 <h1>Viewer Operations</h1>
 
@@ -55,62 +56,96 @@ Viewer provides two modes of operation as given by two servlet mappings.</p>
 </thead>
 <tbody>
   <tr>
-    <td>viewerservlet</td>
+    <td>frameset</td>
     <td>Display a frameset that has one 
     frame that prompts the user for parameters, then displays the resulting 
     report in another frame.</td>
   </tr>
   <tr>
-    <td>engineservlet</td>
+    <td>run</td>
     <td>Runs the report and displays the 
     output as a stand-alone HTML page, or as a PDF document.</td>
   </tr>
 </tbody>
 </table>
 
-<p>The servelet mapping names are case sensitive.</p>
+<p>The servlet mapping names are case sensitive.</p>
 
-<h1>Viewer</h1>
+<h1>Run a Report</h1>
 
-<p>The frame based viewer displays a frameset that contains three frames:</p>
+<p>The <code>run</code> servlet mapping runs a report given a set of report 
+parameters, and returns the report as an HTML page or PDF document. This servlet 
+mapping does not provide a frameset. Use this option if you want the report to 
+appear as a stand-alone page. Parameters must be handled in one of three ways:</p>
 
 <ul>
-  <li>A left-hand pane that contains the report parameters.</li>
-  <li>A right-hand pane that contains the report output</li>
-  <li>A top pane that contains the navigation bar.</li>
+  <li>The report requires no report parameters.</li>
+  <li>Your application already knows the values of the parameters (perhaps from 
+  a server session), and passes them along.</li>
+  <li>Your application has created a parameter page specifically for the report.</li>
+</ul>
+
+<p class="caution">
+<span class="caution-head">Release 1.0 Note</span>: To create a parameter page 
+based on the parameter definitions within a report, you must either use the one 
+provided by the Viewer, or create your own viewer. There is no URL-based way to 
+get parameter definitions.</p>
+
+<p>The run report URL is of the form:</p>
+
+<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/run?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
+</pre>
+
+<p>See below for a list of available parameters.</p>
+
+<h1>Viewer Frameset</h1>
+
+<p>The <code>viewer</code> command provides additional UI to work with a report. Use this URL 
+when your report contains parameters, and you want the Viewer to display a UI so 
+the user can enter parameter values. (You should use the <code>run</code> command if the 
+caller already has the parameter values.)</p>
+
+<p>The frame-based viewer displays a frameset that contains three frames:</p>
+
+<ul>
+  <li>A left-hand navigation frame that contains the report parameters.</li>
+  <li>A right-hand content frame that contains the report output</li>
+  <li>A top toolbar frame that contains the navigation bar.</li>
 </ul>
 
 <p>The parameters frame displays a form for entering the parameters (if any) for 
-a report. It contains a [Run Report] button that runs the report. The report then 
-appears in the report pane. The user can refine the report simply by modifying 
-parameters in the parameter pane and again pressing [Run Report].</p>
+a report. It contains a  Run Report button that runs the report. The report then 
+appears in the report frame . The user can refine the report simply by modifying 
+parameters in the parameter frame and again by clicking Run Report.</p>
 
-<p>The navigation bar contains a button to maximize the report. When this is 
+<p>The toolbar contains a button to maximize the report. When this is 
 done, the frameset switches to display a single frame that contains the report 
 output.</p>
 
 <p class="caution">
-<span class="caution-head">Build S20050314 Note</span>: The viewerservelet
-servlet mapping does not work in the 3/14 stable build.</p>
+<span class="caution-head">Build S20050314 Note</span>: The frameset
+servlet mapping does not work in this build.</p>
 
 <p>The viewer URL is of the form:</p>
 
-<pre class="code-block">
-http:<i>//sitePrefix</i>/viewer/viewerservlet?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
+<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/frameset?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
 </pre>
 
-<p>The parameters include both report parameters, and viewer parameters. The 
-report parameters are listed using their internal names as defined in the report 
-design. Viewer parameters start with a double underscore to differentiate them 
+<p>See below for a list of available parameters. The parameters allow you to 
+control which of the three frames appear in the resulting web page.</p>
+
+<h1>Viewer Parameters</h1>
+
+<p>Both Viewer operations take a set of required and optional parameters. They include both report&nbsp; and viewer parameters. Report parameters are 
+defined within the report design. They appear in the URL using their internal names, 
+not display names. Viewer parameters pass information to the BIRT Viewer web 
+app. Viewer parameters start with a double underscore to differentiate them 
 from report parameters. Parameter names and values must be encoded for use in a 
 URL. For example:</p>
 
-<pre class="code-block">
-http://localhost:8080/viewer/viewerservlet?
-__uri=C%3A%5CProgram%20Files%5CApache%20Software%20Foundation%5C
-Tomcat%205.5%5Cwebapps%5Cviewer%5Creports%5Ctest.rptdesign&amp;
-__format=html&amp;__frame=true&amp;__navigation=auto&amp;__toolbar=true&amp;
-sample%20param=param%20value
+<pre class="code-block">http://localhost:8080/birt-viewer/run?
+__report=C%3A%5Ctemp%5Ctest.rptdesign&amp;
+__format=html&amp;sample%20param=param%20value
 </pre>
 
 <p>The above should appear all on one line; it is broken into multiple lines 
@@ -121,11 +156,9 @@ above for readability.</p>
 <ul>
   <li>http://localhost:8080/ &ndash; The URL (including port) for your 
   installation of the app server.</li>
-  <li>/viewer/ &ndash; The name of the Viewer servelet. This is &quot;viewer&quot; by 
-  default.</li>
-  <li>viewerServlet &ndash; The servlet mapping for displaying a report in a 
-  frameset.</li>
-  <li>C%3A%5CProgram%20Files%5C.../test.rptdesign &ndash; Absolute file system 
+  <li>/birt-viewer/ &ndash; The name of the BIRT Viewer servlet.</li>
+  <li>run &ndash; The servlet mapping for running a report.</li>
+  <li>C%3A%5Ctemp%5Ctest.rptdesign &ndash; Absolute file system 
   path of the report to run.</li>
   <li>__<i>param</i>=<i>value </i>&ndash; Viewer parameter as described below.</li>
   <li>sample%20param=param%20value &ndash; The name and value of a report 
@@ -138,6 +171,8 @@ GET method of passing parameters to the Viewer. If your reports will have
 parameter values that are too long for a URL, then you'll want to create a 
 customized viewer that supports the POST method.</p>
 
+<h2>List of Parameters</h2>
+
 <p>The available viewer parameters include:</p>
 
 <table class="simple-table">
@@ -146,72 +181,80 @@ customized viewer that supports the POST method.</p>
     <td><b>Description</b></td>
     <td><b>Values</b></td>
     <td><b>Default</b></td>
+    <td><b>frameset</b></td>
+    <td><b>run</b></td>
   </tr>
   <tr>
     <td>__format</td>
     <td>The output format</td>
     <td>html or pdf</td>
     <td>html</td>
+    <td>Y</td>
+    <td>Y</td>
   </tr>
   <tr>
     <td>__frame</td>
     <td>Whether to show a frameset or single page.</td>
-    <td>true or false</td>
+    <td>true (use a frameset) or false (single page)</td>
     <td>true</td>
+    <td>Y</td>
+    <td>N</td>
   </tr>
   <tr>
     <td>__locale</td>
     <td>Report locale</td>
     <td>Java locale value such as en, en-us or ch-zh.</td>
     <td>EN (English, location-independent locale.)</td>
-  </tr>
-  <tr>
-    <td>__operator</td>
-    <td>Whether to get the report (default) or an image.</td>
-    <td>getImage, (blank)</td>
-    <td>blank (get the report)</td>
+    <td>Y</td>
+    <td>Y</td>
   </tr>
   <tr>
     <td>__navigation</td>
-    <td>What to show in the navigation bar.</td>
-    <td>false, auto, or parameter</td>
+    <td>What to show in the navigation area.</td>
+    <td>hide, auto, or parameter</td>
     <td>auto</td>
+    <td>Y</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>__report</td>
+    <td>The absolute path to the report document.</td>
+    <td>&nbsp;</td>
+    <td>None. Required.</td>
+    <td>Y</td>
+    <td>Y</td>
   </tr>
   <tr>
     <td>__toolbar</td>
     <td><font SIZE="2">Whether to show the report tool bar.</font></td>
     <td>true or false</td>
     <td>true</td>
-  </tr>
-  <tr>
-    <td>__uri</td>
-    <td>The path to the report document</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>Y</td>
+    <td>N</td>
   </tr>
   <tr>
     <td><i>reportParam</i></td>
     <td>Report parameter.</td>
     <td>As specified in the report design.</td>
     <td>As specified in the report design.</td>
+    <td>Y</td>
+    <td>Y</td>
   </tr>
 </table>
 
-<p>The Viewer parameter names are case insensitive. Report parameter names are, 
-however, case sensitive: they must match the name as defined in the design. If 
+<h2>Case-Sensitivity</h2>
+
+<p>Case-sensitivity of the parameters varies:</p>
+
+<ul>
+  <li>Viewer parameter names and values are case-insensitive.</li>
+  <li>Report parameter names are case-sensitive: they must match the name as defined in the design.</li>
+  <li>The file name case sensitivity is defined by your operating system.</li>
+</ul>
+
+<p>If 
 the URL contains a misspelled parameter name, or the name of report parameters 
 are in the wrong case, then the Viewer silently ignores the parameter.</p>
-
-<h2>The <code>__uri</code> Parameter</h2>
-
-<p>The <code>__uri</code> parameter gives the absolute path name of the report design on the 
-local system. Although the name is &quot;uri&quot;, the parameter cannot be a URL; 
-it must be an absolute file path name.</p>
-
-<div class="caution">
-<span class="caution-head">Release 1.0M1 Note</span>: The viewer currently 
-requires an absolute path to the report on the server machine. Upcoming versions 
-will support relative paths.</div>
 
 <h2>The <code>__format</code> Parameter</h2>
 
@@ -222,39 +265,21 @@ produced.</p>
 
 <h2>The __frame Parameter</h2>
 
-<p>Determines whether to display the Viewer as a frameset (true), or a a single 
-page (false). If you specify true or omit the parameter, the report contains two 
-frames, one that contains the report data and one that contains navigational 
-controls and parameter entry fields. If you specify false, the report is 
-displayed as a single page, the parameter page and tool bar aggregated into a 
-single page. The report is put into an embedded HTML iframe since the report 
-itself is a complete HTML page. The default is to display the viewer as a 
-frameset. Values are case insensitive. </p>
-
-<h2>The <code>__navigation</code> Parameter</h2>
-
-<p>Controls the contents of the navigation frame. Choices are:</p>
+<p>Determines whether to display the Viewer as a frameset (true), or a  single 
+page (false).</p>
 
 <ul>
-  <li>false – Does not display the navigation pane.</li>
-  <li>auto – Displays the parameter navigation page if the report has 
-  parameters, omits the page if the report has no parameters.</li>
-  <li>parameter – Display the report parameter page.</li>
+  <li><code>true</code> (default) &ndash; The resulting web page contains three 
+frames: Report data, parameter page (depending on the __navigation parameter) 
+  and toolbar (depending on the __toolbar parameter).</li>
+  <li><code>false</code> &ndash; The report is 
+displayed as a single page. The parameter UI and tool bar are aggregated into 
+  the report page. The report itself is put into an embedded HTML iframe since 
+  it is a complete HTML page.</li>
 </ul>
 
-<p>Values are case insensitive.</p>
-
-<h2>The <code>__toolbar</code> Parameter</h2>
-
-<p>Displays the report toolbar.
-The toolbar contains only a &quot;maximize&quot; button. Clicking that button hides the 
-parameter page, if it was visible. A value of <code>true</code> displays the toolbar, a 
-value of <code>false</code> hides the toolbar. Values are case insensitive.</p>
-
-<div class="caution">
-<span class="caution-head">Release 1.0 Note</span>: The toolbar is not very 
-useful in this release. Future releases will add navigation buttons to move 
-between pages of the report, etc.</div>
+<p>&nbsp;The default is to display the viewer as a frameset. Values are case 
+insensitive. </p>
 
 <h2>The <code>__locale</code> Parameter</h2>
 
@@ -268,6 +293,55 @@ locale such as <code>en-us</code>, etc.</p>
 locale, the locale defaults to <code>en</code>. A future version may default the 
 locale to 
 that of your app server or operating system.</div>
+
+<h2>The <code>__navigation</code> Parameter</h2>
+
+<p>Controls the contents of the navigation frame. The navigation frame shows the 
+parameter entry page. (It will show additional navigation tools in future 
+releases, hence the name.) Choices are:</p>
+
+<ul>
+  <li>hide – Does not display the navigation pane.</li>
+  <li>auto – Displays the parameter navigation page if the report has 
+  parameters, omits the page if the report has no parameters.</li>
+  <li>parameter – Display the report parameter page.</li>
+</ul>
+
+<p>Values are case insensitive.</p>
+
+<h2>The <code>__report</code> Parameter</h2>
+
+<p>The <code>__report</code> parameter gives the absolute path name of the 
+report design on the local system. It must be an absolute file path name.</p>
+
+<div class="caution">
+<span class="caution-head">Release 1.0M1 Note</span>: The viewer currently 
+requires an absolute path to the report on the server machine. Upcoming versions 
+will support relative paths.</div>
+
+<h2>The <code>__toolbar</code> Parameter</h2>
+
+<p>Displays the report toolbar.
+The toolbar contains two buttons:</p>
+
+<ul>
+  <li>A &quot;maximize&quot; button that hides the 
+parameter page, if it was visible.</li>
+  <li>A &quot;PDF&quot; button that reruns the report as a PDF document.</li>
+</ul>
+
+<p>This parameter takes one of two values:</p>
+
+<ul>
+  <li> <code>true</code> (default) – displays the toolbar.</li>
+  <li> <code>false</code> – hides the toolbar.</li>
+</ul>
+
+<p>Values are case insensitive.</p>
+
+<div class="caution">
+<span class="caution-head">Release 1.0 Note</span>:  Future releases will add navigation buttons to move 
+between pages of the report, etc.</div>
 
 <h2>Report Parameters</h2>
 
@@ -310,84 +384,6 @@ are defined as follows:</p>
   </tr>
 </tbody>
 </table>
-
-<h1>Run a Report</h1>
-
-<p>The <code>engineservlet</code> servlet mapping runs a report given a set of report 
-parameters, and returns the report as an HTML page or PDF document. This sevlet 
-mapping does not provide a frameset. Use this option if you want the report to 
-appear as a stand-alone page. Parameters must be handled in one of three ways:</p>
-
-<ul>
-  <li>The report requires no report parameters</li>
-  <li>Your application already knows the values of the parameters (perhaps from 
-  a server session), and passes them along.</li>
-  <li>Your application has created a parameter page specifically for the report.</li>
-</ul>
-
-<p class="caution">
-<span class="caution-head">Release 1.0 Note</span>: To create a parameter page 
-based on the parameter definitions within a report, you must either use the one 
-provided by the Viewer, or create your own viewer. There is no URL-based way to 
-get parameter definitions.</p>
-
-<p>The viewer URL is of the form:</p>
-
-<pre class="code-block">http:<i>//sitePrefix</i>/viewer/engineservlet?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
-</pre>
-
-<p>The URL parameters are a subset of those described above:</p>
-
-<table class="simple-table">
-<thead>
-  <tr>
-    <td>Parameter</td>
-    <td>Description</td>
-    <td>Values</td>
-    <td>Default</td>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>__format</td>
-    <td>As described above</td>
-    <td>html or pdf</td>
-    <td>html</td>
-  </tr>
-  <tr>
-    <td>__locale</td>
-    <td>As described above</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>__operator</td>
-    <td>Whether to get the report (default) or an image.</td>
-    <td>getImage, (blank)</td>
-    <td>blank (get the report)</td>
-  </tr>
-  <tr>
-    <td>__uri</td>
-    <td>As described above</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td><i>reportParam</i></td>
-    <td>As described above.</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</tbody>
-</table>
-
-<h2>The <code>__operator</code> Parameter</h2>
-
-<p>The Viewer uses this parameter to select whether to view a report, or fetch 
-an image. If the <code>__operator</code> parameter is omitted, or set to a value other than 
-<code>getImage</code>, then the Viewer displays a report. If the value is <code>getImage</code>, then the Viewer 
-will fetch an image for a report. Your application should always omit this 
-parameter. The value is case insensitive.</p>
 
 <h1>Error Reporting</h1>
 

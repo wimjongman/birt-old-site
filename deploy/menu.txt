@@ -1,5 +1,5 @@
 <birt-menu>
 <top name="deploy" page="../deploy"/>
 <item name="viewer setup" page="viewer-deploy.html"/>
-<item name="viewer urls" page="viewer-use.html"/>
+<item name="viewer usage" page="viewer-use.html"/>
 </birt-menu>

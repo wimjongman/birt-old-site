@@ -404,7 +404,11 @@ function bodyPassOne( )
 		}
 		else if ( $tagName == "h1" )
 		{
-			addJump( getNodeText( ) );
+			$text = getNodeText( );
+			if ( preg_match( "/<a\s+name\s*=\s*\"([^\"]*)\"\s*>([^<]*)</i", $text, $match ) )
+				addJump( $match[2], $match[1] );
+			else
+				addJump( $text );
 		}
 		else if ( $tagName == "/body" )
 			break;
