@@ -53,7 +53,7 @@ To make it easier to start Eclipse, create a shortcut to Eclipse on your desktop
 
 <h1>GEF</h1>
 <p>
-GEF is the "Graphic Editor Framework", an Eclipse plugin used by the BIRT UI.
+GEF, the Graphic Editor Framework, is an Eclipse plugin used by the BIRT UI.
 Download the
 <a href="/birt/frameizer.php?page=http://www.eclipse.org/downloads/download.php?file=/tools/gef/downloads/index.php">
 GEF 3.0.1 Release, GEF Runtime</a>.
@@ -89,8 +89,17 @@ same zip location as GEF and EMF.</div>
 
 <h1>Common Problems</h1>
 <p>
-If the BIRT perspective does not appear in Eclipse, some users suggest that
-you do the following in Eclipse 3.0.1:
+Some problems are due to cached information within Eclipse. Such problems
+include:
+
+<ul>
+<li>The BIRT perspective does not appear in Eclipse.
+<li>You receive "An error occurred" dialogs when opening reports or using
+the BIRT UI.
+</ul>
+
+The solution is to clean up the cached information. There are different solutions
+for Eclipse 3.0.1 and Eclipse 3.1. Do the following in Eclipse 3.0.1:
 
 <ul>
 <li>Shut down Eclipse
@@ -109,9 +118,9 @@ eclipse.exe -clean
   
 <h1>JDBC Driver</h1>
 <p>
-You will likely want to use your own JDBC driver with BIRT. Here's how. BIRT
+You will likely want to use your own JDBC driver with BIRT. BIRT
 includes the Open Data Access (ODA) framework for data access. To add a JDBC driver,
-include the driver's jar file name in the JDBC ODA driver's configuration 
+include the driver's JAR file name in the JDBC ODA driver's configuration 
 file: odaconfig.xml. The configuration file is in the plugin directory for
 the JDBC ODA plugin: eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 <p>
@@ -128,14 +137,14 @@ starting at line 26:
 </pre>
 
 Simply add another <code>&lt;LibraryName></code> element for each 
-additional JDBC driver jar file that might be needed.
+additional JDBC driver JAR file that might be needed.
 <br><br>
 By default, a driver's library files must be in the JDBC plugin directory.
-So, copy your jdbc driver jar into 
+So, copy your JDBC driver JAR into 
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 <br><br>
 You can optionally add a <code>&lt;Location></code> element to specify the
-location of the JDBC driver files.
+location of the JDBC driver file.
 </div>
 
 <h1>Updating a BIRT Installation</h1>
