@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Using a Text Item</p>
+
+<h1>About Text Items</h1>
+
+The final step in our report is to create the actual header text. We want it
+to look something like this:
+<p>
+
+<center><font size="4" color=blue>Customer Listing</font>
+<br>
+<i>For internal use only</i></center>
+<p>
+
+We could build this up with two labels. But, we'll take this opportunity to
+try out the Text element which allows us to use HTML formatting directly
+within the text.
+
+<h1>Create a Text Item</h1>
+
+Let's create our text item.
+
+<ul>
+<li>Drag a Text item from the palette and drop it into the center cell within
+our grid.
+<li>The Edit Text Item dialog appears.
+<li>In the top combo box, choose HTML/Dynamic Text
+<li>The next line provides a variety of HTML tags we can insert. Click the
+&lt;HTML&gt; tag to insert it.
+<li>Move your cursor between the &lt;HTML&gt; &amp; &lt;/HTML&gt; tags and
+press Enter to split the tags into two lines.
+<li>Using the button next to Page Composition, pull down the list and choose
+Formatting and Layout.
+<li>Click the &lt;Center&gt; tag to add it.
+<li>Move the cursor between the &lt;Center&gt; tags and split the line.
+<li>Insert a &lt;Font&gt; element and insert: size="4" color=blue. The text
+should now look like this:
+<p>
+<div class="code-block">
+&lt;HTML><br>
+&lt;CENTER>&lt;FONT size="4" color=blue>&lt;/FONT><br>
+&lt;/CENTER><br>
+&lt;/HTML>
+</div>
+<p>
+<li>Continue adding elements and typing to create the finished HTML:
+<p>
+<div class="code-block">
+&lt;HTML><br>
+&lt;CENTER>&lt;FONT size="4" color=blue>Customer Listing&lt;/FONT><br>
+&lt;BR><br>
+&lt;I>For internal use only&lt;/I><br>
+&lt;/CENTER><br>
+&lt;/HTML>
+</div>
+<p>
+<li>Click OK to save your changes.
+</ul>
+
+<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
+The layout editor displays the actual HTML. Later builds
+may show the formatted text.</div>
+
+<h1>Dynamic Text</h1>
+
+While we won't use it in this tutorial, there is one other feature of text items
+to note. Select the Dynamic Text category and you'll see a &lt;value-of> tag.
+This allows you to insert expressions directly into your HTML. For example,
+to display an address line in US format, we could say:
+<p>
+<div class="code-block">
+&lt;value-of>row.city&lt;/value-of>,<br>
+&lt;value-of>row.state&lt;/value-of><br>
+&lt;value-of format="@@@@@-@@@@">row.zip&lt;value-of>
+</div>
+<p>
+The contents of the &lt;value-of> tag can be any expression. Indeed, it can be
+any JavaScript code. The optional format attribute lets you use any of BIRT's
+format strings to format the data.
+
+<h1>Final Test</h1>
+
+We're now ready to give the report a final test. Click the Preview tab to see
+the report with formatting applied.
+
+</body>
+</html>

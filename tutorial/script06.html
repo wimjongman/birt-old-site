@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Editing &amp; Testing a Data Set</p>
+
+<h1>Edit a Data Set</h1>
+
+Like the data source, the data set appears in the Data Explorer. We can use the
+data set editor to both change and test the data set.
+
+<ul>
+<li>Find or open the Data Explorer.
+<li>Open the Data Sets node
+<li>Double-click the Customers data set.
+<li>The Data Set editor opens.
+</ul>
+
+<h1>Data Set Editor Pages</h1>
+
+The data set editor provides the following pages:
+
+<dl class="arrow-list">
+<dt>Query
+<dd>Displays your SQL SELECT statement. You can edit this
+statement to add a WHERE clause, adjust the set of selected columns, and
+more.
+
+<dt>Computed Columns
+<dd>Computed columns are calculated by BIRT and appear
+to the rest of the report just like any other column. You can use JavaScript
+expressions, and even call into Java for advanced business logic.
+
+<dt>Input Parameters
+<dd>SQL SELECT statements can include <i>input
+parameters</i> that pass data into the query. They are marked using the SQL ?
+symbol in the query. This page lets you give the parameters a name, a default
+value, and so on. There must be a one-to-one coorespondence between entries
+on this page and the ? symbols in your query.
+
+<dt>Filters
+<dd>Additional filters applied to your data. Filters restrict
+the data passed to the report. The WHERE clause
+is also a filter: one executed by the database. This tab lets you define additional
+filters using BIRT (JavaScript) scripting.
+
+<dt>Output Columns
+<dd>Shows the columns within the query, and lets you define
+a column <i>alias</i> for use in the report. Note that this view shows the columns
+as the report will see them. The Query page shows the columns as selected from
+the database.
+
+<dt>Preview Results
+<dd>Lets you test your query and see the output. Very handy
+to make sure that the data is right before you proceed with report design.
+
+</dl>
+
+For now, we're just going to test our query.
+
+<h1>Test a Data Set</h1>
+
+With the data set editor open, do the following:
+
+<ul>
+<li>Click on the Preview Results item.
+<li>The preview page appears.
+<li>It shows the columns selected in your query listed across the top.
+<li>The actual rows in your query appear down the page.
+<li>Verify that the list of customers appears.
+<li>Click OK to close the data set editor.
+</ul>
+
+</body>
+</html>

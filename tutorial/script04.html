@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Building a Data Source</p>
+
+<h1>About Data Sources and Data Sets</h1>
+
+BIRT reports use a <i>data source</i> to connect to a database or other
+<i>data provider</i>. BIRT uses a <i>data set</i> to retrieve data from the
+data provider. Think of the data source as a connection, and the data set
+as a query.
+
+<h1>Build a Data Source</h1>
+
+Let's build our data source:
+
+<ul>
+<li>Open the Data Explorer, if it is not already visible.
+<li>Select the Data Sources node within the tree view.
+<li>Right-click to open the context menu.
+<li>Choose New Data Source.
+<li>The New Data Source dialog appears.
+<li>Choose JDBC Data Source from the list.
+<p>
+<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
+Only JDBC is supported at present. BIRT's
+Open Data Access (ODA) framework allows developers to create other data source
+types.</div>
+<p>
+<li>Click Next.
+<li>Enter "sfdata" for the Data Source Name field.
+<li>Choose "sun.jdbc.odbc.JdbcOdbcDriver" in the Driver Class field.
+<li>Type "jdbc:odbc:sfdata" in the URL field.
+<li>Type "admin" in the User Name field.
+<li>Leave the Password field blank.
+<li>Click Test Connection to test your connection. (If it fails, double-check
+the above information, or see the <a href="script01.html">instructions for setting
+up sfdata</a>.)
+<li>Click Finish
+</ul>
+
+<h1>Editing your Data Source</h1>
+
+Notice that your new data source appears in the Data Explorer.
+
+<ul>
+<li>Find or open the Data Explorer.
+<li>Open the Data Sources node
+<li>Double-click the sfdata data source.
+<li>The Data Source editor opens. You can make any needed changes. For now, there
+is nothing to change.
+<li>Click OK to save your changes.
+</ul>
+
+</body>
+</html>

@@ -9,20 +9,7 @@
 
 /* From nav_style.css */
 
-/* Used for the bold items in the left-hand menu, and for the links
-   at the bottom of each page. */
-
-.navhead {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: xx-small; color: white;
-	font-weight: bold;
-}
-a.navhead:link { text-decoration: none; color: white; }
-a.navhead:visited { text-decoration: none; color: white; }
-a.navhead:hover { text-decoration: underline; color: white; }
-
 /* Style for other items in the left-hand menu. */
-
 
 a.nav:link { text-decoration: none; color: black; }
 a.nav:visited { text-decoration: none; color: black; }
@@ -51,29 +38,96 @@ table {
 	font-size: 9pt;
 }
 
-/*
-a:link { color: #0000ee; }
-a:visited { color: #551a8b; }
-a:hover { color: red; }
-*/
+ul {
+	padding-left: 20pt;
+}
+
+li {
+	padding-bottom: 3pt;
+}
+
+/* For notes about specific limitations an other cautions. */
+
+.caution {
+	color: #000040;
+	background-color: #E0E0E0;
+	padding-top: 4pt;
+	padding-bottom: 4pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	margin-right: 0.5in;
+}
+
+.caution-head {
+	font-weight: bold;
+}
+
+.content > p {
+	margin-left: 4pt;
+	margin-right: 4pt;
+}
+
+/* Left-hand navigation menu styles. */
+
+.navhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small; color: white;
+	font-weight: bold;
+}
+
+a.navhead:link { text-decoration: none; color: white; }
+a.navhead:visited { text-decoration: none; color: white; }
+a.navhead:hover { text-decoration: underline; color: white; }
+
+.menu-table {
+	background-color: #90C8FF;
+	font-size: 10pt
+}
+
+.menu-table td
+{
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-left: 7px;
+	border-bottom: solid 1px #CFFFFF;
+	vertical-align: center;
+}
+
+/* Note: padding must be repeated in HTML (at least for FireFox) because it
+   does not take effect from the style. */
+
+.top-menu-cell
+{
+	padding-top: 3px;
+	padding-bottom: 4px;
+	background-color: #0080C0;
+	border-bottom: solid 1px #CFFFFF;
+}
 
 .menu-area {
 	color: black;
 	background-color: #6699CC;
 }
 
-.menu-table {
-	background-color: #90C8FF;
-	font-size: 9pt;
-}
-
 .banner-area {
 	background-color: #006699;
 }
 
-/*
-pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
-*/
+pre, code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+}
+
+.code-block {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	background-color: #E0E0E0;
+	padding-top: 4pt;
+	padding-bottom: 4pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	margin-right: 0.5in;
+}
 
 h1 {
 	background-color: #0080C0;
@@ -105,26 +159,6 @@ dd {
 	padding-bottom: 10pt;
 }
 
-/*
-
-h2 { font-size: 18pt; font-weight: bold ; line-height: 14px}
-
-code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
-
-sup {  font-size: 10px}
-
-h3 {  font-size: 14pt; font-weight: bold}
-*/
-
-/*
-li {  font-family: arial, helvetica, geneva; font-size: 10pt}
-
-
-h1 {  font-family: arial, helvetica, geneva; font-size: 28px; font-weight: bold}
-body {  font-family: arial, helvetica, geneva; font-size: 10pt; clip:   rect(   ); margin-top: 0mm; margin-left: 0mm; margin-right: 0mm; }
-*/
-
-
 .indextop {
 	font-size: x-large;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -142,14 +176,45 @@ a.bar:visited {color: white; text-decoration: none; }
 a.bar:hover { color: white; text-decoration: underline; }
 
 
-.jump { font-size: smaller; color: #8080FF; text-decoration: none; }
-a.jump:visited { color: #8080FF; text-decoration: none; }
-a.jump:link { color: #8080FF; text-decoration: none; }
-a.jump:hover { color: blue; text-decoration: underline; }
+.jump {
+	font-size: smaller;
+	color: #8080FF;
+	text-decoration: none;
+}
 
-.toc { font-size: small; color: #8080FF; text-decoration: none; }
-a.toc:visited { color: #8080FF; text-decoration: none; }
-a.toc:link { color: #8080FF; text-decoration: none; }
-a.toc:hover { color: blue; text-decoration: underline; }
+a.jump:visited {
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.jump:link {
+	color: #8080FF;
+	text-decoration: none; 
+}
+
+a.jump:hover { 
+	color: blue; 
+	text-decoration: underline; 
+}
+
+.toc { 
+	font-size: small; 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+a.toc:visited { 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.toc:link { 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.toc:hover { 
+	color: blue; 
+	text-decoration: underline; 
+}
 
 

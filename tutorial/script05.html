@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Building a Data Set</p>
+
+<h1>Build a Data Set</h1>
+
+Now we're ready to build and test our data set. This is a two-step process.
+First, we build the bulk of an SQL query using a wizard, then we fine tune
+it and test it using the data set editor.
+
+Let's build the data set:
+
+<ul>
+<li>Find or open the Data Explorer view.
+<li>Select the Data Sets node in the tree view.
+<li>Right-click to open the context menu. (We'll just say "open the context menu"
+or "choose x from the context menu" from now on.)
+<li>Select New Data Set
+<li>The New Data Set dialog will appear.
+<li>Enter "Customers" for the Data Set Name field.
+<li>Ensure that the Data Source field shows the sfdata data source created above.
+<li>Ensure that the Data Set Type field shows "JDBC select data set". This builds a
+data set for an SQL SELECT query.
+<li>Click Next
+</ul>
+
+<h1>Choose Tables</h1>
+
+The next page lets you select one or more tables for your query. For our first
+report, we'll select just one table: Customers.
+
+<ul>
+<li>Choose "Tables" within the Select Type field.
+<li>Click Apply Filter to find all tables.
+<li>Select the customers table.
+<li>Click the &gt; button to add it to the query.
+<li>Click Next
+</ul>
+
+<h1>Choose Columns</h1>
+
+You can choose any number of columns to appear in your report. Normally, you would
+choose only those columns that are actually needed by the report. For our first
+report, we'll choose all columns.
+
+<ul>
+<li>Scroll the list of columns up so you can see the customers table entry.
+<li>Select the customers table entry.
+<li>Click the &gt; button to add all customer columns to your query.
+<li>Click Finish
+</ul>
+
+</body>
+</html>

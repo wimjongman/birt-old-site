@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Testing a Report</p>
+
+<h1>Testing your Report</h1>
+
+We're now ready to run the first test of the report layout. We verified the
+data set earlier, so now we want to verify that the report is formatting the
+data as we expected.
+<p>
+We preview the report by clicking on the Preview tab within the report editor.
+If our report had parameters, the GUI would ask us for them. But, since this
+report does not have parameters, it simply runs.
+<p>
+The window that appears is a simple web browser, and displays the report in
+HTML. The report appears as a single page. This works well for the small
+amount of data in our sample. If our database had more data, we'd want to use
+a report parameter and a data set filter to limit the amount of data displayed
+at any one time.
+<p>
+<div class="caution"><span class="caution-head">Release 1.0 Note:</span>
+BIRT Release 1.0 displays the report as a single
+HTML page. Future releases will display the report as a series of pages.</div>
+<p>
+Seeing the report in the preview suggests a number of ways we can improve the
+report's appearance:
+
+<ul>
+<li>Add a title to the top of the report.
+<li>Add some color to enhance the column headings.
+<li>Shrink the size of the city and state columns.
+<li>Add some color to make the state and city group headers stand out.
+<li>Format the phone numbers.
+</ul>
+
+Before we fix these issues, let's look at other ways to preview the report.
+
+<h1>Other Ways to Preview</h1>
+
+The Preview tab is handy for a quick review of your report. BIRT runs the report each
+time you switch to Preview. However, you can have either the Layout or the
+Preview tabs open, but not both.
+<p>
+Instead, we can preview the report as a separate window. Find the Preview button in
+the toolbar. Use the little arrow next to it to open the pulldown. You can then
+Preview as HTML in a separate window. This allows you to switch back and forth
+between your Layout editor and your preview without rerunning the report.
+<p>
+You can also choose Preview as PDF. This converts the layout to a multi-page
+PDF format.
+<p>
+<div class="caution"><span class="caution-head">Release 1.0 Note:</span> 
+BIRT Release 1.0 uses the Apache XML-FO Processor
+(FOP) package. Limitations in the current version of FOP cause problems with
+the way the report apepars in PDF. The BIRT team is aware of the problems and
+is working to address them in a later release.</div>
+
+</body>
+</html>

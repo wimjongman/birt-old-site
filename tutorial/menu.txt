@@ -1,0 +1,17 @@
+<birt-sequence>
+<top name="tutorial" 			page="../tutorial"/>
+<step name="getting started" 	page="script01.html"	title="Getting Started"/>
+<step name="creating a report" 	page="script02.html"	title="Creating a Report"/>
+<step name="brief UI tour" 		page="script03.html"	title="Brief UI Tour"/>
+<step name="data source" 		page="script04.html"	title="Building a Data Source"/>
+<step name="data set" 			page="script05.html"	title="Building a Data Set"/>
+<step name="testing a data set" page="script06.html"	title="Editing &amp; Testing a Data Set"/>
+<step name="table" 				page="script07.html"	title="Building a Table"/>
+<step name="testing your report" page="script08.html"	title="Testing a Report"/>
+<step name="visual properties" 	page="script09.html"	title="Setting Visual Properties"/>
+<step name="styles" 			page="script10.html"	title="Using Styles"/>
+<step name="cascading styles" 	page="script11.html"	title="Cascading Styles"/>
+<step name="grid" 				page="script12.html"	title="Using a Grid"/>
+<step name="text item" 			page="script13.html"	title="Using a Text Item"/>
+<step name="next steps" 		page="script14.html"	title="Next Steps"/>
+</birt-sequence>

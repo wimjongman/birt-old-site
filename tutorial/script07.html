@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Tutorial</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Tutorial</p>
+<p class="subhead">Building a Table</p>
+
+<h1>About Tables</h1>
+
+BIRT provides a variety of <i>report items</i> for use when creating your report.
+Report items appear in the Palette view.
+Report items include:
+
+<dl class="arrow-list">
+<dt>Label</dt>
+<dd>Displays a simple piece of text such as "Customer Name".</dd>
+
+<dt>Data</dt>
+<dd>Displays a database column or a computed value. Provides formatting.</dd>
+
+<dt>Text</dt>
+<dd>Text that can include HTML formatting and computed values. Used to create
+headings, form letters, "mail-merge" effects, etc.</dd>
+
+<dt>Image</dt>
+<dd>Any kind of image supported by a web browser. Images can be <i>embedded</i>
+in the report, or links to a file on your web server.</dd>
+
+<dt>Grid</dt>
+<dd>Provide a tabular arrangement of report items, much like an HTML table.</dd>
+
+<dt>Table</dt>
+<dd>Presents data from a data set in the form of a table. Can contain grouping levels.
+Like an HTML table that has a table row for each data set row.</dd>
+
+<dt>List</dt>
+<dd>Presents data from a data set in any kind of format. Used when the layout for
+each row is more sophisticated than a simple table row.</dd>
+
+</dl>
+
+This tutorial will use all the elements except for List.
+
+<h1>Create the Table Detail</h1>
+
+The New Report dialog created a starter report that contains just a table with
+one level of grouping. If we'd chosen a blank report, we could create the table
+simply by dragging it from the palette.
+<p>
+The next step is to add some content to the table. We'll start with the <i>detail
+band</i>. The detail band repeats to display each row from our data set. Here's how:
+
+<ul>
+<li>Display the Data Explorer if it's not already visible.
+<li>Expand the Data Sets node of the tree.
+<li>Expand the entry for the Customers data set that we created. This will display
+the columns available from the data set.
+<li>Select the customName column.
+<li>Locate the detail band within the table.
+<li>Drag the customName column into the detail band cell that is second from the
+left.
+<li>Repeat the above steps to drag the phone column into the last cell in the
+detail band.
+</ul>
+
+<h1>Create the State Group</h1>
+
+Next, we want to create the group heading for states. Using a group causes all
+rows within the same state to appear together.
+
+<ul>
+<li>Locate the Group Header column in your table.
+<li>Drag the state column into the leftmost cell within the group heading.
+<li>Click in an empty cell. This will display a set of column and row headings
+in the form of gray boxes much like those in Microsoft Excel. (We'll call this
+the "table scaffolding." It helps us edit the table.)
+<li>Open the context menu for the row header for the Group Header row.
+<li>Choose Edit Group. The Group dialog will appear.
+<li>In the Group On field, choose the state column. (Note: this probably was
+already done for you when you dropped the column into the header.)
+<li>Click OK.
+</ul>
+
+<p>
+We are using the group created for us by the New Report
+dialog. If we'd started by dragging the table from the palette, we'd create
+this first group as we'll explain in the next section.
+</p>
+<p>
+You must <i>bind</i> (associate) the table to a data set 
+before you
+can create a group. The binding happened automatically when we dropped the
+first data set column into the table. However, if you build a table on your
+own, you can use the Binding tab in the Property Editor to bind the table to
+as data set.
+</p>
+
+<h1>Create the City Group</h1>
+
+Next, we need to create a city group within the state. This makes sure that
+customers are first grouped by state, then by city.
+
+<ul>
+<li>Click in an empty cell to display the table scaffolding.
+<li>Choose Insert Group from the context menu. The Edit Group dialog again appears.
+<li>Chose the city column in the Group On field.
+<li>Click OK.
+<li>We need another table column to display our group heading. Ensure the table
+scaffolding appears. Click on the gray box column header for the first column.
+<li>Choose Insert --&gt; Column to the Right. A new column appears.
+<li>Drag the city column from the Data Explorer into the second column of the
+second group header.
+</ul>
+
+<h1>Create Column Headings</h1>
+
+We're almost done with basic setup of our table. We just need to add column headings.
+BIRT added headings for us for the columns in the detail band.
+
+<ul>
+<li>Drag a label from the Palette into the first cell of the Header row in table.
+<li>Type "State" and press Enter.
+<li>Repeat this to add a label to the second colum header. Type "City".
+<li>The third table column has a heading, but we want to change the text.
+Double-click on the text to change it.
+<li>Type "Name".
+<li>Repeat the above step to change the last column heading to "Phone".
+</ul>
+
+</body>
+</html>
