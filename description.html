@@ -1,0 +1,169 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title>Business Intelligence and Reporting Tools Project</title>
+<link rel="stylesheet" href="../default_style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body text="#000000" bgcolor="#ffffff" link="#0000ee" vlink="#551a8b" alink="#ff0000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left colspan="4"> <font class=indextop> Project Description and Scope</font> <br>
+      <font class=indexsub> The BIRT Project</font></td>
+    <td width="17%" rowspan="2"><img src="../images/Idea.jpg" height=86 width=120></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF"> 
+      BIRT Project Description and Scope</font></b></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td colspan="2"> 
+      <p>The Eclipse Business Intelligence and Reporting Tools Project will address 
+        a broad range of needs in the business intelligence and reporting space 
+        using the Eclipse platform. </p>
+      <p>The business intelligence and reporting space is focused on tools and 
+        capabilities that extract data from data sources, process that data, and 
+        present the processed information to the end users. The information may 
+        be needed to enable the users to perform their operational or analytical 
+        job functions, or it may be customer-centric information such as a transaction 
+        statement. The capabilities can range from application- and production-level 
+        reporting, through ad hoc user-driven query tools, to highly interactive 
+        multi-dimensional online analytical processing (OLAP) and data mining 
+        tools. While many business intelligence and reporting applications access 
+        operational data sources, it is often the case that developers provide 
+        specific data warehouses to support the business intelligence and reporting 
+        needs of an application. The tools in this space can include facilities 
+        to help build these data warehouses.</p>
+      <p>It should be noted that a given application often needs a range of complementary 
+        capabilities in this area to meet the needs of different users of the 
+        application. For example, consider components of an online order processing 
+        application: The individual order invoices will be printed for inclusion 
+        in the shipping box and the shipping clerk will need an online or printed 
+        shipping list (both production-level reports); while a product line manager 
+        may want to perform ad hoc queries to see which products generate the 
+        most returns; while the purchasing agent may use analytics to look for 
+        trends and improve stocking levels. Providing a range of coordinated and 
+        complementary capabilities under the Eclipse Business Intelligence and 
+        Reporting Tools Project is intended to ensure that the developed technology 
+        can effectively be used to meet this broad range of needs.</p>
+      <p>Initially, the Project will focus on leveraging the Eclipse platform 
+        to provide infrastructure and tools for the designing, deploying, generating 
+        and viewing of reports in an organization, including ad hoc query and 
+        reporting tools. While not an initial focus, the BIRT project scope includes 
+        complementing these reporting capabilities with Online Analytical Processing 
+        (OLAP) and Business Intelligence dashboard functionality. Over time, but 
+        not in the initial scope, the creation of additional projects is anticipated 
+        and encouraged to address additional aspects of business intelligence, 
+        such as Executive Information Systems (EIS), statistical analysis, modeling 
+        capabilities (what-if analysis), Data Mining Tools, Data Warehouse Modeling 
+        Tools, Extract Transform and Load (ETL) tools and Data Quality Tools.</p>
+      <p>The initial deliverable of the Eclipse Business Intelligence and Reporting 
+        Tools Project is to provide a robust platform that can be used to quickly 
+        and effectively create and deploy reports with any degree of complexity 
+        without having the developer create the data access, processing and formatting 
+        logic using Java code or components. In the majority of cases, the report 
+        developer will design a report within the Eclipse framework using a 100% 
+        visual design paradigm. However, in recognition of the fact that the variety 
+        of report layouts and complexity of data access is infinite, the project 
+        will also support extensive programmatic customization of the report generation 
+        processes, including programmatic creation of report designs.</p>
+      <p>Reports extract data from a data source or sources, perform manipulations 
+        and calculations on the data to answer business questions, and present 
+        the results as information in a formatted and convenient form for the 
+        business user to use. This information is then typically used for operational 
+        or decision support purposes within an organization. Reports vary dramatically 
+        in size, content and complexity and will include or combine characteristics 
+        such as:</p>
+      <ul>
+        <li>Listings of information (Example: Transactions in an account)</li>
+        <li>Sorting, grouping and aggregation of data with and without subtotals 
+          (Example: A listing of all product sales for each sales person, grouped 
+          by state)</li>
+        <li>Charts to present information in easy to understand formats (Example: 
+          Pie chart showing an investor's portfolio allocation by High Growth/Growth/Income/etc. 
+          categories)</li>
+        <li>Matrix or cross-tab layouts (Example: Financial budget reports with 
+          cost codes as rows, columns for each month, and cells containing numerical 
+          data for that cost code/month)</li>
+        <li>Delivery of information as one or a combination of web pages, PDF 
+          files, printed documents, Excel files, etc. (Example: Frequent flyer 
+          statement delivered as a web page online and a printed document in the 
+          mail)</li>
+        <li>Precise, highly formatted layouts (Examples: Bank statements; utility 
+          bills; commission statements; invoices; government forms)</li>
+        <li>Page navigation for long reports (Examples: Hundreds of pages corporate 
+          cell phone usage bill with First Page, Next Page, Go to Page, etc. buttons)</li>
+        <li>Table of Contents (Example: Multi-page Investment Portfolio summary 
+          with Table of Contents to quickly navigate to Account Summary; Fund 
+          History; etc.)</li>
+        <li>Keyword or content search within a report (Example: find information 
+          on a customer in a 1000 page customer account report)</li>
+      </ul>
+      <p>This can be contrasted with data-driven JSP pages where the data manipulation 
+        and presentation needs are more transaction driven and do not include 
+        recurring reporting needs such as complex aggregation (performed outside 
+        of the database) and highly complex layouts.</p>
+      <p>For report development, the project broadly targets three classes of 
+        developer:</p>
+      <ul>
+        <li><b>Application Developers</b> - These are Java developers who are 
+          creating applications that include the need to retrieve data and present 
+          that data in the form of reports. This is likely to be a subset of the 
+          overall application and will include many of the characteristics discussed 
+          above. In this case, the report generation and viewing will be embedded 
+          in the overall application.</li>
+        <li><b>Report Developers</b> - Report developers are not typically skilled 
+          in writing Java code. They expect to use a visual desktop tool to create 
+          any type of report - including defining database connections, report 
+          content and report layout. These reports may then be deployed as part 
+          of an application, or through an easy to use deployment framework.</li>
+        <li><b>Business Users</b> - Business users often want to create their 
+          own report layouts or customize existing reports. They work through 
+          a very easy-to-use web-based report creation and editing facility to 
+          answer business questions on an ad hoc basis.</li>
+      </ul>
+      <p>The project will address both the design time needs of report creation 
+        as well as the run-time requirements of report generation and deployment. 
+        A high-level architecture diagram is provided below. The project will 
+        adopt and support accepted open standards wherever feasible.</p>
+    </td>
+</tr>
+	  <tr>
+    <td> <img src="chart1.jpg" width="658" height="237"> </td>
+  </tr>
+	  <tr>
+    <td> 
+      <p>The Eclipse Business Intelligence and Reporting Project is divided into 
+        a number of sub-projects that reflect the initial focus on the reporting 
+        aspects of business intelligence and the high-level architecture of the 
+        project. These are discussed in the sub-project section below. As discussed 
+        above, the creation of additional sub-projects is anticipated and encouraged 
+        to address additional aspects of business intelligence.</p>
+      <p>Due to the wide variety of potential applications, it is recognized that 
+        BIRT cannot meet all the requirements of all applications. It is therefore 
+        a core design principle for the projects within BIRT to support a broad 
+        range of extension points within the tools and frameworks that allow developers 
+        to address additional needs. These extension points may be utilized for 
+        adding value in commercial products using BIRT, or may be developed and 
+        contributed into the Eclipse open source community.</p>
+      <p>For example, logging tools can use BIRT's data extension point to plug-in 
+        a data query user interface and access logic to read and process log files, 
+        use BIRT's report engine to present the information in the log, and extend 
+        BIRT's output/rendering adaptor to email or send a short message to a 
+        user with the report output in a format targeted for that device.</p>
+      <p>We expect the Business Intelligence and Reporting Tools Project to produce 
+        functional requirements that are more appropriately satisfied through 
+        the Eclipse Project or other Eclipse foundational projects. In such cases, 
+        the Business Intelligence and Reporting Tools Project PMC will coordinate 
+        the corresponding Project PMCs the design and implementation of the corresponding 
+        contribution.</p>
+      <p>&nbsp;</p>
+	  </td></tr>
+</table> 
+<p>&nbsp;</p>
+</body>
+</html>
