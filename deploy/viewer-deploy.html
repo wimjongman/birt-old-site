@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Deploying BIRT</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Deploying BIRT</p>
+
+<p class="subhead">Using Standalone Tomcat</p>
+
+<h1>Using Tomcat</h1>
+
+<p>The first step is to understand how to deploy the viewer to a J2EE container. 
+We'll use <a href="http://jakarta.apache.org/tomcat/">Apache Tomcat</a>, since 
+it is open source and readily available. The same concepts, though perhaps 
+different details, apply to other app servers. These instructions assume you'll 
+install Tomcat on your own machine using the default port number of 8080.</p>
+
+<p>The following instructions are for Tomcat version 5.5.7 but you 
+should be able to use them for other versions with appropriate changes. If you 
+don’t have Tomcat installed on your system you can download it from
+<a href="http://jakarta.apache.org/tomcat">http://jakarta.apache.org/tomcat</a>.</p>
+
+<h1>Prepare Tomcat</h1>
+
+<p>BIRT is tested for use with Java 1.4, but Tomcat 5.5 runs on Java 5 
+by default. Be sure to download and install the compatibility package from the 
+Tomcat download page. Then, configure Tomcat to use the Java 1.4 
+runtime. The easiest way to do this is to use the Tomcat manager.</p>
+
+<ul>
+<li>Open the Tomcat Properties dialog.</li>
+<li>Switch to the Java page.</li>
+<li>For Java Virtual Machine, enter the path to a Java 1.4 runtime.</li>
+</ul>
+
+<p>Then, verify that the configuration is correct:</p>
+
+<ul>
+  <li>In your browser, open the main page for Tomcat. This is 
+localhost:8080 by default.</li>
+  <li>Switch to the Status page. Make sure that the JVM version is 
+from the 1.4 series.</li>
+</ul>
+
+<h1>Deploy the Viewer</h1>
+
+<p>The next step is to deploy the BIRT viewer application.
+
+<p class="caution">
+<span class="caution-head">Release 1.0M1 Note</span>: 
+The download page does not include a viewer build. Instead, 
+we'll use the viewer packaged with the Report Designer. These instructions will 
+change once a viewer build is available.</p>
+
+<ul>
+  <li>Locate the Eclipse plugins directory.</li>
+  <li>Find the org.eclipse.birt.report.viewer_0.0.1 plugin. Open this 
+directory. It contains a single directory called viewer.</li>
+  <li>Copy the viewer directory to the webapps directory of your 
+Tomcat installation.</li>
+  <li>Stop, then restart Tomcat.</li>
+  <li>Display the Tomcat manager application and verify that the 
+Viewer is deployed: <a href="http://localhost:8080/manager/html">
+http://localhost:8080/manager/html</a>.</li>
+  <li>Verify that Viewer is listed as an application, and that it is 
+running.</li>
+</ul>
+
+<p>If you choose to put the Viewer into some other location, you'll 
+need to use a context entry within the server.xml file to indicate the 
+deployment location. See Tomcat documentation for details. </p>
+
+<h1>Test the Viewer</h1>
+
+<p>We'll test the viewer by creating a test report and deploying it 
+into the Viewer directory.
+
+<ul>
+  <li>Create a directory called reports within your webapps/viewer 
+directory.</li>
+  <li>Download the sample report into the webapps/viewer directory you 
+just created.</li>
+  <li>If you've installed everything in its default location, then 
+  copy the following URL into your browser. Replace the <i>{Report Path}</i>
+  with the name of the absolute path to your report, encoded for HTML.
+  Note that the URL
+  is broken into lines for readability.
+<pre class="code-block">
+http://localhost:8080/viewer/engineservlet?
+__uri=<i>{Report Path}</i>%5Ctest.rptdesign
+</pre></li>
+</ul>
+
+<p class="caution">
+<span class="caution-head">Build S20050314 Note</span>: 
+The viewer currently 
+requires an absolute path to the report on the server machine. Upcoming versions 
+will support relative paths.</p>
+
+<p class="caution">
+<span class="caution-head">Build S20050314 Note</span>: 
+The above link will run the report with default parameter values. The link
+to display the parameter page is not yet available in this build.</p>
+
+<p>The report should run and appear in your browser.
+
+</body>
+</html>

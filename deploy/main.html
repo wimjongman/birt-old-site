@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Deploying BIRT</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Deploying BIRT</p>
+<p class="subhead">Overview</p>
+
+<h1>Integration Points</h1>
+
+<p>BIRT provides two main solutions for integrating with your application:</p>
+<ul>
+  <li>Using the BIRT Viewer web application, or a customized version</li>
+  <li>Using the BIRT Report Engine in your application.</li>
+</ul>
+
+<h1>Status</h1>
+<p>
+The deployment portions of the BIRT project are still being refined. The information
+here may (and probably will) change as Release 1.0 approaches. On the other hand,
+this means that there is still time to provide your comments and suggestions via
+the <a href="../community.html">news group</a>.
+
+<h1>The BIRT Viewer</h1>
+
+<p>The BIRT viewer is a web application that ships with BIRT to perform report 
+preview within Eclipse.</p>
+<ul class="arrow-list">
+  <li><a href="viewer-deploy.html">Deploying the BIRT Viewer </a>explains how to 
+  deploy the BIRT viewer onto your own application server. It uses Apache 
+  Jakarta Tomcat as the sample deployment.</li>
+  <li><a href="viewer-use.html">Understanding the Sample Viewer</a> discusses 
+  the major components of the viewer application and how to customize them.</li>
+  <li>Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
+  <li>The viewer code itself is available in the BIRT CVS repository in the
+  <a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project">
+  org.eclipse.birt.report.viewer</a> project. See the
+  <a href="../build/build_instr.html">BIRT build instructions</a> for 
+  information on how to access CVS and build the viewer.</li>
+</ul>
+
+<p>The BIRT Viewer can be used in a variety of ways:</p>
+<ul>
+  <li>As a stand-alone, pre-built web application for running and viewing 
+  reports.</li>
+  <li>As a starter web application that you can customize to your 
+  needs.</li>
+  <li>As an example for learning how to build your own reporting web application, 
+  or to learn how to use the BIRT engine.</li>
+  <li>As a way to run a report using a URL. This option provides a simple way to 
+  integrate BIRT reporting into applications build using non-Java technology 
+  such as Perl, PHP or even static web pages.</li>
+</ul>
+
+<h1>The BIRT Engine SDK</h1>
+
+<p>You can also build an application that uses the BIRT Report Engine directly. 
+This might be a web application, Eclipse plug-in or even a command-line 
+application.</p>
+<ul class="arrow-list">
+  <li>Installing the BIRT Engine SDK explains how to install the Engine SDK and 
+  how to use it within Eclipse. (Not yet available.)</li>
+  <li>Installing the BIRT Runtime explains how to install and configure the BIRT 
+  engine as part of your application. (Not yet available.)</li>
+  <li>Working with the BIRT Engine explains how to integrate the BIRT engine 
+  within your application. (Not yet available.)</li>
+  <li>The sample Engine application is a simple, command-line application that 
+  runs a report and illustrates the above topics. (Not yet available.)</li>
+</ul>
+
+<p>The BIRT engine is simply a series of jar files and can be deployed within a 
+wide range of Java applications:</p>
+<ul>
+  <li>Web application using your favorite application framework (JSP, servlet, 
+  JSF, Struts, etc.)</li>
+  <li>Traditional Java client application based on Swing.</li>
+  <li>Eclipse Rich Client Platform (RCP) application.</li>
+  <li>Even as a command-line utility.</li>
+</ul>
+
+
+</body>
+</html>
