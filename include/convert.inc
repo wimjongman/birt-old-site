@@ -170,7 +170,7 @@ function parseTag( )
 	//echo "After space: |$tokenText|\n";
 	$tagName = "";
 	//while ( $c !== false && $c != ">" && ! ctype_space( $c ) )
-	while ( $c !== false && $c != ">" && $c != ' ' && $c != '\t' )
+	while ( $c !== false && $c != ">" && ! isWhite( $c ) )
 	{
 		$tagName .= strtolower( $c );
 		$tokenText .= $c;
@@ -188,6 +188,11 @@ function parseTag( )
 	return T_TAG;
 }
 
+function isWhite( $c )
+{
+	return $c == ' ' || $c == '\t' || $c == '\n' || $c == '\r';
+}
+
 function skipSpace( )
 {
 	global $tokenText, $doc;
@@ -195,7 +200,7 @@ function skipSpace( )
 	while ( ( $c = fgetc( $doc ) ) !== false )
 	{
 //		if ( ctype_space( $c ) )
-		if ( $c == ' ' && $c == '\t' )
+		if ( isWhite( $c ) )
 			$tokenText .= $c;
 		else
 			return $c;
