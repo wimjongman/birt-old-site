@@ -194,7 +194,8 @@ function skipSpace( )
 
 	while ( ( $c = fgetc( $doc ) ) !== false )
 	{
-		if ( ctype_space( $c ) )
+//		if ( ctype_space( $c ) )
+		if ( $c == ' ' && $c == '\t' )
 			$tokenText .= $c;
 		else
 			return $c;
