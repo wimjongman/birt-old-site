@@ -1,0 +1,501 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Building BIRT from CVS </TITLE>
+<META NAME="Generator" CONTENT="Microsoft FrontPage 4.0">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+
+<style>
+	BODY, td
+	{
+		font-family: Helvetica, Arial, Sans-Serif;
+		font-size: 10pt;
+		font-weight: normal;
+	}
+	.title
+	{
+		font-size: 25pt;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: 20pt;
+		border-bottom: 1pt solid black;
+	}
+
+	.summary .a, .subContentTitle
+	{
+		font-weight: bold;
+		padding-bottom: 10pt;
+	}
+
+	.section, .summary
+	{
+		padding-top: 15pt;
+		padding-bottom: 10pt;
+		border-bottom: 1pt solid black;
+	}
+
+	.sectionTitle
+	{
+		font-size: 18pt;
+		font-weight: bold;
+		padding-bottom: 5pt;
+	}
+
+	table
+	{
+		border: 1pt ridge silver;
+		border-collapse: collapse;
+		margin: 10pt;
+	}
+
+	td, th
+	{
+		border: 1pt ridge silver;
+		padding: 5pt;
+	}
+
+	.subContent
+	{
+		padding-bottom: 10pt;
+	}
+
+	.subContentTitle
+	{
+		font-size: 13pt;
+		text-decoration: underline;
+	}
+
+</style>
+</HEAD>
+
+<BODY>
+<div class="title">
+	Building BIRT from CVS
+</div>
+<div class="summary">
+	<div class="a">
+		Summary
+	</div>
+	<div>
+		This document describes how to get the BIRT source from CVS and build it under Eclipse.
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		1. Requirements
+	</div>
+	<div class="sectionContent">
+		In order to successfully build and run the BIRT source, your system must meet the following requirements:
+		<ul>
+			<li>Eclipse Release 3.0.1 or higher</li>
+			<li>JDK 1.4 or higher</li>
+			<li>GEF 3.0.0 or higher</li>
+			<li>EMF 2.0.1 or higher</li>
+		</ul>
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		2. Configuring your Eclipse workbench
+	</div>
+	<div class="sectionContent">
+		The BIRT source code uses some features that are only present in JDK 1.4.
+		In order for it to successfully build you need to set your compiler compliance to 1.4.
+		You can set this for the entire workbench as follows: <br/><br/>
+		1) From the menu, choose Window->Preferences.<br/>
+		2) In the tree, expand Java and choose Compiler.<br/>
+		3) On the tabs on the right, choose Compliance and Classfiles.<br/>
+		4) On Compiler compliance level, select 1.4.<br/>
+		5) Unselect Use default compliance settings.<br/>
+		6) On Generated .class files compatibility, select 1.4.<br/>
+		7) On Source compatibility, select 1.4.<br/><br/>
+		The following illustration shows these settings.<br/><br/>
+		<img src="compliancepreference.jpg"/><br/><br/>
+		8) Choose OK.<br/>
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		3. Understanding the CVS structure
+	</div>
+	<div class="sectionContent">
+		The BIRT modules are available in CVS under <a href="http://dev.eclipse.org/viewcvs/index.cgi/?cvsroot=BIRT_Project" />/home/birt</a>. 
+		BIRT consists of the following modules.
+		<ul>
+			<li><a href="#org.eclipse.birt.chart">org.eclipse.birt.chart</a></li>
+			<li><a href="#org.eclipse.birt.convertors">org.eclipse.birt.converters</a></li>
+			<li><a href="#org.eclipse.birt.core">org.eclipse.birt.core</a></li>
+			<li><a href="#org.eclipse.birt.data">org.eclipse.birt.data</a></li>
+			<li><a href="#org.eclipse.birt.report">org.eclipse.birt.report</a></li>
+		</ul>
+		<div class="subContent">
+			<div class="subContentTitle">
+				<a name="org.eclipse.birt.chart">
+					a) org.eclipse.birt.chart
+				</a>
+			</div>
+			This module contains the BIRT charting engine files and the BIRT UI extension files for integrating the charting engine with the BIRT report designer. The following table describes the different project directories under this module.
+			<table>
+				<thead>
+					<th>
+						Project Folder
+					</th>
+					<th>
+						Contents
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.device.extension
+						</td>
+						<td>
+							Extension classes for the device renderer framework for charts
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.engine
+						</td>
+						<td>
+							Chart model and factory classes
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.engine.extension
+						</td>
+						<td>
+							Extension classes for the model renderer framework for charts
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.reportitem
+						</td>
+						<td>
+							Classes for the chart module to interact with the BIRT designer and runtime engine
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.shared
+						</td>
+						<td>
+							Classes shared between different components of the chart module
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.ui
+						</td>
+						<td>
+							Chart builder UI classes
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.chart.ui.extension
+						</td>
+						<td>
+							Extensions for the chart builder UI
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="subContent">
+			<div class="subContentTitle">
+				<a name="org.eclipse.birt.converters">
+					b) org.eclipse.birt.converters
+				</a>
+			</div>
+			This module contains converters that can convert reports from other formats to the BIRT report format.
+			The project is directly under the module. There are no separate project folders.
+		</div>
+
+		<div class="subContent">
+			<div class="subContentTitle">
+				<a name="org.eclipse.birt.core">
+					c) org.eclipse.birt.core
+				</a>
+			</div>
+				This module provides the framework for loading the plugins at run-time and contains other classes that can be used by any other module.
+			<table>
+				<thead>
+					<th>
+						Project Folder
+					</th>
+					<th>
+						Contents
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							org.eclipse.birt.core
+						</td>
+						<td>
+							The only project folder under this module
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="subContent">
+			<div class="subContentTitle">
+				<a name="org.eclipse.birt.data">
+					d) org.eclipse.birt.data
+				</a>
+			</div>
+				This module contains the data engine and ODA driver implementations to access data sources from BIRT and to apply transformations to the data sources.
+			<table>
+				<thead>
+					<th>
+						Project Folder
+					</th>
+					<th>
+						Contents
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							org.eclipse.birt.data
+						</td>
+						<td>
+							The data engine implementation and the ODA factory implementation
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.data.oda.jdbc
+						</td>
+						<td>
+							The ODA driver for accessing JDBC data sources
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.data.oda.jdbc.ui
+						</td>
+						<td>
+							The user interface for the ODA JDBC driver
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="subContent">
+			<div class="subContentTitle">
+				<a name="org.eclipse.birt.report">
+					e) org.eclipse.birt.report
+				</a>
+			</div>
+			This module contains the BIRT reporting projects, consisting of the report engine, the report model, the report designer, and the viewer.
+			<table>
+				<thead>
+					<th>
+						Project Folder
+					</th>
+					<th>
+						Contents
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							org.eclipse.birt.feature
+						</td>
+						<td>
+							The BIRT feature
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.designer.core
+						</td>
+						<td>
+							The core classes of the BIRT report designer, including classes that interact with the BIRT model, and localization and other utility classes
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.designer.tests
+						</td>
+						<td>
+							The unit test classes for the designer project
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.designer.ui
+						</td>
+						<td>
+							The BIRT report designer
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.engine
+						</td>
+						<td>
+							The BIRT reporting engine that generates the report from a report design
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.engine.emitter.fo
+						</td>
+						<td>
+							The emitter for generating report output using FO
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.engine.emitter.html
+						</td>
+						<td>
+							The emitter that generates report output in HTML
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.model
+						</td>
+						<td>
+							The BIRT report model
+						</td>
+					</tr>
+					<tr>
+						<td>
+							org.eclipse.birt.report.viewer
+						</td>
+						<td>
+							The BIRT report viewer
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		4. Checking out code from CVS
+	</div>
+	<div class="sectionContent">
+		<div class="subContent">
+			<div class="subContentTitle">
+				a) Configuring the repository under Eclipse
+			</div>
+			1) To open the CVS Repository Exploring perspective, choose Window -> Open Perspective -> Other. In Select Perspective, select CVS Repository Exploring and choose OK. <br/><br/>
+			<img src="selectperspective.jpg"/><br/><br/>
+			2) Right-click on the CVS repositories window. From the context menu, choose New -> Repository Location.<br/><br/>
+			<img src="newrepository.jpg"/><br/><br/>
+			3) On Add CVS Repository, set the following values:<br/>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							Host
+						</td>
+						<td>
+							dev.eclipse.org
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Repository path
+						</td>
+						<td>
+							/home/birt
+						</td>
+					</tr>
+					<tr>
+						<td>
+							User
+						</td>
+						<td>
+							anonymous
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Connection type
+						</td>
+						<td>
+							pserver
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Use Default Port
+						</td>
+						<td>
+							Selected
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			<img src="addcvsrepository.jpg" /><br/><br/>
+			4) Choose Finish.<br/><br/>
+			A new node appears in the CVS Repositories window.
+		</div>
+		<div class="subContent">
+			<div class="subContentTitle">
+				b) Checking out code for the first time
+			</div>
+			1) Expand the new node in the repositories tree, then the head node and the org.eclipse.birt.chart, org.eclipse.birt.core, org.eclipse.birt.data and org.eclipse.birt.report nodes.<br/>
+			2) Select all the nodes under these four nodes and the org.eclipse.birt.converters node as shown in the image below. On CVS Repositories, right-click and choose Check Out from the context menu.<br/><br/>
+			<img src="checkout.jpg" /><br/><br/>
+			This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
+		</div>
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		5. Building the BIRT projects
+	</div>
+	<div class="sectionContent">
+		Eclipse automatically starts compiling the projects after completing checking them out.
+		All of the projects except converters should compile without any problems on a system that satisfies all the requirements in section 1.
+		Compiling the converters project requires the Jasper Reports library. If you need to compile this project, download this library from <a href="http://jasperreports.sourceforge.net/">http://jasperreports.sourceforge.net/</a>.
+	</div>
+</div>
+<div class="section">
+	<div class="sectionTitle">
+		6. Preparing the viewer
+	</div>
+	<div class="sectionContent">
+		To include all the required project libraries under the viewer's WEB-INF folder, you must build the viewer separately.
+		The viewer project contains an ant build script that performs this task. To use this script, perform the following steps: <br/><br/>
+		1) In Package Explorer, expand the org.eclipse.birt.report.viewer project.<br/>
+		2) Right-click the build.xml file. From the context menu, choose Run -> Ant Build.<br/><br/>
+		<img src="runantbuild.jpg" /><br/><br/>
+		3) In org.eclipse.birt.report.viewer build.xml, select the Properties tab. Unselect Use global properties specified in the Ant runtime preferences, as shown in the following illustration.<br/><br/>
+		<img src="runantbuildproperties.jpg" /><br/><br/>
+		4) This script is configured to work with Eclipse 3.0. If you are using a higher version, you need to add a property called eclipse.version.<br/>
+		<ul>
+			a) On the Properties tab, choose Add Property. Add Property appears.<br/>
+			b) In Name, type:<br/>
+			<ul>
+				eclipse.version<br/>
+			</ul>
+			c) In Value, type the version of Eclipse, similar to the following illustration.<br/><br/>
+			<img src="addproperty.jpg" /><br/><br/>
+			d) Choose OK.
+		</ul>
+		5) Choose Run.<br/><br/>
+		The ant build of the viewer runs in the console.
+	</div>
+</div>
+</BODY>
+</HTML>
