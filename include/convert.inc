@@ -169,7 +169,8 @@ function parseTag( )
 	
 	//echo "After space: |$tokenText|\n";
 	$tagName = "";
-	while ( $c !== false && $c != ">" && ! ctype_space( $c ) )
+	//while ( $c !== false && $c != ">" && ! ctype_space( $c ) )
+	while ( $c !== false && $c != ">" && $c != ' ' && $c != '\t' )
 	{
 		$tagName .= strtolower( $c );
 		$tokenText .= $c;
