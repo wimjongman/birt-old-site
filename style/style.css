@@ -219,4 +219,38 @@ a.toc:hover {
 	text-decoration: underline; 
 }
 
+/* FAQ styles */
+
+.q {
+	font-weight: bold;
+	padding-bottom: 6pt;
+	margin-left: 4pt;
+	margin-right: 4pt;
+}
+.ans {
+	padding-bottom: 12pt;
+	padding-left: 24pt;
+	margin-right: 4pt;
+}
+
+/* Simple table */
+
+.simple-table
+{
+	border: 1pt ridge silver;
+	border-collapse: collapse;
+	margin: 10pt;
+}
+
+.simple-table td, .simple-table th
+{
+	border: 1pt ridge silver;
+	padding: 5pt;
+}
+
+.simple-table thead
+{
+	font-weight: bold;
+}
+
 
