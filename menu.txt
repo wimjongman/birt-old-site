@@ -1,0 +1,19 @@
+<birt-menu>
+<item name="download" url="http://download.eclipse.org/birt/downloads"/>
+<not-yet-space/>
+<not-yet-item name="new to BIRT" page="newUser"/>
+<item name="introduction" page="intro"/>
+<item name="examples" page="examples"/>
+<item name="tutorial" page="tutorial"/>
+<not-yet-item name="building reports" page="reports"/>
+<not-yet-item name="integration" page="integ"/>
+<not-yet-item name="deployment" page="deploy"/>
+<not-yet-item name="maintenance" page="maint"/>
+<item name="community" page="community.html"/>
+<not-yet-space/>
+<not-yet-item name="extensions" page="extn"/>
+<item name="reference" page="ref"/>
+<not-yet-space/>
+<item name="project" page="project"/>
+<item name="build" page="build"/>
+</birt-menu>

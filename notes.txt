@@ -1,4 +1,9 @@
 TO DO:
+* Move download here after Denis makes it possible on 3/26.
+* Add images to tutorial, intro
+* Revise, expand intro
+* Ability to update pages
+* Wiki support
 
 Old Files to Retire:
 * chart1.jpg
