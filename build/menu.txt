@@ -1,0 +1,6 @@
+<birt-menu>
+<top name="builds" page="../build"/>
+<item name="download" url="http://download.eclipse.org/birt/downloads"/>
+<item name="build types" page="build_types.html"/>
+<item name="building BIRT" page="build_instr.html"/>
+</birt-menu>

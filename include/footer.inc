@@ -1,3 +1,8 @@
+<?php
+global $stepStone;
+echo $stepStone;
+?>
+
 </td>
 </tr>
 </table>

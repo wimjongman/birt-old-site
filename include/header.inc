@@ -1,106 +1,59 @@
 <?php
-$jumpName = array( );
-$jumpTarget = array( );
-$fileTimeStamp = 0;
-$pageStyle = "";
+
+// Path to the viewer.
+
 global $viewer;
 if ( $viewer == "" )
-	$viewer = "/birt/view.php?page=";
+	$viewer = "/birt/index.php?page=";
+	
+// Relative path to the current page.
+// Pages can be located in subdirectories, but the viewer is
+// in the top-level folder. In native HTML, paths are relative
+// to the page. But, when converted to viewer commands, the
+// path must be translated to a path relative to the 
+// viewer itself.
 
-define( "MENU_BGND_COLOR", "#6699CC" );
-define( "SIMPLE_ARROW_LIST", 0 );
-define( "BREAK_ARROW_LIST", 1 );
-define( "DATE_ARROW_LIST", 2 );
-define( "BOLD_ARROW_LIST", 3 );
-define( "PLAIN_ARROW_LIST", 4 );
+global $pageDir;
 
-function bulletList( $type = SIMPLE_ARROW_LIST )
-{
-	global $bulletType;
-	$bulletType = $type;
-	echo <<<END
+// The name of the current page relative to the directory set
+// during the HTTP request.
 
-<table border=0 cellspacing=5 cellpadding=2 width="100%">
-<col width="3%"><col width="97%">
+global $pageName;
 
-END;
-}
+// Path to the BIRT top-level directory.
 
-function startBullet( )
-{
-	global $bulletType;
-	global $birtPath;
-    echo <<<END
-<tr> 
-<td align=RIGHT valign=TOP>
-<img src="${birtPath}images/Adarrow.gif" width="16" height="16" border="0"></td>
-<td>
+global $birtHome;
+$birtHome = "/birt";
+$stepStone = "";
 
-END;
-	if ( $bulletType == DATE_ARROW_LIST || $bulletType == BOLD_ARROW_LIST )
-		echo "<b>";
-}
+// The time stamp (as a Unix timestamp) to appear in the updated
+// on area in the page.
 
-function bullet( $text, $link = null )
-{
-	startBullet( );
-	if ( $link == null )
-	{
-		echo $text;
-		echo "\n";
-	}
-	else
-	{
-		echo <<<END
-<a href="{$link}">{$text}</a>
-
-END;
-	}
-	endBulletHead( );
-}
-
-function endBulletHead( )
-{
-	global $bulletType;
-	if ( $bulletType == DATE_ARROW_LIST  ||  $bulletType == BOLD_ARROW_LIST )
-		echo "</b>";
-	if ( $bulletType == BREAK_ARROW_LIST  ||  $bulletType == BOLD_ARROW_LIST )
-		echo "<br>";
-	else if ( $bulletType != PLAIN_ARROW_LIST )
-		echo " &ndash;";
-	echo "\n";
-}
-
-function endBullet( )
-{
-	echo "</tr>\n";
-}
-
-function endList( )
-{
-	echo "</table>\n";
-}
+global $fileTimeStamp;
+$fileTimeStamp = 0;
+$pageStyle = "";
+	
+require "body.inc";
 
 function topMenuItem( $text, $link )
 {
+	// Padding is here because (at least on FireFox), it does not work
+	// if put into top-menu-cell
+	
     echo <<<END
-<tr> 
-<td VALIGN=CENTER HEIGHT="21" BGCOLOR="#0080C0"
-    style="padding-left: 5px; border-bottom: solid 1px #CFFFFF">
+<tr><td class="top-menu-cell" style="padding-top: 3px; padding-bottom: 4px">
 <a href="{$link}" class="navhead"> 
 {$text}</a>
-</td>
-</tr>
+</td></tr>
 
 END;
 }
 
 function menuItem( $text, $link, $active = false )
 {
+	//echo "Menu: $text, $active<br>\n";
     echo <<<END
-<tr VALIGN=CENTER> 
-<td HEIGHT="21" 
-    style="padding-left: 5px; border-bottom: solid 1px #CFFFFF">
+<tr><td>
 <a href="{$link}" class="nav">
 
 END;
@@ -109,9 +62,7 @@ END;
 	else
 		echo $text;
 	echo <<<END
-</a>
-</td>
-</tr>
+</a></td></tr>
 
 END;
 }
@@ -119,12 +70,9 @@ END;
 function subMenuItem( $text, $link )
 {
     echo <<<END
-<tr VALIGN=CENTER> 
-<td HEIGHT="21" style="padding-left: 10px">-
-<a href="{$link}" class="nav">{$text}</a></td>
-</tr>
 <tr> 
-<td BGCOLOR="#CFFFFF"><img SRC="images/c.gif" height=1 width=1></td>
+<td >-
+<a href="{$link}" class="nav">{$text}</a></td>
 </tr>
 
 END;
@@ -133,36 +81,11 @@ END;
 function menuSpacer( )
 {
     echo <<<END
-<tr VALIGN=CENTER> 
-<td HEIGHT="21">&nbsp;</td>
-</tr>
 <tr> 
-<td BGCOLOR="#CFFFFF"><img SRC="images/c.gif" height=1 width=1></td>
+<td>&nbsp;</td>
 </tr>
 
 END;
-}
-
-function jumpItem( $text, $link )
-{
-	echo <<<END
-<a href="#$link" class="jump">$text</a>
-
-END;
-}
-
-function addJump( $text, $target = null )
-{
-	global $jumpName;
-	global $jumpTarget;
-	
-	if ( $target == null  ||  $target == "" )
-	{
-		$n = count( $jumpName ) + 1;
-		$target = "jump_" . $n;
-	}
-	$jumpName[ count( $jumpName ) ] = $text;
-	$jumpTarget[ count( $jumpTarget ) ] = $target;
 }
 
 function h1( $text )
@@ -221,26 +144,26 @@ END;
 <tr>
 <td BGCOLOR="black" width="116" >
 <a href="http://www.eclipse.org">
-<img src="{$birtPath}images/EclipseBannerPic.jpg" width="115" height="50" border="0">
+<img src="{$birtPath}images/EclipseBannerPic.jpg" border="0">
 </a>
 </td>
 <td WIDTH="637">
-<img SRC="{$birtPath}images/gradient.jpg" BORDER=0 height="54" width=282>
+<img SRC="{$birtPath}images/gradient.jpg" BORDER=0 height="53" width=282>
 </td>
 <td WIDTH="250" align="right" valign="center">
 <a href="/birt" class="birt">
 		    
 <!-- Temporary BIRT header -->
-<span style="color: white; font-family: arial, sans-serif;
-      font-size: 25px">
-BIRT</span></a>&nbsp;&nbsp;
+<span style="color: #E8E8FF; font-family: arial, sans-serif;
+      font-size: 20px; font-weight: bold; padding-right: 20pt">
+BIRT</span></a>
 </td>
 </tr>
 </table>
 
 <!-- Table with menu & content -->
 
-<table width="100%" border=0 cellpadding="0" CELLSPACING=0 >
+<table width="100%" border=0 cellpadding="0" CELLSPACING=0 cols=2>
 <tr>
 <td width="126px" class="menu-area" valign="top">
 
@@ -256,110 +179,14 @@ END;
 <!-- End menu -->
 
 </td>
-<td style="padding: 10px" valign="top">
+<td style="padding: 10px" valign="top" class="content">
 
 <!-- Content area -->
 END;
 
 	showPageTitle( $title, $subtitle );
-}
-
-function showPageTitle( $title, $subtitle )
-{
-	global $jumpName;
-	global $jumpTarget;
-	echo <<<END
-<!-- Page title -->
-
-<table border=0 cellspacing=0 cellpadding=0 width="100%" >
-<tr> 
-<td valign="top">
-<span class=indextop>$title</span>
-    
-END;
-	if ( $subtitle )
-	{
-		echo <<<END
-<br><span class=indexsub>$subtitle</span>
-
-END;
-	}
-		echo <<<END
-</td>
-<td align="right" style="padding-left: 10px" class="jump"
-END;
-	if ( count( $jumpName ) > 0 ) echo " rowspan=2";
-	echo <<<END
-><img src="/birt/images/Idea.jpg"></td>
-</tr>
-
-END;
-
-	// TOC is a jump bar for smaller documents.
-	
-	showJumps( );
-
-	echo <<<END
-</table>
-
-END;
-
-	// TOC is here for larger documents.
-	
-	showTOC( );
-}
-
-function showJumps( )
-{
-	global $jumpName;
-	global $jumpTarget;
-	$count = count( $jumpName );
-	if ( $count > 1  &&  $count <= 5 )
-	{
-		echo <<<END
-<tr><td>
-
-END;
-		for ($i = 0; $i < $count; $i++)
-		{
-			jumpItem( $jumpName[ $i ], $jumpTarget[ $i ] );
-			if ( $i + 1 < $count )
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;\n";
-		}
-		echo <<<END
-</td></tr>
-
-END;
-	}
-}
-
-function showTOC( )
-{
-	global $jumpName;
-	global $jumpTarget;
-	$count = count( $jumpName );
-	if ( $count <= 5 )
-		return;
-	
-	echo <<<END
-<span class="toc">Contents</span><br>
-<div style="margin-left: 24pt">
-
-END;
-	for ($i = 0; $i < $count; $i++)
-	{
-		$dest = $jumpTarget[ $i ];
-		$name = $jumpName[ $i ];
-		echo <<<END
-<a href="#$dest" class="toc">$name</a><br>
-
-END;
-	}
-	echo <<<END
-<br>
-</div>
-
-END;
+	global $stepStone;
+	echo $stepStone;
 }
 
 function showMenu( )
@@ -372,6 +199,8 @@ function showMenu( )
 	if ( $fileName != "" )
 		$fileName .= "/";
 	$fileName .= "menu.txt";
+	$thisPage = basename( $pageName );
+	//echo "thisPage: $thisPage\n";
 	
 	while ( ! file_exists( $fileName ) )
 	{
@@ -392,9 +221,15 @@ function showMenu( )
 		
 	$line = trim( fgets( $file ) );
 	if ( $line != "<birt-menu>" )
-		return;
+	{
+		if ( $line == "<birt-sequence>" )
+		{
+			$isSequence = true;
+		}
+		else
+			return;
+	}
 		
-	$thisDoc = str_replace( $pageDir . "/", "", $pageName );
 	while ( ! feof( $file ) )
 	{
 		$line = trim( fgets( $file ) );
@@ -408,11 +243,16 @@ function showMenu( )
 			continue;
 		}
 		$dest = null;
-		if ( preg_match( "/<.*\s+page\s*=\s*\"([^\"]*)\"\/?>/i", $line, $match ) )
+		$page = "";
+		$active = false;
+		if ( preg_match( "/<.*\s+page\s*=\s*\"([^\"]*)\"/i", $line, $match ) )
 		{
-			//echo "<pre>Orig: {$match[1]}</pre>/n";
-			$dest = mapPageName( $match[1] );
+			$page = $match[1];
+			//echo "<pre>Orig: {$pageName}</pre>/n";
+			$dest = mapPageName( $page );
 			//echo "<pre>After: $dest</pre>/n";
+			$active = ( $page == $thisPage );
+			//echo "Page: $page, this page: $thisPage, active: $active<br>\n";
 		}
 		else if ( preg_match( "/<.*\s+url\s*=\s*\"([^\"]*)\"\/?>/i", $line, $match ) )
 		{
@@ -425,14 +265,73 @@ function showMenu( )
 			
 		if ( preg_match( "/<item\s+name\s*=\s*\"([^\"]*)\"/i", $line, $match ) )
 		{
-			menuItem( $match[1], $dest );
-			//echo "<pre>Item: $match[1], {$dest}</pre>/n";
+			menuItem( $match[1], $dest, $active );
+		}
+		else if ( preg_match( "/<step\s+name\s*=\s*\"([^\"]*)\"/i", $line, $match ) )
+		{
+			$label = $match[1];
+			$menuLabel = $label;
+			if ( preg_match( "/\stitle\s*=\s*\"([^\"]*)\"/i", $line, $match ) )
+				$label = $match[1];
+			if ( $active )
+			{
+				$foundPage = true;
+			}
+			else if ( ! $foundPage )
+			{
+				$prevName = $label;
+				$prevPage = $dest;
+			}
+			else if ( $nextPage == "" )
+			{
+				$nextName = $label;
+				$nextPage = $dest;
+			}
+			menuItem( $menuLabel, $dest, $active );
 		}
 		else if ( preg_match( "/<top\s+name\s*=\s*\"([^\"]*)\"/i", $line, $match ) )
 		{
 			topMenuItem( $match[1], $dest );
 		}
 	}
+	
+	if ( ! $isSequence )
+		return;
+
+	global $stepStone;
+	$stepStone = <<<END
+<br>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<tr>
+<td width="50%">
+
+END;
+	if ( $prevPage != "" )
+	{
+		$stepStone .= <<<END
+<a href="{$viewer}$prevPage" class="toc" style="color: #0080C0">
+&lt;&lt;&nbsp;Previous: $prevName</a>
+
+END;
+	}
+	$stepStone .= <<<END
+</td>
+<td width="50%" style="text-align: right">
+
+END;
+	if ( $nextPage != "" )
+	{
+		$stepStone .= <<<END
+<a href="{$viewer}$nextPage" class="toc" style="color: #0080C0">
+Next: $nextName&nbsp;>></a>
+
+END;
+	}
+	$stepStone .= <<<END
+</tr>
+</table>
+
+END;
 }
 
 function mapFileName( $dest )
@@ -445,7 +344,7 @@ function mapFileName( $dest )
 	//
 	// That is, map links relative to the document's position.
 	
-	if ( $dest{0} == '/' )
+	if ( $dest{0} == '/'  ||  strpos( $dest, ":" ) )
 		return $dest;
 		
 	// Normalize the path.
@@ -462,17 +361,9 @@ function mapPageName( $dest )
 	
 	if ( $pageDir != "" )
 		$dest = $pageDir . "/" . $dest;
+	//echo "Dest: |$pageDir|$dest|<br>\n";
 	$dest = normalizePath( $dest );
-	
-	// If the document is HTML, pr a directory,
-	// then change the link to invoke the viewer.
-	
-	if ( preg_match( "/\.html?(#.*)?$/", $dest ) )
-	{
-		//echo "Viewer: {$viewer}, Dest: $dest\n";
-		$dest = $viewer . $dest;
-	}
-	return $dest;
+	return $viewer . $dest;
 }
 
 function normalizePath( $dest )

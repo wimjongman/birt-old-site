@@ -8,9 +8,6 @@
  
 require "header.inc";
 
-global $pageDir, $pageName;
-$pageDir = "";
-$pageName = "";
 $title = "";
 $heading = "";
 $subhead = "";
@@ -81,12 +78,15 @@ function startSequence( $docName )
 
 function parseDoc( $docName )
 {
-	global $pageName, $pageDir, $fileTimeStamp;
+	global $pageName, $pageDir, $fileTimeStamp, $birtPath;
 	$fileTimeStamp = filemtime( $docName );
 	$pageName = $docName;
 	if ( ! file_exists( $pageName ) )
 		return;
 	$pageDir = dirname( $docName );
+	if ( $birtPath != "" )
+		$pageDir = normalizePath( $birtPath . $pageDir );
+	//echo "parseDoc: |$docName|$pageDir|<br>\n";
 	$parts = pathinfo( $docName );
 	if ( strtolower( $parts['extension'] ) == "html" )
 		parseHtml( $docName );
@@ -97,11 +97,11 @@ function parseDoc( $docName )
 function parseHtml( $docName )
 {
 	global $doc;
-	$doc = DOMDocument::loadHTMLFile( $docName );
+	$doc = new DOMDocument( );
+	$doc->substituteEntities = false;
+	$doc->loadHTMLFile( $docName );
 	if ( $doc == null )
-	{
 		return;
-	}
 	
 	firstPass( $doc->documentElement );
 	secondPass( $doc->documentElement );
@@ -366,6 +366,7 @@ function parseNode( $node )
 		case XML_COMMENT_NODE:
 			// Ignore comments.
 			break;
+			
 		default:
 			dumpNode( $node );
 	}
@@ -396,7 +397,7 @@ function onElement( $node )
 	echo ">";
 	if ( $child->nodeType == XML_TEXT_NODE  &&  $child->nextSibling == null )
 	{
-		echo trim( $child->data );
+		printHtml( $child->data );
 	}
 	else
 	{
@@ -414,6 +415,11 @@ function onElement( $node )
 	$prevNode = $node;
 }
 
+function printHtml( $text )
+{
+	echo trim( htmlentities( $text ) );
+}
+
 function onText( $node )
 {
 	global $prevNode;
@@ -424,7 +430,7 @@ function onText( $node )
 	$c = $data{0};
 	if ( ctype_space( $c ) )
 		echo "\n";
-	echo $trim;
+	echo htmlentities( $trim );
 	if ( ctype_space( $data{ strlen( $data ) - 1 } ) )
 		echo "\n";
 	$prevNode = $node;
@@ -441,19 +447,7 @@ function onAttr( $attr )
 
 function mapLink( $node )
 {
-	mapFileAttr( $node, "href" );
-	onElement( $node );
-}
-
-function mapImage( $node )
-{
-	mapFileAttr( $node, "src" );
-	onElement( $node );
-}
-
-function mapFileAttr( $node, $attr )
-{
-	$dest = $node->getAttribute( $attr );
+	$dest = $node->getAttribute( "href" );
 	if ( $dest == "" )
 		return;
 		
@@ -465,15 +459,46 @@ function mapFileAttr( $node, $attr )
 	//
 	// That is, map links relative to the document's position.
 	
-	if ( stristr( $dest, ":" ) ||
-	     $dest{0} == "#"  ||  $dest{0} == '/' )
-		return;
-		
-	if ( $node->getAttribute( "class" ) == "top" )
-		$dest = mapFileName( $dest );
-	else
-		$dest = mapPageName( $dest );
-	$node->setAttribute( $attr, $dest );
+	if ( isMappable( $dest ) )
+	{
+		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) &&
+			 $node->getAttribute( "class" ) != "top" )
+		{
+			$dest = mapPageName( $dest );
+		}
+		else
+			$dest = mapFileName( $dest );
+		$node->setAttribute( "href", $dest );
+	}
+	onElement( $node );
 }
+
+function mapImage( $node )
+{
+	$dest = $node->getAttribute( "src" );
+		
+	if ( isMappable( $dest ) )
+	{
+		$dest = mapFileName( $dest );
+		$node->setAttribute( "src", $dest );
+	}
+
+	onElement( $node );
+}
+
+// Don't map destinations of the form:
+//	blank
+//	proto:...
+//  #foo
+//	/foo
+//
+// That is, map links relative to the document's position.
+	
+function isMappable( $dest )
+{
+	return ( $dest != ""  &&  ! strstr( $dest, ":" ) &&
+	  	     $dest{0} != "#"  &&  $dest{0} != '/' );
+}
+
 
 ?>

@@ -1,0 +1,8 @@
+<birt-sequence>
+<top name="introducion" 		page="../intro"/>
+<step name="overview" 			page="intro01.html"		title="Overview"/>
+<step name="integration" 		page="intro02.html"		title="Integration"/>
+<step name="designer" 			page="intro03.html"		title="Report Designer"/>
+<step name="developing" 		page="intro04.html"		title="Developing with BIRT"/>
+<step name="extensibility" 		page="intro05.html"	title="Extensibility"/>
+</birt-sequence>

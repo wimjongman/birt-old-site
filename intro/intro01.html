@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Eclipse BIRT Overview</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Overview of BIRT</p>
+
+<h1>Introduction</h1>
+
+BIRT is an Eclipse-based open source reporting system for web applications,
+especially those based on Java and J2EE. BIRT has two main components: a report
+designer based on Eclipse, and a runtime component that you can add to your
+app server.
+<p>
+BIRT also offers a charting engine that lets you add charts to your own application.
+<p>
+BIRT is currently in community review for release 1.0. We encourage you to download
+BIRT, try it, and give us your feedback though the newgroups and Bugzilla.
+<p>
+With BIRT, you can add a rich variety of reports to your application.
+
+<dl class="arrow-list">
+<dt>Lists
+<dd>The simplest reports are lists of data. As the lists get longer, you can add
+grouping to organize related data together (orders grouped by customer, products
+grouped by supplier). If your data is numeric, you can easily add totals, averages
+and other summaries.
+
+<dt>Charts
+<dd>Numeric data is much easier to understand when presented as a chart. BIRT
+provides pie charts, line &amp; bar charts and many more.
+
+<dt>Crosstabs
+<dd>Crosstabs (also called a cross-tabulation or matrix) shows data in two
+dimensions: sales per quarter or hits per web page. (Crosstabs are not yet
+in Release 1.0, but are planned for a future release.)
+
+<dt>Letters &amp; Documents
+<dd>Notices, form letters, and other textual documents are easy to create with BIRT.
+Documents can include text, formatting, lists, charts and more.
+
+<dt>Compound Reports
+<dd>Many reports need to combine the above into a single document. For example, a
+customer statement may list the information for the customer, provide text about
+current promotions, and provide side-by-side lists of payments and charges. A
+financial report may include disclaimers, charts, tables all with extensive formatting
+that matches corporate color schemes.
+</dl>
+
+<h1>The Anatomy of a Report</h1>
+
+BIRT reports consist of four main parts: data, data transforms, 
+business logic and presentation.
+
+<dl class="arrow-list">
+<dt>Data
+<dd>Databases, web services, Java objects all can supply data to your BIRT report.
+Release 1.0 provides JDBC support, as well as support for using code to get at
+other sources of data. BIRT's Open Data Access (ODA) framework allows anyone to
+build new UI and runtime support for any kind of tabular data. Further, a single
+report can include data from any number of data sources.
+
+<dt>Data Transforms
+<dd>Reports present data sorted, summarized, filtered and grouped to fit the user's
+needs. While databases can do some of this work, BIRT must do it for "simple" data
+sources such as flat files or Java objects. BIRT allows sophisticated operations
+such as grouping on sums, percentages of overall totals and more.
+
+<dt>Business Logic
+<dd>Real-world data is seldom structured exactly as you'd like for a report.
+Many reports require business-specific logic to convert raw data into information
+useful for the user. If the logic is just for the report, you can script it using
+BIRT's JavaScript support. If your application already contains the logic, you can
+call into your existing Java code.
+
+<dt>Presentation
+<dd>Once the data is ready, you have a wide range of options for presenting it to
+the user. Tables, charts, text and more. A single data set can appear in multiple
+ways, and a single report can present data from multiple data sets.
+</dl>
+
+</body>
+</html>

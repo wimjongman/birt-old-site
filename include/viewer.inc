@@ -9,22 +9,19 @@
 
 <?php
 
-$notFound = "notFound.html";
+global $birtPath;
+$notFound = $birtPath . "notFound.html";
 
-function pickPage( )
+function pickPage( $page )
 {
 	global $notFound;
-	$page = $_GET['page'];
+	global $birtPath;
 	//echo "Page: $page<br>";
 	if ( $page == null  ||  $page == "" )
 	{
 		return "main.html";
 	}
-	if ( preg_match( "/\.\./", $page ) )
-	{
-		return $notFound;
-	}
-	$file = trim( $page );
+	$file = $birtPath . trim( $page );
 	if ( is_dir( $file ) )
 	{
 		$dest = $file . "/main.php";
@@ -57,9 +54,9 @@ function logDoc( $docName )
 	fclose( $log );
 }
 
-function viewer( )
+function viewer( $page )
 {
-	$file = pickPage( );
+	$file = pickPage( $page );
 	//echo "Picked: $file<br>";
 	//logDoc( $file );
 	

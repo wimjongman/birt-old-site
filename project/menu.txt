@@ -1,0 +1,17 @@
+<birt-menu>
+<top name="project" page="../project"/>
+<item name="description" page="description.html"/>
+<item name="charter" page="charter.html"/>
+<item name="principles" page="principles.html"/>
+<item name="PMC" page="pmc.html"/>
+<item name="contributors" page="contributors.html"/>
+<not-yet-space/>
+<item name="summary plan" page="summary_plan.html"/>
+<item name="project plan" page="project_plan_R1_0.html"/>
+<item name="requirements" url="R1_Requirements.pdf"/>
+<not-yet-space/>
+<item name="ECE project" url="http://www.eclipse.org/ece"/>
+<item name="ERD project" url="http://www.eclipse.org/erd"/>
+<item name="ERE project" url="http://www.eclipse.org/ere"/>
+<item name="WRD project" url="http://www.eclipse.org/wrd"/>
+</birt-menu>

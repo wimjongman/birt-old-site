@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Eclipse BIRT Overview</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Integrating BIRT into your Application</p>
+
+<h1>BIRT in a J2EE Application</h1>
+
+The BIRT Report Engine is packaged as a JAR file that you add to your J2EE
+application. The Report Engine is a series of POJOs (Plain Old Java Objects)
+that your JSP pages can call to integrate reporting into your application.
+<p>
+<!-- Need more info here. -->
+
+<img src="../project/chart1.jpg" width="658" height="237"> <br>
+
+<!-- Revise image to show the user's web app. -->
+
+BIRT has four main integration points with your application:
+
+<dl class="arrow-list">
+<dt>Parameter UI
+<dd>Most reports allow the user to specify some kind of input, called a
+<i>report parameter</i>. For example, a customer report might ask for the
+customer to display. Your parameter page can be static: custom designed
+for each report. Or, you can use a dynamic page powered by parameter
+meta-data so that a single page works for any report.
+
+<dt>Running the Report
+<dd>When the user submits the parameter form, your web application passes the
+parameters to the BIRT report engine which reads the report design file,
+reads the data, and produces the report output. BIRT uses the term
+<i>factory</i> when the engine runs a report.
+
+<dt>Data Access
+<dd>Reports obtain data from your application as explained above. Java applications
+often provide data to the BIRT factory via Java objects.
+
+<dt>Viewing
+<dd>Additional JSP pages, called the viewer, enable the user to view the output
+of the report.
+</dl>
+
+<dt>
+
+A reporting application includes a <i>parameter page</i>
+that You can create a custom UI for each report, or you can
+use the parameter meta-data provided by BIRT to provide a single report that
+handles many different reports.
+
+<h1>Example Viewer</h1>
+
+The BIRT project provides a sample "viewer" to help you get get started. The
+sample viewer is also used to preview reports within Eclipse: BIRT includes an
+Apache Tomcat server invoked each time you preview your report. The viewer
+can also be used in any JSP-complient J2EE server.
+<p>
+
+<!-- List supported servers -->
+
+BIRT Release 1.0 provides web output as a single page. The plan is to provide
+multi-page output in upcoming releases, and the viewer UI will provide the
+means for navigating among the pages.
+
+</body>
+</html>
