@@ -87,6 +87,26 @@ eclipse/plugins. If you installed BIRT on Windows in the default location,
 then put BIRT into "C:\program files\eclipse\plugins". Later builds use the
 same zip location as GEF and EMF.</div>
 
+<h1>Common Problems</h1>
+<p>
+If the BIRT perspective does not appear in Eclipse, some users suggest that
+you do the following in Eclipse 3.0.1:
+
+<ul>
+<li>Shut down Eclipse
+<li>Delete the configuration folder in the eclipse directory,
+<li>Restart Eclipse and again check for the BIRT perspective.
+</ul>
+<p>
+Note that this may lose some of your Eclipse settings; use this technique
+carefully.
+<p>
+For Eclipse 3.1, the recommended practice is to start Eclipse with the -clean option:
+</p>
+<pre class="code-block">
+eclipse.exe -clean
+</pre>
+  
 <h1>JDBC Driver</h1>
 <p>
 You will likely want to use your own JDBC driver with BIRT. Here's how. BIRT
