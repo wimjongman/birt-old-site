@@ -579,26 +579,8 @@ function mapLink( )
 		echo $match[3];
 		return;
 	}
-		
-	// Don't map destinations of the form:
-	//	blank
-	//	proto:...
-	//  #foo
-	//	/foo
-	//
-	// That is, map links relative to the document's position.
 	
-	if ( isMappable( $dest ) )
-	{
-		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) &&
-			 getClass( ) != "top" )
-		{
-			$dest = mapPageName( $dest );
-		}
-		else
-			$dest = mapFileName( $dest );
-	}
-	echo $dest;
+	echo mapLinkURL( $dest );
 	echo $match[3];
 }
 
@@ -626,20 +608,6 @@ function mapImage( )
 	}
 	echo $dest;
 	echo $match[3];		
-}
-
-// Don't map destinations of the form:
-//	blank
-//	proto:...
-//  #foo
-//	/foo
-//
-// That is, map links relative to the document's position.
-	
-function isMappable( $dest )
-{
-	return ( $dest != ""  &&  ! strstr( $dest, ":" ) &&
-	  	     $dest{0} != "#"  &&  $dest{0} != '/' );
 }
 
 

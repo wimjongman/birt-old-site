@@ -248,7 +248,7 @@ function showMenu( )
 		{
 			$page = $match[1];
 			//echo "<pre>Orig: {$pageName}</pre>/n";
-			$dest = mapPageName( $page );
+			$dest = mapLinkURL( $page );
 			//echo "<pre>After: $dest</pre>/n";
 			$active = ( $page == $thisPage );
 			//echo "Page: $page, this page: $thisPage, active: $active<br>\n";
@@ -331,6 +331,35 @@ END;
 </table>
 
 END;
+}
+
+// Don't map destinations of the form:
+//	blank
+//	proto:...
+//  #foo
+//	/foo
+//
+// That is, map links relative to the document's position.
+	
+function isMappable( $dest )
+{
+	return ( $dest != ""  &&  ! strstr( $dest, ":" ) &&
+	  	     $dest{0} != "#"  &&  $dest{0} != '/' );
+}
+
+function mapLinkURL( $dest )
+{
+	if ( isMappable( $dest ) )
+	{
+		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) &&
+			 getClass( ) != "top" )
+		{
+			$dest = mapPageName( $dest );
+		}
+		else
+			$dest = mapFileName( $dest );
+	}
+	return $dest;
 }
 
 function mapFileName( $dest )
