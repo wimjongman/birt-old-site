@@ -9,12 +9,14 @@
 <body>
 <?php
 $doc = xmldocfile( "community.html" );
-if ( $doc == null ) echo "NULL<br>/n";
-else echo "Worked<br>/n";
+if ( $doc == null )
+	echo "NULL<br>/n";
+else
+	echo "Worked<br>/n";
 
 ?>
 
-<?php phpinfo(); ?> 
+<?php /* phpinfo(); */ ?> 
 
 </body>
 </html>
