@@ -8,11 +8,6 @@
  
 require "header.inc";
 
-$title = "";
-$heading = "";
-$subhead = "";
-$prevNode = null;
-
 function errorPage( $docName )
 {
 	echo <<<END
@@ -100,12 +95,18 @@ define( "T_TEXT", 2 );
 define( "T_MY_COMMENT", 3 );
 define( "T_NONE", 9 );
 
-$pushedToken = T_NONE;
-
 function pushToken( $token )
 {
 	global $pushedToken;
 	$pushedToken = $token;
+}
+
+function resetParser( )
+{
+	global $pushedToken, $pushC, $doc;
+	$pushedToken = T_NONE;
+	$pushC = "";
+	fseek( $doc, 0 );
 }
 
 function getToken( )
@@ -130,14 +131,6 @@ function getToken( )
 	if ( $c == "<" )
 	{
 		$tokenText = $c;
-		/*
-		while ( ( $c = fgetc( $doc ) ) !== false )
-		{
-			$tokenText .= $c;
-			if ( $c == ">" )
-				break;
-		}
-		*/
 		return parseTag( );
 	}
 	else
@@ -192,37 +185,6 @@ function parseTag( )
 		$c = fgetc( $doc );
 	}
 	return T_TAG;
-/*
-	$c = skipSpace( );
-	while ( $c  &&  $c != ">" )
-	{
-		$attrName = "";
-		while ( $c  &&  ctype_alnum( $c ) )
-		{
-			$attrName .= $c;
-			$tokenText .= $c;
-			$c = fgetc( $doc );
-		}
-		$c = skipSpace( );
-		$value = "";
-		if ( $c == "\"" )
-		{
-		while ( $c  &&  ctype_alnum( $c ) )
-		{
-			$attrName .= $c;
-			$tokenText .= $c;
-			$c = fgetc( $doc );
-		}
-			
-		}
-		$tokenText .= $c;
-		if ( $c == "\"" )
-		{
-		}
-		else if ( $c == ">" )
-			break;
-	}
-*/
 }
 
 function skipSpace( )
@@ -283,24 +245,6 @@ function checkComment( )
 	return $c;
 }
 
-/*
-$line = "";
-function getLine( )
-{
-	global $line, $doc;
-
-	while ( $line == "" && ! feof( $doc ) )
-		$line = trim( fgets( $doc ) );
-	return $line;
-}
-
-function eatLine( )
-{
-	global $line;
-	$line = null;
-}
-*/
-
 function parseHtml( $docName )
 {
 	global $doc;
@@ -329,6 +273,7 @@ function parseHtml( $docName )
 	}
 	return;
 	*/
+	resetParser( );
 	firstPass( );
 	
 	global $title, $heading, $subhead;
@@ -343,7 +288,7 @@ function parseHtml( $docName )
 	
 	// Echo content.
 	
-	fseek( $doc, 0 );
+	resetParser( );
 	secondPass( );
 	fclose( $doc );
 	
@@ -375,17 +320,6 @@ function parseText( $docName )
 	require "footer.inc";
 }
 
-/*
-function findTag( )
-{
-	global $line;
-	if ( preg_match( "/<\s*(\/?\w*)/", $line, $match ) )
-		return strtolower( $match[1] );
-	else
-		return null;
-}
-*/
-
 function firstPass( )
 {
 	global $tagName;
@@ -394,36 +328,27 @@ function firstPass( )
 	{
 		if ( $token != T_TAG )
 			continue;
-		//echo "TAG: |$tagName|<br>\n";
 		if ( $tagName == "head" )
 			parseHead( );
 		else if ( $tagName == "body" )
 			bodyPassOne( );
 	}
-	/*
-	global $doc, $line;
-	while ( ! feof( $doc ) )
-	{
-		getLine( );
-		$tag = findTag( );
-		eatLine( );
-		if ( $tag == "head" )
-			parseHead( );
-		else if ( $tag == "body" )
-			bodyPassOne( );
-	}
-	*/
 }
 
 function parseHead( )
 {
 	global $tagName;
+	global $title, $pageStyle;
 	while ( ( $token = getToken( ) ) != T_EOF )
 	{
 		if ( $token != T_TAG )
 			continue;
+		if ( $token == T_MY_COMMENT )
+			continue;
 		if ( $tagName == "title" )
+		{
 			$title = getNodeText( );
+		}
 		else if ( $tagName == "style" )
 		{
 			$pageStyle = getNodeText( );
@@ -431,30 +356,6 @@ function parseHead( )
 		else if ( $tagName == "/head" )
 			break;
 	}
-	//echo "TITLE: |$title|<br>\n";
-	return;
-/*
-	global $doc;
-	global $title;
-	global $pageStyle;
-	
-	eatLine( );
-	while ( ! feof( $doc ) )
-	{
-		$line = getLine( );
-		$tag = findTag( );
-		if ( $tag == "title" )
-			$title = getNodeText( $tag );
-		else if ( $tag == "style" )
-		{
-			$pageStyle = getNodeText( $tag );
-		}
-		else if ( $tag == "/head" )
-			break;
-		else
-			eatLine( );
-	}
-*/
 }
 
 function getNodeText( )
@@ -468,36 +369,6 @@ function getNodeText( )
 		$text .= $tokenText;
 	}
 	return $text;
-	
-	/*
-	global $doc, $line;
-	$tag = "/" . $tag;
-	while ( ! preg_match( "/>(.*)$/", getLine( ), $match ) )
-	{
-		if ( feof( $doc ) )
-			return;
-		eatLine( );
-	}
-	$line = $match[1];
-	$text = "";
-	while ( true )
-	{
-		if ( preg_match( "/(.*)<\s*(\/?\w*)\s*>/", $line, $match ) )
-		{
-			if ( $match[2] == $tag )
-			{
-				$text .= $match[1];
-				$line = $match[3];
-				return $text;
-			}
-		}
-		$text = $line;
-		eatLine( );
-		if ( feof( $doc ) )
-			return $text;
-		getLine( );
-	}
-	*/
 }
 
 function getClass( )
@@ -532,47 +403,9 @@ function bodyPassOne( )
 			break;
 	}
 	
-	/*
-	return;
-	//echo "Parse body p1<br>\n";
-	global $doc, $heading, $subhead;
-	while ( ! feof( $doc ) )
-	{
-		getLine( );
-		$tag = findTag( );
-		if ( $tag == "p" )
-		{
-			$class = getClass( );
-			if ( $class == "head" )
-				$heading = getNodeText( $tag );
-			else if ( $class == "subhead" )
-				$subhead = getNodeText( $tag );
-			eatLine( );
-		}
-		else if ( $tag == "h1" )
-		{
-			addJump( getNodeText( $tag ) );
-			eatLine( );
-		}
-		else
-			eatLine( );
-	}
-	*/
-	
 	//echo "Head: $heading<br>\n";
 	//echo "Subhead: $subhead<br>\n";
 }
-
-/*
-function checkNode( $node, $tag, $class = null )
-{
-	if ( $node->nodeName != $tag )
-		return false;
-	if ( $class == null )
-		return true;
-	return ( $node->getAttribute( "class" ) == $class );
-}
-*/
 
 function secondPass( )
 {
@@ -587,47 +420,7 @@ function secondPass( )
 			break;
 		}
 	}
-	
-	/*
-	
-	//echo "second pass\n";
-	global $doc;
-	while ( ! feof( $doc ) )
-	{
-		getLine( );
-		$tag = findTag( );
-		eatLine( );
-		if ( $tag == "body" )
-		{
-			bodyPassTwo( );
-			break;
-		}
-	}
-	*/
-		
-	/*
-	$node = $root->firstChild;
-	while ( $node != null )
-	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
-		{
-			if ( $node->nodeName == "body" )
-				bodyPassTwo( $node );
-		}
-		$node = $node->nextSibling;
-	}
-	*/
 }
-
-/*
-function echoLine( )
-{
-	global $line;
-	echo $line;
-	echo "\n";
-	eatLine( );
-}
-*/
 
 function bodyPassTwo( )
 {
@@ -683,58 +476,6 @@ function bodyPassTwo( )
 		else
 			emitTag( );
 	}
-	
-	/*
-	global $doc, $line;
-	while ( ! feof( $doc ) )
-	{
-		getLine( );
-		$tag = findTag( );
-		if ( $tag == "p" )
-		{
-			$class = getClass( );
-			if ( $class == "head"  ||  $class == "subhead" )
-			{
-				// Page header, skip on pass 2
-				eatLine( );
-			}
-			else
-				echoLine( );
-		}
-		else if ( $tag == "h1" )
-		{
-			// H1 headers need jump targets
-			
-			h1( getNodeText( $tag ) );
-			eatLine( );
-		}
-		else if ( $tag == "dl" )
-		{
-			$class = getClass( );
-			if ( $class == "arrow-list" )
-			{
-				arrowList( SIMPLE_ARROW_LIST );
-			}
-			else if ( $class == "date-list" )
-			{
-				arrowList( DATE_ARROW_LIST );
-			}
-			else if ( $class == "break-list" )
-			{
-				arrowList( BREAK_ARROW_LIST );
-			}
-			else if ( $class == "bold-list" )
-			{
-				arrowList( BOLD_ARROW_LIST );
-			}
-			else
-				echoLine( );
-		}
-			
-		else
-			echoLine( );
-	}
-	*/
 }
 
 function arrowList( $type )
@@ -769,34 +510,6 @@ function arrowList( $type )
 		else
 			emitTag( );
 	}
-	
-	
-	/*
-	eatLine( );
-	
-	bulletList( $type );
-	while ( ! feof( $doc ) )
-	{
-		getLine( );
-		$tag = findTag( );
-		if ( $tag == "/dl" )
-			break;
-		else if ( $tag == "dt" )
-		{
-			startBullet( );
-			echo getNodeText( $tag );
-			endBulletHead( );
-		}
-		else if ( $tag == "dd" )
-		{
-			echo getNodeText( $tag );
-			endBullet( );
-		}
-		else
-			echoLine( );
-	}
-	*/
-	
 	endList( );	
 }
 
@@ -823,21 +536,6 @@ function copyItemText( )
 			emitTag( );
 	}
 }
-
-/*
-function writeSubtree( $node )
-{
-	$child = $node->firstChild;
-	global $prevNode;
-	$prevNode = $node;
-	while ( $child != null )
-	{
-		parseNode( $child, $level + 1 );
-		$child = $child->nextSibling;
-	}
-}
-*/
-
 function emitTag( )
 {
 	global $tagName, $tokenText;
@@ -855,109 +553,6 @@ function emitTag( )
 			echo $tokenText;
 	}
 }
-
-/*
- parseNode( $node )
-{
-	global $prevNode;
-	
-	switch( $node->nodeType )
-	{
-		case XML_ELEMENT_NODE:
-			if ( checkNode( $node, "a" ) )
-				mapLink( $node );
-			else if ( checkNode( $node, "img" ) )
-				mapImage( $node );
-			else
-				onElement( $node );
-			break;
-			
-		case XML_TEXT_NODE:
-			onText( $node );
-			break;
-			
-		case XML_COMMENT_NODE:
-			// Ignore comments.
-			break;
-			
-		default:
-			dumpNode( $node );
-	}
-}
-
-function onElement( $node )
-{
-	global $prevNode;
-	if ( $prevNode->nodeType != XML_TEXT_NODE )
-		echo "\n";
-	echo "<";
-	echo $node->tagName;
-	
-	$attrs = $node->attributes;
-	for ( $i = 0;  ; $i++ )
-	{
-		$attr = $attrs->item( $i );
-		if ( $attr == null )
-			break;
-		onAttr( $attr );
-	}
-	$child = $node->firstChild;
-	if ( $child == null )
-	{
-		echo "/>";
-		return;
-	}
-	echo ">";
-	if ( $child->nodeType == XML_TEXT_NODE  &&  $child->nextSibling == null )
-	{
-		printHtml( $child->data );
-	}
-	else
-	{
-		while ( $child != null )
-		{
-			parseNode( $child, $level + 1 );
-			$child = $child->nextSibling;
-		}
-		if ( $prevNode->nodeType != XML_TEXT_NODE )
-			echo "\n";
-	}
-	echo "</";
-	echo $node->tagName;
-	echo ">";
-	$prevNode = $node;
-}
-
-function printHtml( $text )
-{
-	echo trim( htmlentities( $text ) );
-}
-
-function onText( $node )
-{
-	global $prevNode;
-	$data = $node->data;
-	$trim = trim( $data );
-	if ( $trim == "" )
-		return;
-	$c = $data{0};
-	if ( ctype_space( $c ) )
-		echo "\n";
-	echo htmlentities( $trim );
-	if ( ctype_space( $data{ strlen( $data ) - 1 } ) )
-		echo "\n";
-	$prevNode = $node;
-}
-
-function onAttr( $attr )
-{
-	echo " ";
-	echo $attr->name;
-	echo "=\"";
-	echo $attr->value;
-	echo "\"";
-}
-*/
 
 function getAttr( $attr )
 {
@@ -1031,18 +626,6 @@ function mapImage( )
 	}
 	echo $dest;
 	echo $match[3];		
-	
-/*
-	$dest = $node->getAttribute( "src" );
-		
-	if ( isMappable( $dest ) )
-	{
-		$dest = mapFileName( $dest );
-		$node->setAttribute( "src", $dest );
-	}
-
-	onElement( $node );
-*/
 }
 
 // Don't map destinations of the form:
