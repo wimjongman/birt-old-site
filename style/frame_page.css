@@ -44,3 +44,45 @@ dd {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #8080FF;
 }
+
+.jump {
+	font-size: smaller;
+	color: #8080FF;
+	text-decoration: none;
+}
+
+a.jump:visited {
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.jump:link {
+	color: #8080FF;
+	text-decoration: none; 
+}
+
+a.jump:hover { 
+	color: blue; 
+	text-decoration: underline; 
+}
+
+.toc { 
+	font-size: small; 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+a.toc:visited { 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.toc:link { 
+	color: #8080FF; 
+	text-decoration: none; 
+}
+
+a.toc:hover { 
+	color: blue; 
+	text-decoration: underline; 
+}
+
