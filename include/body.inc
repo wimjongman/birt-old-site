@@ -140,6 +140,8 @@ END;
 	echo <<<END
 </table>
 
+<!-- Content area -->
+
 END;
 
 	// TOC is here for larger documents.

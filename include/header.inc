@@ -181,7 +181,6 @@ END;
 </td>
 <td style="padding: 10px" valign="top" class="content">
 
-<!-- Content area -->
 END;
 
 	showPageTitle( $title, $subtitle );

@@ -94,17 +94,262 @@ function parseDoc( $docName )
 		parseText( $docName );
 }
 
+define( "T_EOF", 0 );
+define( "T_TAG", 1 );
+define( "T_TEXT", 2 );
+define( "T_MY_COMMENT", 3 );
+define( "T_NONE", 9 );
+
+$pushedToken = T_NONE;
+
+function pushToken( $token )
+{
+	global $pushedToken;
+	$pushedToken = $token;
+}
+
+function getToken( )
+{
+	global $doc, $tokenText, $pushC, $pushedToken;
+	
+	if ( $pushedToken != T_NONE )
+	{
+		$token = $pushedToken;
+		$pushedToken = T_NONE;
+		return $token;
+	}
+	if ( $pushC != "" )
+	{
+		$c = $pushC;
+		$pushC = "";
+	}
+	else if ( ( $c = fgetc( $doc ) ) === false )
+		return T_EOF;
+	
+	//echo "Start: c = " . htmlentities( $c ) . "<br>\n";
+	if ( $c == "<" )
+	{
+		$tokenText = $c;
+		/*
+		while ( ( $c = fgetc( $doc ) ) !== false )
+		{
+			$tokenText .= $c;
+			if ( $c == ">" )
+				break;
+		}
+		*/
+		return parseTag( );
+	}
+	else
+	{
+		$tokenText = $c;
+		while ( ( $c = fgetc( $doc ) ) !== false )
+		{
+			if ( $c == "<" )
+			{
+				$pushC = $c;
+				break;
+			}
+			$tokenText .= $c;
+			if ( $c == '\n' )
+				break;
+		}
+		return T_TEXT;
+	}
+}
+
+function parseTag( )
+{
+	global $doc, $tokenText, $tagName;
+	
+	// Tag name
+	
+	$c = skipSpace( );
+	
+	if ( $c == "!" )
+	{
+		if ( ( $c = checkComment( ) ) == ">" )
+		{
+			return T_MY_COMMENT;
+		}
+	}
+	
+	//echo "After space: |$tokenText|\n";
+	$tagName = "";
+	while ( $c !== false && $c != ">" && ! ctype_space( $c ) )
+	{
+		$tagName .= strtolower( $c );
+		$tokenText .= $c;
+		$c = fgetc( $doc );
+		//echo "NEXT |$c|\n";
+	}
+	
+	while ( $c !== false )
+	{
+		$tokenText .= $c;
+		if ( $c == ">" )
+			break;
+		$c = fgetc( $doc );
+	}
+	return T_TAG;
+/*
+	$c = skipSpace( );
+	while ( $c  &&  $c != ">" )
+	{
+		$attrName = "";
+		while ( $c  &&  ctype_alnum( $c ) )
+		{
+			$attrName .= $c;
+			$tokenText .= $c;
+			$c = fgetc( $doc );
+		}
+		$c = skipSpace( );
+		$value = "";
+		if ( $c == "\"" )
+		{
+		while ( $c  &&  ctype_alnum( $c ) )
+		{
+			$attrName .= $c;
+			$tokenText .= $c;
+			$c = fgetc( $doc );
+		}
+			
+		}
+		$tokenText .= $c;
+		if ( $c == "\"" )
+		{
+		}
+		else if ( $c == ">" )
+			break;
+	}
+*/
+}
+
+function skipSpace( )
+{
+	global $tokenText, $doc;
+
+	while ( ( $c = fgetc( $doc ) ) !== false )
+	{
+		if ( ctype_space( $c ) )
+			$tokenText .= $c;
+		else
+			return $c;
+	}
+	return false;
+}
+
+function checkComment( )
+{
+	global $doc, $tokenText, $tagName;
+	
+	$tagName .= $c;
+	$tokenText .= $c;
+	$c = fgetc( $doc );
+	if ( $c != "-" )
+		return $c;
+		
+	$tagName .= $c;
+	$tokenText .= $c;
+	$c = fgetc( $doc );
+	if ( $c != "-" )
+		return $c;
+	
+	while ( true )
+	{	
+		while ( $c !== false  &&  $c != "-" )
+		{
+			$tokenText .= $c;
+			$c = fgetc( $doc );
+		}
+		if ( $c === false )
+			return ">";
+		$tokenText .= $c;
+		$c = fgetc( $doc );
+		if ( $c === false )
+			return ">";
+		if ( $c != "-" )
+			continue;
+		$tokenText .= $c;
+		$c = fgetc( $doc );
+		if ( $c === false )
+			return ">";
+		if ( $c == ">" )
+		{
+			$tokenText .= $c;
+			break;
+		}
+	}
+	return $c;
+}
+
+/*
+$line = "";
+function getLine( )
+{
+	global $line, $doc;
+
+	while ( $line == "" && ! feof( $doc ) )
+		$line = trim( fgets( $doc ) );
+	return $line;
+}
+
+function eatLine( )
+{
+	global $line;
+	$line = null;
+}
+*/
+
 function parseHtml( $docName )
 {
 	global $doc;
-	$doc = new DOMDocument( );
-	$doc->substituteEntities = false;
-	$doc->loadHTMLFile( $docName );
+	//echo "DOC name: $docName<br>\n";
+	$doc = fopen( $docName, "rt" );
 	if ( $doc == null )
 		return;
 	
-	firstPass( $doc->documentElement );
-	secondPass( $doc->documentElement );
+	/*
+	global $tokenText, $tagName;
+	while ( ( $token = getToken( ) ) != T_EOF )
+	{
+		if ( $token == T_TAG )
+		{
+			echo "TAG: |$tagName|";
+			echo htmlentities( $tokenText );
+			echo "|<br>\n";
+		}
+		else
+		{
+			echo $tokenText;
+			echo "<br>\n";
+		}
+		if ( $i++ > 20 )
+			return;
+	}
+	return;
+	*/
+	firstPass( );
+	
+	global $title, $heading, $subhead;
+	if ( trim( $title ) == "" )
+		$title = "BIRT Project";
+	if ( trim( $heading ) == "" )
+		$heading = "BIRT Project";
+
+	// Create the page header & menu bar.
+	
+	pageHeader( $title, $heading, $subhead );
+	
+	// Echo content.
+	
+	fseek( $doc, 0 );
+	secondPass( );
+	fclose( $doc );
+	
+	// Finish up the page with footer bar.
+	
+	require( "footer.inc" );
 }
 
 // Parse a text file. Assume that the first line is a title.
@@ -130,94 +375,195 @@ function parseText( $docName )
 	require "footer.inc";
 }
 
-function dumpNode( $node )
+/*
+function findTag( )
 {
-	global $prevNode;
-	echo "<pre>[NODE: Type: ";
-	echo $node->nodeType;
-	echo ", Name: ";
-	echo $node->nodeName;
-	echo ", Prev Type: ";
-	echo $prevNode->nodeType;
-	echo ", Prev Name: ";
-	echo $prevNode->nodeName;
-	echo "]</pre>";
+	global $line;
+	if ( preg_match( "/<\s*(\/?\w*)/", $line, $match ) )
+		return strtolower( $match[1] );
+	else
+		return null;
 }
+*/
 
-function firstPass( $root )
+function firstPass( )
 {
-	$node = $root->firstChild;
-	while ( $node != null )
+	global $tagName;
+	
+	while ( ( $token = getToken( ) ) != T_EOF )
 	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
-		{
-			if ( $node->nodeName == "head" )
-				parseHead( $node );
-			else if ( $node->nodeName == "body" )
-				bodyPassOne( $node );
-		}
-		$node = $node->nextSibling;
+		if ( $token != T_TAG )
+			continue;
+		//echo "TAG: |$tagName|<br>\n";
+		if ( $tagName == "head" )
+			parseHead( );
+		else if ( $tagName == "body" )
+			bodyPassOne( );
 	}
+	/*
+	global $doc, $line;
+	while ( ! feof( $doc ) )
+	{
+		getLine( );
+		$tag = findTag( );
+		eatLine( );
+		if ( $tag == "head" )
+			parseHead( );
+		else if ( $tag == "body" )
+			bodyPassOne( );
+	}
+	*/
 }
 
-function parseHead( $root )
+function parseHead( )
 {
+	global $tagName;
+	while ( ( $token = getToken( ) ) != T_EOF )
+	{
+		if ( $token != T_TAG )
+			continue;
+		if ( $tagName == "title" )
+			$title = getNodeText( );
+		else if ( $tagName == "style" )
+		{
+			$pageStyle = getNodeText( );
+		}
+		else if ( $tagName == "/head" )
+			break;
+	}
+	//echo "TITLE: |$title|<br>\n";
+	return;
+/*
+	global $doc;
 	global $title;
 	global $pageStyle;
-	$node = $root->firstChild;
-	while ( $node != null )
+	
+	eatLine( );
+	while ( ! feof( $doc ) )
 	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
+		$line = getLine( );
+		$tag = findTag( );
+		if ( $tag == "title" )
+			$title = getNodeText( $tag );
+		else if ( $tag == "style" )
 		{
-			if ( $node->nodeName == "title" )
+			$pageStyle = getNodeText( $tag );
+		}
+		else if ( $tag == "/head" )
+			break;
+		else
+			eatLine( );
+	}
+*/
+}
+
+function getNodeText( )
+{
+	global $tagName, $tokenText;
+	$tag = "/" . $tagName;
+	while ( ( $token = getToken( ) ) != T_EOF )
+	{
+		if ( $token == T_TAG  &&  $tagName == $tag )
+			break;
+		$text .= $tokenText;
+	}
+	return $text;
+	
+	/*
+	global $doc, $line;
+	$tag = "/" . $tag;
+	while ( ! preg_match( "/>(.*)$/", getLine( ), $match ) )
+	{
+		if ( feof( $doc ) )
+			return;
+		eatLine( );
+	}
+	$line = $match[1];
+	$text = "";
+	while ( true )
+	{
+		if ( preg_match( "/(.*)<\s*(\/?\w*)\s*>/", $line, $match ) )
+		{
+			if ( $match[2] == $tag )
 			{
-				$title = getNodeText( $node );
-			}
-			else if ( $node->nodeName == "style" )
-			{
-				$pageStyle = $node->textContent;
+				$text .= $match[1];
+				$line = $match[3];
+				return $text;
 			}
 		}
-		$node = $node->nextSibling;
+		$text = $line;
+		eatLine( );
+		if ( feof( $doc ) )
+			return $text;
+		getLine( );
 	}
+	*/
 }
 
-function getNodeText( $node )
+function getClass( )
 {
-	$textNode = $node->firstChild;
-	if ( $textNode == null )
-		return "";
-	if ( $textNode->nodeType != XML_TEXT_NODE )
-		return "";
-	return trim( $textNode->data );
+	global $tokenText;
+	if ( preg_match( "/<\s*\w*\s*[^>]*class\s*=\s*\"([^\"]*)\"/", $tokenText, $match ) )
+		return $match[1];
+	return "";
 }
 
-function bodyPassOne( $body )
+function bodyPassOne( )
 {
+	global $tagName;
 	global $heading, $subhead;
-	$node = $body->firstChild;
-	while ( $node != null )
+	while ( ( $token = getToken( ) ) != T_EOF )
 	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
+		if ( $token != T_TAG )
+			continue;
+		if ( $tagName == "p" )
 		{
-			if ( checkNode( $node, "p", "head" ) )
-			{
-				//echo "<br><pre>Found Head!</pre><br>\n";
-				$heading = getNodeText( $node );
-			}
-			else if ( checkNode( $node, "p", "subhead" ) )
-			{
-				$subhead = getNodeText( $node );
-			}
-			else if ( checkNode( $node, "h1" ) )
-			{
-				addJump( getNodeText( $node ) );
-			}
+			$class = getClass( );
+			if ( $class == "head" )
+				$heading = getNodeText( );
+			else if ( $class == "subhead" )
+				$subhead = getNodeText( );
 		}
-		$node = $node->nextSibling;
+		else if ( $tagName == "h1" )
+		{
+			addJump( getNodeText( ) );
+		}
+		else if ( $tagName == "/body" )
+			break;
 	}
+	
+	/*
+	return;
+	//echo "Parse body p1<br>\n";
+	global $doc, $heading, $subhead;
+	while ( ! feof( $doc ) )
+	{
+		getLine( );
+		$tag = findTag( );
+		if ( $tag == "p" )
+		{
+			$class = getClass( );
+			if ( $class == "head" )
+				$heading = getNodeText( $tag );
+			else if ( $class == "subhead" )
+				$subhead = getNodeText( $tag );
+			eatLine( );
+		}
+		else if ( $tag == "h1" )
+		{
+			addJump( getNodeText( $tag ) );
+			eatLine( );
+		}
+		else
+			eatLine( );
+	}
+	*/
+	
+	//echo "Head: $heading<br>\n";
+	//echo "Subhead: $subhead<br>\n";
 }
 
+/*
 function checkNode( $node, $tag, $class = null )
 {
 	if ( $node->nodeName != $tag )
@@ -226,20 +572,40 @@ function checkNode( $node, $tag, $class = null )
 		return true;
 	return ( $node->getAttribute( "class" ) == $class );
 }
+*/
 
-function secondPass( $root )
+function secondPass( )
 {
-	global $title, $heading, $subhead;
+	global $tagName;
+	while ( ( $token = getToken( ) ) != T_EOF )
+	{
+		if ( $token != T_TAG )
+			continue;
+		if ( $tagName == "body" )
+		{
+			bodyPassTwo( );
+			break;
+		}
+	}
 	
-	if ( trim( $title ) == "" )
-		$title = "BIRT Project";
-	if ( trim( $heading ) == "" )
-		$heading = "BIRT Project";
-
-	// Create the page header & menu bar.
+	/*
 	
-	pageHeader( $title, $heading, $subhead );
-	
+	//echo "second pass\n";
+	global $doc;
+	while ( ! feof( $doc ) )
+	{
+		getLine( );
+		$tag = findTag( );
+		eatLine( );
+		if ( $tag == "body" )
+		{
+			bodyPassTwo( );
+			break;
+		}
+	}
+	*/
+		
+	/*
 	$node = $root->firstChild;
 	while ( $node != null )
 	{
@@ -250,88 +616,215 @@ function secondPass( $root )
 		}
 		$node = $node->nextSibling;
 	}
-	
-	// Finish up the page with footer bar.
-	
-	require( "footer.inc" );
+	*/
 }
 
-function bodyPassTwo( $body )
+/*
+function echoLine( )
 {
-	$node = $body->firstChild;
-	while ( $node != null )
+	global $line;
+	echo $line;
+	echo "\n";
+	eatLine( );
+}
+*/
+
+function bodyPassTwo( )
+{
+	global $tagName, $tokenText;
+	while ( ( $token = getToken( ) ) != T_EOF )
 	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
+		if ( $token == T_TEXT )
+			echo $tokenText;
+		else if ( $token == T_MY_COMMENT )
 		{
-			if ( checkNode( $node, "p", "head" ) )
+			// Ignore comments
+		}
+		else if ( $tagName == "p" )
+		{
+			$class = getClass( );
+			if ( $class == "head"  ||  $class == "subhead" )
 			{
 				// Page header, skip on pass 2
-			}
-			else if ( checkNode( $node, "p", "subhead" ) )
-			{
-				// Page subheader, skip on pass 2
-			}
-			else if ( checkNode( $node, "h1" ) )
-			{
-				// H1 headers need jump targets
 				
-				h1( getNodeText( $node ) );
+				getNodeText( );
 			}
-			
-			// Specialized Eclipse-style lists: [->] Title - text
-			
-			else if ( checkNode( $node, "dl", "arrow-list" ) )
-			{
-				arrowList( $node, SIMPLE_ARROW_LIST );
-			}
-			else if ( checkNode( $node, "dl", "date-list" ) )
-			{
-				arrowList( $node, DATE_ARROW_LIST );
-			}
-			else if ( checkNode( $node, "dl", "break-list" ) )
-			{
-				arrowList( $node, BREAK_ARROW_LIST );
-			}
-			else if ( checkNode( $node, "dl", "bold-list" ) )
-			{
-				arrowList( $node, BOLD_ARROW_LIST );
-			}
-			
-			// Everything else
-			
 			else
-				parseNode( $node );
-			
+				echo $tokenText;
 		}
-		$node = $node->nextSibling;
+		else if ( $tagName == "h1" )
+		{
+			// H1 headers need jump targets
+			
+			h1( getNodeText( ) );
+		}
+		else if ( $tagName == "dl" )
+		{
+			$class = getClass( );
+			if ( $class == "arrow-list" )
+			{
+				arrowList( SIMPLE_ARROW_LIST );
+			}
+			else if ( $class == "date-list" )
+			{
+				arrowList( DATE_ARROW_LIST );
+			}
+			else if ( $class == "break-list" )
+			{
+				arrowList( BREAK_ARROW_LIST );
+			}
+			else if ( $class == "bold-list" )
+			{
+				arrowList( BOLD_ARROW_LIST );
+			}
+			else
+				echo $tokenText;
+		}
+		else
+			emitTag( );
 	}
+	
+	/*
+	global $doc, $line;
+	while ( ! feof( $doc ) )
+	{
+		getLine( );
+		$tag = findTag( );
+		if ( $tag == "p" )
+		{
+			$class = getClass( );
+			if ( $class == "head"  ||  $class == "subhead" )
+			{
+				// Page header, skip on pass 2
+				eatLine( );
+			}
+			else
+				echoLine( );
+		}
+		else if ( $tag == "h1" )
+		{
+			// H1 headers need jump targets
+			
+			h1( getNodeText( $tag ) );
+			eatLine( );
+		}
+		else if ( $tag == "dl" )
+		{
+			$class = getClass( );
+			if ( $class == "arrow-list" )
+			{
+				arrowList( SIMPLE_ARROW_LIST );
+			}
+			else if ( $class == "date-list" )
+			{
+				arrowList( DATE_ARROW_LIST );
+			}
+			else if ( $class == "break-list" )
+			{
+				arrowList( BREAK_ARROW_LIST );
+			}
+			else if ( $class == "bold-list" )
+			{
+				arrowList( BOLD_ARROW_LIST );
+			}
+			else
+				echoLine( );
+		}
+			
+		else
+			echoLine( );
+	}
+	*/
 }
 
-function arrowList( $list, $type )
+function arrowList( $type )
 {
+	global $tagName, $tokenText;
 	bulletList( $type );
-	$node = $list->firstChild;
-	while ( $node != null )
+	while ( ( $token = getToken( ) ) != T_EOF )
 	{
-		if ( $node->nodeType == XML_ELEMENT_NODE )
+		if ( $token == T_TEXT )
+			echo $tokenText;
+		if ( $token == T_MY_COMMENT )
 		{
-			if ( checkNode( $node, "dt" ) )
-			{
-				startBullet( );
-				writeSubtree( $node );
-				endBulletHead( );
-			}
-			else if ( checkNode( $node, "dd" ) )
-			{
-				writeSubtree( $node );
-				endBullet( );
-			}
+			// Ignore comments
 		}
-		$node = $node->nextSibling;
+		else if ( $tagName == "/dl" )
+			break;
+		else if ( $tagName == "dt" )
+		{
+			startBullet( );
+			copyItemText( );
+			endBulletHead( );
+		}
+		else if ( $tagName == "dd" )
+		{
+			copyItemText( );
+			endBullet( );
+		}
+		else if ( $tagName == "/dd"  ||  $tagName == "/dt" )
+		{
+			// Ignore the end tags
+		}
+		else
+			emitTag( );
 	}
+	
+	
+	/*
+	eatLine( );
+	
+	bulletList( $type );
+	while ( ! feof( $doc ) )
+	{
+		getLine( );
+		$tag = findTag( );
+		if ( $tag == "/dl" )
+			break;
+		else if ( $tag == "dt" )
+		{
+			startBullet( );
+			echo getNodeText( $tag );
+			endBulletHead( );
+		}
+		else if ( $tag == "dd" )
+		{
+			echo getNodeText( $tag );
+			endBullet( );
+		}
+		else
+			echoLine( );
+	}
+	*/
+	
 	endList( );	
 }
 
+function copyItemText( )
+{
+	global $tagName, $tokenText;
+	$tag = "/" . $tagName;
+	while ( ( $token = getToken( ) ) != T_EOF )
+	{
+		if ( $token == T_TEXT )
+			echo $tokenText;
+		else if ( $token == T_MY_COMMENT )
+		{
+			// Ignore comments
+		}
+		else if ( $tagName == $tag )
+			break;
+		else if ( $tagName == "dt"  ||  $tagName == "dd"  ||  $tagName == "/dl" )
+		{
+			pushToken( $token );
+			break;
+		}
+		else
+			emitTag( );
+	}
+}
+
+/*
 function writeSubtree( $node )
 {
 	$child = $node->firstChild;
@@ -343,8 +836,28 @@ function writeSubtree( $node )
 		$child = $child->nextSibling;
 	}
 }
+*/
 
-function parseNode( $node )
+function emitTag( )
+{
+	global $tagName, $tokenText;
+	switch ( $tagName )
+	{
+		case "a":
+			mapLink( );
+			break;
+			
+		case "img":
+			mapImage( );
+			break;
+			
+		default:
+			echo $tokenText;
+	}
+}
+
+/*
+ parseNode( $node )
 {
 	global $prevNode;
 	
@@ -444,12 +957,33 @@ function onAttr( $attr )
 	echo $attr->value;
 	echo "\"";
 }
+*/
 
-function mapLink( $node )
+function getAttr( $attr )
 {
-	$dest = $node->getAttribute( "href" );
-	if ( $dest == "" )
+	global $tokenText;
+	if ( preg_match( "/^(.*\s+" . $attr . "\s*=\s*\")([^\"]*)(\".*)$/i", $tokenText, $match ) )
+		return $match;
+	return null;
+}
+
+function mapLink( )
+{
+	global $tokenText;
+	$match = getAttr( "href" );
+	if ( $match == null )
+	{
+		echo $tokenText;
 		return;
+	}
+	
+	echo $match[1];
+	$dest = $match[2];
+	if ( $dest == "" )
+	{
+		echo $match[3];
+		return;
+	}
 		
 	// Don't map destinations of the form:
 	//	blank
@@ -462,19 +996,43 @@ function mapLink( $node )
 	if ( isMappable( $dest ) )
 	{
 		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) &&
-			 $node->getAttribute( "class" ) != "top" )
+			 getClass( ) != "top" )
 		{
 			$dest = mapPageName( $dest );
 		}
 		else
 			$dest = mapFileName( $dest );
-		$node->setAttribute( "href", $dest );
 	}
-	onElement( $node );
+	echo $dest;
+	echo $match[3];
 }
 
-function mapImage( $node )
+function mapImage( )
 {
+	global $tokenText;
+	$match = getAttr( "src" );
+	if ( $match == null )
+	{
+		echo $tokenText;
+		return;
+	}
+	
+	echo $match[1];
+	$dest = $match[2];
+	if ( $dest == "" )
+	{
+		echo $match[3];
+		return;
+	}
+		
+	if ( isMappable( $dest ) )
+	{
+		$dest = mapFileName( $dest );
+	}
+	echo $dest;
+	echo $match[3];		
+	
+/*
 	$dest = $node->getAttribute( "src" );
 		
 	if ( isMappable( $dest ) )
@@ -484,6 +1042,7 @@ function mapImage( $node )
 	}
 
 	onElement( $node );
+*/
 }
 
 // Don't map destinations of the form:
