@@ -1,12 +1,3 @@
-<?php
-/*
- * Created on Feb 27, 2005
- *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
 <html>
 
@@ -16,6 +7,13 @@
 </head>
 
 <body>
+<?php
+$doc = domxml_open_file( "community.html" );
+if ( $doc == null ) echo "NULL<br>/n";
+else echo "Worked<br>/n";
+
+?>
+
 <?php phpinfo(); ?> 
 
 </body>
