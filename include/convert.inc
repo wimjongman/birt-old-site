@@ -171,7 +171,7 @@ function parseHead( $root )
 		{
 			if ( $node->nodeName == "title" )
 			{
-				$title = getText( $node );
+				$title = getNodeText( $node );
 			}
 			else if ( $node->nodeName == "style" )
 			{
@@ -182,7 +182,7 @@ function parseHead( $root )
 	}
 }
 
-function getText( $node )
+function getNodeText( $node )
 {
 	$textNode = $node->firstChild;
 	if ( $textNode == null )
@@ -203,15 +203,15 @@ function bodyPassOne( $body )
 			if ( checkNode( $node, "p", "head" ) )
 			{
 				//echo "<br><pre>Found Head!</pre><br>\n";
-				$heading = getText( $node );
+				$heading = getNodeText( $node );
 			}
 			else if ( checkNode( $node, "p", "subhead" ) )
 			{
-				$subhead = getText( $node );
+				$subhead = getNodeText( $node );
 			}
 			else if ( checkNode( $node, "h1" ) )
 			{
-				addJump( getText( $node ) );
+				addJump( getNodeText( $node ) );
 			}
 		}
 		$node = $node->nextSibling;
@@ -275,7 +275,7 @@ function bodyPassTwo( $body )
 			{
 				// H1 headers need jump targets
 				
-				h1( getText( $node ) );
+				h1( getNodeText( $node ) );
 			}
 			
 			// Specialized Eclipse-style lists: [->] Title - text
