@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Applications</p>
+
+<h1>Authorization</h1>
+
+<div class="q">How does one
+assign access/viewing rights to specific sets of data?</div>
+<div class="ans">
+For example: User A is a member of the HR department. Users in the HR Department are
+allowed to see all employees, and their details, but not any of the salary
+information. User B is a manager of the development department. User B is
+permitted to see salary information for all users that work for her, but is
+not permitted to see salary information for her bosses or anyone in another
+department and can't see HIPAA information under any circumstances.
+Both receive a link to the report to view, and each sees different
+information.
+<br><br>
+BIRT provides several features to support such a security model.
+The first step is to define your security key. BIRT is designed to be  part 
+of a J2EE server. Let's suppose that your J2EE session  provides a user ID 
+and security group. You'd access these in BIRT  through scripting. (We're 
+working out the exact details of how  scripting will gain access to the J2EE 
+session.) Let's call these userID and groupID.
+<br><br>
+Next, we have to implement the actual security. There are a number of 
+choices.
+
+<ul class="arrow-list">
+<li>
+The easiest is run-time row-level security. Use the userID or  groupID to 
+parameterize your WHERE clause. The report would only  show those rows to 
+which the user has access.
+<li>
+The next case is column-level security: hide certain columns from  certain 
+users. This is the kind of security in your use case.
+</ul>
+
+There are two ways to implement column security: run time or view time.
+<ul class="arrow-list">
+<li>
+Run-time security works well for on-demand reports, or  reports that only 
+one user will see. We control the data that goes  into the report, then we 
+show that data at view time.
+<li>
+View-time security let's us create one report shared by all users, then 
+tailor the display depending on who is viewing the report.
+</ul>
+Let's tackle run-time security. BIRT supports the idea of a computed column. 
+The value of the column can be computed using any arbitrary JavaScript 
+expression. We create a computed column whose  value is either the column 
+you want to show (if the userID or groupID matches some attribute of the 
+row) or null if the user does not have permission. Null values will appear 
+blank in the report.
+<br><br>
+For the salary, suppose that each employee is assigned to a department 
+(deptID) and the user session identifies the department (if any) that the 
+user manages: mgrDept. Your computed column contains the salary if deptID == 
+mgrDept, and null otherwise.
+<br><br>
+To implement view-time security, associate the security with the report item 
+that shows the column. In your use case, associate the data item with the 
+report item that shows the salary column.  BIRT has a visibility expression 
+that determines when the item should appear. Use the user information to 
+determine whether the salary report item should be visible or not for any 
+given user.
+<br><br>
+Release 1 supports only on-demand reports: the person who runs the report is 
+the only person who can view the report. Hence, both  run-time and view-time 
+security produce the same visual result. Later, when reports can be stored, 
+the difference between run-time and view-time security will  be critical.
+<br><br>
+You can expand these techniques for other kinds of customization.  You can 
+include entire subreports based on the run-time user. For example, a boss 
+gets a salary history for each employee in his  department, but not for 
+employees in other departments.
+<br><br>
+And, these techniques work for non-security cases. For example, perhaps you 
+have a bug report that has options for "summary",  "normal" and "detailed". 
+The user sets a report parameter with one  of these choices. Based on this 
+parameter, your bug report shows different kinds of information. If summary, 
+only bug numbers & titles appear. If normal, then, say, bug number, title, 
+description, owner and status appear. If detailed, then the report  also 
+includes comments, change history, and so on.
+<br><br>
+If you really want to go wild, you can even completely customize the report 
+before it runs. You can implement a method that will  rewrite the XML file. 
+For example, the bug report above could  provide lots of parameters for 
+"include owner?", "include history?",  "include comments?", "layout type" 
+and so on. Based on this, you can generate a new XML design file on-the-fly 
+for a customized report. This  is the file that the Engine will run. Sounds 
+complicated, but it can be a handy way to implement a highly customizable 
+report.
+</div>
+
+</body>
+</html>

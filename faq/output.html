@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Installation &amp; Compatibility</p>
+
+<h1>Output Formats</h1>
+
+<div class="q">What report output formats does BIRT support?</div>
+<div class="ans">
+Release 1.0 supports HTML output as a single HTML page. It also supports
+paginated output using XML-FO via the Apache FOP project.
+</div>
+
+<h1>Unix Printing</h1>
+
+<div class="q">Does BIRT support printing on UNIX on non-postscript printers?</div>
+<div class="ans">
+The first release of BIRT will only support printing in PDF format. 
+However, postscript printing on Unix could be added in the future. 
+<br><br>
+Our current thought is that almost all major printers support postscript 
+or PDF. Even if a printer is claimed to be a PCL printer, the vendor often 
+provides a downloadable postscript driver file. If a postscript printing 
+system is to be implemented for BIRT, the postscript file will likely be 
+generated in the following way:
+
+<ol>
+<li>The printer driver is parsed and 
+printer specific commands (i.e., printer escapes) are generated for 
+printer-specific features, such as collation, paper tray, landscape vs. 
+portrait, etc.
+<li>Report contents, which are usually drawn in a 
+printer-independent way, are generated as printer-independent postscript.
+</ol>
+BIRT is designed to allow seamless extensions. So your formatting and 
+protocol modules can be designed as plugins. 
+</div>
+
+<h1>PDF Output</h1>
+
+<div class="q">BIRT uses XML-FO for output. Apache FOP has known performance
+and feature limitations. How does BIRT address these issues?</div>
+<div class="ans">
+A user reported that he'd taken a look at Apache's FOP.  The performance 
+was poor for a reasonable sized document.  Also, there 
+were concerns about the memory usage while processing these documents 
+and whether that would lead to any scalability problems during rendering.
+<br><br>
+Using FOP for the first release allows us to 
+focus on other areas of report generation and rendering. At the same time, 
+performance is a key goal. We're running tests to get a good sense of the 
+actual issues. XSL:FO is a convenient way to handle conversion and be 
+standards-compliant -- if it works. As a result, we intend to generate FO 
+that follows CSS standard. However, since FOP does not support many 
+features for now, we also allow generation FO that contains some 
+workarounds so that the FOP output makes more sense. 
+<br><br>
+The Engine is designed to allow extended converters, so we/others can plug 
+in a better converter easily if/when needed.
+<br><br>
+In the first release, reports are on demand and in a single web page, so 
+are expected to be small. In a subsequent release, reports will be stored 
+on disk and can be any size. That will be an excellent time to determine 
+if we need to reconsider our conversion strategy. One approach is to 
+directly go from report design to PDF, as someone already suggested in the 
+newsgroup.
+</div>
+
+<h1>Non-Latin Characters</h1>
+
+<div class="q">I've used Chinese characters in my design, but they don't appear in
+PDF. What do I do?</div>
+<div class="ans">
+BIRT uses
+<a href="http://xml.apache.org/fop/">Apache FOP</a> to generate PDF output, 
+so you can consult with FOP 
+documents for using Chinese characters. Using Chinese characters in FOP 
+needs some customization, such as:
+
+<ul>
+<li>Create a font metrix file for the font types you used
+<li>Define the font used by FOP
+<li>Embedded the font into PDF
+</ul>
+
+Font configurations are described in FOP FAQ, 
+<ul>
+<li>http://xml.apache.org/fop/faq.html#pdf-characters-menu
+<li>http://xml.apache.org/fop/fonts.html
+<li>http://xml.apache.org/fop/configuration.html
+</ul>
+We might integrate FOP configurations into BIRT configuration. But before 
+that is done, you may have to customize FOP by yourself.
+</div>
+
+
+</body>
+</html>

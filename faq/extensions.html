@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Extensions</p>
+
+<h1>Extensions</h1>
+
+<div class="q">Can I extend BIRT?</div>
+<div class="ans">
+Yes, BIRT provides several extension points:
+<ul>
+<li>Data access extensions through BIRT's Open Data Access (ODA) framework.
+<li>Extended data access UI using the Eclipse plugin framework.
+<li>Extended report items that add visual items such as gauges, etc.
+<li>Scripting within a report. Scripting can access application-specific
+business logic implemented as Java classes.
+<li>Rendering extensions that produce additional report output formats. 
+</ul>
+</div>
+
+<div class="q">How can I create a custom report item such as a stop light?</div>
+<div class="ans">
+How Java developers could extend the basic BIRT model through the
+creation of Java objects that are accessed through BIRT script.  For
+instance, a company would like to develop a propietary Stop Light Display
+for use in a management summary report, this display would have a
+significant amount of business logic and display logic that they would like
+to implement in Java.
+<br><br>
+ROM calls this an "extended item". The development team is working on a 
+specification of exactly how this will happen. Briefly, you start by 
+creating an extension definition file, something like that created for 
+plug-ins in Eclipse. In that file you identify the element name, the 
+properties, and the Java classes to use in the Designer, Report Engine. The 
+Designer class paints the design-time view of the element using SWT (or can 
+just return an image.)
+<br><br>
+The Report Engine has two phases: the Factory (which creates the report) and 
+the Presentation phase which renders the report to HTML, FO, PDF, etc. The 
+extension file provides separate classes for each phase. The Factory class 
+is often optional; even without it the Factory can figure out (from the 
+property definitions) what data needs to be stored in the report document.
+<br><br>
+The Presentation class does the bulk of the work. Let's take the simplest 
+case where the element can be represented by an image. Your stop light 
+example fits this well. In this case, the Presentation Java class gets two 
+pieces of information: the element design (or definition) and the element 
+instance. The element design holds all the properties the user set in the 
+designer. Perhaps here that includes the color settings, the threshold for 
+which light to show, etc.  The element instance provides the data. Suppose 
+that the stoplight shows actual sales as a percent of quota. If so, we can 
+get this percent from the element instance. We then compare this with the 
+design setting for the threshold, and determine say, that the ratio is 90%, 
+and so we should show the yellow light.
+<br><br>
+We then create an image and return it to the Report Engine, which "does the 
+right thing" to put the image into the HTML file, PDF or whatever.
+<br><br>
+Notice that, in this second case, no JavaScript is needed. Adding an 
+extended item is something that a skilled Java developer would do. Once 
+installed in BIRT, it would be automatically available to all reports as 
+just a BIRT-defined report item.
+<br><br>
+That's the high level answer. Please take a look at the extension 
+specification once it is released and see if it provides the details you'd 
+need to create such an extension.
+</div>
+
+<h1>Data Extensions</h1>
+<p>
+See additional discussion of data extensions on the
+<a href="data.html">Data FAQ page</a>.
+
+</body>
+</html>

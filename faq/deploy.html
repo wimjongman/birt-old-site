@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Deploying BIRT</p>
+
+<h1>Deployment</h1>
+
+<div class="q">How do I install the BIRT Report Engine in my app server?</div>
+<div class="ans">
+The ERE is a series of Java class files that can be deployed in any 
+Java/J2EE environment &ndash; this could be within a server based application, or 
+a client-side application. The ERE is the runtime component of BIRT &ndash; when 
+you call it in the context of your application, you pass it a report design. 
+The ERE then will access the data source, retrieve the data, do the required 
+agregations/sorting, etc., and then format the report for presentation as 
+HTML or PDF, for example.
+<br><br>
+The BIRT report viewer is included with the report designer and is used to preview
+reports. It doubles as an example of how to integrate the Report Engine into a
+J2EE application.
+</div>
+
+<div class="q">Can I use BIRT within a Rich Client Application (RCP)?</div>
+<div class="ans">TBD</div>
+
+<!--
+<div class="q">How do I manage reports within my application? Storage? Security?</div>
+<div class="ans"></div>
+-->
+
+<div class="q">Can I store report designs in a location other than the file system?</div>
+<div class="ans">
+Not at present, but we are looking into possible changes to support this.
+Also, Eclipse itself may be looking into this.
+</div>
+
+<div class="q">Do BIRT reports need to be compiled before they are run?</div>
+<div class="ans">
+No, there is no compile step. The BIRT Report Engine directly executes the report 
+design XML file. (This is one reason that BIRT uses interpreted JavaScript instead
+of compiled Java as its scripting language.)</div>
+
+<div class="q">Can BIRT reports be saved on disk?</div>
+<div class="ans">
+Reports in release 1 are run on demand, then discarded. A BIRT report run
+creates the report, converts it to HTML or PDF, then discards the report. A later
+release will add the ability to save the <i>report document</i> on disk.
+</div>
+
+</body>
+</html>

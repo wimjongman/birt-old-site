@@ -1,0 +1,15 @@
+<birt-menu>
+<top name="faq" page="../faq"/>
+<item name="install" page="install.html"/>
+<item name="data access" page="data.html"/>
+<item name="parameters" page="params.html"/>
+<item name="scripting" page="scripting.html"/>
+<item name="extensions" page="extensions.html"/>
+<item name="chart" page="chart.html"/>
+<item name="deployment" page="deploy.html"/>
+<item name="output" page="output.html"/>
+<item name="internationalization" page="i18n.html"/>
+<item name="applications" page="apps.html"/>
+<item name="project" page="project.html"/>
+<item name="limitations" page="limitations.html"/>
+</birt-menu>

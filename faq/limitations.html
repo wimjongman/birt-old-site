@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Limitations</p>
+
+<h1>Browser Limtations</h1>
+<p>
+BIRT follows the
+<a href="http://www.w3.org/TR/CSS21/">W3C CSS 2.1</a> standards. However,
+Microsoft IE follows a subset
+of these standards. The following table shows the limitations within BIRT due
+to limitations of browser and of
+<a href="http://xml.apache.org/fop/">Apache FOP</a>.
+
+<table class="simple-table">
+<thead>
+<tr>
+<td>Property<td>Internet Explorer<td>Firefox 1.0<td>Apache FOP
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid.padding*<br>Table.padding*
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+</tr>
+<tr>
+<td>Column.padding*
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+</tr>
+<tr>
+<td>Row.padding*
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+<td>Not supported in BIRT 1.0
+</tr>
+<tr>
+<td>Cell.padding*
+<td>Supported
+<td>Supported
+<td>Supported
+</tr>
+<tr>
+<td>Grid.border*<br>Table.border*
+<td>Supported
+<td>Supported
+<td>Supported
+</tr>
+<tr>
+<td>Column.border*
+<td>Not supported by browser,<br>Not supported by BIRT 1.0
+<td>Supported by browser,<br>Not supported by BIRT 1.0
+<td>Supported by FO,<br>Not supported by BIRT 1.0
+</tr>
+<tr>
+<td>Row.border*
+<td>Not supported by browser,<br>Not supported by BIRT 1.0
+<td>Supported by browser,<br>Not supported by BIRT 1.0
+<td>Not supported by FO,<br>Not supported by BIRT 1.0
+</tr>
+<tr>
+<td>Cell.border*
+<td>Supported
+<td>Supported
+<td>Supported
+</tr>
+</tbody>
+</table>
+
+<h1>General</h1>
+
+<div class="q">Does BIRT keep its data set in memory?</div>
+<div class="ans">
+Release 1.0 produces reports on demand, and keeps the entire report
+(including the data set) in memory. Because reports are on demand, and delivered
+as a single HTML page, reports in Release 1 will be small.
+<br><br>
+Later releases will store reports
+on disk, and will support reports of unlimited size. At that time,
+the data set will also be written to disk when it becomes too large
+for memory.</div>
+
+<div class="q">Does BIRT support crosstabs?</div>
+<div class="ans">
+This is planned for a future release.
+</div>
+
+<div class="q">Does BIRT support Eclipse 3.1?</div>
+<div class="ans">
+Not yet. Some users have said that they've gotten it to work with the 3.1
+milestone or preview builds, but the BIRT team does not yet test with
+Eclipse 3.1.</div>
+
+<div class="q">Does BIRT support Java 5 (AKA Java 1.5)?</div>
+<div class="ans">
+Not yet. Some users have build BIRT under this version of Java and have
+reported minor compile problems. The BIRT team does not yet test with
+Java 5.
+</div>
+
+
+</body>
+</html>
