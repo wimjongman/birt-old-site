@@ -20,7 +20,7 @@ $line .= "\n";
 //print "<br>\nLine: $line<br>\n";
 
 ignore_user_abort(true);
-$f = fopen( "results.csv", "a+t" );
+$f = fopen( "../writable/results.csv", "a+t" );
 if ( ! $f )
 {
 	echo "Could not open results file!\n";
