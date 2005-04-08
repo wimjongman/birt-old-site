@@ -7,7 +7,7 @@
  */
 
 global $data;
-$data = file_get_contents( "results.csv" );
+$data = file_get_contents( "../writable/results.csv" );
 ?>
 
 <HTML
