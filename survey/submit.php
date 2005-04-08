@@ -14,7 +14,7 @@ $fields = array( "LANGUAGE","DEV","IDE","REPORTWRITER","TOOLS","PRIMARY" );
 //echo print_r( $_POST );
 foreach ( $fields as $field )
 {
-	$line .= ",\"${_POST[ $field ]}\"";
+	$line .= ",\"" . $_POST[ $field ] . "\"";
 }
 $line .= "\n";
 //print "<br>\nLine: $line<br>\n";
