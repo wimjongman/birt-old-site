@@ -5,7 +5,7 @@
 <item name="introduction" page="intro"/>
 <item name="examples" page="examples"/>
 <item name="tutorial" page="tutorial"/>
-<item name="deployment" page="deploy"/>
+<item name="integration" page="deploy"/>
 <item name="faq" page="faq"/>
 <not-yet-item name="building reports" page="reports"/>
 <not-yet-item name="integration" page="integ"/>
