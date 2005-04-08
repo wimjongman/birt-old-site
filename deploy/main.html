@@ -116,7 +116,7 @@ with a web application.</p>
   run BIRT reports from a non-Java scripting environment such as PHP. Also 
   briefly summarizes how to use PHP to generate custom report designs.</li>
   <li>Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
-  <li>The viewer code itself is available in the BIRT CVS repository in the
+  <li>The viewer code is available in the BIRT CVS repository in the
   <a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project">
   org.eclipse.birt.report.viewer</a> project. See the
   <a href="../build/build_instr.html">BIRT build instructions</a> for 
@@ -132,12 +132,18 @@ download.</p>
 <h1><a name="deapi">Design Engine API</a></h1>
 <p>Use the Design Engine API (DE API) to create a custom report designer tool, 
 or to explore or modify BIRT report designs. The BIRT Designer is built using 
-this API. This API is described in Javadoc in the <code>org.eclipse.birt.report.model.api</code> 
-package within the <code>org.eclipse.birt.report.model project</code>. Read the package 
-overview for general information about getting started with this API.</p>
-<p>At present, you'll need to download the project source code and build the 
-Javadoc yourself. In time, the Javadoc, and the model JARs, will be available as 
-part of a BIRT download.</p>
+this API. (Internally, the Design Engine is also called the &quot;report model&quot; or 
+just &quot;model.&quot;)</p>
+<ul>
+  <li><a href="de-api.html">Using the Design Engine API</a>: a brief primer for 
+  using the DE API.</li>
+  <li>The Design Engine code is available in the BIRT CVS repository in the
+  <a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.model/?cvsroot=BIRT_Project">
+  org.eclipse.birt.report.model</a> project. See the
+  <a href="../build/build_instr.html">BIRT build instructions</a> for 
+  information on how to access CVS and build the code.</li>
+</ul>
+<p>&nbsp;</p>
 
 </body>
 </html>

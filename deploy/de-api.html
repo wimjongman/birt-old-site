@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>Deploying BIRT</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Integrating BIRT</p>
+
+<p class="subhead">Using the Design Engine API</p>
+<p class="subhead"></p>
+
+<h1>Concepts</h1>
+
+<p>A report design consist of three key concepts:</p>
+
+<dl class="break-list">
+<dt>Elements
+
+<dd>An &quot;object&quot; within the design such as the report itself, a data set, a style, 
+a table, a label, etc.
+
+<dt>Property
+
+<dd>Properties customize an element. For example, a data set has a name and a 
+query. A style has CSS-like style properties. A label has style properties and 
+display text. Properties further divide into <i>property definitions</i> 
+provided by BIRT's Report Object Model (ROM), and <i>property values</i> set by 
+you as you create a report design.
+
+<dt>Slots
+
+<dd>A slot describes how elements assemble to form a report. A slot is a place 
+where one element can contain other elements. For example, a report has slots 
+for data sources, data sets, styles and the report body. A table has slots for 
+the header, detail, footer and groups.
+</dl>
+
+<h1>API Services</h1>
+
+<p>The BIRT Design Engine API (DEAPI) provides a number of services to 
+applications that work with report designs:</p>
+
+<ul>
+  <li>Create report designs</li>
+  <li>Read and write report design files</li>
+  <li>Create and delete report elements</li>
+  <li>Put report elements into a slot, or move them from slot to slot</li>
+  <li>Get and set the value of parameters</li>
+  <li>Retrieve metadata about report elements, properties and slots</li>
+  <li>Support undo/redo of changes</li>
+  <li>Perform semantic checks of report designs</li>
+</ul>
+
+<h1>DEAPI SDK</h1>
+
+<p>To create an application that uses the DEAPI, you'll need the design engine 
+SDK.</p>
+
+<p>At present, you'll need to download the project source code and build the 
+Javadoc yourself. In time, the Javadoc, and the model JARs, will be available as 
+part of a BIRT download.</p>
+
+<ul>
+  <li>See the
+  <a href="../build/build_instr.html">BIRT build instructions</a> for 
+  information on how to access CVS and build the code. You only need to build 
+  the model and core projects.</li>
+  <li>If you don't have access to CVS, you can also obtain the code from the web 
+  interface to the
+<a href="../frameizer.php?page=http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.model/?cvsroot=BIRT_Project">
+org.eclipse.birt.report.model</a> project.
+</ul>
+
+<p>This API is described in Javadoc in the <code>org.eclipse.birt.report.model.api</code> 
+package within the <code>org.eclipse.birt.report.model project</code>. Read the package 
+overview for general information about getting started with this API.</p>
+
+<h1>Example</h1>
+
+<p>The following code shows a simple example that creates a working report 
+design. Here are the files you'll need:</p>
+
+<ul>
+  <li><a href="DeDemo.java">Sample Java code</a></li>
+  <li><a href="sample.rptdesign">Report produced by the example</a></li>
+  <li><a target="_blank" href="sample.html">HTML output of the above report</a></li>
+</ul>
+
+<p>The first step is to create an instance of the design engine.</p>
+
+<pre class="code-block">SessionHandle session = DesignEngine.newSession( null );</pre>
+
+<p>Then, create a new report design.</p>
+
+<pre class="code-block">ReportDesignHandle design = session.createDesign( );</pre>
+</p>
+
+<p>Next, get the &quot;element factory&quot; that creates new elements within your design:</p>
+
+<pre class="code-block">ElementFactory factory = design.getElementFactory( );</pre>
+
+<p>Next, we add a page master that determines how the report will appear when 
+printed:</p>
+
+<pre class="code-block">DesignElementHandle element = factory.newSimpleMasterPage( &quot;Page Master&quot; );
+design.getMasterPages( ).add( element );</pre>
+
+<p>Build S20050328 Note: BIRT will not open the report if you omit the master 
+page.</p>
+
+<p>This design will contain a grid that contains an image and a label. Let's 
+first create the grid and add it to the report's body slot.</p>
+
+<pre class="code-block">GridHandle grid = factory.newGridItem( null, 2 /* cols */, 1 /* row */ );
+design.getBody( ).add( grid );
+grid.setWidth( &quot;100%&quot; );</pre>
+
+<p>Next, create the image and add it to the first cell within the grid.</p>
+
+<pre class="code-block">RowHandle row = (RowHandle) grid.getRows( ).get( 0 );
+ImageHandle image = factory.newImage( null );
+CellHandle cell = (CellHandle) row.getCells( ).get( 0 );
+cell.getContent( ).add( image );
+image.setURI( &quot;http://www.eclipse.org/birt/tutorial/multichip-4.jpg&quot; 
+);</pre>
+
+<p>Then, create a label and add it to the second cell.</p>
+
+<pre class="code-block">LabelHandle label = factory.newLabel( null );
+cell = (CellHandle) row.getCells( ).get( 1 );
+cell.getContent( ).add( label );
+label.setText( &quot;Hello, world!&quot; );</pre>
+
+<p>Finally, save and close the report design.</p>
+
+<pre class="code-block">design.saveAs( &quot;sample.rptdesign&quot; );
+design.close( );</pre>
+
+<p>You can now open the design within BIRT and preview it.</p>
+
+</body>
+</html>
