@@ -44,6 +44,7 @@ ignore_user_abort(false);
 <HTML>
 <HEAD>
 <title>Eclipse Survey</title>
+<link rel="stylesheet" href="../style/style.css" type="text/css">
 </HEAD>
 <BODY>
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class="banner-area" >
@@ -80,6 +81,8 @@ BIRT</span></a>
 <p>
 <table border=0>
 <tr><td>
+<b><i>Results saved!</i></b>
+<p>
 Thanks again for taking the survey. We invite you to visit the
 <a href="http:/www.eclipse.org/birt">BIRT Project page</a>.
 
