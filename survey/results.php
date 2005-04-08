@@ -15,16 +15,6 @@ $data = file_get_contents( "../writable/results.csv" );
 <title>Raw Survey Results</title>
 </head>
 <body>
-Directory contents:
-<?php
-   if ($dh = opendir(".")) {
-       while (($file = readdir($dh)) !== false) {
-           echo "filename: $file : filetype: " . filetype($file) . "<br>\n";
-       }
-       closedir($dh);
-   }
-
-?>
 <pre>
 <?php echo htmlentities( $data ); ?>
 </pre>
