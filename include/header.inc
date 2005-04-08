@@ -351,8 +351,7 @@ function mapLinkURL( $dest )
 {
 	if ( isMappable( $dest ) )
 	{
-		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) &&
-			 getClass( ) != "top" )
+		if ( preg_match( "/\.((html?)|(txt))(#.*)?$/", $dest ) )
 		{
 			$dest = mapPageName( $dest );
 		}

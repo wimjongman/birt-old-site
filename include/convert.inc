@@ -609,7 +609,10 @@ function mapLink( )
 		return;
 	}
 	
-	echo mapLinkURL( $dest );
+	if ( getAttr( "target" ) != null  ||  getClass( ) == "top" )
+		echo mapFileName( $dest );
+	else	
+		echo mapLinkURL( $dest );
 	echo $match[3];
 }
 
