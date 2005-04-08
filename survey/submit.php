@@ -84,9 +84,9 @@ BIRT</span></a>
 <b><i>Results saved!</i></b>
 <p>
 Thanks again for taking the survey. We invite you to visit the
-<a href="http:/www.eclipse.org/birt">BIRT Project page</a>.
+<a href="http://www.eclipse.org/birt">BIRT Project page</a>.
 
 <p>
-Back to <a href="www.eclipse.org">eclipse</a>.
+Back to <a href="http://www.eclipse.org">eclipse</a>.
 </BODY>
 </HTML>
