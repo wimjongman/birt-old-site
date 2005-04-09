@@ -2,6 +2,6 @@
 <top name="examples" page="../examples"/>
 <item name="grouped list" url="grouped_table.html"/>
 <item name="drop list" url="drop_group_mockup.html"/>
-<item name="side-by-side" url="parallel_mockup.html"/>
+<item name="side-by-side" url="parallel.html"/>
 <item name="invoice" url="invoice.html"/>
 </birt-menu>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Examples</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Parallel Report Example</p>
+<p class="subhead">Notes</p>
+
+<h1>Setup</h1>
+<p>
+This report uses a (rather old) Microsoft Access database called "emp". To run
+this report, you'll need to download and install this database:
+<p>
+<ul>
+<li>Download the <a href="emp.zip">sample database zip file</a>.
+<li>Unzip the database into a convenient location.
+<li>Create a System DSN for this database using the Microsoft Access driver.
+Call it "EmpExample".
+</ul>
+
+<h1>About the Report</h1>
+<p>
+The report has an outer query that displays  information about an employee. Then, it
+has two "inner" queries that display details for this employee. Because we are showing
+two sets of details, we need two "subreports", and we use a grid to list them
+side-by-side.
+<p>
+The report prints for Employee 2. The queries are set up to all get data for the same
+employee. (A later revision will take the employee ID as a parameter.)
+
+
+</body>
+</html>
