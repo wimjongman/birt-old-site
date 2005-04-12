@@ -87,35 +87,6 @@ eclipse/plugins. If you installed BIRT on Windows in the default location,
 then put BIRT into "C:\program files\eclipse\plugins". Later builds use the
 same zip location as GEF and EMF.</div>
 
-<h1>Common Problems</h1>
-<p>
-Some problems are due to cached information within Eclipse. Such problems
-include:
-
-<ul>
-<li>The BIRT perspective does not appear in Eclipse.
-<li>You receive "An error occurred" dialogs when opening reports or using
-the BIRT UI.
-</ul>
-
-The solution is to clean up the cached information. There are different solutions
-for Eclipse 3.0.1 and Eclipse 3.1. Do the following in Eclipse 3.0.1:
-
-<ul>
-<li>Shut down Eclipse
-<li>Delete the configuration folder in the eclipse directory,
-<li>Restart Eclipse and again check for the BIRT perspective.
-</ul>
-<p>
-Note that this may lose some of your Eclipse settings; use this technique
-carefully.
-<p>
-For Eclipse 3.1, the recommended practice is to start Eclipse with the -clean option:
-</p>
-<pre class="code-block">
-eclipse.exe -clean
-</pre>
-  
 <h1>JDBC Driver</h1>
 <p>
 You will likely want to use your own JDBC driver with BIRT. BIRT
@@ -127,8 +98,7 @@ the JDBC ODA plugin: eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 Use any text editor to edit the configuration file. You will find the following 
 starting at line 26:
 
-<pre class="code-block">
-&lt;DriverLibraries>
+<pre class="code-block">&lt;DriverLibraries>
  &lt;LibrariesForOS>
   &lt;OSType>All&lt;/OSType>
   &lt;LibraryName>oda-jdbc.jar&lt;/LibraryName>
@@ -141,11 +111,17 @@ additional JDBC driver JAR file that might be needed.
 <br><br>
 By default, a driver's library files must be in the JDBC plugin directory.
 So, copy your JDBC driver JAR into 
-eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
+<code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc</code>.
 <br><br>
 You can optionally add a <code>&lt;Location></code> element to specify the
 location of the JDBC driver file.
 </div>
+
+<h2>Install Drivers for the Viewer</h2>
+<p>In order to preview your report, you must also install your drivers into the 
+BIRT viewer plugin. Install them into the 
+<code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers</code>
+directory, repeating the process from above.</p>
 
 <h1>Updating a BIRT Installation</h1>
 <p>
@@ -159,12 +135,68 @@ default location, this is "C:\program files\eclipse\plugins".
 <li>If you added any custom JDBC drivers, save a copy of these drivers, and
 the modified odaconfig.xml file, from 
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
-<li>Delete all directories that start with "org.eclipse.birt".
+<li>Then, repeat the process to copy driers and config files from 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers 
+to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
-<li>Copy your custom JDBC drivers and and odaconfig.xml file from your temporary
+<li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary
 location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
-<li>Restart Eclipse.
+<li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary 
+location back into 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers.<li>Restart Eclipse with the -clean option as explained below.
 </ul>
 
+<h1>Common Problems</h1>
+<p>
+Some problems are due to cached information within Eclipse. Eclipse caches
+information about plugins for faster startup. Adding BIRT as we did above
+may result in stale cached information. Symptoms of this problem
+include:
+
+<ul>
+<li>The BIRT perspective does not appear in Eclipse.
+<li>You receive "An error occurred" dialogs when opening reports or using
+the BIRT UI.
+</ul>
+
+<h2>Cleaning Cached Plugin Information</h2>
+<p>
+The solution is to clean up the cached information. 
+The recommended practice is to start Eclipse with the -clean option:
+</p>
+<pre class="code-block">eclipse -clean
+</pre>
+
+<h2>Cleaning the Cache on Windows</h2>
+<p>
+If you are on Windows, and are not familiar with how to invoke Eclipse from
+the command line, do the following:
+
+<ul>
+<li>Choose Start&rarr;All Programs&rarr;Accessories&rarr;Command Prompt
+<li>Move to the directory where you installed eclipse. If you installed
+Eclipse in the standard location, enter:
+</p>
+<pre class="code-block">cd "\Program Files\eclipse"
+</pre>
+<li>Run Eclipse with the -clean option:
+<pre class="code-block">eclipse -clean
+</pre>
+<li>Eclipse will restart. Again check for the BIRT perspective.
+</ul>
+
+<h2>The "Brute-Force" Approach</h2>
+<p>
+Another, less recommended, approach is to delete the configuration directory:
+</p>
+<ul>
+<li>Shut down Eclipse
+<li>Delete the configuration folder in the eclipse directory,
+<li>Restart Eclipse and again check for the BIRT perspective.
+</ul>
+<p>
+Note that this may lose some of your Eclipse settings; use this technique
+carefully.
+  
 </body>
 </html>
