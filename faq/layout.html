@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Report Layout</p>
+
+<h1>Page Number</h1>
+
+<p class="q">How do I display page numbers in HTML or PDF?</p>
+<p class="ans">BIRT uses Apache FOP to convert a report to PDF. FOP does 
+pagination and assigns page numbers. As a result, there is no JavaScript 
+expression you can use to get the current page number. Instead, BIRT will add a 
+new &quot;page number&quot; element. It will include a special marker string that tells 
+BIRT or FO where to insert the page number. BIRT will interpret the string when 
+converting to HTML, and will convert the marker to the required FO syntax when 
+converting to PDF using FOP.<br>
+<div class="ans">
+The element will allow you to say something like:
+<pre class="code-block">Page $page of $count</pre>
+At runtime, this will be replaced by:
+<pre class="code-block">Page 1 of 5</pre><br>
+
+<div class="caution"><span class="caution-head">Release 1.0M2 Note:</span> The 
+  page number element has not yet been released. Syntax is still subject to 
+  change.</div>
+</div></div>
+
+</body>
+</html>

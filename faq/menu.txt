@@ -8,6 +8,7 @@
 <item name="chart 1" page="chart.html"/>
 <item name="chart 2" url="Charts_FAQ.doc"/>
 <item name="deployment" page="deploy.html"/>
+<item name="layout" page="layout.html"/>
 <item name="output" page="output.html"/>
 <item name="internationalization" page="i18n.html"/>
 <item name="applications" page="apps.html"/>

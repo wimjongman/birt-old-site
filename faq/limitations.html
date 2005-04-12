@@ -3,7 +3,7 @@
 
 <head>
 <title>BIRT FAQ</title>
-<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../style/compose.css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
@@ -12,7 +12,7 @@
 <p class="head">BIRT FAQ</p>
 <p class="subhead">Limitations</p>
 
-<h1>Browser Limtations</h1>
+<h1>Browser Limitations</h1>
 <p>
 BIRT follows the
 <a href="http://www.w3.org/TR/CSS21/">W3C CSS 2.1</a> standards. However,
@@ -79,10 +79,19 @@ to limitations of browser and of
 </tbody>
 </table>
 
+<h1>Eclipse 3.1</h1>
+
+<p class="q">Does BIRT support Eclipse 3.1?</p>
+<p class="ans">
+Not yet. Some users have said that they've gotten it to work with the 3.1
+milestone or preview builds, but the BIRT team does not yet test with
+Eclipse 3.1. If you try BIRT on Eclipse 3.1, and find problems, please report 
+them via <a href="../community.html">Bugzilla</a> so the team can fix them.</p>
+
 <h1>General</h1>
 
-<div class="q">Does BIRT keep its data set in memory?</div>
-<div class="ans">
+<p class="q">Does BIRT keep its data set in memory?</p>
+<p class="ans">
 Release 1.0 produces reports on demand, and keeps the entire report
 (including the data set) in memory. Because reports are on demand, and delivered
 as a single HTML page, reports in Release 1 will be small.
@@ -90,25 +99,19 @@ as a single HTML page, reports in Release 1 will be small.
 Later releases will store reports
 on disk, and will support reports of unlimited size. At that time,
 the data set will also be written to disk when it becomes too large
-for memory.</div>
+for memory.</p>
 
-<div class="q">Does BIRT support crosstabs?</div>
-<div class="ans">
+<p class="q">Does BIRT support crosstabs?</p>
+<p class="ans">
 This is planned for a future release.
-</div>
+</p>
 
-<div class="q">Does BIRT support Eclipse 3.1?</div>
-<div class="ans">
-Not yet. Some users have said that they've gotten it to work with the 3.1
-milestone or preview builds, but the BIRT team does not yet test with
-Eclipse 3.1.</div>
-
-<div class="q">Does BIRT support Java 5 (AKA Java 1.5)?</div>
-<div class="ans">
+<p class="q">Does BIRT support Java 5 (AKA Java 1.5)?</p>
+<p class="ans">
 Not yet. Some users have build BIRT under this version of Java and have
 reported minor compile problems. The BIRT team does not yet test with
 Java 5.
-</div>
+</p>
 
 
 </body>
