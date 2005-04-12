@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Getting Started with BIRT</p>
+
+<h1>Getting Started</h1>
+
+<p class="q">How should I get started with BIRT?</p>
+
+<div class="ans">
+<p>Many people want to try out BIRT with a simple report design, 
+then see that report work on their app server before diving into the details of 
+BIRT. Here are some suggested steps for getting started. First, try out the BIRT 
+Designer:</p>
+
+<font SIZE="2">
+<ul>
+  <li><a href="http://www.eclipse.org/birt/index.php?page=build/install.html">Install Eclipse, BIRT and its prerequisites</a>.</li>
+  <li>Locate and install the JDBC driver for your database. Install them in the 
+  BIRT designer (same page).</li>
+  <li>Walk through the <a href="http://www.eclipse.org/birt/tutorial">BIRT tutorial</a> 
+  to get an overview of the designer.</li>
+</ul>
+<p>Next, try out the BIRT viewer on your app server:</p>
+<ul>
+  <li>I<a href="http://www.eclipse.org/birt/index.php?page=deploy/viewer-deploy.html">nstall Tomcat &amp; the BIRT viewer</a>.</li>
+  <li>Install &amp; try out the sample report. (same page as above.)</li>
+  <li>Install your JDBC drivers into the Viewer. (same page as above.)</li>
+</ul>
+<p>Now you're ready to try out a report specific to your 
+application:</p>
+<ul>
+  <li>Create a simple report, perhaps a listing of some table, using the BIRT 
+  designer.</li>
+  <li>Preview the data to ensure the connection stuff works.</li>
+  <li>Preview the report itself to verify your layout.</li>
+  <li>Create a &quot;reports&quot; directory within the birt-viewer web app created above.</li>
+  <li>Copy your &quot;first report&quot; to this new reports folder.</li>
+  <li>Run your report using Tomcat. (Use the URL as on the Viewer setup page, 
+  but use reports/yourReport.rptdesign as the report name, where 
+  yourReport.rptdesign is the name of your report.)</li>
+</ul>
+<p>At this point, you're ready to work on greater integration:</p>
+<ul>
+  <li>Learn about
+  <a href="http://www.eclipse.org/birt/index.php?page=deploy/viewer-use.html">
+  BIRT Viewer URLs</a> (for passing report parameters).<li>Some brief hints for 
+  <a href="http://www.eclipse.org/birt/index.php?page=deploy/viewer-php.html">using the Viewer with PHP</a>, 
+  if that is your server environment.</font></li>
+</ul>
+</div>
+
+<h1>Examples</h1>
+<p class="q">Where can I find Example Reports?</p>
+<p class="ans">Look in the <a href="../examples">Example Gallery</a>.</p>
+
+</body>
+</html>
