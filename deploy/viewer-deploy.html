@@ -21,17 +21,23 @@ it is open source and readily available. The same concepts,  perhaps
 with different details, apply to other app servers. These instructions assume you'll 
 install Tomcat on your own machine using the default port number of 8080.</p>
 
-<p>The following instructions are for Tomcat version 5.5.7 but you 
-should be able to use them for other versions with appropriate changes. If you 
+<p>The following instructions are for Tomcat version 4.1.30, but you 
+should be able to use them for other 4.1.x versions with appropriate changes. If you 
 don’t have Tomcat installed on your system you can download it from
 <a href="http://jakarta.apache.org/tomcat">http://jakarta.apache.org/tomcat</a>.</p>
 
-<h1>Prepare Tomcat</h1>
+<h1>Using Tomcat 5.5</h1>
+
+<p class="caution">
+<span class="caution-head">Build M2 Note</span>: BIRT is certified only with Tomcat 4.1.30. BIRT is not certified, and 
+known problems exist, with the Tomcat 5.0 and 5.5 releases. These will be fixed 
+before the final release.</p>
 
 <p>BIRT is tested for use with Java 1.4, but Tomcat 5.5 runs on Java 5 
 by default. Be sure to download and install the compatibility package from the 
 Tomcat download page. Then, configure Tomcat to use the Java 1.4 
-runtime. The easiest way to do this is to use the Tomcat manager.</p>
+runtime. The easiest way to do this is to use the Tomcat manager. This step is 
+not needed with the Tomcat 4.1.30 release.</p>
 
 <ul>
 <li>On Windows, use Start&rarr;All Programs&#8594;Apache Tomcat 5.5&#8594;Monitor Tomcat.</li>
@@ -55,8 +61,8 @@ from the 1.4 series.</li>
 <p>The next step is to deploy the BIRT Viewer application.
 
 <p class="caution">
-<span class="caution-head">Release 1.0M1 Note</span>: 
-The download page does not include a viewer build. Instead, 
+<span class="caution-head">Release 1.0M2 Note</span>: 
+The Eclipse download page does not include a viewer build. Instead, 
 we'll use the viewer packaged with the Report Designer. These instructions will 
 change once a viewer build is available.</p>
 
@@ -91,26 +97,16 @@ two environments do not share files.</p>
 into the Viewer directory.
 
 <ul>
-  <li>Download the <a href="test.rptdesign">test report design</a> into your 
-  c:\temp directory.</li>
+  <li>Create a directory called &quot;reports&quot; under your birt-viewer web app 
+  directory.</li>
+  <li>Download the <a href="test.rptdesign">test report design</a> into the 
+  &quot;reports&quot; directory.</li>
   <li>If you've installed everything in its default location, then click on the 
   following link. If you've changed anything, then copy the following URL into 
-  your browser and make the needed changes.<pre class="code-block"><a href="http://localhost:8080/birt-viewer/run?__report=C:/temp/test.rptdesign">http://localhost:8080/birt-viewer/run?__report=C%3A%5Ctemp%5Ctest.rptdesign</a>
+  your browser and make the needed changes.<pre class="code-block"><a href="http://localhost:8080/birt-viewer/frameset?__report=reports%5Ctest.rptdesign&sample=Hello">http://localhost:8080/birt-viewer/frameset?__report=reports%5Ctest.rptdesign&sample=Hello</a>
 </pre></li>
 </ul>
 
-<p class="caution">
-<span class="caution-head">Build S20050328 Note</span>: 
-The viewer currently 
-requires an absolute path to the report on the server machine. Upcoming versions 
-will support relative paths.</p>
-
-<p class="caution">
-<span class="caution-head">Build S20050328 Note</span>: 
-The above link will run the report with default parameter values. The link
-to display the parameter page is not yet available in this build.</p>
-
-<p>The report should run and appear in your browser.
-
-</body>
-</html>
+<p>The report should run and appear in your browser, along with a parameter form 
+in which you can enter a different value for the &quot;sample&quot; parameter for this 
+report.</body></html>

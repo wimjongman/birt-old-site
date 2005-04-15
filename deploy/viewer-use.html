@@ -123,10 +123,6 @@ parameters in the parameter frame and again by clicking Run Report.</p>
 done, the frameset switches to display a single frame that contains the report 
 output.</p>
 
-<p class="caution">
-<span class="caution-head">Build S20050314 Note</span>: The frameset
-servlet mapping does not work in this build.</p>
-
 <p>The viewer URL is of the form:</p>
 
 <pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/frameset?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
@@ -152,13 +148,8 @@ app. Viewer parameters start with a double underscore to differentiate them
 from report parameters. Parameter names and values must be encoded for use in a 
 URL. For example:</p>
 
-<pre class="code-block">http://localhost:8080/birt-viewer/run?
-__report=C%3A%5Ctemp%5Ctest.rptdesign&amp;
-__format=html&amp;sample%20param=param%20value
+<pre class="code-block">http://localhost:8080/birt-viewer/run?__report=reports5Ctest.rptdesign&amp;sample=Hello
 </pre>
-
-<p>The above should appear all on one line; it is broken into multiple lines 
-above for readability.</p>
 
 <p>In the above:</p>
 
@@ -167,10 +158,10 @@ above for readability.</p>
   installation of the app server.</li>
   <li>/birt-viewer/ &ndash; The name of the BIRT Viewer servlet.</li>
   <li>run &ndash; The servlet mapping for running a report.</li>
-  <li>C%3A%5Ctemp%5Ctest.rptdesign &ndash; Absolute file system 
-  path of the report to run.</li>
-  <li>__<i>param</i>=<i>value </i>&ndash; Viewer parameter as described below.</li>
-  <li>sample%20param=param%20value &ndash; The name and value of a report 
+  <li>reports%5Ctest.rptdesign &ndash; Relative file system 
+  path of the report to run. The name is relative to the web app directory in 
+  which the birt-viewer was installed.</li>
+  <li>sample=Hello &ndash; The name and value of a report 
   parameter as defined in the report design.</li>
 </ul>
 
@@ -280,6 +271,10 @@ Values are case
 insensitive. If a value other than <code>pdf</code> is provided, then the HTML format is 
 produced.</p>
 
+<p class="caution">
+<span class="caution-head">1.0M2 Note</span>: The __format=pdf parameter does 
+not work in the 1.0M2 build.</p>
+
 <h2>The __frame Parameter</h2>
 
 <p>Determines whether to display the Viewer as a frameset (true), or a  single 
@@ -343,6 +338,10 @@ releases, hence the name.) Choices are:</p>
 </ul>
 
 <p>Values are case insensitive.</p>
+
+<p class="caution">
+<span class="caution-head">1.0M2 Note</span>: The __navigation parameter does 
+not work in the 1.0M2 build.</p>
 
 <h2>The <code>__report</code> Parameter</h2>
 
@@ -454,7 +453,7 @@ report engine will raise an error.</p>
 
 <p>If an error occurs during the operation, an error page will appear.</p>
 
-<p class="caution"><span class="caution-head">Build S20050314 Note</span>: Some errors are 
+<p class="caution"><span class="caution-head">1.0M2 Note</span>: Some errors are 
 reported as a blank result page.</p>
 
 <p>&nbsp;</p>
