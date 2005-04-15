@@ -115,9 +115,18 @@ a.navhead:hover { text-decoration: underline; color: white; }
 	background-color: #006699;
 }
 
-pre, code {
+code {
 	font-family: "Courier New", Courier, mono;
 	font-size: 10pt;
+}
+
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	padding-left: 4pt;
+	padding-right: 2pt;
+	margin-left: 4pt;
+	margin-right: 4pt;
 }
 
 .code-block {
@@ -223,12 +232,10 @@ a.toc:hover {
 
 .q {
 	font-weight: bold;
-	padding-bottom: 6pt;
 	margin-left: 4pt;
 	margin-right: 4pt;
 }
 .ans {
-	padding-bottom: 12pt;
 	padding-left: 24pt;
 	margin-right: 4pt;
 }
