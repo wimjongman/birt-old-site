@@ -14,28 +14,42 @@
 
 <h1>Internationalization</h1>
 
-<div class="q">Do BIRT reports support localization (L10N) and internationalization
-(I18N)?</div>
-<div class="ans">TBD</div>
+<h2>Q: Do BIRT reports support localization (L10N) and internationalization
+(I18N)?</h2>
+<p>Yes. Do the following:</p>
 
-<div class="q">How can the user choose a locale different than his own?</div>
-<div class="ans">TBD</div>
+<ul>
+  <li>Create a standard Java properties file within your report project.</li>
+  <li>Create properties for each resource you want to localize.</li>
+  <li>Set the Resources property of your report. Select the white space in the 
+  layout editor. Open the Property Editor. Switch to the General tab. Enter your 
+  property file name in the Resources field.</li>
+  <li>For each label, go the &quot;Localization&quot; tab in the Property Editor and 
+  choose the appropriate resource from the list for the Content key property.</li>
+</ul>
+<p>When you run your report, BIRT will use the standard Java system for locating 
+a property file that matches the user's locale. The resources for that file will 
+appear in your labels. (If BIRT cannot find a resource file, or cannot find the 
+requested key, then the default text for the label will appear. The default text 
+is what you entered in BIRT's layout editor.)</p>
 
-<div class="q">Can different bits of a report appear in different locales?</div>
-<div class="ans">
+<h2>Q: Can different bits of a report appear in different locales?</h2>
+<p>
 For example, suppose BIRT is used in an ERP application. Invoices are printed 
 in the locale of the customer. The user wants
 to see the invoice in the same locale as the customer. For example, if the
 user's locale is German, but customer's local is American, then the user would
-see the invoice in American format with english strings, decimal point "." instead of
+see the invoice in American format with English strings, decimal point "." instead of
 German "," etc.
 <br><br>
 This feature is not available in Release 1.0. It is something to consider for
 a future release.
-</div>
+</p>
 
-<div class="q">Can the user specify the report locale when running the report?</div>
-<div class="ans">TBD</div>
+<h2>Q: Can the user specify the report locale when running the report?</h2>
+<p>Reports are viewed using the <a href="../deploy/viewer-use.html">BIRT web 
+application</a>. This application takes a __locale parameter within the URL for 
+running a report. Simply set this parameter to the desired locale.</p>
 
 
 </body>

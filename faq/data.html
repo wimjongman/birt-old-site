@@ -14,8 +14,8 @@
 
 <h1>General</h1>
 
-<p class="q">What is a "data source" and a "data set"?</p>
-<p class="ans">
+<h2>Q: What is a "data source" and a "data set"?</h2>
+<p>
 BIRT uses these two terms to define how the report accesses data. <br>
 <dl class="arrow-list">
 <dt>Data Set
@@ -29,8 +29,8 @@ connection. Data sources are optional, some data sets, such as XML or CSV
 files, don't need a connection.
 </dl>
 Any one BIRT report can contain any number of data sets and 
-data sources.<p class="q">Can I build my own data set?</p>
-<p class="ans">
+data sources.<h2>Q: Can I build my own data set?</h2>
+<p>
 Yes. The only requirement is that your data set return data in tabular 
 format so that BIRT can perform sorting, aggregation, grouping and so on.
 There are two ways to build a data set:
@@ -47,8 +47,8 @@ example, to access web logs.)
 
 <h1>Supported Data Sources</h1>
 
-<p class="q">What data sources does BIRT support?</p>
-<p class="ans">BIRT Release 1 supports two data sources:
+<h2>Q: What data sources does BIRT support?</h2>
+<p>BIRT Release 1 supports two data sources:
 <dl class="arrow-list">
 <dt>JDBC
 <dd>Works with any JDBC driver. 
@@ -57,46 +57,46 @@ example, to access web logs.)
 <dd>Lets you write code to access other data sources.
 </dl></p>
 
-<p class="q">How do I add my JDBC driver to BIRT?</p>
-<p class="ans">See the
+<h2>Q: How do I add my JDBC driver to BIRT?</h2>
+<p>See the
 <a href="../build/install.html">installation instructions</a>.</p>
 
-<p class="q">Which Oracle JDBC driver do I need?</p>
-<p class="ans">Use the ojdbc14.jar driver. The older classes12.jar drivers are 
+<h2>Q: Which Oracle JDBC driver do I need?</h2>
+<p>Use the ojdbc14.jar driver. The older classes12.jar drivers are 
 for use with Java JDK 1.2 and 1.3. The ojdbc14.jar drivers are for use with JDK 
 1.4, which is what BIRT uses.</p>
 
-<p class="q">How do I use a stored procedure?</p>
+<h2>Q: How do I use a stored procedure?</h2>
 
-<p class="ans">The JDBC ODA plugin included in BIRT currently supports SQL 
+<p>The JDBC ODA plugin included in BIRT currently supports SQL 
 SELECT queries and simple stored procedure queries.&nbsp; That is, those that 1) use 
 scalar input parameters only or no parameters, and 2) retrieve a single result 
 set directly, like those in SQL Server or Sybase (instead of via a cursor <br>
 output parameter like those in Oracle).</p>
 
-<p class="ans">You can access a simple stored procedure call statement using a 
+<p>You can access a simple stored procedure call statement using a 
 statement in the JDBC query editor. Create a JDBC data set with a dummy query. 
 Use the Edit data set option to open the data set editor. replace the SQL SELECT 
 statement with your stored procedure call.</p>
 
-<p class="ans">We encourage the BIRT community to provide additional Open Data 
+<p>We encourage the BIRT community to provide additional Open Data 
 Access (ODA) extensions to handle various types of data sources, including 
 complex stored procedures.</p>
 
 <h1>Scripted Data Sources</h1>
 
-<p class="q">How do I get data from a POJO (Plain Old Java Object)?</p>
-<p class="ans">
+<h2>Q: How do I get data from a POJO (Plain Old Java Object)?</h2>
+<p>
 This can be done using the scripted data set element. Let's take an example: 
 exposing an org chart as a data set. Let's assume that the org chart is 
 represented by a tree, and that the report wants to present this data in the 
 form of, say, a phone list. We'll need to write some "glue" code to link the
 POJO to BIRT.
-<br><br>
+<p>
 Next, we need to identify the right element within the design to hold 
 the glue code. In this case, since we're creating a data set, we'd choose 
 a "scripted data set."
-<br><br>
+<p>
 Then, we work out exactly what the glue code needs to do. The scripted data 
 set has three methods: <code>open</code>, <code>fetch</code> and 
 <code>close</code>. Let's suppose that the <code>open</code> 
@@ -105,7 +105,6 @@ method exposed in Java. JavaScript has an import statement that creates a
 bridge to our Java objects. So, we'd import, say, the factory class and the 
 "org chart node" class. In <code>open</code>  we might say something like the 
 following:
-<div class="ans">
 
 <pre class="code-block">// Import your package.
 
@@ -120,7 +119,7 @@ var theChart = OrgChartFactory.getChart( );
 
 iter = theChart.iterator( );
 </pre>
-Then, in the fetch method, we'd need to create a row for each org chart 
+<p>Then, in the fetch method, we'd need to create a row for each org chart 
 node:
 
 <pre class="code-block">// This variable becomes a property of the data set 
@@ -153,69 +152,68 @@ You could also create the data row in Java if you prefer.</p>
 <p>
 There is some other boilerplate needed to declare the row schema, but the 
 above illustrates the key point about calling into Java.
-</div>
 
-<p class="q">How do I get data from a Java Bean?</p>
-<p class="ans">TBD.</p>
+<h2>Q: How do I get data from a Java Bean?</h2>
+<p>TBD.</p>
 
-<p class="q">How do I use XML as a data source?</p>
-<p class="ans">TBD.</p>
+<h2>Q: How do I use XML as a data source?</h2>
+<p>TBD.</p>
 
-<p class="q">How do I use Web Services as a data source?</p>
-<p class="ans">TBD.</p>
+<h2>Q: How do I use Web Services as a data source?</h2>
+<p>TBD.</p>
 
-<p class="q">How do I use web server logs as a data source?</p>
-<p class="ans">
+<h2>Q: How do I use web server logs as a data source?</h2>
+<p>
 TBD. The BIRT project is working with the
 <a href="http://www.eclipse.org/webtools">Web Tools Project</a> (WTP)
 to create reports from web logs, but the work is very much at an early stage.
 </p>
 
-<p class="q">How do I use popular ORM (Object-Relational Mapping) tools such as
-Hibernate and JDO as a data source?</p>
-<p class="ans">
+<h2>Q: How do I use popular ORM (Object-Relational Mapping) tools such as
+Hibernate and JDO as a data source?</h2>
+<p>
 JDO (Java Data Objects) is used to connect to any source (relational or non-relational)
 while Hibernate is used to connect to relational databases.
-<br><br>
+<p>
 TBD. You can access the objects as is described for POJOs above.
 </p>
 
-<p class="q">My class implements java.sql.ResultSet. How do I use it as
-a data source?</p>
-<p class="ans">
+<h2>Q: My class implements java.sql.ResultSet. How do I use it as
+a data source?</h2>
+<p>
 TBD. You can access the objects as is described for POJOs above.
 </p>
 
 <h1>Application Integration</h1>
 
-<p class="q">How can I pass a connection object to BIRT?</p>
-<p class="ans">
+<h2>Q: How can I pass a connection object to BIRT?</h2>
+<p>
 Not at present. We're looking into how to achieve this in future release.
 </p>
 
-<p class="q">How can I secure the user name and password used to connect
-to a data source?</p>
-<p class="ans">
+<h2>Q: How can I secure the user name and password used to connect
+to a data source?</h2>
+<p>
 The designer prompts you to enter the server name, user name and password when
 building a JDBC data source. While this works for testing, production systems will
 often externalize this information from the report design so that the same design
 can work against both a test and production database, or against different production
 databases.
-<br><br>
+<p>
 BIRT provides a <i>configuration variable</i> feature that lets you bind named
 values to values set outside of the report design. The details of this feature are
 still under discussion.
 </p>
 
-<p class="q">My customers generally don't know SQL, XML, database schemas etc.
+<h2>Q: My customers generally don't know SQL, XML, database schemas etc.
 They just know the domain specific terms. Can I create a custom data source and
-custom data set designer?</p>
-<p class="ans">
+custom data set designer?</h2>
+<p>
 Yes, BIRT provides excellent extension features via ODA as described above. 
 You can provide both 
 the run-time mechanism to access the data, as well as the design-time UI for 
 defining your data set.
-<br><br>
+<p>
 If your users are comforatable using a tool such as Eclipse, then they can 
 use your custom UI to build reports within the BIRT designer. If, however, 
 your users want a very simple tool, you can provide your own designer that 
@@ -224,22 +222,22 @@ the "boiler plate", perhaps using one of several standard layouts defined by
 your app. This reflects the "embedded" nature of BIRT.
 </p>
 
-<p class="q">How can I access application-specific metadata to simplify
-report design?</p>
-<p class="ans">
+<h2>Q: How can I access application-specific metadata to simplify
+report design?</h2>
+<p>
 Some applications want to integrate BIRT into their application so that BIRT
 has access to the Business Process Model (BPM) (or other metadata)
 for the application's data objects and their schemas. This avoids having
 the report designer duplicate the efforts of the BPM designer.
 The result allow the report design tool to have Business Process Intelligence
 built-in.
-<br><br>
+<p>
 While Release 1 of BIRT won't 
 provide such integration out-of-the-box, others can certainly build on top 
 of BIRT to provide it. To see how, let's divide reporting into two steps: 
 design and execution. The design step is the one where BPM integration would 
 likely occur.
-<br><br>
+<p>
 A BIRT design is an XML file that contains instructions for accessing a data 
 source, transforming the data (sorting, filtering, totals), and presenting 
 the results. An integrated application needs the ability to build a 
@@ -247,17 +245,17 @@ query based on the BPM. Once the report developer has that data, he'd use
 BIRT's features for identifying totals and formatting the results. The 
 result of this process would be a BIRT XML design file that the BIRT Report 
 Engine executes to produce your final report.
-<br><br>
+<p>
 There are two ways that you can integrate BIRT with the BPM system at 
 design time.
-<br><br>
+<p>
 First, you can develop a custom data set builder extension to the BIRT 
 designer. The builder could 
 leverage the meta-data information in the BPM. The custom builder would be 
 integrated with BIRT using the extension features of Eclipse. The 
 result would be a custom data set that looks to BIRT just like any other 
 data set.
-<br><br>
+<p>
 Suppose that the BPM system identifies that there is a Customer concept, and 
 that Orders are related to Customers. Suppose further that the BPM system 
 can provide descriptive information about customers, and about the fields 
@@ -265,7 +263,7 @@ for a customer. A custom data set builder could display this information to
 help the user understand the data, and use the relationships to help the 
 user choose the data of interest. The details, of course, are likely to 
 depend on the specific BPM system in question.
-<br><br>
+<p>
 Second, you can develop a custom report designer that is tightly integrated 
 with the BPM system. Suppose that the system provides sufficient information 
 to generate a wide range of reports. Suppose further that the application 
@@ -274,23 +272,23 @@ automatically. In this case, you can write an application that generates
 BIRT designs directly from the BPM system. You can then directly execute 
 those designs in the BIRT report engine, or load them into the BIRT designer 
 for further refinement.
-<br><br>
+<p>
 In either case, you'd leverage one of BIRT's key goals: the ability for 
 others to add application-specific functionality to BIRT.
 </p>
 
 <h1>Extended Data Sets</h1>
 
-<p class="q">How can I create a custom extended data set?</p>
-<p class="ans">
+<h2>Q: How can I create a custom extended data set?</h2>
+<p>
 BIRT provides an Open Data Access (ODA) extension framework.
 ODA provides extension points to allow anyone to add a custom <i>data
 access driver</i>. See the ROM Data Specification for details.
-<br><br>
+<p>
 BIRT ODA extension defines a set of public interfaces.  It adopts the Eclipse
 plug-in framework to provide a designer tool, and a runtime driver for
 data retrieval during report generation.
-<br><br>
+<p>
 In short, a custom data source implements
 the BIRT runtime data access interfaces.  This interface is similar to JDBC,
 and it supports additional capabilities such as any types of data source, the
@@ -299,7 +297,7 @@ parameters, etc.
 A ResultSet-like interface with a next method implements an iterator,
 which your implementation could control and optimize the data generation or
 retrieval.
-<br><br>
+<p>
 At design time, the Eclipse plug-in for BIRT data extension allows you to provide a
 designer GUI tool specific to an external data source.  The plug-in designer tool
 then uses the BIRT public API to specify the data set and data source
@@ -308,29 +306,29 @@ in the report design file. The BIRT Data Engine
 passes the data definition to the
 extension's ODA runtime driver. The driver can use this information
 for query execution. ODA then uses the result set API to retrieve results.
-<br><br>
+<p>
 The ODA runtime interfaces are JDBC-like, but have been extended to support
 additional capabilities of non-RDBMS data sources.  An ODA driver basically
 implements the public runtime interfaces. This implementation wraps
 the data source specific APIs (such as web services, etc.) to retrieve data rows.
-<br><br>
+<p>
 For a preview, the ODA runtime interfaces source are available in the
 <a href="../build">Eclipse BIRT CVS</a>
 source code repository, in the org.eclipse.birt.data.oda package under the
 org.eclipse.birt.data subproject.
-<br><br>
+<p>
 The JDBC implementation is available as a sample. It is in the Eclipse
 CVS under the org.eclipse.birt.report.data.oda.jdbc and ...oda.jdbc.ui
 subprojects.
 </p>
 
-<p class="q">Is odaconfig.xml documented anywhere?</p>
-<p class="ans">
+<h2>Q: Is odaconfig.xml documented anywhere?</h2>
+<p>
 ODA and its configuration files are documented in 
 the JavaDoc for ODA itself. It is in:
 <br>
 source/org.eclipse.birt.data/src/org/eclipse/birt/data/oda
-<br><br>
+<p>
 A copy of the ODA configuration's XML schema definition (ODAConfig.xsd) and
 related annotations can be found in BIRT's Eclipse CVS, under the
 source/org.eclipse.birt.data/schema folder.
@@ -341,10 +339,10 @@ configurable options.
 
 <h1>Troubleshooting</h1>
 
-<p class="q">My report runs in the Viewer, but produced no output. What 
-happened?</p>
+<h2>Q: My report runs in the Viewer, but produced no output. What 
+happened?</h2>
 
-<p class="ans">BIRT build M2 and earlier do not yet report database errors, but 
+<p>BIRT build M2 and earlier do not yet report database errors, but 
 this is planned for a future release. If your report works within Eclipse when 
 you preview, but does not work when run in your app server, then one possible 
 problem is that you need to copy your JDBC driver into your app server. If the 

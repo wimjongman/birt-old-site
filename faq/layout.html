@@ -14,88 +14,118 @@
 
 <h1>Report Object Model (ROM)</h1>
 
-<p class="q">What is the ROM?</p>
+<h2>Q: What is the ROM?</h2>
 
-<font SIZE="2">
-<p class="ans">ROM stands for &quot;Report Object Model.&quot; It is the model (or 
+<p>ROM stands for &quot;Report Object Model.&quot; It is the model (or 
 specification) behind BIRT report elements. Just as HTML, CSS and SOAP are 
 standards separate from an implementation, so ROM is a model separate from the 
 BIRT implementation.</p>
-<p class="ans">ROM is the model behind the palette items, property dialogs, 
+
+<p>ROM is the model behind the palette items, property dialogs, 
 methods and so on. ROM consists of a set of core elements, and rules for adding 
 extended elements.</p>
-<p class="ans">Elements can have properties. Properties have a type. Property 
+
+<p>Elements can have properties. Properties have a type. Property 
 types include simple ones such a string, number, dimension and so or. Property 
 types also include complex ones such as structures, lists, and lists of 
 structures. For example, static text is defined as a structure with text and a 
 resource key for internationalization.</p>
-<p class="ans">Elements can fit together using &quot;slots&quot;. Each element has named 
+
+<p>Elements can fit together using &quot;slots&quot;. Each element has named 
 slots. For example, the report element has slots for the layout (body), for 
 styles, and so on.</p>
-<p class="ans">Elements can have methods &amp; expressions (code). These are 
+
+<p>Elements can have methods &amp; expressions (code). These are 
 specialized forms of properties.</p>
-<p class="ans">In a later release, elements will be able to inherit from another 
+
+<p>In a later release, elements will be able to inherit from another 
 element. This will allow reuse. For example, you can define a data source in a 
 library, and use it in multiple report designs.</p>
-<p class="ans">ROM provides styles and style properties. ROM's style system is 
+
+<p>ROM provides styles and style properties. ROM's style system is 
 based on CSS, extended for use within a report. Users can create their own 
 styles, or can use many predefined styles. Predefined styles in ROM select 
 specific report items. For example, the &quot;report&quot; style sets defaults for the 
 entire report. As in CSS, styles cascade. Style information set on a container 
 element cascades to its contents.</p>
-<p class="ans">To learn more about ROM, read the ROM Specifications located in 
+
+<p>To learn more about ROM, read the ROM Specifications located in 
 the <a href="../ref">reference area</a> of this web site.</p>
-</font>
-<p class="q">What is the XML design file?</p>
-<p class="ans">BIRT stores your report design in a &quot;design file.&quot; This file is 
+
+<h2>Q: What is the XML design file?</h2>
+
+<p>BIRT stores your report design in a &quot;design file.&quot; This file is 
 in XML format and has a &quot;.rptdesign&quot; suffix. The XML design file is created by 
 the BIRT designer and directly executed by the BIRT engine; there is no 
 compilation step.</p>
-<p class="q">What is the ROM schema?</p>
-<div class="ans">
+
+<h2>Q: What is the ROM schema?</h2>
+
 <p>The BIRT XML design file is defined by an XML schema. At present, 
 the schema is located in the BIRT source code in the 
 org.eclipse.birt.report.model project in the src\org\eclipse\birt\report\model\parser\design.xsd 
 file. Eventually, it will move to a well-defined location on the Eclipse web 
 site.</p>
+
 <p>The schema is designed to allow extensions. The schema defines 
 syntax that allows extensions to be added to BIRT without making changes to the 
 actual schema. For example, an extended item uses the following tag:</p>
+
 <pre class="code-block">&lt;extended-item name=&quot;extension&quot;&gt;</pre>
+
 <p>Properties are in a generic form:</p>
-<pre class="code-block">&lt;property name=&quot;propName&quot;&gt;value&lt;/property&gt;.</p>
+
+<pre class="code-block">&lt;property name=&quot;propName&quot;&gt;value&lt;/property&gt;.</pre>
+</p>
+
 <p>In this sense, the schema describes a syntax for representing 
 report elements in general. The schema does not list the properties, for 
 example; that is defined in a separate rom.def file that is derived from the ROM 
 specification.</p>
-</div>
-<p class="q">What is rom.def?</p>
-<p class="ans">The ROM schema defines the syntax for the XML design file. The specific set of ROM-defined elements, their slots, and their properties are defined by a separate metadata file called rom.def. This file is in the BIRT source code in the org.eclipse.birt.report.model in the src\org\eclipse\birt\report\model\elements\rom.def file.</p>
 
-<p class="ans">Rom.def contains the information that drives the generic property sheet by defining properties and property types. It also describes JavaScript objects defined by BIRT and other meta-data.</p>
+<h2>Q: What is rom.def?</h2>
 
-<p class="ans">The metadata subsystem of the BIRT model provides a Java API to access this information.s</p>
+<p>The ROM schema defines the syntax for the XML design file. The specific set of ROM-defined elements, their slots, and their properties are defined by a separate internal metadata file called rom.def. This file is in the BIRT source code in the org.eclipse.birt.report.model in the src\org\eclipse\birt\report\model\elements\rom.def file.</p>
 
-<h1>Page Number</h1>
+<p>Rom.def contains the information that drives the generic property sheet by defining properties and property types. It also describes JavaScript objects defined by BIRT and other meta-data.</p>
 
-<p class="q">How do I display page numbers in HTML or PDF?</p>
-<p class="ans">BIRT uses Apache FOP to convert a report to PDF. FOP does 
+<p>The metadata subsystem of the BIRT model provides a Java API to access this information.</p>
+
+<h1>Data Display</h1>
+
+<h2>Q: How do I display page numbers in HTML or PDF?</h2><p>BIRT uses Apache FOP to convert a report to PDF. FOP does 
 pagination and assigns page numbers. As a result, there is no JavaScript 
 expression you can use to get the current page number. Instead, BIRT will add a 
 new &quot;page number&quot; element. It will include a special marker string that tells 
 BIRT or FO where to insert the page number. BIRT will interpret the string when 
 converting to HTML, and will convert the marker to the required FO syntax when 
-converting to PDF using FOP.<br>
-<div class="ans">
-The element will allow you to say something like:
-<pre class="code-block">Page $page of $count</pre>
-At runtime, this will be replaced by:
-<pre class="code-block">Page 1 of 5</pre><br>
+converting to PDF using FOP.</p>
+<p>The element will allow you to say something like:</p>
 
-<div class="caution"><span class="caution-head">Release 1.0M2 Note:</span> The 
+<pre class="code-block">Page $page of $count</pre>
+
+<p>At runtime, this will be replaced by:</p>
+
+<pre class="code-block">Page 1 of 5</pre>
+
+<p class="caution"><span class="caution-head">Release 1.0M2 Note:</span> The 
   page number element has not yet been released. Syntax is still subject to 
-  change.</div>
-</div></div>
+  change.</p>
+
+<h2>Q: How do I display today's Date?</h2>
+<p>Add a data item. For the expression, enter:</p>
+<pre class="code-block">new Date( );</pre>
+<p>Then, in the Format page of the Property Editor, choose the date 
+format you prefer, such as Medium Date for a display of Apr 15, 2005.</p>
+
+<h2>Q: How do I display the row number?</h2>
+
+<p>Suppose you want to display a list of items, along with the row 
+number of each. BIRT provides the row variable that gives data for the current 
+data row. row[0] provides the 0-based row index. You can display a 1-based count 
+as follows:</p>
+
+<pre class="code-block">row[0] + 1;</pre>
 
 </body>
 </html>

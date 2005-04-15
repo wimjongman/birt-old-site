@@ -14,18 +14,17 @@
 
 <h1>General</h1>
 
-<div class="q">Can I use BIRT's chart engine in my own application?</div>
-<div class="ans">
-Yes. A primary goal of the
+<h2>Q: Can I use BIRT's chart engine in my own application?</h2>
+<p>Yes. A primary goal of the
 <a href="/ece">Eclipse Chart Engine</a> project is to provide a package that
 can be used both with the BIRT reporting 
 components as well as standalone.
-</div>
+</p>
 
 <h1>Output Formats</h1>
 
-<div class="q">What output formats does the chart engine support?</div>
-<div class="ans">
+<h2>Q: What output formats does the chart engine support?</h2>
+<p>
 Internally, the charting engine writes to device independent primitives.
 This means that any output format may be plugged in by writing a device 
 extension. A device refers to an implementation that translates rendering 
@@ -39,18 +38,17 @@ following:
 <li>SWING graphics (Graphics2D)
 </ul>
 
-In addition, custom extensions may be written to support additional file formats.
+<p>In addition, custom extensions may be written to support additional file formats.
 
-<br><br>
-The device rendering framework is tailored to suit the needs of 
+<p>The device rendering framework is tailored to suit the needs of 
 rendering a comprehensive set of graphics primitives, elaborate text 
 layout (focused on typical usage of text rendering in charts), and event 
 handling. The framework is optimized for performance.
-</div>
+</p>
 
-<div class="q">This sounds a lot like Draw2d in the GEF toolkit.
-Why is the chart project creating "yet another API"?</div>
-<div class="ans">
+<h2>Q: This sounds a lot like Draw2d in the GEF toolkit.
+Why is the chart project creating "yet another API"?</h2>
+<p>
 An important goal for the charting engine is that it needs to work in a 
 pure J2EE environment and that it be portable. Creating a dependency on 
 Draw2D would in turn create a dependency on SWT and OS dependent libraries 
@@ -64,11 +62,11 @@ system for which primitive instructions are written to individual devices
 point math in rendering arguments, approximations would have to be 
 performed at several stages in chart generation and rendering resulting in 
 inaccurate output.
-<br><br>
+<p>
 For your reference, here's how the 'drawLine' API has been implemented 
 using Draw2D's org.eclipse.draw2d.ScaledGraphics' implementation:
-<pre class="code-block">
-public void drawLine(int x1, int y1, int x2, int y2)
+
+<pre class="code-block">public void drawLine(int x1, int y1, int x2, int y2)
 {
         graphics.drawLine((int)Math.floor((double)x1 * zoom + 
 fractionalX), (int)Math.floor((double)y1 * zoom + fractionalY), 
@@ -77,11 +75,11 @@ fractionalX), (int)Math.floor((double)y1 * zoom + fractionalY),
 }
 </pre>
 
-where <code>fractionalX</code> and <code>fractionalY</code> define linear 
+<p>where <code>fractionalX</code> and <code>fractionalY</code> define linear 
 translation and 'zoom' 
 defines a scaling factor but as you can see, resulting co-ordinates are 
 truncated before they are plotted.
-<br><br>
+<p>
 Another drawback with using pure Draw2D/SWT API is that it is limited in 
 its featureset and doesn't generically support certain advanced features 
 such as:
@@ -92,7 +90,7 @@ such as:
 <li>Defining custom shapes using a combination of polygons and curves
 </ul>
 
-So, to summarize, the design objectives for the rendering API are twofold:
+<p>So, to summarize, the design objectives for the rendering API are twofold:
 
 <ul>
 <li>Create a clear abstraction layer between the core charting engine and 
@@ -106,39 +104,38 @@ extensions that implement our extension points allowing a great deal of
 flexibility in deployment configurations. 
 </ul>
 
-This allows the charting engine to write out SWT charts within the eclipse 
+<p>This allows the charting engine to write out SWT charts within the eclipse 
 environment and non-SWT charts (possibly SWING or completely bypassing a 
 graphics toolkit and writing to a vector based file format e.g. SVG) 
 outside of the eclipse environment.
-</div>
+</p>
 
-<div class="q">Does the chart package output SVG or PDF?</div>
-<div class="ans">
+<h2>Q: Does the chart package output SVG or PDF?</h2>
+<p>
 Not in release 1. However, 
 you could easily write your own output format SVG, PDF.
 For example, Apache's Batik provides a cost-effective mechanism for 
 implementing SVG output. You could use this library within a new SVG 
 device (by referring to our provided Swing device implementation) that 
 implements our primitive rendering interface.
-</div>
+</p>
 
-<div class="q">What chart output formats are supported within reports?</div>
-<div class="ans">
+<h2>Q: What chart output formats are supported within reports?</h2>
+<p>
 For release 1, 
 charts will be embedded as a scalar bitmapped image.
 This will be enhanced in a subsequent release to embed vector charts (SVG, 
 PDF, etc).
-</div>
+</p>
 
 <h1>Chart Programming</h1>
 
-<div class="q">How can I create a line chart programatically?</div>
-<div class="ans">
+<h2>Q: How can I create a line chart programatically?</h2>
+<p>
 Here's how you could create a sample line chart that relies on the chart 
 library model (either as source or as JARs in your environment):
 
-<pre class="code-block">
-/**
+<pre class="code-block">/**
  * Creates a line chart model as a reference implementation
  * 
  * @return An instance of the simulated runtime chart model (containing filled datasets)
@@ -210,16 +207,13 @@ public static final Chart createSimpleLineChart()
     return cwaBar;
 }
 </pre>
-</div>
 
-<div class="q">How do I add call backs when the user clicks or hovers 
-over nodes in the chart?</div>
-<div class="ans">
-Yes ... you may add 'triggers' for various 'conditions' in the 
+<h2>Q: How do I add call backs when the user clicks or hovers 
+over nodes in the chart?</h2>
+<p>Yes ... you may add 'triggers' for various 'conditions' in the 
 design-time chart model associated with 'series' or 'blocks' as follows:
 
-<pre class="code-block">
-PieSeries sePie = ...;
+<pre class="code-block">PieSeries sePie = ...;
 
 sePie.getTriggers().add(
    TriggerImpl.create(
@@ -234,22 +228,21 @@ sePie.getTriggers().add(
 );
 </pre>
 
-This trigger causes a URL redirect notification when a user clicks on a 
+<p>This trigger causes a URL redirect notification when a user clicks on a 
 slice in a pie chart. However, this has only been implemented for the 
 swing device renderer.
-<br><br>
+<p>
 A reference implementation of handling user interaction has been provided 
 in org.eclipse.birt.chart.device.swing.SwingRendererImpl in the following 
 parts of the class:
 
-<pre class="code-block">
-variables: _iun, _eh, _lhmAllTriggers
+<pre class="code-block">variables: _iun, _eh, _lhmAllTriggers
 method: enableInteraction
 </pre>
 
-This method creates a low-level 'ShapedAction' for a polygon, an arc or an 
+<p>This method creates a low-level 'ShapedAction' for a polygon, an arc or an 
 oval and places it into the linked hashmap of all triggers. 
-<br><br>
+<p>
 Later, when rendered, the SwingEventHandler class listens for AWT events 
 on these shaped objects and notifies the class defined that implements 
 IUpdateNotifier to update itself due to user interaction at view time. The 
@@ -260,28 +253,27 @@ update notifier (depending on the context) should be capable of:
 <li>Repainting the chart (for the existing generated instance)
 </ul>
 
-This hasn't yet been implemented for SWT but should be easily doable.
-</div>
+<p>This hasn't yet been implemented for SWT but should be easily doable.
+</p>
 
-<div class="q">How do I put the x-axis on the bottom of the chart instead 
-of the middle?</div>
-<div class="ans">
+<h2>Q: How do I put the x-axis on the bottom of the chart instead 
+of the middle?</h2>
+<p>
 Yes, you may place the X-axis at the bottom using the following API:
 
-<pre class="code-block">
-xAxis.getOrigin().setType(IntersectionType.MIN_LITERAL);
+<pre class="code-block">xAxis.getOrigin().setType(IntersectionType.MIN_LITERAL);
 </pre>
 
-where MIN indicates 'the minimum vertical position of the plot 
+<p>where MIN indicates 'the minimum vertical position of the plot 
 (bottom)' when applied to the X axis or 'the minimal horizontal position 
 of the plot (left)' when applied to the Y axis'.
-</div>
+</p>
 
-<div class="q">How do I remove the title from the legend?</div>
-<div class="ans">
+<h2>Q: How do I remove the title from the legend?</h2>
+<p>
 Yes, set 'block' visibility for the 'TitleBlock' and the 
 'Legend'.
-</div>
+</p>
 
 </body>
 </html>

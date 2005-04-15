@@ -14,8 +14,8 @@
 
 <h1>Parameters</h1>
 
-<div class="q">How can my user enter information to be passed to the report?</div>
-<div class="ans">
+<h2>Q: How can my user enter information to be passed to the report?</div> </h2>
+<p>
 BIRT provides <i>report parameters</i> for this task. The report UI will prompt
 the user 
 to enter the parameter values; the values will be available within the report 
@@ -24,21 +24,21 @@ where they can be displayed, passed to a query, used in expressions, etc.
 
 <h1>Parameter API</h1>
 
-<div class="q">Is there an API for this?</div>
-<div class="ans">
+<h2>Q: Is there an API for this?</div> </h2>
+<p>
 Yes, BIRT provides an API for working with parameters. BIRT also provides a
 a default UI that prompts the user for parameter values.
 </div>
 
 <h1>Applications</h1>
 
-<div class="q">Can my application provide some of the values?</div>
-<div class="ans">
+<h2>Q: Can my application provide some of the values?</div> </h2>
+<p>
 In some cases, parameter values can be provided by the application based on its
 current state. For example, provide the transaction history for the current
-customer acccount. The application knows the current account, so it just needs
+customer account. The application knows the current account, so it just needs
 to ask for the history parameters.
-<br><br>
+<p>
 No problem. Because BIRT is an "embedded" reporting solution, it assumes 
 that the application will pass in any needed context information. You'd create
 a custom parameter UI that asks only for the "extra" parameters.

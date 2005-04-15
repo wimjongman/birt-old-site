@@ -14,59 +14,54 @@
 
 <h1>Aggregates (Totals)</h1>
 
-<div class="q">What aggregate operations does BIRT support?</div>
-<div class="ans">
+<h2>Q: What aggregate operations does BIRT support?</div> </h2>
+<p>
 "Aggregate" is the fancy word to describe totals. BIRT suppots a wide variety
 of totals: sum, running sum, average, minimum, maximum, count, count distinct,
 and many more. See the
 <a href="../ref/ROM_Scripting_SPEC.pdf">ROM Scripting Specification</a>
 for details.
-</div>
 
-<div class="q">Does BIRT support look-ahead (two-pass) aggregates?</div>
-<div class="ans">
+<h2>Q: Does BIRT support look-ahead (two-pass) aggregates?</div> </h2>
+<p>
 Look-ahead aggregates are of the form "this value as a percentage of an overall
 total". For example, a customer's sales as a percentage of overall sales for a
 sales rep, sales region, and so on. These are often called two-pass aggregates
 becuase they require the reporting tool to make one pass over the data to compute
 totals, then another pass to compute the percentages for each record.
-<br><br>
+<p>
 BIRT does provide support for such totals. Just enter the calculation and BIRT
 figures out the right way to compute it:
-<pre class="code-block">
-Total.percent( row.Sales, Total.sum( row.Sales ) )
+<pre class="code-block">Total.percent( row.Sales, Total.sum( row.Sales ) )
 </pre>
-</div>
 
-<div class="q">Is an example of simple calculations like count, 
-sum, max, min?</div>
-<div class="ans">TBD</div>
+<h2>Q: Is an example of simple calculations like count, 
+sum, max, min?</div> </h2>
+<p>TBD</div>
 
-<div class="q">Does BIRT support page totals?</div>
-<div class="ans">
+<h2>Q: Does BIRT support page totals?</div> </h2>
+<p>
 Some reports may want to display totals over data 
 displayed on a page of the report. For example, a count of employees on that 
 page, and sum of their salaries.
-<br><br>
+<p>
 BIRT release 1.0 delivers reports as a single web page, so the question is moot
 for this release. BIRT reports are paginated when printed as PDF, but BIRT uses
 Apache FOP to do the formatting, and so BIRT does not have visiblity into the
 pagination.
-<br><br>
+<p>
 That said, if there is sufficient interest, the BIRT team will consider page
 totals for a future release.
-</div>
 
 <h1>Scripting</h1>
 
-<div class="q">Can I add custom logic (scripting) to my report?</div>
-<div class="ans">
+<h2>Q: Can I add custom logic (scripting) to my report?</div> </h2>
+<p>
 Yes. BIRT uses JavaScript (also known as EcmaScript) for expressions,
-buisiness logic, and integation with application-specific Java classes.
-</div>
+business logic, and integration with application-specific Java classes.
 
-<div class="q">JavaScript? Does that mean my code runs in the browser?</div>
-<div class="ans">
+<h2>Q: JavaScript? Does that mean my code runs in the browser?</div> </h2>
+<p>
 When someone hears "JavaScript" the 
 assumption is that JS is being used to script a browser. While browser 
 scripting is a key use of JS, the language itself (when separated from the 
@@ -77,18 +72,16 @@ who are accustomed to Visual Basic, SQL and similar scripting solutions.
 Because JS is well integrated with Java, it is easy to call from business 
 logic into Java classes to do more advanced tasks, or if you prefer, to write 
 your code using Java. Further, JS allows BIRT to support aggregate expression 
-such as:
-<br>
-<pre class="code-block">
-sum( row.orderTotal )
-</pre>
-This summarizes the orderTotal column over all rows. This makes aggregates 
+such as:</p>
+
+<pre class="code-block">sum( row.orderTotal )</pre>
+
+<p>This summarizes the orderTotal column over all rows. This makes aggregates 
 look like other expressions, even though the BIRT report engine needs to 
 "rewrite" them.
-</div>
 
-<div class="q">Where can I learn about JavaScript?</div>
-<div class="ans">
+<h2>Q: Where can I learn about JavaScript?</div> </h2>
+<p>
 JavaScript (also known as EcmaScript) is a popular language for browser scripting, 
 and a wide range of books
 exist that describe JavaScript in that context. An excellent one is
@@ -99,17 +92,15 @@ sections: Core JavaScript and Client-Side JavaScript. Use the Core section a
 general reference for the JavaScript language independent of whether it is in a
 client or server. VisiBone provides a useful
 <a href="http://javascript-reference.info/">on-line reference</a>.
-</div>
 
-<div class="q">Good, but most report developers don't like write code.</div>
-<div class="ans">
+<h2>Q: Good, but most report developers don't like write code.</div> </h2>
+<p>
 In BIRT, typical tasks should require no code. 
 Application-specific taks should require as little code as possible; 
 preferably just a business expression when possible. For more complex logic, 
 we expect a Java application developer to either create the logic, or point 
 the report developer to existing Java code. The report developer then calls 
-into the Java code from an expression. JavaScript allows all three:
-<br>
+into the Java code from an expression. JavaScript allows all three:</p>
 <ol>
 <li>Simple expressions: <code>row.Price * row.Quantity</code>
 
@@ -122,43 +113,38 @@ stock based on factors in the database, and proprietary stock-rating
 algorithms.
 </ol>
 
-Simple tasks require no code. This includes conditional formatting (make 
+<p>Simple tasks require no code. This includes conditional formatting (make 
 negative numbers red, for example), data transformations (filters, sorting, 
 totals), conditional display (hide certain fields for certain types of 
 customers), and so on.
-</div>
 
 <h1>Accessing Java Classes</h1>
 
-<div class="q">Can BIRT access existing Java code or objects?</div>
-<div class="ans">
+<h2>Q: Can BIRT access existing Java code or objects?</div> </h2>
+<p>
 Yes. BIRT uses the 
 <a href="http://www.mozilla.org/rhino/">Mozilla Rhino</a>
 JavaScript engine which provides excellent
 integration with Java. See the Mozilla Rhino
 <a href="http://www.mozilla.org/rhino/ScriptingJava.html">Scripting Java</a>
 article for information about how to call Java from JavaScript.
-<br><br>
+<p>
 A BIRT report developer could use JavaScript to access functionality of
 pre-existing Java classes that may hold significant business logic that we
 would like to access within the report.
-<br><br>
+<p>
 Suppose our logic is in a Java package called com.company.AppLogic.
-We'd import it into JavaScript as follows:
-<br>
-<pre class="code-block">
-importPackage( com.company.AppLogic );
+We'd import it into JavaScript as follows:</p>
+<pre class="code-block">importPackage( com.company.AppLogic );
 </pre>
-The report's <code>initialize</code> method is the best place to put the import.
+<p>The report's <code>initialize</code> method is the best place to put the import.
 Then, we can access objects and methods as if they were JavaScript objects. let's
 assume that MyClass is a class within the AppLogic package, and it provides business
 logic for working with, say, customer orders:
 <br>
-<pre class="code-block">
-obj = new MyClass( );
+<pre class="code-block">obj = new MyClass( );
 result = obj.calculate( row.balance, row.dueDate );
 </pre>
-</div>
 
 
 </body>
