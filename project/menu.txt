@@ -4,6 +4,7 @@
 <item name="charter" page="charter.html"/>
 <item name="principles" page="principles.html"/>
 <item name="PMC" page="pmc.html"/>
+<item name="PMC minutes" page="pmc-minutes.html"/>
 <item name="contributors" page="contributors.html"/>
 <not-yet-space/>
 <item name="summary plan" page="summary_plan.html"/>
