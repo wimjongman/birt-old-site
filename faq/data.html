@@ -83,6 +83,62 @@ statement with your stored procedure call.</p>
 Access (ODA) extensions to handle various types of data sources, including 
 complex stored procedures.</p>
 
+<h1>Optimizing Filters &amp; Sorting</h1>
+
+<h2>Q: Does BIRT push sorting &amp; filtering to the database?</h2>
+
+<p>No, BIRT will not modify your SELECT statement in any way. Real-world SELECT 
+statements are often complex and carefully crafted, and you can count on BIRT 
+to use the statement as you wrote it. This gives you control over whether 
+filtering and sorting is done within BIRT or within the database. Further, BIRT 
+works with a wide variety of data sources, not just SQL. Many non-SQL data 
+source do not provide the means to do sorting &amp; filtering, and so you'll want 
+BIRT to perform these tasks. </p>
+
+<h2>Q: What's the difference between BIRT filtering and a SQL WHERE clause?</h2>
+
+<p>BIRT provides filtering capabilities in both the data set editor and in the 
+Property editor for report items. These filters can include JavaScript 
+expressions, including calls into your Java code. BIRT executes such expressions 
+in its own data engine.</p>
+
+<p>The SQL SELECT statement also performs filtering in the WHERE clause. In the 
+case, the filtering happens on the database, and cannot include JavaScript code: 
+it must include only SQL valid for your target database.</p>
+
+<h2>Q: When do I use BIRT vs. SQL filtering?</h2>
+
+<p>In general, use an SQL WHERE clause whenever possible. It is more efficient to 
+restrict the data within the query to eliminate the overhead of sending the data 
+to BIRT. However, if you are not using a SQL database, or your expression 
+requires JavaScript or Java code, then, go ahead and perform the filtering within 
+BIRT.</p>
+
+<h2>Q: What's the difference between BIRT sorting and a SQL ORDER BY clause?</h2>
+
+<p>BIRT provides a sorting option on tables and lists. When you define groups, 
+BIRT implicitly defines a sort order. When using these options, BIRT will 
+perform the sorting within BIRT's own data engine.</p>
+
+<p>If your SELECT statement has an ORDER BY clause, and you omit the sort 
+specification within BIRT, then you can ensure that the sorting is done on the 
+database instead of in BIRT.</p>
+
+<h2>Q: When do I use BIRT vs. SQL sorting?</h2>
+
+<p>For performance, use SQL sorting whenever possible, especially if your 
+database has indexes that will speed up the sort. If your report has no groups, 
+and your SELECT statement has the correct ORDER BY clause, then simply do not 
+specify a sort order within BIRT.</p>
+
+<p class="caution"><span class="caution-head">Release 1.0 Note</span>: If your report includes grouping, then BIRT 
+will resort your data, and you must include a BIRT-defined sort order for the 
+detail rows. A later release may provide a way to tell BIRT to use database 
+sorting even for reports that have groups.</p>
+
+<p>Of course, if your data source does not support sorting, then, again, 
+use the sorting features of BIRT to sort your data.</p>
+
 <h1>Scripted Data Sources</h1>
 
 <h2>Q: How do I get data from a POJO (Plain Old Java Object)?</h2>
