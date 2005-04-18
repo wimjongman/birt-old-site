@@ -4,5 +4,4 @@
 <item name="install" page="install.html"/>
 <item name="build types" page="build_types.html"/>
 <item name="building BIRT" page="build_instr.html"/>
-<item name="new in S20050314" page="S20050314.html"/>
 </birt-menu>
