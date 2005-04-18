@@ -131,7 +131,7 @@ So, copy your JDBC driver JAR into
 <h2>Install Drivers for the Viewer</h2>
 <p>In order to preview your report, you must also install your drivers into the 
 BIRT viewer plugin. Install them into the 
-<code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers</code>
+<code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/drivers</code>
 directory, repeating the process from above.</p>
 
 <h1><a name="S20050418">JDBC for S20050418</a></h1>
@@ -169,7 +169,7 @@ additional JDBC driver JAR file that might be needed.</p>
 <p>In order to preview your report, you must also install your drivers into the 
 BIRT viewer plugin. Install them into the 
 <code>
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc</code>
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc</code>
 directory, repeating the process from above.</p>
 
 <h1>Updating a BIRT Installation</h1>
@@ -190,14 +190,14 @@ default location, this is "C:\program files\eclipse\plugins".
 the modified odaconfig.xml file, from 
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
 <li>Then, repeat the process to copy drivers and config files from 
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/drivers 
 to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary
 location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 <li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary 
 location back into 
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers.<li>Restart Eclipse with the -clean option as explained below.
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/drivers.<li>Restart Eclipse with the -clean option as explained below.
   </ul>
 <h2>
 <a name="update_S20050418">M2 or older to S20050418, M3 or newer</a></h2>
@@ -209,7 +209,7 @@ default location, this is "C:\program files\eclipse\plugins".
 the modified odaconfig.xml file, from 
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
 <li>Then, repeat the process to copy drivers and config files from 
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/drivers 
 to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Reinstall your JDBC drivers as described in the <a href="#S20050418">JDBC for S20050418</a> 
@@ -227,7 +227,7 @@ the modified plugin.xml file, from
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location. 
 Your drivers are in the divers directory under the JDBC plugin.<li>Then, repeat the process to copy drivers and 
     plugin.xml files from 
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc 
 to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Copy your custom JDBC drivers and plugin.xml file from your temporary
@@ -235,7 +235,7 @@ location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc. (To be
 safe, compare the old and new plugin.xml file to ensure that the only difference 
 is the drivers you added.)<li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary 
 location back into 
-eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc.<li>Restart Eclipse with the -clean option as explained below.
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc.<li>Restart Eclipse with the -clean option as explained below.
   </ul>
 
 <h1>Common Problems</h1>
