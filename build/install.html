@@ -87,10 +87,21 @@ eclipse/plugins. If you installed BIRT on Windows in the default location,
 then put BIRT into "C:\program files\eclipse\plugins". Later builds use the
 same zip location as GEF and EMF.</div>
 
-<h1>JDBC Driver</h1>
+<h1>JDBC Drivers</h1>
 <p>
 You will likely want to use your own JDBC driver with BIRT. BIRT
-includes the Open Data Access (ODA) framework for data access. To add a JDBC driver,
+includes the Open Data Access (ODA) framework for data access.<p>
+BIRT is transitioning from one JDBC configuration system to another. Choose the 
+instructions below depending on the build you are using.<ul>
+  <li><a href="#M2">Milestone 1 &amp; 2, Sable build 20050404 and before</a></li>
+  <li><a href="#S20050418">Stable build 20050418, Milestone 3 and later, and the daily builds after 
+  4/10</a></li>
+  </ul>
+<h1>
+<a name="M2">JDBC with M2</a></h1>
+<p>
+Use these instructions only for Milestone 2 and earlier.<p>
+To add a JDBC driver,
 include the driver's JAR file name in the JDBC ODA driver's configuration 
 file: odaconfig.xml. The configuration file is in the plugin directory for
 the JDBC ODA plugin: eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
@@ -99,22 +110,22 @@ Use any text editor to edit the configuration file. You will find the following
 starting at line 26:
 
 <pre class="code-block">&lt;DriverLibraries>
- &lt;LibrariesForOS>
-  &lt;OSType>All&lt;/OSType>
-  &lt;LibraryName>oda-jdbc.jar&lt;/LibraryName>
-  &lt;LibraryName>jtds-0.9.jar&lt;/LibraryName>
- &lt;/LibrariesForOS>
+  &lt;LibrariesForOS>
+    &lt;OSType>All&lt;/OSType>
+    &lt;LibraryName>oda-jdbc.jar&lt;/LibraryName>
+    &lt;LibraryName>jtds-0.9.jar&lt;/LibraryName>
+  &lt;/LibrariesForOS>
 </pre>
 
-Simply add another <code>&lt;LibraryName></code> element for each 
-additional JDBC driver JAR file that might be needed.
+  Simply add another <code>&lt;LibraryName&gt;</code> element for each additional JDBC 
+  driver JAR file that might be needed.
 <br><br>
-By default, a driver's library files must be in the JDBC plugin directory.
+  By default, a driver's library files must be in the JDBC plugin directory.
 So, copy your JDBC driver JAR into 
 <code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc</code>.
 <br><br>
-You can optionally add a <code>&lt;Location></code> element to specify the
-location of the JDBC driver file.
+  You can optionally add a <code>&lt;Location&gt;</code> element to specify the 
+  location of the JDBC driver file.
 </div>
 
 <h2>Install Drivers for the Viewer</h2>
@@ -123,19 +134,62 @@ BIRT viewer plugin. Install them into the
 <code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers</code>
 directory, repeating the process from above.</p>
 
+<h1><a name="S20050418">JDBC for S20050418</a></h1>
+
+<p>Use this information for stable build S20050418, for Milestone 3, and later 
+builds.</p>
+
+<p>
+To add a JDBC driver,
+include the driver's JAR file name in the JDBC ODA driver's plugin 
+file: <code>plugin.xml</code>. The plugin file is in the plugin directory for
+the JDBC ODA plugin: <code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc</code>.
+<p>
+Use any text editor to edit the configuration file. Add an entry such as the one 
+shown in bold below.<pre class="code-block">&lt;runtime&gt;
+  &lt;library name=&quot;oda-jdbc.jar&quot;&gt;
+    &lt;export name=&quot;*&quot;/&gt;
+  &lt;/library&gt;
+  <b>&lt;library name=&quot;lib/<i>driver_name</i>.jar&quot;&gt;
+    &lt;export name=&quot;*&quot;/&gt;
+  &lt;/library&gt;</b>
+&lt;/runtime&gt;
+</pre>
+
+  <p>Where <i>driver_name</i> is the name of your JDBC driver JAR. Add another <code>&lt;LibraryName></code> element for each 
+additional JDBC driver JAR file that might be needed.</p>
+  <p>The driver's JAR files must be in the <code>drivers</code> directory within the JDBC plugin.
+  Copy your JDBC driver JAR into 
+<code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers</code>.</p>
+  <p>More information about the ODA runtime driver extension point schema can be 
+  found in CVS BIRT source tree: <code>org.eclipse.birt.data.oda/schema/odaDriverRuntime.exsd</code>. 
+  Use the Eclipse PDE Tools to see its reference document.</p>
+
+<h2>Install Drivers for the Viewer</h2>
+<p>In order to preview your report, you must also install your drivers into the 
+BIRT viewer plugin. Install them into the 
+<code>
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc</code>
+directory, repeating the process from above.</p>
+
 <h1>Updating a BIRT Installation</h1>
 <p>
-If you have a version of BIRT installed, and want to install a newer version,
-simply do the following:
-
-<ul>
+If you have a version of BIRT installed, and want to install a newer version, do 
+the following depending on your current and new version.<ul>
+  <li><a href="#update_m2">M1, S20050404 or older to M2</a></li>
+  <li><a href="#update_S20050418">M2 or older to S20050418, M3 or newer</a></li>
+  <li><a href="#update_m3">S20050418 or M3 or newer to M3 or newer</a></li>
+  </ul>
+<h2>
+<a name="update_m2">M1, S20050404 or older to M2</a></h2>
+  <ul>
 <li>Close Eclipse.
 <li>Locate your Eclipse plugins directory. If you installed on Windows in the
 default location, this is "C:\program files\eclipse\plugins".
 <li>If you added any custom JDBC drivers, save a copy of these drivers, and
 the modified odaconfig.xml file, from 
 eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
-<li>Then, repeat the process to copy driers and config files from 
+<li>Then, repeat the process to copy drivers and config files from 
 eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers 
 to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
@@ -144,7 +198,45 @@ location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
 <li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary 
 location back into 
 eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers.<li>Restart Eclipse with the -clean option as explained below.
-</ul>
+  </ul>
+<h2>
+<a name="update_S20050418">M2 or older to S20050418, M3 or newer</a></h2>
+  <ul>
+<li>Close Eclipse.
+<li>Locate your Eclipse plugins directory. If you installed on Windows in the
+default location, this is "C:\program files\eclipse\plugins".
+<li>If you added any custom JDBC drivers, save a copy of these drivers, and
+the modified odaconfig.xml file, from 
+eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location.
+<li>Then, repeat the process to copy drivers and config files from 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/drivers 
+to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
+<li>Download and install BIRT as described in the BIRT section above.
+<li>Reinstall your JDBC drivers as described in the <a href="#S20050418">JDBC for S20050418</a> 
+section above. (Note: you cannot use the old locations and odaconfig.xml file, 
+the structure of ODA changed in the S20050418 build.)<li>Restart Eclipse with the -clean option as explained below.
+  </ul>
+<h2>
+<a name="update_m3">S20050418 or M3 or newer to M3 or newer</a></h2>
+  <ul>
+<li>Close Eclipse.
+<li>Locate your Eclipse plugins directory. If you installed on Windows in the
+default location, this is "C:\program files\eclipse\plugins".
+<li>If you added any custom JDBC drivers, save a copy of these drivers, and
+the modified plugin.xml file, from 
+eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc to a temporary location. 
+Your drivers are in the divers directory under the JDBC plugin.<li>Then, repeat the process to copy drivers and 
+    plugin.xml files from 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc 
+to a temporary location.<li>Delete all directories that start with "org.eclipse.birt".
+<li>Download and install BIRT as described in the BIRT section above.
+<li>Copy your custom JDBC drivers and plugin.xml file from your temporary
+location back into eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc. (To be 
+safe, compare the old and new plugin.xml file to ensure that the only difference 
+is the drivers you added.)<li>Copy your custom JDBC drivers and odaconfig.xml file from your temporary 
+location back into 
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins/org.eclipse.birt.report.data.oda.jdbc.<li>Restart Eclipse with the -clean option as explained below.
+  </ul>
 
 <h1>Common Problems</h1>
 <p>
