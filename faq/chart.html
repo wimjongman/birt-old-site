@@ -130,7 +130,7 @@ PDF, etc).
 
 <h1>Chart Programming</h1>
 
-<h2>Q: How can I create a line chart programatically?</h2>
+<h2>Q: How can I create a line chart programmatically?</h2>
 <p>
 Here's how you could create a sample line chart that relies on the chart 
 library model (either as source or as JARs in your environment):
@@ -275,5 +275,1934 @@ Yes, set 'block' visibility for the 'TitleBlock' and the
 'Legend'.
 </p>
 
-</body>
+<h1>
+Eclipse, SWT and RCP</h1>
+
+<h2>
+Q: How do I show a chart in my Eclipse RCP application?</h2>
+
+<p>
+You could create a plug-in with a ViewPart extension that creates an SWT <br>
+canvas and notifies a PaintListener implementation where the chart <br>
+rendering code may be written.</p>
+
+<p>
+To render an SWT chart on a Canvas GC, see below.</p>
+
+<h2>
+Q: How can I use charts in SWT?</h2>
+
+<p>
+Here's the program François-Xavier Le Louarn wrote using the example code above 
+(slightly modified, as the Axis interface does not contain the 
+getSeriesDefinitions() method but AxisImpl does). He adapted the code from the 
+org.eclipse.birt.chart.ui.swt.ChartModelAdapter object.</p>
+
+<p>
+The Chart project lead comments: Here's a suggestion on optimizing the number of 
+calls you make to re-build the chart:<br>
+<br>
+Instead of building and rendering the chart in the paintControl(...) method, you 
+could choose to build it off screen and render it any number of times without 
+re-building it. There is no requirement that a UI component needs to be showing 
+to be able to build a chart. Hence it is not mandatory to build the chart in the 
+paintControl(…) method. However, if you choose to resize the client area, then 
+you'd want to rebuild it for the new dimensions before you render the chart. So, 
+in effect, you would want to compute the line chart off screen when the client 
+area is resized ONLY rather than for every paint notification. Remember ... the 
+bounds (specified in points) with which you render the chart must equate to the 
+bounds used in building the chart.</p>
+
+<pre class="code-block"><!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>
+
+<h1>
+Deployment</h1>
+
+<h2>
+Q: What JARs are needed on the class path to deploy the BIRT charting package in 
+an SWT/JFace application?</h2>
+
+<p>
+If you are using 1.0M2, the following JARs need to be included in your CLASSPATH 
+at build/run time:</p>
+
+<p>
+Chart engine libraries:</p>
+
+<ul>
+  <li>
+
+<pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>engine.jar OR chart-engine.jar (from org.eclipse.birt.chart.engine)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>shared.jar OR chart-shared.jar (from org.eclipse.birt.chart.shared) (See 
+  below)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>engine-extension.jar (from org.eclipse.birt.chart.engine.extension)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>device-extension.jar (from org.eclipse.birt.chart.device.extension)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>core.jar (from org.eclipse.birt.core)</li>
+</ul>
+<p>
+3rd party dependencies:</p>
+
+<ul>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>js.jar (Rhino 1.5R5 from org.eclipse.birt.core/lib that allows scripting)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>common.jar (from org.eclipse.emf.common/runtime)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>common.resources.jar</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>ecore.jar (from org.eclipse.emf.ecore/runtime)</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>ecore.resources.jar</li>
+  <li><pre class="code-block>
+<!--StartFragment -->
+public class TestLineChart
+{
+     private static final class MyPaintListener implements PaintListener
+     {
+         public void paintControl(PaintEvent e)
+         {
+             // let's get a SWT device renderer
+             IDeviceRenderer deviceRenderer = null;
+             try
+             {
+                 System.setProperty("STANDALONE", "true");
+                 deviceRenderer = PluginSettings.instance()
+			.getDevice("dv.SWT");
+             }
+             catch (PluginException ex)
+             {
+                 System.err.println(
+			"Oops, can't find the device renderer.");
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+             deviceRenderer
+	    	.setProperty(IDeviceRenderer.GRAPHICS_CONTEXT, e.gc);
+
+             // now let's make sure we stay in the client area's bounds
+             Rectangle rect = ((Composite) e.widget).getClientArea();
+             final Bounds bounds = BoundsImpl.create(rect.x + 2,
+                     rect.y + 2,
+                     rect.width - 4,
+                     rect.height - 4);
+             bounds.scale(72d /
+	    	deviceRenderer.getDisplayServer().getDpiResolution());
+
+             // create Rohit's chart
+             Chart chart = createSimpleLineChart();
+
+             // and finally, generate it...
+             final Generator gr = Generator.instance();
+             GeneratedChartState state;
+             try
+             {
+                 state = gr.build(deviceRenderer.getDisplayServer(),
+                         chart,
+                         (Scriptable) null,
+                         bounds,
+                         Locale.getDefault());
+                 gr.render(deviceRenderer, state);
+             }
+             catch (Exception ex)
+             {
+                 ex.printStackTrace();
+                 System.exit(1);
+             }
+         }
+     }
+
+     public static void main(String[] args)
+     {
+         Display display = new Display();
+         Shell shell = new Shell(display);
+         shell.setLayout(new FillLayout());
+         shell.setText("TestLineChart");
+         Canvas canvas = new Canvas(shell, SWT.NONE);
+         canvas.addPaintListener(new MyPaintListener());
+         shell.setSize(400, 400);
+
+         shell.open();
+         while (!shell.isDisposed())
+         {
+             if (!display.readAndDispatch()) display.sleep();
+         }
+         display.dispose();
+     }
+
+     /**
+      * Creates a line chart model as a reference implementation *
+      *
+      * @return An instance of the simulated runtime chart model
+      * (containing filled datasets)
+      */
+     public static final Chart createSimpleLineChart()
+     {
+         ChartWithAxes cwaBar = ChartWithAxesImpl.create();
+         cwaBar.getBlock().setBackground(ColorDefinitionImpl.WHITE());
+         Plot p = cwaBar.getPlot();
+         p.getClientArea().setBackground(ColorDefinitionImpl.create(255,
+                 255,
+                 225));
+         cwaBar.getTitle().getLabel().getCaption()
+		.setValue("Sample Line Chart");
+
+         Legend lg = cwaBar.getLegend();
+         LineAttributes lia = lg.getOutline();
+         lg.getText().getFont().setSize(16);
+         lia.setStyle(LineStyle.SOLID_LITERAL);
+         lg.getInsets().set(10, 5, 0, 0);
+         lg.getOutline().setVisible(false);
+         lg.setAnchor(Anchor.NORTH_LITERAL);
+
+         AxisImpl xAxisPrimary =
+		(AxisImpl) cwaBar.getPrimaryBaseAxes()[0];
+         xAxisPrimary.setType(AxisType.TEXT_LITERAL);
+         xAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.BELOW_LITERAL);
+         xAxisPrimary.getOrigin()
+		.setType(IntersectionType.VALUE_LITERAL);
+         xAxisPrimary.getTitle().setVisible(false);
+
+         AxisImpl yAxisPrimary = (AxisImpl) cwaBar
+                 .getPrimaryOrthogonalAxis(xAxisPrimary);
+         yAxisPrimary.getMajorGrid()
+		.setTickStyle(TickStyle.LEFT_LITERAL);
+         yAxisPrimary.setPercent(true);
+
+         Vector vs = new Vector();
+         vs.add("one");
+         vs.add("two");
+         vs.add("three");
+
+         ArrayList vn1 = new ArrayList();
+         vn1.add(new Double(25));
+         vn1.add(new Double(35));
+         vn1.add(new Double(-45));
+
+         TextDataSet categoryValues = TextDataSetImpl.create(vs);
+         NumberDataSet orthoValues1 = NumberDataSetImpl.create(vn1);
+
+         // CREATE THE CATEGORY SERIES
+         Series seCategory = SeriesImpl.create();
+         seCategory.setDataSet(categoryValues);
+
+         // CREATE THE PRIMARY DATASET
+         LineSeries ls = (LineSeries) LineSeriesImpl.create();
+         ls.setSeriesIdentifier("My Line Series");
+         ls.setDataSet(orthoValues1);
+         ls.getLineAttributes().setColor(ColorDefinitionImpl.CREAM());
+         ls.getMarker().setType(MarkerType.TRIANGLE_LITERAL);
+         ls.getLabel().setVisible(true);
+
+         SeriesDefinition sdX = SeriesDefinitionImpl.create();
+         sdX.getSeriesPalette().update(0);
+         xAxisPrimary.getSeriesDefinitions().add(sdX);
+
+         SeriesDefinition sdY = SeriesDefinitionImpl.create();
+         sdY.getSeriesPalette().update(1);
+         yAxisPrimary.getSeriesDefinitions().add(sdY);
+
+         sdX.getSeries().add(seCategory);
+         sdY.getSeries().add(ls);
+
+         return cwaBar;
+     }
+}</pre>ecore.xmi.jar</li>
+</ul>
+<p>
+Also, when you run your SWT application, remember to set a system property 
+called 'STANDALONE'. <p>
+Note: chart-shared.jar OR shared.jar will not be needed (nor included) in the 
+final release 1.0.<br>
+&nbsp;</p>
+
+</pre></body>
 </html>
