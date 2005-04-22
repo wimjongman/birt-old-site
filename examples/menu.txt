@@ -4,5 +4,5 @@
 <item name="drop list" url="drop_group_mockup.html"/>
 <item name="side-by-side" url="parallel.html"/>
 <item name="invoice" url="invoice.html"/>
-<item name="bank satement" url="AccountDetails.html"/>
+<item name="bank statement" url="AccountDetails.html"/>
 </birt-menu>
