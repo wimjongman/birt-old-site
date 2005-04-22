@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head>
+		<style type="text/css">
+				table {border-collapse: collapse; empty-cells: show;}
+				td {vertical-align: baseline;}
+				.style_5 { font-weight: bold; font-size: xx-large; text-align: center;}
+				.style_15 { text-align: right;}
+				.style_31 { font-family: Arial Black; font-weight: bold; font-size: x-large; text-align: right; color: #700f95;}
+				.style_38 { text-align: left;}
+				.style_42 { border-top: 1px solid #808080; border-right: thin solid #808080; border-bottom: thin solid #808080; border-left: 1pt solid #808080;}
+				.style_46 { font-weight: bold; font-size: smaller; text-align: right; padding-right: 0.5cm; border-top: 1px solid #808080; border-right: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; color: #494949; background: #e8d3fe;}
+				.style_48 { font-size: small; padding-left: 0.5cm; border-top: 1px solid #808080; border-right: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080;}
+				.style_64 { text-align: left;}
+				.style_82 { font-weight: bold; font-size: small; text-align: right; padding-right: 0.5cm; color: #3c3c3c;}
+				.style_84 { font-size: small;}
+				.style_86 { font-weight: bold; font-size: smaller; text-align: right; padding-right: 0.5cm; color: #3c3c3c;}
+				.style_97 { font-size: medium; border-top: 1px solid #808080; border-right: thin solid #808080; border-bottom: thin solid #808080; border-left: 1pt solid #808080; vertical-align: baseline;}
+				.style_104 { background: #e8d3fe;}
+				.style_105 { font-weight: bold; font-size: smaller; text-align: center; padding-right: 4pt; padding-left: 4pt; border-top: 1px solid #808080; border-right: 1pt solid #808080; border-bottom: 1pt solid #808080; border-left: 1pt solid #808080; color: #494949;}
+				.style_115 { font-weight: bold; font-size: smaller; text-align: center; padding-right: 5pt; padding-left: 4pt; border-top: 1px solid #808080; border-right: 1pt solid #808080; border-bottom: 1pt solid #808080; border-left: 1pt solid #808080; color: #494949;}
+				.style_117 { font-size: small;}
+				.style_118 { padding-left: 5pt;}
+				.style_119 { font-size: small; text-align: left;}
+				.style_121 { text-align: left;}
+				.style_124 { text-align: right; padding-right: 5pt;}
+				.style_125 { text-align: right;}
+				.style_129 { text-align: right;}
+				.style_131 { border-top: 1px solid #808080;}
+				.style_135 { border-top: 1px solid #808080; border-right: 1px solid #808080; border-left: 1px solid #808080; background: #e8d3fe;}
+				.style_136 { font-weight: bold; font-size: large; text-align: center; color: #353535;}
+				.style_137 { padding-right: 5pt; border-top: 1px solid #808080;}
+				.style_138 { font-weight: bold; font-size: large; text-align: right; color: #353535;}
+				.style_139 { font-weight: bold; text-align: center; margin-top: 0.5cm; padding-bottom: 0cm; color: #700f95;}
+				.style_140 { font-family: sans-serif;}
+		</style>
+		<!--[if gte IE 5.5000]>
+		   <script language="JavaScript"> var ie55up = true </script>
+		<![endif]-->
+		<script language="JavaScript">
+		   function fixPNG(myImage) // correctly handle PNG transparency in Win IE 5.5 or higher.
+		      {
+		      if (window.ie55up)
+		         {
+		         var imgID = (myImage.id) ? "id='" + myImage.id + "' " : ""
+		         var imgClass = (myImage.className) ? "class='" + myImage.className + "' " : ""
+		         var imgTitle = (myImage.title) ? "title='" + myImage.title + "' " : "title='" + myImage.alt + "' "
+		         var imgStyle = "display:inline-block;" + myImage.style.cssText
+		         var strNewHTML = "<span " + imgID + imgClass + imgTitle
+		         strNewHTML += " style=\"" + "width:" + myImage.width + "px; height:" + myImage.height + "px;" + imgStyle + ";"
+		         strNewHTML += "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+		         strNewHTML += "(src=\'" + myImage.src + "\', sizingMethod='scale');\"></span>"
+		         myImage.outerHTML = strNewHTML
+		         }
+		      }
+		</script>
+	</head>
+	<body class="style_140">
+		<div style="position: relative;">
+			<div style="position: relative;">
+				<table style=" width: 100%;">
+					<col style=" width: 30%;">
+					<col style=" width: 20%;">
+					<col style=" width: 60%;">
+					<tbody>
+						<tr style=" height: 0.5cm;">
+							<td class="style_15"></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="style_15">
+								<img src="http://www.eclipse.org/birt/examples/bankLogo.jpg" style="display: block;">
+							</td>
+							<td></td>
+							<td>
+								<div class="style_31">
+										PERSONAL BANK STATEMENT
+								</div>
+							</td>
+						</tr>
+						<tr style=" height: 0.5cm;">
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table style=" width: 100%;">
+					<col style=" width: 50%;">
+					<col class="style_38" style=" width: 50%;">
+					<tbody>
+						<tr>
+							<td></td>
+							<td align="left">
+								<table class="style_42" style=" width: 100%;">
+									<col style=" width: 50%;">
+									<col style=" width: 50%;">
+									<tbody>
+										<tr>
+											<td class="style_46">
+												<div>
+														Customer Name:
+												</div>
+											</td>
+											<td class="style_48">
+												<div>
+														Andrea Carcini
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="style_46">
+												<div>
+														Address:
+												</div>
+											</td>
+											<td class="style_48">
+												<div>
+														Milan, Italy
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="style_46">
+												<div>
+														Account ID:
+												</div>
+											</td>
+											<td class="style_48">
+												<div>
+														33892
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="style_46">
+												<div>
+														Opening Balance:
+												</div>
+											</td>
+											<td class="style_48">
+												<div class="style_64">
+														$22,121.00
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table style=" width: 100%;">
+					<col style=" width: 2cm;">
+					<col style=" width: 2cm;">
+					<col style=" width: 3cm;">
+					<col style=" width: 2cm;">
+					<col style=" width: 3cm;">
+					<col>
+					<tbody>
+						<tr style=" height: 0.5cm;">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<div class="style_82">
+										From:
+								</div>
+							</td>
+							<td>
+								<div class="style_84">
+										9/10/01
+								</div>
+							</td>
+							<td>
+								<div class="style_86">
+										To:
+								</div>
+							</td>
+							<td>
+								<div class="style_84">
+										8/12/04
+								</div>
+							</td>
+							<td></td>
+						</tr>
+						<tr style=" height: 0.5cm;">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="style_97" style=" width: 100%;">
+					<col style=" width: 10%;">
+					<col style=" width: 15%;">
+					<col style=" width: 15%;">
+					<col style=" width: 15%;">
+					<col style=" width: 15%;">
+					<col style=" width: 20%;">
+					<thead>
+						<tr class="style_104">
+							<td class="style_105">
+								<div class="style_38">
+										Index
+								</div>
+							</td>
+							<td class="style_105">
+								<div class="style_38">
+										Date
+								</div>
+							</td>
+							<td class="style_105">
+								<div class="style_38">
+										Branch
+								</div>
+							</td>
+							<td class="style_105">
+								<div class="style_15">
+										Deposit
+								</div>
+							</td>
+							<td class="style_105">
+								<div class="style_15">
+										Withdraw
+								</div>
+							</td>
+							<td class="style_115">
+								<div class="style_15">
+										Balance
+								</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="style_117">
+							<td class="style_118">
+								<div class="style_119">
+										1
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_121">
+										9/10/01
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_38">
+										Milan
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125">
+										10.00
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125"></div>
+							</td>
+							<td class="style_124">
+								<div class="style_129">
+										10.00
+								</div>
+							</td>
+						</tr>
+						<tr class="style_117">
+							<td class="style_118">
+								<div class="style_119">
+										2
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_121">
+										12/11/01
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_38">
+										Naples
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125"></div>
+							</td>
+							<td class="style_124">
+								<div class="style_125">
+										-23,000.00
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_129" style=" color: #FF0000;">
+										(22,990.00)
+								</div>
+							</td>
+						</tr>
+						<tr class="style_117">
+							<td class="style_118">
+								<div class="style_119">
+										3
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_121">
+										1/21/02
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_38">
+										Milan
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125"></div>
+							</td>
+							<td class="style_124">
+								<div class="style_125">
+										-500.00
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_129" style=" color: #FF0000;">
+										(23,490.00)
+								</div>
+							</td>
+						</tr>
+						<tr class="style_117">
+							<td class="style_118">
+								<div class="style_119">
+										4
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_121">
+										2/20/03
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_38">
+										Barcelona
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125"></div>
+							</td>
+							<td class="style_124">
+								<div class="style_125">
+										-50.00
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_129" style=" color: #FF0000;">
+										(23,540.00)
+								</div>
+							</td>
+						</tr>
+						<tr class="style_117">
+							<td class="style_118">
+								<div class="style_119">
+										5
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_121">
+										8/12/04
+								</div>
+							</td>
+							<td class="style_118">
+								<div class="style_38">
+										Paris
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125">
+										32,123.00
+								</div>
+							</td>
+							<td class="style_124">
+								<div class="style_125"></div>
+							</td>
+							<td class="style_124">
+								<div class="style_129">
+										8,583.00
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="style_131"></td>
+							<td class="style_131"></td>
+							<td class="style_131"></td>
+							<td class="style_131"></td>
+							<td class="style_135">
+								<div class="style_136">
+										Balance:
+								</div>
+							</td>
+							<td class="style_137">
+								<div class="style_138">
+										$30,704.00
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="style_139">
+						---------*--------*--------*--------*---------*---------*---------*---------*---------*---------*--------*--------
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
