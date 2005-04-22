@@ -114,6 +114,11 @@ to BIRT. However, if you are not using a SQL database, or your expression
 requires JavaScript or Java code, then, go ahead and perform the filtering within 
 BIRT.</p>
 
+<p class="caution"><span class="caution-head">Release 1.0 Note</span>: BIRT 
+holds your entire result set in memory. Therefore, it is important that 
+filtering be done on the database to reduce the amount of memory required by a 
+BIRT report.</p>
+
 <h2>Q: What's the difference between BIRT sorting and a SQL ORDER BY clause?</h2>
 
 <p>BIRT provides a sorting option on tables and lists. When you define groups, 
@@ -131,7 +136,10 @@ database has indexes that will speed up the sort. If your report has no groups,
 and your SELECT statement has the correct ORDER BY clause, then simply do not 
 specify a sort order within BIRT.</p>
 
-<p class="caution"><span class="caution-head">Release 1.0 Note</span>: If your report includes grouping, then BIRT 
+<p class="caution"><span class="caution-head">Release 1.0 Note</span>: BIRT 
+holds your entire result set in memory, and always sorts your data whether or 
+not the database already did the sort. (The in-memory sort is slightly faster if 
+the data is presorted.) In particular, if your report includes grouping, then BIRT 
 will resort your data, and you must include a BIRT-defined sort order for the 
 detail rows. A later release may provide a way to tell BIRT to use database 
 sorting even for reports that have groups.</p>
