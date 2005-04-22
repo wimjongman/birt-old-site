@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Examples</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">Bank Statement Example</p>
+<p class="subhead">Notes</p>
+
+<h1>Setup</h1>
+<p>
+This report uses a  Microsoft Access database called "Sample". To run
+this report, you'll need to download and install this database:
+<p>
+<ul>
+<li>Download the <a href="Sample.zip">sample database zip file</a>.
+<li>Unzip the database into a convenient location.
+<li>Create a System DSN for this database using the Microsoft Access driver.
+Call it "BIRT Misc".
+</ul>
+
+<h1>About the Report</h1>
+<p>
+The report prints a bank statement for a single account. A report parameter ask 
+for the account ID. The accounts in the sample data base are: 33892, 53205, 
+76407 and 83927.<p>
+The report parameter accepts the account number from the user. The query defines 
+a data set parameter that passes the account number to the database. The List 
+item &quot;binds&quot; the query parameter to the report parameter.<p>
+A List element holds the account overview information including a logo and 
+account summary. The account information comes from the first record in the 
+query. (Another, perfectly fine, way to do this report would have been to use 
+two queries. Have one that fetches the account summary information, another that 
+gets the details for the account.)<p>
+The account transactions are listed using a table element. The first column 
+shows the record index using the row[0] syntax. (The 0th column of a data row is 
+a 0-based record index.)<p>
+The Deposit column shows positive transactions, the Withdrawal column shows 
+negative transactions. Two computed columns in the data set create the deposit 
+and withdrawal amounts from the single transaction amount field. The nice thing 
+about doing these calculations in the data set is that you can test them in the 
+designer even before you create the layout -- a handy way to ensure the business 
+calculations are right before moving on to formatting.<p>
+The Balance column is a running total. We should use the Total.runningSum( ) 
+aggregate. However, when this example was written, that aggregate was not yet 
+available, so the calculation instead uses a global JavaScript variable to 
+compute the total. The balance column uses highlighting to show negative 
+balances as red. (Account 33892 illustrates the resulting formatting.)<p>
+The report makes extensive use of styles to centralize style information.</body></html>
