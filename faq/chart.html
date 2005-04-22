@@ -52,7 +52,7 @@ Why is the chart project creating "yet another API"?</h2>
 An important goal for the charting engine is that it needs to work in a 
 pure J2EE environment and that it be portable. Creating a dependency on 
 Draw2D would in turn create a dependency on SWT and OS dependent libraries 
-which doesn?t work well for users who would like to deploy their reports 
+which doesn't work well for users who would like to deploy their reports 
 on an application server. In addition, Draw2D API is very restrictive in 
 that it uses ?integers? in its co-ordinate system which causes rounding 
 off errors and erroneous output. The chart primitive rendering layer of 
@@ -81,7 +81,7 @@ defines a scaling factor but as you can see, resulting co-ordinates are
 truncated before they are plotted.
 <p>
 Another drawback with using pure Draw2D/SWT API is that it is limited in 
-its featureset and doesn't generically support certain advanced features 
+its feature set and doesn't generically support certain advanced features 
 such as:
 <ul>
 <li>Text anti-aliasing
@@ -208,7 +208,7 @@ public static final Chart createSimpleLineChart()
 }
 </pre>
 
-<h2>Q: How do I add call backs when the user clicks or hovers 
+<h2>Q: Can I add call backs when the user clicks or hovers 
 over nodes in the chart?</h2>
 <p>Yes ... you may add 'triggers' for various 'conditions' in the 
 design-time chart model associated with 'series' or 'blocks' as follows:
@@ -274,6 +274,27 @@ of the plot (left)' when applied to the Y axis'.
 Yes, set 'block' visibility for the 'TitleBlock' and the 
 'Legend'.
 </p>
+
+<h2>
+Q: How do I turn of the debug messages?</h2>
+
+<p>
+Running the Chart package may produce messages such as:</p>
+
+<pre class="code-block">INFO]: SWT Display Server: win32 v3062
+[INFO]: Using graphics context org.eclipse.swt.graphics.GC@GC {1023479146}
+[INFO]: (STANDALONE-ENV) Creating series renderer
+org.eclipse.birt.chart.render.Line
+&nbsp;</pre>
+
+<p>
+To turn these off, set the logging verbose level using:
+
+<pre class="code-block">org.eclipse.birt.chart.log.DefaultLoggerImpl.instance( )
+	.setVerboseLevel( ILogger.ERROR | ILogger.WARNING | ILogger.FATAL );
+</pre>
+<p>
+This will suppress the detailed INFORMATION messages.
 
 <h1>
 Eclipse, SWT and RCP</h1>
@@ -2204,5 +2225,5 @@ Note: chart-shared.jar OR shared.jar will not be needed (nor included) in the
 final release 1.0.<br>
 &nbsp;</p>
 
-</pre></body>
+</pre></pre></pre></body>
 </html>
