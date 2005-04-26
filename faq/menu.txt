@@ -1,6 +1,7 @@
 <birt-menu>
 <top name="faq" page="../faq"/>
 <item name="install" page="install.html"/>
+<item name="linux" page="linux.html"/>
 <item name="getting started" page="new.html"/>
 <item name="data access" page="data.html"/>
 <item name="parameters" page="params.html"/>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT FAQ</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT FAQ</p>
+<p class="subhead">Linux Issues</p>
+
+<h1>Mozilla Browser on Linux</h1>
+
+<h2>BIRT doesn't work on Debian Linux. What can I do?</h2>
+
+<p>BIRT uses a browser for report preview. Eclipse works with the latest version 
+of the Mozilla browser. See the
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/faq.html#browserlinux">
+SWT Linux Browser FAQ</a> for details.</p>
+
+<p>&nbsp;If you have an older version, an error 
+message similar to the following may appear in your log file:</p>
+
+<pre class="code-block">!MESSAGE No more handles (java.lang.UnsatisfiedLinkError:
+...
+/org.eclipse.swt.gtk_3.0.1/os/linux/x86/libswt-mozilla-gtk-3063.so:
+undefined symbol: _ZN9nsCStringC1Ev</pre>
+
+<p>
+Check your browser version:</p>
+
+<pre class="code-block">sunlight:/etc/alternatives# mozilla -version
+Mozilla 1.7.6, Copyright (c) 2003-2004 mozilla.org, build 2005032401
+</pre>
+<p>
+If it is too old (according to the FAQ above), upgrade to a newer version. 
+Here's how to do this on Debian Linux:</p>
+
+<ul>
+  <li>Uninstall your current Mozilla browser.</li>
+  <li>Fetch <code>mozilla-1.6-xft-gtk2-pc-linux.tar.bz2</code> from mozilla.org and
+install it in <code>/usr/local/mozilla/mozilla</code></li>
+  <li>Add <code>/usr/local/mozilla/mozilla</code> to <code>/etc/ld.so.conf</code> and run <code>ldconfig</code> to
+get the <code>libpath</code> updated.</li>
+  <li>Check that Eclipse uses your new Mozilla installation by issuing the
+following command:</li>
+</ul>
+
+<blockquote>
+
+<pre class="code-block">ldd &lt;path to
+eclipse&gt;/eclipse/plugins/org.eclipse.swt.gtk_3.0.1/os/linux/x86/libswt-mozilla-gtk-3063.so
+&nbsp;&nbsp;&nbsp; libxpcom.so =&gt; /usr/local/mozilla/mozilla/libxpcom.so .....</pre>
+
+<p>
+If <code>libxpcom.so</code> points to your newly installed Mozilla, you are on the right
+track. But if you start Eclipse and run BIRT you may now get the following
+new error:</p>
+
+<pre class="code-block">org.eclipse.swt.SWTError: No more handles [Unknown mozilla path]</pre>
+
+</blockquote>
+<ul>
+  <li>To resolve this error, add the following
+to the <code>.bash_profile</code> file in your home directory:</li>
+</ul>
+<blockquote>
+
+<pre class="code-block">MOZILLA_FIVE_HOME=/usr/local/mozilla/mozilla
+export MOZILLA_FIVE_HOME</pre>
+
+<p>
+To be sure the new environment variable is sourced, open a console and type:
+</p>
+
+<pre class="code-block">source /home/&lt;your home&gt;/.bash_profile</pre>
+
+</blockquote>
+
+<p>
+Now run Eclipse from the same terminal.
+<code>cd</code> to you eclipse home and type <code>./eclipse</code>
+and you should be home free.</p>
+
+</body>
+</html>
