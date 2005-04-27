@@ -110,8 +110,8 @@ instructions below depending on the build you are using.<ul>
 Use these instructions only for Milestone 2 and earlier.<p>
 To add a JDBC driver,
 include the driver's JAR file name in the JDBC ODA driver's configuration 
-file: odaconfig.xml. The configuration file is in the plugin directory for
-the JDBC ODA plugin: eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc.
+file: <code>odaconfig.xml</code>. The configuration file is in the plugin directory for
+the JDBC ODA plugin: <code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc_0.0.1</code>.
 <p>
 Use any text editor to edit the configuration file. You will find the following 
 starting at line 26:
@@ -127,18 +127,15 @@ starting at line 26:
   Simply add another <code>&lt;LibraryName&gt;</code> element for each additional JDBC 
   driver JAR file that might be needed.
 <br><br>
-  By default, a driver's library files must be in the JDBC plugin directory.
+  By default, a driver's library files must be in the JDBC directory.
 So, copy your JDBC driver JAR into 
-<code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc</code>.
-<br><br>
-  You can optionally add a <code>&lt;Location&gt;</code> element to specify the 
-  location of the JDBC driver file.
-</div>
+<code>eclipse/plugins/org.eclipse.birt.report.data.oda.jdbc_0.0.1 directory</code>.
 
 <h2>Install Drivers for the Viewer</h2>
 <p>In order to preview your report, you must also install your drivers into the 
 BIRT viewer plugin. Install them into the 
-<code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/ WEB-INF/plugins/drivers</code>
+<code>
+eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt-viewer/WEB-INF/plugins</code>
 directory, repeating the process from above.</p>
 
 <h1><a name="S20050418">JDBC for S20050419</a></h1>
