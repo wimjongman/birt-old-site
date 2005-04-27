@@ -1,0 +1,4 @@
+<birt-menu>
+<top name="sample db" page="../db"/>
+<item name="logos" page="logos.html"/>
+</birt-menu>
