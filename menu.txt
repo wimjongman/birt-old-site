@@ -4,6 +4,7 @@
 <not-yet-item name="new to BIRT" page="newUser"/>
 <item name="introduction" page="intro"/>
 <item name="examples" page="examples"/>
+<item name="sample db" page="db"/>
 <item name="tutorial" page="tutorial"/>
 <item name="integration" page="deploy"/>
 <item name="faq" page="faq"/>
