@@ -16,12 +16,12 @@
 
 <h2>BIRT doesn't work on Debian Linux. What can I do?</h2>
 
-<p>BIRT uses a browser for report preview. Eclipse works with the latest version 
+<p>BIRT uses a browser for report preview. Eclipse works with a specific version 
 of the Mozilla browser. See the
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/faq.html#browserlinux">
 SWT Linux Browser FAQ</a> for details.</p>
 
-<p>&nbsp;If you have an older version, an error 
+<p>&nbsp;If you have an incorrect version, an error 
 message similar to the following may appear in your log file:</p>
 
 <pre class="code-block">!MESSAGE No more handles (java.lang.UnsatisfiedLinkError:
@@ -30,13 +30,17 @@ message similar to the following may appear in your log file:</p>
 undefined symbol: _ZN9nsCStringC1Ev</pre>
 
 <p>
+That is, different versions of the Mozilla browser may not be binary compatible 
+with the version used by Eclipse, resulting in the undefined symbol errors.</p>
+
+<p>
 Check your browser version:</p>
 
-<pre class="code-block">sunlight:/etc/alternatives# mozilla -version
+<pre class="code-block"># mozilla -version
 Mozilla 1.7.6, Copyright (c) 2003-2004 mozilla.org, build 2005032401
 </pre>
 <p>
-If it is too old (according to the FAQ above), upgrade to a newer version. 
+If it is incorrect (according to the FAQ above), switch to the correct version. 
 Here's how to do this on Debian Linux:</p>
 
 <ul>
