@@ -1,0 +1,5 @@
+BIRT
+http://www.eclipse.org/birt
+1.0 05/2005 Planned
+1.1 07/2005 Planned
+2.0 12/2005 Tentative
