@@ -22,17 +22,75 @@ to enter the parameter values; the values will be available within the report
 where they can be displayed, passed to a query, used in expressions, etc.
 </div>
 
-<h1>Parameter API</h1>
+<h2>
+Report parameters provide the following properties: Allow null value, Allow 
+blank values. What are they for? What is the difference?</h2>
+<p>
+Databases support a null value. If the user wants to find null values, then he 
+must enter a special value that can be interpreted as null. For numbers &amp; dates 
+this is no problem; BIRT simply interprets an empty entry as a null value. For 
+strings, however, there is an ambiguity. Should an empty string mean an empty 
+string or a null string? (They are different: empty string means: &quot;I know the 
+value, and that value is an empty string&quot;, while null means &quot;I don't know the 
+value.&quot;)
 
-<h2>Q: Is there an API for this?</div> </h2>
+<p>Now, the properties. Allow blank says whether a string can take a blank value. 
+(For example, you've got a report about divisions, and the user must enter a 
+division code.) Allow null says whether to allow a null value (blank entry) for 
+numbers and dates.
+
+<p>
+Further, the UI for a string parameter will have some way to indicate that the 
+user wants a null value (instead of empty string). The allow null property says 
+whether to display this additional bit of UI (and hence allow the user to submit 
+a null value.)
+
+<p>The value rule is: populate the UI with the default value (which can be null or 
+blank.) Let the user enter a value. Then check if the value the user entered (or 
+left from the default) meets the rules. If the value is null or blank when the 
+parameter does not allow it, then a runtime error occurs.
+
+<h2>Report parameter provide a Hidden property. Does this it from the parameter 
+prompt dialog? Why would I want to hide a report parameter?</h2>
+
+<p>
+You would hide a report parameter if your application will set it via code. For 
+example, a web app might show a report for your account. The account number is a 
+hidden parameter; the application code sets it based on your login: the report 
+won't allow you to type in someone else's account code.<p>
+
+<h2>What does the report parameter Format property do?</h2>
+<p>
+This allows parameter UIs to format the parameter value within the UI. For 
+example, suppose your report has a parameter for a dollar amount. When you first 
+see the page that contains a dollar amount, you'd see:</p>
+<pre class="code-block">Find Orders Over: [ $10,000.00]</pre>
+<p>
+You'd click in the field and you'd see:</p>
+<pre class="code-block">Find Orders Over: [10000.00| ]</pre>
+<p>
+Where the vertical bar represents the insert caret. Next, you type in a different value:<p>
+<pre class="code-block">Find Orders Over: [1234.56| ]</pre>
+<p>
+You click elsewhere and the value becomes:</p>
+<pre class="code-block">Find Orders Over: [ $1,234.56]</pre>
+<p>
+This kind of formatting can't be done with a plain HTML page (such as that used 
+by the BIRT web app), so the format property is not used, at present, by the 
+BIRT parameter entry UI.<p>
+We've found that many people misunderstood the format to be the input 
+format. In actual fact, the parameter format is entirely for displaying 
+parameter values in parameter UI, and does not in any way specify what the user 
+should type.<h1>Parameter API</h1>
+
+<h2>Q: Is there an API for this?</h2>
 <p>
 Yes, BIRT provides an API for working with parameters. BIRT also provides a
 a default UI that prompts the user for parameter values.
-</div>
 
 <h1>Applications</h1>
 
-<h2>Q: Can my application provide some of the values?</div> </h2>
+<h2>Q: Can my application provide some of the values?</h2>
 <p>
 In some cases, parameter values can be provided by the application based on its
 current state. For example, provide the transaction history for the current
@@ -42,7 +100,6 @@ to ask for the history parameters.
 No problem. Because BIRT is an "embedded" reporting solution, it assumes 
 that the application will pass in any needed context information. You'd create
 a custom parameter UI that asks only for the "extra" parameters.
-</div>
 
 </body>
 </html>

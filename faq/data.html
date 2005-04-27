@@ -248,6 +248,77 @@ a data source?</h2>
 TBD. You can access the objects as is described for POJOs above.
 </p>
 
+<h1>Data Set Parameters</h1>
+
+<h2>How can I use a data set parameter with an SQL query?</h2>
+
+<p>Parameters are still under development, so the following may change in the 
+run-up to the 1.0 release.</p>
+
+<p>Start with an SQL parameter. That is:</p>
+
+<pre class="code-block">WHERE custID = ?</pre>
+
+<p>Then,  follow the SQL rules for 
+parameters. An SQL &quot;?&quot; Parameter must represent an actual data value such as &quot;Foo&quot; 
+or 10. You can also do:</p>
+
+<pre class="code-block">WHERE customName LIKE ?</pre>
+
+<p>In which case you could include wildcards such as %. (Note: the wildcards are 
+DB-specific.)</p>
+
+<p>Next, define a data set parameter. The parameters must have a 
+one-to-one correspondence with your &quot;?&quot; markers.</p>
+
+<p>A parameter can be one of three types: input, output, or in/out (both input 
+and output.) The M2 build has separate properties for input and output, allowing 
+an invalid fourth state: neither input nor output. Unfortunately, that invalid 
+fourth state is the default. An SQL SELECT allows only input parameters. At 
+present, does not automatically mark your parameters as input. So, you'll need 
+to do that yourself.</p>
+
+<p>Data set parameters take a default value. In theory, the default value should not be required unless it makes logical 
+sense for your report design. (For example, get active customers [status = &quot;A&quot;] 
+unless a user of the data set specifically wants some other status.) In BIRT 
+1.0, the default value should not be needed very often; it will be more useful 
+when BIRT supports data set reuse. When you decide to test a data set, the UI 
+will eventually prompt you for the data set parameter values, and give you the option to save 
+them as a &quot;test configuration.&quot; In the mean time, you must provide a 
+default (test value) in order to preview your data set. A side effect of this is that, since the default is a test value, 
+then it should be a constant. In M2,&nbsp; if you enter an expression such as params.RptParam, 
+you'll get errors.</p>
+
+<p>So, bottom line, in M2, you must enter a default value if you want to test 
+your data set using the data set preview feature of the data set builder.</p>
+
+<h2>How do I use Data Set parameters?</h2>
+
+<p>There are two common ways to use data set parameters. First, you can bind 
+them to a report parameter so that your user can select the data to display in 
+the report. See the <a href="params.html">Report Parameters FAQ</a> for 
+information on doing this.</p>
+
+<p>Second, you can pass in data from another part of your report. For example, 
+you can create a subreport that takes its parameter value from a master report. 
+For example, you might get a list of customers (the master report) from an 
+Oracle database. Then, for each customer, you might get the list of orders (the 
+detail report) from a DB2 database. You'd create a &quot;customer ID&quot; parameter in 
+the detail database, and bind it to the &quot;customer id&quot; column in the outer 
+database using the Binding tab within the Property Editor for the List or Table 
+item that represents the detail report.</p>
+
+<h2>Data Set parameters have an &quot;is nullable&quot; property. What does this mean?</h2>
+
+<p>This means that the value can be a (database) null.</p>
+
+<p>Here's how it works at runtime. If a report item bound to a data set has a 
+parameter binding, evaluate that expression and use the value as the data set 
+parameter. If not, then check if the data set parameter has a default value and 
+use that. Otherwise, use null as the parameter value. Then, check if the 
+parameter value is null. If it is, and if the parameter does not allow null (is 
+not &quot;nullable&quot;), and issue a runtime error.</p>
+
 <h1>Application Integration</h1>
 
 <h2>Q: How can I pass a connection object to BIRT?</h2>
