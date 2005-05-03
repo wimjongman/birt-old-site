@@ -46,7 +46,7 @@ You can set this for the entire workbench as follows:
 <li>On Source compatibility, select 1.4.<br><br>
 The following illustration shows these settings.<br><br>
 
-<img src="images/compliancepreference.jpg"/><br><br></li>
+<img src="images/compliancepreference.jpg" width="672" height="539"/><br><br></li>
 <li>Choose OK.</li>
 </ol>
 
@@ -106,16 +106,17 @@ contains other classes that can be used by any other module</td>
    <td>Provides the data engine implementation and the ODA factory implementation. It also contains classes for applying transformations on the data.</td>
   </tr>
   <tr>
+   <td>org.eclipse.birt.data.oda</td>
+   <td>ODA public interface: the classes and interfaces used to create data 
+   extensions.</td>
+  </tr>
+  <tr>
    <td>org.eclipse.birt.data.oda.jdbc</td>
    <td>The ODA driver for accessing JDBC data sources</td>
   </tr>
   <tr>
    <td>org.eclipse.birt.data.oda.jdbc.ui</td>
    <td>The user interface for the ODA JDBC driver</td>
-  </tr>
-  <tr>
-   <td>org.eclipse.birt.feature</td>
-   <td>The BIRT feature</td>
   </tr>
   <tr>
    <td>org.eclipse.birt.report.designer.core</td>
@@ -148,7 +149,11 @@ contains other classes that can be used by any other module</td>
   </tr>
   <tr>
    <td>org.eclipse.birt.report.viewer</td>
-   <td>The BIRT report viewer</td>
+   <td>The BIRT report viewer (BIRT web app)</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt-feature</td>
+   <td>The BIRT feature</td>
   </tr>
  </tbody>
 </table>
@@ -164,10 +169,10 @@ contains other classes that can be used by any other module</td>
 <li>To open the CVS Repository Exploring perspective, choose Window -&gt; 
 Open Perspective -&gt; Other. In Select Perspective, select CVS Repository 
 Exploring and choose OK.<br><br>
-<img src="images/selectperspective.jpg"/><br><br>
+<img src="images/selectperspective.jpg" width="245" height="420"/><br><br>
 <li>Right-click on the CVS repositories window. From the context menu, 
 choose New -&gt; Repository Location.<br><br>
-<img src="images/newrepository.jpg"/><br><br>
+<img src="images/newrepository.jpg" width="485" height="361"/><br><br>
 <li>On Add CVS Repository, set the following values:<br><br>
 
 <table class="simple-table">
@@ -195,7 +200,7 @@ choose New -&gt; Repository Location.<br><br>
  </tbody>
 </table>
 <br/>
-<img src="images/addcvsrepository.jpg" /><br/><br/>
+<img src="images/addcvsrepository.jpg" width="438" height="551" /><br/><br/>
 <li>Choose Finish.
 </ol>
 A new node appears in the CVS Repositories window.
@@ -207,7 +212,7 @@ A new node appears in the CVS Repositories window.
 the source node.
 <li>Select all the nodes under this node as shown in the image below. On CVS Repositories, right-click and choose 
  Check Out from the context menu.<br/><br/>
-<img src="images/checkout.jpg" /><br/><br/>
+<img src="images/checkout.jpg" width="461" height="531" /><br/><br/>
 This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
 </ol>
 
@@ -235,14 +240,14 @@ this script, perform the following steps.
 <li>Right-click the BuildViewer.xml file. From the context menu, choose Run -&gt;
  Ant Build.
  <br/><br/>
-<img src="images/runantbuild.jpg" />
+<img src="images/runantbuild.jpg" width="541" height="682" />
 <br/><br/>
 
 <li>In org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. 
 Unselect Use global properties specified in the Ant runtime preferences 
 as shown in the following illustration.
 <br/><br/>
-<img src="images/runantbuildproperties.jpg" />
+<img src="images/runantbuildproperties.jpg" width="648" height="560" />
 <br/><br/>
 
 <li>This script is configured to work with Eclipse 3.0, GEF 3.0 and EMF 2.0.1. If you are using a 
@@ -252,7 +257,7 @@ newer version, you need to add the properties eclipse.version, gef.version, emf.
   <li>In Name, type: eclipse.version
   <li>In Value, type the version of Eclipse, similar to the following illustration.
     <br/><br/>
-	<img src="images/addproperty.jpg" />
+	<img src="images/addproperty.jpg" width="372" height="174" />
 	<br/><br/>
   <li>Choose OK.
   <li>Do the same steps for gef.version and emf.version
@@ -268,19 +273,19 @@ Start BIRT by using the Runtime Workbench. This can be done as follows:
   	<li>
   		Select Run... from the Run menu on the menu bar
 		<br/><br/>
-		<img src="images/run.jpg" />
+		<img src="images/run.jpg" width="371" height="399" />
 		<br/><br/>
 	</li>
 	<li>
 		Select Runtime Workbench from the list on the left and click on the New button as shown in the following illustration:
 		<br/><br/>
-		<img src="images/neweclipseapplication.jpg" />
+		<img src="images/neweclipseapplication.jpg" width="624" height="560" />
 		<br/><br/>
 	</li>
 	<li>
 		Click the Run button to launch the Runtime Workbench.
 		<br/><br/>
-		<img src="images/runeclipseapplication.jpg" />
+		<img src="images/runeclipseapplication.jpg" width="666" height="615" />
 		<br/><br/>
 	</li>
   </ol>
