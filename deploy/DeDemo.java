@@ -13,7 +13,6 @@ package org.eclipse.org.demo.de;
 
 import java.io.IOException;
 
-import org.eclipse.birt.report.model.activity.SemanticException;
 import org.eclipse.birt.report.model.api.CellHandle;
 import org.eclipse.birt.report.model.api.DesignElementHandle;
 import org.eclipse.birt.report.model.api.DesignEngine;
@@ -24,6 +23,7 @@ import org.eclipse.birt.report.model.api.LabelHandle;
 import org.eclipse.birt.report.model.api.ReportDesignHandle;
 import org.eclipse.birt.report.model.api.RowHandle;
 import org.eclipse.birt.report.model.api.SessionHandle;
+import org.eclipse.birt.report.model.api.activity.SemanticException;
 
 /**
  * Simple BIRT Design Engine API (DEAPI) demo.
@@ -38,12 +38,12 @@ public class DeDemo
 		{
 			buildReport( );
 		}
-		catch ( SemanticException e )
+		catch ( IOException e )
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		catch ( IOException e )
+		catch ( SemanticException e )
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -53,7 +53,7 @@ public class DeDemo
 	// This function shows how to build a very simple BIRT report with a
 	// minimal set of content: a simple grid with an image and a label.
 	
-	static void buildReport( ) throws SemanticException, IOException
+	static void buildReport( ) throws IOException, SemanticException
 	{
 		// Create a session handle. This is used to manage all open designs.
 		// Your app need create the session only once.
