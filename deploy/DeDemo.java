@@ -71,7 +71,7 @@ public class DeDemo
 		// Create a simple master page that describes how the report will
 		// appear when printed.
 		//
-		// S20050328 Note: The report will fail to load in the BIRT designer
+		// Note: The report will fail to load in the BIRT designer
 		// unless you create a master page.
 		
 		DesignElementHandle element = factory.newSimpleMasterPage( "Page Master" ); //$NON-NLS-1$
@@ -83,7 +83,7 @@ public class DeDemo
 		GridHandle grid = factory.newGridItem( null, 2 /* cols */, 1 /* row */ );
 		design.getBody( ).add( grid );
 		
-		// S20050328 Note: Set the table width to 100% to prevent the label
+		// Note: Set the table width to 100% to prevent the label
 		// from appearing too narrow in the layout view.
 		
 		grid.setWidth( "100%" ); //$NON-NLS-1$
