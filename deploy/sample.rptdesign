@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Written by Eclipse BIRT 0.0 (http://www.eclipse.com) -->
-<report xmlns="http://www.eclipse.com/schemas/BIRT_schema.xsd">
-    <property name="units">in</property>
+<!-- Written by Eclipse BIRT 1.0 -->
+<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
     <page-setup>
         <simple-master-page name="Page Master"/>
     </page-setup>
