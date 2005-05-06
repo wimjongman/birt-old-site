@@ -4,4 +4,5 @@
 <item name="viewer usage" page="viewer-use.html"/>
 <item name="using PHP" page="viewer-php.html"/>
 <item name="design engine API" page="de-api.html"/>
+<item name="report engine API" page="engine.html"/>
 </birt-menu>
