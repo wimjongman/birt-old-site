@@ -14,8 +14,7 @@
 
 <h1>About Data Sources and Data Sets</h1>
 <p>
-BIRT reports use a <i>data source</i> to connect to a database or other
-<i>data provider</i>. BIRT uses a <i>data set</i> to retrieve data from the
+BIRT reports use a <i>data source</i> to connect to a database or other data provider. BIRT uses a <i>data set</i> to retrieve data from the
 data provider. Think of the data source as a connection, and the data set
 as a query.
 
@@ -28,23 +27,8 @@ Let's build our data source:
 <li>Select the Data Sources node within the tree view.
 <li>Right-click to open the context menu.
 <li>Choose New Data Source. The New Data Source dialog appears.
-<li>Choose JDBC data source from the list.
-<p>
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-Only JDBC is supported at present. BIRT's
-Open Data Access (ODA) framework allows developers to create other types of
-data source.</div>
-<p>
-<li>Enter "sfdata" for the Data Source Name field.
-<li>Click Next.
-<li>Choose "sun.jdbc.odbc.JdbcOdbcDriver" in the Driver Class field.
-<li>In the URL field, replace &lt;data source name&gt; with &quot;sfdata&quot;. The entry should 
-look like this: "jdbc:odbc:sfdata".
-<li>Leave the User Name field blank.<li>Leave the Password field blank.
-<li>Click Test Connection... to test your connection. (If it fails, double-check
-the above information, or see the <a href="script01.html">instructions for setting
-up sfdata</a>.)
-<li>Click Finish.
+<li>Choose BIRT Sample Database from the list.<li>In the Data Source Name field, 
+enter &quot;Sample&quot;.<li>Click Finish.
 </ul>
 
 <p>
@@ -57,11 +41,15 @@ here.
 <ul>
 <li>Find or open the Data Explorer.
 <li>Open the Data Sources node.
-<li>Double-click the sfdata data source.
+<li>Double-click the data source.
 <li>The Data Source editor opens. You can make any needed changes. (For now, there
 is nothing to change.)
 <li>Click OK to save your changes.
 </ul>
+
+<p>Note that these instructions work for any data source <i>other than</i> the 
+sample database data source. The sample database data source does not allow 
+editing.</p>
 
 </body>
 </html>

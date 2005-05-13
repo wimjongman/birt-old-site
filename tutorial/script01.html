@@ -23,9 +23,9 @@ We'll create a simple customer listing report, with the customers grouped by
 state and city. For each customer, we'll display a name and phone number.
 
 <p class="caution">
-<span class="caution-head">Build S20050328 Note</span>:
+<span class="caution-head">1.0M3 Note</span>:
 The instructions here have been updated for the latest 
-stable build. If you are using an earlier build, some of steps might be a bit 
+stable build. If you are using an earlier build, some of steps will be quite 
 different.
 
 <h1>Install BIRT</h1>
@@ -34,21 +34,12 @@ If you have not yet done so, install Eclipse, GEF, EMF and BIRT. You'll find com
 instructions for doing so on the
 <a href="http://download.eclipse.org/birt/downloads/">BIRT Download</a> page.
 
-<h1>Install the Sample Database</h1>
-<p>
-This tutorial uses a Microsoft Access database called "sfdata". You'll need to copy
-it to your system and install it. Of course, this only works on Windows.
-
-<ul>
-<li><a href="sfdata.zip">Download</a> this zip file.
-<li>Unzip sfdata.mdb into a convenient location.
-<li>Create an ODBC System DSN for this database called "sfdata"
-</ul>
-<div class="caution"><span class="caution-head">Note:</span>
-This database is a temporary solution; the team is developing a new sample 
-  database based on MySQL and Cloudscape.</div>
-
-<h1>Open BIRT</h1>
+<p class="caution">
+<span class="caution-head">1.0M3 Note</span>: This tutorial uses the new 
+&quot;Classic Models&quot; sample database. This database uses Apache Derby as its DBMS. 
+Note that a bug in M3 prevents Derby from working if you install Eclipse in a 
+path that contains spaces. On Windows, this means you should install Eclipse in 
+C:/eclipse instead of C:/Program Files/eclipse.<h1>Open BIRT</h1>
 <p>
 BIRT is a perspective within Eclipse. To open it, use the Window item on the
 Eclipse main menu. Choose Open Perspective, then Report Design. If report Design 

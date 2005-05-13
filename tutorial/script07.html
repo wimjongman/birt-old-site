@@ -27,15 +27,15 @@ Report items appear in the Palette view.
 Report items include:
 <p>
 <dl class="arrow-list">
+
+<dt>Text</dt>
+<dd>Text that can include HTML formatting and computed values. Used to create
+headings, form letters, "mail-merge" effects, etc.</dd>
 <dt>Label</dt>
 <dd>Displays a simple piece of text such as "Customer Name".</dd>
 
 <dt>Data</dt>
 <dd>Displays a database column or a computed value. Provides formatting.</dd>
-
-<dt>Text</dt>
-<dd>Text that can include HTML formatting and computed values. Used to create
-headings, form letters, "mail-merge" effects, etc.</dd>
 
 <dt>Image</dt>
 <dd>Any kind of image supported by a web browser. Images can be embedded
@@ -44,19 +44,19 @@ in the report, or links to a file on your web server.</dd>
 <dt>Grid</dt>
 <dd>Provides a tabular arrangement of report items, much like an HTML table.</dd>
 
-<dt>Table</dt>
-<dd>Presents data from a data set in the form of a table. Can contain grouping levels.
-Like an HTML table that has a table row for each data set row.</dd>
-
 <dt>List</dt>
 <dd>Presents data from a data set in any kind of format. Used when the layout for
 each row is more sophisticated than a simple table row.</dd>
 
+<dt>Table</dt>
+<dd>Presents data from a data set in the form of a table. Can contain grouping levels.
+Like an HTML table that has a table row for each data set row.</dd>
+<dt>Chart</dt>
+<dd>Displays a business chart such as a pie chart, line chart, etc.</dd>
+
 </dl>
 <p>
-This tutorial will use all the elements except for List.
-
-<h1>Create the Table Detail</h1>
+This tutorial will use all the elements except for List and Chart.<h1>Create the Table Detail</h1>
 <p>
 The New Report dialog created a starter report that contains a table item with
 one level of grouping. If we'd chosen a blank report, we could create the table
@@ -70,32 +70,24 @@ band which repeats to display each row from our data set. Here's how:
 <li>Expand the Data Sets node of the tree.
 <li>Expand the entry for the Customers data set that we created. This will display
 the columns available from the data set.
-<li>Select the customName column.
+<li>Select the CUSTOMERNAME column.
 <li>Locate the detail band within the table. (It is has a gray "Detail" label.)
-<li>Drag the customName column into the detail band cell second from the
+<li>Drag the CUSTOMERNAME column into the detail band cell second from the
 left. Notice that the designer automatically adds the corresponding column header.
-<li>Drag the phone column into the last cell in the detail band.
+<li>Drag the PHONE column into the last cell in the detail band.
 </ul>
 
 <h1>Create the State Group</h1>
 <p>
-We want our customer listing to be grouped by US state, then city.
+We want our customer listing to be grouped by  state, then city.
 Using a group causes all
 rows within the same state to appear together.
 Let's create the group heading for states:
 
 <ul>
 <li>Locate the group header row in your table. It has a light gray &quot;Group 
-Header&quot; label.<li>Drag the state column into the leftmost cell within the Group Header row.
-<li>Hover your cursor over the table to display the table tab. The table tab 
-appears just below the table.<li>Click on the table tab to display a set of column and row headings
-in the form of shaded boxes much like those in Microsoft Excel. (We'll call this
-the "table scaffolding.")
-<li>The shaded box to the left of each row is the "row header."
-Open the context menu for the row header for the Group Header row.
-<li>Choose Edit Group. The  Group Properties dialog  appears.
-<li>In the Group On field, choose the state column.
-<li>Click OK.
+Header&quot; label.
+<li>Drag the STATE column into the leftmost cell within the Group Header row.
 </ul>
 
 <h3>Creating Groups on your Own</h3>
@@ -103,8 +95,7 @@ Open the context menu for the row header for the Group Header row.
 <p>
 We are using the group created for us by the New Report dialog. If we'd started 
 by dragging the table from the palette, we'd create this first group as we'll 
-explain in the next section.
-</p>
+explain in the next section.</p>
 <p>
 You must bind (associate) the table to a data set 
 before you
@@ -120,11 +111,15 @@ Next, we'll create a city group within the state. This groups
 customers first by state, then by city.
 
 <ul>
-<li>Click on the table tab (as described above) to display the table scaffolding.
-<li>Choose Insert Group from the context menu for the row heading for the state
-group header row. The  Group Properties dialog again appears.
-<li>Chose the city column in the Group On field.
+<li>Click on the table tab (as described above) to display the table scaffolding.<li>
+Click on the row header for the state group header.<li>Choose Insert Group&rarr;Below. 
+The Group Properties dialog appears.
+<li>Chose the CITY column in the Group On field.
 <li>Click OK.</ul>
+
+<p>Notice that BIRT automatically inserted the a Data report item for the city 
+group. Hover the cursor over the &quot;@expression&quot; to see the actual expression: 
+row[&quot;CITY&quot;].</p>
 
 <h1>Add a Table Column</h1>
 We need another table column to display our group heading:<ul>
@@ -132,7 +127,8 @@ We need another table column to display our group heading:<ul>
 scaffolding appears. Click on the shaded column header for the first column.
 <li>Choose Insert&rarr;Column to the Right from the context menu. 
 A new column appears.
-<li>Drag the city column from the Data Explorer into the second column of the
+<li>Move the CITY expression from (the expression in the first column of the 
+second group heder) the second column of the
 second group header.
 </ul>
 
@@ -143,19 +139,9 @@ BIRT added headings for us for each column we added to the table.
 
 <ul>
 <li>Double-click on the first column header text to change it. Type &quot;State&quot; and 
-press Enter.<li>Repeat to change the second column header to &quot;City&quot;.<li>Change 
+press Enter.<li>Drag a label from the palette into the second column heading, 
+type &quot;City&quot; and press Enter.<li>Change 
 the third column header to &quot;Name&quot;.<li>Change the last column header to &quot;Phone&quot;.</ul>
-
-<h2>Adding Labels</h2>
-<p>In this case, BIRT created our labels automatically. However, we can add our 
-own labels as follows:</p>
-
-<ul>
-<li>Make the Palette visible if it is not already.
-<li>Drag a Label item from the Palette into the first cell of the Header 
-row in table.
-<li>Type your label text and press Enter.
-</ul>
 
 </body>
 </html>

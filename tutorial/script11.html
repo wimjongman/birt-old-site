@@ -31,17 +31,14 @@ but if you've changed your default browser font, that is how the report will
 appear.)
 <p>
 Let's use a sans-serif
-style instead. We do this by creating a style using a BIRT-defined style name.
+style instead. We do this by  using a BIRT-defined style.
 If you familiar with CSS, this is like defining a style that selects the HTML
 body tag.
 
 <ul>
 <li>Open or locate the Outline view.
-<li>Scroll down to the bottom to find the Styles node.
-<li>Use the context menu and select New Style.
-<li>In the General page, enter the name "report". It must be all lower case,
-and without the quotes. (This is a style name defined by BIRT itself.)
-<li>In the Font page, choose "sans serif" as the font type.
+<li>Scroll down to the bottom to find the Styles node.<li>Open the Styles node.<li>
+Find the style named &quot;report&quot;. Double-click it to open the Style editor.<li>In the Font page, choose "sans serif" as the font type.
 <li>Click OK.
 </ul>
 All items in your report will change to sans-serif font.
@@ -57,19 +54,15 @@ example: &quot;Helvetica, Arial, sans-serif&quot;.<p>
 <p>
 BIRT defines default styles for most report items and for list and table bands.
 See the <a href="/birt/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>
-for the complete list.
-
-<h1>Check the Report</h1>
+for the complete list.<p>
+The Styles node displays the styles that apply to each of the report items. 
+However, there are additional styles that apply to grouping levels and other 
+contexts. If you wish to use one of these, simply create a style with the 
+required name.<h1>Check the Report</h1>
 <p>
 Let's click the preview tab to see how our report looks after the formatting.
 Not bad, but we still need the report heading.
-<p class="caution"><span class="caution-head">Build S20050328 Note:</span> The 
-report style does not work in this build; your report will continue to appear 
-with the browser's default font. This is a known issue that will be addressed 
-shortly.</p>
-
 <p>
-&nbsp;<p>
 
 </body>
 </html>

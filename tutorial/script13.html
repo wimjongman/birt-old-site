@@ -44,31 +44,25 @@ Layout.
 In the attributes provided, set the size to 6 and the color to blue. Erase the 
 face attribute. The text
 should now look like this:
-<p>
-<div class="code-block">
-&lt;CENTER><br>
-&lt;FONT size="6" color=blue><br>
-<br>
-&lt;/FONT><br>
-&lt;/CENTER></div>
-<p>
+<pre class="code-block">&lt;CENTER>
+&lt;FONT size="6" color=blue>
+
+&lt;/FONT>
+&lt;/CENTER></pre>
 </li>
 <li>Continue adding elements and typing to create the finished HTML:
-<p>
-<div class="code-block">
-&lt;CENTER><br>
-&lt;FONT size="6" color=blue><br>
-Customer Listing<br>
-&lt;/FONT><br>
-&lt;BR><br>
-&lt;I>For internal use only&lt;/I><br>
-&lt;/CENTER></div>
-<p>
+<pre class="code-block">&lt;CENTER>
+&lt;FONT size="6" color=blue>
+Customer Listing
+&lt;/FONT>
+&lt;BR>
+&lt;I>For internal use only&lt;/I>
+&lt;/CENTER></pre>
 <li>Click OK to save your changes.
 </ul>
 
-<div class="caution"><span class="caution-head">Release 1.0M1 Note:</span> 
-The layout editor displays the actual HTML. Later builds
+<div class="caution"><span class="caution-head">Release 1.0 Note:</span> 
+The layout editor displays the actual HTML. Later releases
 may show the formatted text.</div>
 
 <h1>Dynamic Text</h1>
@@ -77,12 +71,10 @@ While we won't use it in this tutorial, there is one other feature of text items
 to note. Select the Dynamic Text category and you'll see a &lt;value-of> tag.
 This allows you to insert expressions directly into your HTML. For example,
 to display an address line in US format, we could say:
-<p>
-<div class="code-block">
-&lt;value-of>row.city&lt;/value-of>,<br>
-&lt;value-of>row.state&lt;/value-of><br>
+<pre class="code-block">&lt;value-of>row.city&lt;/value-of>,
+&lt;value-of>row.state&lt;/value-of>
 &lt;value-of format="@@@@@-@@@@">row.zip&lt;value-of>
-</div>
+</pre>
 <p>
 The contents of the &lt;value-of> tag can be any expression. Indeed, it can be
 any JavaScript code. The optional format attribute lets you use any of BIRT's

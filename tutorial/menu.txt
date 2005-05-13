@@ -5,7 +5,6 @@
 <step name="brief UI tour" 		page="script03.html"	title="Brief UI Tour"/>
 <step name="data source" 		page="script04.html"	title="Building a Data Source"/>
 <step name="data set" 			page="script05.html"	title="Building a Data Set"/>
-<step name="testing a data set" page="script06.html"	title="Editing &amp; Testing a Data Set"/>
 <step name="table" 				page="script07.html"	title="Building a Table"/>
 <step name="testing your report" page="script08.html"	title="Testing a Report"/>
 <step name="visual properties" 	page="script09.html"	title="Setting Visual Properties"/>

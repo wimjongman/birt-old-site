@@ -1,64 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Written by Eclipse BIRT 0.0 (http://www.eclipse.com) -->
-<report xmlns="http://www.eclipse.com/schemas/BIRT_schema.xsd">
+<!-- Written by Eclipse BIRT 1.0 -->
+<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050405-1230></property>
     <property name="units">in</property>
-    <html-property name="description">Sample of report created by the BIRT tutorial.</html-property>
     <data-sources>
-        <oda-data-source name="sfdata">
-            <list-property name="userProperties">
-                <structure>
-                    <property name="name">valid</property>
-                    <property name="type">string</property>
-                </structure>
-            </list-property>
-            <property name="valid">true</property>
-            <property name="driverName">jdbc</property>
-            <list-property name="privateDriverProperties">
-                <ex-property>
-                    <name>ODA:url</name>
-                    <value>jdbc:odbc:sfdata</value>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:user</name>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:password</name>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:driver-class</name>
-                    <value>sun.jdbc.odbc.JdbcOdbcDriver</value>
-                </ex-property>
-            </list-property>
+        <oda-data-source name="Sample">
+            <property name="driverName">sampledb</property>
         </oda-data-source>
     </data-sources>
     <data-sets>
         <oda-data-set name="Customers">
-            <property name="dataSource">sfdata</property>
-            <property name="queryText">SELECT [customers].[custID],
-        [customers].[contact_last],
-        [customers].[contact_first],
-        [customers].[customName],
-        [customers].[phone],
-        [customers].[address],
-        [customers].[city],
-        [customers].[state],
-        [customers].[postalcode],
-        [customers].[creditrank],
-        [customers].[purchaseFrequency],
-        [customers].[purchaseVolume],
-        [customers].[repID] 
- FROM [customers]</property>
+            <property name="dataSource">Sample</property>
+            <property name="queryText">SELECT *
+FROM CUSTOMERS
+WHERE COUNTRY = 'USA'</property>
             <property name="type">JdbcSelectDataSet</property>
         </oda-data-set>
     </data-sets>
     <styles>
+        <style name="report">
+            <property name="fontFamily">sans-serif</property>
+        </style>
+        <style name="label"/>
+        <style name="text"/>
+        <style name="data"/>
+        <style name="table"/>
+        <style name="grid"/>
+        <style name="list"/>
+        <style name="image"/>
         <style name="Header">
             <property name="backgroundColor">#0080FF</property>
             <property name="fontWeight">bold</property>
             <property name="color">#FFFFFF</property>
-        </style>
-        <style name="report">
-            <property name="fontFamily">sans-serif</property>
         </style>
     </styles>
     <page-setup>
@@ -120,33 +93,35 @@
                 <property name="verticalAlign">top</property>
                 <cell>
                     <image>
-                        <expression name="uri">http://localhost/birt/tutorial/multichip-4.jpg</expression>
+                        <expression name="uri">http://www.eclipse.org/birt/tutorial/multichip-4.jpg</expression>
                     </image>
                 </cell>
                 <cell>
+                    <property name="verticalAlign">top</property>
                     <text>
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<CENTER>
-<FONT size="6" color="blue">
-<B>Customer List</B>
+<FONT size="6" color=blue>
+Customer Listing
 </FONT>
 <BR>
-<I>
-For internal use only
-</I>
+<I>For internal use only</I>
 </CENTER>]]></text-property>
                     </text>
                 </cell>
                 <cell>
+                    <property name="verticalAlign">top</property>
                     <data>
-                        <property name="dateTimeFormat">Medium Date</property>
+                        <structure name="dateTimeFormat">
+                            <property name="category">Long Date</property>
+                            <property name="pattern">Long Date</property>
+                        </structure>
                         <expression name="valueExpr">new Date( )</expression>
                     </data>
                 </cell>
             </row>
             <row>
                 <property name="height">0.25in</property>
-                <property name="verticalAlign">top</property>
                 <cell/>
                 <cell/>
                 <cell/>
@@ -169,21 +144,20 @@ For internal use only
             <property name="dataSet">Customers</property>
             <list-property name="sort">
                 <structure>
-                    <expression name="key">row["customName"]</expression>
-                    <property name="direction">asc</property>
+                    <expression name="key">row["CUSTOMERNAME"]</expression>
                 </structure>
             </list-property>
             <column>
-                <property name="width">1.01in</property>
+                <property name="width">1.208in</property>
             </column>
             <column>
-                <property name="width">1.27in</property>
+                <property name="width">1.197in</property>
             </column>
             <column>
-                <property name="width">2.083in</property>
+                <property name="width">2.114in</property>
             </column>
             <column>
-                <property name="width">33.4%</property>
+                <property name="width">1.635in</property>
             </column>
             <header>
                 <row>
@@ -214,17 +188,15 @@ For internal use only
                 </row>
             </header>
             <group>
-                <property name="interval">none</property>
-                <property name="sortDirection">asc</property>
-                <expression name="keyExpr">row["state"]</expression>
+                <expression name="keyExpr">row["STATE"]</expression>
                 <header>
                     <row>
-                        <property name="backgroundColor">#B0D8FF</property>
+                        <property name="backgroundColor">#BBDDFF</property>
                         <cell>
                             <data>
                                 <property name="fontSize">large</property>
                                 <property name="fontWeight">bold</property>
-                                <expression name="valueExpr">row["state"]</expression>
+                                <expression name="valueExpr">row["STATE"]</expression>
                             </data>
                         </cell>
                         <cell/>
@@ -244,7 +216,7 @@ For internal use only
             <group>
                 <property name="interval">none</property>
                 <property name="sortDirection">asc</property>
-                <expression name="keyExpr">row["city"]</expression>
+                <expression name="keyExpr">row["CITY"]</expression>
                 <header>
                     <row>
                         <cell/>
@@ -252,7 +224,7 @@ For internal use only
                             <data>
                                 <property name="fontSize">large</property>
                                 <property name="color">#0080FF</property>
-                                <expression name="valueExpr">row["city"]</expression>
+                                <expression name="valueExpr">row["CITY"]</expression>
                             </data>
                         </cell>
                         <cell/>
@@ -274,13 +246,16 @@ For internal use only
                     <cell/>
                     <cell>
                         <data>
-                            <expression name="valueExpr">row["customName"]</expression>
+                            <expression name="valueExpr">row["CUSTOMERNAME"]</expression>
                         </data>
                     </cell>
                     <cell>
                         <data>
-                            <property name="stringFormat">(@@@) @@@-@@@@</property>
-                            <expression name="valueExpr">row["phone"]</expression>
+                            <structure name="stringFormat">
+                                <property name="category">Custom</property>
+                                <property name="pattern">(@@@)@@@-@@@@</property>
+                            </structure>
+                            <expression name="valueExpr">row["PHONE"]</expression>
                         </data>
                     </cell>
                 </row>
