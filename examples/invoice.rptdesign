@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Written by Eclipse BIRT 0.0 (http://www.eclipse.com) -->
 <report xmlns="http://www.eclipse.com/schemas/BIRT_schema.xsd">
+    <property name="createdBy">Eclipse BIRT Designer Version 0.0.1 Build &lt;20050405-1230></property>
     <property name="units">in</property>
     <data-sources>
         <oda-data-source name="sfdata">
@@ -67,7 +68,7 @@
                     <expression name="expression">row["pricequote"]*row["quantity"]</expression>
                 </structure>
             </list-property>
-            <property name="queryText"> SELECT [items].[itemcode],
+            <property name="queryText">SELECT [items].[itemcode],
         [items].[description],
         [items].[pricequote],
         [items].[quantity],

@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Written by Eclipse BIRT 0.0 (http://www.eclipse.com) -->
-<report xmlns="http://www.eclipse.com/schemas/BIRT_schema.xsd">
+<!-- Written by Eclipse BIRT 1.0 -->
+<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
     <property name="units">in</property>
     <data-sources>
-        <oda-data-source name="sfdata">
-            <property name="driverName">jdbc</property>
-            <list-property name="publicDriverProperties">
-                <ex-property>
-                    <name>ODA:url</name>
-                    <value>jdbc:odbc:sfdata</value>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:user</name>
-                    <value>admin</value>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:password</name>
-                </ex-property>
-                <ex-property>
-                    <name>ODA:driver-class</name>
-                    <value>sun.jdbc.odbc.JdbcOdbcDriver</value>
-                </ex-property>
+        <oda-data-source extensionName="jdbc" name="sfdata">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">valid</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
+            <property name="valid">true</property>
+            <property name="driverName">jdbc</property>
+            <property name="odaDriverClass">sun.jdbc.odbc.JdbcOdbcDriver</property>
+            <property name="odaURL">jdbc:odbc:sfdata</property>
+            <property name="odaUser"></property>
+            <property name="odaPassword"></property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -53,7 +47,10 @@
             <property name="fontWeight">bold</property>
         </style>
         <style name="Phone">
-            <property name="stringFormat">(@@@) @@@-@@@@</property>
+            <structure name="stringFormat">
+                <property name="category">Custom</property>
+                <property name="pattern">(@@@) @@@-@@@@</property>
+            </structure>
         </style>
         <style name="Gray">
             <property name="backgroundColor">#DADADA</property>
