@@ -50,9 +50,6 @@ h3 {
 .q {
 	font-weight: bold;
 }
-.ans {
-	padding-left: 24pt;
-}
 
 /* Simple table */
 
@@ -104,5 +101,4 @@ pre, code {
 .caution-head {
 	font-weight: bold;
 }
-
 
