@@ -1,0 +1,49 @@
+<html>
+<body>
+<h1>Design Element</h1>
+Abstract element that represents anything
+that has properties.
+<h2>Summary</h2>
+<table>
+<tr><td>Type:</td><td>Abstract</td></tr>
+<tr><td>Display Name:</td><td>Design Element</td></tr>
+<tr><td>Internal Name:</td><td>design-element</td></tr>
+<tr><td>JavaScript Design-time Object:</td><td>DesignElementDefn</td></tr>
+<tr><td>JavaScript Runtime Object:</td><td>DesignElement</td></tr>
+<tr><td>Since:</td><td>1.0</td></tr>
+</table>
+<h2>Description</h2>
+<h2>Property Summary</h2>
+<table>
+<tr>
+<td><code>userProperties</code>
+<td>List of user-defined properties defined on this element. Null if no user-defined properties are available. Each item in the array is a UserProperty object.
+<tr>
+<td><code>propertyMasks
+<td>List of user-defined property masks. Null if no masks are defined. Each item in the array is a PropertyMask object.
+<tr>
+<td><code><code>methods</code></code>
+<td>An associative array of method names. The method name is the key into the array. Returns a String that holds the method text, or null if no method is defined.
+<tr>
+<td>custom</code>
+<td>Returns the value of the custom XML, if any, set for this element. Returns a String if the XML is provided, null otherwise.
+</table>
+
+<h2><code>userProperties</code> Property</h2>
+
+<h3>Summary</h3>
+<table>
+<tr><td>Display Name:<td>User-Defined Properties
+<tr><td>ROM Type:<td>List of User Property Definition structures
+<tr><td>JavaScript Type:<td>Array of UserPropertyDefn objects
+<tr><td>Default value: <td>None
+<tr><td>Inherited:<td>Yes
+<tr><td>Settable at runtime:<td>No
+<tr><td>Availability:<td>First release
+</table>
+<h3>Description</h3>
+The list of user-defined properties defined for this element.
+<h3>See Also</h3>
+User Property Definition structure
+</body>
+</html>

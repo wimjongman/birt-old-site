@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+<head>
+<title>Computed Column Element (Eclipse BIRT ROM Documentation)</title>
+<link rel="stylesheet" href="../style/style.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<p class="title">Eclipse BIRT Report Object Model (ROM)</p>
+<p class="subtitle">ComputedColumn Structure</p>
+<h1>Structure Overview</h1>
+<div class="section-text">
+A user-defined column in the result set.</div>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Computed Column</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+</table>
+
+<h3>Property Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Property-columnName">columnName</a></dt>
+<dd>The name of the computed column.</dd>
+<dt><a href="#Property-expression">expression</a></dt>
+<dd>The BIRT expression that defines the value of the computed column.</dd>
+</dl>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A computed column is a user-defined column produced as an 
+expression of other columns within the data set. It is not one of the columns 
+retrieved directly from the underlying data provider.</p></div>
+<h1>Property Detail</h1>
+
+<h2><a name="Property-columnName">columnName Property</a></h2>
+
+<p class="section-text">The name of the computed column.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Column Name</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The name of the computed column and is required. The name 
+must be unique within the result set.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>The Result Column Names section for 
+the naming rules.</p></div>
+
+<hr>
+<h2><a name="Property-expression">expression Property</a></h2>
+
+<p class="section-text">The BIRT expression that defines the value of the computed column.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#expression">expression</a></td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Expression Type:</td>
+<td>any</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Expression</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The expression that gets evaluated and its resulting 
+value assigned to the computed column.</p></div>
+</body>
+</html>

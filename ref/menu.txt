@@ -1,5 +1,6 @@
 <birt-menu>
 <top name="reference" page="../ref"/>
+<item name="ROM documentation" url="/birt/ref/rom/index.html">
 <item name="ROM overview" page="ROM_Overview_SPEC.pdf"/>
 <item name="ROM base elements" page="ROM_Base_Elements_SPEC.pdf"/>
 <item name="ROM design" page="ROM_Design_SPEC.pdf"/>
