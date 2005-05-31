@@ -3,6 +3,8 @@
  * of integrating the BIRT report engine into a simple Java application.
  */
 
+package org.eclipse.birt.demo;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -148,14 +150,7 @@ public class RunReport
 		catch ( EngineException e )
 		{
 			System.err.println( "Report " + name + " not found!\n" );
-			try
-			{
-				engine.destroy( );
-			}
-			catch ( EngineException e1 )
-			{
-				// Ignore
-			}
+			engine.destroy( );
 			return;
 		}
 		
@@ -193,14 +188,7 @@ public class RunReport
 			}
 		}
 			
-		try
-		{
-			engine.destroy( );
-		}
-		catch ( EngineException e1 )
-		{
-			// Ignore
-		}
+		engine.destroy( );
 	}
 	
 	// Display properties of the report and the list of report parameters.
@@ -267,5 +255,43 @@ public class RunReport
 		
 		Object value = task.getDefaultValue( param );
 		System.out.println( value == null ? "none" : value.toString( ) );
+	}
+	
+	static void parseParams( ReportEngine engine, IReportRunnable report, HashMap values )
+	{
+		if ( values.isEmpty( ) )
+			return;
+		
+		IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( report );
+		Collection params = task.getParameterDefns( false );
+		Iterator iter = values.keySet( ).iterator( );
+		while ( iter.hasNext( ) )
+		{
+			String name = (String) iter.next( );
+			
+			IScalarParameterDefn found = null;
+			Iterator i2 = params.iterator( );
+			while ( i2.hasNext( ) )
+			{
+				IParameterDefnBase param = (IParameterDefnBase) i2.next( );
+				if ( param instanceof IParameterGroupDefn )
+					continue;
+				if ( param.getName( ).equals( name ) )
+				{
+					found = (IScalarParameterDefn) param;
+					break;
+				}
+			}
+			if ( found == null )
+			{
+				System.err.println( "Parameter " + name + " not found in the report." );
+				continue;
+			}
+			String value = (String) values.get( name );
+//			ReportParameterConverter cfgConverter = new ReportParameterConverter( "", Locale.getDefault( ) );
+//			Object obj = cfgConverter.parse( value, found.getDataType( ) );
+//			values.put( name, obj );
+			values.put( name, value );
+		}
 	}
 }
