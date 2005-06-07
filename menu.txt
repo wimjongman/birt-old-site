@@ -7,7 +7,8 @@
 <item name="sample db" page="db"/>
 <item name="tutorial" page="tutorial"/>
 <item name="integration" page="deploy"/>
-<item name="faq" page="faq"/>
+<item name="faq" url="wiki/index.php?n=FAQ.FAQ"/>
+<item name="wiki" url="wiki"/>
 <not-yet-item name="building reports" page="reports"/>
 <not-yet-item name="integration" page="integ"/>
 <not-yet-item name="maintenance" page="maint"/>
