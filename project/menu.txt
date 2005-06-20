@@ -7,8 +7,7 @@
 <item name="contributors" page="contributors.html"/>
 <not-yet-space/>
 <item name="summary plan" page="summary_plan.html"/>
-<item name="project plan" page="project_plan_R1_0.html"/>
-<item name="requirements" url="R1_Requirements.pdf"/>
+<item name="project plan" page="project_plan_R1_0_1.html"/>
 <item name="1.0 review" url="Eclipse_BIRT_Project_1_0_Release_Review_2005-04-28.pdf"/>
 <not-yet-space/>
 <item name="ECE project" url="http://www.eclipse.org/ece"/>
