@@ -4,6 +4,10 @@ $WikiTitle = "Eclipse BIRT Wiki";
 $PageLogoUrl = "/birt/images/EclipseBannerPic.jpg";
 $Skin = 'birt';
 
+$DefaultPasswords['admin'] = crypt('!sniggoc');
+$DefaultPasswords['attr'] = crypt('!sniggoc');
+$DefaultPasswords['edit'] = crypt('!sniggoc');
+
 $EnableGUIButtons = 1;
 
 ##  The following lines make additional editing buttons appear in the
