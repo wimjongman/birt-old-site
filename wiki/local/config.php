@@ -30,4 +30,4 @@ $GUIButtons['table'] = array(600,
                      '$GUIButtonDirUrlFmt/table.gif"$[Table]"');
                      
 include_once('scripts/urlapprove.php');
-$UnapprovedLinkCountMax = 2;                     
+$UnapprovedLinkCountMax = 5;                     
