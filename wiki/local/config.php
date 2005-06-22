@@ -7,9 +7,6 @@ $Skin = 'birt';
 $DefaultPasswords['admin'] = crypt('!sniggoc');
 $DefaultPasswords['attr'] = crypt('!sniggoc');
 
-include_once('scripts/urlapprove.php');
-UnapprovedLinkCountMax = 3;
-
 $EnableGUIButtons = 1;
 
 ##  The following lines make additional editing buttons appear in the
