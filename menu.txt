@@ -1,11 +1,12 @@
 <birt-menu>
+<item name="introduction" page="intro"/>
 <item name="download" url="http://download.eclipse.org/birt/downloads"/>
 <not-yet-space/>
 <not-yet-item name="new to BIRT" page="newUser"/>
-<item name="introduction" page="intro"/>
-<item name="examples" page="examples"/>
-<item name="sample db" page="db"/>
+<item name="install" page="build/install.html"/>
 <item name="tutorial" page="tutorial"/>
+<item name="sample db" page="db"/>
+<item name="examples" page="examples"/>
 <item name="integration" page="deploy"/>
 <item name="faq" url="wiki/index.php?n=FAQ.FAQ"/>
 <item name="wiki" url="wiki"/>
@@ -18,5 +19,5 @@
 <item name="reference" page="ref"/>
 <not-yet-space/>
 <item name="project" page="project"/>
-<item name="build" page="build"/>
+<item name="building birt" page="build"/>
 </birt-menu>
