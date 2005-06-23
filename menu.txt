@@ -20,4 +20,5 @@
 <not-yet-space/>
 <item name="project" page="project"/>
 <item name="building birt" page="build"/>
+<item name="search" page="search.html"/>
 </birt-menu>
