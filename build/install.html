@@ -112,14 +112,14 @@ default location, this is "C:\program files\eclipse\plugins".
 <li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Restart Eclipse with the -clean option: <code>eclipse -clean</code></ul>
-<h2>Upgrading JDBC Drivers from M2 or Earlier</h2>
-<p>Builds earlier than M3 stored JDBC driver information within the plugin 
+<h2>Upgrading JDBC Drivers from 1.0M2 or Earlier</h2>
+<p>Builds earlier than 1.0M3 stored JDBC driver information within the plugin 
 structure, and so the drivers had to be reinstalled with each build. Starting 
-with M3, this is no longer necessary. However, if you upgrade to M3 from an 
+with 1.0M3, this is no longer necessary. However, if you upgrade to 1.0M3 from an 
 older build, you will need to reinstall your JDBC drivers as described above.</p>
-<h2>Upgrading M1 Report Designs</h2>
-<p>If you have a report created with BIRT M1, the data source information will 
-be lost when opening that design in M3 or later. Here's what to do:</p>
+<h2>Upgrading 1.0M1 Report Designs</h2>
+<p>If you have a report created with BIRT 1.0M1, the data source information will 
+be lost when opening that design in 1.0M3 or later. Here's what to do:</p>
 <ol>
   <li>Note your data source name.</li>
   <li>Delete your data source.</li>
@@ -132,9 +132,9 @@ be lost when opening that design in M3 or later. Here's what to do:</p>
   source.</li>
   <li>Repeat steps 5-7 for each additional data source.</li>
 </ol>
-<h2>Upgrading M2 Charts</h2>
-<p>The chart format changed from M2 to M3. If your report contains charts, they 
-will not open in M3 or later. You must either recreate the report, or use a text editor 
+<h2>Upgrading 1.0M2 Charts</h2>
+<p>The chart format changed from 1.0M2 to 1.0M3. If your report contains charts, they 
+will not open in 1.0M3 or later. You must either recreate the report, or use a text editor 
 to remove the chart elements from your design, open the design within BIRT, and 
 add your charts.</p>
 
