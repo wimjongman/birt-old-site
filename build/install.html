@@ -26,9 +26,11 @@ familiar with Eclipse plugins, you might want to follow the abbreviated
 requirements and instructions on the
 <a href="http://download.eclipse.org/birt/downloads">
 download page</a>.
-Otherwise, follow along below for detailed steps for installing BIRT.<p>
-The instructions here are for the M3 (and later) builds. Please use M3 or later 
-instead of the earlier milestone or stable builds.<h1>Java</h1>
+Otherwise, follow along below for detailed steps for installing BIRT.
+<p>
+The instructions here are for the Release 1.0 (and later) builds. Please use 1.0 or later 
+instead of the earlier milestone or stable builds.
+<h1>Java</h1>
 <p>
 You'll need a <a href="http://java.sun.com">Java</a> J2SE 1.4 JDK. The latest version, 
 at the time of writing, is 1.4.2_08. Download
@@ -37,8 +39,8 @@ and install it. (BIRT includes an embedded version of Apache Jakarta Tomcat for
 previewing reports. Tomcat's JSP engine requires a Java compiler and so you must 
 install the JDK, not just the JRE.)<h1>Eclipse</h1>
 <p>
-BIRT is compatible with Eclipse 3.0.1. BIRT will not run with Eclipse 2.x; and has
-known problems with the Eclipse 3.1 milestone builds. BIRT has not been tested with
+BIRT 1.0 is compatible with Eclipse 3.0.1. BIRT will not run with Eclipse 2.x; and has
+known problems with  Eclipse 3.1. (BIRT release 1.0.1 will provide compatibility.) BIRT has not been tested with
 the Eclipse 3.0 release. Download and install the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
 Eclipse Platform 3.0.1 Release</a>.
@@ -48,12 +50,6 @@ Eclipse Platform 3.0.1 Release</a>.
 <p>
 Eclipse comes as a zip file or tar file. On Windows, unzip the install file
 into your "C:\Program Files" directory. This will create a subdirectory called eclipse.
-
-<p class="caution"><span class="caution-head">Build M3 Note</span>: M3 includes 
-a sample database using Apache Derby as the DBMS. M3 has a bug that the sample 
-database will not work if your install path contains a space. If you want to use 
-the sample database, install Eclipse in a path without spaces. On Windows, this 
-means to install Eclipse in &quot;C:\eclipse&quot; instead of &quot;C:\Program Files&quot;.</p>
 
 <p>
 To make it easier to start Eclipse on Windows, create a shortcut to Eclipse on your desktop:
@@ -88,10 +84,9 @@ This is the same directory you used for GEF.
 
 <h1>BIRT</h1>
 <p>
-Download the
-<a href="http://download.eclipse.org/birt/downloads/">
-Latest milestone or stable build</a> (whichever is newer). Download only the
-BIRT designer: "birt-designer-XXX.zip".
+Download <a href="http://download.eclipse.org/birt/downloads/">
+Release 1.0</a> (or later). Download only the
+BIRT designer framework for now: "birt-report-framework-1_0.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
@@ -122,9 +117,9 @@ default location, this is "C:\program files\eclipse\plugins".
 structure, and so the drivers had to be reinstalled with each build. Starting 
 with M3, this is no longer necessary. However, if you upgrade to M3 from an 
 older build, you will need to reinstall your JDBC drivers as described above.</p>
-<h2>Upgrading M1 Report Designs to M3</h2>
+<h2>Upgrading M1 Report Designs</h2>
 <p>If you have a report created with BIRT M1, the data source information will 
-be lost when opening that design in M3. Here's what to do:</p>
+be lost when opening that design in M3 or later. Here's what to do:</p>
 <ol>
   <li>Note your data source name.</li>
   <li>Delete your data source.</li>
@@ -137,9 +132,9 @@ be lost when opening that design in M3. Here's what to do:</p>
   source.</li>
   <li>Repeat steps 5-7 for each additional data source.</li>
 </ol>
-<h2>Upgrading M2 Charts to M3</h2>
+<h2>Upgrading M2 Charts</h2>
 <p>The chart format changed from M2 to M3. If your report contains charts, they 
-will not open in M3. You must either recreate the report, or use a text editor 
+will not open in M3 or later. You must either recreate the report, or use a text editor 
 to remove the chart elements from your design, open the design within BIRT, and 
 add your charts.</p>
 
