@@ -1,5 +1,5 @@
 BIRT
 http://www.eclipse.org/birt
-1.0 05/2005 Planned http://www.eclipse.org/birt/index.php?page=project/project_plan_R1_0.html
+1.0 05/2005 Completed http://www.eclipse.org/birt/index.php?page=project/project_plan_R1_0.html
 1.0.1 07/2005 Planned http://www.eclipse.org/birt/index.php?page=project/project_plan_R1_0_1.html
 2.0 12/2005 Tentative http://www.eclipse.org/birt/index.php?page=project/summary_plan.html
