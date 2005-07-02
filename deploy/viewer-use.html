@@ -21,12 +21,6 @@ Eclipse, it simply acts as an example of the application you might build to run
 and view reports. Your report viewer application must be in Java so that it has access to the 
 BIRT engine.</p>
 
-<p class="caution">
-<span class="caution-head">1.0M2 Note</span>: The viewer described here is 
-becoming stable. 
-Work is ongoing to refine the viewer. URLs, servelet mappings, parameters and other details 
-may still change, but changes will be fewer than in previous builds.</p>
-
 <p>The Viewer performs three distinct operations, of which one is internal and 
 not visible to your application:</p>
 
@@ -94,10 +88,10 @@ get parameter definitions.</p>
 
 <p>The run report URL is of the form:</p>
 
-<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/run?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
+<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/run?<i>option1</i>=<i>value1</i>;<em>option</em><i>2</i>=<i>value2;...</i>
 </pre>
 
-<p>See below for a list of available parameters.</p>
+<p>See below for a list of available viewer command options.</p>
 
 <h1>Viewer Frameset</h1>
 
@@ -125,10 +119,10 @@ output.</p>
 
 <p>The viewer URL is of the form:</p>
 
-<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/frameset?<i>param1</i>=<i>value1</i>;<i>param2</i>=<i>value2;...</i>
+<pre class="code-block">http:<i>//sitePrefix</i>/birt-viewer/frameset?<i>option1</i>=<i>value1</i>;<i>option2</i>=<i>value2;...</i>
 </pre>
 
-<p>See below for a list of available parameters. The parameters allow you to 
+<p>See below for a list of available command options. The command options allow you to 
 control which of the three frames appear in the resulting web page.</p>
 
 <p>When you issue this command, the viewer will do one of two things:</p>
@@ -139,17 +133,16 @@ control which of the three frames appear in the resulting web page.</p>
   click the Run Report button to run the report.</li>
 </ul>
 
-<h1>Viewer Parameters</h1>
+<h1>Viewer Command Options </h1>
 
-<p>Both Viewer operations take a set of required and optional parameters. They include both report&nbsp; and viewer parameters. Report parameters are 
+<p>The run and the frameset Viewer operations both take a set of options which  include  report parameters. Report parameters are 
 defined within the report design. They appear in the URL using their internal names, 
-not display names. Viewer parameters pass information to the BIRT Viewer web 
-app. Viewer parameters start with a double underscore to differentiate them 
-from report parameters. Parameter names and values must be encoded for use in a 
+not display names. Viewer options pass information to the BIRT Viewer web 
+app. Viewer options start with a double underscore to differentiate them 
+from report parameters. Option names and values must be encoded for use in a 
 URL. For example:</p>
 
-<pre class="code-block">http://localhost:8080/birt-viewer/run?__report=reports5Ctest.rptdesign&amp;sample=Hello
-</pre>
+<pre class="code-block">http://localhost:8080/birt-viewer/run?__report=report%5CSalesInvoice.rptdesign&amp;OrderNumber=10010</pre>
 
 <p>In the above:</p>
 
@@ -158,26 +151,26 @@ URL. For example:</p>
   installation of the app server.</li>
   <li>/birt-viewer/ &ndash; The name of the BIRT Viewer servlet.</li>
   <li>run &ndash; The servlet mapping for running a report.</li>
-  <li>reports%5Ctest.rptdesign &ndash; Relative file system 
+  <li>report%5CSalesInvoice.rptdesign &ndash; Relative file system 
   path of the report to run. The name is relative to the web app directory in 
   which the birt-viewer was installed.</li>
-  <li>sample=Hello &ndash; The name and value of a report 
+  <li>OrderNumber=10010 &ndash; The name and value of a report 
   parameter as defined in the report design.</li>
 </ul>
 
 <p class="caution">
 <span class="caution-head">Release 1.0 Note</span>: The viewer supports only the 
-GET method of passing parameters to the Viewer. If your reports will have 
-parameter values that are too long for a URL, then you'll want to create a 
+GET method of passing options to the Viewer. If your reports will have 
+option values that are too long for a URL, then you'll want to create a 
 customized viewer that supports the POST method.</p>
 
-<h2>List of Parameters</h2>
+<h2>List of Options </h2>
 
-<p>The available viewer parameters include:</p>
+<p>The available viewer options include:</p>
 
 <table class="simple-table">
   <tr>
-    <td><b>Parameter</b></td>
+    <td><b>Option</b></td>
     <td><b>Description</b></td>
     <td><b>Values</b></td>
     <td><b>Default</b></td>
@@ -202,7 +195,7 @@ customized viewer that supports the POST method.</p>
   </tr>
   <tr>
     <td>__isnull</td>
-    <td>Identifies that a parameter has a null value</td>
+    <td>Identifies that a report parameter has a null value</td>
     <td>Parameter name</td>
     <td>None. Required.</td>
     <td>Y</td>
@@ -252,38 +245,34 @@ customized viewer that supports the POST method.</p>
 
 <h2>Case-Sensitivity</h2>
 
-<p>Case-sensitivity of the parameters varies:</p>
+<p>Case-sensitivity of the options varies:</p>
 
 <ul>
-  <li>Viewer parameter names and values are case-insensitive.</li>
+  <li>Viewer option names and values are case-insensitive.</li>
   <li>Report parameter names are case-sensitive: they must match the name as defined in the design.</li>
   <li>The file name case sensitivity is defined by your operating system.</li>
 </ul>
 
 <p>If 
-the URL contains a misspelled parameter name, or the name of report parameters 
+the URL contains a misspelled option name, or the name of report parameters 
 are in the wrong case, then the Viewer silently ignores the parameter.</p>
 
-<h2>The <code>__format</code> Parameter</h2>
+<h2>The <code>__format</code> Option </h2>
 
 <p>The type of output to produce: either <code>html</code> or <code>pdf</code>. 
 Values are case 
 insensitive. If a value other than <code>pdf</code> is provided, then the HTML format is 
 produced.</p>
 
-<p class="caution">
-<span class="caution-head">1.0M2 Note</span>: The __format=pdf parameter does 
-not work in the 1.0M2 build.</p>
-
-<h2>The __frame Parameter</h2>
+<h2>The __frame Option </h2>
 
 <p>Determines whether to display the Viewer as a frameset (true), or a  single 
 page (false).</p>
 
 <ul>
   <li><code>true</code> (default) &ndash; The resulting web page contains three 
-frames: Report data, parameter page (depending on the __navigation parameter) 
-  and toolbar (depending on the __toolbar parameter).</li>
+frames: Report data, parameter page (depending on the __navigation opttion) 
+  and toolbar (depending on the __toolbar option).</li>
   <li><code>false</code> &ndash; The report is 
 displayed as a single page. The parameter UI and tool bar are aggregated into 
   the report page using an HTML table. The report itself is put into an embedded HTML iframe since 
@@ -293,7 +282,7 @@ displayed as a single page. The parameter UI and tool bar are aggregated into
 <p>The default is to display the viewer as a frameset. Values are case 
 insensitive. </p>
 
-<h2>The __isnull Parameter</h2>
+<h2>The __isnull Option </h2>
 
 <p>Report parameters can take a value, or can be null. (Here &quot;null&quot; means the 
 database definition: the value is unknown.) By definition, date and numeric 
@@ -305,18 +294,14 @@ string parameter is is null, just write:</p>
 
 <pre class="code-block">__isnull=<i>yourParam</i></pre>
 
-<p>While this URL parameter is primarily for string report parameters, it works just 
+<p>While this option is primarily for string report parameters, it works just 
 as well for other report parameter types as well. See the
 <a href="#reportParams">Report Parameters</a> section below for additional 
 details.</p>
 
-<p class="caution">
-<span class="caution-head">1.0M2 Note</span>: The __isnull parameter is not yet 
-available in the M2 build.</p>
+<h2>The <code>__locale</code> Option </h2>
 
-<h2>The <code>__locale</code> Parameter</h2>
-
-<p>Use the <code>__locale</code> parameter to specify both the locale for report 
+<p>Use the <code>__locale</code> option to specify both the locale for report 
 parameter 
 values, and the locale for the report output. The locale must be a valid Java 
 locale such as <code>en-us</code>, etc. as specified in the
@@ -324,7 +309,7 @@ locale such as <code>en-us</code>, etc. as specified in the
 Java locale guidelines</a>. If you do not specify a locale, it defaults to the 
 locale set in the Java virtual machine (JVM.)</p>
 
-<h2>The <code>__navigation</code> Parameter</h2>
+<h2>The <code>__navigation</code> Option </h2>
 
 <p>Controls the contents of the navigation frame. The navigation frame shows the 
 parameter entry page. (It will show additional navigation tools in future 
@@ -339,14 +324,10 @@ releases, hence the name.) Choices are:</p>
 
 <p>Values are case insensitive.</p>
 
-<p class="caution">
-<span class="caution-head">1.0M2 Note</span>: The __navigation parameter does 
-not work in the 1.0M2 build.</p>
+<h2>The <code>__report</code> Option </h2>
 
-<h2>The <code>__report</code> Parameter</h2>
-
-<p>The <code>__report</code> parameter names the 
-report design to run. The parameter can be an absolute or relative file name. If 
+<p>The <code>__report</code> Option names the 
+report design to run. It can be an absolute or relative file name. If 
 relative, the looks in the directory specified in the <code>BIRT_VIEWER_REPORT_ROOT</code> property in the viewer's <code>web.xml</code> file. 
 The file search rules are:</p>
 
@@ -358,7 +339,7 @@ The file search rules are:</p>
   name.</li>
 </ul>
 
-<h2>The <code>__toolbar</code> Parameter</h2>
+<h2>The <code>__toolbar</code> Option </h2>
 
 <p>Displays the report toolbar.
 The toolbar contains two buttons:</p>
@@ -369,7 +350,7 @@ parameter page, if it was visible.</li>
   <li>A &quot;PDF&quot; button that reruns the report as a PDF document.</li>
 </ul>
 
-<p>This parameter takes one of two values:</p>
+<p>This option takes one of two values:</p>
 
 <ul>
   <li> <code>true</code> (default) – displays the toolbar.</li>
@@ -452,9 +433,6 @@ report engine will raise an error.</p>
 <h1>Error Reporting</h1>
 
 <p>If an error occurs during the operation, an error page will appear.</p>
-
-<p class="caution"><span class="caution-head">1.0M2 Note</span>: Some errors are 
-reported as a blank result page.</p>
 
 <p>&nbsp;</p>
 
