@@ -37,6 +37,8 @@ if ( preg_match( "/([0-9]*)-([0-9]*)-([0-9]*) /", $buildDate, $match ) )
 $hasDesigner = $buildInfo[ "designer" ] != "";
 $hasEngine = $buildInfo[ "engine" ] != "";
 $hasChart = $buildInfo[ "chart" ] != "";
+$hasSamples = $buildInfo[ "samples" ] != "";
+$hasTests = $buildInfo[ "tests" ] != "";
 
 
 addJump( "Build Documentation", "buildDoc" );
@@ -51,6 +53,14 @@ if ( $hasEngine )
 if ( $hasChart )
 {
 	addJump( "Chart Engine", "chart" );
+}
+if ( $hasSamples )
+{
+	addJump( "Samples", "samples" );
+}
+if ( $hasTests )
+{
+	addJump( "Test Suites", "tests" );
 }
 addJump( "Build Logs", "logs" );
 
@@ -246,8 +256,31 @@ charts independetly of the rest of BIRT.</p>
 <?
 		buildTable( "chart" );
 	}
+	if ( $hasSamples )
+	{
 ?>
 
+<h1><a name="samples">Samples</a></h1>
+
+<p>Sample reports, charts and integration code. Download this if you
+want examples of how to use BIRT.</p>
+
+<?
+		buildTable( "samples" );
+	}
+	if ( $hasTests )
+	{
+?>
+
+<h1><a name="tests">Test Suites</a></h1>
+
+<p>Automated tests for BIRT functions. Download this if you want to modify,
+build and perform regression testing a customized version of BIRT.</p>
+
+<?
+		buildTable( "tests" );
+	}
+?>
 <h1><a name="logs">Build Logs</a></h1>
 
 The following are the build logs created for this build.
