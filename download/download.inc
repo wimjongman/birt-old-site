@@ -1,8 +1,9 @@
 <?php
 
-$pageDir = "download";
-$birtPath = "../";
-require "../include/header.inc";
+global $birtHome, $viewer;
+$birtHome = "http://www.eclipse.org/birt";
+$viewer = $birtHome . "/index.php?page=";
+require "body.inc";
 
 $dropDir = "drops";
 
@@ -60,6 +61,7 @@ function readBuildLog( $type, $logName )
 function latestBuild( $type )
 {
 	global $builds;
+	global $birtHome;
 	$buildTypeName = "BIRT";
 	switch ( $type )
 	{
@@ -101,6 +103,23 @@ function readLogs( $publicOnly = false )
 		readBuildLog( NIGHTLY_BUILD, "$dropDir/nightly.log" );
 }
 
+function pageHeader( $head, $title, $subtitle )
+{
+	global $birtHome;
+	echo <<<END
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title>$head</title>
+<link rel="stylesheet" href="$birtHome/style/frame_page.css" type="text/css">
+<LINK REL="shortcut icon" HREF="http://www.eclipse.org/images/eclipse.ico"
+	  TYPE="image/x-icon">
+</head>
+<body>
+
+END;
+
+	showPageTitle( $title, $subtitle );
+}
+
 ?>
-
-
