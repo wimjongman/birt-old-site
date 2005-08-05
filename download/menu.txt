@@ -1,6 +1,0 @@
-<birt-menu>
-<top name="download" url="/birt/download"/>
-<item name="all builds" url="build_list.php"/>
-<item name="build types" page="build_types.html"/>
-<item name="building BIRT" page="build_instr.html"/>
-</birt-menu>
