@@ -1,8 +1,8 @@
 <?php
-$birtPath = "../";
-$pageDir = "download";
-require "../include/header.inc";
-$viewerBase = $viewer . "download/";
+require "download.inc";
+global $viewer;
+global $birtHome;
+global $buildPath;
 
 $buildDir = $_GET['build'];
 
@@ -35,16 +35,22 @@ if ( preg_match( "/([0-9]*)-([0-9]*)-([0-9]*) /", $buildDate, $match ) )
 }
 
 $hasDesigner = $buildInfo[ "designer" ] != "";
+$hasRcp = $buildInfo[ "rcp" ] != "";
 $hasEngine = $buildInfo[ "engine" ] != "";
 $hasChart = $buildInfo[ "chart" ] != "";
 $hasSamples = $buildInfo[ "samples" ] != "";
 $hasTests = $buildInfo[ "tests" ] != "";
+$hasDb = $buildInfo [ "database" ] != "";
 
 
 addJump( "Build Documentation", "buildDoc" );
 if ( $hasDesigner )
 {
 	addJump( "Report Designer", "designer" );
+}
+if ( $hasRcp )
+{
+	addJump( "RCP Designer", "rcp" );
 }
 if ( $hasEngine )
 {
@@ -62,6 +68,10 @@ if ( $hasTests )
 {
 	addJump( "Test Suites", "tests" );
 }
+if ( $hasDb )
+{
+	addJump( "Demo Database", "db" );
+}
 addJump( "Build Logs", "logs" );
 
 $title = "BIRT $buildTypeName Build: $buildName";
@@ -75,9 +85,9 @@ function buildTable( $proj )
 	
 	$ok = $buildInfo[ $proj . "OK" ];
 	if ( $ok )
-		$icon = "/birt/images/OK.gif";
+		$icon = "OK.gif";
 	else
-		$icon = "/birt/images/fail.gif";
+		$icon = "fail.gif";
 		
 	$baseName = $buildInfo[ $proj ];
 	
@@ -102,7 +112,7 @@ END;
 	if ( $ok && file_exists( $fileName ) )
 	{
 		echo <<<END
-    <a href="$buildPath/$baseName.zip">
+    <a href="http://www.eclipse.org/downloads/download.php?file=/birt/downloads/$buildPath/$baseName.zip">
     $baseName.zip</a>
 END;
 	}
@@ -115,7 +125,7 @@ END;
 	{
 		echo <<<END
 	&nbsp;&nbsp;
-    (<a href="$buildPath/$baseName.MD5">md5</a>)
+    (<a href="$buildPath/$baseName.md5">md5</a>)
 END;
 	}
 echo <<<END
@@ -129,13 +139,12 @@ END;
 
 function showLog( $display, $name )
 {
-	global $buildPath, $viewerBase;
+	global $buildPath;
 	$logName = $buildPath . "/" . $name . "_build_log.txt";
 	if ( file_exists( $logName ) )
-		bullet( "$display subsystem",
-				"{$viewerBase}$logName" );
+		bullet( "$display subsystem log", "$logName" );
 	else
-		bullet( "$display subsystem not available" );
+		bullet( "$display subsystem log not available" );
 }
 
 ?>
@@ -152,8 +161,16 @@ Software User Agreement.
 
 <?php
 	endBullet( );
+	bullet( "Install", "{$viewer}build/install.html", "_top" );
+?>
+
+Complete download instructions for BIRT and the software it requires.
+
+<?php
+	endBullet( );
 	$fileName = $buildPath . "/new.html";
-	if ( file_exists( $newFile ) )
+	//echo "File Name: $fileName<br>\n";
+	if ( file_exists( $fileName ) )
 	{
 		bullet( "New and Noteworthy", $fileName );
 ?>
@@ -164,7 +181,7 @@ Describes the major new and changed features in this build.
 		endBullet( );
 	}
 	
-	bullet( "BIRT Home", "/birt/viewer.php" );
+	bullet( "BIRT Home", "http://www.eclipse.org/birt", "_top" );
 ?>
 
 Information about BIRT, including newsgroups, FAQs, etc.
@@ -174,7 +191,8 @@ Information about BIRT, including newsgroups, FAQs, etc.
 	
 	// TODO: Internal target should be named, not numbered.
 	
-	bullet( "Supported Platforms", "{$viewerBase}project/project_plan_R1_0.html#jump_4" );
+	bullet( "Supported Platforms",
+			"{$viewer}project/project_plan_R1_0.html#jump_4", "_top" );
 ?>
 
 BIRT provides a single download that works on all supported platforms.
@@ -188,6 +206,16 @@ BIRT provides a single download that works on all supported platforms.
 ?>
 
 See the main build page for the software you must install before BIRT.
+
+<?php
+	endBullet( );
+	
+	// TODO: Internal target should be named, not numbered.
+	
+	bullet( "Other Builds", "main.php" );
+?>
+
+Check for the latest builds and find general information about BIRT builds.
 
 <?php
 	endBullet( );
@@ -230,6 +258,19 @@ as a perspective from within Eclipse.</p>
 <?
 		buildTable( "designer" );
 	}
+	if ( $hasRcp )
+	{
+?>
+
+<h1><a name="rcp">RCP Report Designer</a></h1>
+
+<p>The BIRT RCP Report Designer is an example of deploying BIRT using 
+the Eclipse Rich Client Platform (RCP) technology. This provides a simplified report designer without 
+the additional perspectives in the standard Eclipse platform.</p>
+
+<?
+		buildTable( "rcp" );
+	}
 	if ( $hasEngine )
 	{
 ?>
@@ -262,8 +303,8 @@ charts independetly of the rest of BIRT.</p>
 
 <h1><a name="samples">Samples</a></h1>
 
-<p>Sample reports, charts and integration code. Download this if you
-want examples of how to use BIRT.</p>
+<p>Sample integration code for reports and charts. Download this if you
+want examples of how to extend BIRT.</p>
 
 <?
 		buildTable( "samples" );
@@ -274,13 +315,28 @@ want examples of how to use BIRT.</p>
 
 <h1><a name="tests">Test Suites</a></h1>
 
-<p>Automated tests for BIRT functions. Download this if you want to modify,
-build and perform regression testing a customized version of BIRT.</p>
+<p>Automated tests for BIRT functions. Download this if you're a developer and want to modify,
+build and perform regression testing against your modified version of BIRT.</p>
 
 <?
 		buildTable( "tests" );
 	}
+	if ( $hasDb )
+	{
 ?>
+
+<h1><a name="db">Demo Database</a></h1>
+
+<p>Intended as a convenient way to get the Classic Cars sample data and database schema for use with
+your prefered database software, the demo database package includes sql and data files for defining
+and loading the database into Derby and MySQL. It does <i>not</i> include any BIRT software. Note
+that the sample database is already included in both the Designer and the RCP Designer packages.</p>
+
+<?
+		buildTable( "database" );
+	}
+?>
+	
 <h1><a name="logs">Build Logs</a></h1>
 
 The following are the build logs created for this build.
@@ -295,7 +351,10 @@ The following are the build logs created for this build.
 	endList( );
 ?>		
 
-<?php
-	include( "../include/footer.inc" );
-?>
+
+</body>
+</html>
+
+
+
 
