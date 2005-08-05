@@ -1,5 +1,6 @@
 <?php
 require "download.inc";
+
 addJump( "Latest Downloads", "latest" );
 addJump( "Release Builds", "release" );
 addJump( "Milestone Builds", "milestone" );
@@ -56,10 +57,10 @@ END;
 
 This page lists the latest builds produced by 
 the BIRT project. Build terminology is defined on the
-<a href="../viewer.php?page=download/build_types.html">build types</a> page.
+<a href="build_types.html">build types</a> page.
 If you are not sure
 what build you want, you probably want the
-<a href="main.php">latest release</a>.
+<a href="main.php">latest release</a>. The daily <a href="drops/daily_build_report.html">build status report</a> shows the build status for the most recent build (of any sort), including compiliation and smoke test status.
 <p>
 If you have 
 problems downloading the drops, contact the
@@ -108,14 +109,14 @@ BIRT QA team.
 <h1><a name="nightly">Nightly Builds</a></h1>
 
 Nightly  builds are created automatically each night for the use of the BIRT
-developmetn team. Unless you're a BIRT
+development team. Unless you're a BIRT
 developer, you probably don't want these builds.
 <p>
 
 <?php releaseTable( NIGHTLY_BUILD ); ?>
  
-<?php
-	include( "../include/footer.inc" );
-?>
+</body>
+</html>
+
 
  
