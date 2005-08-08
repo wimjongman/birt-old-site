@@ -1,99 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Written by Eclipse BIRT 1.0 -->
 <report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 0.0.1 Build &lt;20050405-1230></property>
+    <property name="author">Paul Clenahan</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050601-0809></property>
     <property name="units">in</property>
+    <text-property name="title">Classic Models Inc. Product Catalog (Using Sample Database)</text-property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Classic Models"/>
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Product List">
             <property name="dataSource">Classic Models</property>
-            <property name="queryText">SELECT products.productCode,
-        products.productName,
-        products.productLine,
-        products.productDescription,
-        products.quantityInStock,
-        products.MSRP,
-        products.productScale
- FROM products
- ORDER BY products.productLine, products.productName</property>
+            <property name="queryText">select 	CLASSICMODELS.PRODUCTS.PRODUCTCODE,
+		CLASSICMODELS.PRODUCTS.PRODUCTNAME,
+		CLASSICMODELS.PRODUCTS.PRODUCTLINE,
+		CLASSICMODELS.PRODUCTS.PRODUCTDESCRIPTION,
+		CLASSICMODELS.PRODUCTS.QUANTITYINSTOCK,
+		CLASSICMODELS.PRODUCTS.MSRP,
+		CLASSICMODELS.PRODUCTS.PRODUCTSCALE
+from 	CLASSICMODELS.PRODUCTS
+Order By 	CLASSICMODELS.PRODUCTS.PRODUCTLINE,
+			CLASSICMODELS.PRODUCTS.PRODUCTNAME	</property>
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="TableBodyText">
-            <property name="fontFamily">sans-serif</property>
-            <property name="paddingTop">2pt</property>
-            <property name="paddingLeft">2pt</property>
-            <property name="paddingBottom">2pt</property>
-            <property name="paddingRight">2pt</property>
-        </style>
         <style name="BackgroundLightGray">
             <property name="backgroundColor">#EAEAEA</property>
         </style>
-        <style name="BackgroundBlueGray">
+        <style name="BackgroundBlue">
             <property name="backgroundColor">#4B6987</property>
         </style>
-        <style name="BackgroundLightYellow">
+        <style name="BackgroundYellow">
             <property name="backgroundColor">#FAD764</property>
         </style>
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage">
-            <page-header>
-                <grid>
-                    <property name="width">100%</property>
-                    <column/>
-                    <row>
-                        <cell>
-                            <property name="fontSize">xx-large</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">center</property>
-                            <text>
-                                <text-property name="content"><![CDATA[Title]]></text-property>
-                            </text>
-                        </cell>
-                    </row>
-                </grid>
-            </page-header>
             <page-footer>
-                <grid>
-                    <property name="width">100%</property>
-                    <column/>
-                    <column/>
-                    <row>
-                        <cell>
-                            <text>
-                                <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                            </text>
-                        </cell>
-                        <cell>
-                            <property name="textAlign">right</property>
-                            <text>
-                                <text-property name="content"><![CDATA[Page:]]></text-property>
-                            </text>
-                        </cell>
-                    </row>
-                </grid>
+                <text>
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
             </page-footer>
         </simple-master-page>
     </page-setup>
     <body>
         <grid>
-            <property name="backgroundColor">#EAEAEA</property>
             <property name="width">100%</property>
             <column>
                 <property name="width">2.8in</property>
             </column>
             <column>
-                <property name="width">3.125in</property>
+                <property name="width">3.2in</property>
             </column>
             <row>
-                <property name="verticalAlign">top</property>
+                <property name="style">BackgroundLightGray</property>
                 <cell>
-                    <property name="colSpan">1</property>
-                    <property name="rowSpan">1</property>
+                    <property name="style">BackgroundLightGray</property>
                     <image>
                         <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
@@ -107,24 +70,23 @@
                         <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
-                        <expression name="imageName">C:\eclipse\birt\ClassicModels\logos\Classic-Models-Full-M.jpg</expression>
+                        <expression name="imageName">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</expression>
                     </image>
                 </cell>
                 <cell>
+                    <property name="style">BackgroundLightGray</property>
                     <property name="verticalAlign">middle</property>
                     <label>
                         <property name="fontFamily">sans-serif</property>
-                        <property name="fontSize">18pt</property>
+                        <property name="fontSize">20pt</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#004080</property>
+                        <property name="color">#000080</property>
                         <text-property name="text">Classic Models, Inc.</text-property>
                     </label>
                     <text>
                         <property name="fontFamily">sans-serif</property>
-                        <property name="fontSize">10pt</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<BR>
-701 Gateway Boulevard,<BR>
+                        <text-property name="content"><![CDATA[701 Gateway Boulevard,<BR>
 San Francisco, CA 94107<BR>
 <BR>]]></text-property>
                     </text>
@@ -138,57 +100,42 @@ San Francisco, CA 94107<BR>
             </row>
             <row>
                 <property name="height">0.25in</property>
-                <property name="backgroundColor">#FFFFFF</property>
-                <property name="verticalAlign">top</property>
                 <cell/>
-                <cell>
-                    <property name="verticalAlign">middle</property>
-                </cell>
+                <cell/>
             </row>
         </grid>
         <table>
             <property name="width">100%</property>
             <property name="dataSet">Product List</property>
-            <column>
-                <property name="width">3.114in</property>
-            </column>
-            <column>
-                <property name="width">1.427in</property>
-            </column>
-            <column>
-                <property name="width">1.427in</property>
-            </column>
+            <column/>
+            <column/>
+            <column/>
             <group>
-                <property name="groupName">ProductLine</property>
+                <property name="groupName">Product Line</property>
                 <property name="interval">none</property>
                 <property name="sortDirection">asc</property>
-                <expression name="keyExpr">row["productLine"]</expression>
+                <expression name="keyExpr">row["PRODUCTLINE"]</expression>
                 <header>
                     <row>
                         <property name="height">0.1in</property>
-                        <property name="style">BackgroundBlueGray</property>
+                        <property name="style">BackgroundBlue</property>
                         <cell>
-                            <property name="style">BackgroundBlueGray</property>
-                        </cell>
-                        <cell>
-                            <property name="style">BackgroundBlueGray</property>
-                        </cell>
-                        <cell>
-                            <property name="style">BackgroundBlueGray</property>
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="style">BackgroundBlue</property>
                         </cell>
                     </row>
                     <row>
-                        <property name="height">0.1in</property>
                         <cell>
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
                             <grid>
                                 <property name="width">100%</property>
                                 <column>
-                                    <property name="width">2.093in</property>
+                                    <property name="width">1.989in</property>
                                 </column>
                                 <column>
-                                    <property name="width">3.802in</property>
+                                    <property name="width">3.927in</property>
                                 </column>
                                 <row>
                                     <cell>
@@ -201,11 +148,11 @@ San Francisco, CA 94107<BR>
                                     </cell>
                                     <cell>
                                         <data>
-                                            <property name="style">TableBodyText</property>
+                                            <property name="fontFamily">sans-serif</property>
                                             <property name="fontSize">x-large</property>
                                             <property name="fontWeight">bold</property>
                                             <property name="fontStyle">italic</property>
-                                            <expression name="valueExpr">row["productLine"]</expression>
+                                            <expression name="valueExpr">row["PRODUCTLINE"]</expression>
                                         </data>
                                     </cell>
                                 </row>
@@ -214,11 +161,11 @@ San Francisco, CA 94107<BR>
                     </row>
                     <row>
                         <property name="height">0.1in</property>
-                        <property name="style">BackgroundBlueGray</property>
+                        <property name="style">BackgroundBlue</property>
                         <cell>
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
-                            <property name="style">BackgroundBlueGray</property>
+                            <property name="style">BackgroundBlue</property>
                         </cell>
                     </row>
                     <row>
@@ -231,27 +178,26 @@ San Francisco, CA 94107<BR>
             </group>
             <detail>
                 <row>
-                    <property name="style">BackgroundLightYellow</property>
+                    <property name="style">BackgroundYellow</property>
                     <cell>
-                        <property name="style">BackgroundLightYellow</property>
+                        <property name="style">BackgroundYellow</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <property name="fontSize">medium</property>
+                            <property name="fontFamily">sans-serif</property>
                             <property name="fontWeight">bold</property>
-                            <expression name="valueExpr">row["productName"]</expression>
+                            <expression name="valueExpr">row["PRODUCTNAME"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="style">BackgroundLightYellow</property>
+                        <property name="style">BackgroundYellow</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <expression name="valueExpr">"Scale: " + row["productScale"]</expression>
+                            <property name="fontFamily">sans-serif</property>
+                            <expression name="valueExpr">"Scale: " + row["PRODUCTSCALE"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="style">BackgroundLightYellow</property>
+                        <property name="style">BackgroundYellow</property>
                         <data>
-                            <property name="style">TableBodyText</property>
+                            <property name="fontFamily">sans-serif</property>
                             <structure name="numberFormat">
                                 <property name="category">Custom</property>
                                 <property name="pattern">MSRP $####.00</property>
@@ -270,9 +216,9 @@ San Francisco, CA 94107<BR>
                             <text-property name="text">Model Description:</text-property>
                         </label>
                         <text>
-                            <property name="style">TableBodyText</property>
+                            <property name="fontFamily">sans-serif</property>
                             <property name="contentType">html</property>
-                            <text-property name="content"><![CDATA[<VALUE-OF>row["productDescription"]</VALUE-OF>]]></text-property>
+                            <text-property name="content"><![CDATA[<VALUE-OF>row["PRODUCTDESCRIPTION"]</VALUE-OF>]]></text-property>
                         </text>
                     </cell>
                 </row>
@@ -287,7 +233,7 @@ San Francisco, CA 94107<BR>
     </body>
     <list-property name="images">
         <structure>
-            <property name="name">C:\eclipse\birt\ClassicModels\logos\Classic-Models-Full-M.jpg</property>
+            <property name="name">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</property>
             <property name="data">
                 /9j/4AAQSkZJRgABAgEBLAEsAAD/4RVaRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUAAAAB
                 AAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodpAAQAAAAB

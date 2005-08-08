@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Written by Eclipse BIRT 1.0 -->
 <report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 0.0.1 Build &lt;20050405-1230></property>
+    <property name="author">Paul Clenahan</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050601-0809></property>
     <property name="units">in</property>
+    <text-property name="title">Classic Models Sales Invoice Report</text-property>
     <list-property name="configVars">
         <structure>
-            <property name="name">Order Number</property>
-            <property name="value">100</property>
+            <property name="name">OrderNumber</property>
+            <property name="value">10201</property>
         </structure>
     </list-property>
     <parameters>
-        <scalar-parameter name="orderNumber">
-            <text-property name="displayName">Order Number</text-property>
-            <property name="hidden">false</property>
-            <property name="dataType">string</property>
-            <property name="concealValue">false</property>
-            <property name="allowBlank">true</property>
-            <property name="allowNull">false</property>
-            <property name="format">Unformatted</property>
+        <scalar-parameter name="OrderNumber">
+            <text-property name="displayName">Order Naumber</text-property>
+            <text-property name="helpText">Order number for the invoice</text-property>
+            <property name="dataType">decimal</property>
+            <property name="allowBlank">false</property>
+            <property name="format">General Number</property>
             <property name="controlType">text-box</property>
             <expression name="defaultValue">10100</expression>
         </scalar-parameter>
@@ -30,128 +30,74 @@
             <property name="dataSource">Classic Models</property>
             <list-property name="parameters">
                 <structure>
-                    <property name="name">orderNumber</property>
+                    <property name="name">OrderNumber</property>
+                    <property name="dataType">integer</property>
                     <property name="position">1</property>
                     <expression name="defaultValue">10100</expression>
+                    <property name="allowNull">true</property>
                     <property name="isInput">true</property>
-                </structure>
-            </list-property>
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">MSRP</property>
-                    <property name="searching">any</property>
-                    <property name="export">if-realized</property>
-                    <property name="analysis">auto</property>
-                    <property name="displayName">MSRP</property>
+                    <property name="isOutput">false</property>
                 </structure>
             </list-property>
             <property name="queryText">SELECT
- f.city as officeCity
-, e.lastName
-, e.firstName
-, c.customerNumber
-, c.customerName
-, c.contactLastName
-, c.contactFirstName
-, c.addressLine1
-, c.addressLine2
-, c.city
-, c.state
-, c.postalCode
-, c.country
-, o.orderNumber
-, o.orderDate
-, o.shippedDate
-, od.productCode
-, od.quantityOrdered
-, od.priceEach
-, p.productName
-, p.MSRP
-, p.productDescription
+  CLASSICMODELS.OFFICES.CITY AS "OFFICE_CITY",
+  CLASSICMODELS.EMPLOYEES.LASTNAME,
+  CLASSICMODELS.EMPLOYEES.FIRSTNAME,
+  CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER,
+  CLASSICMODELS.CUSTOMERS.CUSTOMERNAME,
+  CLASSICMODELS.CUSTOMERS.CONTACTLASTNAME,
+  CLASSICMODELS.CUSTOMERS.CONTACTFIRSTNAME,
+  CLASSICMODELS.CUSTOMERS.ADDRESSLINE1,
+  CLASSICMODELS.CUSTOMERS.ADDRESSLINE2,
+  CLASSICMODELS.CUSTOMERS.CITY,
+  CLASSICMODELS.CUSTOMERS.STATE,
+  CLASSICMODELS.CUSTOMERS.POSTALCODE,
+  CLASSICMODELS.CUSTOMERS.COUNTRY,
+  CLASSICMODELS.ORDERS.ORDERNUMBER,
+  CLASSICMODELS.ORDERS.ORDERDATE,
+  CLASSICMODELS.ORDERS.SHIPPEDDATE,
+  CLASSICMODELS.ORDERDETAILS.PRODUCTCODE,
+  CLASSICMODELS.ORDERDETAILS.QUANTITYORDERED,
+  CLASSICMODELS.ORDERDETAILS.PRICEEACH,
+  CLASSICMODELS.PRODUCTS.PRODUCTNAME,
+  CLASSICMODELS.PRODUCTS.MSRP
 
-FROM offices f, employees e, customers c, orders o, orderdetails od, products p
+FROM
+  CLASSICMODELS.OFFICES,
+  CLASSICMODELS.EMPLOYEES,
+  CLASSICMODELS.CUSTOMERS,
+  CLASSICMODELS.ORDERS,
+  CLASSICMODELS.ORDERDETAILS,
+  CLASSICMODELS.PRODUCTS
 
-WHERE f.officeCode = e.officeCode
-  AND e.employeeNumber = c.salesRepEmployeeNumber
-  AND c.customerNumber = o.customerNumber
-  AND o.orderNumber = od.orderNumber
-  AND od.productCode = p.productCode
-  AND o.orderNumber = ?
+WHERE CLASSICMODELS.OFFICES.OFFICECODE = CLASSICMODELS.EMPLOYEES.OFFICECODE
+  AND CLASSICMODELS.EMPLOYEES.EMPLOYEENUMBER = CLASSICMODELS.CUSTOMERS.SALESREPEMPLOYEENUMBER
+  AND CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER = CLASSICMODELS.ORDERS.CUSTOMERNUMBER
+  AND CLASSICMODELS.ORDERS.ORDERNUMBER = CLASSICMODELS.ORDERDETAILS.ORDERNUMBER
+  AND CLASSICMODELS.ORDERDETAILS.PRODUCTCODE = CLASSICMODELS.PRODUCTS.PRODUCTCODE
+  AND CLASSICMODELS.ORDERS.ORDERNUMBER = ?
 
-ORDER BY o.OrderNumber</property>
+ORDER BY CLASSICMODELS.ORDERS.ORDERNUMBER</property>
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="GeneralText">
-            <property name="fontFamily">sans-serif</property>
-        </style>
-        <style name="BoldText">
-            <property name="fontFamily">sans-serif</property>
-            <property name="fontWeight">bold</property>
-        </style>
-        <style name="TableBodyText">
-            <property name="fontFamily">sans-serif</property>
-            <property name="paddingTop">2pt</property>
-            <property name="paddingLeft">2pt</property>
-            <property name="paddingBottom">2pt</property>
-            <property name="paddingRight">2pt</property>
-        </style>
-        <style name="TableHeaderText">
-            <property name="fontFamily">sans-serif</property>
-            <property name="fontWeight">bold</property>
-            <property name="paddingTop">2pt</property>
-            <property name="paddingLeft">2pt</property>
-            <property name="paddingBottom">2pt</property>
-            <property name="paddingRight">2pt</property>
-        </style>
-        <style name="BackgroundBlueGray">
-            <property name="backgroundColor">#4B6987</property>
-        </style>
-        <style name="BackgroundLightYellow">
-            <property name="backgroundColor">#FAD764</property>
-        </style>
         <style name="BackgroundLightGray">
             <property name="backgroundColor">#EAEAEA</property>
+        </style>
+        <style name="BackgroundBlue">
+            <property name="backgroundColor">#4B6987</property>
+        </style>
+        <style name="BackgroundYellow">
+            <property name="backgroundColor">#FAD764</property>
         </style>
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage">
-            <page-header>
-                <grid>
-                    <property name="width">100%</property>
-                    <column/>
-                    <row>
-                        <cell>
-                            <property name="fontSize">xx-large</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">center</property>
-                            <text>
-                                <text-property name="content"><![CDATA[Title]]></text-property>
-                            </text>
-                        </cell>
-                    </row>
-                </grid>
-            </page-header>
             <page-footer>
-                <grid>
-                    <property name="width">100%</property>
-                    <column/>
-                    <column/>
-                    <row>
-                        <cell>
-                            <text>
-                                <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                            </text>
-                        </cell>
-                        <cell>
-                            <property name="textAlign">right</property>
-                            <text>
-                                <text-property name="content"><![CDATA[Page:]]></text-property>
-                            </text>
-                        </cell>
-                    </row>
-                </grid>
+                <text>
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
             </page-footer>
         </simple-master-page>
     </page-setup>
@@ -162,14 +108,12 @@ ORDER BY o.OrderNumber</property>
                 <property name="width">2.8in</property>
             </column>
             <column>
-                <property name="width">3.125in</property>
+                <property name="width">3.2in</property>
             </column>
             <row>
                 <property name="style">BackgroundLightGray</property>
-                <property name="verticalAlign">top</property>
                 <cell>
-                    <property name="colSpan">1</property>
-                    <property name="rowSpan">1</property>
+                    <property name="style">BackgroundLightGray</property>
                     <image>
                         <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
@@ -187,20 +131,19 @@ ORDER BY o.OrderNumber</property>
                     </image>
                 </cell>
                 <cell>
+                    <property name="style">BackgroundLightGray</property>
                     <property name="verticalAlign">middle</property>
                     <label>
                         <property name="fontFamily">sans-serif</property>
-                        <property name="fontSize">18pt</property>
+                        <property name="fontSize">20pt</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#004080</property>
+                        <property name="color">#000080</property>
                         <text-property name="text">Classic Models, Inc.</text-property>
                     </label>
                     <text>
                         <property name="fontFamily">sans-serif</property>
-                        <property name="fontSize">10pt</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<BR>
-701 Gateway Boulevard,<BR>
+                        <text-property name="content"><![CDATA[701 Gateway Boulevard,<BR>
 San Francisco, CA 94107<BR>
 <BR>]]></text-property>
                     </text>
@@ -214,11 +157,8 @@ San Francisco, CA 94107<BR>
             </row>
             <row>
                 <property name="height">0.25in</property>
-                <property name="verticalAlign">top</property>
                 <cell/>
-                <cell>
-                    <property name="verticalAlign">middle</property>
-                </cell>
+                <cell/>
             </row>
         </grid>
         <table>
@@ -226,8 +166,8 @@ San Francisco, CA 94107<BR>
             <property name="dataSet">Invoice Data</property>
             <list-property name="paramBindings">
                 <structure>
-                    <property name="paramName">orderNumber</property>
-                    <expression name="expression">params["orderNumber"]</expression>
+                    <property name="paramName">OrderNumber</property>
+                    <expression name="expression">params["OrderNumber"]</expression>
                 </structure>
             </list-property>
             <column/>
@@ -238,30 +178,29 @@ San Francisco, CA 94107<BR>
             <column/>
             <column/>
             <group>
-                <property name="groupName">OrderGroup</property>
+                <property name="groupName">Order Group</property>
                 <property name="interval">none</property>
                 <property name="sortDirection">asc</property>
-                <expression name="keyExpr">row["orderNumber"]</expression>
+                <expression name="keyExpr">row["ORDERNUMBER"]</expression>
                 <header>
                     <row>
                         <cell>
                             <property name="colSpan">7</property>
                             <property name="rowSpan">1</property>
                             <grid>
-                                <property name="verticalAlign">top</property>
                                 <property name="width">100%</property>
                                 <column>
-                                    <property name="width">2.604in</property>
+                                    <property name="width">2.343in</property>
                                 </column>
                                 <column>
-                                    <property name="width">0.343in</property>
+                                    <property name="width">0.25in</property>
                                 </column>
                                 <column>
-                                    <property name="width">2.885in</property>
+                                    <property name="width">3.312in</property>
                                 </column>
                                 <row>
                                     <cell>
-                                        <property name="style">BackgroundBlueGray</property>
+                                        <property name="style">BackgroundBlue</property>
                                         <label>
                                             <property name="fontFamily">sans-serif</property>
                                             <property name="fontSize">large</property>
@@ -271,14 +210,12 @@ San Francisco, CA 94107<BR>
                                     </cell>
                                     <cell/>
                                     <cell>
-                                        <property name="colSpan">1</property>
-                                        <property name="rowSpan">1</property>
-                                        <property name="style">BackgroundBlueGray</property>
+                                        <property name="style">BackgroundBlue</property>
                                         <label>
                                             <property name="fontFamily">sans-serif</property>
                                             <property name="fontSize">large</property>
                                             <property name="color">#FFFFFF</property>
-                                            <text-property name="text">Invoice Details</text-property>
+                                            <text-property name="text">Order Details</text-property>
                                         </label>
                                     </cell>
                                 </row>
@@ -287,29 +224,35 @@ San Francisco, CA 94107<BR>
                                         <property name="style">BackgroundLightGray</property>
                                         <property name="verticalAlign">top</property>
                                         <data>
-                                            <property name="style">BoldText</property>
-                                            <expression name="valueExpr">row["customerName"]</expression>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
+                                            <expression name="valueExpr">row["CUSTOMERNAME"]</expression>
                                         </data>
                                         <data>
-                                            <property name="style">BoldText</property>
-                                            <expression name="valueExpr">row["contactFirstName"]+ ' ' + row["contactLastName"]</expression>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
+                                            <expression name="valueExpr">row["CONTACTFIRSTNAME"] + " " + row["CONTACTLASTNAME"]</expression>
                                         </data>
                                         <data>
-                                            <property name="style">BoldText</property>
-                                            <expression name="valueExpr">row["addressLine1"]</expression>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
+                                            <expression name="valueExpr">row["ADDRESSLINE1"]</expression>
                                         </data>
                                         <data>
-                                            <property name="style">BoldText</property>
-                                            <expression name="valueExpr">row["addressLine2"]</expression>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
+                                            <expression name="valueExpr">row["ADDRESSLINE2"]</expression>
                                         </data>
                                         <data>
-                                            <property name="style">BoldText</property>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
                                             <expression name="valueExpr">(row["CITY"] + ", " + row["STATE"] + " " +
-row["POSTALCODE"]).replace("null", "").replace("null", "").replace("null", "")</expression>
+row["POSTALCODE"]).replace("null, ", "").replace("null ", "").replace("null", "")</expression>
                                         </data>
                                         <data>
-                                            <property name="style">BoldText</property>
-                                            <expression name="valueExpr">row["country"]</expression>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontWeight">bold</property>
+                                            <expression name="valueExpr">row["COUNTRY"]</expression>
                                         </data>
                                     </cell>
                                     <cell/>
@@ -322,92 +265,90 @@ row["POSTALCODE"]).replace("null", "").replace("null", "").replace("null", "")</
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Customer Number:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <expression name="valueExpr">row["customerNumber"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["CUSTOMERNUMBER"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Order Number:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <expression name="valueExpr">row["orderNumber"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["ORDERNUMBER"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Order Date:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <structure name="dateTimeFormat">
-                                                            <property name="category">Custom</property>
-                                                            <property name="pattern">Medium Date</property>
-                                                        </structure>
-                                                        <expression name="valueExpr">row["orderDate"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["ORDERDATE"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Ship Date:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <structure name="dateTimeFormat">
-                                                            <property name="category">Custom</property>
-                                                            <property name="pattern">Medium Date</property>
-                                                        </structure>
-                                                        <expression name="valueExpr">row["shippedDate"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["SHIPPEDDATE"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Office:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <expression name="valueExpr">row["officeCity"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["OFFICE_CITY"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
                                             <row>
                                                 <cell>
                                                     <label>
-                                                        <property name="style">GeneralText</property>
+                                                        <property name="fontFamily">sans-serif</property>
                                                         <text-property name="text">Sales Representative:</text-property>
                                                     </label>
                                                 </cell>
                                                 <cell>
                                                     <data>
-                                                        <property name="style">BoldText</property>
-                                                        <expression name="valueExpr">row["firstName"] + ' ' + row["lastName"]</expression>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <expression name="valueExpr">row["FIRSTNAME"] + " " + row["LASTNAME"]</expression>
                                                     </data>
                                                 </cell>
                                             </row>
@@ -424,130 +365,176 @@ row["POSTALCODE"]).replace("null", "").replace("null", "").replace("null", "")</
 </cell>
                     </row>
                     <row>
-                        <property name="style">BackgroundLightYellow</property>
+                        <property name="style">BackgroundYellow</property>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
                                 <text-property name="text">Code</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
                                 <text-property name="text">Description</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
                                 <text-property name="text">Quantity</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
                                 <text-property name="text">MSRP ($)</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
                                 <text-property name="text">Discount</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
-                                <text-property name="text">Unit Price ($)</text-property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Unit Price</text-property>
                             </label>
                         </cell>
                         <cell>
-                            <property name="borderBottomColor">#000000</property>
+                            <property name="style">BackgroundYellow</property>
+                            <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderLeftColor">#808080</property>
                             <property name="borderLeftStyle">solid</property>
                             <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightColor">#000000</property>
+                            <property name="borderRightColor">#808080</property>
                             <property name="borderRightStyle">solid</property>
                             <property name="borderRightWidth">thin</property>
-                            <property name="borderTopColor">#000000</property>
+                            <property name="borderTopColor">#808080</property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableHeaderText</property>
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontWeight">bold</property>
                                 <property name="textAlign">right</property>
                                 <text-property name="text">Total ($)</text-property>
                             </label>
@@ -562,35 +549,42 @@ row["POSTALCODE"]).replace("null", "").replace("null", "").replace("null", "")</
                         <cell/>
                         <cell/>
                         <cell>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <label>
-                                <property name="style">TableBodyText</property>
+                                <property name="fontFamily">sans-serif</property>
                                 <property name="fontWeight">bold</property>
                                 <property name="textAlign">right</property>
                                 <text-property name="text">TOTAL $</text-property>
                             </label>
                         </cell>
                         <cell>
+                            <property name="borderBottomColor">#808080</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#808080</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#808080</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#808080</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingRight">3pt</property>
                             <data>
-                                <property name="style">TableBodyText</property>
+                                <property name="fontFamily">sans-serif</property>
                                 <property name="fontWeight">bold</property>
-                                <property name="borderBottomColor">#000000</property>
-                                <property name="borderBottomStyle">solid</property>
-                                <property name="borderBottomWidth">thin</property>
-                                <property name="borderLeftColor">#000000</property>
-                                <property name="borderLeftStyle">solid</property>
-                                <property name="borderLeftWidth">thin</property>
-                                <property name="borderRightColor">#000000</property>
-                                <property name="borderRightStyle">solid</property>
-                                <property name="borderRightWidth">thin</property>
-                                <property name="borderTopColor">#000000</property>
-                                <property name="borderTopStyle">solid</property>
-                                <property name="borderTopWidth">thin</property>
                                 <structure name="numberFormat">
                                     <property name="category">Currency</property>
                                     <property name="pattern">#,##0.00</property>
                                 </structure>
-                                <property name="textAlign">right</property>
-                                <expression name="valueExpr">Total.sum(row["quantityOrdered"] * row["priceEach"])</expression>
+                                <expression name="valueExpr">Total.sum(row["QUANTITYORDERED"]*row["PRICEEACH"])</expression>
                             </data>
                         </cell>
                     </row>
@@ -599,149 +593,178 @@ row["POSTALCODE"]).replace("null", "").replace("null", "").replace("null", "")</
             <detail>
                 <row>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <expression name="valueExpr">row["productCode"]</expression>
+                            <property name="fontFamily">sans-serif</property>
+                            <expression name="valueExpr">row["PRODUCTCODE"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <expression name="valueExpr">row["productName"]</expression>
+                            <property name="fontFamily">sans-serif</property>
+                            <expression name="valueExpr">row["PRODUCTNAME"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <expression name="valueExpr">row["quantityOrdered"]</expression>
+                            <property name="fontFamily">sans-serif</property>
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">#,##0</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <expression name="valueExpr">row["QUANTITYORDERED"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
+                            <property name="fontFamily">sans-serif</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
-                                <property name="pattern">###0.00</property>
+                                <property name="pattern">#,##0.00</property>
                             </structure>
                             <property name="textAlign">right</property>
                             <expression name="valueExpr">row["MSRP"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
-                            <structure name="numberFormat">
-                                <property name="category">Custom</property>
-                                <property name="pattern">Percent</property>
-                            </structure>
+                            <property name="fontFamily">sans-serif</property>
                             <property name="textAlign">right</property>
-                            <expression name="valueExpr">(row["MSRP"] - row["priceEach"]) / row["MSRP"]</expression>
+                            <expression name="valueExpr">(row["MSRP"] - row["PRICEEACH"]) / row["MSRP"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
+                            <property name="fontFamily">sans-serif</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
                                 <property name="pattern">#,##0.00</property>
                             </structure>
                             <property name="textAlign">right</property>
-                            <expression name="valueExpr">row["priceEach"]</expression>
+                            <expression name="valueExpr">row["PRICEEACH"]</expression>
                         </data>
                     </cell>
                     <cell>
-                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftColor">#808080</property>
                         <property name="borderLeftStyle">solid</property>
                         <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightColor">#808080</property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingLeft">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="paddingRight">3pt</property>
                         <data>
-                            <property name="style">TableBodyText</property>
+                            <property name="fontFamily">sans-serif</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
                                 <property name="pattern">#,##0.00</property>
                             </structure>
                             <property name="textAlign">right</property>
-                            <expression name="valueExpr">row["quantityOrdered"] * row["priceEach"]</expression>
+                            <expression name="valueExpr">row["QUANTITYORDERED"] * row["PRICEEACH"]</expression>
                         </data>
                     </cell>
                 </row>
