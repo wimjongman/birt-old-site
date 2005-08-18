@@ -1,0 +1,3 @@
+<birt-menu>
+<top name="testfolder" page="../testfolder"/>
+</birt-menu>
