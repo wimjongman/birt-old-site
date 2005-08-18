@@ -9,6 +9,8 @@
 global $birtPath;
 $birtPath = "../";
 require $birtPath . "include/testviewer.inc";
-viewer( "testfolder" );
+require $birtPath . "include/displaycounter.inc";
+viewer("testfolder");
+ReadCounters();
 
 ?>
