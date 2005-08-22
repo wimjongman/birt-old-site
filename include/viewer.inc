@@ -87,10 +87,10 @@ function viewer( $page )
 function CountPage( $page )
 {
 	global $birtPath;
-	$file = "/home/data/httpd/writable/birt/counters.txt"; 
-	//$file = $birtPath . "counter/counter.txt";
-    $fhl = file($file);
-    $fhw = fopen($file, "w");
+	$file = "/home/data/httpd/writable/birt/birtcounter.txt"; 
+	//$file = $birtPath . "counter/birtcounter.txt";
+    //$fhl = file($file);
+    $fhw = fopen($file, "r+");
     //if( flock( $fhw, LOCK_EX) ){
     
     	$ss = $page . "=";
@@ -98,33 +98,32 @@ function CountPage( $page )
     	
     	$fnd = FALSE;
 
-    	foreach($fhl as $line){
-    		$nstr = substr( $line, 0, $sz );
+    	//foreach($fhl as $line){
+   		while (!feof($fhw)) {
+   			$current_pos = ftell($fhw); 
+   			$buffer = fgets($fhw, 1000);
+  
+    		//$nstr = substr( $line, 0, $sz );
+    		$nstr = substr( $buffer, 0, $sz );
     		if( $ss == $nstr ){
-    		//if( strpos($line, $ss ) !== FALSE ){
-     			$x=strpos($line, "=");
-    			$val=substr($line,$x+1);
+    			fseek( $fhw, $current_pos );
+     			$x=strpos($buffer, "=");
+    			$val=substr($buffer,$x+1);
     			settype( $val, "integer" );
     			$val = $val + 1;
-    			$nline=$page . "=" . $val . "\n";
+    			$nline=$page . "=" . $val;
     			fputs( $fhw, $nline  );
-    			$fnd=TRUE; 
-    		} else {
-  				if( strlen( $line ) > 0){
-    				fputs( $fhw, $line  );
-    			}
+    			$fnd=TRUE;
     		}
     	}
     	if( $fnd == FALSE ){
     		if( strlen( $ss ) > 0){
-    			fputs( $fhw, $ss . "1" ."\n");
+    			fputs( $fhw, $ss . "1                          " ."\n");
     		}
     	}
-    //	flock( $fhw, LOCK_UN);
+
     	fclose( $fhw );
-   // }else{
-   // 	print "Could not lock counter file";
-   // }
+ 
 
 }
 
