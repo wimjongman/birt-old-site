@@ -80,7 +80,7 @@ function viewer( $page )
 		//echo "parseDoc: viewer = $viewer\n";
 		parseDoc( $file );
 	}
-	CountPage( $file );
+	CountPage2( $file );
 }
 
 
@@ -89,7 +89,7 @@ function CountPage( $page )
 {
 	global $birtPath;
 	
-	$file = "/home/data/httpd/writable/birt/counters.txt"; 
+	$file = "/home/data/httpd/writable/birt/birtcounter.txt"; 
 	//$file = $birtPath . "counter/counter.txt";
     $fhl = file($file);
     $fhw = fopen($file, "w");
@@ -129,6 +129,48 @@ function CountPage( $page )
    // }
 
 }
+function CountPage2( $page )
+{
+	global $birtPath;
+	//$file = "/home/data/httpd/writable/birt/birtcounter.txt"; 
+	$file = $birtPath . "counter/birtcounter.txt";
+    //$fhl = file($file);
+    $fhw = fopen($file, "r+");
+    //if( flock( $fhw, LOCK_EX) ){
+    
+    	$ss = $page . "=";
+    	$sz = strlen( $ss );
+    	
+    	$fnd = FALSE;
 
+    	//foreach($fhl as $line){
+   		while (!feof($fhw)) {
+   			$current_pos = ftell($fhw); 
+   			$buffer = fgets($fhw, 1000);
+  
+    		//$nstr = substr( $line, 0, $sz );
+    		$nstr = substr( $buffer, 0, $sz );
+    		if( $ss == $nstr ){
+    			fseek( $fhw, $current_pos );
+     			$x=strpos($buffer, "=");
+    			$val=substr($buffer,$x+1);
+    			settype( $val, "integer" );
+    			$val = $val + 1;
+    			$nline=$page . "=" . $val;
+    			fputs( $fhw, $nline  );
+    			$fnd=TRUE;
+    			break;
+    		}
+    	}
+    	if( $fnd == FALSE ){
+    		if( strlen( $ss ) > 0){
+    			fputs( $fhw, $ss . "1                          " ."\n");
+    		}
+    	}
+
+    	fclose( $fhw );
+ 
+
+}
 
 ?>
