@@ -13,7 +13,7 @@ function ReadCounters( )
 {
 	global $birtPath;
 	
-	$file = "/home/data/httpd/writable/birt/birtcounter.txt"; 
+	$file = "/home/data/httpd/writable/birt/counters.txt"; 
 	//$file = $birtPath . "counter/birtcounter.txt";
     $fhl = file($file);
 

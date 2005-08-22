@@ -79,7 +79,7 @@ function viewer( $page )
 		//echo "parseDoc: viewer = $viewer\n";
 		parseDoc( $file );
 	}
-	//CountPage( $file );
+	CountPage( $file );
 }
 
 
@@ -87,7 +87,7 @@ function viewer( $page )
 function CountPage( $page )
 {
 	global $birtPath;
-	$file = "/home/data/httpd/writable/birt/birtcounter.txt"; 
+	$file = "/home/data/httpd/writable/birt/counters.txt"; 
 	//$file = $birtPath . "counter/birtcounter.txt";
     //$fhl = file($file);
     $fhw = fopen($file, "r+");
@@ -114,6 +114,7 @@ function CountPage( $page )
     			$nline=$page . "=" . $val;
     			fputs( $fhw, $nline  );
     			$fnd=TRUE;
+    			break;
     		}
     	}
     	if( $fnd == FALSE ){

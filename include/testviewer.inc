@@ -133,7 +133,7 @@ function CountPage2( $page )
 {
 	global $birtPath;
 	$file = "/home/data/httpd/writable/birt/counters.txt"; 
-	$file = $birtPath . "counter/birtcounter.txt";
+	//$file = $birtPath . "counter/birtcounter.txt";
     //$fhl = file($file);
     $fhw = fopen($file, "r+");
     //if( flock( $fhw, LOCK_EX) ){
