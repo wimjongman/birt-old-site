@@ -79,7 +79,7 @@ function viewer( $page )
 		//echo "parseDoc: viewer = $viewer\n";
 		parseDoc( $file );
 	}
-	CountPage( $file );
+	//CountPage( $file );
 }
 
 
