@@ -15,20 +15,13 @@
 <h1>Background</h1>
 
 The BIRT Report Engine API allows you to integrate the run-time part of BIRT
-into your application. The Release 1.0 engine supports the following operations:
+into your application. The Release 1.0.1 engine supports the following operations:
 
 <ul>
 <li>Discover the set of parameters defined for a report.
 <li>Get the default values for parameters.<li>Run a report to produce an HTML or PDF output.
 <li>Fetch an image or chart for a report.
 </ul>
-
-<p class="caution"><span class="caution-head">Release 1.0  Note:</span>
-The Engine API  was greatly enhanced toward the end of Release 1.0 based on 
-community feedback. The current API is solid, but provisional; some minor 
-changes may still occur. Please let us know how it works for you via the newsgroups so we can
-further improve it.
-</p>
 
 <p>The report engine supports extensions for custom report items, and for custom 
 output formats. Extensions are discussed elsewhere. This article focus on how 
@@ -42,12 +35,12 @@ engine is more than just a simple JAR file; it also includes a set of extensions
 (plugins), and a set of data drivers.
 
 <h2>Engine Download</h2>
-
-<p class="caution"><span class="caution-head">Build M3 Note:</span> An Engine 
-runtime download is planned for the 1.0 release. For M3, use the engine that is installed 
-as part of BIRT. The engine is located in:
-<code>eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt/WEB-INF</code>. The required 
-JAR files are in the lib directory. The engine itself is in <code>engine.jar</code>.</p>
+<p> The standalone <a href="http://download.eclipse.org/birt/downloads/">BIRT engine</a> is now available for download.
+Within this download are several examples on how to use the Report Engine, Chart Engine and
+the Viewer.<br>
+In addition the Engine is still available as part of the full BIRT install and
+is located in the <code>eclipse/plugins/org.eclipse.birt.report.viewer_1.0.1/birt</code>
+directory.</p>
 
 <h2>Engine Source</h2>
 <p>If you prefer to work directly with the BIRT source code, the Engine API is 
@@ -60,30 +53,20 @@ source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a>
 <p>This article provides an overview of the engine. To do actual development, 
 consult the Engine Javadoc.</p>
 
-<p class="caution"><span class="caution-head">Build M3 Note:</span> Javadoc will 
-be available in the 1.0 release. For now, you can create the Javadoc yourself 
-from the <code>api</code> directory mentioned above.</p>
-
 <h2>Installing the Engine</h2>
-
-<p class="caution"><span class="caution-head">Build M3 Note:</span> Release 1.0 
-will have an Engine runtime download. For now, copy the contents of the <code>WEF-INF</code> 
-directory mentioned above. You'll get more code than you really need, but this 
-is just a temporary solution.</p>
 
 <h2>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
 
-<p class="caution"><span class="caution-head">Build M3 Note:</span> If you use 
+<p class="caution"><span class="caution-head">Note:</span> If you use 
 the engine installed as part of the viewer plugin, then you can skip this step 
 if you've already installed the driver using the BIRT Report Designer. Follow 
-these steps only if you install a new copy of the engine once the Engine runtime 
-download is available.</p>
+these steps only if you install a new copy of the engine.</p>
 
 <p>The report engine uses the Eclipse plugin mechanism for managing extensions. 
 One of those extensions is a bridge between BIRT and JDBC implemented using the 
 BIRT Open Data Access (ODA) framework. JDBC drivers are defined in the <code>plugin.xml</code> 
-file for the JDBC extension: <code><i>ENGINE-ROOT</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_0.0.1/plugin.xml</code>.
+file for the JDBC extension: <code><i>ENGINE-ROOT</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_1.0.1/plugin.xml</code>.
 Use any text editor to edit the configuration file. Add an entry such as the one 
 shown in bold below.</p>
 
@@ -99,7 +82,7 @@ shown in bold below.</p>
 
   <p>Where <i>driver_name</i> is the name of your JDBC driver JAR. Add another <code>&lt;LibraryName></code> element for each 
 additional JDBC driver JAR file that might be needed. Put the library itself 
-  into the lib directory: <code><i>ENGINE-ROOT</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_0.0.1/lib.</code></p>
+  into the lib directory: <code><i>ENGINE-ROOT</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_1.0.1/lib.</code></p>
   <p>More information about the ODA runtime driver extension point schema can be 
   found in CVS BIRT source tree: <code>org.eclipse.birt.data.oda/schema/odaDriverRuntime.exsd</code>. 
   Use the Eclipse PDE Tools to see its reference document.</p>
@@ -136,14 +119,13 @@ method.</p>
 config.setEngineHome( &quot;put engine path here&quot; );</pre>
 
 
-<p class="caution"><span class="caution-head">Build M3 Note:</span> For now, use 
-the engine located in the Eclipse install: 
-/eclipse/plugins/org.eclipse.birt.report.viewer_0.0.1/birt/WEB-INF.</p>
+<p class="caution"><span class="caution-head">Note:</span> If you are using 
+the engine located in the full BIRT install: 
+/eclipse/plugins/org.eclipse.birt.report.viewer_1.0.1/birt.</p>
 
 <h2>Emitter Configuration</h2>
 
-<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT 
-1.0 provides two emitters: HTML and PDF. You'll want to configure the HTML 
+<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides two emitters: HTML and PDF. You'll want to configure the HTML 
 emitter to manage images and links. BIRT supports three kinds of images:</p>
 
 <ul>
@@ -315,7 +297,7 @@ Object value = task.getDefaultValue( param );</pre>
 convert it to either HTML or PDF. This task does not save the report document 
 itself to disk. Create a new task for each report that you run.</p>
 
-<p class="caution"><span class="caution-head">Release 1.0  Note:</span> BIRT 1.0 
+<p class="caution"><span class="caution-head">Release 1.0.1  Note:</span> BIRT 1.0 
 supports the ability to run a report and to directly produce HTML or PDF. Later 
 versions will allow the ability to save the report document to disk for later 
 use. At that time, BIRT will provide other tasks to run the report, then later 
@@ -365,11 +347,14 @@ report (-h option for HTML, -p option for PDF). When running, the utility takes 
 an output format. The application illustrates the major steps you should follow 
 in your own application.<p><a href="RunReport.java">Download the sample 
 application</a>.</p>
+<a href="birtengine.zip">Download the sample 
+application Ant project</a>.
 <p>To run a <a href="test.rptdesign">sample report </a>to HTML, setting the 
 &quot;sample&quot; parameter to the value &quot;Hello&quot;:</p>
 <pre class="code-block">java RunReport test.rptdesign -h sample=Hello</pre>
 <p>To get information about the report properties and parameter definitions:</p>
 <pre class="code-block">java RunReport test.rptdesign -i</pre>
+
 
 </body>
 </html>
