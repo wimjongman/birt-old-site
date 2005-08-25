@@ -99,7 +99,7 @@ function InitCommentsStyled() {
 		<input type='hidden' name='pagename' value='\$PageName' />
 		<input type='hidden' name='action' value='comments' />
 		<input type='hidden' name='uid' value='\$CommentUid' />
-		$[Enter your comment]:<br />
+		$[Enter your comment, using HTML syntax]:<br />
 		<textarea name='text' rows='8' cols='60'>\$CommentText</textarea><br />
 		$[Author]: <input type='text' name='author' value='\$Author' />
 		\$CommentButtonsFmt
