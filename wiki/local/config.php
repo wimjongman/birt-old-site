@@ -7,6 +7,7 @@ $Skin = 'birt';
 $DefaultPasswords['admin'] = crypt('!sniggoc');
 $DefaultPasswords['attr'] = crypt('!sniggoc');
 $DefaultPasswords['upload'] = crypt('snowmass!2006');
+$DefaultPasswords['edit'] = crypt('!sniggoc');
 
 $EnableGUIButtons = 1;
 
