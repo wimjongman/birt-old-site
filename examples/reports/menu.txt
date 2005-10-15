@@ -1,0 +1,14 @@
+<birt-menu>
+<top name="examples" page="../../examples"/>
+<item name="charting" page="charting"/>
+<item name="data set filter" page="datasetfilter"/>
+<item name="dynamic text" page="dynamictext"/>
+<item name="grouping" page="grouping"/>
+<item name="highlighting" page="highlighting"/>
+<item name="hyperlinking" page="hyperlinking"/>
+<item name="image" page="image"/>
+<item name="listing" page="listing"/>
+<item name="mapping" page="mapping"/>
+<item name="parameters" page="parameters"/>
+<item name="sub reports" page="subreports"/>
+</birt-menu>

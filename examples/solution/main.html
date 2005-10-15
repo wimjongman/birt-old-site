@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+
+<head>
+<title>BIRT Example Reports</title>
+<link rel="stylesheet" href="../style/compose.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+<p class="head">BIRT Example Reports</p>
+<p class="subhead">A Taste of what you can do with BIRT</p>
+
+<h1>Introduction</h1>
+
+<p>The example reports here show just a few of the things you can do with BIRT.
+  Unless otherwise noted, the reports are meant to be run against the &quot;Classic Models Inc.&quot; sample database that is included in the BIRT download. </p>
+<p>Preview a report by clicking on the title  link. To try a report for yourself, click on the rptdesign link to display the ROM file, save it to disk and then use File--&gt;Import to bring the file into your Eclipse workspace. If the report uses the Classic Models database, you should be able to run the report immediately. If the report uses another database, follow the instructions provided in the &quot;Other Notes&quot; section of its description. </p>
+
+<h1> Listing</h1>
+
+<dl class="bold-list">
+<dt><a href="ProductCatalog.html" target="_blank" class="top">Product Catalog</a>
+(<a href="ProductCatalog.rptdesign" target="_blank">rptdesign</a>)</dt>
+<dd>Prints the Classic Models product catalog, grouped by product category. 
+Provides product name, cost and description. Demonstrates one level grouping and using a grid within a table row to structure spacing. 
+Also shows image inclusion and use of the <em>&lt;value-of&gt;</em> tag in text item to include 
+the content of a database column. Finally, the report makes  use of styles to simplify maintenance 
+and achieve a consistent look.
+</dd>
+
+<dt><a href="TopSellingProducts.html" target="_blank" class="top">Top Selling Products</a>
+(<a href="TopSellingProducts.rptdesign" target="_blank">rptdesign</a>)</dt>
+<dd>Displays a pie chart showing revenue by product line. Lists the top selling products, sorted by revenue.  Demonstrates use of a chart and sorting a result set.  
+Also shows image inclusion and use of grid and tables to organize report content. Finally, the report makes  use of styles to simplify maintenance 
+and achieve a consistent look.
+</dd>
+</dl>
+
+<h1>Business Forms</h1>
+
+<dl class="bold-list">
+
+<dt><a href="SalesInvoice.html" target="_blank" class="top">Sales Invoice</a>
+(<a href="SalesInvoice.rptdesign" target="_blank">rptdesign</a>)</dt>
+<dd>Prints an invoice for the selected order, including customer and invoice details and products ordered.   Demonstrates use of a parameter to select the order to invoice and expressions for several calculated fields, including discount and order total. Uses expression to build customer address string and illustrates suppression of nulls in database fields with javascript function <em>replace</em>.   
+Also shows image inclusion and sophisticated use of grids and tables to organize report content. Finally, the report makes  use of styles to simplify maintenance 
+and achieve a consistent look.
+</dd>
+
+</dl>
+
+</body>
+</html>

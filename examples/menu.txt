@@ -1,8 +1,8 @@
 <birt-menu>
 <top name="examples" page="../examples"/>
-<item-gone name="grouped list" url="grouped_table.html"/>
-<item-gone name="drop list" url="drop_group_mockup.html"/>
-<item-gone name="side-by-side" url="parallel.html"/>
-<item-gone name="invoice" url="invoice.html"/>
-<item-gone name="bank statement" url="AccountDetails.html"/>
+<item name="solution reports" page="solution"/>
+<item name="report features" page="reports"/>
+<item name="scripting" page="scripting"/>
+<item name="integrating" page="integrating"/>
+<item-gone name="extending" page="extending"/>
 </birt-menu>

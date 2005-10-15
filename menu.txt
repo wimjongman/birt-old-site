@@ -9,7 +9,6 @@
 <item name="examples" page="examples"/>
 <item name="integration" page="deploy"/>
 <item name="faq" url="wiki/index.php?n=FAQ.FAQ"/>
-<item name="wiki" url="wiki"/>
 <not-yet-item name="building reports" page="reports"/>
 <not-yet-item name="integration" page="integ"/>
 <not-yet-item name="maintenance" page="maint"/>
@@ -18,7 +17,8 @@
 <not-yet-item name="extensions" page="extn"/>
 <item name="reference" page="ref"/>
 <not-yet-space/>
-<item name="project" page="project"/>
+<item name="project org" page="project"/>
+<item name="project plan" page="project/PlanAndDeliverables.html"/>
 <item name="building birt" page="build"/>
 <item name="search" page="search.html"/>
 </birt-menu>
