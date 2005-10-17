@@ -9,6 +9,7 @@
 <item name="image" page="image"/>
 <item name="listing" page="listing"/>
 <item name="mapping" page="mapping"/>
+<item name="mysql" page="mysql"/>
 <item name="parameters" page="parameters"/>
 <item name="sub reports" page="subreports"/>
 </birt-menu>

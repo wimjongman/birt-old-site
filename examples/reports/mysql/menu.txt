@@ -1,0 +1,5 @@
+<birt-sequence>
+<top name="examples" 			page="/birt/examples"/>
+<top name="reporting features" 	page="/birt/examples/reports"/>
+<item-gone name="highlighting" 	page="/birt/examples/reports/highlighting"/>
+</birt-sequence>
