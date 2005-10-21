@@ -1,0 +1,5 @@
+<birt-sequence>
+<top name="examples" 			page="/birt/examples"/>
+<top name="integrating" 	page="/birt/examples/integrating"/>
+<item-gone name="" 	page=""/>
+</birt-sequence>

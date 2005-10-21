@@ -1,4 +1,5 @@
 <birt-menu>
 <top name="examples" page="../../examples"/>
 <item name="design engine" page="designengine"/>
+<item name="dynamic parameters" page="dynamicparameters"/>
 </birt-menu>
