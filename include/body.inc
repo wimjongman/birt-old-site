@@ -128,7 +128,7 @@ END;
 END;
 	if ( count( $jumpName ) > 0 ) echo " rowspan=2";
 	echo <<<END
-><img src="$birtHome/images/Idea.jpg"></td>
+><img src="$birtHome/images/birt_logotype_small.jpg"></td>
 </tr>
 
 END;
