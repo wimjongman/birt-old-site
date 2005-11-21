@@ -8,6 +8,7 @@
 <LINK REL="shortcut icon" HREF="http://www.eclipse.org/images/eclipse.ico"
 	  TYPE="image/x-icon">
 <SCRIPT LANGUAGE="JavaScript">
+var currentQuestion = 0;
 function enable_submit() {
 	var submit = document.getElementById("SUBMIT");
 	submit.disabled = false;
@@ -20,8 +21,25 @@ function disable_submit() {
 	var div = document.getElementById("DIVTHANKS");
 	div.style.display = "none";
 }
+
+function doReset() {
+	//alert(currentQuestion);
+
+	for(i = 9; i > currentQuestion; i--) {
+		if( i == 2 ) {
+			i--;
+		}
+		var docDiv = "DIVQ" + (i + 2);
+		//alert(docDiv);
+		var nextDiv = document.getElementById(docDiv);
+		nextDiv.style.display = "none";
+		validate();
+	}
+
+}
 function answer1()
 {
+	currentQuestion = 1;
     var a1 = document.getElementsByName("A1");
    	var next = document.getElementById("DIVQ2");
 	var a1text = document.getElementById("A1TEXT");
@@ -31,7 +49,7 @@ function answer1()
     	next.style.display="inline";
     	a1text.disabled = true;
     	out.value = a1[0].value;
-    	answer2();
+    	//answer2();
     } else if (a1[1].checked) {
         next.style.display = "none";
         a1text.disabled = true;
@@ -45,94 +63,109 @@ function answer1()
    	    }
    	    out.value = a1text.value;
 	}
+	doReset();
 }
 function answer2()
 {
+	currentQuestion = 2;
     var a2 = document.getElementsByName("A2");
    	var next = document.getElementById("DIVQ3");
 	var a2text = document.getElementById("A2TEXT");
 	var out = document.getElementById("DEV");
 	disable_submit();
-    if (a2[0].checked || a2[1].checked) {
-    	next.style.display="inline";
-    	answer3();
+    if (a2[0].checked || a2[1].checked || a2[2].checked) {
+    	//next.style.display="inline";
+    	//answer3();
     	a2text.disabled = true;
     	if (a2[0].checked) {
     	    out.value=a2[0].value;
     	} else {
-    	    out.value=a2[1].value;
+    	    out.value=a2[2].value;
     	}
-    } else if (a2[2].checked) {
-   	    next.style.display="none";
-        a2text.disabled = true;
-        out.value = a2[2].value;
-        enable_submit();
+    //} else if (a2[1].checked) {
+   	//    next.style.display="none";
+    //    a2text.disabled = true;
+    //    out.value = a2[1].value;
+    //    enable_submit();
    	} else {
-   	    next.style.display="none";
+   	    //next.style.display="inline";
    	    a2text.disabled=false;
    	    if (a2text.value != "") {
-   	        enable_submit();
+   	        //enable_submit();
    	    }
    	    out.value = a2text.value;
+
 	}
+	if (out.value != "") {
+		next.style.display="inline";
+	}
+	doReset();
 }
 function answer3()
 {
+	currentQuestion = 3;
     var a3 = document.getElementsByName("A3");
-   	var next = document.getElementById("DIVQ4");
+   	var next = document.getElementById("DIVQ5");
 	var a3text = document.getElementById("A3TEXT");
 	var out = document.getElementById("IDE");
 	out.value="";
 	disable_submit();
-   	if (a3[4].checked) {
-   	    next.style.display="none";
-   	    a3text.disabled=false;
-   	    if (a3text.value != "") {
-   	        enable_submit();
-   	    }
-   	    out.value = a3text.value;
-	} else {
-    	a3text.disabled = true;
-    	for (i = 0; i < 4; ++i) {
+   	//if (a3[4].checked) {
+   	//    next.style.display="none";
+   	//    a3text.disabled=false;
+   	//    if (a3text.value != "") {
+   	//        enable_submit();
+   	//    }
+   	//    out.value = a3text.value;
+	//} else {
+
+    	for (i = 0; i < 5; ++i) {
         	if (a3[i].checked) {
-   				next.style.display="inline";
+   				//next.style.display="inline";
    				out.value = a3[i].value;
    			}
    		}
+
+		if( a3[4].checked ) {
+	    	a3text.disabled = false;
+			out.value = a3text.value;
+		}
+
     	if (out.value != "") {
    	    	next.style.display="inline";
-    		answer4();
+			doReset();
+    		//answer5();
     	}
-	}
-}
-function answer4()
-{
-    var a4 = document.getElementsByName("A4");
-   	var next = document.getElementById("DIVQ5");
-	var out = document.getElementById("REPORTWRITER");
-	disable_submit();
-    if (a4[0].checked) {
-    	next.style.display="inline";
-    	out.value = a4[0].value;
-    	answer5();
-   	} else if(a4[1].checked) {
-   	    next.style.display="none";
-   	    out.value = a4[1].value;
-   	    enable_submit();
-	}
+	//}
 }
 function answer5()
 {
+	currentQuestion = 5;
     var a5 = document.getElementsByName("A5");
     var a6 = document.getElementsByName("A6");
     var a6divs = document.getElementsByName("A6DIV");
    	var next = document.getElementById("DIVQ6");
+   	var nextSkipped = document.getElementById("DIVQ7");
 	var a5text = document.getElementById("A5TEXT");
-	var out = document.getElementById("TOOLS");
-	var out6 = document.getElementById("PRIMARY");
+	var out = document.getElementById("SCRIPTTOOLS");
+	var out6 = document.getElementById("SCRIPTPRIMARY");
 	out.value = "";
 	var numChecked = 0;
-	for (i = 0; i < 9; ++i) {
+
+	if (a5[0].checked) {
+		for(i = 1; i < 7; i++ ) {
+    	    a5[i].disabled = true;
+    	    a5[i].checked = false;
+    	}
+	    //nextSkipped.style.display="inline";
+	} else {
+		for(i = 1; i < 7; i++ ) {
+    	    a5[i].disabled = false;
+    	}
+	    //nextSkipped.style.display="none";
+	}
+
+	for (i = 0; i < 6; ++i) {
 	    if (a5[i].checked) {
 	        a6divs[i].style.display = "inline";
 	        if (out.value != "") {
@@ -145,7 +178,7 @@ function answer5()
 	        a6[i].checked = false;
 	    }
 	}
-    if (a5[9].checked) {
+    if (a5[6].checked) {
         a5text.disabled = false;
         if (a5text.value != "") {
         	++numChecked;
@@ -153,7 +186,7 @@ function answer5()
                 out.value += "|";
             }
 	        out.value += a5text.value;
-	        a6[9].value = a5text.value;
+	        a6[6].value = a5text.value;
 	        var othertext = document.getElementById("OTHERTEXT");
 	        var newtext = document.createTextNode(a5text.value);
 	        if (othertext.hasChildNodes()) {
@@ -161,90 +194,307 @@ function answer5()
 	        } else {
 	            othertext.appendChild(newtext);
 	        }
-	        a6divs[9].style.display = "inline";
+	        a6divs[6].style.display = "inline";
         } else {
         	var othertext = document.getElementById("OTHERTEXT");
         	if (othertext.hasChildNodes()) {
                 othertext.removeChild(othertext.childNodes[0]);
             }
-	        a6divs[9].style.display = "none";
+	        a6divs[6].style.display = "none";
         }
     } else {
         a5text.disabled = true;
         a6divs[i].style.display = "none";
         a6[i].checked = false;
     }
-    if (out.value != "" && numChecked>1) {
+
+    if (out.value != "" && numChecked > 1) {
+        a6divs[0].style.display = "inline";
 	    next.style.display="inline";
+	    nextSkipped.style.display="none";
+		doReset();
+	} else if (out.value != "" && numChecked == 1) {
+        a6divs[0].style.display = "inline";
+	    out6.value = out.value;
+		if (a5[0].checked) {
+		    nextSkipped.style.display="inline";
+		    next.style.display="none";
+		} else {
+		    next.style.display="inline";
+		}
+		doReset();
 	} else {
 	    out6.value = out.value;
 	    next.style.display="none";
 	}
-    answer6();
 }
 function answer6()
 {
+	currentQuestion = 6;
     var a6 = document.getElementsByName("A6");
     var a5 = document.getElementsByName("A5");
+   	var next = document.getElementById("DIVQ7");
 	var a5text = document.getElementById("A5TEXT");
-	var out = document.getElementById("PRIMARY");
+	var out = document.getElementById("SCRIPTPRIMARY");
 	out.value = "";
 	var numChecked = 0;
 	var lastval;
-    for (i=0; i <= 9; ++i) {
+    for (i=0; i <= 6; ++i) {
         if (a6[i].checked) {
    	        out.value = a6[i].value;
    	    }
    	    if (a5[i].checked) {
    	        ++numChecked;
-   	        lastval = (i==9) ? a5text.value : a5[i].value;
+   	        lastval = (i==6) ? a5text.value : a5[i].value;
    	    }
    	}
 
 	if (numChecked == 1) {
 	    out.value = lastval;
 	}
+
 	if (out.value != "") {
-	    enable_submit();
+   	    next.style.display="inline";
+    	//answer7();
+	    //enable_submit();
 	} else {
 	    disable_submit();
 	}
+	doReset();
 }
+
+function answer7()
+{
+	currentQuestion = 7;
+    var a7 = document.getElementsByName("A7");
+   	var next = document.getElementById("DIVQ8");
+	var out = document.getElementById("REPORTWRITER");
+	disable_submit();
+    if (a7[0].checked) {
+    	next.style.display="inline";
+    	out.value = a7[0].value;
+    	//answer8();
+   	} else if(a7[1].checked) {
+   	    next.style.display="none";
+   	    out.value = a7[1].value;
+   	    enable_submit();
+	}
+	doReset();
+}
+
+
+function answer8()
+{
+	currentQuestion = 8;
+    var a8 = document.getElementsByName("A8");
+    var a9 = document.getElementsByName("A9");
+    var a9divs = document.getElementsByName("A9DIV");
+   	var next = document.getElementById("DIVQ9");
+	var a8text = document.getElementById("A8TEXT");
+	var out = document.getElementById("TOOLS");
+	var out9 = document.getElementById("PRIMARY");
+	out.value = "";
+	var numChecked = 0;
+	for (i = 0; i < 8; ++i) {
+	    if (a8[i].checked) {
+	        a9divs[i].style.display = "inline";
+	        if (out.value != "") {
+	            out.value += "|";
+	        }
+	        out.value += a8[i].value;
+	        ++numChecked;
+	    } else {
+	        a9divs[i].style.display = "none";
+	        a9[i].checked = false;
+	    }
+	}
+    if (a8[8].checked) {
+        a8text.disabled = false;
+        if (a8text.value != "") {
+        	++numChecked;
+            if (out.value != "") {
+                out.value += "|";
+            }
+	        out.value += a8text.value;
+	        a9[8].value = a8text.value;
+	        var othertext = document.getElementById("OTHERTEXT1");
+	        var newtext = document.createTextNode(a8text.value);
+	        if (othertext.hasChildNodes()) {
+                othertext.replaceChild(newtext, othertext.childNodes[0]);
+	        } else {
+	            othertext.appendChild(newtext);
+	        }
+	        a9divs[8].style.display = "inline";
+        } else {
+        	var othertext = document.getElementById("OTHERTEXT1");
+        	if (othertext.hasChildNodes()) {
+                othertext.removeChild(othertext.childNodes[0]);
+            }
+	        a9divs[8].style.display = "none";
+        }
+    } else {
+        a8text.disabled = true;
+        a9divs[i].style.display = "none";
+        a9[i].checked = false;
+    }
+
+    if (out.value != "" && numChecked>1) {
+	    next.style.display="inline";
+	} else {
+	    out9.value = out.value;
+	    next.style.display="none";
+	}
+	doReset();
+    answer9();
+}
+
+function answer9()
+{
+	currentQuestion = 9;
+    var a9 = document.getElementsByName("A9");
+    var a8 = document.getElementsByName("A8");
+	var a8text = document.getElementById("A8TEXT");
+	var out = document.getElementById("PRIMARY");
+   	var next = document.getElementById("DIVQ10");
+	out.value = "";
+	var numChecked = 0;
+	var lastval;
+    for (i=0; i <= 8; ++i) {
+        if (a9[i].checked) {
+   	        out.value = a9[i].value;
+   	    }
+   	    if (a8[i].checked) {
+   	        ++numChecked;
+   	        lastval = (i==8) ? a8text.value : a8[i].value;
+   	    }
+   	}
+
+	if (numChecked == 1) {
+	    out.value = lastval;
+	}
+
+	if (out.value != "") {
+	    next.style.display="inline";
+	    //enable_submit();
+	} else {
+	    next.style.display="none";
+	    disable_submit();
+	}
+	doReset();
+	answer10();
+}
+
+function answer10()
+{
+	currentQuestion = 10;
+    var a10 = document.getElementsByName("A10");
+	var out = document.getElementById("INDUSTRY");
+	var a10text = document.getElementById("A10TEXT");
+   	var next = document.getElementById("DIVQ11");
+	out.value = "";
+	var numChecked = 0;
+	var lastval;
+    for (i=0; i < 12; ++i) {
+        if (a10[i].checked) {
+   	        out.value = a10[i].value;
+   	    }
+   	}
+
+	if (a10[12].checked) {
+	    out.value = a10text.value;
+	}
+
+	if (out.value != "") {
+	    next.style.display="inline";
+	    enable_submit();
+	} else {
+	    next.style.display="none";
+	    disable_submit();
+	}
+}
+
+function answer11()
+{
+	currentQuestion = 11;
+    var a11 = document.getElementById("A11");
+	var out = document.getElementById("SOURCES");
+	out.value = a11.value;
+}
+
 function validate()
 {
     var hide2 = (document.getElementById("DIVQ2").style.display=="none");
     var hide3 = (document.getElementById("DIVQ3").style.display=="none");
-    var hide4 = (document.getElementById("DIVQ4").style.display=="none");
     var hide5 = (document.getElementById("DIVQ5").style.display=="none");
     var hide6 = (document.getElementById("DIVQ6").style.display=="none");
+    var hide7 = (document.getElementById("DIVQ7").style.display=="none");
+    var hide8 = (document.getElementById("DIVQ8").style.display=="none");
+    var hide9 = (document.getElementById("DIVQ9").style.display=="none");
+    var hide10= (document.getElementById("DIVQ10").style.display=="none");
+    var hide11= (document.getElementById("DIVQ11").style.display=="none");
 
 	var a2 = document.getElementById("DEV");
 	var a3 = document.getElementById("IDE");
-	var a4 = document.getElementById("REPORTWRITER");
-	var a5 = document.getElementById("TOOLS");
-	var a6 = document.getElementById("PRIMARY");
+	var a5 = document.getElementById("SCRIPTTOOLS");
+	var a6 = document.getElementById("SCRIPTPRIMARY");
+	var a7 = document.getElementById("REPORTWRITER");
+	var a8 = document.getElementById("TOOLS");
+	var a9 = document.getElementById("PRIMARY");
+	var a10 = document.getElementById("INDUSTRY");
+	var a11 = document.getElementById("SOURCES");
+
     if (hide2) {
         a2.value = "";
         a3.value = "";
-        a4.value = "";
         a5.value = "";
         a6.value = "";
+        a7.value = "";
+        a8.value = "";
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
     } else if (hide3) {
         a3.value = "";
-        a4.value = "";
         a5.value = "";
         a6.value = "";
-    } else if (hide4) {
-        a4.value = "";
-        a5.value = "";
-        a6.value = "";
+        a7.value = "";
+        a8.value = "";
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
     } else if (hide5) {
         a5.value = "";
         a6.value = "";
+        a7.value = "";
+        a8.value = "";
+        a9.value = "";
+        a11.value = "";
     } else if (hide6) {
-        a6.value = a5.value;
+        a6.value = "";
+        a7.value = "";
+        a8.value = "";
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
+    } else if (hide7) {
+        a8.value = "";
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
+    } else if (hide8) {
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
+    } else if (hide9) {
+        a9.value = "";
+        a10.value = "";
+        a11.value = "";
+    } else if (hide10) {
+        a10.value = "";
+        a11.value = "";
+    } else if (hide11) {
+        a11.value = "";
 	}
-
 }
 </SCRIPT>
 </head>
@@ -254,25 +504,19 @@ function validate()
 <table border=0 width=100%>
 <tr>
 <td>
-<p class=indextop>Reporting Survey</p>
+<p class=indextop></p>
 </td>
 <td style="text-align: right">
-<img src="http://www.eclipse.org/downloads/images/survey.gif">
+<!-- <img src="http://www.eclipse.org/downloads/images/survey.gif"> -->
 </td>
 </tr>
 </table>
 <p>
 <table border=0>
 <tr><td>
-Thank you for agreeing to take this short survey.  We are interested in how you 
-create reports in your applications.   The information collected from this survey 
-will be published at a later date and all information will be used in compliance 
-with the
+Thank you for agreeing to spend 60 seconds taking this survey on your development environment.  All information collected from this survey will be published at a later date and all information will be used in compliance with the
 <a href="http://www.eclipse.org/legal/privacy.html">Eclipse Foundation privacy policy</a>.
-<p>
-<i>&ndash; The <a href="/birt" target="_top">BIRT</a> PMC</i>  
-<p>
-
+<br><br>
 
     <DIV ID="DIVQ1">
         <B>What is your primary development language?</B><BR>
@@ -281,71 +525,128 @@ with the
         <INPUT type="radio" name="A1" id="A1" VALUE="OTHER" onclick="answer1()">Other:</INPUT>
         <INPUT type="text" name="A1TEXT" id="A1TEXT" STYLE="border-style:groove" DISABLED="TRUE" onkeyup="answer1()"></INPUT><BR>
         <P>
+    </DIV>
     <DIV ID="DIVQ2" STYLE="display:none">
         <B>Which Java technology do you primarily use?</B><BR>
         <INPUT type="radio" id="A2" name="A2" VALUE="J2EE" onclick="answer2()">J2EE</INPUT><BR>
-        <INPUT type="radio" id="A2" name="A2" VALUE="J2SE" onclick="answer2()">J2SE</INPUT><BR>
         <INPUT type="radio" id="A2" name="A2" VALUE="J2ME" onclick="answer2()">J2ME</INPUT><BR>
+        <INPUT type="radio" id="A2" name="A2" VALUE="J2SE" onclick="answer2()">J2SE</INPUT><BR>
         <INPUT type="radio" id="A2" name="A2" VALUE="OTHER" onclick="answer2()">Other:</INPUT>
         <INPUT type="text" id="A2TEXT" name="A2TEXT" STYLE="border-style:groove" DISABLED="TRUE" onkeyup="answer2()"></INPUT><BR>
         <P>
+    </DIV>
     <DIV ID="DIVQ3" STYLE="display:none">
         <B>What is your primary Java IDE?</B><BR>
         <INPUT type="radio" id="A3" name="A3" VALUE="ECLIPSE" onclick="answer3()">Eclipse</INPUT><BR>
+        <INPUT type="radio" id="A3" name="A3" VALUE="BORLAND" onclick="answer3()">Borland Together Edition for Eclipse</INPUT><BR>
         <INPUT type="radio" id="A3" name="A3" VALUE="WEBSPHERE" onclick="answer3()">IBM Websphere Studio</INPUT><BR>
         <INPUT type="radio" id="A3" name="A3" VALUE="NETWEAVER" onclick="answer3()">SAP Netweaver</INPUT><BR>
-        <INPUT type="radio" id="A3" name="A3" VALUE="BORLAND" onclick="answer3()">Borland Together Edition for Eclipse</INPUT><BR>
         <INPUT type="radio" id="A3" name="A3" VALUE="OTHER" onclick="answer3()">Other:</INPUT>
         <INPUT type="text" id="A3TEXT" name="A3TEXT" STYLE="border-style:groove" DISABLED="TRUE" onkeyup="answer3()"></INPUT><BR>
         <P>
-    <DIV ID="DIVQ4" STYLE="display:none">
-        <B>Do you write reports (i.e. format database data on a web page or printer?)</B><BR>
-        <INPUT type="radio" id="A4" name="A4" VALUE="YES" onclick="answer4()">Yes</INPUT><BR>
-        <INPUT type="radio" id="A4" name="A4" VALUE="NO" onclick="answer4()">No</INPUT><BR>
-        <P>
+    </DIV>
     <DIV ID="DIVQ5" STYLE="display:none">
-        <B>What tool(s) do you use for your reporting on this project? (Click all that apply.)</B><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="BIRT" onclick="answer5()">BIRT</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="CRYSTAL" onclick="answer5()">Crystal Reports</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="JASPER" onclick="answer5()">Jasper Reports</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="JSP" onclick="answer5()">Java/JSP</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="JFREE" onclick="answer5()">Jfree Report</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="JREPORTS" onclick="answer5()">Jreports</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="PANSCOPIC" onclick="answer5()">Panscopic</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="REPORTNET" onclick="answer5()">ReportNet</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="STYLE" onclick="answer5()">Style Reports</INPUT><BR>
-        <INPUT type="checkbox" id="A5" name="A5" VALUE="OTHER" onclick="answer5()">Other</INPUT>
+        <B>Which scripting languages do you use?</B><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="NONE" onclick="answer5()">None</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="JAVASCRIPT" onclick="answer5()">JavaScript</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="PERL" onclick="answer5()">Perl</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="PHP" onclick="answer5()">PHP</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="PYTHON" onclick="answer5()">Python</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="RUBY" onclick="answer5()">Ruby</INPUT><BR>
+        <INPUT type="checkbox" id="A5" name="A5" VALUE="OTHER" onclick="answer5()">Other:</INPUT>
         <INPUT type="text" id="A5TEXT" name="A5TEXT" STYLE="border-style:groove" DISABLED="TRUE" onkeyup="answer5()"></INPUT><BR>
         <P>
+    </DIV>
     <DIV ID="DIVQ6" STYLE="display:none">
-        <B>What is your <I>primary</I> reporting tool on this project?</B><BR>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="BIRT" onclick="answer6()"/>BIRT<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="CRYSTAL" onclick="answer6()"/>Crystal Reports<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="JASPER" onclick="answer6()"/>Jasper Reports<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="JSP" onclick="answer6()"/>Java/JSP<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="JFREE" onclick="answer6()"/>Jfree Reports<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="JREPORTS" onclick="answer6()"/>Jreports<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="PANSCOPIC" onclick="answer6()"/>Panscopic<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="REPORTNET" onclick="answer6()"/>ReportNet<BR></DIV>
-        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="STYLE" onclick="answer6()"/>Style Reports<BR></DIV>
+        <B>On your Java projects, what is the <I>primary</I> scripting language used?</B><BR>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="NONE" onclick="answer6()">None</INPUT><BR></DIV>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="JAVASCRIPT" onclick="answer6()">JavaScript</INPUT><BR></DIV>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="PERL" onclick="answer6()">Perl</INPUT><BR></DIV>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="PHP" onclick="answer6()">PHP</INPUT><BR></DIV>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="PYTHON" onclick="answer6()">Python</INPUT><BR></DIV>
+        <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="RUBY" onclick="answer6()">Ruby</INPUT><BR></DIV>
         <DIV ID="A6DIV" name="A6DIV" STLYE="display:none"><INPUT type="radio" id="A6" name="A6" VALUE="OTHER" onclick="answer6()"/><SPAN ID="OTHERTEXT" NAME="OTHERTEXT"></SPAN></DIV>
         <P>
     </DIV>
+    <DIV ID="DIVQ7" STYLE="display:none">
+        <B>Do you write reports (i.e. format database data on a web page or printer?)</B><BR>
+        <INPUT type="radio" id="A7" name="A7" VALUE="YES" onclick="answer7()">Yes</INPUT><BR>
+        <INPUT type="radio" id="A7" name="A7" VALUE="NO" onclick="answer7()">No</INPUT><BR>
+        <P>
     </DIV>
+    <DIV ID="DIVQ8" STYLE="display:none">
+        <B>What tool(s) do you use for your reporting on this project? (Click all that apply.)</B><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="BIRT" onclick="answer8()">BIRT</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="CRYSTAL" onclick="answer8()">Crystal Reports</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="JASPER" onclick="answer8()">Jasper Reports</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="JSP" onclick="answer8()">Java/JSP</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="JFREE" onclick="answer8()">Jfree Report</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="JREPORTS" onclick="answer8()">Jreports</INPUT><BR>
+        <!-- <INPUT type="checkbox" id="A8" name="A8" VALUE="PANSCOPIC" onclick="answer8()">Panscopic</INPUT><BR> -->
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="REPORTNET" onclick="answer8()">ReportNet</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="STYLE" onclick="answer8()">Style Reports</INPUT><BR>
+        <INPUT type="checkbox" id="A8" name="A8" VALUE="OTHER" onclick="answer8()">Other</INPUT>
+        <INPUT type="text" id="A8TEXT" name="A8TEXT" STYLE="border-style:groove" DISABLED="TRUE" onkeyup="answer8()"></INPUT><BR>
+        <P>
     </DIV>
+    <DIV ID="DIVQ9" STYLE="display:none">
+        <B>What is your <I>primary</I> reporting tool on this project?</B><BR>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="BIRT" onclick="answer9()"/>BIRT<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="CRYSTAL" onclick="answer9()"/>Crystal Reports<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="JASPER" onclick="answer9()"/>Jasper Reports<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="JSP" onclick="answer9()"/>Java/JSP<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="JFREE" onclick="answer9()"/>Jfree Reports<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="JREPORTS" onclick="answer9()"/>Jreports<BR></DIV>
+        <!-- <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="PANSCOPIC" onclick="answer9()"/>Panscopic<BR></DIV> -->
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="REPORTNET" onclick="answer9()"/>ReportNet<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="STYLE" onclick="answer9()"/>Style Reports<BR></DIV>
+        <DIV ID="A9DIV" name="A9DIV" STLYE="display:none"><INPUT type="radio" id="A9" name="A9" VALUE="OTHER" onclick="answer9()"/><SPAN ID="OTHERTEXT1" NAME="OTHERTEXT1"></SPAN></DIV>
+        <P>
     </DIV>
+    <DIV ID="DIVQ10" STYLE="display:none">
+        <B>What industry group does your company fall within?</B><BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="RATHERNOTSAY" onclick="answer10()"/>Rather Not Say<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="AUTOMOTIVE" onclick="answer10()"/>Automotive<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="COMPUTERSOFTWARE" onclick="answer10()"/>Computer Software<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="CONSUMERPRODUCTS" onclick="answer10()"/>Consumer Products<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="ELECTRONICS" onclick="answer10()"/>Electronics<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="ENERGYUTILITIES" onclick="answer10()"/>Energy & Utilities<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="FINANCIALSERVICES" onclick="answer10()"/>Financial Services (Insurance, Banking, Financial Markets)<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="GOVERNMENT" onclick="answer10()"/>Government<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="HEALTH" onclick="answer10()"/>Health<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="LIFESCIENCES" onclick="answer10()"/>Life Sciences<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="RETAILWHOLESALE" onclick="answer10()"/>Retail/Wholesale<BR>
+        <INPUT type="radio" id="A10" name="A10" VALUE="TELECOM" onclick="answer10()"/>Telecom<BR>
+<!--        <INPUT type="radio" id="A10" name="A10" VALUE="OTHER" onclick="answer10()"/><SPAN ID="OTHERTEXT2" NAME="OTHERTEXT2"></SPAN> -->
+        <INPUT type="radio" id="A10" name="A10" VALUE="OTHER" onclick="answer10()">Other</INPUT>
+		<INPUT type="text" id="A10TEXT" name="A10TEXT" STYLE="border-style:groove" onkeyup="answer10()"></INPUT>
+        <P>
     </DIV>
+    <DIV ID="DIVQ11" STYLE="display:none">
+        <B>What source(s) do you rely on for information and recommendations about open source reporting and analysis tools?</B><BR>
+        <INPUT type="text" id="A11" name="A11" SIZE="60" onBlur="answer11()"/><BR>
     </DIV>
 
 <FORM ACTION="submit.php" METHOD="POST" onsubmit="validate()">
+
 	<INPUT type="hidden" id="LANGUAGE" name="LANGUAGE">
 	<INPUT type="hidden" id="DEV" name="DEV">
 	<INPUT type="hidden" id="IDE" name="IDE">
+	<INPUT type="hidden" id="SCRIPTTOOLS" name="SCRIPTTOOLS">
+	<INPUT type="hidden" id="SCRIPTPRIMARY" name="SCRIPTPRIMARY">
 	<INPUT type="hidden" id="REPORTWRITER" name="REPORTWRITER">
 	<INPUT type="hidden" id="TOOLS" name="TOOLS">
 	<INPUT type="hidden" id="PRIMARY" name="PRIMARY">
+	<INPUT type="hidden" id="INDUSTRY" name="INDUSTRY">
+	<INPUT type="hidden" id="SOURCES" name="SOURCES">
 	<INPUT TYPE="submit" id="SUBMIT" VALUE="Submit" DISABLED="TRUE">
-	  <SPAN ID="DIVTHANKS" STYLE="display:none"><B><I>Thank you!</I></B><BR></SPAN>
+
+
+	<SPAN ID="DIVTHANKS" STYLE="display:none"><B><I>Thank you!</I></B><BR></SPAN>
+<p>
+<i>&ndash; The <a href="http://www.eclipse.org/birt/index.php?page=project/pmc.html" target="_top">BIRT</a> PMC</i>
+<p>
+
 </FORM>
 </td></tr>
 </table>
