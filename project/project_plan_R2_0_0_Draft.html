@@ -11,7 +11,7 @@
 <body>
 
 <p class="head">BIRT Project DRAFT 2.0 Plan</p>
-<p class="subhead">Last revised 28 September, 2005</p>
+<p class="subhead">Last revised 9 December, 2005 (<img src="new.gif" alt="New since last update" width="12" height="12"> marks interesting changes since the previous draft of 28 September, 2005) </p>
 
 
 <h2><a name="Introduction"></a>Introduction</h2><p>
@@ -81,8 +81,8 @@ target operating configurations listed below.
   <li>Friday, September 16, 2005 BIRT 2.0 M1</li>
   <li>Monday, October 24, 2005 BIRT 2.0 M2</li>
   <li>Monday, November 21, 2005 BIRT 2.0 M3</li>
-  <li>Monday, December 5, 2005 BIRT 2.0 Release Candidate</li>
-  <li>Friday, December 30, 2005 BIRT 2.0</li>
+  <li>Friday, December 30, 2005 BIRT 2.0 Release Candidate </li>
+  <li>Friday, January 20, 2006 BIRT 2.0</li>
 </ul>
 
 <p>
@@ -411,13 +411,8 @@ capabilities to easily create a Top N / Bottom N type report section. [<a href="
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110641">110641</a>][Theme: Simple to use]</p>
 
   <p><b>Provide support for binding Blob/Clob data to report controls</b>
-Many database schemas, such as those used for call center or customer support applications, contain 
-columns defined as character large objects (CLOBs). These fields contain, for example, the variable 
-length and free format text notes that the call center representative takes when speaking to a 
-customer. This project will provide easy support for displaying CLOBs in a BIRT report. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS3">BPS 3</a>]
-[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110642">110642</a>][Theme: Simple to use, Appeal to a Broader Community]
-
-</blockquote>
+Many database  schemas, such as those used for call center or customer support applications,  contain columns defined as character large objects (CLOBs). These fields  contain, for example, the variable length and free format text notes that the  call center representative takes when speaking to a customer. <img src="new.gif" alt="New since last update to plan" width="12" height="12">In addition, an  human resources system might store pictures of employees in a database as  binary large objects (BLOBS). This project will provide easy support for  displaying BLOBS/CLOBs in a BIRT report. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS3">BPS 3</a>]
+[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110642">110642</a>][Theme: Simple to use, Appeal to a Broader Community]</blockquote>
 
 <h4>BIRT Java Script Objects</h4>
 <blockquote>  
@@ -460,8 +455,7 @@ The definition of a page in this context needs to be flexible to accommodate dif
 characteristics, or logical constructs such as a page for each customer. This project enables 
 BIRT to support multi-page report output. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS19">BPS 19</a>]
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110671">110671</a>]
-[Theme: Scaling up]<br>
-
+[Theme: Scaling up]
 <p><b>Hyperlinks to Other Reports</b>
 This project provides the report developer the capability to link easily to another report while 
 not hard wiring the report to a particular environment. Additionally, if a user navigates to 
@@ -477,21 +471,6 @@ within the report. This project provides support for the bookmark concept in BIR
 [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS5">BPS 5</a>][Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110651">110651</a>]
 [Theme: Simple to use]
 
-<p><b>Progressive Viewing</b>
-When a report is large, generating the report could take a long time. It is not efficient or user 
-friendly to require a user to wait until the whole report is generated before viewing the first 
-page. Progressive viewing allows a user to view the first few pages of a report while the remaining 
-pages are still being generated. This provides a web application with acceptable performance.
-
-This feature consists of two projects:
-1) Providing APIs for the application developer to progressively generate and view a report. 
-[<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS22">BPS 22</a>][Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110652">110652</a>]
-2) Including an exemplary implementation of a viewing framework that allows application developers 
-to easily integrate viewing functionality into their applications and customize the viewing 
-capabilities they choose. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS5">BPS5</a>]
-[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110654">110654</a>]
-[Theme: Scaling up]
-
 <p><b>Table of Contents Support in Viewer</b>
 A table of contents shows the hierarchical structure of a report to the end user and allows 
 the user to easily and quickly navigate to sections of the report. The hierarchy is defined by 
@@ -504,7 +483,6 @@ TOC element that can be embedded in a report. This later item is a separate feat
 scheduled for this release. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS5">BPS 5</a>]
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110655">110655</a>]
 [Theme: Simple to use]
-
 </blockquote>
 
 <h4>Report Engine Scalability and Performance</h4>
@@ -552,7 +530,12 @@ report for viewing at some point in the future. [<a href="http://www.eclipse.org
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110661">110661</a>][Theme: Scaling up]
 </blockquote>
 
-<h4>Report Template</h4>
+<h4><strong><img src="new.gif" alt="New since last update" width="12" height="12">Improved PDF Output  Generation </strong></h4>
+<blockquote>
+Robust PDF generation is a key component for reporting since many users generate PDF versions of the report for portability, printing and distribution. For BIRT, the PDF support needs to be very high quality. This project addresses issues related to PDF generation using FOP such as slow performance, limited support for lines and borders, and others. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS21">BPS 21</a>] [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=120143">120143</a>][Theme: Scaling up]
+</blockquote>
+
+<h4><strong>Report Template</strong></h4>
 <blockquote>
 When creating a new report, BIRT provides the ability to select a template for the report design. 
 With BIRT 1.0, these templates are from a predefined list that is built into the user interface. 
@@ -626,6 +609,11 @@ dynamic parameters. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.B
 
 </blockquote>
 
+<h4><img src="new.gif" alt="New since last update" width="12" height="12">Cascading Dynamic Parameter Lists</h4>
+<blockquote>
+Parameterized BIRT reports can be used to provide a highly personalized experience. Building on the support for Dynamic Parameter Lists, a report may require an end user, at run time, to specify more than 1 parameter that are cascaded together. For example, a regional sales report may require the user to specify parameters for the State and City. Suppose the user selects California for the state. The user may then want to see the sales information for a specific city. The user would then specify a value for the City parameter of the report. However, the values for the City parameter list would depend on the value selected for the State parameter and would dynamically at run time be populated with cities in California. This project concerns itself with providing the report developer with the ability to define dynamic parameters that are cascaded together as described above. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS14">BPS 14</a>][Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=120145">120145</a>][Theme: Simple to use]
+
+</blockquote>
 <h4>Chart Builder and Wizard</h4>
 <blockquote>
 BIRT includes support for including charts within a report design. The goal for this project 
@@ -750,18 +738,6 @@ Building on the infrastructure of exporting data from a report, this project all
 to extract report data as a CSV formatted file. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS32">BPS 32</a>]
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110680">110680</a>]
 [Theme: Simple to use, Appeal to a Broader Community]
-</blockquote>
-
-<h4>Reportlet</h4>
-<blockquote>
-Web pages often use HTML tables instead to organize and position their content. In order to provide 
-more flexibility for integrating report content into the customer&#8217; web pages, it becomes necessary 
-to introduce a new set of formats that return content as &#8220;Reportlets&#8221; or partial DHTML pages.  These 
-reportlets can then be included within web pages generated by the customer&#8217;s web application. This 
-project focuses on producing content that is easily embeddable within an overall HTML page. [<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS34">BPS 34</a>]
-[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110681">110681</a>]
-[Theme: Simple to use, Appeal to a Broader Community]
-
 </blockquote>
 
 <h4>Pass-through of external context objects</h4>
