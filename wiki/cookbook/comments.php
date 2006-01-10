@@ -206,7 +206,7 @@ function PrintComments($pagename) {
 // Then do so :)
 function CommentsFileName($pagename) {
 	global $WorkDir;
-	return $WorkDir.'/'.$pagename.".Comments";
+	return $WorkDir.'/'.$pagename.".CommentsSave";
 }
 // Creates/updates/deletes comments
 function HandlePostComment( $pagename ) {
