@@ -34,7 +34,7 @@ SDV($DefaultPasswords['removecomment'],'*');
 
 // feel free to choose :)
 # InitComments();
-InitCommentsStyled();
+# InitCommentsStyled();
 
 // Initializes $RecentComments array.
 if( !isset($RecentComments) ) {
@@ -46,7 +46,7 @@ if( !isset($RecentComments) ) {
 }
 
 // thought it'd be better here
-BasicCommentSetup();
+#BasicCommentSetup();
 
 // Initializes structures with plain content
 function InitComments() {
@@ -79,7 +79,7 @@ function InitComments() {
 		<input type='submit' name='delete' value=' $[Delete] ' onclick='javascript:text.value=\"\";' />
 		<input type='button' value=' $[Reset] ' onclick='javascript:text.value=\"\"; uid.value=\"0\"'/>
 	");
-	SDV($CommentsFooterFmt, "wiki:$[PmWiki.CommentsFooter]");
+	SDV($CommentsFooterFmt, "wiki:$[PmWikiFooter]");
 }
 
 // Initializes structures with styled content
@@ -112,7 +112,7 @@ function InitCommentsStyled() {
 		<input type='submit' name='delete' value=' $[Delete] ' onclick='javascript:text.value=\"\";' />
 		<input type='button' value=' $[Reset] ' onclick='javascript:text.value=\"\"; uid.value=\"0\"'/>
 	");
-	SDV($CommentsFooterFmt, "wiki:$[PmWiki.CommentsFooter]");
+	SDV($CommentsFooterFmt, "wiki:$[PmWikiFooter]");
 }
 
 // aquires special params (uid & text) and initializes buttons.
@@ -206,7 +206,7 @@ function PrintComments($pagename) {
 // Then do so :)
 function CommentsFileName($pagename) {
 	global $WorkDir;
-	return $WorkDir.'/'.$pagename.".CommentsSave";
+	return $WorkDir.'/'.$pagename."Save";
 }
 // Creates/updates/deletes comments
 function HandlePostComment( $pagename ) {
