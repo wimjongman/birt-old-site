@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Written by Eclipse BIRT 1.0 -->
-<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050405-1230></property>
     <property name="units">in</property>
     <data-sources>
-        <oda-data-source name="Sample">
-            <property name="driverName">sampledb</property>
-        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Sample" id="11"/>
     </data-sources>
     <data-sets>
-        <oda-data-set name="Customers">
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Customers" id="12">
             <property name="dataSource">Sample</property>
             <property name="queryText">SELECT *
 FROM CUSTOMERS
 WHERE COUNTRY = 'USA'</property>
-            <property name="type">JdbcSelectDataSet</property>
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="report">
+        <style name="report" id="2">
             <property name="fontFamily">sans-serif</property>
         </style>
-        <style name="label"/>
-        <style name="text"/>
-        <style name="data"/>
-        <style name="table"/>
-        <style name="grid"/>
-        <style name="list"/>
-        <style name="image"/>
-        <style name="Header">
+        <style name="label" id="3"/>
+        <style name="text" id="4"/>
+        <style name="data" id="5"/>
+        <style name="table" id="6"/>
+        <style name="grid" id="7"/>
+        <style name="list" id="8"/>
+        <style name="image" id="9"/>
+        <style name="Header" id="10">
             <property name="backgroundColor">#0080FF</property>
             <property name="fontWeight">bold</property>
             <property name="color">#FFFFFF</property>
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Simple MasterPage">
+        <simple-master-page name="Simple MasterPage" id="13">
             <page-header>
-                <grid>
+                <grid id="14">
                     <property name="width">100%</property>
-                    <column/>
-                    <row>
-                        <cell>
+                    <column id="15"/>
+                    <row id="16">
+                        <cell id="17">
                             <property name="fontSize">xx-large</property>
                             <property name="fontWeight">bold</property>
                             <property name="textAlign">center</property>
-                            <text>
+                            <text id="18">
                                 <text-property name="content"><![CDATA[Title]]></text-property>
                             </text>
                         </cell>
@@ -53,20 +50,20 @@ WHERE COUNTRY = 'USA'</property>
                 </grid>
             </page-header>
             <page-footer>
-                <grid>
+                <grid id="19">
                     <property name="width">100%</property>
-                    <column/>
-                    <column/>
-                    <row>
-                        <cell>
-                            <text>
+                    <column id="20"/>
+                    <column id="21"/>
+                    <row id="22">
+                        <cell id="23">
+                            <text id="24">
                                 <property name="contentType">html</property>
                                 <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
                             </text>
                         </cell>
-                        <cell>
+                        <cell id="25">
                             <property name="textAlign">right</property>
-                            <text>
+                            <text id="26">
                                 <text-property name="content"><![CDATA[Page:]]></text-property>
                             </text>
                         </cell>
@@ -76,29 +73,29 @@ WHERE COUNTRY = 'USA'</property>
         </simple-master-page>
     </page-setup>
     <body>
-        <grid>
+        <grid id="27">
             <property name="width">100%</property>
-            <column>
+            <column id="28">
                 <property name="width">33%</property>
             </column>
-            <column>
+            <column id="29">
                 <property name="width">33%</property>
                 <property name="textAlign">center</property>
             </column>
-            <column>
+            <column id="30">
                 <property name="width">33%</property>
                 <property name="textAlign">right</property>
             </column>
-            <row>
+            <row id="31">
                 <property name="verticalAlign">top</property>
-                <cell>
-                    <image>
-                        <expression name="uri">http://www.eclipse.org/birt/tutorial/multichip-4.jpg</expression>
+                <cell id="32">
+                    <image id="33">
+                        <expression name="uri">"http://www.eclipse.org/birt/tutorial/basic/multichip-4.jpg"</expression>
                     </image>
                 </cell>
-                <cell>
+                <cell id="34">
                     <property name="verticalAlign">top</property>
-                    <text>
+                    <text id="35">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<CENTER>
 <FONT size="6" color=blue>
@@ -109,9 +106,9 @@ Customer Listing
 </CENTER>]]></text-property>
                     </text>
                 </cell>
-                <cell>
+                <cell id="36">
                     <property name="verticalAlign">top</property>
-                    <data>
+                    <data id="37">
                         <structure name="dateTimeFormat">
                             <property name="category">Long Date</property>
                             <property name="pattern">Long Date</property>
@@ -120,14 +117,14 @@ Customer Listing
                     </data>
                 </cell>
             </row>
-            <row>
+            <row id="38">
                 <property name="height">0.25in</property>
-                <cell/>
-                <cell/>
-                <cell/>
+                <cell id="39"/>
+                <cell id="40"/>
+                <cell id="41"/>
             </row>
         </grid>
-        <table name="table1">
+        <table name="table1" id="42">
             <property name="borderBottomColor">#000000</property>
             <property name="borderBottomStyle">solid</property>
             <property name="borderBottomWidth">medium</property>
@@ -147,110 +144,110 @@ Customer Listing
                     <expression name="key">row["CUSTOMERNAME"]</expression>
                 </structure>
             </list-property>
-            <column>
+            <column id="88">
                 <property name="width">1.208in</property>
             </column>
-            <column>
+            <column id="89">
                 <property name="width">1.197in</property>
             </column>
-            <column>
+            <column id="90">
                 <property name="width">2.114in</property>
             </column>
-            <column>
+            <column id="91">
                 <property name="width">1.635in</property>
             </column>
             <header>
-                <row>
-                    <cell>
-                        <label>
+                <row id="43">
+                    <cell id="44">
+                        <label id="45">
                             <property name="style">Header</property>
                             <text-property name="text">State</text-property>
                         </label>
                     </cell>
-                    <cell>
-                        <label>
+                    <cell id="46">
+                        <label id="47">
                             <property name="style">Header</property>
                             <text-property name="text">City</text-property>
                         </label>
                     </cell>
-                    <cell>
-                        <label>
+                    <cell id="48">
+                        <label id="49">
                             <property name="style">Header</property>
                             <text-property name="text">Name</text-property>
                         </label>
                     </cell>
-                    <cell>
-                        <label>
+                    <cell id="50">
+                        <label id="51">
                             <property name="style">Header</property>
                             <text-property name="text">Phone</text-property>
                         </label>
                     </cell>
                 </row>
             </header>
-            <group>
+            <group id="52">
                 <expression name="keyExpr">row["STATE"]</expression>
                 <header>
-                    <row>
+                    <row id="53">
                         <property name="backgroundColor">#BBDDFF</property>
-                        <cell>
-                            <data>
+                        <cell id="54">
+                            <data id="55">
                                 <property name="fontSize">large</property>
                                 <property name="fontWeight">bold</property>
                                 <expression name="valueExpr">row["STATE"]</expression>
                             </data>
                         </cell>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell id="56"/>
+                        <cell id="57"/>
+                        <cell id="58"/>
                     </row>
                 </header>
                 <footer>
-                    <row>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                    <row id="59">
+                        <cell id="60"/>
+                        <cell id="61"/>
+                        <cell id="62"/>
+                        <cell id="63"/>
                     </row>
                 </footer>
             </group>
-            <group>
+            <group id="64">
                 <property name="interval">none</property>
                 <property name="sortDirection">asc</property>
                 <expression name="keyExpr">row["CITY"]</expression>
                 <header>
-                    <row>
-                        <cell/>
-                        <cell>
-                            <data>
+                    <row id="65">
+                        <cell id="66"/>
+                        <cell id="67">
+                            <data id="68">
                                 <property name="fontSize">large</property>
                                 <property name="color">#0080FF</property>
                                 <expression name="valueExpr">row["CITY"]</expression>
                             </data>
                         </cell>
-                        <cell/>
-                        <cell/>
+                        <cell id="69"/>
+                        <cell id="70"/>
                     </row>
                 </header>
                 <footer>
-                    <row>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                    <row id="71">
+                        <cell id="72"/>
+                        <cell id="73"/>
+                        <cell id="74"/>
+                        <cell id="75"/>
                     </row>
                 </footer>
             </group>
             <detail>
-                <row>
-                    <cell/>
-                    <cell/>
-                    <cell>
-                        <data>
+                <row id="76">
+                    <cell id="77"/>
+                    <cell id="78"/>
+                    <cell id="79">
+                        <data id="80">
                             <expression name="valueExpr">row["CUSTOMERNAME"]</expression>
                         </data>
                     </cell>
-                    <cell>
-                        <data>
+                    <cell id="81">
+                        <data id="82">
                             <structure name="stringFormat">
                                 <property name="category">Custom</property>
                                 <property name="pattern">(@@@)@@@-@@@@</property>
@@ -261,11 +258,11 @@ Customer Listing
                 </row>
             </detail>
             <footer>
-                <row>
-                    <cell/>
-                    <cell/>
-                    <cell/>
-                    <cell/>
+                <row id="83">
+                    <cell id="84"/>
+                    <cell id="85"/>
+                    <cell id="86"/>
+                    <cell id="87"/>
                 </row>
             </footer>
         </table>
