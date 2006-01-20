@@ -62,7 +62,7 @@ the following downloads</p>
 </ul>
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
-The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.pdf_version/lib directory.
+The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 </p>
 <p>
 Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
@@ -80,6 +80,14 @@ and extract only the six jars listed below into the plugins/org.eclipse.birt.rep
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
 
+<p class="caution"><span class="caution-head">Birt Runtime Note: </span>If you are installing the BIRT Runtime,
+The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
+<br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
+<br>Copy prototype.js to /Web Viewer Example/ajax/lib.
+<br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
+<br>
+If you are using the birt.war, you will need to extract it and add the above files.
+</p>
 <br>
 
 The instructions on this page cover the second configuration.
