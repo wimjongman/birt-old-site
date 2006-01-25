@@ -19,6 +19,9 @@ The BIRT Report Engine is packaged as a JAR file that you add to your J2EE
 application. The Report Engine is a series of POJOs (Plain Old Java Objects)
 that your JSP pages can call to integrate reporting into your application.
 <p>
+BIRT also delivers an example web application that can be deployed to an 
+existing application server.
+</p>
 <!-- Need more info here. -->
 
 <img src="../project/chart1.jpg" width="658" height="237"> <br>
@@ -33,7 +36,9 @@ BIRT has four main integration points with your application:
 <i>report parameter</i>. For example, a customer report might ask for the
 customer to display. Your parameter page can be static: custom designed
 for each report. Or, you can use a dynamic page powered by parameter
-meta-data so that a single page works for any report.
+meta-data so that a single page works for any report.  BIRT also supports
+the concept of dynamic and cascaded parameters.  This allows parameters to be
+tied to Data Sets defined within the report. 
 
 <dt>Running the Report
 <dd>When the user submits the parameter form, your web application passes the
@@ -46,16 +51,11 @@ reads the data, and produces the report output. BIRT uses the term
 often provide data to the BIRT factory via Java objects.
 
 <dt>Viewing
-<dd>Additional JSP pages, called the viewer, enable the user to view the output
-of the report.
+<dd>BIRT uses a Java servlet, called the viewer, to enable the user to view the output
+of the report in paginated HTML.  The viewer also supports exporting data to CSV, parameter
+collection and table of contents functionality.
 </dl>
 
-<dt>
-
-A reporting application includes a <i>parameter page</i>
-that you can create a custom UI for each report, or you can
-use the parameter meta-data provided by BIRT to provide a single report that
-handles many different reports.
 
 <h1>Example Viewer</h1>
 <p>
@@ -67,9 +67,8 @@ can also be used in any JSP-compliant J2EE server.
 
 <!-- List supported servers -->
 
-BIRT Release 1.0.1 provides web output as a single page. The plan is to provide
-multi-page output in upcoming releases, and the viewer UI will provide the
-means for navigating among the pages.<p>
+BIRT Release 2.0 provides web output as a single page, paginated HTML, and PDF.  Additionally the
+viewer allows exporting the data to CSV and Table of Contents functionality.<p>
 
 More information about the sample viewer is available in the <a href="../deploy">
 integration</a> section.</body></html>
