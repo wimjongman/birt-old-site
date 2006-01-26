@@ -23,9 +23,9 @@
 	# End: page-specific settings
 	#
 
-	require "../birt.inc";
-	require "deploy.inc";
-	$currentPage			= "Design Engine API";
+	require "birt.inc";
+	
+	$currentPage			= "Community";
 	$linkToTop				= linkToTop();
 	$deployLinksSideItem  	= getDeployLinksSideItem($currentPage);
 
