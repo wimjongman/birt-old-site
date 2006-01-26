@@ -111,12 +111,7 @@
 				Your application has created a parameter page specifically for the report.
 			</li>
 		</ul>
-		<div class="homeitem3col">
-			<h3>Release 1.0 Note</h3>
-			<p>
-				To create a parameter page based on the parameter definitions within a report, you must either use the one provided by the Viewer, or create your own viewer. There is no URL-based way to get parameter definitions.
-			</p>
-		</div>
+
 		<p>
 			The run report URL is of the form:
 		</p>
@@ -206,19 +201,8 @@
 				OrderNumber=10010 – The name and value of a report parameter as defined in the report design.
 			</li>
 		</ul>
-		<div class="homeitem3col">
-			<h3>Release 1.0 Note</h3>
-			<p>
-				The viewer supports only the GET method of passing options to the Viewer. If your reports will have option values that are too long for a URL, then you'll want to create a customized viewer that supports the POST method.
-			</p>
-		</div>
+
 		<h3>List of Options</h3>
-		<div class="homeitem3col">
-			<h3>Release 2.0 Note</h3>
-			<p>
-				The __frame, __toolbar, and __navigation options are obsolete and will only work with the 1.0.1 release.
-			</p>
-		</div>
 		<p>
 			The available viewer options include:
 		</p>
@@ -241,14 +225,6 @@
 				<td>N</td>
 			  </tr>
 			  <tr>
-				<td>__frame</td>
-				<td>Whether to show a frameset or single page.</td>
-				<td>true (use a frameset) or false (single page)</td>
-				<td>true</td>
-				<td>Y</td>
-				<td>N</td>
-			  </tr>
-			  <tr>
 				<td>__isnull</td>
 				<td>Identifies that a report parameter has a null value</td>
 				<td>Parameter name</td>
@@ -265,14 +241,6 @@
 				<td>Y</td>
 				<td>Y</td>
 			  </tr>
-			  <tr>
-				<td>__navigation</td>
-				<td>What to show in the navigation area.</td>
-				<td>hide, auto, or parameter</td>
-				<td>auto</td>
-				<td>Y</td>
-				<td>N</td>
-			  </tr>
 
 			  <tr>
 				<td>__report</td>
@@ -281,14 +249,6 @@
 				<td>None. Required.</td>
 				<td>Y</td>
 				<td>Y</td>
-			  </tr>
-			  <tr>
-				<td>__toolbar</td>
-				<td><font size="2">Whether to show the report tool bar.</font></td>
-				<td>true or false</td>
-				<td>true</td>
-				<td>Y</td>
-				<td>N</td>
 			  </tr>
 			  <tr>
 				<td><i>reportParam</i></td>
@@ -321,21 +281,7 @@
 		<p>
 			The type of output to produce: either html or pdf. Values are case insensitive. If a value other than pdf is provided, then the HTML format is produced.
 		</p>
-		<h3>The __frame Option</h3>
-		<p>
-			Determines whether to display the Viewer as a frameset (true), or a single page (false).
-		</p>
-		<ul class="midlist">
-			<li>
-				<code>true</code> (default) – The resulting web page contains three frames: Report data, parameter page (depending on the __navigation opttion) and toolbar (depending on the __toolbar option).
-			</li>
-			<li>
-				<code>false</code> – The report is displayed as a single page. The parameter UI and tool bar are aggregated into the report page using an HTML table. The report itself is put into an embedded HTML iframe since it is a complete HTML page.
-			</li>
-		</ul>
-		<p>
-			The default is to display the viewer as a frameset. Values are case insensitive.
-		</p>
+
 		<h3>The __isnull Option</h3>
 		<p>
 			Report parameters can take a value, or can be null. (Here "null" means the database definition: the value is unknown.) By definition, date and numeric report parameters have a null value if the report parameter is provided in the URL, and the value is blank. However, string report parameters have an ambiguity: is an empty value to be considered blank (a string whose value is ""), or null? Since blank is used more often, BIRT interprets an empty report parameter value as blank. To say a string parameter is is null, just write:
@@ -355,21 +301,6 @@
 			Java locale guidelines</a>. If you do not specify a locale, it defaults to the
 			locale set in the Java virtual machine (JVM.)
 		</p>
-		<h3>The __navigation Option</h3>
-		<p>
-			Controls the contents of the navigation frame. The navigation frame shows the parameter entry page. (It will show additional navigation tools in future releases, hence the name.) Choices are:
-		</p>
-		<ul class="midlist">
-			<li>
-				hide – Does not display the navigation pane.
-			</li>
-			<li>
-				auto – Displays the parameter navigation page if the report has parameters, omits the page if the report has no parameters.
-			</li>
-			<li>
-				parameter – Display the report parameter page.
-			</li>
-		</ul>
 		<p>
 			Values are case insensitive.
 		</p>
@@ -391,39 +322,6 @@
 				Otherwise, use the viewer web app's directory as the base for the relative name.
 			</li>
 		</ul>
-		<h3>The __toolbar Option</h3>
-		<p>
-			Displays the report toolbar. The toolbar contains two buttons:
-		</p>
-		<ul class="midlist">
-			<li>
-				A "maximize" button that hides the parameter page, if it was visible.
-			</li>
-			<li>
-				A "PDF" button that reruns the report as a PDF document.
-			</li>
-		</ul>
-		<p>
-			This option takes one of two values:
-		</p>
-		<ul class="midlist">
-			<li>
-				<code>true</code> (default) – displays the toolbar.
-			</li>
-			<li>
-				<code>false</code> – hides the toolbar.
-			</li>
-		</ul>
-		<p>
-			Values are case insensitive.
-		</p>
-		<div class="homeitem3col">
-			<h3>Release 1.0 Note</h3>
-			<p>
-				Future releases will add navigation buttons to move between pages of the report, etc.
-			</p>
-		</div>
-
 
 		<h2><a name="parameters"></a>Report Parameters</h2>
 		<p>
