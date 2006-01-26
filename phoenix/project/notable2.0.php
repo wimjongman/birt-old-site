@@ -21,10 +21,7 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-#centerpic {
-
-<div id="maincontent">
-	<div align=LEFT style="padding-left: 300px">
+	<div align=LEFT style="padding-left: 185px">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
@@ -217,7 +214,7 @@
 <p>The Data Set data types have been expanded to include Character Large Object (CLOB) and Binary Large Object (BLOB) items.  In addition to adding support for these types within the ODA framework, these items can now be bound to certain controls within the designer.  CLOB columns can be bound to Text controls and BLOB columns can be bound to Image controls.</p>
 <img src="/birt/phoenix/project/images/blobtype.JPG" width="603" height="457"/>
 <p>In the example above, the logo image is stored as a BLOB type.  The Image Builder has been enhanced to allow the BLOB image to be retrieved from the database and inserted into an Image control.</p>
-	</div>
+
 </div>
 
 
