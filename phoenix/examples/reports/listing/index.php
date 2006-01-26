@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Listing";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,6 @@
 		<p>
 			This example demonstrates the use of BIRT to create a simple listing report. Listing reports present data in tabular form and are very popular because of their ease of use. This example demonstrates the use of BIRT to create a simple listing report using data from the sample database bundled with BIRT. The user is guided through the steps to add a data source, define a query and specify the report layout.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -54,8 +52,7 @@
 				This example demonstrates the use of BIRT to create a simple listing report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -72,8 +69,7 @@
 				Presents a listing report of customers.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Sample Database";
+	$pageTitle 		= "BIRT Examples";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -45,8 +45,7 @@
 			Feel free to make comments within the news group. Let us know what
 			examples you would like to see.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demo">BIRT Demo</a></h2>
 		<p>
@@ -57,8 +56,7 @@
 			for dynamic images, style usage, highlighting, grouping and detail
 			drill down..
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="examples"></a>Examples</h2>
 		<ul class="midlist">
@@ -83,8 +81,7 @@
 				This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 

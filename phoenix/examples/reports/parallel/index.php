@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Parallel";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			The ability to create reports with parallel sections gives the report developer added flexibility and control within the report layout. This allows for better visualization and data analysis. This example demonstrates the use of BIRT to create reports with parallel sections. The example relies on the same data set for two tables that are located side by side. It uses table level filters to constrain the data rows that are to be displayed in each table.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -54,8 +53,6 @@
 				This example demonstrates building a BIRT parallel report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -66,8 +63,7 @@
 				Presents a list of employees by office code and grouped by manager.  Two office codes are used one for each parallel table.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

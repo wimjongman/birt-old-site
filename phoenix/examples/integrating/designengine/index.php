@@ -40,8 +40,6 @@
 		<p>
 			This example presents a Java program that utilizes the BIRT Design Engine API. The BIRT Design Engine API provides the Java developers added flexibility to produce reports programmatically. Using the API, the Design Engine provides the capability to customize elements of the report while integrating this capability into existing enterprise applications.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -51,8 +49,7 @@
 				This example demonstrates using the Design Engine API.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="java"></a>Java Code</h2>
 		<ul class="midlist">
@@ -67,8 +64,7 @@
 				Java code used to test the class that uses the Design Engine API.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

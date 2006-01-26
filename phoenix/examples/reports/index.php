@@ -99,8 +99,7 @@
 				This example demonstrates building and linking a subreport.</td>
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

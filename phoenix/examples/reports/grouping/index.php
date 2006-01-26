@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Grouping";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			This example illustrates adding a group section to a listing report. To gain deeper insights end-users often need to look at data in a grouped and summarized form. This example demonstrates how to group data in a BIRT report. The user is guided through the steps to define and add a group a section.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -53,8 +52,7 @@
 				This example illustrates adding a group section to a listing report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -71,8 +69,7 @@
 				Presents a customer list report grouped by country, summing the number of customers per country.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

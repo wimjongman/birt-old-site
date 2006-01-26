@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Images";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -46,8 +46,7 @@
 		<p>
 			Two types of images can be referred to in a report. URI's refer to images read from another location. Images can also be embedded within a report design file. A scripted data source is used in this example to demonstrate how different images are displayed in a report. If you intend to try this example, download the images and place them in c:\temp.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -57,8 +56,7 @@
 				This example demonstrates using Images within a BIRT report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -74,8 +72,7 @@
 				Images used in the example report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

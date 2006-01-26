@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Sample Database";
+	$pageTitle 		= "BIRT Solution Reports";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -51,8 +51,6 @@
 			another database, follow the instructions provided in the "Other Notes"
 			section of its description.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="listing"></a>Listing</h2>
 		<ul class="midlist">
@@ -82,8 +80,7 @@
 				styles to simplify maintenance and achieve a consistent look.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="forms"></a>Business Forms</h2>
 		<ul class="midlist">
@@ -104,8 +101,7 @@
 				simplify maintenance and achieve a consistent look.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 

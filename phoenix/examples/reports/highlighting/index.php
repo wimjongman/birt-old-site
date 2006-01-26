@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Highlighting";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -50,8 +50,7 @@
 			for readability. In addition, the agent would also like to highlight
 			rows of data that have low quantities of stock.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -60,8 +59,7 @@
 				This example demonstrates the BIRT Highlighting Feature.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -80,8 +78,7 @@
 				low stock indication.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

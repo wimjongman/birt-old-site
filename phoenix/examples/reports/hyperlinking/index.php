@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Hyperlinking";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -46,8 +46,7 @@
 		<p>
 			This example demonstrates the ability to embed hyperlinks in BIRT reports. You can embed links to drill through from one report to another report. You can also embed links to external web sites within a report.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -57,8 +56,7 @@
 				This example demonstrates hyperlinking within BIRT.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -83,8 +81,7 @@
 				Detail report used in the hyperlinking example.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

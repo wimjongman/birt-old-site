@@ -46,8 +46,7 @@
 
 			For futher information, please review the <a href="http://download.eclipse.org/birt/downloads/examples/integrating/DynamicParameters/readme.doc" target="_blank" class="top">readme</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -62,8 +61,7 @@
 				This demonstration explains the source code.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="attchments"></a>Attachments</h2>
 		<ul class="midlist">
@@ -78,8 +76,7 @@
 				Source Code for the example.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

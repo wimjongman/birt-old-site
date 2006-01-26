@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - MySQL";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			The ability of BIRT reports to access data in a variety of data sources including popular databases such as MySQL is a powerful feature. This example demonstrates the use of BIRT to create reports on data that is stored in a MySQL database. The user is guided through the steps to create a JDBC data source, specify MySQL driver files to use for the BIRT report designer, the standalone BIRT report viewer, and the BIRT runtime engine when BIRT reports are deployed under Tomcat.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -54,8 +53,7 @@
 				This example demonstrates adding the MySQL driver to the BIRT Environment.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

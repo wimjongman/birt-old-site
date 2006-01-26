@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Sub Report";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			Sub reports are a very common type of reports. These are also referred to as Master Detail reports or Parent Child reports. BIRT is a flexible tool in that it provides the report developer with the flexibility to design many reports and integrate them in sub report fashion via a few clicks of the mouse. This example demonstrates the use of BIRT to create reports that are linked together. For example, a main customer listing report provides the customer ID as input to a sub report that displays details about each customer. In this example, a customer purchase report list the totals for all customer IDs. A second report list customer details. This example combines these two reports.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -54,8 +53,7 @@
 				This example demonstrates the use of BIRT to link from a main to a sub report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -78,8 +76,7 @@
 				This is the combined Main report and Sub report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

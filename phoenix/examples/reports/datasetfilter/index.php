@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Data Set Filter";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			This example is intended to illustrate Data Set filtering within BIRT. The ability to apply filters on data sets is a powerful feature of BIRT. When integrating data into a report from multiple data sources that may not all provide inherent filtering, the data set filter is a powerful way to consistently constrain data to provide the relevant content on which to build reports.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -53,8 +52,7 @@
 				This example is intended to illustrate Data Set filtering within BIRT.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -69,8 +67,7 @@
 				Stock prices in CSV format.  The CSV file is used within the example.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

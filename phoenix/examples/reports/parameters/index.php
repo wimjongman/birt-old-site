@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Parameters";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -52,8 +52,7 @@
 			data set parameter. The data set parameter
 			is then linked with a report parameter.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -64,8 +63,7 @@
 				at runtime by using report and data set parameters.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -82,8 +80,7 @@
 				Presents a products list culled by a report parameter to show low stock.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

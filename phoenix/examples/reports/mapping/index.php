@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Mapping";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -46,8 +46,7 @@
 		<p>
 			The report presents a list of customers with their respective credit limits. In the example a new column will be added to the report to display a credit ranking classification. The company may use this field for promotional offers.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -57,8 +56,7 @@
 				This example demonstrates the BIRT Mapping Feature.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -77,8 +75,7 @@
 				Mapping feature for credit limit classification.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

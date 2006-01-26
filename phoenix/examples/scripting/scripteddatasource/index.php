@@ -44,8 +44,6 @@
 			This example simulates retrieving results from an online survey.  The results of the survey are accessed using a
 			Java Object, which is called from a BIRT Scripted Data Source.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -55,8 +53,7 @@
 				This example demonstrates using a Scripted Data Source, to access data within a BIRT report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -80,8 +77,7 @@
 				Sample Java code used within the example.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

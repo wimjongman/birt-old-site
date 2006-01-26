@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Dynamic Text";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			The look and feel aspects of a report are essential for the end-user experience. BIRT's Text Element allows a broad range of formatting options such as Multi-line text, Text that contains multiple style formats and Text that combines static text with dynamic values retrieved at runtime. This example demonstrates the flexible formatting features of the BIRT Dynamic Text feature.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -53,8 +52,7 @@
 				This example demonstrates flexible formatting using the Text element.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -71,8 +69,7 @@
 				Presents a customer list with special formatting.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>

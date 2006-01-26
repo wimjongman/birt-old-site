@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Example Reports";
+	$pageTitle 		= "BIRT Example Reports - Charting";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -43,8 +43,7 @@
 		<p>
 			Charting is an integral part of data summarization and analysis. BIRT provides an excellent package for charting, allowing diverse chart types such as bar charts, pie charts, line charts, scatter charts, and stock charts. Each chart type is also very customizable, offering a wide range of features to better represent data. This example demonstrates the use of BIRT's integrated charting package within the report designer. The example builds a two dimensional pie chart summarizing product revenue by product line.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
@@ -53,8 +52,7 @@
 				This example is intended to illustrate a Charting example within BIRT.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reports"></a>Reports</h2>
 		<ul class="midlist">
@@ -69,8 +67,7 @@
 				Presents product revenue by product line, with the addition of a pie chart, graphically summarizing the data.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$reportLinksSideItem
 </div>
