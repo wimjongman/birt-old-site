@@ -105,7 +105,8 @@
 			To create an application that uses the DEAPI, you'll need the design engine SDK.
 		</p>
 		<p>
-			At present, you'll need to download the project source code and build the Javadoc yourself. In time, the Javadoc, and the model JARs, will be available as part of a BIRT download.
+			At present, you'll need to download the project source code and build the Javadoc yourself. In time, the Javadoc will be available as part of a BIRT download.
+			The model Jar is available as part of the runtime download.
 		</p>
 		<ul class="midlist">
 			<li>
@@ -162,12 +163,6 @@
 			DesignElementHandle element = factory.newSimpleMasterPage( "Page Master" );<br>
 			design.getMasterPages( ).add( element );
 		</blockquote>
-		<div class="homeitem3col">
-			<h3>Build S20050328 Note</h3>
-			<p>
-				BIRT will not open the report if you omit the master page.
-			</p>
-		</div>
 		<p>
 			This design will contain a grid that contains an image and a label. Let's first create the grid and add it to the report's body slot.
 		</p>
