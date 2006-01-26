@@ -112,9 +112,10 @@ BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 <p>If you currently have an Eclipse install with GEF and EMF, you can download the
 BIRT framework and unzip the contents to any directory.
 <ul>
-<li>After doing this, create a links directory in your installed Eclipse location.
+<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse3.1\eclipse\links).
 <li>Within this directory create a file with a unique name like birt.2.0.link.
-<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0) 
+<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0)
+<li>You will still need iText, Axis and prototype.js files.  See next section, 
 </ul>
 
 
@@ -164,6 +165,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
  <li>If you are using the birt.war, you will need to extract it and add the above files.
  </ul>
 </div>
+<br>
 
 <h2>JDBC Drivers</h2>
 <p>
