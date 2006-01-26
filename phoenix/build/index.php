@@ -21,7 +21,31 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1><a name="top"></a>$pageTitle</h1>
-<h2>Introduction</h2>
+
+
+		<blockquote>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#designer">Designer Install</a></li>
+				<li><a href="#gef">GEF</a></li>
+				<li><a href="#emf">EMF</a></li>
+				<li><a href="#birt">BIRT</a></li>
+				<li><a href="#">optionalOptional Eclipse Link File</a></li>
+				<li><a href="#itext"></a>iText</li>
+				<li><a href="#axis">Axis 1.2.1</a></li>
+				<li><a href="#prototype">prototype.js</a></li>
+				<li><a href="#example">Installation Example Flash</a></li>
+				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
+				<li><a href="#jdbc">JDBC Drivers</a></li>
+				<li><a href="#updating">Updating a BIRT Installation</a></li>
+				<li><a href="#common">Common Problems</a></li>
+
+			</ul>
+		</blockquote>
+
+
+
+<h2><a name="introduction"></a>Introduction</h2>
 <p>
 Below are complete instructions for installing BIRT. If you are already
 familiar with Eclipse plugins, you might want to follow the abbreviated
@@ -55,7 +79,7 @@ And
 </ul>
 
 
-<h1>Designer Install</h1>
+<h2><a name="designer"></a>Designer Install</h2>
 
 The instructions on this page cover the second configuration.
 <br>
@@ -79,7 +103,7 @@ To make it easier to start Eclipse on Windows, create a shortcut to Eclipse on y
 <li>Enter “Eclipse” for the shortcut name.
 </ul>
 
-<h2>GEF</h2>
+<h2><a name="gef"></a>GEF</h2>
 <p>
 GEF, the Graphic Editor Framework, is an Eclipse plugin used by the BIRT UI.
 Download the
@@ -90,7 +114,8 @@ GEF comes as a zip file. Unzip GEF into directory that contains Eclipse. If you
 installed Eclipse into the standard location on Windows, then unzip GEF into
 "C:\Program Files".
 
-<h2>EMF</h2>
+<h2><a name="emf"></a>EMF</h2>
+
 <p>
 The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
 <a href="http://download.eclipse.org/tools/emf/scripts/downloads.php">
@@ -100,7 +125,8 @@ download page.
 EMF also comes as a zip file. Unzip EMF into directory that contains Eclipse.
 This is the same directory you used for GEF.
 
-<h2>BIRT</h2>
+<h2><a name="birt"></a>BIRT</h2>
+
 <p>
 Download <a href="http://download.eclipse.org/birt/downloads/">
 Release 2.0.0</a> (or later). Download only the
@@ -108,7 +134,7 @@ BIRT designer framework for now: "birt-report-framework-2_0_0.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
-<h2>Optional Eclipse Link File</h2>
+<h2><a name="optional"></a>Optional Eclipse Link File</h2>
 <p>If you currently have an Eclipse install with GEF and EMF, you can download the
 BIRT framework and unzip the contents to any directory.
 <ul>
@@ -118,8 +144,7 @@ BIRT framework and unzip the contents to any directory.
 <li>You will still need iText, Axis and prototype.js files.  See next section. 
 </ul>
 
-
-<h2>iText</h2>
+<h2><a name="itext"></a>iText</h2>
 <ul>
 <li><a href="http://www.lowagie.com/iText/download.html">iText 1.3</a>.
 </ul>
@@ -129,7 +154,8 @@ The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Ho
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 </p>
 <p>
-<h2>Axis 1.2.1</h2>
+
+<h2><a name="axis"></a>Axis 1.2.1</h2>
 Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
 and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
 <ul>
@@ -142,20 +168,18 @@ and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.b
 </ul>
 </p>
 <p>
-<h2>prototype.js</h2>
+<h2><a name="prototype"></a>prototype.js</h2>
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
 
-<h2>Installation Flash</h2>
+<h2><a name="example"></a>Installation Example Flash</h2>
 <p>For file size and location verification, you may wish to watch the following example installation video.
 <a href="http://download.eclipse.org/birt/downloads/examples/installing/installing.html" target="_blank" class="top">Installation Flash Example</a>
 </p>
 <br>
 
 
-
-
-<h2>Deploying to J2EE Server</h2>
+<h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <div class="homeitem3col">
 <h3>Birt Runtime Note: </h3>
@@ -170,7 +194,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 </div>
 <br>
 
-<h2>JDBC Drivers</h2>
+<h2><a name="jdbc"></a>JDBC Drivers</h2>
 <p>
 You will likely want to use your own JDBC driver with BIRT. Use the data source editor’s JDBC 
 driver management wizard. To start the wizard, open a BIRT report design, go to 
@@ -182,7 +206,8 @@ JDBC driver. Then go to the “Driver” tab to confirm that the list of drivers
 includes the new drivers added. You may also want to assign a display name and URL 
 template for the new drivers in this tab.</p>
 
-<h2>Updating a BIRT Installation</h2>
+<h2><a name="updating"></a>Updating a BIRT Installation</h2>
+
 <p>
 If you have a version of BIRT installed, and want to install a newer version, do 
 the following:<ul>
@@ -193,8 +218,7 @@ default location, this is "C:\program files\eclipse\plugins".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Restart Eclipse with the -clean option: <code>eclipse -clean</code></ul>
 
-
-<h2>Common Problems</h2>
+<h2><a name="common"></a>Common Problems</h2>
 <p>
 Some problems are due to cached information within Eclipse. Eclipse caches
 information about plugins for faster startup. Adding BIRT as we did above
@@ -207,7 +231,7 @@ include:
 the BIRT UI.
 </ul>
 
-<h2>Cleaning Cached Plugin Information</h2>
+<h3>Cleaning Cached Plugin Information</h3>
 <p>
 The solution is to clean up the cached information. 
 The recommended practice is to start Eclipse with the -clean option:
@@ -215,7 +239,7 @@ The recommended practice is to start Eclipse with the -clean option:
 <pre class="code-block">eclipse -clean
 </pre>
 
-<h2>Cleaning the Cache on Windows</h2>
+<h3>Cleaning the Cache on Windows</h3>
 <p>
 If you are on Windows, and are not familiar with how to invoke Eclipse from
 the command line, do the following:
@@ -233,7 +257,7 @@ Eclipse in the standard location, enter:
 <li>Eclipse will restart. Again check for the BIRT perspective.
 </ul>
 
-<h2>The "Brute-Force" Approach</h2>
+<h3>The "Brute-Force" Approach</h3>
 <p>
 Another, less recommended, approach is to delete the configuration directory:
 </p>
