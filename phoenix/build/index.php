@@ -81,7 +81,8 @@ and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.b
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
 <div class="homeitem3col">
-Birt Runtime Note: If you are installing the BIRT Runtime (J2EE Application Server Deployment),
+<h3>Birt Runtime Note: </h3>
+If you are installing the BIRT Runtime (J2EE Application Server Deployment),
 The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
 <br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
 <br>Copy prototype.js to /Web Viewer Example/ajax/lib.
@@ -138,10 +139,23 @@ This is the same directory you used for GEF.
 <h2>BIRT</h2>
 <p>
 Download <a href="http://download.eclipse.org/birt/downloads/">
-Release 1.0.1</a> (or later). Download only the
-BIRT designer framework for now: "birt-report-framework-1_0_1.zip".
+Release 2.0.0</a> (or later). Download only the
+BIRT designer framework for now: "birt-report-framework-2_0_0.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
+
+<h2>Optional Eclipse Link File</h2>
+<p>If you currently have an Eclipse install with GEF and EMF, you can download the
+BIRT framework and unzip the contents to any directory.
+<ul>
+<li>After doing this, create a links directory in your installed Eclipse location.
+<li>Within this directory create a file with a unique name like birt.2.0.link.
+<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0) 
+</ul>
+
+<h2>Deploying to J2EE Server</h2>
+Please see <a href="/birt/phoenix/deploy/viewerUsage.php">Using the BIRT Viewer</a>
+Also verify that you read the Birt Runtime Note above.
 
 <h2>JDBC Drivers</h2>
 <p>

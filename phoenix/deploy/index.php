@@ -160,13 +160,13 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/deploy/viewer-deploy.html">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.
+				<a href="/birt/phoenix/deploy/viewerSetup.php">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.
 			</li>
 			<li>
-				<a href="/birt/phoenix/deploy/viewer-use.html">Using the BIRT Viewer</a> discusses the viewer operation URLs and their parameters.
+				<a href="/birt/phoenix/deploy/viewerUsage.php">Using the BIRT Viewer</a> discusses the viewer operation URLs and their parameters.
 			</li>
 			<li>
-				<a href="/birt/phoenix/deploy/viewer-php.html">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. Also briefly summarizes how to use PHP to generate custom report designs.
+				<a href="/birt/phoenix/deploy/usingPHP.php">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. Also briefly summarizes how to use PHP to generate custom report designs.
 			</li>
 			<li>
 				Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
