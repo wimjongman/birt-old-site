@@ -110,7 +110,7 @@
 					
 				</li>
 				<li>
-					<a href="community.html">
+					<a href="community.php">
 						Community
 					</a>
 					
