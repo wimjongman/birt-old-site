@@ -42,7 +42,6 @@
 			Welcome to the Business Intelligence and Reporting Tools (BIRT) Project pages. This page contains the Project Plan for the version of BIRT that is currently in Development. Selecting the milestone within the Milestone Planning List will allow you to see what features and bug fixes will be available in future milestones.
 		</p>
 		
-		<hr class="clearer" />
 
 		<h2><a name="plan"></a>Project Plan</h2>
 		<ul class="midlist">
@@ -52,7 +51,6 @@
 			</li>
 		</ul>
 		
-		<hr class="clearer" />
 
 		<h2><a name="milestone_dates"></a>Milestone Dates</h2>
 		<p>
@@ -76,7 +74,6 @@
 			</li>
 		</ul>
 		
-		<hr class="clearer" />
 
 		<h2><a name="milestone_planning"></a>Milestone Planning</h2>
 		<p>
@@ -104,7 +101,6 @@
 			</li>
 		</ul>
 		
-		<hr class="clearer" />
 
 		<h2><a name="archive"></a>Archive</h2>
 		<p>
@@ -116,7 +112,6 @@
 			</li>
 		</ul>
 		
-		<hr class="clearer" />
 	</div>
 </div>
 
