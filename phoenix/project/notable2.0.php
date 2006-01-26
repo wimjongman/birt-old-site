@@ -23,7 +23,7 @@
 	$html = <<<EOHTML
 
 <div id="maincontent">
-	<div id="midcolumn">
+	<div align=CENTER>
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
