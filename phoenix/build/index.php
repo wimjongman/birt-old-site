@@ -147,7 +147,7 @@ Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prot
 </p>
 
 <h2>Installation Flash</h2>
-<p>To see an example installation watch the flash video.
+<p>For file size and location verification, you may wish to watch the following example installation video.
 <a href="http://download.eclipse.org/birt/downloads/examples/installing/installing.html" target="_blank" class="top">Installation Flash Example</a>
 </p>
 <br>

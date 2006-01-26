@@ -28,7 +28,7 @@
 	$Nav->addCustomNav("Reference", 		"/birt/phoenix/ref", 	"_self", 											1);
 	$Nav->addCustomNav("Project Organization", 	"/birt/phoenix/project", 	"_self", 									1);
 	$Nav->addCustomNav("Project Development Plan", 	"/birt/phoenix/project/plan.php", 	"_self", 	1);
-	$Nav->addCustomNav("Building BIRT", 		"/birt/phoenix/build", 	"_self", 									1);
+	$Nav->addCustomNav("Building BIRT", 		"/birt/phoenix/build/buildInstructions.php", 	"_self", 									1);
 	#$Nav->addCustomNav("Search", 			"/birt/search.html", 	"_self", 									1);
 
 ?>

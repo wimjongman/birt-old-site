@@ -46,8 +46,7 @@
 			Eclipse. If you simply want to use BIRT, it is easier to simply
 			<a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="requirements"></a>Requirements</h2>
 		<p>
@@ -67,8 +66,7 @@
 				EMF 2.0.1 or higher
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="configuring"></a>Configuring Your Eclipse Workbench</h2>
 		<p>
@@ -104,8 +102,7 @@
 				Choose OK.
 			</li>
 		</ol>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="structure"></a>Understanding the CVS Structure</h2>
 		<p>
@@ -231,8 +228,7 @@
 			 </tbody>
 			</table>
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="checkout"></a>Checking out Code from CVS</h2>
 		<h3>Configure the Repository under Eclipse</h3>
@@ -299,8 +295,7 @@
 				This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
 			</li>
 		</ol>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="building"></a>Building the BIRT Projects</h2>
 		<p>
@@ -312,8 +307,7 @@
 			to compile this project, download this library from
 			<a href="http://jasperreports.sourceforge.net/">http://jasperreports.sourceforge.net/</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 
 		<h2><a name="viewer"></a>Preparing the Viewer</h2>
@@ -362,8 +356,7 @@
 				Choose Run. The ant build of the viewer runs in the console.
 			</li>
 		</ol>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="running"></a>Running BIRT</h2>
 		<p>
@@ -386,8 +379,7 @@
 				<img src="/birt/phoenix/build/images/runeclipseapplication.jpg" height="615" width="666">
 			</li>
 		</ol>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 
