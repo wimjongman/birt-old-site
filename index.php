@@ -6,6 +6,8 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
  
-require "include/viewer.inc";
-viewer( $_GET['page'] );
+//require "include/viewer.inc";
+//viewer( $_GET['page'] );
+Header("Location: /birt/phoenix")
+
 ?>

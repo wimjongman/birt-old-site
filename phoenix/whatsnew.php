@@ -30,6 +30,7 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
+		<div class="homeitem">
 		<h3>What's New</h3>
 			<ul>
 				<li>
@@ -109,6 +110,7 @@
 					</span>
 				</li>
 			</ul>
+		</div>
 	</div>
 	$deployLinksSideItem
 </div>
