@@ -176,7 +176,7 @@ Want to contribute to the BIRT project?
 				</li>
 				<li>
 					<a href="project">
-						Build Instructions
+						Project
 					</a>
 					How the project is structured, who's on the PMC, project roles, etc.				
 				</li>
