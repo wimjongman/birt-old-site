@@ -52,8 +52,7 @@
 			coordinating identified resources of the Projects against a Development
 			Plan and working against a CVS repository.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="about"></a>About the BIRT Project</h2>
 		<p>
@@ -74,8 +73,7 @@
 			<a href="http://www.eclipse.org/org/documents/Eclipse%20Development%20Process%202003_11_09%20FINAL.pdf">
 			Eclipse Development Process</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="resources"></a>Project Resources</h2>
 		<p>
@@ -108,8 +106,7 @@
 				List of the project contributors and committers.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="pmc_minutes"></a>PMC Minutes</h2>
 		<p>
@@ -118,8 +115,7 @@
 			mailing list. Past minutes can be found in the birt-dev mailing list
 			<a href="http://dev.eclipse.org/mhonarc/lists/birt-dev/maillist.html">archive</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="projects"></a>Projects</h2>
 		<p>
@@ -177,8 +173,7 @@
 				needs for ad hoc report creation by business users within any java application.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>

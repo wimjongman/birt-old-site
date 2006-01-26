@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Project Plan and Deliverables";
+	$pageTitle 		= "BIRT 2.0 Project Plan";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
