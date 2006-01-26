@@ -131,7 +131,7 @@
 		</p>
 		</ul>
 		<h2><a name="other">Other J2EE Servers</a></h2>
-		<p>We are currently working on instructions for other Application Servers</p>
+		<p>We are currently working on instructions for other application servers</p>
 		
 	</div>
 	$deployLinksSideItem
