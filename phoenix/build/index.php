@@ -35,9 +35,9 @@
 				<li><a href="#axis">Axis 1.2.1</a></li>
 				<li><a href="#prototype">prototype.js</a></li>
 				<li><a href="#example">Installation Example Flash</a></li>
-				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
+				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
 				<li><a href="#common">Common Problems</a></li>
 
 			</ul>
@@ -179,22 +179,10 @@ Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prot
 <br>
 
 
-<h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
-Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
-<div class="homeitem3col">
-<h3>Birt Runtime Note: </h3>
-<ul>
- <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
- The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
- <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
- <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
- <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
- <li>If you are using the birt.war, you will need to extract it and add the above files.
- </ul>
-</div>
-<br>
+
 
 <h2><a name="drivers"></a>JDBC Drivers</h2>
+
 <p>
 You will likely want to use your own JDBC driver with BIRT. Use the data source editor’s JDBC 
 driver management wizard. To start the wizard, open a BIRT report design, go to 
@@ -217,6 +205,23 @@ default location, this is "C:\program files\eclipse\plugins".
 <li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Restart Eclipse with the -clean option: <code>eclipse -clean</code></ul>
+
+
+
+<h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
+Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
+<div class="homeitem3col">
+<h3>Birt Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
+ The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
+ <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
+ <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
+ <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
+ <li>If you are using the birt.war, you will need to extract it and add the above files.
+ </ul>
+</div>
+<br>
 
 <h2><a name="common"></a>Common Problems</h2>
 <p>

@@ -60,8 +60,7 @@
 		<p>
 			BIRT charting APIs are described elsewhere. (Not yet available.)
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="runtime"></a>Runtime Integration</h2>
 		<p>
@@ -82,8 +81,6 @@
 				line app, etc.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="design"></a>Design-Time Integration</h2>
 		<p>
@@ -105,8 +102,7 @@
 				ideal for non-Java scripting environments such as PHP.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="extending"></a>Extending BIRT</h2>
 		<p>
@@ -134,8 +130,7 @@
 				The BIRT model is extensible; you can add new report items. Use this API to include design-time, run-time or presentation-time behavior.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="viewer"></a>Report Viewer</h2>
 		<p>
@@ -175,8 +170,7 @@
 				The viewer code is available in the BIRT CVS repository in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project"> org.eclipse.birt.report.viewer</a> project. See the <a href="build/build_instr.html">BIRT build instructions</a> for information on how to access CVS and build the viewer.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="reportAPI"></a>Report Engine API</h2>
 		<p>
@@ -188,8 +182,7 @@
   				Engine API to create a simple command-line program that runs reports.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="designAPI"></a>Design Engine API</h2>
 		<p>
@@ -203,8 +196,7 @@
 				The Design Engine code is available in the BIRT CVS repository in the  org.eclipse.birt.report.model project. See the BIRT build instructions for information on how to access CVS and build the code.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$deployLinksSideItem
 </div>
