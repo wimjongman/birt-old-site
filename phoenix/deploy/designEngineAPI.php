@@ -112,7 +112,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				See the <a href="/birt/build/buildInstructions.php">BIRT build instructions</a> for information on how to access CVS and build the code. You only need to build the model and core projects.
+				See the <a href="/birt/phoenix/build/buildInstructions.php">BIRT build instructions</a> for information on how to access CVS and build the code. You only need to build the model and core projects.
 			</li>
 			<li>
 				If you don't have access to CVS, you can also obtain the code from the web interface to the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.model/?cvsroot=BIRT_Project"> org.eclipse.birt.report.model</a> project.
@@ -132,13 +132,13 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/deploy/DeDemo.java" target="_new">Sample Java code</a>
+				<a href="/birt/phoenix/deploy/DeDemo.java" target="_new">Sample Java code</a>
 			</li>
 			<li>
-				<a href="/birt/deploy/sample.rptdesign" target="_new">Report produced by the example</a>
+				<a href="/birt/phoenix/deploy/sample.rptdesign" target="_new">Report produced by the example</a>
 			</li>
 			<li>
-				<a href="/birt/deploy/sample.html" target="_new">HTML output of the above report</a>
+				<a href="/birt/phoenix/deploy/sample.html" target="_new">HTML output of the above report</a>
 			</li>
 		</ul>
 		<p>
@@ -188,7 +188,7 @@
 			ImageHandle image = factory.newImage( null );<br>
 			CellHandle cell = (CellHandle) row.getCells( ).get( 0 );<br>
 			cell.getContent( ).add( image );<br>
-			image.setURI( "http://www.eclipse.org/birt/tutorial/multichip-4.jpg");
+			image.setURI( "http://www.eclipse.org/birt/phoenix/tutorial/multichip-4.jpg");
 		</blockquote>
 		<p>
 			Then, create a label and add it to the second cell.

@@ -98,7 +98,7 @@
 				or to perform batch tasks on designs.
 			</li>
 			<li>
-				<a href="/birt/deploy/usingPHP.php">Generate a Report Design Directly</a><br>
+				<a href="/birt/phoenix/deploy/usingPHP.php">Generate a Report Design Directly</a><br>
 
 				If you can write XML files, or with  templates, you can generate report
 				designs based on an application-specific report designer. This technique is
@@ -114,7 +114,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/ref">Scripting</a>
+				<a href="/birt/phoenix/ref">Scripting</a>
 				<br>
 				BIRT provides extensive scripting support. You can create anything from computed columns to sophisticated business logic to extensive integration with existing Java code.
 			</li>
@@ -160,13 +160,13 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/deploy/viewer-deploy.html">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.
+				<a href="/birt/phoenix/deploy/viewer-deploy.html">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.
 			</li>
 			<li>
-				<a href="/birt/deploy/viewer-use.html">Using the BIRT Viewer</a> discusses the viewer operation URLs and their parameters.
+				<a href="/birt/phoenix/deploy/viewer-use.html">Using the BIRT Viewer</a> discusses the viewer operation URLs and their parameters.
 			</li>
 			<li>
-				<a href="/birt/deploy/viewer-php.html">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. Also briefly summarizes how to use PHP to generate custom report designs.
+				<a href="/birt/phoenix/deploy/viewer-php.html">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. Also briefly summarizes how to use PHP to generate custom report designs.
 			</li>
 			<li>
 				Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
@@ -197,7 +197,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/index.php?page=deploy/de-api.html">Using the Design Engine API</a>: a brief primer for using the DE API.
+				<a href="/birt/phoenix/deploy/designEngineAPI.html">Using the Design Engine API</a>: a brief primer for using the DE API.
 			</li>
 			<li>
 				The Design Engine code is available in the BIRT CVS repository in the  org.eclipse.birt.report.model project. See the BIRT build instructions for information on how to access CVS and build the code.

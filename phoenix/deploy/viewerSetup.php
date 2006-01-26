@@ -120,7 +120,7 @@
 				Download the zip file with the BIRT report engine runtime. The file is named birt-runtime-<version#>.zip.
 			</li>
 			<li>
-				Click on the following link to download the example report design, <a href="/birt/examples/solution/SalesInvoice.rptdesign" target="_blank">SalesInvoice.rptdesign</a> into another browser window. Use the "Save as..." command from the file menu to save the report into the birt-viewer/report directory.
+				Click on the following link to download the example report design, <a href="/birt/phoenix/examples/solution/SalesInvoice.rptdesign" target="_blank">SalesInvoice.rptdesign</a> into another browser window. Use the "Save as..." command from the file menu to save the report into the birt-viewer/report directory.
 			</li>
 			<li>
 				If you've installed everything in its default location, then click on the following link. If you've changed anything, then copy the following URL into your browser and make the needed changes.

@@ -12,7 +12,7 @@
             <row>
                 <cell>
                     <image>
-                        <expression name="uri">http://www.eclipse.org/birt/tutorial/multichip-4.jpg</expression>
+                        <expression name="uri">http://www.eclipse.org/birt/phoenix/tutorial/multichip-4.jpg</expression>
                     </image>
                 </cell>
                 <cell>
