@@ -58,12 +58,6 @@
 			a report parameter and a data set filter to limit the amount of data displayed
 			at any one time.
 		</p>
-		<div class="homeitem3col">
-			<h3>Release 1.0.1 Note</h3>
-			<p>
-				BIRT Release 1.0.1 displays the report as a single HTML page. Future releases will display the report as a series of pages.
-			</p>
-		</div>
 		<p>
 			Seeing the report in the preview suggests a number of ways we can improve the report's appearance:
 		</p>
