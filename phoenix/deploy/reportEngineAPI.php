@@ -98,9 +98,9 @@ C:\birtruntime\birt-runtime-2_0_0\Report Engine\plugins\org.eclipse.birt.report.
 <li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
 </ul>
 Some operating systems will have problems with the space in "Report Engine".  Rename it if needed.
-
+<br>
 The sample viewer is also bundled with the Report Engine.  It is located under the Web Viewer Example directory.  If you decide to 
-use this example, make sure you copy the additional files to the appropriate location.
+use this example, make sure you copy the additional files to the appropriate locations.
 <ul>
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
