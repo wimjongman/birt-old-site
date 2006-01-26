@@ -35,11 +35,9 @@
 				<li><a href="#background">Background</a></li>
 				<li><a href="#installing">Installing the API</a></li>
 				<li><a href="#config">Installing the Engine</a></li>
-				<li><a href="#ref">Link</a></li>
-				<li><a href="#ref">Link</a></li>
-				<li><a href="#ref">Link</a></li>
-				<li><a href="#ref">Link</a></li>
-				<li><a href="#ref">Link</a></li>
+				<li><a href="#jdbc">Configuring JDBC Drivers</a></li>
+				<li><a href="#api">API Overview</a></li>
+				<li><a href="#example">Example Application</a></li>
 			</ul>
 		</blockquote>
 
@@ -50,7 +48,7 @@
 
 
 
-<h2><a name="background"></a>Background</h1>
+<h2><a name="background"></a>Background</h2>
 
 
 The BIRT Report Engine API allows you to integrate the run-time part of BIRT
@@ -67,7 +65,7 @@ output formats. Extensions are discussed elsewhere. This article focus on how
 your application integrates with the report engine.
 </p>
 
-<h2><a name="installing"></a>Installing the API</h1>
+<h2><a name="installing"></a>Installing the API</h2>
 
 The first step is to download, install, and configure the BIRT engine. The 
 engine is more than just a simple JAR file; it also includes a set of extensions 
@@ -90,7 +88,7 @@ source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a>
 <p>This article provides an overview of the engine. To do actual development, 
 consult the Engine Javadoc.</p>
 
-<h2><a name="config"></a>Installing the Engine</h1>
+<h2><a name="config"></a>Installing the Engine</h2>
 First download the Report Engine from the <a href=http://download.eclipse.org/birt/downloads">Eclipse download site.</a>
 This file will be named birt-runtime-2_0_0.zip.
 Unzip this file into a directory, such as c:\birtruntime.
@@ -108,7 +106,7 @@ use this example, make sure you copy the additional files to the appropriate loc
  <li>If you are using the birt.war, you will need to extract it and add the above files.
 </ul>
 
-<h2>Configuring JDBC Drivers</h2>
+<h2><a name="jdbc"></a>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
 
 
@@ -136,7 +134,7 @@ additional JDBC driver JAR file that might be needed. Put the library itself
   found in CVS BIRT source tree: <code>org.eclipse.birt.data.oda/schema/odaDriverRuntime.exsd</code>. 
   Use the Eclipse PDE Tools to see its reference document.</p>
 
-<h1>API Overview</h1>
+<h2><a name="api"></a>API Overview</h2>
 
 <p>The following are the key steps to use the API, identifying the classes and 
 interfaces you use for each step.</p>
@@ -157,7 +155,7 @@ interfaces you use for each step.</p>
 Engine API includes a number of secondary helper classes referenced within each 
 description.</p>
 
-<h1><code>EngineConfig</code> Class</h1>
+<h3><code>EngineConfig</code> Class</h3>
 
 <p>Use the <code>EngineConfig</code> class to set global options for the report engine as a 
 whole. Use it to specify the location of engine plugins, the location of data 
@@ -166,18 +164,11 @@ want to set the location of the engine installation using the <code>setEngineHom
 method.</p>
 <pre class="code-block">EngineConfig config = new EngineConfig( );
 config.setEngineHome( &quot;put engine path here&quot; );</pre>
+The engine home should be set to
+installedlocation/birt-runtime-version/Report Engine
 
 
-<p class="caution"><span class="caution-head">Note:</span> If you are using 
-the engine located in the full BIRT install: 
-/eclipse/plugins/org.eclipse.birt.report.viewer_1.0.1/birt.</p>
-
-<p class="caution"><span class="caution-head">Release 2.0 M3  Note:</span> Please use the
-birt-runtime download when setting the engine home.  The engine home should be set to
-installedlocation/birt-runtime-x_y_z/Report Engine
-</p>
-
-<h2>Emitter Configuration</h2>
+<h3>Emitter Configuration</h3>
 
 <p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides two emitters: HTML and PDF. You'll want to configure the HTML 
 emitter to manage images and links. BIRT supports three kinds of images:</p>
@@ -221,7 +212,7 @@ hc.setImageHandler( imageHandler );
 config.setEmitterConfiguration( HTMLRenderOption.OUTPUT_FORMAT_HTML, hc );</pre>
 
 
-<h1><code>ReportEngine</code> Class</h1>
+<h3><code>ReportEngine</code> Class</h3>
 
 <p>The <code>ReportEngine</code>&nbsp; class represents the BIRT Report Engine. There is a significant cost associated with creating an engine instance, due 
 primarily to the cost of loading extensions. Therefore, each application should 
@@ -250,7 +241,7 @@ catch ( EngineException e1 )
 }</pre>
 
 
-<h1><code>IReportRunnable</code> Class</h1>
+<h3><code>IReportRunnable</code> Class</h3>
 
 
 <p>BIRT reports are stored as an XML file. To work with the report in the 
@@ -268,7 +259,7 @@ report design. If your application requires more information about the design, y
 obtain a Design Engine report handle, then use the BIRT <a href="de-api.html">
 Design Engine API</a> to traverse though the report design.</p>
 
-<h1><code>IEngineTask</code> Abstract Base Class</h1>
+<h3><code>IEngineTask</code> Abstract Base Class</h3>
 
 <p>BIRT reports support scripting. Operations that execute scripts require a 
 scripting context. Report operations also require a locale. BIRT Engine tasks 
@@ -288,7 +279,7 @@ are represented as tasks.</p>
 takes a report runnable (design), a scripting context, a locale, and other 
 information.</p>
 
-<h1><code>IGetParameterDefinitionTask</code> Class</h1>
+<h3><code>IGetParameterDefinitionTask</code> Class</h3>
 
 <p>Use this task to obtain information about parameters. Parameter default 
 values are expressions, and so a scripting context (represented by the task) is 
@@ -346,7 +337,7 @@ context.</p>
 IGetParameterDefinitionTask task = ...;
 Object value = task.getDefaultValue( param );</pre>
 
-<h1><code>IRunAndRenderReportTask</code> Class</h1>
+<h3><code>IRunAndRenderReportTask</code> Class</h3>
 <p>Use this task to run a report and 
 convert it to either HTML or PDF. This task does not save the report document 
 itself to disk. Create a new task for each report that you run.</p>
@@ -392,7 +383,8 @@ task.setParameterValues( params );
 
 task.run( );</pre>
 
-<h1>Example Application</h1>
+<h2><a name="example"></a>Example Application</h2>
+
 
 The best way to learn about the engine API is to look at a sample application. 
 This sample is a command-line application that takes a report design and can 
@@ -409,7 +401,9 @@ The Ant project has a readme.txt explaining which files need to be copied.
 <pre class="code-block">java RunReport test.rptdesign -h sample=Hello</pre>
 <p>To get information about the report properties and parameter definitions:</p>
 <pre class="code-block">java RunReport test.rptdesign -i</pre>
-
+This example has not been updated to reflect 2.0 changes yet.
+ReportRunner.java is delivered as part of the Engine API and offers a more complex example.
+You can check it out of CVS or download BIRT 2.0's version <a=href="ReportRunner.java">here</a>.
 
 
 	</div>
