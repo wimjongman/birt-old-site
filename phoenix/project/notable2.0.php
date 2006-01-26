@@ -23,7 +23,7 @@
 	$html = <<<EOHTML
 
 <div id="maincontent">
-	<div align=CENTER>
+	<div align=LEFT padding-left: 25px>
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
