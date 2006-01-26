@@ -82,13 +82,13 @@ Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prot
 </p>
 <div class="homeitem3col">
 <h3>Birt Runtime Note: </h3>
-If you are installing the BIRT Runtime (J2EE Application Server Deployment),
+<p>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
 The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
 <br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
 <br>Copy prototype.js to /Web Viewer Example/ajax/lib.
 <br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
 <br>
-If you are using the birt.war, you will need to extract it and add the above files.
+If you are using the birt.war, you will need to extract it and add the above files.</p>
 </div>
 
 <br>
