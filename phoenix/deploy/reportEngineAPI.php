@@ -296,6 +296,115 @@ ungrouped form (useful for creating a programmatic interface.)</p>
 interfaces provide 
 information about parameter groups and individual parameters.</p>
 
+<pre class="code-block">// Get the parameter definitions
+
+IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( report );
+Collection params = task.getParameterDefns( true );
+
+// The collection contains parameters and parameter groups.
+
+Iterator iter = params.iterator( );
+while ( iter.hasNext( ) )
+{
+    IParameterDefnBase param = (IParameterDefnBase) iter.next( );
+    if ( param instanceof IParameterGroupDefn )
+    {
+        IParameterGroupDefn group = (IParameterGroupDefn) param;
+
+        // Do something with the parameter group.
+        // Iterate over group contents.
+
+        Iterator i2 = group.getContents( ).iterator( );
+        while ( iter.hasNext( ) )
+        {
+            IScalarParameterDefn scalar = (IScalarParameterDefn) i2.next( );
+            
+            // Do something with a parameter within a group.
+    }
+    else
+    {
+        IScalarParameterDefn scalar = (IScalarParameterDefn) i2.next( );
+
+        // Do something with a top-level parameter.
+    }
+}</pre>
+
+<p>Use the <code>IGetParameterDefinitionTask</code> class to evaluate the default value for a parameter. The parameter 
+default value is an expression, and the task provides the required execution 
+context.</p>
+
+<pre class="code-block">IScalarParameterDefn param = ...;
+IGetParameterDefinitionTask task = ...;
+Object value = task.getDefaultValue( param );</pre>
+
+<h3><code>IRunAndRenderReportTask</code> Class</h3>
+<p>Use this task to run a report and 
+convert it to either HTML or PDF. This task does not save the report document 
+itself to disk. Create a new task for each report that you run.</p>
+
+<p class="caution"><span class="caution-head">Release 1.0.1  Note:</span> BIRT 1.0 
+supports the ability to run a report and to directly produce HTML or PDF. Later 
+versions will allow the ability to save the report document to disk for later 
+use. At that time, BIRT will provide other tasks to run the report, then later 
+to render a saved report document.
+</p>
+
+<p>Reports may take parameters. The <code>IRunAndRenderReportTask</code> takes parameter 
+values as a <code>HashMap</code>. The <code>IRunAndRenderReportTask</code> provides 
+the <code>validateParameters(&nbsp;)</code> method to validate the parameter values before you run 
+the report.</p>
+
+<p>You can produce HTML or PDF output. Each format offers a distinct set of 
+options. These options are set through the <code>HTMLRenderOption</code> and 
+<code>PDFRenderOption</code> 
+classes. Create the one for the output format you desire, set the options you 
+need, and pass the instance to <code>IRunAndRenderReportTask</code> before running the 
+report.</p>
+
+<pre class="code-block">// Create the task
+
+IRunAndRenderTask task = engine.createRunAndRenderTask( report );
+
+// Set up options for HTML output.
+
+HTMLRenderOption options = new HTMLRenderOption( );
+options.setOutputFormat( HTMLRenderOption.OUTPUT_FORMAT_HTML );
+options.setOutputFileName( outputName );
+task.setRenderOption( options );
+
+// Set parameter values using a HashMap. Parameters are name/value pairs.
+// The values must be Java objects of the correct type.
+
+HashMap params = new HashMap( );
+... 
+task.setParameterValues( params );
+
+// Run the report.
+
+task.run( );</pre>
+
+<h2><a name="example"></a>Example Application</h2>
+
+
+The best way to learn about the engine API is to look at a sample application. 
+This sample is a command-line application that takes a report design and can 
+either print parameter information about the design (-i option), or run and render the 
+report (-h option for HTML, -p option for PDF). When running, the utility takes a set of parameter values, and accepts 
+an output format. The application illustrates the major steps you should follow 
+in your own application.<p><a href="RunReport.java">Download the sample 
+application</a>.</p>
+<a href="birtengine.zip">Download the sample 
+application Ant project</a>.
+The Ant project has a readme.txt explaining which files need to be copied.
+<p>To run a <a href="test.rptdesign">sample report </a>to HTML, setting the 
+&quot;sample&quot; parameter to the value &quot;Hello&quot;:</p>
+<pre class="code-block">java RunReport test.rptdesign -h sample=Hello</pre>
+<p>To get information about the report properties and parameter definitions:</p>
+<pre class="code-block">java RunReport test.rptdesign -i</pre>
+This example has not been updated to reflect 2.0 changes yet.
+ReportRunner.java is delivered as part of the Engine API and offers a more complex example.
+You can check it out of CVS or download BIRT 2.0's version <a=href="ReportRunner.java">here</a>.
+
 
 	</div>
 	$deployLinksSideItem
