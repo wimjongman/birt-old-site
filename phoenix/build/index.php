@@ -30,7 +30,7 @@
 				<li><a href="#gef">GEF</a></li>
 				<li><a href="#emf">EMF</a></li>
 				<li><a href="#birt">BIRT</a></li>
-				<li><a href="#">optionalOptional Eclipse Link File</a></li>
+				<li><a href="#optional">Optional Eclipse Link File</a></li>
 				<li><a href="#itext"></a>iText</li>
 				<li><a href="#axis">Axis 1.2.1</a></li>
 				<li><a href="#prototype">prototype.js</a></li>
