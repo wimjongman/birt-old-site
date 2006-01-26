@@ -24,7 +24,7 @@
 	$Nav->addCustomNav("Examples", 			"/birt/phoenix/examples", 	"_self", 									1);
 	$Nav->addCustomNav("Integration", 		"/birt/phoenix/deploy", 	"_self", 										1);
 	#$Nav->addCustomNav("FAQ", 			"/wiki/index.php?n=FAQ.FAQ", 	"_self", 						1);
-	$Nav->addCustomNav("Community", 		"/birt/phoenix/community", 	"_self", 								1);
+	$Nav->addCustomNav("Community", 		"/birt/phoenix/community.php", 	"_self", 								1);
 	$Nav->addCustomNav("Reference", 		"/birt/phoenix/ref", 	"_self", 											1);
 	$Nav->addCustomNav("Project Organization", 	"/birt/phoenix/project", 	"_self", 									1);
 	$Nav->addCustomNav("Project Development Plan", 	"/birt/phoenix/project/plan.php", 	"_self", 	1);
