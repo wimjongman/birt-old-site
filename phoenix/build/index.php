@@ -54,35 +54,8 @@ And
 <li>JRE 1.4.2/JRE 1.5.
 </ul>
 
-<h2>iText</h2>
-<ul>
-<li><a href="http://www.lowagie.com/iText/download.html">iText 1.3</a>.
-</ul>
-Download Version 1.3, labelled Compiled code.
-<p>
-The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
-The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
-</p>
-<p>
-<h2>Axis 1.2.1</h2>
-Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
-and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
-<ul>
-<li>axis.jar 
-<li>axis-ant.jar 
-<li>commons-discovery-0.2.jar 
-<li>jaxrpc.jar 
-<li>saaj.jar 
-<li>wsdl4j-1.5.1.jar 
-</ul>
-</p>
-<p>
-<h2>prototype.js</h2>
-Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
-</p>
 
-
-<br>
+<h1>Install</h1>
 
 The instructions on this page cover the second configuration.
 <br>
@@ -144,17 +117,52 @@ BIRT framework and unzip the contents to any directory.
 <li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0) 
 </ul>
 
+
+<h2>iText</h2>
+<ul>
+<li><a href="http://www.lowagie.com/iText/download.html">iText 1.3</a>.
+</ul>
+Download Version 1.3, labelled Compiled code.
+<p>
+The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
+The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
+</p>
+<p>
+<h2>Axis 1.2.1</h2>
+Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
+and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
+<ul>
+<li>axis.jar 
+<li>axis-ant.jar 
+<li>commons-discovery-0.2.jar 
+<li>jaxrpc.jar 
+<li>saaj.jar 
+<li>wsdl4j-1.5.1.jar 
+</ul>
+</p>
+<p>
+<h2>prototype.js</h2>
+Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
+</p>
+
+
+<br>
+
+
+
+
 <h2>Deploying to J2EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <div class="homeitem3col">
 <h3>Birt Runtime Note: </h3>
- If you are installing the BIRT Runtime (J2EE Application Server Deployment),
+<ul>
+ <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
  The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
- <br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
- <br>Copy prototype.js to /Web Viewer Example/ajax/lib.
- <br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
- <br>
- If you are using the birt.war, you will need to extract it and add the above files.
+ <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
+ <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
+ <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
+ <li>If you are using the birt.war, you will need to extract it and add the above files.
+ </ul>
 </div>
 
 <h2>JDBC Drivers</h2>
@@ -179,31 +187,7 @@ default location, this is "C:\program files\eclipse\plugins".
 <li>Delete all directories that start with "org.eclipse.birt".
 <li>Download and install BIRT as described in the BIRT section above.
 <li>Restart Eclipse with the -clean option: <code>eclipse -clean</code></ul>
-<h2>Upgrading JDBC Drivers from 1.0M2 or Earlier</h2>
-<p>Builds earlier than 1.0M3 stored JDBC driver information within the plugin 
-structure, and so the drivers had to be reinstalled with each build. Starting 
-with 1.0M3, this is no longer necessary. However, if you upgrade to 1.0M3 from an 
-older build, you will need to reinstall your JDBC drivers as described above.</p>
-<h2>Upgrading 1.0M1 Report Designs</h2>
-<p>If you have a report created with BIRT 1.0M1, the data source information will 
-be lost when opening that design in 1.0M3 or later. Here's what to do:</p>
-<ol>
-  <li>Note your data source name.</li>
-  <li>Delete your data source.</li>
-  <li>Create a new data source with the required properties.</li>
-  <li>If your report has multiple data sources, repeat steps 1-3 for each data 
-  source.</li>
-  <li>Select your first data set.</li>
-  <li>Open the Properties view (not the Property Editor).</li>
-  <li>Find the property called &quot;Data Source&quot;. Enter the name of your new data 
-  source.</li>
-  <li>Repeat steps 5-7 for each additional data source.</li>
-</ol>
-<h2>Upgrading 1.0M2 Charts</h2>
-<p>The chart format changed from 1.0M2 to 1.0M3. If your report contains charts, they 
-will not open in 1.0M3 or later. You must either recreate the report, or use a text editor 
-to remove the chart elements from your design, open the design within BIRT, and 
-add your charts.</p>
+
 
 <h2>Common Problems</h2>
 <p>
