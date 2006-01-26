@@ -63,19 +63,19 @@
 		<h2><a name="examples"></a>Examples</h2>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/examples/solution">Solution Reports</a> –
+				<a href="/birt/phoenix/examples/solution">Solution Reports</a> –
 				This section contains several example solution reports, such as Business Forms.
 			</li>
 			<li>
-				<a href="/birt/examples/reports">Reporting Feature Examples</a> –
+				<a href="/birt/phoenix/examples/reports">Reporting Feature Examples</a> –
 				This section demonstrates features and functions of the BIRT Report Designer.
 			</li>
 			<li>
-				<a href="/birt/examples/scripting">Scripting</a> –
+				<a href="/birt/phoenix/examples/scripting">Scripting</a> –
 				This section contains examples of scripting within the BIRT Designer
 			</li>
 			<li>
-				<a href="/birt/examples/integrating">Integrating BIRT</a> –
+				<a href="/birt/phoenix/examples/integrating">Integrating BIRT</a> –
 				This section demonstrates several examples of deploying and using the APIs of BIRT
 			</li>
 			<li>

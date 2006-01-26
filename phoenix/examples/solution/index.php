@@ -58,8 +58,8 @@
 		<ul class="midlist">
 			<li>
 				<b>
-					<a href="/birt/examples/solution/ProductCatalog.html" target="_blank" class="top">Product Catalog</a>
-					(<a href="/birt/examples/solution/ProductCatalog.rptdesign" target="_blank">rptdesign</a>)
+					<a href="/birt/phoenix/examples/solution/ProductCatalog.html" target="_blank" class="top">Product Catalog</a>
+					(<a href="/birt/phoenix/examples/solution/ProductCatalog.rptdesign" target="_blank">rptdesign</a>)
 				</b>
 				<br>
 				Prints the Classic Models product catalog, grouped by product category.
@@ -71,8 +71,8 @@
 			</li>
 			<li>
 				<b>
-					<a href="/birt/examples/solution/TopSellingProducts.html" target="_blank" class="top">Top Selling Products</a>
-					(<a href="/birt/examples/solution/TopSellingProducts.rptdesign" target="_blank">rptdesign</a>)
+					<a href="/birt/phoenix/examples/solution/TopSellingProducts.html" target="_blank" class="top">Top Selling Products</a>
+					(<a href="/birt/phoenix/examples/solution/TopSellingProducts.rptdesign" target="_blank">rptdesign</a>)
 				</b>
 				<br>
 				Displays a pie chart showing revenue by product line. Lists the top
@@ -89,8 +89,8 @@
 		<ul class="midlist">
 			<li>
 				<b>
-					<a href="/birt/examples/solution/SalesInvoice.html" target="_blank" class="top">Sales Invoice</a>
-					(<a href="/birt/examples/solution/SalesInvoice.rptdesign" target="_blank">rptdesign</a>)
+					<a href="/birt/phoenix/examples/solution/SalesInvoice.html" target="_blank" class="top">Sales Invoice</a>
+					(<a href="/birt/phoenix/examples/solution/SalesInvoice.rptdesign" target="_blank">rptdesign</a>)
 				</b>
 				<br>
 				Prints an invoice for the selected order, including customer and

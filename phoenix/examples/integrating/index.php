@@ -39,12 +39,12 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/examples/integrating/designengine">Design Engine API</a> –
+				<a href="/birt/phoenix/examples/integrating/designengine">Design Engine API</a> –
 
 				This example presents a Java program that utilizes the BIRT Design Engine API.
 			</li>
 			<li>
-				<a href="/birt/examples/integrating/dynamicparameters">Dynamic Parameters</a> –
+				<a href="/birt/phoenix/examples/integrating/dynamicparameters">Dynamic Parameters</a> –
 
 				This example demonstrates using the BIRT APIs to programmatically build a custom parameter page.
 			</li>

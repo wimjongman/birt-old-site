@@ -43,59 +43,59 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/examples/reports/charting">Charting</a> –
+				<a href="/birt/phoenix/examples/reports/charting">Charting</a> –
 				This example demonstrates building a report with several chart types.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/chartingsubreport">Chart as a Sub Report</a> –
+				<a href="/birt/phoenix/examples/reports/chartingsubreport">Chart as a Sub Report</a> –
 				This example demonstrates building a report that uses a stock chart as a sub report.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/datasetfilter">Dataset Filtering</a> –
+				<a href="/birt/phoenix/examples/reports/datasetfilter">Dataset Filtering</a> –
 				This example demonstrates the dataset filtering feature.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/dynamictext">Dynamic Text</a> –
+				<a href="/birt/phoenix/examples/reports/dynamictext">Dynamic Text</a> –
 				This example demonstrates using Dynamic Text within a report.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/grouping">Grouping</a> –
+				<a href="/birt/phoenix/examples/reports/grouping">Grouping</a> –
 				This example demonstrates building a grouped report.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/highlighting">Conditional Highlighting</a> –
+				<a href="/birt/phoenix/examples/reports/highlighting">Conditional Highlighting</a> –
 				This example demonstrates the Highlighting Feature.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/hyperlinking">Hyperlinking</a> –
+				<a href="/birt/phoenix/examples/reports/hyperlinking">Hyperlinking</a> –
 				This example demonstrates the ability to embed hyperlinks in BIRT reports.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/image">Image</a> –
+				<a href="/birt/phoenix/examples/reports/image">Image</a> –
 				This example demonstrates using images within a BIRT report.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/listing">Listing</a> –
+				<a href="/birt/phoenix/examples/reports/listing">Listing</a> –
 				This example demonstrates building a listing report.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/mapping">Mapping</a> –
+				<a href="/birt/phoenix/examples/reports/mapping">Mapping</a> –
 				This example demonstrates the Mapping Feature.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/mysql">MySQL Data Source</a> –
+				<a href="/birt/phoenix/examples/reports/mysql">MySQL Data Source</a> –
 				This example demonstrates configuring BIRT to report against MySQL Data.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/parallel">Parallel Reports</a> –
+				<a href="/birt/phoenix/examples/reports/parallel">Parallel Reports</a> –
 				This example demonstrates building BIRT parallel reports.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/parameters">Parameters</a> –
+				<a href="/birt/phoenix/examples/reports/parameters">Parameters</a> –
 				This example demonstrates using dataset parameters.
 			</li>
 			<li>
-				<a href="/birt/examples/reports/subreports">Sub Report</a> –
+				<a href="/birt/phoenix/examples/reports/subreports">Sub Report</a> –
 				This example demonstrates building and linking a subreport.</td>
 			</li>
 		</ul>

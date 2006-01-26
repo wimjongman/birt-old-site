@@ -39,7 +39,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/examples/scripting/scripteddatasource">Scripted Data Source</a> –
+				<a href="/birt/phoenix/examples/scripting/scripteddatasource">Scripted Data Source</a> –
 
 				This example demonstrates using BIRT scripting to retrieve data for the BIRT report.
 			</li>
