@@ -412,31 +412,6 @@ The Ant project has a readme.txt explaining which files need to be copied.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<h2><a name="ref"></a>Title</h2>
-		<p>
-			Detail
-		</p>
-		<ul class="midlist">
-			<li>
-				List
-			</li>
-		</ul>
-
-
 	</div>
 	$deployLinksSideItem
 </div>
