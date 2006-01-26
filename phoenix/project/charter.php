@@ -119,7 +119,7 @@
 		</p>
 		<p>
 			The list of the Projects under the Business Intelligence and Tools PMC
-			will be maintained as part of <a href="/birt/project/">Business
+			will be maintained as part of <a href="/birt/phoenix/project/">Business
 			Intelligence and Reporting Tools Project</a>.
 		</p>
 		$linkToTop

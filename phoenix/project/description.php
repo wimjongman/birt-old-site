@@ -221,7 +221,7 @@
 			adopt and support accepted open standards wherever feasible.
 		</p>
 		<p>
-			<img src="/birt/project/chart1.jpg" height="237" width="658">
+			<img src="/birt/phoenix/project/chart1.jpg" height="237" width="658">
 		</p>
 		<p>
 			The Eclipse Business Intelligence and Reporting Project is divided into

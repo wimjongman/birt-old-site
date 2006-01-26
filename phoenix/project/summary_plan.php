@@ -84,7 +84,7 @@
 		<ul class="midlist">
 			<li>
 				Business Intelligence and Reporting Tools (BIRT)
-				<a href="http://www.eclipse.org/birt/project/project_plan_R1_0.html">
+				<a href="http://www.eclipse.org/birt/phoenix/project/project_plan_R1_0.html">
 				1.0 release plan</a>
 			</li>
 		</ul>

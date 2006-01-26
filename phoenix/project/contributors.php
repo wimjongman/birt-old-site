@@ -59,7 +59,7 @@
 			</li>
 		</ul>
 		<p>
-			BIRT uses the standard Eclipse process to elect new committers. The list of	current committers is <a href="http://eclipse.org/birt/commit.html">here</a>.
+			BIRT uses the standard Eclipse process to elect new committers. 
 		</p>
 		$linkToTop
 		<hr class="clearer" />

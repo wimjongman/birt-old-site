@@ -39,27 +39,27 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/project/notable1.0.1.php">1.0.1 New and Notable Features</a> –
+				<a href="/birt/phoenix/project/notable1.0.1.php">1.0.1 New and Notable Features</a> –
 
 				New and Notable Features within BIRT 1.0.1.
 			</li>
 			<li>
-				<a href="/birt/project/project_plan_R1_0_1.php">1.0.1 Project Plan</a> –
+				<a href="/birt/phoenix/project/project_plan_R1_0_1.php">1.0.1 Project Plan</a> –
 
 				The plans for the 1.0.1 release.
 			</li>
 			<li>
-				<a href="/birt/project/summary_plan.php">1.0 Project Plan Summary</a> –
+				<a href="/birt/phoenix/project/summary_plan.php">1.0 Project Plan Summary</a> –
 
 				The broad themes for the next several releases.
 			</li>
 			<li>
-				<a href="/birt/project/R1_Requirements.pdf">Release 1.0 BIRT Requirements</a> –
+				<a href="/birt/phoenix/project/R1_Requirements.pdf">Release 1.0 BIRT Requirements</a> –
 
 				Requirements for capabilities that were included in BIRT Release 1.0.
 			</li>
 			<li>
-				<a href="/birt/project/Eclipse_BIRT_Project_1_0_Release_Review_2005-04-28.pdf">BIRT Project 1.0 Release Review presentation</a> –
+				<a href="/birt/phoenix/project/Eclipse_BIRT_Project_1_0_Release_Review_2005-04-28.pdf">BIRT Project 1.0 Release Review presentation</a> –
 
 				Slides used during the formal release review of the BIRT 1.0 project.
 			</li>

@@ -44,10 +44,10 @@
 		<p>
 			Welcome to the Business Intelligence and Reporting Tools (BIRT)
 			Project pages. The Eclipse BIRT Project is an open source Top Level Project
-			of eclipse.org. The <a href="/birt/project/charter.php">Project Charter</a> describes
+			of eclipse.org. The <a href="/birt/phoenix/project/charter.php">Project Charter</a> describes
 			the organization of the project, roles and responsibilities of the participants,
 			and top-level development process for the project. The Top Level Project
-			is overseen by a <a href="/birt/project/pmc.php">Project Management Committee</a> (PMC).
+			is overseen by a <a href="/birt/phoenix/project/pmc.php">Project Management Committee</a> (PMC).
 			The PMC organizes the Top-Level Project into <a href="#projects">Projects</a>
 			coordinating identified resources of the Projects against a Development
 			Plan and working against a CVS repository.
@@ -83,27 +83,27 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/project/description.php" class="page">Project Description and Scope</a> –
+				<a href="/birt/phoenix/project/description.php" class="page">Project Description and Scope</a> –
 
 				Description of the project and it's scope.>
 			</li>
 			<li>
-				<a href="/birt/project/charter.php">Project Charter</a> –
+				<a href="/birt/phoenix/project/charter.php">Project Charter</a> –
 
 				The Charter under which this project is run.
 			</li>
 			<li>
-				<a href="/birt/project/principles.php">Project Principles</a> –
+				<a href="/birt/phoenix/project/principles.php">Project Principles</a> –
 
 				The key principles on which this project is run.
 			</li>
 			<li>
-				<a href="/birt/project/pmc.php">Project Management Committee (PMC) and Project Leads</a> –
+				<a href="/birt/phoenix/project/pmc.php">Project Management Committee (PMC) and Project Leads</a> –
 
 				Who is running the project?
 			</li>
 			<li>
-				<a href="/birt/project/contributors.php">Project Contributors and Committers</a> –
+				<a href="/birt/phoenix/project/contributors.php">Project Contributors and Committers</a> –
 
 				List of the project contributors and committers.
 			</li>

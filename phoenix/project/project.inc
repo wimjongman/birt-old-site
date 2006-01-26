@@ -6,11 +6,11 @@
 <?php
 
 $resourceLinkArray = array(
-	array("/birt/project/description.php", "Project Description and Scope"),
-	array("/birt/project/charter.php", "Project Charter"),
-	array("/birt/project/principles.php", "Project Principles"),
-	array("/birt/project/pmc.php", "Project Management Committee"),
-	array("/birt/project/contributors.php", "Project Contributors"),
+	array("/birt/phoenix/project/description.php", "Project Description and Scope"),
+	array("/birt/phoenix/project/charter.php", "Project Charter"),
+	array("/birt/phoenix/project/principles.php", "Project Principles"),
+	array("/birt/phoenix/project/pmc.php", "Project Management Committee"),
+	array("/birt/phoenix/project/contributors.php", "Project Contributors"),
 );
 
 $projectLinkArray = array(

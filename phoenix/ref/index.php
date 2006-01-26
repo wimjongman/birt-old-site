@@ -39,7 +39,7 @@
 			<span style="color: red; font-weight: bold;">
 				New!
 			</span>
-			The <a href="/birt/ref/rom/index.html" target="_new">ROM documentation</a> is now
+			The <a href="/birt/phoenix/ref/rom/index.html" target="_new">ROM documentation</a> is now
 			in new "RomDoc" format complete with indexes, cross references, information taken
 			directly from implementation, and so on.  This version is an early draft. Note the following caveats:
 		</p>
@@ -89,43 +89,43 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/ref/ROM_Overview_SPEC.pdf" target="_new">Overview</a> –
+				<a href="/birt/phoenix/ref/ROM_Overview_SPEC.pdf" target="_new">Overview</a> –
 
 				Overall introduction to the ROM (read this first.)
 			</li>
 			<li>
-				<a href="/birt/ref/ROM_Base_Elements_SPEC.pdf" target="_new">Base Elements</a> –
+				<a href="/birt/phoenix/ref/ROM_Base_Elements_SPEC.pdf" target="_new">Base Elements</a> –
 
 				Properties common to all ROM elements
 			</li>
 			<li>
-				<a href="/birt/ref/ROM_Design_SPEC.pdf" target="_new">Report Design</a> –
+				<a href="/birt/phoenix/ref/ROM_Design_SPEC.pdf" target="_new">Report Design</a> –
 
 				Report design, report libraries and report parameters
 			</li>
 			<li>
-				<a href="/birt/ref/ROM_Layout_SPEC.pdf" target="_new">Layout Model </a> –
+				<a href="/birt/phoenix/ref/ROM_Layout_SPEC.pdf" target="_new">Layout Model </a> –
 
 				Layout rules and elements: grids and free-form>
 			<li>
-				<a href="/birt/ref/ROM_List_and_Table_SPEC.pdf" target="_new">Lists &amp; Tables</a> –
+				<a href="/birt/phoenix/ref/ROM_List_and_Table_SPEC.pdf" target="_new">Lists &amp; Tables</a> –
 
 				The two elements for displaying data from a data set>
 			<li>
-				<a href="/birt/ref/ROM_Text_SPEC.pdf" target="_new">Textual Elements</a> –
+				<a href="/birt/phoenix/ref/ROM_Text_SPEC.pdf" target="_new">Textual Elements</a> –
 
 				Including  Data, Label, Text and Multi-Line Data>
 			<li>
-				<a href="/birt/ref/ROM_Page_Setup_SPEC.pdf" target="_new">Page Setup</a> –
+				<a href="/birt/phoenix/ref/ROM_Page_Setup_SPEC.pdf" target="_new">Page Setup</a> –
 
 				Master pages and page sequences>
 			<li>
-				<a href="/birt/ref/ROM_Styles_SPEC.pdf" target="_new">Styles</a> –
+				<a href="/birt/phoenix/ref/ROM_Styles_SPEC.pdf" target="_new">Styles</a> –
 
 				Defines BIRT-defined and user-defined styles.>
 			</li>
 			<li>
-				<a href="/birt/ref/ROM_Scripting_SPEC.pdf" target="_new">Expressions &amp; Scripting</a> –
+				<a href="/birt/phoenix/ref/ROM_Scripting_SPEC.pdf" target="_new">Expressions &amp; Scripting</a> –
 
 				The programming model and objects
 			</li>
