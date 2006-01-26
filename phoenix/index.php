@@ -141,8 +141,7 @@
 		
 		
 	<div id="homeitem">
-		<div class="sideitem">
-			<h6>New to BIRT?</h6>
+			<h3>New to BIRT?</h3>
 			<ul>
 				<li>
 					<a href="intro">
