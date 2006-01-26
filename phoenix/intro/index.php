@@ -39,7 +39,7 @@
 		<p></p>
 		<p>
 			The current released version is 2.0. We encourage you to download
-			BIRT, try it, and give us your feedback though the <a href="../community.html">newsgroups and Bugzilla</a>.
+			BIRT, try it, and give us your feedback though the <a href="../community.php">newsgroups and Bugzilla</a>.
 		</p>
 		<p></p>
 		<p>
