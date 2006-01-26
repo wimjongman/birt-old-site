@@ -33,17 +33,12 @@
 		<blockquote>
 			<ul>
 				<li><a href="#background">Background</a></li>
-				<li><a href="#installing">Installing the API</a></li>
 				<li><a href="#config">Installing the Engine</a></li>
 				<li><a href="#jdbc">Configuring JDBC Drivers</a></li>
 				<li><a href="#api">API Overview</a></li>
 				<li><a href="#example">Example Application</a></li>
 			</ul>
 		</blockquote>
-
-
-
-
 
 
 
@@ -65,30 +60,14 @@ output formats. Extensions are discussed elsewhere. This article focus on how
 your application integrates with the report engine.
 </p>
 
-<h2><a name="installing"></a>Installing the API</h2>
 
+
+
+<h2><a name="config"></a>Installing the Engine</h2>
 The first step is to download, install, and configure the BIRT engine. The 
 engine is more than just a simple JAR file; it also includes a set of extensions 
 (plugins), and a set of data drivers.
-
-<h3>Engine Download</h3>
-<p> The standalone <a href="http://download.eclipse.org/birt/downloads/">BIRT Report Engine</a> is now available for download.
-Within this download are several examples on how to use the Report Engine, Chart Engine and
-the Viewer.<br>
-</p>
-
-<h3>Engine Source</h3>
-<p>If you prefer to work directly with the BIRT source code, the Engine API is 
-in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS in
-<code><a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
-source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a></code>.</p>
-
-<h3>Javadoc</h3>
-
-<p>This article provides an overview of the engine. To do actual development, 
-consult the Engine Javadoc.</p>
-
-<h2><a name="config"></a>Installing the Engine</h2>
+<br>
 First download the Report Engine from the <a href=http://download.eclipse.org/birt/downloads">Eclipse download site.</a>
 <ul>
 <li>This file will be named birt-runtime-2_0_0.zip.
@@ -107,6 +86,18 @@ use this example, make sure you copy the additional files to the appropriate loc
  <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
  <li>If you are using the birt.war, you will need to extract it and add the above files.
 </ul>
+
+
+<h3>Engine Source</h3>
+<p>If you prefer to work directly with the BIRT source code, the Engine API is 
+in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS in
+<code><a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
+source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a></code>.</p>
+
+<h3>Javadoc</h3>
+
+<p>This article provides an overview of the engine. To do actual development, 
+consult the Engine Javadoc.</p>
 
 <h2><a name="jdbc"></a>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
