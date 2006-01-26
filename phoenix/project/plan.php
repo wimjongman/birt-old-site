@@ -50,12 +50,6 @@
 				<a href="/birt/phoenix/project/project_plan_R2_0_0.php">2.0 Project Plan</a> –
 				The plans for the 2.0 release.
 			</li>
-#			<li>
-#				<a href="http://www.eclipse.org/birt/wiki/index.php?n=BPS.BPS">BIRT Project Specifications</a> –
-#				The project specifications detail proposed functionality for future
-#				releases of BIRT. Within the project plan, each BPS that is referenced
-#				for this release will be hyperlinked.
-#			</li>
 		</ul>
 		
 		<hr class="clearer" />
