@@ -70,7 +70,7 @@
 					
 				</li>
 				<li>
-					<a href="build/install.html">
+					<a href="build">
 						Install
 					</a>
 					
@@ -167,8 +167,9 @@
 				
 				<li>
 					<a href="project/pmc.php">
-						The BIRT PMC is pleased to announce that Mike Fox, from IBM / Rational, has joined the Committee.
+						The BIRT PMC
 					</a>
+					is pleased to announce that Mike Fox, from IBM / Rational, has joined the Committee.
 					<span class="dates">
 						01/16/06
 					</span>
@@ -234,9 +235,6 @@
 					<a href="whatsnew.html">
 						More of What's New...
 					</a>
-					<span class="dates">
-						07/02/05
-					</span>
 				</li>
 			</ul>
 		</div>
@@ -290,11 +288,11 @@
 				</li>
 
 				<li>
-					<a href="http://www.eclipsezone.com/articles/birt/" target="_blank">
+					<a href="http://www.theserverside.com/articles/article.tss?l=EclipseBRT" target="_blank">
 						Using Eclipse BIRT Report Libraries and Templates
 					</a>
 					Written by Mark Gamble
-					<a href="http://www.theserverside.com/articles/article.tss?l=EclipseBRT" target="_blank">published by TheServerSide</a>.
+					<a href="http://www.theserverside.com/" target="_blank">published by TheServerSide</a>.
 					<span class="dates">
 						01/04/06
 					</span>
