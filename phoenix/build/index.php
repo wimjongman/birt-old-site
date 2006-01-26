@@ -55,7 +55,7 @@ And
 </ul>
 
 
-<h1>Install</h1>
+<h1>Designer Install</h1>
 
 The instructions on this page cover the second configuration.
 <br>
