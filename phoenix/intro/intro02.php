@@ -40,6 +40,10 @@
 			that your JSP pages can call to integrate reporting into your application.
 		</p>
 		<p>
+			BIRT also delivers an example web application that can be deployed to an 
+			existing application server.
+		</p>
+		<p>
 			<img src="../project/chart1.jpg" width="658" height="237">
 		</p>
 		<p>
@@ -53,7 +57,9 @@
 				<i>report parameter</i>. For example, a customer report might ask for the
 				customer to display. Your parameter page can be static: custom designed
 				for each report. Or, you can use a dynamic page powered by parameter
-				meta-data so that a single page works for any report.
+				meta-data so that a single page works for any report.  BIRT also supports
+				the concept of dynamic and cascaded parameters.  This allows parameters to be
+				tied to Data Sets defined within the report. 
 			</li>
 			<li>
 				Running the Report -
@@ -69,16 +75,11 @@
 			</li>
 			<li>
 				Viewing -
-				Additional JSP pages, called the viewer, enable the user to view the output
-				of the report.
+				BIRT uses a Java servlet, called the viewer, to enable the user to view the output
+				of the report in paginated HTML.  The viewer also supports exporting data to CSV, parameter
+				collection and table of contents functionality..
 			</li>
 		</ul>
-		<p>
-			A reporting application includes a <i>parameter page</i>
-			that you can create a custom UI for each report, or you can
-			use the parameter meta-data provided by BIRT to provide a single report that
-			handles many different reports.
-		</p>
 
 		<h2>Example Viewer</h2>
 		<p>
@@ -88,9 +89,8 @@
 			can also be used in any JSP-compliant J2EE server.
 		</p>
 		<p>
-			BIRT Release 1.0.1 provides web output as a single page. The plan is to provide
-			multi-page output in upcoming releases, and the viewer UI will provide the
-			means for navigating among the pages.<p>
+			BIRT Release 2.0 provides web output as a single HTML document, paginated HTML and PDF.  Additionally the
+			viewer allows exporting the data to CSV and Table of Contents functionality..<p>
 		</p>
 		<p>
 			More information about the sample viewer is available in the <a href="../deploy">

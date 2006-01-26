@@ -64,7 +64,7 @@
 		</p>
 		<h2>Output Formats</h2>
 		<p>
-			BIRT Release 1.0.1 provides output in HTML and PDF. Many other types of output
+			BIRT Release 2.0 provides output in HTML, Paginated HTML and PDF. Many other types of output
 			are possible: Excel, Rich Text Format (RTF), Scalable Vector Graphic (SVG),
 			images, and more. While BIRT will add some of these over time, others may
 			have a more limited audience. Developers can use BIRT engine interfaces to

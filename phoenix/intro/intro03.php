@@ -64,7 +64,7 @@
 				directly within Eclipse.
 			</li>
 			<li>
-				Code Editor -
+				Script Editor -
 				Scripting adds business logic to reports during data access, during report
 				generation, or during viewing. The code editor provides standard Eclipse features
 				for editing your scripts: syntax coloring, auto-complete and more. BIRT expressions
@@ -84,6 +84,14 @@
 				solution: cheat sheets. These are short bits of documentation that walk you
 				through new tasks.
 			</li>
+			<li>
+				Library Explorer -
+				BIRT allows the reuse of report objects, such as tables, data sources and styles.
+				Objects created for reuse are stored in a library file.  
+				To browse the contents of report libraries BIRT supplies a Library Explorer view.
+			</li>			
+			
+			
 		</ul>
 	</div>
 	<div id="rightcolumn">

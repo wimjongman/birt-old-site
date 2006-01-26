@@ -118,7 +118,13 @@
 			allowing complete control of the report to handle even the most complex report
 			formatting tasks.
 		</p>
-
+		<h2>Java Event Coding</h2>
+		<p>
+			In addition to JavaScript, events can be coded in Java.  BIRT supplies a 
+			set of interfaces for report item creation and data collection.
+			Once the event is written in Java and associated with a report element, the report
+			can be debugged through the Eclipse Java Development Tools.
+		</p>
 		<h2>Project Management</h2>
 		<p>
 			BIRT integrates with the Eclipse project management features to organize related
@@ -137,7 +143,8 @@
 			BIRT provides a similar style feature. Indeed, BIRT styles are based on CSS
 			styles, making BIRT's visual properies familiar to web application developers.
 			BIRT styles cascade, allowing you to set a style in one place and have it affect
-			the entire report, a section of the report, or a single report item.
+			the entire report, a section of the report, or a single report item.  BIRT also
+			allows importing of existing Cascading Style Sheets.
 		</p>
 
 		<h2>Libraries</h2>
@@ -154,7 +161,7 @@
 			are used across many reports.
 		</p>
 		<p>
-			Upcoming BIRT releases will include support for libraries that organize these
+			BIRT supports libraries that organize these
 			shared resources. Libraries can contain any report element including styles,
 			data sources, report items, scripts and so on.
 		</p>
