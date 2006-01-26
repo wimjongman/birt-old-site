@@ -38,7 +38,7 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
-<h1>Newsgroup</h1>
+<h2>Newsgroup</h2>
 <p>
 The BIRT newsgroup is for users of the project to ask questions, discuss ideas
 and so on. Join in and get involved!
@@ -76,7 +76,7 @@ and so on. Join in and get involved!
 
 
 
-<h1>Bugzilla</h1>
+<h2>Bugzilla</h2>
 <p>
 BIRT uses Bugzilla to track bugs and enhancements.
 
@@ -125,7 +125,7 @@ into your bug report, preferably as a file attachment.
 		</ul>
 
 
-<h1>Mailing Lists</h1>
+<h2>Mailing Lists</h2>
 
 Eclipse provides <a href="http://www.eclipse.org/mail/index.html">
 mailing lists</a> for each project. BIRT provides one general-purpose
@@ -178,7 +178,7 @@ BIRT also provides mailing lists for developers contributing to BIRT:
 		</ul>
 
 
-<h1>Contributions</h1>
+<h2>Contributions</h2>
 <p>
 Want to contribute to the BIRT project?
 		<ul class="midlist">
