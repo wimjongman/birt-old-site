@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "Using the BIRT Report Viewer";
+	$pageTitle 		= "Report Engine API";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -45,8 +45,7 @@
 				List
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 	</div>
 	$deployLinksSideItem

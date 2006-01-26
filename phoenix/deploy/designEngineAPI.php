@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "Using the BIRT Report Viewer";
+	$pageTitle 		= "Design Engine API";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -67,8 +67,6 @@
 				the header, detail, footer and groups.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="services"></a>API Services</h2>
 		<p>
@@ -100,8 +98,7 @@
 				Perform semantic checks of report designs
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="sdk">DEAPI SDK</a></h2>
 		<p>
@@ -123,8 +120,7 @@
 			package within the <code>org.eclipse.birt.report.model project</code>. Read the package
 			overview for general information about getting started with this API.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="example">Example</a></h2>
 		<p>
@@ -209,8 +205,7 @@
 		<p>
 			You can now open the design within BIRT and preview it.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$deployLinksSideItem
 </div>

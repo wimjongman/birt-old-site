@@ -53,8 +53,7 @@
 			BIRT works with the 4.1.x and 5.5.x verisons of Tomcat, but 5.5.x
 			requires installation of the Java compatibility package described below.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="install_viewer"></a>Install the Viewer</h2>
 		<p>
@@ -95,8 +94,6 @@
 		<p>
 			If you choose to put the Viewer into some other location, you'll need to use a context entry within the server.xml file to indicate the deployment location. See Tomcat documentation for details.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
 		<p>
@@ -108,8 +105,7 @@
 		<p>
 			(Note: you must install the drivers both into the Eclipse-based design environment and the deployed viewer environment; these two environments do not share files.)
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="testing">Testing a More Complex Report</a></h2>
 		<p>
@@ -131,8 +127,7 @@
 		<p>
 			The report should run and appear in your browser, along with a parameter form in which you can enter a different value for the "Order Number " parameter for this report.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$deployLinksSideItem
 </div>

@@ -64,8 +64,7 @@
 		<p>
 			You can use a full-feature Viewer frameset that displays a parameter form and runs the report. Or, you can supply the parameter values and simply run the report to produce a simple HTML or PDF output page.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="operations"></a>Viewer Operations</h2>
 		<p>
@@ -96,8 +95,6 @@
 		</p>
 		<p>The servlet mapping names are case sensitive.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="run">Run a Report</a></h2>
 		<p>
@@ -129,8 +126,7 @@
 		<p>
 			See below for a list of available viewer command options.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="frameset">Viewer Frameset</a></h2>
 		<p>
@@ -181,8 +177,7 @@
 				Display the parameter page and ask you to enter parameters. You can then click the Run Report button to run the report.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="command_options">Viewer Command Options</a></h2>
 		<p>
@@ -428,8 +423,7 @@
 				Future releases will add navigation buttons to move between pages of the report, etc.
 			</p>
 		</div>
-   		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="parameters"></a>Report Parameters</h2>
 		<p>
@@ -508,15 +502,12 @@
 			parameter has a blank value, and <code>allowBlank</code> property is false, then the BIRT
 			report engine will raise an error.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="error"></a>Error Reporting</h2>
 		<p>
 			If an error occurs during the operation, an error page will appear.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$deployLinksSideItem
 </div>

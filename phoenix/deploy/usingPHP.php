@@ -53,8 +53,6 @@
 			This note explains what the BIRT team discovers as we figure out how to
 			integrate BIRT reporting with the PHP website infrastructure.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="setup"></a>Setup</h2>
 		<p>
@@ -70,8 +68,7 @@
 			web server running Apache, and that Tomcat listens on port 8080. Once the setup
 			works, we're ready to focus on the PHP side.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="running">Running a Report</a></h2>
 		<p>
@@ -93,8 +90,6 @@
 		<p>
 			That's all there is to it!
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="passing_parameters">Passing Parameters</a></h2>
 		<p>
@@ -114,8 +109,7 @@
 		<p>
 			The parameter value must also be encoded when placed into the URL.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="parameter_form">Parameter Form</a></h2>
 		<p>
@@ -135,8 +129,7 @@
 			Second, we can let the BIRT viewer display the parameter page using the
 			<code>frameset</code> URL.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="dynamic">Generating Reports Dynamically</a></h2>
 		<p>
@@ -178,8 +171,7 @@
 			fputs( \$fw, \$page, strlen( \$page ) );<br>
 			fclose( \$fw );
 		</blockquote>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$deployLinksSideItem
 </div>
