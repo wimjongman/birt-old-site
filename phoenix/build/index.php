@@ -155,7 +155,7 @@ The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report
 <p>
 
 <h2><a name="axis"></a>Axis 1.2.1</h2>
-Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
+Also download Apache <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a> from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
 and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
 <ul>
 <li>axis.jar 
@@ -168,7 +168,7 @@ and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.b
 </p>
 <p>
 <h2><a name="prototype"></a>prototype.js</h2>
-Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
+Lastly download <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> from <a href="http://dev.conio.net/repos/prototype/dist/">dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
 
 <h2><a name="example"></a>Installation Example Flash</h2>
