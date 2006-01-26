@@ -77,8 +77,6 @@
 			Reporting Tools Project is intended to ensure that the developed technology
 			can effectively be used to meet this broad range of needs.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="goals"></a>Initial Goals</h2>
 		<p>
@@ -107,8 +105,6 @@
 			will also support extensive programmatic customization of the report generation
 			processes, including programmatic creation of report designs.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="about"></a>About Reports</h2>
 		<p>
@@ -177,8 +173,7 @@
 			recurring reporting needs such as complex aggregation (performed outside
 			of the database) and highly complex layouts.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="users"></a>Target Users</h2>
 		<p>
@@ -210,8 +205,7 @@
 				  answer business questions on an ad hoc basis.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="architecture"></a>Architecture</h2>
 		<p>
@@ -255,8 +249,7 @@
 			the corresponding Project PMCs the design and implementation of the corresponding
 			contribution.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>

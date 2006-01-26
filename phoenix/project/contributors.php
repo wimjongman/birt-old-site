@@ -61,8 +61,7 @@
 		<p>
 			BIRT uses the standard Eclipse process to elect new committers. 
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="participants"></a>Project Participants</h2>
 		<p>
@@ -107,8 +106,7 @@
 				http://www.sist.tsinghua.edu.cn/index.asp</a>
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="initial_contribution"></a>Initial Code Contribution</h2>
 		<p>
@@ -157,8 +155,7 @@
 			In addition to the Actuate research and development work, Actuate is working
 			with other Eclipse members to leverage existing code in other areas.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>

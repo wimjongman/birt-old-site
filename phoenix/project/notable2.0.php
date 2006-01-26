@@ -21,7 +21,7 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	<div align=LEFT style="padding-left: 250px">
+	<div align=LEFT style="padding-left: 185px">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>

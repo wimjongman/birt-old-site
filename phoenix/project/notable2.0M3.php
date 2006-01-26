@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Project Plan and Deliverables";
+	$pageTitle 		= "New and Notable Features within BIRT 2.0 Milestone 3";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -22,9 +22,7 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div id="maincontent">
-	<div id="midcolumn">
-
+<div align=LEFT style="padding-left: 185px">
 		<h1><a name="top"></a>$pageTitle</h1>
 
 <h1>General</h1>
@@ -93,7 +91,7 @@ Using a library is as easy as importing it and then dragging the desired items t
 <h1>Improved PDF and Report Performance</h1>
 <p>M3 includes an enhanced data engine with the ability to process large data sets via a combination of memory and disk cache. The BIRT team has done tests that show that the engine can now handle reports of well over a million rows with linear response time and bounded memory usage.
 <br>BIRT has also incorporated the iText PDF library to improve PDF generation performance.</p>
-	</div>
+	
 </div>
 
 

@@ -116,8 +116,7 @@
 				  of technical, market and geographical domains to participate in this project.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>

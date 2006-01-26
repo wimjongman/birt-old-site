@@ -22,8 +22,7 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div id="maincontent">
-	<div id="midcolumn">
+	<div align=LEFT style="padding-left: 185px">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
@@ -68,7 +67,7 @@ This feature will continue to be refined and will be encapsulated within the Lib
 <img src="images/blobtype.JPG" width="603" height="457"/>
 <p>In the example above, the logo image is stored as a BLOB type.  The Image Builder has been enhanced to allow the BLOB image to be retrieved from the database and inserted into an Image control.</p>
 
-	</div>
+
 </div>
 
 

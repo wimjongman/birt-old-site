@@ -64,8 +64,7 @@
 				Jason has 15 years experience in the software development and consulting fields, with in-depth experience in identifying and addressing customer's business intelligence needs. As part of the BIRT PMC, Jason is responsible for supporting and encouraging adoption of BIRT in the Open Source community.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="leaders"></a>Project Leaders</h2>
 		<ul class="midlist">
@@ -89,8 +88,7 @@
     			Stanley is project lead for the BIRT Report Engine. Prior to working on BIRT, he led development of Actuate's Information Object Designer, an Eclipse-based IDE for Enterprise Information Integration (EII). He also served as project lead for report rendering and printing at Actuate for more than 5 years.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>

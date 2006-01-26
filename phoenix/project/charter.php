@@ -223,22 +223,19 @@
 		<p>
 			The Requirements Group is formed at the discretion of the PMC. The Requirements Group gathers requirements for the project and communicates them to all members of the Project, including the PMC. The Requirements Group will accomplish its objectives by working closely with the development teams and the PMC.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="architecture_group"></a>Project Architecture Group</h2>
 		<p>
 			The Architecture Group is formed at the discretion of the PMC. The Architecture Group is responsible for development, articulation and maintenance of the Project Architecture, as well as for providing an explicit description of the architecture and communicating this description to all members of the Project, and for releasing it as part of the project deliverables. The Architecture Group will accomplish its objectives by working closely with the development teams and the PMC.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="planning_group"></a>Project Planning Group</h2>
 		<p>
 			The Planning Group is formed at the discretion of the PMC. The Planning Group assists the PMC in establishing the Project plan in conjunction with available Project resources, coordinating relationships between Project participants and with other Eclipse projects. The Planning Group helps to ensure that projects have enough contributors, filling vacancies in roles and facilitating code or other donations by individuals or companies. The Planning Group will accomplish its objectives by working closely with the development teams and the PMC.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="roles"></a>Roles</h2>
 		<p>
@@ -327,8 +324,7 @@
 			the Project, and these nominations are approved by the EMO. Project leads
 			are accountable to the PMC for the success of their Project.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="project_components"></a>Project Components</h2>
 		<p>
@@ -340,8 +336,6 @@
 		<p>
 			For components that contain platform-specific code, it may be advantageous to allow developers to work on a port of the component to a new platform without requiring that they already be committers for the component. In this case the main code base is known as the component "core", and the port code base is known as a component "port". The decision to set up a port is made by the PMC. When a new port of a component is created, the PMC appoints a Port Lead, and an initial set of committers who will have commit and voting privileges specifically for the port. The port is done under the auspices of the core component, and all committers for the core component automatically also have commit and voting privileges on the port. Normally the Component Lead will also be the Port Lead.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="cycles"></a>Coordinated Release Cycles</h2>
 		<p>
@@ -438,8 +432,6 @@
 			mailing lists. If discussions are held offline, then a summary must be
 			posted to the mailing list to keep the other committers informed.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="licensing"></a>Licensing</h2>
 		<p>
