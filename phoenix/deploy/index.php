@@ -178,7 +178,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="deploy/engine.html">Using the Engine API</a> explains how to use the
+				<a href="/birt/phoenix/deploy/reportEngineAPI.php">Using the Engine API</a> explains how to use the
   				Engine API to create a simple command-line program that runs reports.
 			</li>
 		</ul>
@@ -190,7 +190,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/deploy/designEngineAPI.html">Using the Design Engine API</a>: a brief primer for using the DE API.
+				<a href="/birt/phoenix/deploy/designEngineAPI.php">Using the Design Engine API</a>: a brief primer for using the DE API.
 			</li>
 			<li>
 				The Design Engine code is available in the BIRT CVS repository in the  org.eclipse.birt.report.model project. See the BIRT build instructions for information on how to access CVS and build the code.
