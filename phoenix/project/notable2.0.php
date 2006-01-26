@@ -49,6 +49,7 @@
 		</blockquote>
 
 <h1><a name="intro">Introduction</h1>		
+
 <p>The BIRT Team is pleased announce the release of BIRT 2.0.</p>
 <p>BIRT now supports HTML pagination, CSV output, and a Table Of Contents with the supplied BIRT Viewer.  In addition, features such as Libraries, Templates, Multi-Pass aggregates, flexible Charting Wizard and XML as a data source all contribute to making BIRT 2.0 a powerful platform for your reporting needs.</p>
 
