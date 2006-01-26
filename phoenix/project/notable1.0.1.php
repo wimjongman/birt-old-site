@@ -32,10 +32,10 @@
 
 <h1>RCP Report Designer</h1>
 <p>The Eclipse Rich Client Platform (RCP) enables ISVs and enterprise developers to leverage Eclipse technology to quickly create highly functional applications for their user community based on a common framework. BIRT 1.0.1 includes an example RCP implementation of BIRT that illustrates how RCP can be used to broaden the appeal and usage of BIRT technology. The BIRT RCP Report Designer is an example of providing a simpler tool that is dedicated to the task of report development – without the additional complexities of the IDE, which is unfamiliar to the typical report developer.</p>
-<img src="../images/rcp.jpg" width="798" height="570"/>
+<img src="../images/rcp.JPG" width="798" height="570"/>
 <h1>Visual Indication of Problems in a Report</h1>
 <p>When a BIRT report has a problem detected in it, an error icon is displayed alerting the developer to the existence of the problem. For example, when the data source is deleted an error icon is displayed next to the dependent data set.<p>
-<img src="../images/errordata.jpg" width="221" height="112"/>
+<img src="../images/errordata.JPG" width="221" height="112"/>
 
 <h1>Map Feature for Easy Decoding of Database Values</h1>
 <p>An easy way to map data values is now available in the property editor. For example, to map credit rank codes, "A" and "B" to “Excellent" and "Standard", you would use the Map feature, which is available as a tab under the property editor view, as shown in the following illustration.</p>
