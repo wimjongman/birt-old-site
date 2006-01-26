@@ -296,7 +296,7 @@ ungrouped form (useful for creating a programmatic interface.)</p>
 interfaces provide 
 information about parameter groups and individual parameters.</p>
 
-<pre class="code-block">// Get the parameter definitions
+		<blockquote>// Get the parameter definitions
 
 IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( report );
 Collection params = task.getParameterDefns( true );
@@ -327,7 +327,8 @@ while ( iter.hasNext( ) )
 
         // Do something with a top-level parameter.
     }
-}</pre>
+}
+		</blockquote>
 
 <p>Use the <code>IGetParameterDefinitionTask</code> class to evaluate the default value for a parameter. The parameter 
 default value is an expression, and the task provides the required execution 
@@ -403,7 +404,7 @@ The Ant project has a readme.txt explaining which files need to be copied.
 <pre class="code-block">java RunReport test.rptdesign -i</pre>
 This example has not been updated to reflect 2.0 changes yet.
 ReportRunner.java is delivered as part of the Engine API and offers a more complex example.
-You can check it out of CVS or download BIRT 2.0's version <a=href="ReportRunner.java">here</a>.
+You can check it out of CVS or download BIRT 2.0's version <a href="ReportRunner.java">here</a>.
 
 
 	</div>
