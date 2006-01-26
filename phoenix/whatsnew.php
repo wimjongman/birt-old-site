@@ -108,11 +108,6 @@
 						10/21/05
 					</span>
 				</li>
-				<li>
-					<a href="whatsnew.html">
-						More of What's New...
-					</a>
-				</li>
 			</ul>
 	</div>
 	$deployLinksSideItem

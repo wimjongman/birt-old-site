@@ -48,7 +48,7 @@
 	BIRT provides core reporting features such as report layout,
 	data access and scripting.  The current released version is 2.0. Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
-	through Bugzilla as explained on the <a href="community.html">community</a>
+	through Bugzilla as explained on the <a href="community.php">community</a>
 	page.
 		<div class="homeitem">
 			<h3>New to BIRT?</h3>
