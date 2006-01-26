@@ -39,8 +39,7 @@
 		<p>
 			Use the logos on this page add interest to sample reports created using the Classic Models database.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="full_logos"></a>Full Logos</h2>
 		<p>
@@ -81,8 +80,7 @@
 			  </tr>
 			</table>
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="minimal_logos"></a>Minimal Logos</h2>
 		<p>
@@ -123,8 +121,7 @@
 			  </tr>
 			</table>
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 

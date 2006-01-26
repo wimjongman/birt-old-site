@@ -42,8 +42,7 @@
 		<p>
 			In this tutorial we created a simple listing that touched on many of the features of the BIRT Report Designer and Report Object Model (ROM). Now that you are familiar with BIRT, you're ready to learn more about it.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="next_steps"></a>Next Steps</h2>
 		<p>
@@ -72,8 +71,7 @@
 				Extended data items
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="more_information"></a>More Information</h2>
 		<p>
@@ -93,8 +91,7 @@
 				<a href="/birt/phoenix/community/index.php">BIRT newsgroup</a>
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

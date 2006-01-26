@@ -49,10 +49,9 @@
 		<p>
 			If you have not yet done so, install Eclipse, GEF, EMF and BIRT. You'll find complete
 			instructions for doing so on the
-			<a href="/birt/index.php?page=build/install.html">BIRT Install</a> page.
+			<a href="/birt/phoenix/build">BIRT Install</a> page.
 		</p>
-		<hr class="clearer" />
-
+	
 		<h3>Open BIRT</h3>
 		<p>
 			BIRT is a perspective within Eclipse. To open it, use the Window item on the
@@ -63,7 +62,6 @@
 		<p>
 			Eclipse will switch to display the BIRT perspective.
 		</p>
-		<hr class="clearer" />
 
 		<h3>Example Report</h3>
 		<p>
@@ -72,7 +70,7 @@
 		<ul class="midlist">
 			<li>
 				Use your browser to download the report:
-				<a href="/birt/tutorial/basic/customers.rptdesign">customers.rptdesign</a>.
+				<a href="/birt/phoenix/tutorial/basic/customers.rptdesign">customers.rptdesign</a>.
 			</li>
 			<li>
 				Save the file into an Eclipse project directory. (See the next page if you don't yet have a project.)

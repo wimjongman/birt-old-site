@@ -35,7 +35,7 @@
 
 		<h2><a name="tutorial"></a>Basic Tutorial</h2>
 		<p>
-			The <a href="/birt/tutorial/basic">Basic Tutorial</a> walks you though the steps to build
+			The <a href="/birt/phoenix/tutorial/basic">Basic Tutorial</a> walks you though the steps to build
 			a basic listing report. Introduces the basic
 			BIRT concepts. This is the place to start
 		</p>

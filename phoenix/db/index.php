@@ -51,8 +51,7 @@
 			sample database is provided under the terms Eclipse.org
 			<a href="http://www.eclipse.org/legal/notice.html">Software User Agreement</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="schema">Schema</a></h2>
 		<p>
@@ -86,8 +85,7 @@
 			table structure and relationships.
 			(<a href="/birt/phoenix/db/dbschema/ClassicModelsDBSchema.pdf" target="_new">PDF version</a>)
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="install"></a>Install</h2>
 		<p>
@@ -175,8 +173,7 @@
 				<a href="/birt/phoenix/db/localizeddb/Localized_Derby_Sample_DB.zip">Localized Derby Sample Database</a>
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="usage"></a>Usage</h2>
 		<p>
@@ -230,8 +227,7 @@
 			See also the <a href="logos.php">logos page</a> for images you can use in
 			sample reports against this database.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 
