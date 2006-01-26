@@ -162,12 +162,12 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/build/buildInstructions.php">Build Instructions</a>
+				<a href="/birt/phoenix/build/buildInstructions.php">Build Instructions</a>
 				 –
 				How to download BIRT source and build it.
 			</li>
 			<li>
-				<a href="/birt/project">Project Information</a>
+				<a href="/birt/phoenix/project">Project Information</a>
 				 –
 				How the project is structured, who's on the PMC, project roles, etc.
 			</li>

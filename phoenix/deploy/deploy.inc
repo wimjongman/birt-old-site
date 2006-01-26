@@ -6,11 +6,11 @@
 <?php
 
 $linkArray = array(
-	array("/birt/deploy/viewerSetup.php", "Viewer Setup"),
-	array("/birt/deploy/viewerUsage.php", "Viewer Usage"),
-	array("/birt/deploy/usingPHP.php", "Using PHP"),
-	array("/birt/deploy/designEngineAPI.php", "Design Engine API"),
-	array("/birt/deploy/reportEngineAPI.php", "Report Engine API"),
+	array("/birt/phoenix/deploy/viewerSetup.php", "Viewer Setup"),
+	array("/birt/phoenix/deploy/viewerUsage.php", "Viewer Usage"),
+	array("/birt/phoenix/deploy/usingPHP.php", "Using PHP"),
+	array("/birt/phoenix/deploy/designEngineAPI.php", "Design Engine API"),
+	array("/birt/phoenix/deploy/reportEngineAPI.php", "Report Engine API"),
 );
 
 function getDeployLinksSideItem($currentPage)

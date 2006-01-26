@@ -98,7 +98,7 @@
 				<br><br>
 				The following illustration shows these settings.
 				<br><br>
-				<img src="/birt/build/images/compliancepreference.jpg" height="539" width="672">
+				<img src="/birt/phoenix/build/images/compliancepreference.jpg" height="539" width="672">
 			</li>
 			<li>
 				Choose OK.
@@ -242,13 +242,13 @@
 				Open Perspective -&gt; Other. In Select Perspective, select CVS Repository
 				Exploring and choose OK.
 				<br><br>
-				<img src="/birt/build/images/selectperspective.jpg" height="420" width="245">
+				<img src="/birt/phoenix/build/images/selectperspective.jpg" height="420" width="245">
 				<br><br>
 			</li>
 			<li>
 				Right-click on the CVS repositories window. From the context menu,
 				choose New -&gt; Repository Location.<br><br>
-				<img src="/birt/build/images/newrepository.jpg" height="361" width="485"><br><br>
+				<img src="/birt/phoenix/build/images/newrepository.jpg" height="361" width="485"><br><br>
 			</li>
 			<li>
 				On Add CVS Repository, set the following values:
@@ -278,7 +278,7 @@
 				 </tbody>
 				</table>
 				<br>
-				<img src="/birt/build/images/addcvsrepository.jpg" height="551" width="438"><br><br>
+				<img src="/birt/phoenix/build/images/addcvsrepository.jpg" height="551" width="438"><br><br>
 			</li>
 			<li>
 				Choose Finish.
@@ -295,7 +295,7 @@
 			<li>
 				Select all the nodes under this node as shown in the image below. On CVS Repositories, right-click and choose
 				Check Out from the context menu.<br><br>
-				<img src="/birt/build/images/checkout.jpg" height="531" width="461"><br><br>
+				<img src="/birt/phoenix/build/images/checkout.jpg" height="531" width="461"><br><br>
 				This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
 			</li>
 		</ol>
@@ -327,14 +327,14 @@
 			<li>
 				Right-click the BuildViewer.xml file. From the context menu, choose Run&rarr;Ant Build.
 				<br><br>
-				<img src="/birt/build/images/runantbuild.jpg" height="682" width="541">
+				<img src="/birt/phoenix/build/images/runantbuild.jpg" height="682" width="541">
 			</li>
 			<li>
 				In org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab.
 				Unselect Use global properties specified in the Ant runtime preferences
 				as shown in the following illustration.
 				<br><br>
-				<img src="/birt/build/images/runantbuildproperties.jpg" height="560" width="648">
+				<img src="/birt/phoenix/build/images/runantbuildproperties.jpg" height="560" width="648">
 			</li>
 			<li>
 				This script is configured to work with Eclipse 3.0, GEF 3.0 and EMF 2.0.1. If you are using a newer version, you need to add the properties eclipse.version, gef.version, emf.version respectively.
@@ -348,7 +348,7 @@
 					<li>
 						In Value, type the version of Eclipse, similar to the following illustration.
 						<br><br>
-						<img src="/birt/build/images/addproperty.jpg" height="174" width="372">
+						<img src="/birt/phoenix/build/images/addproperty.jpg" height="174" width="372">
 					</li>
 					<li>
 						Choose OK.
@@ -373,17 +373,17 @@
 			<li>
 				Select Run... from the Run menu on the menu bar
 				<br><br>
-				<img src="/birt/build/images/run.jpg" height="399" width="371">
+				<img src="/birt/phoenix/build/images/run.jpg" height="399" width="371">
 			</li>
 			<li>
 				Select Runtime Workbench from the list on the left and click on the New button as shown in the following illustration:
 				<br><br>
-				<img src="/birt/build/images/neweclipseapplication.jpg" height="560" width="624">
+				<img src="/birt/phoenix/build/images/neweclipseapplication.jpg" height="560" width="624">
 			</li>
 			<li>
 				Click the Run button to launch the Runtime Workbench.
 				<br><br>
-				<img src="/birt/build/images/runeclipseapplication.jpg" height="615" width="666">
+				<img src="/birt/phoenix/build/images/runeclipseapplication.jpg" height="615" width="666">
 			</li>
 		</ol>
 		$linkToTop

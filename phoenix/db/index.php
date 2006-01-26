@@ -82,9 +82,9 @@
 			</li>
 		</ul>
 		<p>
-			This <a href="/birt/db/dbschema/ClassicModelsDBSchema.jpg" target="_new">ER-diagram</a> shows the
+			This <a href="/birt/phoenix/db/dbschema/ClassicModelsDBSchema.jpg" target="_new">ER-diagram</a> shows the
 			table structure and relationships.
-			(<a href="/birt/db/dbschema/ClassicModelsDBSchema.pdf" target="_new">PDF version</a>)
+			(<a href="/birt/phoenix/db/dbschema/ClassicModelsDBSchema.pdf" target="_new">PDF version</a>)
 		</p>
 		$linkToTop
 		<hr class="clearer" />
@@ -116,7 +116,7 @@
 			</li>
 			<li>
 				Install the JDBC driver using the instructions on the
-				<a href="/birt/build">install page</a>.
+				<a href="/birt/phoenix/build">install page</a>.
 				Enter the following for the URL template:
 				<blockquote>
 					jdbc:mysql://[host][,failoverhost...][:port]/[database]…
@@ -128,7 +128,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/db/mysql/ClassicModels-MySQL.zip">Download the zip file</a> containing the MySQL database scripts.
+				<a href="/birt/phoenix/db/mysql/ClassicModels-MySQL.zip">Download the zip file</a> containing the MySQL database scripts.
 			</li>
 			<li>
 				Expand the zip file into a convenient location.
@@ -172,7 +172,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/db/localizeddb/Localized_Derby_Sample_DB.zip">Localized Derby Sample Database</a>
+				<a href="/birt/phoenix/db/localizeddb/Localized_Derby_Sample_DB.zip">Localized Derby Sample Database</a>
 			</li>
 		</ul>
 		$linkToTop
