@@ -52,8 +52,7 @@
 			In BIRT, Grid, List and Table items are containers: they can hold other
 			report items. The report itself is the ultimate container for all report items.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="properties"></a>Setting Report-Wide Properties</h2>
 		<p>
@@ -98,13 +97,11 @@
 			as part of a public web site. You can also use font lists as in CSS. For
 			example: "Helvetica, Arial, sans-serif".
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="styles"></a>Other Default Styles</h2>
 		<p>
 			BIRT defines default styles for most report items and for list and table bands.
-			See the <a href="/birt/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>
+			See the <a href="/birt/phoenix/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>
 			for the complete list.
 		</p>
 		<p>
@@ -113,16 +110,12 @@
 			contexts. If you wish to use one of these, simply create a style with the
 			required name.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="report"></a>Check the Report</h2>
 		<p>
 			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading.
 		</p>
 
-		$linkToTop
-		<hr class="clearer" />
 
 		$stepNavigator
 	</div>

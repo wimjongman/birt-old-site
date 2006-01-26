@@ -45,8 +45,7 @@
 		<p>
 			Before we start work on the report, let's take a quick tour of the UI. We'll be looking at most of the UI in detail as we build our report.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="cheat_sheets"></a>Cheat Sheets</h2>
 		<p>
@@ -58,8 +57,6 @@
 			For now, let's go ahead and close that window since we'll be following the
 			steps in this tutorial.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="layout_editor"></a>Layout Editor</h2>
 		<p>
@@ -79,8 +76,7 @@
 				Where you add code to your report using JavaScript.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="views"></a>Views</h2>
 		<p>
@@ -119,8 +115,7 @@
 				this tutorial.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="displaying_views"></a>Displaying Views</h2>
 		<p>
@@ -133,8 +128,7 @@
 			and Data Explorer docked at the left edge of your workspace, and the Property
 			Editor and Properties view docked at the bottom of the workspace.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

@@ -64,8 +64,7 @@
 				Click OK.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="row_properties"></a>Row Properties</h2>
 		<p>
@@ -85,8 +84,7 @@
 				In the General page of the Property Editor, set the height to 0.25 in.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="column_properties"></a>Column Properties</h2>
 		<p>
@@ -123,8 +121,7 @@
 				In the General page of the Property Editor, set the text alignment to Right.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="image"></a>Insert an Image</h2>
 		<p>
@@ -141,7 +138,7 @@
 				Ensure that the URL radio button is selected.
 			</li>
 			<li>
-				Enter the following URL: http://www.eclipse.org/birt/tutorial/basic/multichip-4.jpg.
+				Enter the following URL: http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg.
 			</li>
 			<li>
 				Click the Preview button to ensure that the URL is correct.
@@ -154,8 +151,7 @@
 			You can also embed an image from your local disk. Embedding the image copies the image into the report design. Using a URL is more efficient.
 		</p>
 
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="run_date"></a>Insert a Run Date</h2>
 		<p>
@@ -184,11 +180,10 @@
 		<p>
 			BIRT uses Java formatting (based on Microsoft Excel) for dates, numbers and
 			strings. In addition, BIRT adds a number of specialized, locale-aware date formats
-			described in the <a href="/birt/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>.
+			described in the <a href="/birt/phoenix/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>.
 		</p>
 
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

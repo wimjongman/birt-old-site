@@ -64,8 +64,7 @@
 				Repeat the above to resize the city column.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="background_color"></a>Setting the Background Color</h2>
 		<p>
@@ -97,8 +96,7 @@
 				Click OK.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="font"></a>Setting the Font</h2>
 		<p>
@@ -135,8 +133,6 @@
 				Click OK.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="formatting"></a>Formatting Data</h2>
 		<p>
@@ -162,8 +158,7 @@
 		<blockquote>
 			(@@@) @@@-@@@@
 		</blockquote>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="border"></a>Setting a Border</h2>
 		<p>
@@ -201,8 +196,7 @@
 				Once you select some other item, the Property Editor will no longer display your border settings. The properties are still set, but the UI does not display them. Use the Properties view to see them. To open the Properties view, use the main menu and choose Window&larr;Show View&larr;Properties.
 			</p>
 		</div>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="properties"></a>More on Properties</h2>
 		<p>
@@ -217,8 +211,7 @@
 			BIRT adds additional, report-specific properties such as the date, number and string
 			formatting that we just set. However, even these act just like CSS properties.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

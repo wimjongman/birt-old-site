@@ -52,8 +52,7 @@
 		<p>
 			We could build this up with two labels. But, we'll take this opportunity to try out the Text element which allows us to use HTML formatting directly within the text.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="create"></a>Create a Text Item</h2>
 		<p>
@@ -115,8 +114,6 @@
 			</p>
 		</div>
 
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="dynamic_text"></a>Dynamic Text</h2>
 		<p>
@@ -127,8 +124,6 @@
 			&lt;value-of&gt;row.state&lt;/value-of&gt;<br>
 			&lt;value-of format="@@@@@-@@@@"&gt;row.zip&lt;value-of&gt;
 		</blockquote>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="image"></a>Insert an Image</h2>
 		<p>
@@ -145,7 +140,7 @@
 				Ensure that the URL radio button is selected.
 			</li>
 			<li>
-				Enter the following URL: http://www.eclipse.org/birt/tutorial/basic/multichip-4.jpg.
+				Enter the following URL: http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg.
 			</li>
 			<li>
 				Click the Preview button to ensure that the URL is correct.
@@ -158,16 +153,14 @@
 			You can also embed an image from your local disk. Embedding the image copies the image into the report design. Using a URL is more efficient.
 		</p>
 
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="test"></a>Final Test</h2>
 		<p>
 			We're now ready to give the report a final test. Click the Preview tab to see the report with formatting applied.
 		</p>
 
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

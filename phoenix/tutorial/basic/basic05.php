@@ -72,8 +72,7 @@
 				Click Finish.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="pages"></a>Data Set Editor Pages</h2>
 		<p>
@@ -126,8 +125,7 @@
 				change it.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="browser"></a>Database Browser</h2>
 		<p>
@@ -148,7 +146,7 @@
 				Drag and drop a table or column to add its name to the SQL editor.
 			</li>
 		</ul>
-		$linkToTop
+
 		<hr class="clearer" />
 
 		<h2><a name="create_query"></a>Create the Query</h2>
@@ -162,8 +160,7 @@
 			WHERE COUNTRY = 'USA'
 		</div>
 
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="test_query"></a>Test the Query</h2>
 		<p>
@@ -199,8 +196,7 @@
 				You have not put a semi-colon at the end of your statement.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="edit"></a>Edit a Data Set</h2>
 		<p>
@@ -217,8 +213,7 @@
 				Double-click the Customers data set. The Data Set editor opens.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

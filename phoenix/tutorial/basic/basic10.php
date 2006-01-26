@@ -50,8 +50,6 @@
 				Styles in the first BIRT release work only within a single report (though you can copy & paste them across reports.) A later BIRT release will create separate style sheet files that let you share styles across a suite of reports. BIRT style sheets will be very similar to the external style sheet files in CSS.
 			</p>
 		</div>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="creating"></a>Creating a Style</h2>
 		<p>
@@ -89,8 +87,7 @@
 		<p>
 			Notice that the new style has been applied to the label.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="applying"></a>Applying a Style</h2>
 		<p>
@@ -107,8 +104,6 @@
 		<p>
 			The other three cells are now also formatted.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
 
 		<h2><a name="editing"></a>Editing a Style</h2>
 		<p>
@@ -128,8 +123,7 @@
 				Double-click the style you want to edit.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

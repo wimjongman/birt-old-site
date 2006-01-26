@@ -84,16 +84,13 @@
 				The extensive online help included within BIRT. Select Help&rarr;Help Contents from the Eclipse menu and then click on the BIRT Developer Guide.
 			</li>
 			<li>
-				<a href="/birt/wiki/index.php?n=FAQ.FAQ">FAQ</a>
+				<a href="/birt/phoenix/ref">Reference material, including ROM (Report Object Model) specifications.</a>
 			</li>
 			<li>
-				<a href="/birt/ref">Reference material, including ROM (Report Object Model) specifications.</a>
+				<a href="/birt/phoenix/examples">Additional example reports.</a>
 			</li>
 			<li>
-				<a href="/birt/examples">Additional example reports.</a>
-			</li>
-			<li>
-				<a href="/birt/index.php?page=community.html">BIRT newsgroup</a>
+				<a href="/birt/phoenix/community/index.php">BIRT newsgroup</a>
 			</li>
 		</ul>
 		$linkToTop

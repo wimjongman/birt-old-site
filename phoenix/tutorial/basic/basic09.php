@@ -77,8 +77,7 @@
 				Sorting: controls the order of the detail rows within a table. This is the property we'll use.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="setting_sort"></a>Setting the Detail Sort</h2>
 		<p>
@@ -100,8 +99,7 @@
 				Leave the Sort Direction at Ascending.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

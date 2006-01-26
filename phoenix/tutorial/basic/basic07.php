@@ -90,8 +90,7 @@
 		<p>
 			Before we fix these issues, let's look at other ways to preview the report.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="preview_html"></a>Preview as HTML</h2>
 		<p>
@@ -105,8 +104,7 @@
 			Preview as HTML in a separate window. This allows you to switch back and forth
 			between your layout editor and your preview without rerunning the report.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="preview_pdf"></a>Preview as PDF</h2>
 		<p>
@@ -119,8 +117,6 @@
 			</p>
 		</div>
 
-		$linkToTop
-		<hr class="clearer" />
 
 		$stepNavigator
 	</div>

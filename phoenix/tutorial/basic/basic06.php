@@ -47,8 +47,7 @@
 		<p>
 			Our customer listing report will display customer information in the form of a table: just like an HTML table, with the added ability to iterate over report data. The Grouped Listing template we chose earlier created the table for us, we just need to fill in the details. Before we do, let's introduce the various BIRT report items.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="items"></a>Report Items</h2>
 		<p>
@@ -95,8 +94,7 @@
 		<p>
 			This tutorial will use all the elements except for List and Chart.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="detail"></a>Create the Table Detail</h2>
 		<p>
@@ -133,8 +131,7 @@
 				Drag the PHONE column into the last cell in the detail band.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="state_group"></a>Create the State Group</h2>
 		<p>
@@ -164,8 +161,7 @@
 				a data set.
 			</p>
 		</div>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="city_group"></a>Create the City Group</h2>
 		<p>
@@ -192,8 +188,7 @@
 		<p>
 			Notice that BIRT automatically inserted the a Data report item for the city group. Hover the cursor over the "@expression" to see the actual expression: row["CITY"].
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="column"></a>Add a Table Column</h2>
 		<p>
@@ -210,8 +205,7 @@
 				Move the CITY expression from (the expression in the first column of the second group heder) the second column of the second group header.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="headings"></a>Create Column Headings</h2>
 		<p>
@@ -231,8 +225,7 @@
 				Change the last column header to "Phone".
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

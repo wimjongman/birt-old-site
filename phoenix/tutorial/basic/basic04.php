@@ -43,8 +43,7 @@
 		<p>
 			BIRT reports use a data source to connect to a database or other data provider. BIRT uses a data set to retrieve data from the data provider. Think of the data source as a connection, and the data set as a query.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="build"></a>Build a Data Source</h2>
 		<p>
@@ -76,8 +75,7 @@
 		<p>
 			Your new data source appears within the Data Sources node in the Data Explorer.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="edit"></a>Editing your Data Source</h2>
 		<p>
@@ -100,8 +98,7 @@
 				Click OK to save your changes.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		$stepNavigator
 	</div>

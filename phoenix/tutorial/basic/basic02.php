@@ -63,8 +63,7 @@
 				Click OK if asked to switch to the Report Design perspective. (This occurs if you create a BIRT project while in a perspective other than Report Design.)</li>
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="create_a_report"></a>Create a Report</h2>
 		<p>
@@ -95,8 +94,7 @@
 				Click Next.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="choose_a_template"></a>Choose a Template</h2>
 		<p>
@@ -160,8 +158,7 @@
 		<p>
 			BIRT opens your new report in the Eclipse workspace.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 		$stepNavigator
 	</div>
 	$tutorialLinksSideItem
