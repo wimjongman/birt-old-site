@@ -25,7 +25,30 @@
 <div id="maincontent">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+		<blockquote>
+			<ul>
+				<li><a href="#intro">Introduction</a></li>
+				<li><a href="#jump_2">New BIRT Viewer</a></li>
+				<li><a href="#jump_3">JavaScript/Java Events And Report Debugging</a></li>
+				<li><a href="#jump_4">Runtime Data Source Property Binding</a></li>
+				<li><a href="#jump_5">Chart Builder and SVG Output</a></li>
+				<li><a href="#jump_6">Templates</a></li>
+				<li><a href="#jump_7">Libraries</a></li>
+				<li><a href="#jump_8">XML ODA</a></li>
+				<li><a href="#jump_9">URL Builder</a></li>
+				<li><a href="#jump_10">Multi-pass Aggregate, Sorting and Filtering</a></li>
+				<li><a href="#jump_11">Improved Report Performance and PDF Fidelity</a></li>
+				<li><a href="#jump_12">Dynamic Parameters/Cascading Parameters</a></li>
+				<li><a href="#jump_13">Expression Builder</a></li>
+				<li><a href="#jump_14">Importing of Style Sheets</a></li>
+				<li><a href="#jump_15">Report XML Editor</a></li>
+				<li><a href="#jump_16">Passing of External Object to Custom Data Sources</a></li>
+				<li><a href="#jump_17">Stored Procedures</a></li>
+				<li><a href="#jump_18">CLOB/BLOB  Support</a></li>
+			</ul>
+		</blockquote>
 
+<h1><a name="intro">Introduction</h1>		
 <p>The BIRT Team is pleased announce the release of BIRT 2.0.</p>
 <p>BIRT now supports HTML pagination, CSV output, and a Table Of Contents with the supplied BIRT Viewer.  In addition, features such as Libraries, Templates, Multi-Pass aggregates, flexible Charting Wizard and XML as a data source all contribute to making BIRT 2.0 a powerful platform for your reporting needs.</p>
 
