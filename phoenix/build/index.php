@@ -146,9 +146,8 @@ BIRT framework and unzip the contents to any directory.
 
 <h2><a name="itext"></a>iText</h2>
 <ul>
-<li><a href="http://www.lowagie.com/iText/download.html">iText 1.3</a>.
+<li><a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a>.
 </ul>
-Download Version 1.3, labelled Compiled code.
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
