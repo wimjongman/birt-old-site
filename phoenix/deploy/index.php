@@ -167,7 +167,7 @@
 				Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
 			</li>
 			<li>
-				The viewer code is available in the BIRT CVS repository in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project"> org.eclipse.birt.report.viewer</a> project. See the <a href="build/build_instr.html">BIRT build instructions</a> for information on how to access CVS and build the viewer.
+				The viewer code is available in the BIRT CVS repository in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project"> org.eclipse.birt.report.viewer</a> project. See the <a href="/birt/phoenix/build/buildInstructions.php">BIRT build instructions</a> for information on how to access CVS and build the viewer.
 			</li>
 		</ul>
 
