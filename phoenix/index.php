@@ -46,7 +46,7 @@
 	and PDF.
 	<p>
 	BIRT provides core reporting features such as report layout,
-	data access and scripting.  The current released version is 1.0.1. Please try BIRT and
+	data access and scripting.  The current released version is 2.0. Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
 	through Bugzilla as explained on the <a href="community.html">community</a>
 	page.
@@ -54,7 +54,17 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
-					<a href="http://www.eclipse.org/birt/index.php?page=project/pmc.html">
+					<a href=href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.0
+					</a>
+					is now available for download.  Read about the feature set at <a href="project/notable2.0.html">Notable Features - BIRT 2.0</a>
+					<span class="dates">
+						01/22/06
+					</span>
+				</li>
+				
+				<li>
+					<a href="project/pmc.html">
 						The BIRT PMC is pleased to announce that Mike Fox, from IBM / Rational, has joined the Committee.
 					</a>
 					<span class="dates">
@@ -105,7 +115,7 @@
 					</a>
 					The examples have been restructured and many new examples are available.
 					<span class="dates">
-						1/21/05
+						10/21/05
 					</span>
 				</li>
 				<li>
@@ -119,15 +129,6 @@
 					</span>
 				</li>
 				<li>
-					<a href="project/project_plan_R2_0_0_Draft.html">
-						BIRT Release 2.0 DRAFT Project Plan
-					</a>
-					Take a look at the projects that are being implemented for BIRT 2.0.  The 2.0 Milestone 1 release is available on the <a href="http://download.eclipse.org/birt/downloads/">downloads</a> page
-					<span class="dates">
-						07/30/05
-					</span>
-				</li>
-				<li>
 					<a href="whatsnew.html">
 						More of What's New...
 					</a>
@@ -137,107 +138,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="homeitem">
-			<h3>In the News</h3>
-			<ul>
-				<li>
-					<a href="http://dev.mysql.com/tech-resources/articles/using-birt/">
-						Using BIRT To Report On Bugzilla in MySQL
-					</a>
-					from
-					<a href="http://www.mysql.com/" target="_blank">MySQL</a>.
-					<span class="dates">
-						11/16/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=171200352&pgno=1">
-						Open Source Goes Corporate
-					</a>
-					from
-					<a href="http://www.informationweek.com/" target="_blank">InformationWeek</a>.
-					<span class="dates">
-						07/28/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://tv.sys-con.com/read/109190.htm">
-						BIRT at JavaOne
-					</a>
-					from
-					<a href="http://www.sys-con.tv/" target="_blank">Sys-Con.tv</a>.
-					<span class="dates">
-						06/28/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://81.144.183.106/Articles/2005/06/08/210306/Eclipsereleasesopensourcebusinessintelligence.htm">
-						Eclipse releases open source business intelligence
-					</a>
-					from
-					<a href="http://81.144.183.106/Home/Default.aspx" target="_blank">ComputerWeekly.com</a>.
-					<span class="dates">
-						06/08/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://www.tdwi.org/Research/display.aspx?ID=7570">
-						Eclipse Foundation Releases BI Reporting Tool for Java
-					</a>
-					from
-					<a href="http://www.tdwi.org/index.aspx" target="_blank">tdwi Research</a>.
-					<span class="dates">
-						06/08/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://www.bizintelligencepipeline.com/showArticle.jhtml?articleId=164301123">
-						BIRT Makes Open-Source Reporting Premiere
-					</a>
-					from
-					<a href="http://www.bizintelligencepipeline.com" target="_blank">BizIntelligencePipeline</a>.
-					<span class="dates">
-						06/07/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="news.html">
-						More News...
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="homeitem">
-			<h3>EclipseWorld Presentations are now Available</h3>
-			<ul>
-				<li>
-					<a href="presos/Eclipse BIRT Project IntroductionEclipseWorld.pdf">BIRT Introduction</a> - An Introduction to BIRT<br>
-				</li>
-				<li>
-					<a href="presos/BIRTDemoEclipseWorld.pdf">BIRT Introduction - Demo</a> - Demonstration Script<br>
-				</li>
-				<li>
-					<a href="presos/Eclipse BIRT Project Mastering BIRT.pdf">Mastering BIRT</a> - Exploring BIRT Extensions <br>
-				</li>
-				<li>
-					<a href="presos/Eclipse BIRT Plugin Map.pdf">BIRT Plugin Map</a> - BIRT Projects and Extension Points<br>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div id="rightcolumn">
+		
+		
+	<div id="homeitem">
 		<div class="sideitem">
 			<h6>New to BIRT?</h6>
 			<ul>
@@ -298,14 +201,6 @@
 					-->
 				</li>
 				<li>
-					<a href="wiki/index.php?n=FAQ.FAQ">
-						FAQ
-					</a>
-					<!--
-					- A summary of questions asked & answered in the newsgroup, delivered via the BIRT Wiki.
-					-->
-				</li>
-				<li>
 					<a href="community.html">
 						Community
 					</a>
@@ -345,15 +240,97 @@
 					- How to check out and build the BIRT source code.
 					-->
 				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<div class="homeitem">
+			<h3>In the News</h3>
+			<ul>
 				<li>
-					<a href="search.html">
-						Search
+					<a href="http://www.computerworld.com/softwaretopics/software/story/0,10801,107949,00.html?SKC=software-107949">
+						Eclipse unveils updated BI tools
 					</a>
-					<!--
-					- Search the BIRT portion of the Eclipse web site with Google.
-					-->
+					from
+					<a href="http://www.computerworld.com" target="_blank">Computerworld</a>.
+					<span class="dates">
+						01/23/06
+					</span>
+				</li>
+				<li>
+					<a href="http://www.eweek.com/article2/0,1895,1914364,00.asp" target="_blank">
+						Eclipse Advances Open-Source BI Platform
+					</a>
+					from
+					<a href="http://www.eweek.com" target="_blank">eWeek</a>.
+					<span class="dates">
+						01/23/06
+					</span>
+				</li>
+				<li>
+					<a href="http://www.infoworld.com/article/06/01/23/74664_HNbirt_1.html" target="_blank">
+						Eclipse focuses on reports in new business intelligence tool
+					</a>
+					from
+					<a href="http://www.infoworld.com" target="_blank">InfoWorld</a>.
+					<span class="dates">
+						01/23/06
+					</span>
+				</li>
+				<li>
+					<a href="http://www.eclipsezone.com/articles/birt/" target="_blank">
+						Business Intelligence and Reporting Tools Project
+					</a>
+					Written by John Ward
+					<a href="http://www.eclipsezone.com" target="_blank">published by EclipseZone</a>.
+					<span class="dates">
+						01/18/06
+					</span>
+				</li>
+
+				<li>
+					<a href="http://www.eclipsezone.com/articles/birt/" target="_blank">
+						Using Eclipse BIRT Report Libraries and Templates
+					</a>
+					Written by Mark Gamble
+					<a href="http://www.theserverside.com/articles/article.tss?l=EclipseBRT" target="_blank">published by TheServerSide</a>.
+					<span class="dates">
+						01/04/06
+					</span>
+				</li>
+		
+				<li>
+					<a href="http://dev.mysql.com/tech-resources/articles/using-birt/">
+						Using BIRT To Report On Bugzilla in MySQL
+					</a>
+					from
+					<a href="http://www.mysql.com/" target="_blank">MySQL</a>.
+					<span class="dates">
+						11/16/05
+					</span>
 				</li>
 			</ul>
+			<ul>
+				<li>
+					<a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=171200352&pgno=1">
+						Open Source Goes Corporate
+					</a>
+					from
+					<a href="http://www.informationweek.com/" target="_blank">InformationWeek</a>.
+					<span class="dates">
+						07/28/05
+					</span>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="news.html">
+						More News...
+					</a>
+				</li>
+			</ul>
+
 		</div>
 	</div>
 </div>
