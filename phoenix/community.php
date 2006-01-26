@@ -88,12 +88,6 @@ BIRT uses Bugzilla to track bugs and enhancements.
 					Please explain what went wrong, and what you expected to happen. For an enhancement,
 					please explain how you'd use the new feature.					
 				</li>
-				<li>
-					<a href="https://bugs.eclipse.org/bugs/">
-						Sign Up
-					</a>
-					Create a Bugzilla account. Learn how to use Bugzilla.					
-				</li>
 		</ul>
 
 <p>
