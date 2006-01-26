@@ -63,8 +63,7 @@
 			roles and responsibilities of the participants, and development process
 			for the project.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="mission"></a>Mission</h2>
 		<p>
@@ -86,8 +85,7 @@
 			integration into these applications, or as dedicated applications in their
 			own right.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="scope"></a>Scope</h2>
 		<p>
@@ -122,8 +120,7 @@
 			will be maintained as part of <a href="/birt/phoenix/project/">Business
 			Intelligence and Reporting Tools Project</a>.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="pmc"></a>Project Management Committee</h2>
 		<p>
@@ -220,8 +217,7 @@
 			main Project mailing list, and the developer mailing lists for all Projects
 			and components they are overseeing.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="requirements_group"></a>Project Requirements Group</h2>
 		<p>
@@ -316,8 +312,7 @@
 			submitter. Committers are responsible for updating problem reports when
 			they have done work related to the problem.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="projects"></a>Projects</h2>
 		<p>
@@ -339,8 +334,7 @@
 		<p>
 			The PMC may decide to divide a Project further into components. If a Project is divided into components, commit privileges are normally granted at the component level, and the committers for a given component vote on issues specific to that component. Components are established and discontinued by the PMC. When the PMC creates a component it appoints a component lead to act as the technical leader and names the initial set of Committers for the component. The component lead is designated as a committer for the Project and represents the component in discussions and votes pertaining to the Project as a whole. Component Committers do not participate in votes at the level of the Project as a whole, unless they are also the component lead.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="ports"></a>Ports</h2>
 		<p>
@@ -353,8 +347,7 @@
 		<p>
 			All projects and components under this Project will have coordinated release plans, milestone dates, freeze cycles, builds, and ship dates. These projects will be coordinated by a group consisting of the project leads, the component leads from these projects, and the members of the PMC assisted by the members of the Planning Committee.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="infrastructure"></a>Infrastructure</h2>
 		<p>
@@ -390,8 +383,7 @@
 				A newsgroup where users, developers, and committers can interact regarding general questions and issues about the project.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 
 		<h2><a name="dev_process"></a>The Development Process</h2>
 		<p>
@@ -453,8 +445,7 @@
 		<p>
 			All contributions to Projects under this Charter must adhere to the Eclipse Foundation Intellectual Property Policy.
 		</p>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 	$projectLinksSideItem
 </div>
