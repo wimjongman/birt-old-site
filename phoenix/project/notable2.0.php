@@ -24,7 +24,7 @@
 #centerpic {
 
 <div id="maincontent">
-	<div align=LEFT style="padding-left: 185px">
+	<div align=LEFT style="padding-left: 200px">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
