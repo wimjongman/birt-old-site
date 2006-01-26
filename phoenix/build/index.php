@@ -115,7 +115,7 @@ BIRT framework and unzip the contents to any directory.
 <li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse3.1\eclipse\links).
 <li>Within this directory create a file with a unique name like birt.2.0.link.
 <li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0)
-<li>You will still need iText, Axis and prototype.js files.  See next section, 
+<li>You will still need iText, Axis and prototype.js files.  See next section. 
 </ul>
 
 
@@ -146,7 +146,10 @@ and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.b
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
 
-
+<h2>Installation Flash</h2>
+<p>To see an example installation watch the flash video.
+<a href="http://download.eclipse.org/birt/downloads/examples/installing/installing.html" target="_blank" class="top">Installation Flash Example</a>
+</p>
 <br>
 
 
