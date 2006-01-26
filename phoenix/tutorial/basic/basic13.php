@@ -140,7 +140,7 @@
 				Ensure that the URL radio button is selected.
 			</li>
 			<li>
-				Enter the following URL: http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg.
+				Enter the following URL: "http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg".
 			</li>
 			<li>
 				Click the Preview button to ensure that the URL is correct.

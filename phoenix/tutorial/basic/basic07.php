@@ -116,7 +116,8 @@
 				BIRT Release 1.0.1 uses the Apache XML-FO Processor (FOP) package. Limitations in the current version of FOP cause problems with the way the report appears in PDF. The BIRT team is aware of the problems and is working to address them in a later release.
 			</p>
 		</div>
-
+		<p>
+		</p>
 
 		$stepNavigator
 	</div>
