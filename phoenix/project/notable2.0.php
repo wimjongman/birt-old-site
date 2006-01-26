@@ -21,9 +21,10 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
+#centerpic {
 
 <div id="maincontent">
-	<div align=LEFT padding-left: 25px>
+	<div align=LEFT style="padding-left: 25px">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
