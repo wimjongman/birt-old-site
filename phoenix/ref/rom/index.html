@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+<head>
+<title>BIRT ROM Documentation</title>
+<link rel="stylesheet" href="style/style.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<p class="title">Eclipse BIRT Report Object Model (ROM)</p>
+<p class="subtitle">Table of Contents</p>
+<h1>Elements</h1>
+<table class="summary-table">
+<tr><td><a href="elements/Cell.html">Cell</a></td>
+<td></td></tr>
+<tr><td><a href="elements/Column.html">Column</a></td>
+<td>Describes one column within a table or grid.</td></tr>
+<tr><td><a href="elements/Data.html">Data</a></td>
+<td>Displays a data set or computed value with optional 
+formatting.</td></tr>
+<tr><td><a href="elements/DataSet.html">DataSet</a></td>
+<td>The data set element represents a result set retrieved 
+from an external data provider.</td></tr>
+<tr><td><a href="elements/DataSource.html">DataSource</a></td>
+<td>The data source element represents a connection to an 
+external data system.</td></tr>
+<tr><td><a href="elements/DesignElement.html">DesignElement</a></td>
+<td>Abstract element that represents anything
+that has properties.</td></tr>
+<tr><td><a href="elements/ExtendedItem.html">ExtendedItem</a></td>
+<td></td></tr>
+<tr><td><a href="elements/FreeForm.html">FreeForm</a></td>
+<td></td></tr>
+<tr><td><a href="elements/GraphicMasterPage.html">GraphicMasterPage</a></td>
+<td></td></tr>
+<tr><td><a href="elements/Grid.html">Grid</a></td>
+<td></td></tr>
+<tr><td><a href="elements/Image.html">Image</a></td>
+<td>Displays an image within the report.</td></tr>
+<tr><td><a href="elements/Label.html">Label</a></td>
+<td>Displays a static piece of text. The text can be 
+externalized.</td></tr>
+<tr><td><a href="elements/Line.html">Line</a></td>
+<td></td></tr>
+<tr><td><a href="elements/List.html">List</a></td>
+<td>This section describes the list itself.</td></tr>
+<tr><td><a href="elements/ListGroup.html">ListGroup</a></td>
+<td>Represents a group break level within a list.</td></tr>
+<tr><td><a href="elements/Listing.html">Listing</a></td>
+<td>Abstract base element that captures the behavior common 
+to lists and tables.</td></tr>
+<tr><td><a href="elements/ListingGroup.html">ListingGroup</a></td>
+<td>Abstract element that represents the behavior common to 
+list and table groups.</td></tr>
+<tr><td><a href="elements/MasterPage.html">MasterPage</a></td>
+<td>Base element for master pages within a report.</td></tr>
+<tr><td><a href="elements/Module.html">Module</a></td>
+<td>Report design information common to report designs and 
+libraries. This is most of the report except for the body.</td></tr>
+<tr><td><a href="elements/OdaDataSet.html">OdaDataSet</a></td>
+<td>An extended data set retrieved by a query through an ODA 
+driver that implements the BIRT Open Data Access (ODA) interfaces.</td></tr>
+<tr><td><a href="elements/OdaDataSource.html">OdaDataSource</a></td>
+<td>An extended data source that represents a connection that 
+implements the BIRT Open Data Access (ODA) interfaces to interact with an 
+external data provider.</td></tr>
+<tr><td><a href="elements/Parameter.html">Parameter</a></td>
+<td>The base parameter element defines properties common to 
+all types of parameters.</td></tr>
+<tr><td><a href="elements/ParameterGroup.html">ParameterGroup</a></td>
+<td>Visual grouping of report parameters.</td></tr>
+<tr><td><a href="elements/Rectangle.html">Rectangle</a></td>
+<td></td></tr>
+<tr><td><a href="elements/ReportDesign.html">ReportDesign</a></td>
+<td>The report design element represents report as a whole.</td></tr>
+<tr><td><a href="elements/ReportElement.html">ReportElement</a></td>
+<td>Abstract element for user-visible elements.</td></tr>
+<tr><td><a href="elements/ReportItem.html">ReportItem</a></td>
+<td>Abstract base element for all visual report items.</td></tr>
+<tr><td><a href="elements/Row.html">Row</a></td>
+<td>Represents one row within a grid or table.</td></tr>
+<tr><td><a href="elements/ScalarParameter.html">ScalarParameter</a></td>
+<td>Defines a simple single-value parameter.</td></tr>
+<tr><td><a href="elements/ScriptDataSet.html">ScriptDataSet</a></td>
+<td>A data set defined in JavaScript.</td></tr>
+<tr><td><a href="elements/ScriptDataSource.html">ScriptDataSource</a></td>
+<td>A specialized data source defined in JavaScript.</td></tr>
+<tr><td><a href="elements/SimpleMasterPage.html">SimpleMasterPage</a></td>
+<td>The simple master page provides a header and footer that 
+appear on every page.</td></tr>
+<tr><td><a href="elements/Style.html">Style</a></td>
+<td></td></tr>
+<tr><td><a href="elements/Table.html">Table</a></td>
+<td>Presents data from a data set in using a tabular layout.</td></tr>
+<tr><td><a href="elements/TableGroup.html">TableGroup</a></td>
+<td>Represents a group break level within a table.</td></tr>
+<tr><td><a href="elements/Text.html">Text</a></td>
+<td>Displays a multi-line block of text defined within the 
+report. Can contain embedded formatting and value expressions.</td></tr>
+<tr><td><a href="elements/TextData.html">TextData</a></td>
+<td></td></tr>
+</table>
+
+<h1>Structures</h1>
+<table class="summary-table">
+<tr><td><a href="structs/Action.html">Action</a></td>
+<td>Defines a hyperlink.</td></tr>
+<tr><td><a href="structs/CachedMetaData.html">CachedMetaData</a></td>
+<td>The cached meta-data element contains cached derived data 
+attributes of a data set.</td></tr>
+<tr><td><a href="structs/ColumnHint.html">ColumnHint</a></td>
+<td>Provides a number of 
+report-related data attributes about a result set column.</td></tr>
+<tr><td><a href="structs/ComputedColumn.html">ComputedColumn</a></td>
+<td>A user-defined column in the result set.</td></tr>
+<tr><td><a href="structs/ConfigVar.html">ConfigVar</a></td>
+<td></td></tr>
+<tr><td><a href="structs/CustomColor.html">CustomColor</a></td>
+<td>Defines a custom color name.</td></tr>
+<tr><td><a href="structs/DataSetParam.html">DataSetParam</a></td>
+<td>Describes an input and/or output parameter of the data 
+set query.</td></tr>
+<tr><td><a href="structs/DateTimeFormatValue.html">DateTimeFormatValue</a></td>
+<td></td></tr>
+<tr><td><a href="structs/DrillThroughSearchKey.html">DrillThroughSearchKey</a></td>
+<td></td></tr>
+<tr><td><a href="structs/ExtendedProperty.html">ExtendedProperty</a></td>
+<td></td></tr>
+<tr><td><a href="structs/FilterCond.html">FilterCond</a></td>
+<td></td></tr>
+<tr><td><a href="structs/Hide.html">Hide</a></td>
+<td>Defines visibility for a report item for one output 
+format.</td></tr>
+<tr><td><a href="structs/HighlightRule.html">HighlightRule</a></td>
+<td></td></tr>
+<tr><td><a href="structs/Image.html">Image</a></td>
+<td>Holds an image embedded within the design file.</td></tr>
+<tr><td><a href="structs/IncludeLibrary.html">IncludeLibrary</a></td>
+<td></td></tr>
+<tr><td><a href="structs/IncludeScript.html">IncludeScript</a></td>
+<td></td></tr>
+<tr><td><a href="structs/MapRule.html">MapRule</a></td>
+<td></td></tr>
+<tr><td><a href="structs/NumberFormatValue.html">NumberFormatValue</a></td>
+<td></td></tr>
+<tr><td><a href="structs/ParamBinding.html">ParamBinding</a></td>
+<td>Represents an association between an expression and a 
+data set or nested report input parameter.</td></tr>
+<tr><td><a href="structs/PropertyMask.html">PropertyMask</a></td>
+<td>Allows a third-party developer to lock or hide a 
+property.</td></tr>
+<tr><td><a href="structs/ResultSetColumn.html">ResultSetColumn</a></td>
+<td>Describes a column within a result set.</td></tr>
+<tr><td><a href="structs/SelectionChoice.html">SelectionChoice</a></td>
+<td>Describes one item in a static parameter selection list.</td></tr>
+<tr><td><a href="structs/SortKey.html">SortKey</a></td>
+<td>A sort definition consisting of an expression and sort 
+direction.</td></tr>
+<tr><td><a href="structs/StringFormatValue.html">StringFormatValue</a></td>
+<td></td></tr>
+<tr><td><a href="structs/UserMethod.html">UserMethod</a></td>
+<td></td></tr>
+<tr><td><a href="structs/UserProperty.html">UserProperty</a></td>
+<td>Defines a user-defined property.</td></tr>
+</table>
+
+<h1>Supporting Indexes</h1>
+<table class="summary-table">
+<tr><td><a href="types.html">Property Types</a></td>
+<td>The set of types used to define ROM properties.</td></tr>
+<tr><td><a href="styles.html">Predefined Styles</a></td>
+<td>Styles defined by BIRT, usually as a "default style" for an element or slot.</td></tr>
+<tr><td><a href="prop-index.html">Property Index</a></td>
+<td>Index of properties with a link to their definition.</td></tr>
+</table><br>
+
+</body>
+</html>

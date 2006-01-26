@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+<head>
+<title>ODA Data Set Element (Eclipse BIRT ROM Documentation)</title>
+<link rel="stylesheet" href="../style/style.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<p class="title">Eclipse BIRT Report Object Model (ROM)</p>
+<p class="subtitle">OdaDataSet Element</p>
+<h1>Element Overview</h1>
+<div class="section-text">
+An extended data set retrieved by a query through an ODA 
+driver that implements the BIRT Open Data Access (ODA) interfaces.</div>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>ODA Data Set</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>OdaDataSet</code></td></tr>
+<tr><td>Extends:</td>
+<td><a href="DataSet.html">DataSet</a></td></tr>
+<tr><td>Extendable:</td>
+<td>No</td></tr>
+<tr><td>Abstract:</td>
+<td>No</td></tr>
+<tr><td>Name Space:</td>
+<td>Data Sets</td></tr>
+<tr><td>Name Requirement:</td>
+<td>Required</td></tr>
+<tr><td>Allows User Properties:</td>
+<td>Yes</td></tr>
+<tr><td>Has Style:</td>
+<td>No</td></tr>
+</table>
+
+<h3>Property Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Property-extensionName">extensionName</a></dt>
+<dd></dd>
+<dt><a href="#Property-privateDriverDesignState">privateDriverDesignState</a></dt>
+<dd>The private design state of the ODA driver’s designer tool.</dd>
+<dt><a href="#Property-privateDriverProperties">privateDriverProperties</a></dt>
+<dd>A list of dynamic name-value structures that specify private data or attributes specific to the ODA data set query.</dd>
+<dt><a href="#Property-queryText">queryText</a></dt>
+<dd>The static query text to execute.</dd>
+<dt><a href="#Property-resultSetName">resultSetName</a></dt>
+<dd>Identifies which result set to access if a query returns multiple result sets.</dd>
+<dt><a href="#Property-type">type</a></dt>
+<dd>The type of data set supported by the ODA driver.</dd>
+</dl>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-queryScript">queryScript</a></dt>
+<dd></dd>
+</dl>
+
+<h3>Inherited Properties</h3>
+
+<p class="section-text">
+<a href="DataSet.html#Property-cachedMetaData">cachedMetaData</a>, 
+<a href="DataSet.html#Property-columnHints">columnHints</a>, 
+<a href="ReportElement.html#Property-comments">comments</a>, 
+<a href="DataSet.html#Property-computedColumns">computedColumns</a>, 
+<a href="DesignElement.html#Property-customXml">customXml</a>, 
+<a href="DataSet.html#Property-dataSource">dataSource</a>, 
+<a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-extends">extends</a>, 
+<a href="DataSet.html#Property-filter">filter</a>, 
+<a href="ReportElement.html#Property-name">name</a>, 
+<a href="DataSet.html#Property-paramBindings">paramBindings</a>, 
+<a href="DataSet.html#Property-parameters">parameters</a>, 
+<a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="DataSet.html#Property-resultSet">resultSet</a>, 
+<a href="DesignElement.html#Property-userProperties">userProperties</a>
+</p>
+<h3>Inherited Methods</h3>
+
+<p class="section-text">
+<a href="DataSet.html#Method-beforeOpen">beforeOpen</a>, 
+<a href="DataSet.html#Method-beforeClose">beforeClose</a>, 
+<a href="DataSet.html#Method-onFetch">onFetch</a>, 
+<a href="DataSet.html#Method-afterOpen">afterOpen</a>, 
+<a href="DataSet.html#Method-afterClose">afterClose</a></p>
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The ODA Data Set represents an extended data set that implements the BIRT 
+Open Data Access (ODA) interfaces. The ODA interface defines a rich set of 
+meta-data attributes available to the BIRT Designer to help the user build the 
+report. The ODA Data Set definition contains the minimum amount of information 
+necessary to access the desired data source. The rest of the available meta-data 
+information is obtained from the ODA driver when needed.</p>
+
+<p>The ODA Data Set element defines a single ODA data set of 
+a specific type. An ODA Data Source may support one or more types of ODA data 
+sets.</p>
+
+<p>Both the data set element and the ODA driver can provide 
+column definition and hints. Data-access attributes, such as name and type, are 
+typical derived attributes. They are defined in the Result Set definition, and 
+are used only if the runtime driver cannot provide such meta-data. </p>
+
+<p>An ODA driver may statically define driver-specific data 
+set query properties by implementing the ODA model extension point (org.eclipse.birt.report.model.odaDriverModel). 
+See the BIRT Extensions functional specification document for more detail 
+description. By implementing this extension point, an ODA driver’s extension 
+plug-in manifest (plugin.xml) could statically define driver-specific data set 
+query properties. BIRT supports these driver-defined properties as ROM 
+properties with all their built-in features, such as direct editing from the 
+BIRT designer’s property sheet. BIRT uniquely identifies each of these 
+extension-specified properties within the scope of its ODA extension. From the 
+UI perspective, for ease of identifying these driver-specific connection 
+properties, one could define them within a group, and name it something like &quot;queryProperties&quot;. 
+At Factory time, each of these static driver-defined properties, with its 
+defined property name and corresponding value, is passed to the ODA run-time 
+driver as runt-time properties.</p>
+
+<p>See the Description of the ODA Data Source element for an 
+example of the ODA extension plug-in manifest.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p><code>OdaDataSource element</code></p>
+<p><code>DataSet</code> 
+scripting object</p></div>
+<h1>Property Detail</h1>
+
+<h2><a name="Property-extensionName">extensionName Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td></td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Extension name</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-privateDriverDesignState">privateDriverDesignState Property</a></h2>
+
+<p class="section-text">The private design state of the ODA driver’s designer tool.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Private driver design state</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The private design state of the ODA driver’s designer 
+tool. Its value is opaque to BIRT, and is stored in the report design file as a 
+persistent service only. Optional.</p></div>
+
+<hr>
+<h2><a name="Property-privateDriverProperties">privateDriverProperties Property</a></h2>
+
+<p class="section-text">A list of dynamic name-value structures that specify private data or attributes specific to the ODA data set query.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td>List of <a href="../structs/ExtendedProperty.html">ExtendedProperty</a> Structures</td></tr>
+<tr><td>Since:</td>
+<td></td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Private driver properties</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A list of dynamic name-value structures (<code>ExtendedProperty</code> 
+structures) that specify private runtime data or attributes specific to the ODA 
+data set. This is an optional element that an ODA driver may use to store and 
+pass pertinent driver-specific attributes from its designer tool to the runtime 
+driver. The content of this element is specific and private to an ODA driver, 
+whose designer tool can dynamically define and update them as appropriate. 
+These name-value pairs are stored in the report design file as a persistent 
+service, and are passed to the ODA runtime driver at Factory time. </p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p><code>ExtendedProperty</code> structure</p></div>
+
+<hr>
+<h2><a name="Property-queryText">queryText Property</a></h2>
+
+<p class="section-text">The static query text to execute.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Query</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The query text used in opening a data set. Specific ODA 
+driver defines the format of this string. The query text is passed through to 
+the ODA runtime driver to prepare a statement for execution.</p></div>
+
+<hr>
+<h2><a name="Property-resultSetName">resultSetName Property</a></h2>
+
+<p class="section-text">Identifies which result set to access if a query returns multiple result sets.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>reserved</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Result set name</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Some ODA drivers provide multiple named result sets from 
+a single query. In the first release, BIRT can access only one of these result 
+sets. This property identifies which named result set to access. The inherited
+<code>resultSet</code> definition, 
+if specified, is for this result set. </p>
+
+<p>Required if multiple result sets are available, and a 
+result set must be accessed by name. This property is not applicable when 
+multiple result sets are returned in sequence; the first result set is treated 
+as the primary result set.</p></div>
+
+<hr>
+<h2><a name="Property-type">type Property</a></h2>
+
+<p class="section-text">The type of data set supported by the ODA driver.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Type</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The type of data set supported by the ODA driver. The 
+type is specific to each ODA driver, and is defined in the driver’s extension 
+plug-in manifest (plugin.xml). Its value is optional if the ODA driver supports 
+only one type of data set.</p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-queryScript">queryScript Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>string&nbsp;obj.queryScript(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td></td></tr>
+<tr><td>Context:</td>
+<td></td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>string</td></tr>
+</table>
+
+</body>
+</html>

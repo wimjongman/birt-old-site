@@ -1,0 +1,105 @@
+<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+
+	#
+	# Begin: page-specific settings.  Change these.
+	$pageTitle 		= "BIRT Project Plan and Deliverables";
+	$pageKeywords	= "";
+	$pageAuthor		= "";
+
+	# Add page-specific Nav bars here
+	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
+	# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
+	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
+	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
+
+	# End: page-specific settings
+	#
+
+	require "../birt.inc";
+	$linkToTop				= linkToTop();
+
+
+	# Paste your HTML content between the EOHTML markers!
+	$html = <<<EOHTML
+
+<div id="maincontent">
+	<div id="midcolumn">
+
+		<h1><a name="top"></a>$pageTitle</h1>
+
+<h1>General</h1>
+<p>The BIRT team moves closer to the final 2.0 release this week by completing Milestone 3.<br><br>
+This Milestone has quite a list of improvements, some of which—like templates and libraries—can help Java report developers improve their productivity and help foster reuse within (and across) organizations. Others, such as the improvements to BIRT’s charting, both extend the functionality available and improve its usability. <br><br>
+As with all milestone releases, keep in mind that the product will continue to evolve.<br>
+The complete list of features for the final 2.0 release is available <a href=http://www.eclipse.org/birt/index.php?page=project/project_plan_R2_0_0.html>here</a>.
+</p>
+
+<h1>Chart Builder and SVG Output</h1>
+<p>A new chart builder is available in M3.  This wizard is designed to expedite chart development by separating the process into three easy to use dialogs: Select Chart Type, Select Data, and Format Chart.  SVG rendering of charts has also been added.</p>
+<img src="images/chart1a.jpg" width="768" height="576"/>
+<p><i>Select Chart Type.</i></p>
+<img src="images/chart2a.jpg" width="591" height="573"/>
+<p><i><c>Select Chart Data.</c></i></p>
+<img src="images/chart3a.jpg" width="504" height="497"/>
+<p><i>Format Chart.</i></p><br>
+<p>Additional functionality has been added to the Chart wizard to enhance support for user interactivity.  As shown below additional events and actions have been added to support such things as scripting and drill-through.</p>
+<img src="images/interactcol.jpg" width="627" height="503"/>
+<h1>Templates</h1>
+<p>BIRT now provides report developers the ability to build and publish report templates.  Consistent look and feel can be difficult to achieve and maintain when building report applications. In addition, productivity and adoption by a broader range of report developers can be fostered by providing a pre-built report elements. Templates address these concerns and can range from skeletal outlines with predefined themes to complete reports.</p>
+<br>
+<p>Building a BIRT report template is very similar to building a standard BIRT report.  One notable difference is that items within the report can be converted to template report items, which allow the template creator to set up indications where template user input is required.</p>
+<img src="images/templ2a.jpg" width="768" height="576"/>
+<img src="images/templsnippet.jpg" width="590" height="202"/>
+<p><i>Enter Prompts for Template Users.</i></p><br>
+<p>The BIRT team has added a Template Publishing wizard to quickly put the template to use.</p>
+<img src="images/templ4a.jpg" width="768" height="576"/>
+<p><i>Publish Wizard.</i></p><br>
+<p>The Template wizard allows the designer to populate a display name, description and image file.  After publishing, the template is available to use within the new report wizard.</p>
+<img src="images/templ5a.jpg" width="768" height="576"/>
+<p><i>Using a newly Created Template.</i></p><br>
+<h1>Libraries</h1>
+<p>Milestone 3 introduces the concept of libraries to BIRT.  With this feature, commonly used functions and report items can be encapsulated within a library.  These libraries can then be imported into any number of reports for reuse.  For example, a BIRT developer may wish to build a complex scripted data source and then encapsulate it within a BIRT library, freeing other members of the reporting team from implementing the same code.</p>
+<img src="images/lib3a.jpg" width="768" height="576"/>
+<p><i>Building a library.</i></p><br>
+<p>A new project item type is now available for library creation.  By dragging items from the palette to the Report Items node within the library Outline, the report developer can customize these components for reuse.  Data Sources and Sets, Report Parameters, Report Items, Themes, Master Pages and Images can be added to the library.</p>
+<br>
+<p>After the library is created, it can be shared with report developers, who can import the library into their own designs.</p>
+<img src="images/lib5a.jpg" width="768" height="576"/>
+<p><i>Using a library.</i></p><br>
+<p>The BIRT team has also added a new view to the BIRT perspective for browsing and importing the available libraries.  Existing libraries within the workspace automatically show up in the Library Explorer. (In this screenshot, the Explorer has been pinned to the left side with the Palette and Data Explorer.)
+Using a library is as easy as importing it and then dragging the desired items to required report location.
+</p>
+<br>
+<p>Reports that reference libraries automatically update when executed.  This is very useful in cases where business or technical changes require report rework. For example, imagine that a database schema changes or the company logo is altered.  If these details are encapsulated in libraries, only the library would need to change and all referencing reports would be automatically updated to reflect the changes.</p>
+<h1>XML ODA</h1>
+<p>Building on the existing drivers that BIRT supplies, M3 delivers an XML ODA for retrieving XML data.  The data can be streamed or reside within a file.  This driver uses XPath syntax for XML to relational data mapping.</p>
+<img src="images/xml2.jpg" width="800" height="522"/>
+<p><i>Use XPath expression to map an XML node to a row.</i></p><br>
+<img src="images/xml3.jpg" width="800" height="522"/>
+<p><i>Use XPath syntax to map node and attribute values to columns.</i></p><br>
+<h1>URL Builder</h1>
+<p>M3 offers a new URL Builder to quickly support summary to detail Drill-through linking as well as standard Bookmark and URL creation.</p>
+<img src="images/url3a.jpg" width="768" height="576"/>
+<p><i>Define the URL.</i></p><br>
+<img src="images/url2a.jpg" width="768" height="576"/>
+<p><i>Drill-through Illustration.</i></p><br>
+<h1>Multi-pass Aggregate, Sorting and Filtering</h1>
+<p>Several improvements have been added to support advanced aggregate, filtering and sorting of report data.  For example, computed columns can now use aggregate functions.</p>
+<img src="images/aggr1a.jpg" width="768" height="576"/>
+<p><i>Computed column with aggregation.</i></p><br>
+<p>In addition, the group dialog now supports adding multiple sorting and filtering expressions.</p>
+<img src="images/aggr2a.jpg" width="768" height="576"/>
+<p><i>New Filtering and Sorting tabs.</i></p><br>
+<h1>Improved PDF and Report Performance</h1>
+<p>M3 includes an enhanced data engine with the ability to process large data sets via a combination of memory and disk cache. The BIRT team has done tests that show that the engine can now handle reports of well over a million rows with linear response time and bounded memory usage.
+<br>BIRT has also incorporated the iText PDF library to improve PDF generation performance.</p>
+	</div>
+</div>
+
+
+EOHTML;
+
+
+	# Generate the web page
+	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>
