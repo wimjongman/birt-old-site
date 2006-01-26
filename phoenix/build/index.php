@@ -54,21 +54,19 @@ And
 <li>JRE 1.4.2/JRE 1.5.
 </ul>
 
-
-
-
-<p class="caution"><span class="caution-head">Note:</span> Additionally, If you are installing the 2.0 you will need
-the following downloads</p>
+<h2>iText</h2>
 <ul>
 <li><a href="http://www.lowagie.com/iText/download.html">iText 1.3</a>.
 </ul>
+Download Version 1.3, labelled Compiled code.
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 </p>
 <p>
+<h2>Axis 1.2.1</h2>
 Also download Apache Axis 1.2.1. from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
-and extract only the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
+and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
 <ul>
 <li>axis.jar 
 <li>axis-ant.jar 
@@ -79,17 +77,19 @@ and extract only the six jars listed below into the plugins/org.eclipse.birt.rep
 </ul>
 </p>
 <p>
+<h2>prototype.js</h2>
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
-
-<p class="caution"><span class="caution-head">Birt Runtime Note: </span>If you are installing the BIRT Runtime,
+<div class="homeitem3col">
+Birt Runtime Note: If you are installing the BIRT Runtime (J2EE Application Server Deployment),
 The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
 <br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
 <br>Copy prototype.js to /Web Viewer Example/ajax/lib.
 <br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
 <br>
 If you are using the birt.war, you will need to extract it and add the above files.
-</p>
+</div>
+
 <br>
 
 The instructions on this page cover the second configuration.
