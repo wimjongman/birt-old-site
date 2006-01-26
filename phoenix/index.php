@@ -232,7 +232,7 @@
 					</span>
 				</li>
 				<li>
-					<a href="whatsnew.html">
+					<a href="whatsnew.php">
 						More of What's New...
 					</a>
 				</li>
@@ -323,7 +323,7 @@
 			</ul>
 			<ul>
 				<li>
-					<a href="news.html">
+					<a href="news.php">
 						More News...
 					</a>
 				</li>
