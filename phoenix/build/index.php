@@ -80,16 +80,7 @@ and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.b
 <h2>prototype.js</h2>
 Lastly download prototype.js v1.4.0 from <a href=http://dev.conio.net/repos/prototype/dist/>dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
 </p>
-<div class="homeitem3col">
-<h3>Birt Runtime Note: </h3>
-<p>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
-The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
-<br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
-<br>Copy prototype.js to /Web Viewer Example/ajax/lib.
-<br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
-<br>
-If you are using the birt.war, you will need to extract it and add the above files.</p>
-</div>
+
 
 <br>
 
@@ -154,8 +145,17 @@ BIRT framework and unzip the contents to any directory.
 </ul>
 
 <h2>Deploying to J2EE Server</h2>
-Please see <a href="/birt/phoenix/deploy/viewerUsage.php">Using the BIRT Viewer</a>
-Also verify that you read the Birt Runtime Note above.
+Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
+<div class="homeitem3col">
+<h3>Birt Runtime Note: </h3>
+ If you are installing the BIRT Runtime (J2EE Application Server Deployment),
+ The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
+ <br>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
+ <br>Copy prototype.js to /Web Viewer Example/ajax/lib.
+ <br>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
+ <br>
+ If you are using the birt.war, you will need to extract it and add the above files.
+</div>
 
 <h2>JDBC Drivers</h2>
 <p>
