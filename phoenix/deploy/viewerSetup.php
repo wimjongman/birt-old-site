@@ -36,7 +36,9 @@
 				<li><a href="#install_viewer">Install the Viewer</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
+				<li><a href="#jboss">Deploying to JBOSS</a></li>
 				<li><a href="#other">Other J2EE Servers</a></li>
+	
 			</ul>
 		</blockquote>
 
@@ -62,7 +64,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Download the zip file with the BIRT report engine runtime. The file is named birt-runtime-<version#>.zip.
+				Download the zip file with the BIRT report engine runtime. The file is named birt-runtime-version#.zip.
 			</li>
 			<li>
 				Unzip the file in a staging area.
@@ -130,6 +132,47 @@
 			The report should run and appear in your browser, along with a parameter form in which you can enter a different value for the "Order Number " parameter for this report.
 		</p>
 		</ul>
+
+		<h2><a name="jboss">Deploying to JBOSS</a></h2>
+		To deploy the BIRT Viewer application to JBOSS, follow these steps:
+		
+		<ul class="midlist">
+			<li>
+				Download the zip file with the BIRT report engine runtime. The file is named birt-runtime-version#.zip.
+			</li>
+			<li>
+				Unzip the file in a staging area.
+			</li>
+			<li>
+				Look under the birt-runtime-<version#> directory and locate the "Web Viewer Example" directory.
+			</li>
+			<li>
+				Copy the "Web Viewer Example" directory to your JBoss installation, under the deploy directory for your configuration. For example happened to be C:\jboss-4.0.3SP1\server\default\deploy. 
+			</li>
+			<li>
+				Rename the Web Viewer Example directory to birt.war, so it will deploy in place.
+			</li>
+			<li>
+				Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> jar file to the /birt.war/plugins/org.eclipse.birt.report.engine.pdf/lib directory.		
+			</li>
+			<li>
+				Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /birt.war/plugins/org.eclipse.birt.report.viewer/birt/ajax/lib directory.
+			</li>
+			<li>
+				Download <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a> and extract <b>only</b> the six jars (listed below) to the birt.war/WEB-INF/lib directory.
+				<ol>axis.jar</ol>
+				<ol>axis-ant.jar</ol>
+				<ol>commons-discovery-0.2.jar</ol>
+				<ol>jaxrpc.jar  </ol>
+				<ol>saaj.jar</ol>
+				<ol>wsdl4j-1.5.1.jar</ol>
+			</li>
+			<li>
+				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report..
+			</li>
+		</ul>
+
+
 		<h2><a name="other">Other J2EE Servers</a></h2>
 		<p>We are currently working on instructions for other application servers</p>
 		
