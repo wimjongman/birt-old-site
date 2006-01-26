@@ -36,6 +36,7 @@
 				<li><a href="#install_viewer">Install the Viewer</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
+				<li><a href="#other">Other J2EE Servers</a></li>
 			</ul>
 		</blockquote>
 
@@ -73,7 +74,7 @@
 				Copy the Web Viewer Example directory to the webapps directory of your Tomcat installation. For ease of reference, rename the directory to "birt-viewer".
 			</li>
 			<li>
-				Copy additional files to the directory structure as described in the BIRT Runtime Note
+				Copy additional files to the directory structure described in the BIRT Runtime Note.  This note is located on the install page, under Deploying to J2EE Server.
 			</li>
 			<li>
 				Stop, then restart Tomcat.
@@ -127,7 +128,9 @@
 		<p>
 			The report should run and appear in your browser, along with a parameter form in which you can enter a different value for the "Order Number " parameter for this report.
 		</p>
-
+		<h2><a name="other">Other J2EE Servers</a></h2>
+		<p>We are currently working on instructions for other Application Servers</p>
+		
 	</div>
 	$deployLinksSideItem
 </div>
