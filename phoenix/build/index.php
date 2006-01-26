@@ -36,7 +36,7 @@
 				<li><a href="#prototype">prototype.js</a></li>
 				<li><a href="#example">Installation Example Flash</a></li>
 				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
-				<li><a href="#jdbc">JDBC Drivers</a></li>
+				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
 				<li><a href="#common">Common Problems</a></li>
 
@@ -194,7 +194,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 </div>
 <br>
 
-<h2><a name="jdbc"></a>JDBC Drivers</h2>
+<h2><a name="drivers"></a>JDBC Drivers</h2>
 <p>
 You will likely want to use your own JDBC driver with BIRT. Use the data source editor’s JDBC 
 driver management wizard. To start the wizard, open a BIRT report design, go to 
