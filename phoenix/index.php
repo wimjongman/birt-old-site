@@ -51,20 +51,122 @@
 	through Bugzilla as explained on the <a href="community.html">community</a>
 	page.
 		<div class="homeitem">
+			<h3>New to BIRT?</h3>
+			<ul>
+				<li>
+					<a href="intro">
+						Introduction
+					</a>
+					
+					- Summary of BIRT, what it does, and how it fits into your Eclipse development environment and J2EE server environment.
+					
+				</li>
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						Download
+					</a>
+					
+					- Download BIRT and find out what other software it requires.
+					
+				</li>
+				<li>
+					<a href="build/install.html">
+						Install
+					</a>
+					
+					- A step by step guide to installing BIRT and associated software.
+					
+				</li>
+				<li>
+					<a href="tutorial">
+						Tutorial
+					</a>
+					
+					- Try out BIRT for yourself by following this simple tutorial that walks you through building a report from scratch.
+					
+				</li>
+				<li>
+					<a href="db">
+						Sample Database
+					</a>
+					
+					- BIRT provides a sample database used by the tutorial and some of the example reports. This database lets you learn BIRT on a simple, known database before you experiment with your own, real-world data sources.
+					
+				</li>
+				<li>
+					<a href="examples">
+						Examples
+					</a>
+					
+					- Provides a variety of examples that show BIRT in action.
+					
+				</li>
+				<li>
+					<a href="deploy">
+						Integration
+					</a>
+					
+					- You can integrate BIRT into your application using  the BIRT web app, design API, or engine API.
+					
+				</li>
+				<li>
+					<a href="community.html">
+						Community
+					</a>
+					
+					- Other community resources, including the newsgroup, mailing lists, bugzilla, etc.
+					
+				</li>
+				<li>
+					<a href="ref">
+						Reference
+					</a>
+					
+					- Reference information on BIRT's report design format: the Report Object Model (ROM).
+					
+				</li>
+				<li>
+					<a href="project">
+						Project Organization
+					</a>
+					<
+					- Information on the BIRT project, including charter, leadership, organization, etc.
+					
+				</li>
+				<li>
+					<a href="project/plan.php">
+						Project Development Plan
+					</a>
+					
+					- Contains information on the project release schedule, project plan, and feature sets.
+					-->
+				</li>
+				<li>
+					<a href="build/buildInstructions.php">
+						Building BIRT
+					</a>
+					
+					- How to check out and build the BIRT source code.
+					
+				</li>
+			</ul>
+		</div>
+
+		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
 				<li>
-					<a href=href="http://download.eclipse.org/birt/downloads">
+					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.0
 					</a>
-					is now available for download.  Read about the feature set at <a href="project/notable2.0.html">Notable Features - BIRT 2.0</a>
+					is now available for download.  Read about the feature set at <a href="project/notable2.0.php">Notable Features - BIRT 2.0</a>
 					<span class="dates">
 						01/22/06
 					</span>
 				</li>
 				
 				<li>
-					<a href="project/pmc.html">
+					<a href="project/pmc.php">
 						The BIRT PMC is pleased to announce that Mike Fox, from IBM / Rational, has joined the Committee.
 					</a>
 					<span class="dates">
@@ -82,10 +184,10 @@
 				</li>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.0 Release Candidate
+						BIRT 2.0 Milestone 3
 					</a>
 					can now be downloaded.
-					Read about the feature set at <a href="project/notable2.0M3.html">Notable Features - BIRT 2.0 M3</a>
+					Read about the feature set at <a href="project/notable2.0M3.php">Notable Features - BIRT 2.0 M3</a>
 					<span class="dates">
 						12/07/05
 					</span>
@@ -104,7 +206,7 @@
 						BIRT 2.0 Milestone 2
 					</a>
 					is available for download.
-					Read about the feature set at <a href="project/notable2.0M2.html">Notable Features - BIRT 2.0 M2</a>
+					Read about the feature set at <a href="project/notable2.0M2.php">Notable Features - BIRT 2.0 M2</a>
 					<span class="dates">
 						10/31/05
 					</span>
@@ -119,7 +221,7 @@
 					</span>
 				</li>
 				<li>
-					<a href="project/PlanAndDeliverables.html">
+					<a href="project/plan.php">
 						New Project Plan Page
 					</a>
 					This page contains information on the project plan and the milestone dates for BIRT 2.0.
@@ -140,107 +242,6 @@
 		</div>
 		
 		
-		<div class="homeitem">
-			<h3>New to BIRT?</h3>
-			<ul>
-				<li>
-					<a href="intro">
-						Introduction----
-					</a>
-					<!--
-					- Summary of BIRT, what it does, and how it fits into your Eclipse development environment and J2EE server environment.
-					-->
-				</li>
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						Download
-					</a>
-					<!--
-					- Download BIRT and find out what other software it requires.
-					-->
-				</li>
-				<li>
-					<a href="build/install.html">
-						Install
-					</a>
-					<!--
-					- A step by step guide to installing BIRT and associated software.
-					-->
-				</li>
-				<li>
-					<a href="tutorial">
-						Tutorial
-					</a>
-					<!--
-					- Try out BIRT for yourself by following this simple tutorial that walks you through building a report from scratch.
-					-->
-				</li>
-				<li>
-					<a href="db">
-						Sample Database
-					</a>
-					<!--
-					- BIRT provides a sample database used by the tutorial and some of the example reports. This database lets you learn BIRT on a simple, known database before you experiment with your own, real-world data sources.
-					-->
-				</li>
-				<li>
-					<a href="examples">
-						Examples
-					</a>
-					<!--
-					- Provides a variety of examples that show BIRT in action.
-					-->
-				</li>
-				<li>
-					<a href="deploy">
-						Integration
-					</a>
-					<!--
-					- You can integrate BIRT into your application using  the BIRT web app, design API, or engine API.
-					-->
-				</li>
-				<li>
-					<a href="community.html">
-						Community
-					</a>
-					<!--
-					- Other community resources, including the newsgroup, mailing lists, bugzilla, etc.
-					-->
-				</li>
-				<li>
-					<a href="ref">
-						Reference
-					</a>
-					<!--
-					- Reference information on BIRT's report design format: the Report Object Model (ROM).
-					-->
-				</li>
-				<li>
-					<a href="project">
-						Project Organization
-					</a>
-					<!--
-					- Information on the BIRT project, including charter, leadership, organization, etc.
-					-->
-				</li>
-				<li>
-					<a href="project/PlanAndDeliverables.html">
-						Project Development Plan
-					</a>
-					<!--
-					- Contains information on the project release schedule, project plan, and feature sets.
-					-->
-				</li>
-				<li>
-					<a href="build">
-						Building BIRT
-					</a>
-					<!--
-					- How to check out and build the BIRT source code.
-					-->
-				</li>
-			</ul>
-		</div>
 		
 		
 		
