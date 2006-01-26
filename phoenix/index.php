@@ -140,12 +140,12 @@
 		</div>
 		
 		
-	<div id="homeitem">
+		<div class="homeitem">
 			<h3>New to BIRT?</h3>
 			<ul>
 				<li>
 					<a href="intro">
-						Introduction
+						Introduction----
 					</a>
 					<!--
 					- Summary of BIRT, what it does, and how it fits into your Eclipse development environment and J2EE server environment.
