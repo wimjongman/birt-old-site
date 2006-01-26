@@ -110,12 +110,6 @@
 		<p>
 			You can also choose Preview as PDF. This converts the layout to a multi-page PDF format.
 		</p>
-		<div class="homeitem3col">
-			<h3>Release 1.0.1 Note</h3>
-			<p>
-				BIRT Release 1.0.1 uses the Apache XML-FO Processor (FOP) package. Limitations in the current version of FOP cause problems with the way the report appears in PDF. The BIRT team is aware of the problems and is working to address them in a later release.
-			</p>
-		</div>
 		<p>
 		</p>
 
