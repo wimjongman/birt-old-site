@@ -90,11 +90,13 @@ consult the Engine Javadoc.</p>
 
 <h2><a name="config"></a>Installing the Engine</h2>
 First download the Report Engine from the <a href=http://download.eclipse.org/birt/downloads">Eclipse download site.</a>
-This file will be named birt-runtime-2_0_0.zip.
-Unzip this file into a directory, such as c:\birtruntime.
-Copy the iText jar file (see install page for location) to the 
+<ul>
+<li>This file will be named birt-runtime-2_0_0.zip.
+<li>Unzip this file into a directory, such as c:\birtruntime.
+<li>Copy the iText jar file (see install page for location) to the 
 C:\birtruntime\birt-runtime-2_0_0\Report Engine\plugins\org.eclipse.birt.report.engine.emitter.pdf\lib directory.
-When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
+<li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
+</ul>
 Some operating systems will have problems with the space in "Report Engine".  Rename it if needed.
 
 The sample viewer is also bundled with the Report Engine.  It is located under the Web Viewer Example directory.  If you decide to 
@@ -164,8 +166,8 @@ want to set the location of the engine installation using the <code>setEngineHom
 method.</p>
 <pre class="code-block">EngineConfig config = new EngineConfig( );
 config.setEngineHome( &quot;put engine path here&quot; );</pre>
-The engine home should be set to
-installedlocation/birt-runtime-version/Report Engine
+<br>The engine home should be set to
+<br>installedlocation/birt-runtime-version/Report Engine
 
 
 <h3>Emitter Configuration</h3>
@@ -296,7 +298,7 @@ ungrouped form (useful for creating a programmatic interface.)</p>
 interfaces provide 
 information about parameter groups and individual parameters.</p>
 
-		<blockquote>// Get the parameter definitions
+<pre id="code">// Get the parameter definitions
 
 IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( report );
 Collection params = task.getParameterDefns( true );
@@ -327,8 +329,7 @@ while ( iter.hasNext( ) )
 
         // Do something with a top-level parameter.
     }
-}
-		</blockquote>
+}</pre>
 
 <p>Use the <code>IGetParameterDefinitionTask</code> class to evaluate the default value for a parameter. The parameter 
 default value is an expression, and the task provides the required execution 
