@@ -14,7 +14,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Overview";
+	$pageTitle 		= "BIRT Extensibility";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
