@@ -125,9 +125,11 @@
 					http://localhost:8080/birt-viewer/frameset?__report=report%5CSalesInvoice.rptdesign
 				</blockquote
 			</li>
+		
 		<p>
 			The report should run and appear in your browser, along with a parameter form in which you can enter a different value for the "Order Number " parameter for this report.
 		</p>
+		</ul>
 		<h2><a name="other">Other J2EE Servers</a></h2>
 		<p>We are currently working on instructions for other Application Servers</p>
 		
