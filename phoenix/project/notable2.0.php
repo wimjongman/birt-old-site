@@ -53,7 +53,7 @@
 <p>BIRT now supports HTML pagination, CSV output, and a Table Of Contents with the supplied BIRT Viewer.  In addition, features such as Libraries, Templates, Multi-Pass aggregates, flexible Charting Wizard and XML as a data source all contribute to making BIRT 2.0 a powerful platform for your reporting needs.</p>
 
 <p>This release represents the culmination of a community-driven development cycle that has facilitated the development of quite a list of features and functions.  Some of these features are highlighted below, but the complete list for 2.0 is available
-<a href=http://www.eclipse.org/birt/phoenix/project/project_plan_R2_0_0.html>here</a></p>
+<a href=http://www.eclipse.org/birt/phoenix/project/project_plan_R2_0_0.php>here</a></p>
 <p>The BIRT Team would like to thank the BIRT community for the valuable feedback and support you have provided.
 </p>
 <h1><a name="jump_2">New BIRT Viewer</a></h1>
