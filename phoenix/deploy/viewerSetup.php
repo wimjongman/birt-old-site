@@ -36,7 +36,7 @@
 				<li><a href="#install_viewer">Install the Viewer</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
-				<li><a href="#jboss">Deploying to JBOSS</a></li>
+				<li><a href="#jboss">Deploying to JBoss</a></li>
 				<li><a href="#other">Other J2EE Servers</a></li>
 	
 			</ul>
@@ -133,8 +133,8 @@
 		</p>
 		</ul>
 
-		<h2><a name="jboss">Deploying to JBOSS</a></h2>
-		To deploy the BIRT Viewer application to JBOSS, follow these steps:
+		<h2><a name="jboss">Deploying to JBoss</a></h2>
+		To deploy the BIRT Viewer application to JBoss, follow these steps:
 		
 		<ul class="midlist">
 			<li>
