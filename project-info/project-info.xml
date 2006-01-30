@@ -1,5 +1,6 @@
 <?xml version='1.0'?>
 <project>
+  <short-name>BIRT</short-name> 
   <bugzilla>
     <product name="BIRT"/>
   </bugzilla>
@@ -9,30 +10,38 @@
   <cvs repository="/cvsroot/birt/" />
   <description url="/birt/intro/"
                paragraph-url="/birt/project-info/project-page-paragraph.html" />
-  <summary />
+  <summary paragraph-url="/birt/project-info/summary.html"/>
   <getting-started url="/birt/tutorial/" />
+  <ip-log url="/birt/project-info/ProjectLog.html" /> 
   <mailing-lists>
    <list name="birt-charting-dev"/>
    <list name="birt-dev"/>
    <list name="birt-news"/>
    <list name="birt-pmc"/>
-   <list name="birt-proposal"/>
    <list name="birt-report-designer-dev"/>
    <list name="birt-report-engine-dev"/>
   </mailing-lists>
+  <newsgroups>
+   <newsgroup name="eclipse.birt" /> 
+  </newsgroups>
   <project-plan url="/birt/index.php?page=project/PlanAndDeliverables.html"/>
   <releases>
     <release name="1.0" 
              status="completed" 
              date="5/2005"
-	     plan="/birt/index.php?page=project/project_plan_R1_0.html" />
+	     	 plan="/birt/index.php?page=project/project_plan_R1_0.html" />
     <release name="1.0.1" 
              status="completed" 
              date="7/2005"
-	     plan="/birt/index.php?page=project/project_plan_R1_0_1.html" />
+	     	 plan="/birt/index.php?page=project/project_plan_R1_0_1.html" />
     <release name="2.0" 
-             status="planned" 
-             date="12/2005"
-	     plan="/birt/index.php?page=project/project_plan_R2_0_0.html" />
+             status="completed" 
+             date="1/2006"
+             download="/birt/downloads/"
+	     	 plan="/birt/index.php?page=project/project_plan_R2_0_0.html" />
+	<release name="2.1" 
+             status="planning" 
+             date="6/2006"
+	      />
   </releases>
 </project>
