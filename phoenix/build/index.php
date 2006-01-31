@@ -261,18 +261,6 @@ Eclipse in the standard location, enter:
 <li>Eclipse will restart. Again check for the BIRT perspective.
 </ul>
 
-<h3>The "Brute-Force" Approach</h3>
-<p>
-Another, less recommended, approach is to delete the configuration directory:
-</p>
-<ul>
-<li>Shut down Eclipse
-<li>Delete the configuration folder in the eclipse directory,
-<li>Restart Eclipse and again check for the BIRT perspective.
-</ul>
-<p>
-Note that this may lose some of your Eclipse settings; use this technique
-carefully.
 	</div>
 </div>
 
