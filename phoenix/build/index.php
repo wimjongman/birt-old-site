@@ -214,7 +214,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <ul>
  <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
  The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
- <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
+ <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
  <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
  <li>If you are using the birt.war, you will need to extract it and add the above files.
