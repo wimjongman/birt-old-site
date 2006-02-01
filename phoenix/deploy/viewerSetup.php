@@ -124,7 +124,7 @@
 			<li>
 				If you've installed everything in its default location, then click on the following link. If you've changed anything, then copy the following URL into your browser and make the needed changes.
 				<blockquote>
-					http://localhost:8080/birt-viewer/frameset?__report=report%5CSalesInvoice.rptdesign
+					http://localhost:8080/birt-viewer/run?__report=Report\SalesInvoice.rptdesign
 				</blockquote
 			</li>
 		
