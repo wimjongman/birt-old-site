@@ -44,6 +44,10 @@ appear on every page.</div>
 <dl class="section-text">
 <dt><a href="#Property-floatingFooter">floatingFooter</a></dt>
 <dd>If true, the footer &quot;floats&quot; after the last content on each page.</dd>
+<dt><a href="#Property-footerHeight">footerHeight</a></dt>
+<dd>Height of the page footer.</dd>
+<dt><a href="#Property-headerHeight">headerHeight</a></dt>
+<dd>Height of the page header.</dd>
 <dt><a href="#Property-showFooterOnLast">showFooterOnLast</a></dt>
 <dd>Whether to show the page footer on the last page of the report.</dd>
 <dt><a href="#Property-showHeaderOnFirst">showHeaderOnFirst</a></dt>
@@ -66,9 +70,9 @@ appear on every page.</div>
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
-<a href="MasterPage.html#Property-footerHeight">footerHeight</a>, 
-<a href="MasterPage.html#Property-headerHeight">headerHeight</a>, 
 <a href="MasterPage.html#Property-height">height</a>, 
 <a href="MasterPage.html#Property-leftMargin">leftMargin</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
@@ -112,11 +116,9 @@ appear on every page.</div>
 <a href="Style.html#Property-fontVariant">fontVariant</a>, 
 <a href="Style.html#Property-fontWeight">fontWeight</a>, 
 <a href="Style.html#Property-highlightRules">highlightRules</a>, 
-<a href="Style.html#Property-highlightTestExpr">highlightTestExpr</a>, 
 <a href="Style.html#Property-letterSpacing">letterSpacing</a>, 
 <a href="Style.html#Property-lineHeight">lineHeight</a>, 
 <a href="Style.html#Property-mapRules">mapRules</a>, 
-<a href="Style.html#Property-mapTestExpr">mapTestExpr</a>, 
 <a href="Style.html#Property-marginBottom">marginBottom</a>, 
 <a href="Style.html#Property-marginLeft">marginLeft</a>, 
 <a href="Style.html#Property-marginRight">marginRight</a>, 
@@ -154,7 +156,7 @@ header is at the top on each page, and the page footer is at the bottom.</p>
 <p>The following crude picture gives an idea of the parts of 
 a simple master page:</p>
 
-<p><img src="images/simpleMasterPage.GIF"></p>
+<p><img src="images/simpleMasterPage.gif"></p>
 
 <h4>Page Header and Footer</h4>
 
@@ -230,6 +232,74 @@ footer, set the style on the page header or footer element itself.</p>
 <p>If true, the footer &quot;floats&quot; after the last content on 
 each page. If false, the footer is always at the bottom of the content area. 
 Default is false.</p></div>
+
+<hr>
+<h2><a name="Property-footerHeight">footerHeight Property</a></h2>
+
+<p class="section-text">Height of the page footer.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#dimension">dimension</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Footer height</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Height of the page footer.</p></div>
+
+<hr>
+<h2><a name="Property-headerHeight">headerHeight Property</a></h2>
+
+<p class="section-text">Height of the page header.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#dimension">dimension</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Header height</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Height of the page header.</p></div>
 
 <hr>
 <h2><a name="Property-showFooterOnLast">showFooterOnLast Property</a></h2>
@@ -315,7 +385,7 @@ report. Default is true.</p></div>
 <tr><td>XML Element:</td>
 <td><code>page-header</code></td></tr>
 <tr><td>Contents:</td>
-<td><a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Text.html">Text</a></td></tr>
+<td><a href="Data.html">Data</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 <tr><td>Default Style:</td>
 <td>None</td></tr>
 </table>
@@ -342,11 +412,11 @@ following are allowed: Data, Label, Text, Grid, Image.</p></div>
 <tr><td>Display Name:</td>
 <td>Page Footer</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>page-footer</code></td></tr>
 <tr><td>Contents:</td>
-<td><a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Text.html">Text</a></td></tr>
+<td><a href="Data.html">Data</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 <tr><td>Default Style:</td>
 <td>None</td></tr>
 </table>

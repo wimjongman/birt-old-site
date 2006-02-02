@@ -33,6 +33,10 @@
 <a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
 
+<tr><td>allowedType</td>
+<td><a href="elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Element
+</td>
+
 <tr><td>altText</td>
 <td><a href="elements/Image.html">Image</a> Element
 </td>
@@ -75,16 +79,12 @@
 </td>
 
 <tr><td>base</td>
-<td><a href="elements/ReportDesign.html">ReportDesign</a> Element
+<td><a href="elements/Module.html">Module</a> Element
 </td>
 
 <tr><td>bookmark</td>
 <td><a href="elements/ReportItem.html">ReportItem</a> Element, 
 <a href="elements/Row.html">Row</a> Element
-</td>
-
-<tr><td>bookmarkLink</td>
-<td><a href="structs/Action.html">Action</a> Structure
 </td>
 
 <tr><td>borderBottomColor</td>
@@ -155,6 +155,10 @@
 <td><a href="elements/DataSet.html">DataSet</a> Element
 </td>
 
+<tr><td>cachedRowCount</td>
+<td><a href="elements/DataSet.html">DataSet</a> Element
+</td>
+
 <tr><td>canShrink</td>
 <td><a href="elements/Style.html">Style</a> Element
 </td>
@@ -171,6 +175,10 @@
 <td><a href="structs/DateTimeFormatValue.html">DateTimeFormatValue</a> Structure, 
 <a href="structs/NumberFormatValue.html">NumberFormatValue</a> Structure, 
 <a href="structs/StringFormatValue.html">StringFormatValue</a> Structure
+</td>
+
+<tr><td>cheatSheet</td>
+<td><a href="elements/ReportDesign.html">ReportDesign</a> Element
 </td>
 
 <tr><td>colSpan</td>
@@ -196,8 +204,7 @@
 </td>
 
 <tr><td>columnName</td>
-<td><a href="structs/ColumnHint.html">ColumnHint</a> Structure, 
-<a href="structs/ComputedColumn.html">ComputedColumn</a> Structure
+<td><a href="structs/ColumnHint.html">ColumnHint</a> Structure
 </td>
 
 <tr><td>columnSpacing</td>
@@ -234,11 +241,8 @@
 </td>
 
 <tr><td>contentType</td>
-<td><a href="elements/Text.html">Text</a> Element
-</td>
-
-<tr><td>contentTypeExpr</td>
-<td><a href="elements/TextData.html">TextData</a> Element
+<td><a href="elements/Text.html">Text</a> Element, 
+<a href="elements/TextData.html">TextData</a> Element
 </td>
 
 <tr><td>controlType</td>
@@ -254,20 +258,33 @@
 </td>
 
 <tr><td>data</td>
-<td><a href="structs/Image.html">Image</a> Structure
+<td><a href="structs/EmbeddedImage.html">EmbeddedImage</a> Structure
 </td>
 
 <tr><td>dataSet</td>
-<td><a href="elements/ReportItem.html">ReportItem</a> Element, 
-<a href="elements/ScalarParameter.html">ScalarParameter</a> Element
+<td><a href="elements/CascadingParameterGroup.html">CascadingParameterGroup</a> Element, 
+<a href="elements/ReportItem.html">ReportItem</a> Element
+</td>
+
+<tr><td>dataSetName</td>
+<td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
 
 <tr><td>dataSource</td>
 <td><a href="elements/DataSet.html">DataSet</a> Element
 </td>
 
+<tr><td>dataSourceBindings</td>
+<td><a href="elements/ReportDesign.html">ReportDesign</a> Element
+</td>
+
+<tr><td>dataSourceName</td>
+<td><a href="structs/DataSourceParamBinding.html">DataSourceParamBinding</a> Structure
+</td>
+
 <tr><td>dataType</td>
-<td><a href="structs/DataSetParam.html">DataSetParam</a> Structure, 
+<td><a href="structs/ComputedColumn.html">ComputedColumn</a> Structure, 
+<a href="structs/DataSetParam.html">DataSetParam</a> Structure, 
 <a href="structs/ResultSetColumn.html">ResultSetColumn</a> Structure, 
 <a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
@@ -283,11 +300,13 @@
 </td>
 
 <tr><td>description</td>
-<td><a href="elements/Module.html">Module</a> Element
+<td><a href="elements/Module.html">Module</a> Element, 
+<a href="elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Element
 </td>
 
 <tr><td>descriptionID</td>
-<td><a href="elements/Module.html">Module</a> Element
+<td><a href="elements/Module.html">Module</a> Element, 
+<a href="elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Element
 </td>
 
 <tr><td>direction</td>
@@ -306,6 +325,7 @@
 <tr><td>displayName</td>
 <td><a href="structs/ColumnHint.html">ColumnHint</a> Structure, 
 <a href="structs/CustomColor.html">CustomColor</a> Structure, 
+<a href="elements/ReportDesign.html">ReportDesign</a> Element, 
 <a href="elements/ReportElement.html">ReportElement</a> Element, 
 <a href="structs/UserProperty.html">UserProperty</a> Structure
 </td>
@@ -313,39 +333,21 @@
 <tr><td>displayNameID</td>
 <td><a href="structs/ColumnHint.html">ColumnHint</a> Structure, 
 <a href="structs/CustomColor.html">CustomColor</a> Structure, 
+<a href="elements/ReportDesign.html">ReportDesign</a> Element, 
+<a href="elements/ReportElement.html">ReportElement</a> Element, 
 <a href="structs/UserProperty.html">UserProperty</a> Structure
-</td>
-
-<tr><td>displayPrompt</td>
-<td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
-</td>
-
-<tr><td>drillThroughBookmarkLink</td>
-<td><a href="structs/Action.html">Action</a> Structure
-</td>
-
-<tr><td>drillThroughParamBindings</td>
-<td><a href="structs/Action.html">Action</a> Structure
-</td>
-
-<tr><td>drillThroughReportName</td>
-<td><a href="structs/Action.html">Action</a> Structure
-</td>
-
-<tr><td>drillThroughSearch</td>
-<td><a href="structs/Action.html">Action</a> Structure
-</td>
-
-<tr><td>drillThroughType</td>
-<td><a href="structs/Action.html">Action</a> Structure
-</td>
-
-<tr><td>driverName</td>
-<td><a href="elements/OdaDataSource.html">OdaDataSource</a> Element
 </td>
 
 <tr><td>drop</td>
 <td><a href="elements/Cell.html">Cell</a> Element
+</td>
+
+<tr><td>eventHandlerClass</td>
+<td><a href="elements/Cell.html">Cell</a> Element, 
+<a href="elements/ListingGroup.html">ListingGroup</a> Element, 
+<a href="elements/ReportDesign.html">ReportDesign</a> Element, 
+<a href="elements/ReportElement.html">ReportElement</a> Element, 
+<a href="elements/Row.html">Row</a> Element
 </td>
 
 <tr><td>export</td>
@@ -353,36 +355,36 @@
 </td>
 
 <tr><td>expr</td>
-<td><a href="structs/FilterCond.html">FilterCond</a> Structure
+<td><a href="structs/FilterCondition.html">FilterCondition</a> Structure
 </td>
 
 <tr><td>expression</td>
 <td><a href="structs/ComputedColumn.html">ComputedColumn</a> Structure, 
-<a href="structs/DrillThroughSearchKey.html">DrillThroughSearchKey</a> Structure, 
-<a href="structs/ParamBinding.html">ParamBinding</a> Structure
+<a href="structs/ParamBinding.html">ParamBinding</a> Structure, 
+<a href="structs/SearchKey.html">SearchKey</a> Structure
 </td>
 
 <tr><td>extends</td>
 <td><a href="elements/ReportElement.html">ReportElement</a> Element
 </td>
 
-<tr><td>extension</td>
-<td><a href="elements/ExtendedItem.html">ExtendedItem</a> Element
-</td>
-
-<tr><td>extensionName</td>
-<td><a href="elements/ExtendedItem.html">ExtendedItem</a> Element, 
-<a href="elements/OdaDataSet.html">OdaDataSet</a> Element, 
+<tr><td>extensionID</td>
+<td><a href="elements/OdaDataSet.html">OdaDataSet</a> Element, 
 <a href="elements/OdaDataSource.html">OdaDataSource</a> Element
 </td>
 
+<tr><td>extensionName</td>
+<td><a href="elements/ExtendedItem.html">ExtendedItem</a> Element
+</td>
+
 <tr><td>fileName</td>
-<td><a href="structs/IncludeLibrary.html">IncludeLibrary</a> Structure, 
-<a href="structs/IncludeScript.html">IncludeScript</a> Structure
+<td><a href="structs/IncludeScript.html">IncludeScript</a> Structure, 
+<a href="structs/IncludedLibrary.html">IncludedLibrary</a> Structure
 </td>
 
 <tr><td>filter</td>
 <td><a href="elements/DataSet.html">DataSet</a> Element, 
+<a href="elements/ExtendedItem.html">ExtendedItem</a> Element, 
 <a href="elements/Listing.html">Listing</a> Element, 
 <a href="elements/ListingGroup.html">ListingGroup</a> Element
 </td>
@@ -421,13 +423,17 @@
 </td>
 
 <tr><td>footerHeight</td>
-<td><a href="elements/MasterPage.html">MasterPage</a> Element
+<td><a href="elements/SimpleMasterPage.html">SimpleMasterPage</a> Element
 </td>
 
 <tr><td>format</td>
 <td><a href="structs/ColumnHint.html">ColumnHint</a> Structure, 
-<a href="structs/Hide.html">Hide</a> Structure, 
+<a href="structs/HideRule.html">HideRule</a> Structure, 
 <a href="elements/ScalarParameter.html">ScalarParameter</a> Element
+</td>
+
+<tr><td>formatType</td>
+<td><a href="structs/Action.html">Action</a> Structure
 </td>
 
 <tr><td>groupName</td>
@@ -435,7 +441,7 @@
 </td>
 
 <tr><td>headerHeight</td>
-<td><a href="elements/MasterPage.html">MasterPage</a> Element
+<td><a href="elements/SimpleMasterPage.html">SimpleMasterPage</a> Element
 </td>
 
 <tr><td>height</td>
@@ -475,12 +481,12 @@
 <td><a href="elements/Style.html">Style</a> Element
 </td>
 
-<tr><td>highlightTestExpr</td>
-<td><a href="elements/Style.html">Style</a> Element
+<tr><td>iconFile</td>
+<td><a href="elements/ReportDesign.html">ReportDesign</a> Element
 </td>
 
-<tr><td>hyperlink</td>
-<td><a href="structs/Action.html">Action</a> Structure
+<tr><td>id</td>
+<td><a href="structs/PropertyBinding.html">PropertyBinding</a> Structure
 </td>
 
 <tr><td>imageName</td>
@@ -491,7 +497,7 @@
 <td><a href="elements/Module.html">Module</a> Element
 </td>
 
-<tr><td>includeLibraries</td>
+<tr><td>includeResource</td>
 <td><a href="elements/Module.html">Module</a> Element
 </td>
 
@@ -500,6 +506,10 @@
 </td>
 
 <tr><td>interval</td>
+<td><a href="elements/ListingGroup.html">ListingGroup</a> Element
+</td>
+
+<tr><td>intervalBase</td>
 <td><a href="elements/ListingGroup.html">ListingGroup</a> Element
 </td>
 
@@ -547,6 +557,14 @@
 <td><a href="elements/Style.html">Style</a> Element
 </td>
 
+<tr><td>libReference</td>
+<td><a href="structs/EmbeddedImage.html">EmbeddedImage</a> Structure
+</td>
+
+<tr><td>libraries</td>
+<td><a href="elements/Module.html">Module</a> Element
+</td>
+
 <tr><td>lineHeight</td>
 <td><a href="elements/Style.html">Style</a> Element
 </td>
@@ -555,11 +573,11 @@
 <td><a href="structs/Action.html">Action</a> Structure
 </td>
 
-<tr><td>mapRules</td>
-<td><a href="elements/Style.html">Style</a> Element
+<tr><td>listLimit</td>
+<td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
 
-<tr><td>mapTestExpr</td>
+<tr><td>mapRules</td>
 <td><a href="elements/Style.html">Style</a> Element
 </td>
 
@@ -587,25 +605,29 @@
 <td><a href="elements/Style.html">Style</a> Element
 </td>
 
-<tr><td>msgBaseName</td>
-<td><a href="elements/Module.html">Module</a> Element
-</td>
-
 <tr><td>mustMatch</td>
 <td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
 
 <tr><td>name</td>
-<td><a href="structs/ConfigVar.html">ConfigVar</a> Structure, 
+<td><a href="structs/ComputedColumn.html">ComputedColumn</a> Structure, 
+<a href="structs/ConfigVar.html">ConfigVar</a> Structure, 
 <a href="structs/CustomColor.html">CustomColor</a> Structure, 
 <a href="structs/DataSetParam.html">DataSetParam</a> Structure, 
+<a href="structs/EmbeddedImage.html">EmbeddedImage</a> Structure, 
 <a href="structs/ExtendedProperty.html">ExtendedProperty</a> Structure, 
-<a href="structs/Image.html">Image</a> Structure, 
+<a href="structs/PropertyBinding.html">PropertyBinding</a> Structure, 
 <a href="structs/PropertyMask.html">PropertyMask</a> Structure, 
 <a href="elements/ReportElement.html">ReportElement</a> Element, 
 <a href="structs/ResultSetColumn.html">ResultSetColumn</a> Structure, 
+<a href="elements/TemplateElement.html">TemplateElement</a> Element, 
+<a href="elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Element, 
 <a href="structs/UserMethod.html">UserMethod</a> Structure, 
 <a href="structs/UserProperty.html">UserProperty</a> Structure
+</td>
+
+<tr><td>namespace</td>
+<td><a href="structs/IncludedLibrary.html">IncludedLibrary</a> Structure
 </td>
 
 <tr><td>numberAlign</td>
@@ -619,7 +641,7 @@
 </td>
 
 <tr><td>operator</td>
-<td><a href="structs/FilterCond.html">FilterCond</a> Structure, 
+<td><a href="structs/FilterCondition.html">FilterCondition</a> Structure, 
 <a href="structs/HighlightRule.html">HighlightRule</a> Structure, 
 <a href="structs/MapRule.html">MapRule</a> Structure
 </td>
@@ -661,8 +683,14 @@
 <td><a href="elements/Style.html">Style</a> Element
 </td>
 
+<tr><td>pageBreakInterval</td>
+<td><a href="elements/Listing.html">Listing</a> Element
+</td>
+
 <tr><td>paramBindings</td>
-<td><a href="elements/DataSet.html">DataSet</a> Element, 
+<td><a href="structs/Action.html">Action</a> Structure, 
+<a href="elements/DataSet.html">DataSet</a> Element, 
+<a href="structs/DataSourceParamBinding.html">DataSourceParamBinding</a> Structure, 
 <a href="elements/ReportItem.html">ReportItem</a> Element
 </td>
 
@@ -690,13 +718,17 @@
 <a href="structs/ResultSetColumn.html">ResultSetColumn</a> Structure
 </td>
 
-<tr><td>privateDriverDesignState</td>
-<td><a href="elements/OdaDataSet.html">OdaDataSet</a> Element
-</td>
-
 <tr><td>privateDriverProperties</td>
 <td><a href="elements/OdaDataSet.html">OdaDataSet</a> Element, 
 <a href="elements/OdaDataSource.html">OdaDataSource</a> Element
+</td>
+
+<tr><td>promptText</td>
+<td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
+</td>
+
+<tr><td>propertyBindings</td>
+<td><a href="elements/Module.html">Module</a> Element
 </td>
 
 <tr><td>propertyMasks</td>
@@ -705,6 +737,12 @@
 
 <tr><td>queryText</td>
 <td><a href="elements/OdaDataSet.html">OdaDataSet</a> Element
+</td>
+
+<tr><td>refTemplateParameter</td>
+<td><a href="elements/DataSet.html">DataSet</a> Element, 
+<a href="elements/ReportItem.html">ReportItem</a> Element, 
+<a href="elements/TemplateElement.html">TemplateElement</a> Element
 </td>
 
 <tr><td>refreshRate</td>
@@ -717,6 +755,10 @@
 
 <tr><td>repeatHeader</td>
 <td><a href="elements/Table.html">Table</a> Element
+</td>
+
+<tr><td>reportName</td>
+<td><a href="structs/Action.html">Action</a> Structure
 </td>
 
 <tr><td>resultSet</td>
@@ -738,6 +780,10 @@
 
 <tr><td>scale</td>
 <td><a href="elements/Image.html">Image</a> Element
+</td>
+
+<tr><td>search</td>
+<td><a href="structs/Action.html">Action</a> Structure
 </td>
 
 <tr><td>searching</td>
@@ -773,6 +819,10 @@
 <td><a href="elements/ListingGroup.html">ListingGroup</a> Element
 </td>
 
+<tr><td>sortType</td>
+<td><a href="elements/ListingGroup.html">ListingGroup</a> Element
+</td>
+
 <tr><td>source</td>
 <td><a href="elements/Image.html">Image</a> Element
 </td>
@@ -794,8 +844,17 @@
 <a href="elements/Row.html">Row</a> Element
 </td>
 
+<tr><td>targetBookmark</td>
+<td><a href="structs/Action.html">Action</a> Structure
+</td>
+
 <tr><td>targetWindow</td>
 <td><a href="structs/Action.html">Action</a> Structure
+</td>
+
+<tr><td>testExpr</td>
+<td><a href="structs/HighlightRule.html">HighlightRule</a> Structure, 
+<a href="structs/MapRule.html">MapRule</a> Structure
 </td>
 
 <tr><td>text</td>
@@ -836,6 +895,10 @@
 <a href="elements/Style.html">Style</a> Element
 </td>
 
+<tr><td>theme</td>
+<td><a href="elements/Module.html">Module</a> Element
+</td>
+
 <tr><td>title</td>
 <td><a href="elements/Module.html">Module</a> Element
 </td>
@@ -854,9 +917,8 @@
 </td>
 
 <tr><td>type</td>
-<td><a href="structs/Image.html">Image</a> Structure, 
+<td><a href="structs/EmbeddedImage.html">EmbeddedImage</a> Structure, 
 <a href="elements/MasterPage.html">MasterPage</a> Element, 
-<a href="elements/OdaDataSet.html">OdaDataSet</a> Element, 
 <a href="structs/UserProperty.html">UserProperty</a> Structure
 </td>
 
@@ -869,7 +931,8 @@
 </td>
 
 <tr><td>uri</td>
-<td><a href="elements/Image.html">Image</a> Element
+<td><a href="structs/Action.html">Action</a> Structure, 
+<a href="elements/Image.html">Image</a> Element
 </td>
 
 <tr><td>userProperties</td>
@@ -879,31 +942,32 @@
 <tr><td>value</td>
 <td><a href="structs/ConfigVar.html">ConfigVar</a> Structure, 
 <a href="structs/ExtendedProperty.html">ExtendedProperty</a> Structure, 
+<a href="structs/PropertyBinding.html">PropertyBinding</a> Structure, 
 <a href="structs/SelectionChoice.html">SelectionChoice</a> Structure
 </td>
 
 <tr><td>value1</td>
-<td><a href="structs/FilterCond.html">FilterCond</a> Structure, 
+<td><a href="structs/FilterCondition.html">FilterCondition</a> Structure, 
 <a href="structs/HighlightRule.html">HighlightRule</a> Structure, 
 <a href="structs/MapRule.html">MapRule</a> Structure
 </td>
 
 <tr><td>value2</td>
-<td><a href="structs/FilterCond.html">FilterCond</a> Structure, 
+<td><a href="structs/FilterCondition.html">FilterCondition</a> Structure, 
 <a href="structs/HighlightRule.html">HighlightRule</a> Structure, 
 <a href="structs/MapRule.html">MapRule</a> Structure
 </td>
 
 <tr><td>valueExpr</td>
 <td><a href="elements/Data.html">Data</a> Element, 
-<a href="structs/Hide.html">Hide</a> Structure, 
+<a href="structs/HideRule.html">HideRule</a> Structure, 
 <a href="elements/Image.html">Image</a> Element, 
 <a href="elements/ScalarParameter.html">ScalarParameter</a> Element, 
 <a href="elements/TextData.html">TextData</a> Element
 </td>
 
-<tr><td>version</td>
-<td><a href="elements/ReportDesign.html">ReportDesign</a> Element
+<tr><td>valueType</td>
+<td><a href="elements/ScalarParameter.html">ScalarParameter</a> Element
 </td>
 
 <tr><td>verticalAlign</td>

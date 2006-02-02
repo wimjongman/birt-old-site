@@ -98,29 +98,6 @@ An RGB color value or color name.</div>
 <p>Represents a color. Colors can use the CSS color names, a CSS-format RGB 
 value (#RRGGBB), or a custom color name defined within the report.</p></div>
 <hr>
-<h2><a name="column">column</a></h2>
-<div class="section-text">
-Reference to a column in a data set.</div>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>column</td></tr>
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>XML Name:</td>
-<td><code>column</code></td></tr>
-<tr><td>JavaScript Design Type:</td>
-<td></td></tr>
-<tr><td>JavaScript Runtime Type:</td>
-<td></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>This property type is not used and may be removed.</p></div>
-<hr>
 <h2><a name="dateTime">dateTime</a></h2>
 <div class="section-text">
 A date/time value.</div>
@@ -318,6 +295,8 @@ A decimal number such as "1", "1.33" or "2.5."</div>
 <p>A floating-point number. Not used in Release 1.</p></div>
 <hr>
 <h2><a name="html">html</a></h2>
+<div class="section-text">
+Represents a html value</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -333,6 +312,10 @@ A decimal number such as "1", "1.33" or "2.5."</div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Property that stores html value. Model doesn't do validation to this property type.</p></div>
 <hr>
 <h2><a name="integer">integer</a></h2>
 <div class="section-text">
@@ -346,23 +329,6 @@ An integer in the range 0 to 2<sup>32</sup> - 1.</div>
 <td>1.0</td></tr>
 <tr><td>XML Name:</td>
 <td><code>integer</code></td></tr>
-<tr><td>JavaScript Design Type:</td>
-<td></td></tr>
-<tr><td>JavaScript Runtime Type:</td>
-<td></td></tr>
-</table>
-
-<hr>
-<h2><a name="literalString">literalString</a></h2>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Property.literalString</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Name:</td>
-<td><code>literalString</code></td></tr>
 <tr><td>JavaScript Design Type:</td>
 <td></td></tr>
 <tr><td>JavaScript Runtime Type:</td>
@@ -446,6 +412,8 @@ Arbitrary-precision decimal number</div>
 largest currency amounts down to two decimal places.</p></div>
 <hr>
 <h2><a name="resourceKey">resourceKey</a></h2>
+<div class="section-text">
+A string that should match a message in the customer's message category.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -461,8 +429,15 @@ largest currency amounts down to two decimal places.</p></div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A string value, which should match a message in the customer's message category. It allows user
+to localize an exteralizable property </p></div>
 <hr>
 <h2><a name="script">script</a></h2>
+<div class="section-text">
+Stores a block of script value that can be executed at runtime.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -478,6 +453,10 @@ largest currency amounts down to two decimal places.</p></div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A block of script value that is to be executed at runtime, script are not validated in model at design-time</p></div>
 <hr>
 <h2><a name="string">string</a></h2>
 <div class="section-text">
@@ -501,6 +480,29 @@ A string value.</div>
 
 <div class="section-text">
 <p>A string value. The string cannot be externalized.</p></div>
+<hr>
+<h2><a name="structRef">structRef</a></h2>
+<div class="section-text">
+Represents a reference to another structure.</div>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Property.structRef</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Name:</td>
+<td><code>structRef</code></td></tr>
+<tr><td>JavaScript Design Type:</td>
+<td></td></tr>
+<tr><td>JavaScript Runtime Type:</td>
+<td></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Simply references to another structure, it can be in two states: resolved or unresolved.</p></div>
 <hr>
 <h2><a name="structure">structure</a></h2>
 <div class="section-text">
@@ -548,23 +550,6 @@ A Uniform Resource Identifier (URI).</div>
 
 <div class="section-text">
 <p>A URI of the form "http:", "file:", "iServer:", or "mailto:".</p></div>
-<hr>
-<h2><a name="variant">variant</a></h2>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>variant</td></tr>
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>XML Name:</td>
-<td><code>variant</code></td></tr>
-<tr><td>JavaScript Design Type:</td>
-<td></td></tr>
-<tr><td>JavaScript Runtime Type:</td>
-<td></td></tr>
-</table>
-
 <hr>
 <h2><a name="xml">xml</a></h2>
 <div class="section-text">

@@ -42,18 +42,22 @@ from an external data provider.</div>
 <dl class="section-text">
 <dt><a href="#Property-cachedMetaData">cachedMetaData</a></dt>
 <dd>Cached derived data attributes of a data set.</dd>
+<dt><a href="#Property-cachedRowCount">cachedRowCount</a></dt>
+<dd>Number of rows that will be cached when the data rows are retrived from DB.</dd>
 <dt><a href="#Property-columnHints">columnHints</a></dt>
 <dd>Defines the report-related data attributes of the result set’s columns.</dd>
 <dt><a href="#Property-computedColumns">computedColumns</a></dt>
 <dd>User-defined columns in the result set.</dd>
 <dt><a href="#Property-dataSource">dataSource</a></dt>
-<dd></dd>
+<dd>The database connection that the data set is used.</dd>
 <dt><a href="#Property-filter">filter</a></dt>
 <dd>An optional set of filters to apply to the result set before any other data transforms.</dd>
 <dt><a href="#Property-paramBindings">paramBindings</a></dt>
 <dd>A list of data set parameter binding elements that bind data set input parameters to BIRT expressions.</dd>
 <dt><a href="#Property-parameters">parameters</a></dt>
 <dd>Defines the data access attributes of the list of input and/or output parameters.</dd>
+<dt><a href="#Property-refTemplateParameter">refTemplateParameter</a></dt>
+<dd>Name of the template parameter definition.</dd>
 <dt><a href="#Property-resultSet">resultSet</a></dt>
 <dd>Defines the columns of the expected result set.</dd>
 </dl>
@@ -84,6 +88,8 @@ filters or calculating computed columns.</dd>
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
@@ -154,6 +160,42 @@ the BIRT designer tool.</p></div>
 
 <div class="section-text">
 <p><code>CachedMetaData</span> structure</p></div>
+
+<hr>
+<h2><a name="Property-cachedRowCount">cachedRowCount Property</a></h2>
+
+<p class="section-text">Number of rows that will be cached when the data rows are retrived from DB.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#integer">integer</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Cached row count</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Number of rows that will be cached when the data rows are first time retrieved from DB, 
+the cached data will be used after that unless user choose to flush the cache. This will 
+speed up the report developing.</p></div>
 
 <hr>
 <h2><a name="Property-columnHints">columnHints Property</a></h2>
@@ -266,14 +308,14 @@ of the columns retrieved directly from the underlying data provider.</p></div>
 <hr>
 <h2><a name="Property-dataSource">dataSource Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The database connection that the data set is used.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../elements/DataSource.html">DataSource</a> Reference</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>Yes</td></tr>
 <tr><td>Display Name:</td>
@@ -292,6 +334,10 @@ of the columns retrieved directly from the underlying data provider.</p></div>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Name of the data source, that is the database connection this data set is using.</p></div>
 
 <hr>
 <h2><a name="Property-filter">filter Property</a></h2>
@@ -301,7 +347,7 @@ of the columns retrieved directly from the underlying data provider.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/FilterCond.html">FilterCond</a> Structures</td></tr>
+<td>List of <a href="../structs/FilterCondition.html">FilterCondition</a> Structures</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
@@ -448,6 +494,41 @@ in a data set definition, the data provider’s meta-data takes precedence.</p></d
 <div class="section-text">
 <p><code>DataSetParam</span> structure</p>
 <p><code>ParamBinding</span> structure</p></div>
+
+<hr>
+<h2><a name="Property-refTemplateParameter">refTemplateParameter Property</a></h2>
+
+<p class="section-text">Name of the template parameter definition.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Reference</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Referred Template Parameter Definition</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>when a data set is created from an <i>template data set</i>,
+this property will reference to the base data set. </p></div>
 
 <hr>
 <h2><a name="Property-resultSet">resultSet Property</a></h2>

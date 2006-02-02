@@ -44,19 +44,10 @@ to lists and tables.</div>
 <dl class="section-text">
 <dt><a href="#Property-filter">filter</a></dt>
 <dd>Filter criteria to apply to each row in the List.</dd>
+<dt><a href="#Property-pageBreakInterval">pageBreakInterval</a></dt>
+<dd>Break the list into a new page on a numeric interval.</dd>
 <dt><a href="#Property-sort">sort</a></dt>
 <dd>The sort order for detail rows in the List.</dd>
-</dl>
-
-<h3>Method Summary</h3>
-
-<dl class="section-text">
-<dt><a href="#Method-onFinish">onFinish</a></dt>
-<dd>Called after the last row is read from the data set for this element, but before the footer band is created.</dd>
-<dt><a href="#Method-onRow">onRow</a></dt>
-<dd>Called for each row retrieved from the data set for this element, but before creating any content for that row.</dd>
-<dt><a href="#Method-onStart">onStart</a></dt>
-<dd>Called before the first row is retrieved from the data set for this element.</dd>
 </dl>
 
 <h3>Inherited Properties</h3>
@@ -67,11 +58,14 @@ to lists and tables.</div>
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
@@ -80,11 +74,6 @@ to lists and tables.</div>
 <a href="ReportItem.html#Property-x">x</a>, 
 <a href="ReportItem.html#Property-y">y</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -108,7 +97,7 @@ parameter bindings, and so on.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/FilterCond.html">FilterCond</a> Structures</td></tr>
+<td>List of <a href="../structs/FilterCondition.html">FilterCondition</a> Structures</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
@@ -136,6 +125,40 @@ parameter bindings, and so on.</p></div>
 data set. The filter can contain BIRT expressions (in JavaScript.) If you want 
 the database to do the filtering, put the filter criteria in the WHERE clause of 
 your query.</p></div>
+
+<hr>
+<h2><a name="Property-pageBreakInterval">pageBreakInterval Property</a></h2>
+
+<p class="section-text">Break the list into a new page on a numeric interval.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Page break interval</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>0</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Break the list into a new page on a numeric interval.</p></div>
 
 <hr>
 <h2><a name="Property-sort">sort Property</a></h2>
@@ -172,115 +195,5 @@ your query.</p></div>
 <p>Specifies the sorting of the rows within the detail band. This sorting is 
 done within BIRT. If you want the database to do the sorting, specify the sort 
 within the ORDER BY clause of your query.</p></div>
-<h1>Method Detail</h1>
-
-<h2><a name="Method-onFinish">onFinish Method</a></h2>
-
-<p class="section-text">Called after the last row is read from the data set for this element, but before the footer band is created.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onFinish(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called after the last row is read from the data set for 
-this element, but before the footer band is created.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>onStart</code> method</p>
-<p><code>onRow</code> method</p></div>
-
-<hr>
-<h2><a name="Method-onRow">onRow Method</a></h2>
-
-<p class="section-text">Called for each row retrieved from the data set for this element, but before creating any content for that row.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onRow(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called for each row retrieved from the data set for this 
-element, but before creating any content for that row.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>onStart</code> method</p>
-<p><code>onFinish</code> method</p></div>
-
-<hr>
-<h2><a name="Method-onStart">onStart Method</a></h2>
-
-<p class="section-text">Called before the first row is retrieved from the data set for this element.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onStart(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called before the first row is retrieved from the data 
-set for this element. Called after the data set is open but before the header 
-band is created. This script is a convenient place to initialize custom running 
-total variables.</p>
-
-<p>The scripts allow the 
-application to calculate custom running totals using code. Simply:</p>
-
-<ul>
-<li>initialize a global variable in the on-start method (optional),</li>
-<li>accumulate the running total by adding values to the global variable,</li>
-<li>finalize the running total prior to displaying it (optional).</li>
-</ul></p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>onRow</code> method</p>
-<p><code>onFinish</code> method</p></div>
 </body>
 </html>

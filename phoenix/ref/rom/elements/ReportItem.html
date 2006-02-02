@@ -49,6 +49,8 @@ Abstract base element for all visual report items.</div>
 <dd>Height of the item.</dd>
 <dt><a href="#Property-paramBindings">paramBindings</a></dt>
 <dd>Bindings between input parameters in the included design and values in the main design.</dd>
+<dt><a href="#Property-refTemplateParameter">refTemplateParameter</a></dt>
+<dd>Name of the template parameter definition.</dd>
 <dt><a href="#Property-style">style</a></dt>
 <dd>Name of the style applied to this item.</dd>
 <dt><a href="#Property-toc">toc</a></dt>
@@ -63,21 +65,14 @@ Abstract base element for all visual report items.</div>
 <dd>The y (vertical) position of the item.</dd>
 </dl>
 
-<h3>Method Summary</h3>
-
-<dl class="section-text">
-<dt><a href="#Method-onCreate">onCreate</a></dt>
-<dd>Script executed when the element is created in the Factory.</dd>
-<dt><a href="#Method-onRender">onRender</a></dt>
-<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
-</dl>
-
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
@@ -124,7 +119,7 @@ scenario within a library, however.)</p></div>
 <tr><td>Expression Type:</td>
 <td>string</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -138,7 +133,7 @@ scenario within a library, however.)</p></div>
 <tr><td>Runtime Settable:</td>
 <td>Yes</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Hidden</td></tr>
+<td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -226,7 +221,7 @@ property</p></div>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
-<td>0</td></tr>
+<td>None</td></tr>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
@@ -296,6 +291,41 @@ property</p>
 property</p></div>
 
 <hr>
+<h2><a name="Property-refTemplateParameter">refTemplateParameter Property</a></h2>
+
+<p class="section-text">Name of the template parameter definition.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../elements/TemplateParameterDefinition.html">TemplateParameterDefinition</a> Reference</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Referred Template Parameter Definition</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>when a report item is created from an <i>template element</i>,
+this property will reference to the base template element definition. </p></div>
+
+<hr>
 <h2><a name="Property-style">style Property</a></h2>
 
 <p class="section-text">Name of the style applied to this item.</p>
@@ -354,7 +384,7 @@ or a shared style.</p></p></div>
 <tr><td>Expression Type:</td>
 <td>string</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -368,7 +398,7 @@ or a shared style.</p></p></div>
 <tr><td>Runtime Settable:</td>
 <td>Yes</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Hidden</td></tr>
+<td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -388,7 +418,7 @@ Contents for this item or its container.</p></p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/Hide.html">Hide</a> Structures</td></tr>
+<td>List of <a href="../structs/HideRule.html">HideRule</a> Structures</td></tr>
 <tr><td>Since:</td>
 <td>reserved</td></tr>
 <tr><td>Required:</td>
@@ -441,7 +471,7 @@ should appear when the report is viewed on the web, but not when it is printed.<
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
-<td>0</td></tr>
+<td>None</td></tr>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
@@ -482,7 +512,7 @@ details.</p></p></div>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
-<td>0</td></tr>
+<td>None</td></tr>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
@@ -527,7 +557,7 @@ container, and this property is ignored.</p></p></div>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
-<td>0</td></tr>
+<td>None</td></tr>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
@@ -553,74 +583,5 @@ container, and this property is ignored.</p></p></div>
 <div class="section-text">
 <p>Dimension property type</p>
 <p>Report Item <code> x</code> property</p></div>
-<h1>Method Detail</h1>
-
-<h2><a name="Method-onCreate">onCreate Method</a></h2>
-
-<p class="section-text">Script executed when the element is created in the Factory.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p><p>Executed when the element is created in the Factory. 
-Called after the item is created, but before the item is saved to the report 
-document file. See the scripting spec for additional information about this 
-script. Applications should perform visual customization in the on-render script 
-instead.</p></p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p>Report Item<code> onRender</code> method</p></div>
-
-<hr>
-<h2><a name="Method-onRender">onRender Method</a></h2>
-
-<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>presentation</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p><p>Executed when the element is prepared for rendering in 
-the Presentation engine. Changes made to the element are written to the target 
-output format, but not saved to the report document file. This is the preferred 
-place for visual customizations.</p></p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p>Report Item<code> onCreate </code>method</p></div>
 </body>
 </html>

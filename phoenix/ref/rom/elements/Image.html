@@ -68,6 +68,17 @@ size.</dd>
 <dd>An expression which returns the image contents.</dd>
 </dl>
 
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onCreate">onCreate</a></dt>
+<dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+<dt><a href="#Method-onRender">onRender</a></dt>
+<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
+</dl>
+
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
@@ -76,11 +87,14 @@ size.</dd>
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
@@ -95,6 +109,9 @@ size.</dd>
 <dt><a href="ReportItem.html#Property-dataSet">dataSet</a></dt>
 <dd>Allows the user to fetch the image from a data set. 
 The image is in the first row of the data set.</dd>
+<dt><a href="ReportItem.html#Property-toc">toc</a></dt>
+<dd>While the image can appear in the TOC, it is 
+generally not very useful to do so.</dd>
 </dl>
 
 <h3>Style Properties</h3>
@@ -138,11 +155,6 @@ The image is in the first row of the data set.</dd>
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -422,11 +434,7 @@ contain HTML formatting and can be externalized. The web viewer shows this as
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#expression">expression</a></td></tr>
-<tr><td>Context:</td>
-<td></td></tr>
-<tr><td>Expression Type:</td>
-<td>string</td></tr>
+<td><a href="../types.html#structRef">structRef</a></td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
@@ -615,7 +623,7 @@ Release 1.0. That is, the image cannot be retrieved from a database in Release
 <tr><td>Expression Type:</td>
 <td>string</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -629,7 +637,7 @@ Release 1.0. That is, the image cannot be retrieved from a database in Release
 <tr><td>Runtime Settable:</td>
 <td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Hidden</td></tr>
+<td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -694,7 +702,7 @@ The type of image is inferred from the image file content or HTTP response.</p><
 <tr><td>Expression Type:</td>
 <td>blob</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -708,7 +716,7 @@ The type of image is inferred from the image file content or HTTP response.</p><
 <tr><td>Runtime Settable:</td>
 <td>Yes</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Hidden</td></tr>
+<td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -717,5 +725,90 @@ The type of image is inferred from the image file content or HTTP response.</p><
 
 <div class="section-text">
 <p><p>An expression which returns the image contents.</p></p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onCreate">onCreate Method</a></h2>
+
+<p class="section-text">Script executed when the element is created in the Factory.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is created in the Factory. Called after the item is created, but before 
+the item is saved to the report document file. See the scripting spec for additional information 
+about this script. Applications should perform visual customization in the on-render script instead.</p></div>
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
+
+<hr>
+<h2><a name="Method-onRender">onRender Method</a></h2>
+
+<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is prepared for rendering in the Presentation engine. Changes made to the 
+element are written to the target output format, but not saved to the report document file. This is the
+preferred place for visual customizations.</p></div>
 </body>
 </html>

@@ -19,11 +19,11 @@ A data set defined in JavaScript.</div>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
-<td><code>ScriptDataSet</code></td></tr>
+<td><code>script-data-set</code></td></tr>
 <tr><td>Extends:</td>
 <td><a href="DataSet.html">DataSet</a></td></tr>
 <tr><td>Extendable:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Abstract:</td>
 <td>No</td></tr>
 <tr><td>Name Space:</td>
@@ -53,18 +53,22 @@ A data set defined in JavaScript.</div>
 
 <p class="section-text">
 <a href="DataSet.html#Property-cachedMetaData">cachedMetaData</a>, 
+<a href="DataSet.html#Property-cachedRowCount">cachedRowCount</a>, 
 <a href="DataSet.html#Property-columnHints">columnHints</a>, 
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DataSet.html#Property-computedColumns">computedColumns</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="DataSet.html#Property-dataSource">dataSource</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="DataSet.html#Property-filter">filter</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="DataSet.html#Property-paramBindings">paramBindings</a>, 
 <a href="DataSet.html#Property-parameters">parameters</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="DataSet.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="DataSet.html#Property-resultSet">resultSet</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>
 </p>
@@ -184,7 +188,7 @@ set. Optional.</p></div>
 <h3>Synopsis
 </h3>
 
-<p class="section-text"><code>boolean&nbsp;obj.fetch(&nbsp;)</code></p>
+<p class="section-text"><code>DataRow&nbsp;obj.fetch(&nbsp;)</code></p>
 <h3>Details
 </h3>
 
@@ -196,7 +200,7 @@ set. Optional.</p></div>
 <tr><td>Arguments:</td>
 <td>None</td></tr>
 <tr><td>Return Type:</td>
-<td>boolean</td></tr>
+<td>DataRow</td></tr>
 </table>
 
 <h3>Return</h3>

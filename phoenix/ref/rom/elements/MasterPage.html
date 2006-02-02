@@ -43,10 +43,6 @@ Base element for master pages within a report.</div>
 <dl class="section-text">
 <dt><a href="#Property-bottomMargin">bottomMargin</a></dt>
 <dd>The amount of white space at the bottom of each page.</dd>
-<dt><a href="#Property-footerHeight">footerHeight</a></dt>
-<dd>The height of the page footer</dd>
-<dt><a href="#Property-headerHeight">headerHeight</a></dt>
-<dd>The height of the page header</dd>
 <dt><a href="#Property-height">height</a></dt>
 <dd>The height of a custom-sized page.</dd>
 <dt><a href="#Property-leftMargin">leftMargin</a></dt>
@@ -76,6 +72,8 @@ size.)</dd>
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
@@ -139,80 +137,6 @@ the margins.</p></div>
 <p>The amount of white space at the margins of each page. Each dimension must be 
 in physical units. The dimension cannot use relative units (percent, em, or ex.) 
 The size also cannot be in pixels.</p></div>
-
-<hr>
-<h2><a name="Property-footerHeight">footerHeight Property</a></h2>
-
-<p class="section-text">The height of the page footer</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Type:</td>
-<td><a href="../types.html#dimension">dimension</a></td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Required:</td>
-<td>No</td></tr>
-<tr><td>Display Name:</td>
-<td>Footer height</td></tr>
-<tr><td>JavaScript Type:</td>
-<td></td></tr>
-<tr><td>Default Value:</td>
-<td>None</td></tr>
-<tr><td>Inherited:</td>
-<td>Yes</td></tr>
-<tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
-<tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
-<tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>The height of the page footer. The dimension must be in 
-physical units. The dimension cannot use relative units (percent, em, or ex.) 
-The size also cannot be in pixels. This property is neglected in HTML output.
-</p></div>
-
-<hr>
-<h2><a name="Property-headerHeight">headerHeight Property</a></h2>
-
-<p class="section-text">The height of the page header</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Type:</td>
-<td><a href="../types.html#dimension">dimension</a></td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Required:</td>
-<td>No</td></tr>
-<tr><td>Display Name:</td>
-<td>Header height</td></tr>
-<tr><td>JavaScript Type:</td>
-<td></td></tr>
-<tr><td>Default Value:</td>
-<td>None</td></tr>
-<tr><td>Inherited:</td>
-<td>Yes</td></tr>
-<tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
-<tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
-<tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>The height of the page header. The dimension must be in 
-physical units. The dimension cannot use relative units (percent, em, or ex.) 
-The size also cannot be in pixels. This property is neglected in HTML output.
-</p></div>
 
 <hr>
 <h2><a name="Property-height">height Property</a></h2>
@@ -515,12 +439,12 @@ Legal or A4.</p>
 <td>US Letter</td>
 <td>us-letter</td>
 <td>US letter-sized paper: 
-    8.5&quot; ´</span> 11&quot;.</td></tr>
+    8.5&quot; by</span> 11&quot;.</td></tr>
 <tr><td>us-legal</td>
 <td>US Legal</td>
 <td>us-legal</td>
 <td>US legal-sized paper: 
-    8.5&quot; ´</span> 14&quot;.</td></tr>
+    8.5&quot; by</span> 14&quot;.</td></tr>
 <tr><td>a4</td>
 <td>A4</td>
 <td>a4</td>

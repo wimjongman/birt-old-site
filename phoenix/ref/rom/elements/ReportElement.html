@@ -31,7 +31,7 @@ Abstract element for user-visible elements.</div>
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>No</td></tr>
 </table>
@@ -44,6 +44,10 @@ Abstract element for user-visible elements.</div>
 the design.</dd>
 <dt><a href="#Property-displayName">displayName</a></dt>
 <dd>Provides a user-friendly name for the element.</dd>
+<dt><a href="#Property-displayNameID">displayNameID</a></dt>
+<dd>Message ID property for the display name.</dd>
+<dt><a href="#Property-eventHandlerClass">eventHandlerClass</a></dt>
+<dd>The full qulified name of the event handler class.</dd>
 <dt><a href="#Property-extends">extends</a></dt>
 <dd>Allows an element to extend another element of the same type.</dd>
 <dt><a href="#Property-name">name</a></dt>
@@ -115,17 +119,17 @@ tags; but cannot be localized.</p></p></div>
 <tr><td>Type:</td>
 <td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.displayName</td></tr>
+<td>Display name</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
 <td>None</td></tr>
 <tr><td>Inherited:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
 <td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
@@ -146,8 +150,78 @@ designer.</p></p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
-<p>Report Element<code> name</code> 
-property</p>
+<p>Report Element<code> name</code> property</p></div>
+
+<hr>
+<h2><a name="Property-displayNameID">displayNameID Property</a></h2>
+
+<p class="section-text">Message ID property for the display name.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
+<tr><td>Since:</td>
+<td>reserved</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Display name key</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p><p>The display name of the element can be externalized, the ID property will
+link to an external message key where the user put his message files.</p></div>
+
+<hr>
+<h2><a name="Property-eventHandlerClass">eventHandlerClass Property</a></h2>
+
+<p class="section-text">The full qulified name of the event handler class.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Event handler class</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Full quilified name of the event handler class, used to specify an external Java class
+which define the scripting behavior that will be executed at runtime.</p>
+
 <p>&nbsp;</p></div>
 
 <hr>
@@ -160,11 +234,11 @@ property</p>
 <tr><td>Type:</td>
 <td><a href="../types.html#extends">extends</a></td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.extends</td></tr>
+<td>Extends</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -207,7 +281,7 @@ GUI does not.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot; </i>…</p></div>
+<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot;</i>…&gt;</p></div>
 
 <hr>
 <h2><a name="Property-name">name Property</a></h2>
@@ -223,7 +297,7 @@ GUI does not.</p></p>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.name</td></tr>
+<td>Name</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -261,7 +335,7 @@ on. ROM names are case-sensitive.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>…</p></div>
+<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>…&gt;</p></div>
 <h3>See Also</h3>
 
 <div class="section-text">

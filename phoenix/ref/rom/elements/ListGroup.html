@@ -31,10 +31,17 @@ Represents a group break level within a list.</div>
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>No</td></tr>
 </table>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+</dl>
 
 <h3>Slot Summary</h3>
 
@@ -48,21 +55,18 @@ Represents a group break level within a list.</div>
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
+<a href="ListingGroup.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ListingGroup.html#Property-filter">filter</a>, 
 <a href="ListingGroup.html#Property-groupName">groupName</a>, 
 <a href="ListingGroup.html#Property-interval">interval</a>, 
+<a href="ListingGroup.html#Property-intervalBase">intervalBase</a>, 
 <a href="ListingGroup.html#Property-intervalRange">intervalRange</a>, 
 <a href="ListingGroup.html#Property-keyExpr">keyExpr</a>, 
 <a href="ListingGroup.html#Property-sort">sort</a>, 
 <a href="ListingGroup.html#Property-sortDirection">sortDirection</a>, 
+<a href="ListingGroup.html#Property-sortType">sortType</a>, 
 <a href="ListingGroup.html#Property-toc">toc</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ListingGroup.html#Method-onStart">onStart</a>, 
-<a href="ListingGroup.html#Method-onRow">onRow</a>, 
-<a href="ListingGroup.html#Method-onFinish">onFinish</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -74,6 +78,33 @@ sales rep and region.</p>
 <p>A group is defined by a <i>group key.</i> The key is a 
 column from the query. If the group key is a time field then user often want to 
 group on an <i>interval</i> such as month or quarter.</p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
 <h1>Slot Detail</h1>
 
 <h2><a name="Slot-header">header Slot</a></h2>
@@ -83,15 +114,15 @@ group on an <i>interval</i> such as month or quarter.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>header</td></tr>
+<td>Header</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>header</code></td></tr>
 <tr><td>Contents:</td>
-<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
+<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 <tr><td>Default Style:</td>
-<td><a href="../styles.html#list-group-header-1">list-group-header-<i>n</i></a></td></tr>
+<td><a href="../styles.html#list-group-header">list-group-header</a></td></tr>
 </table>
 
 <h3>Description</h3>
@@ -119,15 +150,15 @@ n=9 is the bottom-most group.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>footer</td></tr>
+<td>Footer</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>footer</code></td></tr>
 <tr><td>Contents:</td>
-<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
+<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 <tr><td>Default Style:</td>
-<td><a href="../styles.html#list-group-footer-1">list-group-footer-<i>n</i></a></td></tr>
+<td><a href="../styles.html#list-group-footer">list-group-footer</a></td></tr>
 </table>
 
 <h3>Description</h3>

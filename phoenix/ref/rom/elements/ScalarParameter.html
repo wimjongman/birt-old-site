@@ -52,14 +52,12 @@ used for passwords.</dd>
 <dt><a href="#Property-controlType">controlType</a></dt>
 <dd>The suggested type of UI control to use when 
 displaying the parameter.</dd>
-<dt><a href="#Property-dataSet">dataSet</a></dt>
+<dt><a href="#Property-dataSetName">dataSetName</a></dt>
 <dd>The name of the data set to execute to obtain a selection list dynamically.</dd>
 <dt><a href="#Property-dataType">dataType</a></dt>
 <dd>The data type for the parameter.</dd>
 <dt><a href="#Property-defaultValue">defaultValue</a></dt>
 <dd>The default value of the parameter.</dd>
-<dt><a href="#Property-displayPrompt">displayPrompt</a></dt>
-<dd></dd>
 <dt><a href="#Property-fixedOrder">fixedOrder</a></dt>
 <dd>Whether to display the list sorted in unsorted (fixed) order.</dd>
 <dt><a href="#Property-format">format</a></dt>
@@ -67,15 +65,21 @@ displaying the parameter.</dd>
 <dt><a href="#Property-labelExpr">labelExpr</a></dt>
 <dd>An expression on the data row to return the display 
 value for each choice in a dynamic list.</dd>
+<dt><a href="#Property-listLimit">listLimit</a></dt>
+<dd>List limitation number.</dd>
 <dt><a href="#Property-mustMatch">mustMatch</a></dt>
 <dd>If true, then the value that the user provides must 
 match one of the values in the static or dynamic selection list.</dd>
+<dt><a href="#Property-promptText">promptText</a></dt>
+<dd>The prompt text displayed when user input the parameter value.</dd>
 <dt><a href="#Property-selectionList">selectionList</a></dt>
 <dd>Defines a selection list for the parameter: static 
 list of values from which the user can choose.</dd>
 <dt><a href="#Property-valueExpr">valueExpr</a></dt>
 <dd>An expression on the data set row to return the value 
 of each choice in a dynamic list.</dd>
+<dt><a href="#Property-valueType">valueType</a></dt>
+<dd>Type of the parameter</dd>
 </dl>
 
 <h3>Inherited Properties</h3>
@@ -84,6 +88,8 @@ of each choice in a dynamic list.</dd>
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="Parameter.html#Property-helpText">helpText</a>, 
 <a href="Parameter.html#Property-helpTextID">helpTextID</a>, 
@@ -92,6 +98,10 @@ of each choice in a dynamic list.</dd>
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>
 </p>
+<h3>Inherited Methods</h3>
+
+<p class="section-text">
+<a href="Parameter.html#Method-validate">validate</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -351,9 +361,9 @@ displaying the parameter.</p>
 default depends on the parameter properties:</p>
 
 <ul>
-  <li>text-box – Default for non-Boolean values when no choices are available.</li>
-  <li>list-box – Default for parameters with choices.</li>
-  <li>check-box – Default for Boolean values.</li>
+  <li>text-box ? Default for non-Boolean values when no choices are available.</li>
+  <li>list-box ? Default for parameters with choices.</li>
+  <li>check-box ? Default for Boolean values.</li>
 </ul>
 
 <p>The list-box control is rendered in the UI depending on the value of the 
@@ -367,16 +377,16 @@ value, and the control is rendered as a UI combo box.</p></div>
 <p> <code>mustMatch</code> property</p></div>
 
 <hr>
-<h2><a name="Property-dataSet">dataSet Property</a></h2>
+<h2><a name="Property-dataSetName">dataSetName Property</a></h2>
 
 <p class="section-text">The name of the data set to execute to obtain a selection list dynamically.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#string">string</a></td></tr>
+<td><a href="../elements/DataSet.html">DataSet</a> Reference</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -410,8 +420,8 @@ the fixedOrder property is false.)</p>
 also contain a column that returns the labels for the values. All other columns 
 are ignored. The choice is that passed to the report when run. The optional 
 display value is shown to the user in the UI. For example, the display values 
-might be &quot;Residential&quot;, &quot;Commercial&quot;, and &quot;Government&quot; while the corresponding 
-parameter values are &quot;R&quot;, &quot;C&quot;, and &quot;G&quot;.</p></div>
+might be &quot;Residential?, &quot;Commercial?, and &quot;Government? while the corresponding 
+parameter values are &quot;R?, &quot;C?, and &quot;G?.</p></div>
 
 <hr>
 <h2><a name="Property-dataType">dataType Property</a></h2>
@@ -493,11 +503,7 @@ And, the parameter can require that the user select one of the choices.</p></div
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#expression">expression</a></td></tr>
-<tr><td>Context:</td>
-<td></td></tr>
-<tr><td>Expression Type:</td>
-<td>any</td></tr>
+<td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
@@ -523,36 +529,6 @@ And, the parameter can require that the user select one of the choices.</p></div
 <div class="section-text">
 <p>The default value for the parameter. The default value 
 can be an expression, but cannot reference any other parameters.</p></div>
-
-<hr>
-<h2><a name="Property-displayPrompt">displayPrompt Property</a></h2>
-
-<p class="section-text"></p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Type:</td>
-<td><a href="../types.html#string">string</a></td></tr>
-<tr><td>Since:</td>
-<td></td></tr>
-<tr><td>Required:</td>
-<td>No</td></tr>
-<tr><td>Display Name:</td>
-<td>Display prompt</td></tr>
-<tr><td>JavaScript Type:</td>
-<td></td></tr>
-<tr><td>Default Value:</td>
-<td>None</td></tr>
-<tr><td>Inherited:</td>
-<td>Yes</td></tr>
-<tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
-<tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
-<tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
-</table>
-
 
 <hr>
 <h2><a name="Property-fixedOrder">fixedOrder Property</a></h2>
@@ -638,8 +614,8 @@ and the unformatted value presented, when the user edits the parameter value.</p
 default the UI should use the following rules:</p>
 
 <ul>
-  <li>Text – No formatting.</li>
-  <li>Number, Float, Date-Time – Default locale formatting.</li>
+  <li>Text ? No formatting.</li>
+  <li>Number, Float, Date-Time ? Default locale formatting.</li>
 </ul>
 
 <p>The format string must be one of the valid BIRT format strings (see the Style 
@@ -662,7 +638,7 @@ value for each choice in a dynamic list.</p>
 <tr><td>Expression Type:</td>
 <td>string</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -686,6 +662,40 @@ value for each choice in a dynamic list.</p>
 <div class="section-text">
 <p>An expression on the data row from the dynamic list data set that returns the 
 prompt for the choice. If omitted, then BIRT uses the value as the label.</p></div>
+
+<hr>
+<h2><a name="Property-listLimit">listLimit Property</a></h2>
+
+<p class="section-text">List limitation number.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#integer">integer</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>List limit</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Value for the list limitation number. This property is used to limit the parameter display list.</p></div>
 
 <hr>
 <h2><a name="Property-mustMatch">mustMatch Property</a></h2>
@@ -726,6 +736,40 @@ enter additional values as well. Ignored if the property does not have a
 selection list.</p></div>
 
 <hr>
+<h2><a name="Property-promptText">promptText Property</a></h2>
+
+<p class="section-text">The prompt text displayed when user input the parameter value.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Prompt text</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The text that will be displayed to the user when he/she is prompt for the parameter value.</p></div>
+
+<hr>
 <h2><a name="Property-selectionList">selectionList Property</a></h2>
 
 <p class="section-text">Defines a selection list for the parameter: static 
@@ -761,7 +805,7 @@ list of values from which the user can choose.</p>
 <p>The parameter selection list provides a developer-defined list of choices. 
 Every choice has two parts: a choice and a label. The label can be externalized 
 and appears in the UI. The choice is the value passed to the report. For 
-example, labels may be &quot;Open&quot; and &quot;Closed&quot;, while the values are &quot;0&quot; and &quot;1&quot;.</p>
+example, labels may be &quot;Open? and &quot;Closed?, while the values are ?0? and ?1?.</p>
 <p>The items in the list are of the type given by the parameter data type.</p></div>
 <h3>See Also</h3>
 
@@ -787,7 +831,7 @@ of each choice in a dynamic list.</p>
 <tr><td>Expression Type:</td>
 <td>any</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -811,5 +855,54 @@ of each choice in a dynamic list.</p>
 <div class="section-text">
 <p>An expression on the data row from the dynamic list data set that returns the 
 value for the choice. If omitted, then BIRT uses the first column.</p></div>
+
+<hr>
+<h2><a name="Property-valueType">valueType Property</a></h2>
+
+<p class="section-text">Type of the parameter</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (paramValueType)</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Type</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>static</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>static</td>
+<td>Static</td>
+<td>static</td>
+<td></td></tr>
+<tr><td>dynamic</td>
+<td>Dynamic</td>
+<td>dynamic</td>
+<td></td></tr>
+</tbody></table><br>
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Type of the parameter, can be static or dynamic</p></div>
 </body>
 </html>

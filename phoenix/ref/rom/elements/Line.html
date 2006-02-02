@@ -9,13 +9,15 @@
 <p class="title">Eclipse BIRT Report Object Model (ROM)</p>
 <p class="subtitle">Line Element</p>
 <h1>Element Overview</h1>
+<div class="section-text">
+Lines to add graphical interest to a report.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
 <td>Line</td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>reserved</td></tr>
 <tr><td>XML Element:</td>
 <td><code>null</code></td></tr>
 <tr><td>Extends:</td>
@@ -40,7 +42,7 @@
 
 <dl class="section-text">
 <dt><a href="#Property-orientation">orientation</a></dt>
-<dd></dd>
+<dd>The orientation of the line: Horizontal (default) or Vertical.</dd>
 </dl>
 
 <h3>Inherited Properties</h3>
@@ -51,11 +53,14 @@
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
@@ -85,23 +90,37 @@
 <a href="Style.html#Property-paddingRight">paddingRight</a>, 
 <a href="Style.html#Property-paddingTop">paddingTop</a>
 </p>
-<h3>Inherited Methods</h3>
+<h3>Description</h3>
 
-<p class="section-text">
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
+<div class="section-text">
+<p>Customers often use lines and rectangles to add graphical interest to a report. 
+For example, the customer may draw a box around certain fields to group them. Or,
+the customer may use alternating background colors to improve report legibility.
+
+<p>Most reports are intended for viewing on the web. Web browsers generally support 
+only horizontal and vertical, but not diagonal lines. Diagonal lines require an image 
+which imposes extra cost and is difficult to correctly format. So, BRD limits support 
+to horizontal and vertical lines, but not diagonal lines. 
+
+<p>The user can set the line size, line color and line pattern using the item's style.
+
+<p>A line item describes a line along the edge of a rectangle. If orientation is vertical, 
+the line is along the left edge of the bounding box. If the line is horizontal, the line 
+is along the top edge of the bounding box. That is, the X and Y properties give the line 
+origin. The Width property gives the length of horizontal lines, the Height property gives 
+the width of vertical lines.</div>
 <h1>Property Detail</h1>
 
 <h2><a name="Property-orientation">orientation Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The orientation of the line: Horizontal (default) or Vertical.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (lineOrientation)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -135,5 +154,9 @@
 <td>vertical</td>
 <td></td></tr>
 </tbody></table><br>
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Orientation of the line.</div>
 </body>
 </html>

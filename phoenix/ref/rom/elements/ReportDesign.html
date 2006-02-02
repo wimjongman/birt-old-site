@@ -31,7 +31,7 @@ The report design element represents report as a whole.</div>
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>No</td></tr>
 </table>
@@ -39,56 +39,66 @@ The report design element represents report as a whole.</div>
 <h3>Property Summary</h3>
 
 <dl class="section-text">
-<dt><a href="#Property-base">base</a></dt>
-<dd>A base directory to use when computing relative links from this report.</dd>
+<dt><a href="#Property-cheatSheet">cheatSheet</a></dt>
+<dd></dd>
+<dt><a href="#Property-dataSourceBindings">dataSourceBindings</a></dt>
+<dd>List of bindings defined for report data sources.</dd>
+<dt><a href="#Property-displayName">displayName</a></dt>
+<dd>Display name of the report design</dd>
+<dt><a href="#Property-displayNameID">displayNameID</a></dt>
+<dd>Resource key for the localizable display name property.</dd>
+<dt><a href="#Property-eventHandlerClass">eventHandlerClass</a></dt>
+<dd>The full qulified name of the event handler class.</dd>
+<dt><a href="#Property-iconFile">iconFile</a></dt>
+<dd>The design icon/thumbnail file path</dd>
 <dt><a href="#Property-refreshRate">refreshRate</a></dt>
 <dd>The refresh rate when viewing the report.</dd>
-<dt><a href="#Property-version">version</a></dt>
-<dd></dd>
 </dl>
 
 <h3>Method Summary</h3>
 
 <dl class="section-text">
-<dt><a href="#Method-afterCloseDoc">afterCloseDoc</a></dt>
-<dd>Called just after closing the report document file in 
-the Factory. Allows the report to perform Factory cleanup.</dd>
 <dt><a href="#Method-afterFactory">afterFactory</a></dt>
 <dd>Perform initialization before opening the report document for writing.</dd>
-<dt><a href="#Method-afterOpenDoc">afterOpenDoc</a></dt>
-<dd>Called just after opening the report document file in the Factory.</dd>
 <dt><a href="#Method-afterRender">afterRender</a></dt>
 <dd>Called after completing a presentation time action.</dd>
-<dt><a href="#Method-beforeCloseDoc">beforeCloseDoc</a></dt>
-<dd>Called just before closing the report document file 
-in the Factory. Allows the report to set additional properties on the file 
-before closing the file.</dd>
 <dt><a href="#Method-beforeFactory">beforeFactory</a></dt>
 <dd>Perform initialization before opening the report document for writing.</dd>
-<dt><a href="#Method-beforeOpenDoc">beforeOpenDoc</a></dt>
-<dd>Called just before opening the report document file 
-in the Factory. Allows the report to control the name and other properties of 
-this file.</dd>
 <dt><a href="#Method-beforeRender">beforeRender</a></dt>
 <dd>Called before starting a presentation time action.</dd>
+<dt><a href="#Method-initialize">initialize</a></dt>
+<dd>Called when the report starts executing in the BIRT Report Engine.</dd>
 </dl>
 
 <h3>Slot Summary</h3>
 
 <dl class="section-text">
+<dt><a href="#Slot-styles">styles</a></dt>
+<dd>List of user-defined styles used to format elements in the report.</dd>
+<dt><a href="#Slot-parameters">parameters</a></dt>
+<dd>A list of Parameter elements that describe the data that the user can enter when running the report.</dd>
+<dt><a href="#Slot-dataSources">dataSources</a></dt>
+<dd>The connections used by the report.</dd>
+<dt><a href="#Slot-dataSets">dataSets</a></dt>
+<dd>Data sets (queries) defined in the design.</dd>
+<dt><a href="#Slot-pageSetup">pageSetup</a></dt>
+<dd>The layout of the master pages within the report.</dd>
 <dt><a href="#Slot-components">components</a></dt>
 <dd>Reusable report items defined in this design. Report 
 items can extend these items. Defines a &quot;private library&quot; for this design.</dd>
 <dt><a href="#Slot-body">body</a></dt>
 <dd>The visual layout sections within the report.</dd>
 <dt><a href="#Slot-scratchPad">scratchPad</a></dt>
-<dd></dd>
+<dd>TBD</dd>
+<dt><a href="#Slot-templateParameterDefinitions">templateParameterDefinitions</a></dt>
+<dd>Stores the reusable template definitions.</dd>
 </dl>
 
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
 <a href="Module.html#Property-author">author</a>, 
+<a href="Module.html#Property-base">base</a>, 
 <a href="Module.html#Property-colorPalette">colorPalette</a>, 
 <a href="Module.html#Property-comments">comments</a>, 
 <a href="Module.html#Property-configVars">configVars</a>, 
@@ -97,17 +107,15 @@ items can extend these items. Defines a &quot;private library&quot; for this des
 <a href="Module.html#Property-descriptionID">descriptionID</a>, 
 <a href="Module.html#Property-helpGuide">helpGuide</a>, 
 <a href="Module.html#Property-images">images</a>, 
-<a href="Module.html#Property-includeLibraries">includeLibraries</a>, 
+<a href="Module.html#Property-includeResource">includeResource</a>, 
 <a href="Module.html#Property-includeScripts">includeScripts</a>, 
-<a href="Module.html#Property-msgBaseName">msgBaseName</a>, 
+<a href="Module.html#Property-libraries">libraries</a>, 
+<a href="Module.html#Property-propertyBindings">propertyBindings</a>, 
+<a href="Module.html#Property-theme">theme</a>, 
 <a href="Module.html#Property-title">title</a>, 
 <a href="Module.html#Property-titleID">titleID</a>, 
 <a href="Module.html#Property-units">units</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="Module.html#Method-initialize">initialize</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -133,26 +141,90 @@ cannot extend another design.</p>
 <p>Library element</p></div>
 <h1>Property Detail</h1>
 
-<h2><a name="Property-base">base Property</a></h2>
+<h2><a name="Property-cheatSheet">cheatSheet Property</a></h2>
 
-<p class="section-text">A base directory to use when computing relative links from this report.</p>
+<p class="section-text"></p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Base</td></tr>
+<td>Cheat sheet</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
 <td>None</td></tr>
 <tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
 <td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-dataSourceBindings">dataSourceBindings Property</a></h2>
+
+<p class="section-text">List of bindings defined for report data sources.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td>List of <a href="../structs/DataSourceParamBinding.html">DataSourceParamBinding</a> Structures</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Data Source bindings</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Defines all the bindings from data sources to a BIRT expression.</p></div>
+
+<hr>
+<h2><a name="Property-displayName">displayName Property</a></h2>
+
+<p class="section-text">Display name of the report design</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Display name</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
 <td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
@@ -164,12 +236,111 @@ cannot extend another design.</p>
 <h3>Description</h3>
 
 <div class="section-text">
-<p>A base directory to use when computing relative links 
-from this report. Most often used for reports created externally to the server 
-and submitted on the fly. Used when computing hyperlinks, library includes, 
-image includes and other relative file references.  See the W3C XML Base 
-standard for background:
-<a href="http://www.w3.org/TR/2001/REC-xmlbase-20010627/">http://www.w3.org/TR/2001/REC-xmlbase-20010627/</a>.</div>
+<p>The localized display name for the report design.</p></div>
+
+<hr>
+<h2><a name="Property-displayNameID">displayNameID Property</a></h2>
+
+<p class="section-text">Resource key for the localizable display name property.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Display name key</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Resource bundle key for the display name property, the localized display name value will
+be looked up from a resource file relating to the current locale.</p></div>
+
+<hr>
+<h2><a name="Property-eventHandlerClass">eventHandlerClass Property</a></h2>
+
+<p class="section-text">The full qulified name of the event handler class.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Event handler class</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Full quilified name of the event handler class, used to specify an external Java class
+which define the scripting behavior that will be executed at runtime.</p></div>
+
+<hr>
+<h2><a name="Property-iconFile">iconFile Property</a></h2>
+
+<p class="section-text">The design icon/thumbnail file path</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Icon file</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The design icon/thumbnail file path</p></div>
 
 <hr>
 <h2><a name="Property-refreshRate">refreshRate Property</a></h2>
@@ -207,71 +378,8 @@ report does not refresh)</span></td></tr>
 <p>The refresh rate when viewing the report. The viewer will 
 automatically rerun and redisplay the report. The rate is given in seconds. A 
 rate of 0 means no refresh.</p></div>
-
-<hr>
-<h2><a name="Property-version">version Property</a></h2>
-
-<p class="section-text"></p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Type:</td>
-<td><a href="../types.html#string">string</a></td></tr>
-<tr><td>Since:</td>
-<td></td></tr>
-<tr><td>Required:</td>
-<td>No</td></tr>
-<tr><td>Display Name:</td>
-<td>Version</td></tr>
-<tr><td>JavaScript Type:</td>
-<td></td></tr>
-<tr><td>Default Value:</td>
-<td>None</td></tr>
-<tr><td>Inherited:</td>
-<td>No</td></tr>
-<tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
-<tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
-<tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
-</table>
-
 <h1>Method Detail</h1>
 
-<h2><a name="Method-afterCloseDoc">afterCloseDoc Method</a></h2>
-
-<p class="section-text">Called just after closing the report document file in 
-the Factory. Allows the report to perform Factory cleanup.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.afterCloseDoc(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called just after closing the report document file in the 
-Factory. Allows the report to perform Factory cleanup.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>beforeCloseDoc</code> method</p></div>
-
-<hr>
 <h2><a name="Method-afterFactory">afterFactory Method</a></h2>
 
 <p class="section-text">Perform initialization before opening the report document for writing.</p>
@@ -302,38 +410,6 @@ document (if any). This is the last method called in the Factory.</p></div>
 
 <div class="section-text">
 <p><code>beforeFactory</code> method</p></div>
-
-<hr>
-<h2><a name="Method-afterOpenDoc">afterOpenDoc Method</a></h2>
-
-<p class="section-text">Called just after opening the report document file in the Factory.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.afterOpenDoc(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called just after opening the report document file in the 
-Factory.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>beforeOpenDoc</code> method</p></div>
 
 <hr>
 <h2><a name="Method-afterRender">afterRender Method</a></h2>
@@ -373,44 +449,6 @@ call to <code>afterRender</code>.</p></div>
 <p><code>beforeRender</code> method</p></div>
 
 <hr>
-<h2><a name="Method-beforeCloseDoc">beforeCloseDoc Method</a></h2>
-
-<p class="section-text">Called just before closing the report document file 
-in the Factory. Allows the report to set additional properties on the file 
-before closing the file.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.beforeCloseDoc(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>BIRT calls this method just after closing the report 
-document in the Factory. It allows the application to customize features of the 
-report document just before closing. Some deployment platforms require that 
-security, document aging and similar properties be set after closing the 
-document. Code in this method will likely be specific to the deployment 
-platform.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>afterCloseDoc</code> method</p></div>
-
-<hr>
 <h2><a name="Method-beforeFactory">beforeFactory Method</a></h2>
 
 <p class="section-text">Perform initialization before opening the report document for writing.</p>
@@ -425,7 +463,7 @@ platform.</p></div>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Context:</td>
-<td>factory</td></tr>
+<td>startup</td></tr>
 <tr><td>Arguments:</td>
 <td>None</td></tr>
 <tr><td>Return Type:</td>
@@ -444,42 +482,6 @@ method and before opening the report document (if any).</p></div>
 method</p>
 
 <p><code>afterFactory</code> method</p></div>
-
-<hr>
-<h2><a name="Method-beforeOpenDoc">beforeOpenDoc Method</a></h2>
-
-<p class="section-text">Called just before opening the report document file 
-in the Factory. Allows the report to control the name and other properties of 
-this file.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.beforeOpenDoc(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>BIRT calls this method just before opening the report 
-document in the Factory. It allows the application to customize features of the 
-report document such as its name, whether it is temporary, security, and so on. 
-Code in this script will likely be specific to the deployment platform.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p><code>afterOpenDoc</code> method</p></div>
 
 <hr>
 <h2><a name="Method-beforeRender">beforeRender Method</a></h2>
@@ -536,8 +538,195 @@ initialize</code> method will be called only when the report is first loaded.</p
 <p><code>initialize</code> method</p>
 
 <p><code>afterRender </code>method</p></div>
+
+<hr>
+<h2><a name="Method-initialize">initialize Method</a></h2>
+
+<p class="section-text">Called when the report starts executing in the BIRT Report Engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.initialize(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>BIRT calls this method before calling any other method in the design. </p></div>
 <h1>Slot Detail</h1>
 
+<h2><a name="Slot-styles">styles Slot</a></h2>
+
+<p class="section-text">List of user-defined styles used to format elements in the report.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Styles</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>styles</code></td></tr>
+<tr><td>Contents:</td>
+<td>List of <a href="Style.html">Style</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>User-defined styles used to format elements in the 
+report. Each style must have a unique name within the set of styles for this 
+report.</p></div>
+
+<hr>
+<h2><a name="Slot-parameters">parameters Slot</a></h2>
+
+<p class="section-text">A list of Parameter elements that describe the data that the user can enter when running the report.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Parameters</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>parameters</code></td></tr>
+<tr><td>Contents:</td>
+<td>List of <a href="Parameter.html">Parameter</a>, <a href="ParameterGroup.html">ParameterGroup</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A list of parameter elements that describe the data that 
+the user can enter when running the report. BIRT supports four kinds of 
+parameters identified above. The design can also include parameter groups that 
+organize parameters visually.</p>
+
+<p>The order of parameters within this slot in the design 
+file determines the order that they will appear in the requester UI.</p>
+
+<p>The parameters property provides a &quot;flattened&quot; list of 
+parameters. Each parameter identifies the group (if any) to which it belongs.</p>
+<p>Parameter values are also available using the
+<code>params</code> global variable.</p></div>
+
+<hr>
+<h2><a name="Slot-dataSources">dataSources Slot</a></h2>
+
+<p class="section-text">The connections used by the report.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Data Sources</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>data-sources</code></td></tr>
+<tr><td>Contents:</td>
+<td>List of <a href="DataSource.html">DataSource</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>This slot holds the list of data sources defined within 
+the report itself. Each data source must have a unique name. The order of items 
+within this slot is unimportant.</p></div>
+
+<hr>
+<h2><a name="Slot-dataSets">dataSets Slot</a></h2>
+
+<p class="section-text">Data sets (queries) defined in the design.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Data Sets</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>data-sets</code></td></tr>
+<tr><td>Contents:</td>
+<td>List of <a href="DataSet.html">DataSet</a>, <a href="TemplateDataSet.html">TemplateDataSet</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>This slot holds the list of data sets defined within the 
+report itself. Each data set must have a unique name. The order of items within 
+this slot is unimportant.</p></div>
+
+<hr>
+<h2><a name="Slot-pageSetup">pageSetup Slot</a></h2>
+
+<p class="section-text">The layout of the master pages within the report.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Page Setup</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>page-setup</code></td></tr>
+<tr><td>Contents:</td>
+<td><a href="MasterPage.html">MasterPage</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>The page setup defines the way that the report will 
+appear when printed. It consists of a master page that defines the page size, 
+page &quot;decoration&quot;, margins and so on. Some reports need to use different master 
+pages, perhaps to have the first page of the report appear in letterhead, with 
+the remaining pages on plain paper. Other reports may be printed and bound, 
+requiring differing page layout for the left and right pages.</p>
+
+<p>A report can omit the page setup information. If so, page 
+setup is taken from a library, if provided. If the library is not provided, or 
+does not have a page setup, or the master page does not have page dimensions, 
+then the setup comes from BIRT preferences, or from locale-specific defaults.</p>
+
+<p>If the user lists multiple master pages, but no page 
+sequences, then BIRT uses the first master page by default. If the user defines 
+one or more page sequences, then BIRT uses the first page sequence by default. 
+Other than these two cases, the order of elements within the page setup slot is 
+unimportant.</p>
+
+<p>This slot defines a name space; the name of each master 
+page and page sequence must be unique across the set of other page setup 
+elements.</p>
+
+<p>Only the simple master page is available in the first 
+release, and the design can contain at most one simple master page in the first 
+release.</p>
+
+<p>The page setup can contain zero or more master pages (of 
+either type) and zero or more page sequences (of either type). The simplest 
+report provides no master page. It will appear with the default pages size and 
+margins, and with no page header or footer.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>Library element</p></div>
+
+<hr>
 <h2><a name="Slot-components">components Slot</a></h2>
 
 <p class="section-text">Reusable report items defined in this design. Report 
@@ -594,10 +783,6 @@ styles, data sets, data sources, parameters and other elements cannot appear.</l
 <li>Report items in the components area can contain other items if their 
 definition allows. For example, a grid can contain other items.</li>
 </ul></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p>Library element</p></div>
 
 <hr>
 <h2><a name="Slot-body">body Slot</a></h2>
@@ -613,7 +798,7 @@ definition allows. For example, a grid can contain other items.</li>
 <tr><td>XML Element:</td>
 <td><code>body</code></td></tr>
 <tr><td>Contents:</td>
-<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
+<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 </table>
 
 <h3>Description</h3>
@@ -635,7 +820,7 @@ number of sections, in any order.</p></div>
 <hr>
 <h2><a name="Slot-scratchPad">scratchPad Slot</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">TBD</p>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -649,5 +834,32 @@ number of sections, in any order.</p></div>
 <td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="Line.html">Line</a>, <a href="List.html">List</a>, <a href="Rectangle.html">Rectangle</a>, <a href="Table.html">Table</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>TBD</p></div>
+
+<hr>
+<h2><a name="Slot-templateParameterDefinitions">templateParameterDefinitions Slot</a></h2>
+
+<p class="section-text">Stores the reusable template definitions.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Template Parameter Definitions</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>XML Element:</td>
+<td><code>template-parameter-definitions</code></td></tr>
+<tr><td>Contents:</td>
+<td>List of <a href="TemplateParameterDefinition.html">TemplateParameterDefinition</a></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Slot that stores the reusable template definitions, report items/data set/data source can
+be created from a template definition</p></div>
 </body>
 </html>

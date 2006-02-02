@@ -9,6 +9,8 @@
 <p class="title">Eclipse BIRT Report Object Model (ROM)</p>
 <p class="subtitle">ConfigVar Structure</p>
 <h1>Structure Overview</h1>
+<div class="section-text">
+Define a varialbe mostly for deployment-specific purpose.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -22,23 +24,36 @@
 
 <dl class="section-text">
 <dt><a href="#Property-name">name</a></dt>
-<dd></dd>
+<dd>Name of the variable.</dd>
 <dt><a href="#Property-value">value</a></dt>
-<dd></dd>
+<dd>Value of the configuration variable.</dd>
 </dl>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A report can have deployment-specific dependencies. For example, report developers
+ofen use a test database during development, but target a production database once the
+report is deployed online. Or, an OEM company may use a different company name in report 
+titiles for each of their customers.</p>
+
+<p>Experiences suggest that changing the report design to reflect these changes is both
+tedious and error-prone. We need a simple solution. Therefore, BIRT provides <i>configuration 
+variables</i>.  A configuration variable is simply a name/value pair very similar to an
+environment variable in Unix. Indeed, configuration variables include environment variables, 
+along with BIRT-specific values.</div>
 <h1>Property Detail</h1>
 
 <h2><a name="Property-name">name Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Name of the variable.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#name">name</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -51,18 +66,23 @@
 <td>Yes</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A configuration variable has a unique and required name, report use the name to references 
+a configuration variable.</p></div>
 
 <hr>
 <h2><a name="Property-value">value Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Value of the configuration variable.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -75,5 +95,9 @@
 <td>Yes</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Value of the configuration variable, report can override this value to provide a default value.</p></div>
 </body>
 </html>
