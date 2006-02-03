@@ -25,8 +25,9 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div id="maincontent">
-	<div id="midcolumn">
+	<div align=LEFT style="padding-left: 185px">
+	$deployLinksSideItem
+
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
@@ -857,8 +858,7 @@ Verify that you have set the Report Engine Home directory.
 Verify that you have the 2.0 Report Engine Download.
 </ol>
 
-	</div>
-	$deployLinksSideItem
+
 </div>
 
 EOHTML;
