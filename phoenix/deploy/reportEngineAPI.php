@@ -92,7 +92,7 @@ First download the Report Engine from the <a href=http://download.eclipse.org/bi
 C:\birtruntime\birt-runtime-2_0_0\Report Engine\plugins\org.eclipse.birt.report.engine.emitter.pdf\lib directory.
 <li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
 </ul>
-Some operating systems will have problems with the space in "Report Engine".  Rename it if needed.
+Some operating systems will have problems with the space in "Report Engine".  
 <br><br>
 The sample viewer servlet is also bundled with the Report Engine.  It is located under the Web Viewer Example directory.  If you decide to 
 use this example, make sure you copy the additional files to the appropriate locations.
