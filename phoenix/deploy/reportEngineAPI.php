@@ -36,7 +36,22 @@
 				<li><a href="#config">Installing the Engine</a></li>
 				<li><a href="#jdbc">Configuring JDBC Drivers</a></li>
 				<li><a href="#api">API Overview</a></li>
-				<li><a href="#example">Example Application</a></li>
+				<li><a href="#simpleexample">Simple Example</a></li>
+				<li><a href="#engineconfig">EngineConfig</a></li>
+				<li><a href="#reportengine">ReportEngine</a></li>
+				<li><a href="#ireportrunnable">IReportRunnable</a></li>
+				<li><a href="#ireportdocument">IReportDocument</a></li>
+				<li><a href="#ienginetask">IEngineTask</a></li>
+				<li><a href="#idataextractiontask">IDataExtractionTask</a></li>
+				<li><a href="#idatapreviewtask">IDataPreviewTask</a></li>
+				<li><a href="#igetparameterdefinitiontask">IGetParameterDefinitionTask</a></li>
+				<li><a href="#irendertask">IRenderTask</a></li>
+				<li><a href="#iruntask">IRunTask</a></li>
+				<li><a href="#irunandrendertask">IRunAndRenderTask</a></li>
+				<li><a href="#miscellaneous">Miscellaneous</a></li>
+				<li><a href="#emitterconfiguration">Emitter Configuration</a></li>
+				<li><a href="#commonproblems">Common Problems</a></li>	
+				
 			</ul>
 		</blockquote>
 
@@ -77,8 +92,8 @@ C:\birtruntime\birt-runtime-2_0_0\Report Engine\plugins\org.eclipse.birt.report.
 <li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
 </ul>
 Some operating systems will have problems with the space in "Report Engine".  Rename it if needed.
-<br>
-The sample viewer is also bundled with the Report Engine.  It is located under the Web Viewer Example directory.  If you decide to 
+<br><br>
+The sample viewer servlet is also bundled with the Report Engine.  It is located under the Web Viewer Example directory.  If you decide to 
 use this example, make sure you copy the additional files to the appropriate locations.
 <ul>
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
@@ -88,13 +103,13 @@ use this example, make sure you copy the additional files to the appropriate loc
 </ul>
 
 
-<h3>Engine Source</h3>
+<h2>Engine Source</h2>
 <p>If you prefer to work directly with the BIRT source code, the Engine API is 
 in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS in
 <code><a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
 source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a></code>.</p>
 
-<h3>Javadoc</h3>
+<h2>Javadoc</h2>
 
 <p>This article provides an overview of the engine. To do actual development, 
 consult the Engine Javadoc.</p>
@@ -102,30 +117,10 @@ consult the Engine Javadoc.</p>
 <h2><a name="jdbc"></a>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
 
-
-<p>The report engine uses the Eclipse plugin mechanism for managing extensions. 
-One of those extensions is a bridge between BIRT and JDBC implemented using the 
-BIRT Open Data Access (ODA) framework. JDBC drivers are defined in the <code>plugin.xml</code> 
-file for the JDBC extension: <code><i>ENGINE-HOME</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_version/plugin.xml</code>.
-Use any text editor to edit the configuration file. Add an entry such as the one 
-shown in bold below.</p>
-
-<pre class="code-block">&lt;runtime&gt;
-  &lt;library name=&quot;oda-jdbc.jar&quot;&gt;
-    &lt;export name=&quot;*&quot;/&gt;
-  &lt;/library&gt;
-  <b>&lt;library name=&quot;lib/<i>driver_name</i>.jar&quot;&gt;
-    &lt;export name=&quot;*&quot;/&gt;
-  &lt;/library&gt;</b>
-&lt;/runtime&gt;
-</pre>
-
-  <p>Where <i>driver_name</i> is the name of your JDBC driver JAR. Add another <code>&lt;LibraryName></code> element for each 
-additional JDBC driver JAR file that might be needed. Put the library itself 
-  into the lib directory: <code><i>ENGINE-HOME</i>/plugins/org.eclipse.birt.report.data.oda.jdbc_version/lib.</code></p>
-  <p>More information about the ODA runtime driver extension point schema can be 
-  found in CVS BIRT source tree: <code>org.eclipse.birt.data.oda/schema/odaDriverRuntime.exsd</code>. 
-  Use the Eclipse PDE Tools to see its reference document.</p>
+<p>To do this, copy the driver jar file to the 
+ReportEngineInstall/birt-runtime-2_0_0/Report Engine/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
+directory.
+</p>
 
 <h2><a name="api"></a>API Overview</h2>
 
@@ -143,12 +138,23 @@ interfaces you use for each step.</p>
   <li>Repeat steps 3-5 for the next report.</li>
   <li>When done, call <code>destroy(&nbsp;)</code> on your engine instance.</li>
 </ol>
+<p>
+See the <a href="#basic">Simple example</a> below that illustrates these steps.
+</p> 
 
 <p>The following sections describe the primary Engine classes in detail. The 
 Engine API includes a number of secondary helper classes referenced within each 
-description.</p>
+description.  The diagram below, serves as an overview of the classes needed to
+accomplish a given task.
+</p>
+</p>
 
-<h3><code>EngineConfig</code> Class</h3>
+<img src="tasks.jpg" width="729" height="533" /><br/><br/>
+
+</p>
+
+
+<h2><a name="engineconfig"></a>EngineConfig</h2>
 
 <p>Use the <code>EngineConfig</code> class to set global options for the report engine as a 
 whole. Use it to specify the location of engine plugins, the location of data 
@@ -159,55 +165,20 @@ method.</p>
 config.setEngineHome( &quot;put engine path here&quot; );</pre>
 <br>The engine home should be set to
 <br>installedlocation/birt-runtime-version/Report Engine
-
-
-<h3>Emitter Configuration</h3>
-
-<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides two emitters: HTML and PDF. You'll want to configure the HTML 
-emitter to manage images and links. BIRT supports three kinds of images:</p>
-
+<p>
+Other functions of interest within this Class are:
 <ul>
-  <li>Images referenced using a URL</li>
-  <li>Embedded images</li>
-  <li>Images created to represent charts</li>
+<li><code>
+setLogConfig(String directoryName, Level level)
+</code><br>
+This call sets the Log directory name and level (OFF, SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST and ALL)
 </ul>
 
-<p>Your application must have a policy for handling images in HTML. URL-based 
-images are usually no problem. However, you'll need to handle the other two. The 
-<code>IHTMLImageHandler</code> interface defines the policy. The BIRT Engine provides two 
-default implementations:</p>
+</p>
 
-<ul>
-  <li><code>HTMLCompleteImageHandler</code>: used to write images to disk when rendering a 
-  report to produce an HTML file on disk.</li>
-  <li><code>HTMLServerImageHandler</code>: used to handle images for an engine running in an 
-  app server. This class is used by the BIRT web app.</li>
-</ul>
+<h2><a name="reportengine"></a>ReportEngine</h2>
 
-<p>You can also create your own implementation of <code>IHTMLImageHandler</code> if the above 
-don't meet your needs.</p>
-
-<p>Here's how to create an emitter configuration and set the image handler:</p>
-
-<pre class="code-block">EngineConfig config = new EngineConfig( );
-
-// Create the emitter configuration.
-
-HTMLEmitterConfig hc = new HTMLEmitterConfig( );
-
-// Use the &quot;HTML complete&quot; image handler to write the files to disk.
-
-HTMLCompleteImageHandler imageHandler = new HTMLCompleteImageHandler( );
-hc.setImageHandler( imageHandler );
-
-// Associate the configuration with the HTML output format.
-
-config.setEmitterConfiguration( HTMLRenderOption.OUTPUT_FORMAT_HTML, hc );</pre>
-
-
-<h3><code>ReportEngine</code> Class</h3>
-
-<p>The <code>ReportEngine</code>&nbsp; class represents the BIRT Report Engine. There is a significant cost associated with creating an engine instance, due 
+<p>The <code>ReportEngine</code>&nbsp;class represents the BIRT Report Engine. There is a significant cost associated with creating an engine instance, due 
 primarily to the cost of loading extensions. Therefore, each application should 
 create create just one <code>ReportEngine</code> instance and use it to run multiple reports.</p>
 <p>The report engine is created through its constructor that takes an 
@@ -233,34 +204,90 @@ catch ( EngineException e1 )
     // Ignore
 }</pre>
 
+<p>
+Other functions of interest within this Class are:
+<ul>
+<li><code>
+engine.changeLogLevel(java.util.logging.Level.FINE);
+</code><br>
+Change engine log level (OFF, SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST and ALL)
+</ul>
 
-<h3><code>IReportRunnable</code> Class</h3>
+</p>
 
 
-<p>BIRT reports are stored as an XML file. To work with the report in the 
-engine, you must first load the report using one of the <code>openDesign(&nbsp;)</code> methods in 
-the <code>ReportEngine</code> class. These methods return an 
+
+
+<h2><a name="ireportrunnable"></a>IReportRunnable</h2>
+
+
+<p>BIRT report designs are stored as XML files.  By default the extension is rptdesign.
+<br>
+To work with the report design in the engine, you must first load the report using one of the <code>openDesign(&nbsp;)</code> methods in 
+the <code>ReportEngine</code> class.</p>
+<p>
+The report design open methods return a 
 <code>IReportRunnable</code> instance that represents the engine's view of the 
 report design. </p>
 
+
 <pre class="code-block">IReportRunnable report = engine.openReportDesign( name );</pre>
 
-<p>Use this object to obtain parameter data or run the report. The class 
+<p>
+Note that openReportDesign can take a String or an InputStream.
+
+
+Use the returned object to obtain parameter data or run the report.<br> The class 
 provides methods for getting report properties such as the title, author and so 
 on. It also provides methods for getting images embedded (stored) within the 
 report design. If your application requires more information about the design, you can 
 obtain a Design Engine report handle, then use the BIRT <a href="de-api.html">
 Design Engine API</a> to traverse though the report design.</p>
 
-<h3><code>IEngineTask</code> Abstract Base Class</h3>
+
+<h2><a name="ireportdocument"></a>IReportDocument</h2>
+
+
+<p>BIRT optionally can store reports in an intermediate format, after generation and before rendering.
+This document, with the default extension rptdocument, can be manipulated with the IReportDocument class.
+The Engine will create this document when the <code>runTask</code> is used.  The BIRT viewer uses this
+format to do pagination, TOCs, CSV extraction, bookmarks, etc.
+</p>
+<p>The Engine's <code>openDocument</code> method returns a <code>IReportDocument</code> that represents the intermediate report document. 
+</p>
+<p>
+The example below illustrates getting the TOC from the report document, after the runTask is used to generate
+the report.
+</p>
+
+
+<pre class="code-block">
+IReportDocument ird = engine.openReportDocument("c:/work/test/TOCTest.rptdocument");
+//get root node
+TOCNode td = ird.findTOC(null);
+List children = td.getChildren( );
+//Loop through Top Level Children
+if ( children != null && children.size( ) > 0 )
+{
+	for ( int i = 0; i < children.size( ); i++ )
+	{
+		TOCNode child = ( TOCNode ) children.get( i );
+		System.out.println( "Node ID " + child.getNodeID());
+		System.out.println( "Node Display String " + child.getDisplayString());
+		System.out.println( "Node Bookmark " + child.getBookmark());
+			
+	}
+}
+</pre>
+
+<h2><a name="ienginetask"></a>IEngineTask</h2>
 
 <p>BIRT reports support scripting. Operations that execute scripts require a 
 scripting context. Report operations also require a locale. BIRT Engine tasks 
 provide the framework for managing the scripting context, report locales and so 
 on. In general, if an operation requires neither a script context nor a locale, 
 it will appear as a method on the engine or the report design. However, if the 
-operation does 
-require these items; then the operation is represented by a task class.</p>
+operation does require these items, then a task class represents the operation.</p>
 
 <p>For example, opening a design file or retrieving an image in the design file 
 do not require setting up a scripting context. Other operations, such as 
@@ -268,11 +295,145 @@ retrieving default parameters, retrieving a dynamic selection list, and running
 and rendering a report, all support scripting, require a scripting context, and 
 are represented as tasks.</p>
 
-<p>Create tasks using the factory methods on the <code>ReportEngine</code> class. Each task 
-takes a report runnable (design), a scripting context, a locale, and other 
-information.</p>
+<p>Create tasks using the factory methods on the <code>ReportEngine</code> class.
+The supported Tasks are shown below:<br> 
+</p>
+<ul>
+<li><code>
+	engine.createDataExtractionTask();
+</code>
+<li><code>
+	engine.createDataPreviewTask();;
+</code>
+<li><code>
+	engine.createGetParameterDefinitionTask();
+</code>
+<li><code>
+	engine.createRenderTask();
+</code>
+<li><code>
+	engine.createRunTask();
+</code>
+<li><code>
+	engine.createRunAndRenderTask();
+</code>
+</ul>
+<p></p>
 
-<h3><code>IGetParameterDefinitionTask</code> Class</h3>
+
+<h2><a name="idataextractiontask"></a>IDataExtractionTask</h2>
+
+<p>Use this task to extract data from a report document.  The BIRT viewer uses
+this class to extract report data into CSV format.  This class supports extracting
+data from the report document by specifying the result set and columns you would
+like to have extracted.
+<br>
+From the Viewer code
+</br>
+<pre class="code-block">
+dataTask.selectResultSet( resultSetName );
+dataTask.selectColumns( columnNames );
+dataTask.setLocale( locale );
+</pre>
+</p>
+
+<p>
+Below is an example that uses the Data Extraction Task to extract the first two columns of data.
+</p>
+<pre class="code-block">
+//Open previously created report document
+IReportDocument iReportDocument = engine.openReportDocument("c:/work/test/TOCTest.rptdocument");
+
+//Create Data Extraction Task		
+IDataExtractionTask iDataExtract = engine.createDataExtractionTask(iReportDocument);
+
+//Get list of result sets		
+ArrayList resultSetList = (ArrayList)iDataExtract.getResultSetList( );
+
+//Choose first result set
+IResultSetItem resultItem = (IResultSetItem)resultSetList.get( 0 );
+String dispName = resultItem.getResultSetName( );
+iDataExtract.selectResultSet( dispName );
+
+IExtractionResults iExtractResults = iDataExtract.extract();
+IDataIterator iData = null;
+try{
+	if ( iExtractResults != null )
+	{
+		iData = iExtractResults.nextResultIterator( );
+
+		//iterate through the results
+		if ( iData != null  ){
+			while ( iData.next( ) )
+			{	
+				Object objColumn1;
+			    Object objColumn2;
+				try{
+					objColumn1 = iData.getValue(0);
+				}catch(DataException e){
+					objColumn1 = new String("");
+				}
+				try{
+					objColumn2 = iData.getValue(1);
+				}catch(DataException e){
+					objColumn2 = new String("");
+				}
+					System.out.println( objColumn1 + " , " + objColumn2 );
+			}
+			iData.close();
+		}
+	}
+}catch( Exception e){
+		e.printStackTrace();
+}
+
+iDataExtract.close();
+</pre>
+
+<h2><a name="idatapreviewtask"></a>IDataPreviewTask</h2>
+
+
+<p>Use this task to run Data Sets that exist within the report design.  The following
+example opens test.rptdesign and executes the Data Set named "Customers". </p>
+<pre class="code-block">
+//Open a report design  
+IReportRunnable design = engine.openReportDesign("c:/work/test/test.rptdesign"); 
+		
+//Create Data Preview task 
+IDataPreviewTask task = engine.createDataPreviewTask(design); 	
+//Execute Data Set, returning only 10 rows.  Set binding map to null (We have no data set parameters)
+IQueryResults actualResultSet = task.executeDataSet("Customers", 10, null);
+
+try{
+	if ( actualResultSet != null )
+	{	
+		//Iterate through results		  
+		Collection col = actualResultSet.getPreparedQuery( ).getReportQueryDefn( ).getRowExpressions( );
+		IBaseExpression[] expressions = (IBaseExpression[])col.toArray( new IBaseExpression[col.size( )]);
+		IResultIterator iter = actualResultSet.getResultIterator( );
+		
+		int columnCount = expressions.length;				
+		for ( int n = 0; n < columnCount; n++ )
+		{
+			System.out.print( actualResultSet.getResultMetaData().getColumnName(n+1) + "--" );
+		}				
+		System.out.println("");
+		while ( iter.next( ) )
+		{
+			for ( int n = 0; n < columnCount; n++ )
+			{
+				System.out.print( iter.getString( expressions[n] )+ "--" );
+			}
+			System.out.println("");
+
+		}
+		actualResultSet.close( );
+	}		
+} catch ( BirtException ex ){
+	ex.printStackTrace( );
+}
+</pre>
+<h2><a name="igetparameterdefinitiontask"></a>IGetParameterDefinitionTask</h2>
 
 <p>Use this task to obtain information about parameters. Parameter default 
 values are expressions, and so a scripting context (represented by the task) is 
@@ -289,38 +450,67 @@ ungrouped form (useful for creating a programmatic interface.)</p>
 interfaces provide 
 information about parameter groups and individual parameters.</p>
 
-<pre id="code">// Get the parameter definitions
+<p>
+The following example opens a report design and iterates through the parameters and parameter groups.
+If a List Box parameter is found, which is not in a group, the selection values are
+retieved.
+<pre id="code">
 
-IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( report );
+//Open a report design 
+IReportRunnable design = engine.openReportDesign("C:/work/test/parameters.rptdesign"); 
+		
+IGetParameterDefinitionTask task = engine.createGetParameterDefinitionTask( design );
 Collection params = task.getParameterDefns( true );
 
-// The collection contains parameters and parameter groups.
-
 Iterator iter = params.iterator( );
+//Iterate over all parameters
 while ( iter.hasNext( ) )
 {
-    IParameterDefnBase param = (IParameterDefnBase) iter.next( );
-    if ( param instanceof IParameterGroupDefn )
-    {
-        IParameterGroupDefn group = (IParameterGroupDefn) param;
-
-        // Do something with the parameter group.
-        // Iterate over group contents.
-
-        Iterator i2 = group.getContents( ).iterator( );
-        while ( iter.hasNext( ) )
-        {
-            IScalarParameterDefn scalar = (IScalarParameterDefn) i2.next( );
-            
-            // Do something with a parameter within a group.
-    }
-    else
-    {
-        IScalarParameterDefn scalar = (IScalarParameterDefn) i2.next( );
-
-        // Do something with a top-level parameter.
-    }
-}</pre>
+	IParameterDefnBase param = (IParameterDefnBase) iter.next( );
+	//Group section found
+	if ( param instanceof IParameterGroupDefn )
+	{
+		//Get Group Name
+		IParameterGroupDefn group = (IParameterGroupDefn) param;
+		System.out.println( "Parameter Group: " + group.getName( ) );
+		
+		//Get the parameters within a group
+		Iterator i2 = group.getContents( ).iterator( );
+		while ( i2.hasNext( ) )
+		{
+			IScalarParameterDefn scalar = (IScalarParameterDefn) i2.next( );
+			System.out.println("\t" + scalar.getName());
+		}
+		        
+	}
+	else
+	{
+		//Parameters are not in a group
+		IScalarParameterDefn scalar = (IScalarParameterDefn) param;
+		System.out.println(param.getName());
+		
+		//Parameter is a List Box
+		if(scalar.getControlType() ==  IScalarParameterDefn.LIST_BOX)
+		{
+		    Collection selectionList = task.getSelectionList( param.getName() );
+		    //Selection contains data    
+			if ( selectionList != null )
+			{
+				for ( Iterator sliter = selectionList.iterator( ); sliter.hasNext( ); )
+				{
+					//Print out the selection choices
+					IParameterSelectionChoice selectionItem = (IParameterSelectionChoice) sliter.next( );
+					String value = (String)selectionItem.getValue( );
+					String label = selectionItem.getLabel( );
+					System.out.println( label + "--" + value);
+				}
+			}		        
+		}   
+	}
+}
+		
+task.close();
+</pre>
 
 <p>Use the <code>IGetParameterDefinitionTask</code> class to evaluate the default value for a parameter. The parameter 
 default value is an expression, and the task provides the required execution 
@@ -330,17 +520,64 @@ context.</p>
 IGetParameterDefinitionTask task = ...;
 Object value = task.getDefaultValue( param );</pre>
 
-<h3><code>IRunAndRenderReportTask</code> Class</h3>
+
+<h2><a name="irendertask"></a>IRenderTask</h2>
+<p>Use this task to render a report document to either HTML or PDF. This task
+expects the document to exist, which means it has been generated with the <code>IRunTask</code> engine task.
+This class renders the report, based on the supplied page range or page number.</p>
+<p>
+The following example renders the first two pages of the "Pages" report document.  You will notice that
+it renders the two pages as one page of HTML.
+</p>
+<pre id="code">
+
+//Open a report document 
+IReportDocument iReportDocument = engine.openReportDocument("c:/work/test/Pages.rptdocument");
+//Create Render Task
+IRenderTask task = engine.createRenderTask(iReportDocument);
+		
+//Set Render context to handle url and image locataions
+HTMLRenderContext renderContext = new HTMLRenderContext();
+renderContext.setImageDirectory("image");
+HashMap contextMap = new HashMap();
+contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
+task.setAppContext( contextMap );
+		
+//Set Render Options
+HTMLRenderOption options = new HTMLRenderOption();
+options.setOutputFileName("c:\\work\\test\\pages.html");
+options.setOutputFormat("html");
+task.setRenderOption(options);
+				
+//Render Pages 1-2
+task.render("1-2");
+task.close();
+
+</pre>
+
+<h2><a name="iruntask"></a>IRunTask</h2>
+<p>Use this task to run a report and 
+generate a report document, that is saved to disk.  The report document can then be used with the
+<code>IRenderTask</code> to support features such as paging.</p>
+<p>The following example simply creates a report document and saves it to disk.</p>
+<pre id="code">
+//Open a report design 
+IReportRunnable design = engine.openReportDesign("C:/work/test/MyOrders.rptdesign"); 
+		
+//Create task to run the report - use the task to execute the report and save to disk.
+IRunTask task = engine.createRunTask(design); 
+			
+//run the report and destroy the engine
+task.run("c:/work/test/MyOrders.rptdocument");		
+
+task.close();
+</pre>
+
+
+<h2><a name="irunandrendertask"></a>IRunAndRenderTask</h2>
 <p>Use this task to run a report and 
 convert it to either HTML or PDF. This task does not save the report document 
 itself to disk. Create a new task for each report that you run.</p>
-
-<p class="caution"><span class="caution-head">Release 1.0.1  Note:</span> BIRT 1.0 
-supports the ability to run a report and to directly produce HTML or PDF. Later 
-versions will allow the ability to save the report document to disk for later 
-use. At that time, BIRT will provide other tasks to run the report, then later 
-to render a saved report document.
-</p>
 
 <p>Reports may take parameters. The <code>IRunAndRenderReportTask</code> takes parameter 
 values as a <code>HashMap</code>. The <code>IRunAndRenderReportTask</code> provides 
@@ -354,55 +591,268 @@ classes. Create the one for the output format you desire, set the options you
 need, and pass the instance to <code>IRunAndRenderReportTask</code> before running the 
 report.</p>
 
-<pre class="code-block">// Create the task
+<pre class="code-block">
 
-IRunAndRenderTask task = engine.createRunAndRenderTask( report );
+//Open a report design - use design to modify design, retrieve embedded images etc. 
+IReportRunnable design = engine.openReportDesign("C:/work/test/TopDeals.rptdesign"); 
+		
+//Create task to run the report and render the report
+IRunAndRenderTask task = engine.createRunAndRenderTask(design); 
+		
+//Set Render context to handle url and image locataions
+HTMLRenderContext renderContext = new HTMLRenderContext();
+renderContext.setImageDirectory("image");
+HashMap contextMap = new HashMap();
+contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
+task.setAppContext( contextMap );
+		
+//Set rendering options - such as file or stream output, 
+//output format, whether it is embeddable, etc
+HTMLRenderOption options = new HTMLRenderOption();
+//options.setOutputStream(System.out);
+options.setOutputFileName("c:\\work\\test\\pfilter.html");
+options.setOutputFormat("html");
+task.setRenderOption(options);
+		
+task.run();
 
-// Set up options for HTML output.
+</pre>
 
-HTMLRenderOption options = new HTMLRenderOption( );
-options.setOutputFormat( HTMLRenderOption.OUTPUT_FORMAT_HTML );
-options.setOutputFileName( outputName );
-task.setRenderOption( options );
+<h2><a name="miscellaneous"></a>Miscellaneous</h2>
+<p>Described below are some miscellaneous items that bear mentioning when using the BIRT Report Engine API</p>
 
-// Set parameter values using a HashMap. Parameters are name/value pairs.
-// The values must be Java objects of the correct type.
+<h4>Adding Script Objects</h4>
 
-HashMap params = new HashMap( );
-... 
-task.setParameterValues( params );
+<p>
 
-// Run the report.
+BIRT's script engine supports adding Java objects at the API level.  If you wish the
+Java object to be available to the Report, use the <code>task.addScriptableJavaObject("ScriptName", JavaObjectInstance)</code>
+method available to the task.
+</p>
+<p>
+Add the following code to your task.
+</p>
+<pre class="code-block">
+MyJavaObject jo = new MyJavaObject();
+task.addScriptableJavaObject("MyJavaScriptItem", jo);
+</pre>
+<p>
+Now within the the script editor, you can reference your Java Object as follows:
+</p>
+<pre class="code-block">
+testMyJavaObject = MyJavaScriptItem.getMyMethod();
+</pre>
 
-task.run( );</pre>
 
-<h2><a name="example"></a>Example Application</h2>
+<h4>Rendering to an Output Stream</h4>
+<p>
+When rendering a report it may be disireable to output the report to an output stream, such as <code>HttpServletResponse</code>.
+To do this modify your HTMLRenderOption instance to use <code>setOutputStream</code> instead of <code>setOutputFileName</code>.
+For example,
+<pre class="code-block">
+public void webReport( HttpServletResponse response )
+{
+.
+.
+.
+//Set rendering options 
+HTMLRenderOption options = new HTMLRenderOption();
+options.setOutputStream(response);
+task.setRenderOption(options);		
+//run the report
+task.run();
+}
+</pre>
 
 
-The best way to learn about the engine API is to look at a sample application. 
-This sample is a command-line application that takes a report design and can 
-either print parameter information about the design (-i option), or run and render the 
-report (-h option for HTML, -p option for PDF). When running, the utility takes a set of parameter values, and accepts 
-an output format. The application illustrates the major steps you should follow 
-in your own application.<p><a href="RunReport.java">Download the sample 
-application</a>.</p>
-<a href="birtengine.zip">Download the sample 
-application Ant project</a>.
-The Ant project has a readme.txt explaining which files need to be copied.
-<p>To run a <a href="test.rptdesign">sample report </a>to HTML, setting the 
-&quot;sample&quot; parameter to the value &quot;Hello&quot;:</p>
-<pre class="code-block">java RunReport test.rptdesign -h sample=Hello</pre>
-<p>To get information about the report properties and parameter definitions:</p>
-<pre class="code-block">java RunReport test.rptdesign -i</pre>
-This example has not been updated to reflect 2.0 changes yet.
-ReportRunner.java is delivered as part of the Engine API and offers a more complex example.
-You can check it out of CVS or download BIRT 2.0's version <a href="ReportRunner.java">here</a>.
+<h4>Embedding Report Output</h4>
 
+<p>
+If you need to embed your report output into an existing web page you can use the <code>options.setEmbeddable(true);</code> method.
+This will remove the <HTML> and <BODY> tags in the generated report.
+For example,
+<pre class="code-block">
+public void embedReport( HttpServletResponse response )
+{
+.
+.
+.
+//Set rendering options 
+HTMLRenderOption options = new HTMLRenderOption();
+options.setOutputStream(response);
+options.setEmbeddable(true);
+task.setRenderOption(options);		
+//run the report
+task.run();
+}
+</pre>
+
+
+<h2><a name="emitterconfiguration"></a>Emitter Configuration</h2>
+<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides two emitters: HTML and PDF. You'll want to configure the HTML 
+emitter to manage images and links. BIRT supports three kinds of images:</p>
+
+<ul>
+  <li>Images referenced using a URL</li>
+  <li>Embedded images</li>
+  <li>Images created to represent charts</li>
+</ul>
+
+<p>Your application must have a policy for handling images in HTML. URL-based 
+images are usually no problem. However, you'll need to handle the other two. The 
+<code>IHTMLImageHandler</code> interface defines the policy. The BIRT Engine provides two 
+default implementations:</p>
+
+<ul>
+  <li><code>HTMLCompleteImageHandler</code>: used to write images to disk when rendering a 
+  report to produce an HTML file on disk.</li>
+  <li><code>HTMLServerImageHandler</code>: used to handle images for an engine running in an 
+  app server. This class is used by the BIRT web app.</li>
+</ul>
+<p>When you instantiate a EngineConfig Class the HTMLCompleteImageHandler class is used by default.
+Images will be created in your temporary files location (ie C:\Documents and Settings\User\Local Settings\Temp).
+If this is not desired you can use the <code>HTMLRenderContext</code> class.
+
+<pre class="code-block">
+
+		//Create the HTMLRenderContext Class
+		HTMLRenderContext renderContext = new HTMLRenderContext();
+		//Set the image directory to be ./image
+		renderContext.setImageDirectory("image");
+		
+		//Set context for the RunAndRender Task
+		HashMap contextMap = new HashMap();
+		contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
+		task.setAppContext( contextMap );
+
+   </pre>    
+        
+<p>You can also create your own implementation of <code>IHTMLImageHandler</code> if the above 
+don't meet your needs.</p>
+<p>Here's how to create an emitter configuration and set the image handler:</p>
+
+<pre class="code-block">EngineConfig config = new EngineConfig( );
+
+// Create the emitter configuration.
+HTMLEmitterConfig hc = new HTMLEmitterConfig( );
+
+// Use the &quot;HTML complete&quot; image handler to write the files to disk.
+HTMLCompleteImageHandler imageHandler = new HTMLCompleteImageHandler( );
+hc.setImageHandler( imageHandler );
+
+// Associate the configuration with the HTML output format.
+config.setEmitterConfiguration( HTMLRenderOption.OUTPUT_FORMAT_HTML, hc );</pre>
+
+<p>
+
+If your code is going to be run in a servlet, please review the
+ReportEngineService.java code in CVS <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/birt/WEB-INF/classes/org/eclipse/birt/report/services/ReportEngineService.java?rev=HEAD&cvsroot=BIRT_Project&content-type=text/vnd.viewcvs-markup">ReportEngineService.java</a>
+The BIRT Viewer uses this Class to configure the engine.  The constructor for the ReportEngineService uses the HTMLServerImageHandler Class,
+which in turn reads Image locations from the Web.xml file.
+</p>
+<pre class="code-block">		
+	config = new EngineConfig( );
+	// Register new image handler
+	HTMLEmitterConfig emitterConfig = new HTMLEmitterConfig( );
+	emitterConfig.setActionHandler( new HTMLActionHandler( ) );
+ 	imageHandler = new HTMLServerImageHandler( );
+	emitterConfig.setImageHandler( imageHandler );
+	config.getEmitterConfigs( ).put( "html", emitterConfig ); 
+</pre>
+<br><br>
+
+<h2><a name="simpleexample"></a>Simple Example</h2>
+
+A simple example is presented below.
+To build this example:
+<ul>
+<li>Verify that your Engine Home is set correctly.
+<li>Set the folder locations for the report design and output HTML file.
+<li>Add jar files located in the Report Engine directory (from the Report Engine Download) to the Buildpath/Classpath
+</ul>
+
+<pre class="code-block">	
+import java.util.HashMap;
+
+import org.eclipse.birt.report.engine.api.EngineConfig;
+import org.eclipse.birt.report.engine.api.EngineException;
+import org.eclipse.birt.report.engine.api.HTMLRenderContext;
+import org.eclipse.birt.report.engine.api.HTMLRenderOption;
+
+import org.eclipse.birt.report.engine.api.IReportRunnable;
+import org.eclipse.birt.report.engine.api.IRunAndRenderTask;
+import org.eclipse.birt.report.engine.api.ReportEngine;
+import org.eclipse.birt.report.engine.api.EngineConstants;
+
+public class ExecuteReport {
+
+	static void executeReport() throws EngineException
+	{
+		//Engine Configuration - set and get temp dir, BIRT home, Servlet context
+		EngineConfig config = new EngineConfig();
+		config.setEngineHome( <b>"C:/birt-runtime-2_0_0/birt-runtime-2_0_0/Report Engine"</b> );	
+        
+		//Create the report engine
+		ReportEngine engine = new ReportEngine( config );
+		
+		
+		//Open a report design - use design to modify design, retrieve embedded images etc. 
+		IReportRunnable design = engine.openReportDesign(<b>"C:/work/test/forecast.rptdesign"</b>); 
+		
+		//Create task to run the report - use the task to execute and run the report,
+		IRunAndRenderTask task = engine.createRunAndRenderTask(design); 
+		
+		//Set Render context to handle url and image locataions
+		HTMLRenderContext renderContext = new HTMLRenderContext();
+		renderContext.setImageDirectory("image");
+		HashMap contextMap = new HashMap();
+		contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
+		task.setAppContext( contextMap );
+		
+		//Set rendering options - such as file or stream output, 
+		//output format, whether it is embeddable, etc
+		HTMLRenderOption options = new HTMLRenderOption();
+		options.setOutputFileName(<b>"c:/work/test/Forecast.html"</b>);
+		options.setOutputFormat("html");
+		task.setRenderOption(options);
+		
+		//run the report and destroy the engine
+		task.run();
+		
+		engine.destroy();
+	}	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try
+		{
+			executeReport( );
+		}
+		catch ( Exception e )
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
+</pre>
+
+
+<h2><a name="commonproblems"></a>Common Problems</h2>
+<ol>
+  <li>When running the API you recieve the following error:
+  SEVERE: Message:The extension point 
+[org.eclipse.birt.report.model.reportItemModel] is not found. Error 
+code:EXTENSION_POINT_NOT_FOUND.
+<br>
+Verify that you have set the Report Engine Home directory.
+Verify that you have the 2.0 Report Engine Download.
+</ol>
 
 	</div>
 	$deployLinksSideItem
 </div>
-
 
 EOHTML;
 
