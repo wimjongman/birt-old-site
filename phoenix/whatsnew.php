@@ -36,14 +36,12 @@
 			
 				<li>
 					<a href="http://www.eclipse.org/tptp/groups/Marketing/pressroom/pressreleases/BIRT%20and%20WTP.htm">
-						BIRT 2.0
-					</a>
 					TPTP Strengthens Integration with BIRT and WTP</a>
+						
 					<span class="dates">
 						02/03/06
 					</span>
-				</li>
-			
+				</li>			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.0
