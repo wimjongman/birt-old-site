@@ -51,7 +51,7 @@
 		<h2><a name="demonstration"></a>Demonstration</h2>
 		<ul class="midlist">
 			<li>
-				<a href="http://download.eclipse.org/birt/downloads/examples/reports/hyperlinking/Hyperlinking.html" target="_blank" class="top">Mapping Flash Example</a> –
+				<a href="http://download.eclipse.org/birt/downloads/examples/reports/hyperlinking/Hyperlinking.html" target="_blank" class="top">Hyperlinking Flash Example</a> –
 
 				This example demonstrates hyperlinking within BIRT.
 			</li>
