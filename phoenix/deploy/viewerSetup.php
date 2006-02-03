@@ -153,10 +153,10 @@
 				Rename the Web Viewer Example directory to birt.war, so it will deploy in place.
 			</li>
 			<li>
-				Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> jar file to the /birt.war/plugins/org.eclipse.birt.report.engine.pdf/lib directory.		
+				Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> jar file to the /birt.war/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib directory.		
 			</li>
 			<li>
-				Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /birt.war/plugins/org.eclipse.birt.report.viewer/birt/ajax/lib directory.
+				Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /birt.war/ajax/lib directory.
 			</li>
 			<li>
 				Download <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a> and extract <b>only</b> the six jars (listed below) to the birt.war/WEB-INF/lib directory.
