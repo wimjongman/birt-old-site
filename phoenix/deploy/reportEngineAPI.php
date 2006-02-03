@@ -676,7 +676,7 @@ task.run();
 
 <p>
 If you need to embed your report output into an existing web page you can use the <code>options.setEmbeddable(true);</code> method.
-This will remove the <HTML> and <BODY> tags in the generated report.
+This will remove the &lt;HTML&gt; and &lt;BODY&gt; tags in the generated report.
 For example,
 <pre style="font-size: 10pt">
 public void embedReport( HttpServletResponse response )
