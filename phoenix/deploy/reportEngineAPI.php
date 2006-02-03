@@ -98,16 +98,16 @@ use this example, make sure you copy the additional files to the appropriate loc
 <ul>
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
- <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
+ <li>Copy Axis jars (Only the six shown on the install page) to the /Web Viewer Example/WEB-INF/lib
  <li>If you are using the birt.war, you will need to extract it and add the above files.
 </ul>
 
 
 <h2>Engine Source</h2>
 <p>If you prefer to work directly with the BIRT source code, the Engine API is 
-in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS in
-<code><a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
-source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api</a></code>.</p>
+in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
+Eclipse CVS</a>.</p>
 
 <h2>Javadoc</h2>
 
@@ -161,8 +161,10 @@ whole. Use it to specify the location of engine plugins, the location of data
 drivers, and to add application-wide scriptable objects. At a minimum, you'll 
 want to set the location of the engine installation using the <code>setEngineHome(&nbsp;)</code> 
 method.</p>
-<pre class="code-block">EngineConfig config = new EngineConfig( );
-config.setEngineHome( &quot;put engine path here&quot; );</pre>
+<pre style="font-size: 10pt">>
+EngineConfig config = new EngineConfig( );
+config.setEngineHome( &quot;put engine path here&quot; );
+</pre>
 <br>The engine home should be set to
 <br>installedlocation/birt-runtime-version/Report Engine
 <p>
@@ -186,7 +188,8 @@ create create just one <code>ReportEngine</code> instance and use it to run mult
 means to use the default engine configuration. After using the engine, call 
 <code>destroy(&nbsp;)</code> to do clean up work, which includes unloading the extensions.</p>
 
-<pre class="code-block">EngineConfig config = new EngineConfig( );
+<pre style="font-size: 10pt">
+EngineConfig config = new EngineConfig( );
 ...
 ReportEngine engine = new ReportEngine( config );
 
@@ -231,7 +234,9 @@ The report design open methods return a
 report design. </p>
 
 
-<pre class="code-block">IReportRunnable report = engine.openReportDesign( name );</pre>
+<pre style="font-size: 10pt">
+IReportRunnable report = engine.openReportDesign( name );
+</pre>
 
 <p>
 Note that openReportDesign can take a String or an InputStream.
@@ -261,7 +266,7 @@ the report.
 </p>
 
 
-<pre class="code-block">
+<pre style="font-size: 10pt">
 IReportDocument ird = engine.openReportDocument("c:/work/test/TOCTest.rptdocument");
 //get root node
 TOCNode td = ird.findTOC(null);
@@ -330,7 +335,7 @@ like to have extracted.
 <br>
 From the Viewer code
 </br>
-<pre class="code-block">
+<pre style="font-size: 10pt">
 dataTask.selectResultSet( resultSetName );
 dataTask.selectColumns( columnNames );
 dataTask.setLocale( locale );
@@ -340,7 +345,7 @@ dataTask.setLocale( locale );
 <p>
 Below is an example that uses the Data Extraction Task to extract the first two columns of data.
 </p>
-<pre class="code-block">
+<pre style="font-size: 10pt">
 //Open previously created report document
 IReportDocument iReportDocument = engine.openReportDocument("c:/work/test/TOCTest.rptdocument");
 
@@ -395,7 +400,7 @@ iDataExtract.close();
 
 <p>Use this task to run Data Sets that exist within the report design.  The following
 example opens test.rptdesign and executes the Data Set named "Customers". </p>
-<pre class="code-block">
+<pre style="font-size: 10pt">
 //Open a report design  
 IReportRunnable design = engine.openReportDesign("c:/work/test/test.rptdesign"); 
 		
@@ -454,7 +459,7 @@ information about parameter groups and individual parameters.</p>
 The following example opens a report design and iterates through the parameters and parameter groups.
 If a List Box parameter is found, which is not in a group, the selection values are
 retieved.
-<pre id="code">
+<pre style="font-size: 10pt">
 
 //Open a report design 
 IReportRunnable design = engine.openReportDesign("C:/work/test/parameters.rptdesign"); 
@@ -516,7 +521,8 @@ task.close();
 default value is an expression, and the task provides the required execution 
 context.</p>
 
-<pre class="code-block">IScalarParameterDefn param = ...;
+<pre style="font-size: 10pt">
+IScalarParameterDefn param = ...;
 IGetParameterDefinitionTask task = ...;
 Object value = task.getDefaultValue( param );</pre>
 
@@ -529,7 +535,7 @@ This class renders the report, based on the supplied page range or page number.<
 The following example renders the first two pages of the "Pages" report document.  You will notice that
 it renders the two pages as one page of HTML.
 </p>
-<pre id="code">
+<pre style="font-size: 10pt">
 
 //Open a report document 
 IReportDocument iReportDocument = engine.openReportDocument("c:/work/test/Pages.rptdocument");
@@ -560,7 +566,7 @@ task.close();
 generate a report document, that is saved to disk.  The report document can then be used with the
 <code>IRenderTask</code> to support features such as paging.</p>
 <p>The following example simply creates a report document and saves it to disk.</p>
-<pre id="code">
+<pre style="font-size: 10pt">
 //Open a report design 
 IReportRunnable design = engine.openReportDesign("C:/work/test/MyOrders.rptdesign"); 
 		
@@ -591,7 +597,7 @@ classes. Create the one for the output format you desire, set the options you
 need, and pass the instance to <code>IRunAndRenderReportTask</code> before running the 
 report.</p>
 
-<pre class="code-block">
+<pre style="font-size: 10pt">
 
 //Open a report design - use design to modify design, retrieve embedded images etc. 
 IReportRunnable design = engine.openReportDesign("C:/work/test/TopDeals.rptdesign"); 
@@ -632,14 +638,14 @@ method available to the task.
 <p>
 Add the following code to your task.
 </p>
-<pre class="code-block">
+<pre style="font-size: 10pt">
 MyJavaObject jo = new MyJavaObject();
 task.addScriptableJavaObject("MyJavaScriptItem", jo);
 </pre>
 <p>
 Now within the the script editor, you can reference your Java Object as follows:
 </p>
-<pre class="code-block">
+<pre style="font-size: 10pt">
 testMyJavaObject = MyJavaScriptItem.getMyMethod();
 </pre>
 
@@ -649,7 +655,7 @@ testMyJavaObject = MyJavaScriptItem.getMyMethod();
 When rendering a report it may be disireable to output the report to an output stream, such as <code>HttpServletResponse</code>.
 To do this modify your HTMLRenderOption instance to use <code>setOutputStream</code> instead of <code>setOutputFileName</code>.
 For example,
-<pre class="code-block">
+<pre style="font-size: 10pt">
 public void webReport( HttpServletResponse response )
 {
 .
@@ -671,7 +677,7 @@ task.run();
 If you need to embed your report output into an existing web page you can use the <code>options.setEmbeddable(true);</code> method.
 This will remove the <HTML> and <BODY> tags in the generated report.
 For example,
-<pre class="code-block">
+<pre style="font-size: 10pt">
 public void embedReport( HttpServletResponse response )
 {
 .
@@ -713,7 +719,7 @@ default implementations:</p>
 Images will be created in your temporary files location (ie C:\Documents and Settings\User\Local Settings\Temp).
 If this is not desired you can use the <code>HTMLRenderContext</code> class.
 
-<pre class="code-block">
+<pre style="font-size: 10pt">
 
 		//Create the HTMLRenderContext Class
 		HTMLRenderContext renderContext = new HTMLRenderContext();
@@ -731,7 +737,8 @@ If this is not desired you can use the <code>HTMLRenderContext</code> class.
 don't meet your needs.</p>
 <p>Here's how to create an emitter configuration and set the image handler:</p>
 
-<pre class="code-block">EngineConfig config = new EngineConfig( );
+<pre style="font-size: 10pt">
+EngineConfig config = new EngineConfig( );
 
 // Create the emitter configuration.
 HTMLEmitterConfig hc = new HTMLEmitterConfig( );
@@ -750,7 +757,7 @@ ReportEngineService.java code in CVS <a href="http://dev.eclipse.org/viewcvs/ind
 The BIRT Viewer uses this Class to configure the engine.  The constructor for the ReportEngineService uses the HTMLServerImageHandler Class,
 which in turn reads Image locations from the Web.xml file.
 </p>
-<pre class="code-block">		
+<pre style="font-size: 10pt">		
 	config = new EngineConfig( );
 	// Register new image handler
 	HTMLEmitterConfig emitterConfig = new HTMLEmitterConfig( );
@@ -771,7 +778,7 @@ To build this example:
 <li>Add jar files located in the Report Engine directory (from the Report Engine Download) to the Buildpath/Classpath
 </ul>
 
-<pre class="code-block">	
+<pre style="font-size: 10pt">	
 import java.util.HashMap;
 
 import org.eclipse.birt.report.engine.api.EngineConfig;
