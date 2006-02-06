@@ -27,13 +27,30 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
-		<blockquote>
-			<ul>
-				<li><a href="#resources">Project Resources</a></li>
-			</ul>
-		</blockquote>
 
-		<h2><a name="resources"></a>Project Resources</h2>
+		<h2><a name="resources"></a>2.0 Project Resources</h2>
+		<p>
+			Resources used in version 2.0 development.
+		</p>
+		<ul class="midlist">
+			<li>
+				<a href="/birt/phoenix/project/project_plan_R2_0_0.php">2.0 Project Plan</a> –
+
+				The plans for the 2.0 release.
+			</li>
+			<li>
+				<a href="/birt/phoenix/project/notable2.0.php">2.0 New and Notable Features</a> –
+
+				New and Notable Features within BIRT 2.0.
+			</li>
+			<li>
+				BIRT 2.0 FINAL  Bugzilla Queries–
+				<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=BIRT&amp;target_milestone=2.0.0+Final&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_severity=enhancement&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">Features</a> List and <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=BIRT&amp;target_milestone=2.0.0+Final&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">Bug</a> Fixes 
+			</li>
+			
+		</ul>
+
+		<h2><a name="resources"></a>1.0 and 1.0.1 Project Resources</h2>
 		<p>
 			Resources used in version 1.0 and 1.0.1 development.
 		</p>
@@ -64,8 +81,7 @@
 				Slides used during the formal release review of the BIRT 1.0 project.
 			</li>
 		</ul>
-		$linkToTop
-		<hr class="clearer" />
+
 	</div>
 </div>
 
