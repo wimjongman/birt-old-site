@@ -53,8 +53,7 @@
 
 		<p>
 			If you don’t have Tomcat installed on your system you can download it from <a href="http://jakarta.apache.org/tomcat">http://jakarta.apache.org/tomcat</a>.
-			BIRT works with the 4.1.x and 5.5.x verisons of Tomcat, but 5.5.x
-			requires installation of the Java compatibility package described below.
+			BIRT works with the 4.1.x and 5.5.x verisons of Tomcat.
 		</p>
 
 
@@ -89,9 +88,6 @@
 			</li>
 			<li>
 				A page confirming that the BIRT viewer has been installed should be displayed. Click on the link labeled "View Example" to confirm that your installation is working properly.
-			</li>
-			<li>
-				Alternately, instead of using the Web Viewer Example, you can also copy the birt.war file to the Tomcat webapps directory. The WAR file is located in birt-runtime-<version#>.zip.
 			</li>
 		</ul>
 		<p>
