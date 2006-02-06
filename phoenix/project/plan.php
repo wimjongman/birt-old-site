@@ -46,7 +46,7 @@
 		<h2><a name="plan"></a>Project Plan</h2>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/project/project_plan_R2_1.php">2.1 Project Plan</a> –
+				<a href="/birt/phoenix/project/Project_plan_R2_1.php">2.1 Project Plan</a> –
 				The plans for the 2.1 release.
 			</li>
 		</ul>
