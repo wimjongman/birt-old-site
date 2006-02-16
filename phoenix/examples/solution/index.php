@@ -78,6 +78,18 @@
 				sorting a result set. Also shows image inclusion and use of grid and
 				tables to organize report content. Finally, the report makes use of
 				styles to simplify maintenance and achieve a consistent look.
+			</li>			
+			<li>
+				<b>
+					<a href="/birt/phoenix/examples/solution/TopNPercent.html" target="_blank" class="top">Top N / Top M% Customers</a>
+					(<a href="/birt/phoenix/examples/solution/TopNPercent.rptdesign" target="_blank">rptdesign</a>)
+				</b>
+				<br>
+				Making using of the top n and top precent filter capabilities added in BIRT 2.0, 
+				this report shows a bar chart with the top N customers by revenue, followed by
+				a listing of the top M% customers by revenue sorted by customer name. 
+				This requires multiple passes over the data, but it is all done "under the covers" by the BIRT report engine. 
+				N and M are passed into the report as parameters to allow report users to select the number and percentage at run time.
 			</li>
 		</ul>
 
