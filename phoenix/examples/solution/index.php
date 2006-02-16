@@ -85,7 +85,7 @@
 					(<a href="/birt/phoenix/examples/solution/TopNPercent.rptdesign" target="_blank">rptdesign</a>)
 				</b>
 				<br>
-				Making using of the top n and top precent filter capabilities added in BIRT 2.0, 
+				Making use of the top n and top precent filter capabilities added in BIRT 2.0, 
 				this report shows a bar chart with the top N customers by revenue, followed by
 				a listing of the top M% customers by revenue sorted by customer name. 
 				This requires multiple passes over the data, but it is all done "under the covers" by the BIRT report engine. 
