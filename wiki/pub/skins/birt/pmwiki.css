@@ -67,7 +67,7 @@ a.birt:hover { text-decoration: underline; color: #E8E8FF; }
 	font-size: xx-small;
 	color: white;
 	font-weight: bold;
-	font-size: 6pt;
+	font-size: 10pt;
 	padding-left: 7px;
 	margin: 0;
 }
@@ -117,7 +117,7 @@ a.birt:hover { text-decoration: underline; color: #E8E8FF; }
 #wikitext h1 {
 	background-color: #0080C0;
 	color: white;
-	font-size: 10pt;
+	font-size: 4pt;
 	font-weight: bold;
 	padding-left: 2px;
 	padding-top: 3px;
