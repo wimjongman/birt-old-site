@@ -55,14 +55,20 @@
 		</p>
 		<ul class="midlist">
 			<li>
+				Label -
+				Displays a simple piece of text such as "Customer Name".
+			</li>
+			<li>
 				Text -
 				Text that can include HTML formatting and computed values. Used to create
 				headings, form letters, "mail-merge" effects, etc.
 			</li>
+			
 			<li>
-				Label -
-				Displays a simple piece of text such as "Customer Name".
-			</li>
+				Dynamic Text -
+				 Displays a database column that can contain HTML formatted (CLOB) data. 
+				 Allows for advanced CLOB data manipulation through expressions.	
+			</li>			
 			<li>
 				Data -
 				Displays a database column or a computed value. Provides formatting.
@@ -92,7 +98,7 @@
 			</li>
 		</ul>
 		<p>
-			This tutorial will use all the elements except for List and Chart.
+			This tutorial will use all the elements except for List, Chart and Dynamic Text.
 		</p>
 
 
@@ -103,7 +109,7 @@
 			simply by dragging it from the palette.
 		</p>
 		<p>
-			The next step is to add some content to the table. We'll start with the detail
+			The next step is to add content to the table. We'll start with the detail
 			band which repeats to display each row from our data set. Here's how:
 		</p>
 		<ul class="midlist">
@@ -121,14 +127,14 @@
 				Select the CUSTOMERNAME column.
 			</li>
 			<li>
-				Locate the detail band within the table. (It is has a gray "Detail" label.)
+				Locate the detail band within the table. (It is has a gray "Detail Row" label.)
 			</li>
 			<li>
 				Drag the CUSTOMERNAME column into the detail band cell second from the
 				left. Notice that the designer automatically adds the corresponding column header.
 			</li>
 			<li>
-				Drag the PHONE column into the last cell in the detail band.
+				Drag the PHONE column into the rightmost cell of the detail band.
 			</li>
 		</ul>
 
@@ -139,7 +145,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Locate the group header row in your table. It has a light gray "Group Header" label.
+				Locate the group header row in your table. It has a light gray "Group Header Row" label.
 			</li>
 			<li>
 				Drag the STATE column into the leftmost cell within the Group Header row.
@@ -169,24 +175,26 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Click on the table tab (as described above) to display the table scaffolding.
+				Hover the cursor over the table and a Table tab will be displayed.
+		   </li>
+			<li>
+				Click on the Table tab to display the table scaffolding.
 			</li>
 			<li>
-				Click on the row header for the state group header.
+				Right-click on the row header for the state group header and a context menu will be displayed.
 			</li>
 			<li>
-				Choose Insert Group?Below.
-				The Group Properties dialog appears.
+				From the context menu choose Insert Group ? Below. The Group Details dialog appears.
 			</li>
 			<li>
-				Chose the CITY column in the Group On field.
+				Chose the CITY column in the Group On field and type City in the Name field.
 			</li>
 			<li>
 				Click OK.
 			</li>
 		</ul>
 		<p>
-			Notice that BIRT automatically inserted the a Data report item for the city group. Hover the cursor over the "@expression" to see the actual expression: row["CITY"].
+			Notice that BIRT automatically inserted a Data report item for the city group.
 		</p>
 
 
@@ -196,13 +204,13 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Ensure the table scaffolding appears. Click on the shaded column header for the first column.
+				Ensure the table scaffolding appears. Right-click on the shaded column header for the first column.
 			</li>
 			<li>
 				Choose Insert&rarr;Column to the Right from the context menu. A new column appears.
 			</li>
 			<li>
-				Move the CITY expression from (the expression in the first column of the second group heder) the second column of the second group header.
+				Move the row[“CITY”] expression (the expression in the first column of the second group header) to the second column of the second group header by dragging it.
 			</li>
 		</ul>
 

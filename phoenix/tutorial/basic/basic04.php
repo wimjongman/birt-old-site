@@ -51,7 +51,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Open the Data Explorer, if it is not already visible.
+				Open the Data Explorer View, if it is not already visible.
 			</li>
 			<li>
 				Select the Data Sources node within the tree view.
@@ -69,6 +69,9 @@
 				In the Data Source Name field, enter "Sample".
 			</li>
 			<li>
+				Click Next.
+			</li>
+			<li>
 				Click Finish.
 			</li>
 		</ul>
@@ -79,11 +82,11 @@
 
 		<h2><a name="edit"></a>Editing your Data Source</h2>
 		<p>
-			For future reference, let's review how you would go about changing the data source, although these instructions <strong><em>do not apply</em></strong> to  the Classic Models Inc. Sample Database; that data source does not allow editing:
+			For future reference, let's review how you would go about changing the data source:
 		</p>
 		<ul class="midlist">
 			<li>
-				Find or open the Data Explorer.
+				Find or open the Data Explorer View.
 			</li>
 			<li>
 				Open the Data Sources node.

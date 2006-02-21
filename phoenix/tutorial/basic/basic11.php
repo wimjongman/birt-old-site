@@ -62,10 +62,9 @@
 			appear.)
 		</p>
 		<p>
-			Let's use a sans-serif
-			style instead. We do this by  using a BIRT-defined style.
-			If you familiar with CSS, this is like defining a style that selects the HTML
-			body tag.
+			Let's use a sans-serif style instead. We do this by using a pre-defined BIRT style called 
+			report, which specifies the default style for report items. 
+			If you are familiar with CSS, this is like defining a style that selects the HTML body tag.
 		</p>
 		<ul class="midlist">
 			<li>
@@ -76,8 +75,19 @@
 			</li><li>
 				Open the Styles node.
 			</li>
+
 			<li>
-				Find the style named "report". Double-click it to open the Style editor.
+				Right-click and select New Style.
+			</li>
+			<li>
+				From the General page, check the Predefined Style radio button and select “report” from the associated drop down list.
+			</li>
+			<li>
+				Click OK
+			</li>
+			
+			<li>
+				Go to the Styles node in the Outline view and find the style named "report". Double-click it to open the Style editor.
 			</li>
 			<li>
 				In the Font page, choose "sans serif" as the font type.
@@ -113,7 +123,7 @@
 
 		<h2><a name="report"></a>Check the Report</h2>
 		<p>
-			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading.
+			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need a better report heading.
 		</p>
 
 

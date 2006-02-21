@@ -84,16 +84,9 @@
 			</li>
 		</ul>
 		<p>
-			You can create a report in three ways: as a blank report, by using a BIRT-defined template, or by copying one of your report designs. The second page of the New Report dialog provides two of these options. Since we want to use a template, do the following:
+			You can create a report in three ways: as a blank report, by using a BIRT-defined template, or by copying one of your report designs. In this tutorial we will use a Template descibed in the next section.
 		</p>
-		<ul class="midlist">
-			<li>
-				Select "Create Report from a predefined template"
-			</li>
-			<li>
-				Click Next.
-			</li>
-		</ul>
+
 
 
 		<h2><a name="choose_a_template"></a>Choose a Template</h2>
@@ -101,15 +94,17 @@
 			The next page of the New Report dialog presents a selection of report templates. Before we choose the one we want, let's walk though what's available.
 		</p>
 		<ul class="midlist">
-			<li>
-				Blank Report -
-				A simple blank report with no content.
-			</li>
+
 			<li>
 				My First Report -
 				Starts a report template that takes you through a
 				tutorial using on-line help. (That tutorial will eventually replace this one.)</td></tr>
 			</li>
+			
+			<li>
+				Blank Report -
+				Creates a blank report with no predefined content.
+			</li>			
 			<li>
 				Simple Listing -
 				A tabular listing with no grouping.
@@ -130,13 +125,13 @@
 				of the report.
 			</li>
 			<li>
-				Dual Chart &amp; Listing -
+				Dual Column Chart &amp; Listing -
 				Combines charts and tables so you can display two
 				sets of related data in a single report.
 			</li>
 			<li>
 				Side by Side Chart &amp; Listing -
-				A visual variation of the above.
+				Creates a grouped report where each group contains a chart and a listing side by side.
 			</li>
 			<li>
 				Letter -

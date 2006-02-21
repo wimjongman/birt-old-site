@@ -62,7 +62,7 @@
 				Parameter binding: you can pass data into the data set. For example, you can create a
 				"master/detail" subreport by using data set parameters to pass
 			  	data from the current row in the master report to the detail for the
-			 	subreport. For example, you can obtain a list of customers from one database,
+			 	subreport. Or as another example, you can obtain a list of customers from one database,
 			  	then have the subreport display orders from a different database.
 			</li>
 			<li>
@@ -85,9 +85,9 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the table.</li>
+				Select the table. (by clicking on the table tab in the Layout Editor.)</li>
 			<li>
-				Choose the Sorting tab within the Property Editor. (Note: Sorting is a tab on the bottom, not a page on the left as we've used thus far.)
+				Choose the Sorting tab within the Property Editor. (Note: Sorting is a tab on the bottom of the Property Editor and not a page on the left as we've used thus far.)
 			</li>
 			<li>
 				Click the Add button to add a new line.

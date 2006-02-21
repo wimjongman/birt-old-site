@@ -46,20 +46,17 @@
 			data as we expected.
 		</p>
 		<p>
-			We preview the report by clicking on the Preview tab within the report editor.
-			If our report had parameters, the GUI would ask us for them. But, since this
-			report does not have parameters, it simply runs.
+			We preview the report by clicking on the Preview tab in the lower left corner of the report editor.
+			This report has no parameters, but if it did, they could be modified by selecting the Show Report Parameters button.
 		</p>
 		<p>
-			The window that appears is a simple web browser, and displays the report in
-			HTML. The report appears as a single page. This works best for  small
-			amount data sets. Since the sample database has quite a bit of data data, we used
-			a WHERE clause to limit the amount of data. We could also use
-			a report parameter and a data set filter to limit the amount of data displayed
-			at any one time.
+			The window that appears is an embedded web browser, which displays the report in HTML format. 
+			The report appears as a single page. This works best for smaller data sets. 
+			Since the sample database has quite a bit of data, we used a WHERE clause to limit the results. 
+			We could also use a report parameter and a data set filter to limit the amount of data displayed at any one time.
 		</p>
 		<p>
-			Seeing the report in the preview suggests a number of ways we can improve the report's appearance:
+			There are a number of ways we can improve the report's appearance:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -82,7 +79,7 @@
 			</li>
 		</ul>
 		<p>
-			Before we fix these issues, let's look at other ways to preview the report.
+			Before we apply these aesthetic enhancements, let's look at other ways to preview the report.
 		</p>
 
 
@@ -99,6 +96,16 @@
 			between your layout editor and your preview without rerunning the report.
 		</p>
 
+		<h2><a name="preview_html"></a>Preview in Web Viewer</h2>
+		<p>
+			This option is similar to the one above. It allows the report to be previewed as HTML in a separate 
+			browser window using the BIRT Web Viewer. The viewer provides powerful navigation capabilities such as 
+			TOC, Previous Page, Next Page, Goto Page as well as search and export capabilities.
+		</p>	
+		<p>
+			To preview the report in the Web Viewer use the toolbar Preview button and select the Web Viewer 
+			option or alternatively invoke File->Preview in Web Viewer.	
+		</p>
 
 		<h2><a name="preview_pdf"></a>Preview as PDF</h2>
 		<p>

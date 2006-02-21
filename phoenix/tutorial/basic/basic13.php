@@ -56,7 +56,7 @@
 
 		<h2><a name="create"></a>Create a Text Item</h2>
 		<p>
-			Let's create our text item.
+			Let's create our text item.  To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -107,12 +107,6 @@
 				Click OK to save your changes.
 			</li>
 		</ul>
-		<div class="homeitem3col">
-			<h3>Release 1.0.1 Note</h3>
-			<p>
-				The layout editor displays the actual HTML. Later releases may show the formatted text.
-			</p>
-		</div>
 
 
 		<h2><a name="dynamic_text"></a>Dynamic Text</h2>
@@ -124,35 +118,6 @@
 			&lt;value-of&gt;row.state&lt;/value-of&gt;<br>
 			&lt;value-of format="@@@@@-@@@@"&gt;row.zip&lt;value-of&gt;
 		</blockquote>
-
-		<h2><a name="image"></a>Insert an Image</h2>
-		<p>
-			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading.
-		</p>
-		<ul class="midlist">
-			<li>
-				Drag an Image item from the palette into the left-most cell of your grid.
-			</li>
-			<li>
-				The Image Builder dialog appears.
-			</li>
-			<li>
-				Ensure that the URL radio button is selected.
-			</li>
-			<li>
-				Enter the following URL: "http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg".
-			</li>
-			<li>
-				Click the Preview button to ensure that the URL is correct.
-			</li>
-			<li>
-				Click Insert to add the image to your report.
-			</li>
-		</ul>
-		<p>
-			You can also embed an image from your local disk. Embedding the image copies the image into the report design. Using a URL is more efficient.
-		</p>
-
 
 
 		<h2><a name="test"></a>Final Test</h2>

@@ -54,13 +54,13 @@
 			a report based on the template you selected.
 		</p>
 		<p>
-			For now, let's go ahead and close that window since we'll be following the
-			steps in this tutorial.
+			For now, let's go ahead and close that view by clicking on the X (close)
+			button in the upper left corner of the view, since we'll be following the steps in this tutorial. 
 		</p>
 
 		<h2><a name="layout_editor"></a>Layout Editor</h2>
 		<p>
-			The main area is the Layout Editor. This is the place where you create your report design. The editor has three tabs:
+			The central area is the Layout Editor. This is the place where you create your report design. The editor has three tabs:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -72,8 +72,8 @@
 				Runs your report and shows the output.
 			</li>
 			<li>
-				Code -
-				Where you add code to your report using JavaScript.
+				Script -
+				Where you add JavaScript to your report to customize its behavior.
 			</li>
 		</ul>
 
@@ -81,16 +81,20 @@
 		<h2><a name="views"></a>Views</h2>
 		<p>
 			Around the editor are a number of views:
+			
+			The views below can be arranged to the left, right or bottom of Around the Layout Editor 			
+			
+			
 		</p>
 		<ul class="midlist">
 			<li>
 				Palette -
-				Shows the standard <i>report items</i> you can add to your report
+				BIRT View that shows the standard <i>report items</i> you can add to your report
 				using drag &amp; drop.
 			</li>
 			<li>
 				Outline -
-				Shows the structure of your report as a tree view.
+				BIRT View that shows the structure of your report as a tree view.
 			<li>
 			</li>
 				Navigator -
@@ -99,13 +103,13 @@
 			</li>
 			<li>
 				Data Explorer -
-				Shows your data sources (connections), data sets
+				BIRT View that shows your data sources (connections), data sets
 				(queries) and report parameters. You also use this view to add data set
 				columns to your report layout.
 			</li>
 			<li>
 				Property Editor -
-				Displays properties for many report items. It has
+				BIRT View that displays properties for many report items. It has
 				tabs and groupings that organize properties into categories.
 			</li>
 			<li>

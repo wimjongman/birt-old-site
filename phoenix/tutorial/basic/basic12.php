@@ -43,9 +43,18 @@
 
 		<h2><a name="grid"></a>Create a Grid</h2>
 		<p>
-			Let's add a heading to our report.
-			Our report heading will use the classic "left/center/right" layout: a logo on the
-			left, the report title in the center, and the run date on the right.
+			Let's add a suitable heading to our report.
+			It will use the classic "left/center/right" layout: a logo on the
+			left, the report title in the center, and the run date on the right.  
+			Before you do this you may want to remove the current basic heading, which simply says “Report Header”. To do this:
+			<ul>
+			<li>
+				Select the Grid item containing the “Report Header”which is located above your table.
+			</li>
+			<li>
+				Delete it by right-clicking on it and selecting the delete option from the context menu.
+			</li>
+			</ul>
 		</p>
 		<p>
 			The easiest way to create such a layout is to use a grid. A grid is like an
@@ -72,7 +81,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the entire first row.
+				Select the entire first row of the Grid that you just added. 
 			</li>
 			<li>
 				In the General page of the Property Editor, set the vertical alignment to Top.
@@ -125,7 +134,7 @@
 
 		<h2><a name="image"></a>Insert an Image</h2>
 		<p>
-			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading.
+			Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading.  To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -138,7 +147,7 @@
 				Ensure that the URL radio button is selected.
 			</li>
 			<li>
-				Enter the following URL: http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg.
+				Enter the following URL: "http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg". (don’t forget to add the quotes.)
 			</li>
 			<li>
 				Click the Preview button to ensure that the URL is correct.
@@ -155,7 +164,7 @@
 
 		<h2><a name="run_date"></a>Insert a Run Date</h2>
 		<p>
-			Next, let's display the current date in the right-most cell in the heading.
+			Next, let's display the current date in the right-most cell in the heading.  To do this:
 		</p>
 		<ul class="midlist">
 			<li>

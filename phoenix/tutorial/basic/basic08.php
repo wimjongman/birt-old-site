@@ -44,7 +44,7 @@
 
 		<h2><a name="resizing"></a>Resizing Table Columns</h2>
 		<p>
-			Let's adjust the size of the table columns. Tables & columns can be sized using absolute sizes (inches, centimeters), or relative sizes (percentage of the width of the page.) Here, we'll adjust the column widths by directly changing the size.
+			Let's adjust the size of the table columns. Tables & columns can be sized using absolute sizes (inches, centimeters), or relative sizes (percentage of the width of the page.) Here, we'll adjust the column widths by directly changing their in the report layout. To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -68,7 +68,7 @@
 
 		<h2><a name="background_color"></a>Setting the Background Color</h2>
 		<p>
-			Let's dress up the state heading. Let's give it a color band by setting the row's background color.
+			Let's dress up the state heading. Let's give it a color band by setting the row's background color. To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -100,11 +100,11 @@
 
 		<h2><a name="font"></a>Setting the Font</h2>
 		<p>
-			Now, let's give the state a bold font. We'll also dress up the city group heading by giving it a dark blue, bold, larger font.
+			Now, let's give the state a bold font. We'll also dress up the city group heading by giving it a dark blue, bold, larger font.  To do this:
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the state data item.
+				Select the state data item. (it’s located below the state label.)
 			</li><li>
 				Switch to the General property group in the Property Editor.
 			</li>
@@ -178,24 +178,21 @@
 				Set the Color field to a black. (Use the color name pull-down, or choose the bottom left color in the color chooser.)&nbsp; (This is the default.)
 			</li>
 			<li>
-				Set the Width property to the thinnest line.&nbsp; (This is the default.)
+				Set the Width property to the thinnest line.&nbsp; 
 			</li>
 			<li>
-				Click the top and left border buttons.
+				Click the top, bottom, left and right border buttons. A thin border appears around the table.
 			</li>
 			<li>
-				Set the Width property to the second thinnest line.
+				Switch to the Properties view (Window->Show View->Properties) to specify that a wider border should be used for the bottom and right sides. 
 			</li>
 			<li>
-				Click the bottom and right border buttons.
+				Click on the table tab to initialize the Properties view with the table’s properties.
+			</li>
+			<li>
+				Expand the Box node in the Properties View and set the Border bottom width and Border left width fields to medium.
 			</li>
 		</ul>
-		<div class="homeitem3col">
-			<h3>Release 1.0.1 Note</h3>
-			<p>
-				Once you select some other item, the Property Editor will no longer display your border settings. The properties are still set, but the UI does not display them. Use the Properties view to see them. To open the Properties view, use the main menu and choose Window&larr;Show View&larr;Properties.
-			</p>
-		</div>
 
 
 		<h2><a name="properties"></a>More on Properties</h2>

@@ -76,7 +76,7 @@
 
 		<h2><a name="pages"></a>Data Set Editor Pages</h2>
 		<p>
-			The data set editor now opens. We'll use this to enter our query. Before we do, let's take a look at the pages within this editor. The data set editor provides the following pages:
+			The data set editor now opens. We'll use this to define our query. Before we do, let's take a look at the pages within this editor. The data set editor provides the following pages:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -85,6 +85,14 @@
 				SQL query. Once you have the basic query, you can  add a WHERE clause, adjust the set of selected columns, and
 				more. Use the SQL editor to add computed columns that are to be calculated by
 				the database engine. Give such columns a name using the SQL ALIAS clause.</td></tr>
+			</li>
+			<li>
+				Data Source  -
+				Displays the name of the data source for this data set so you can view or change it. 
+			</li>
+			<li>
+				Preview Results -
+				Lets you test your query and see the output. Very handy to make sure that the data is right before you proceed with report design.</td></tr>
 			</li>
 			<li>
 				Computed Columns -
@@ -114,16 +122,7 @@
 				as the report will see them. The Query page shows the columns as selected from
 				the database.
 			</li>
-			<li>
-				Preview Results -
-				Lets you test your query and see the output. Very handy
-				to make sure that the data is right before you proceed with report design.</td></tr>
-			</li>
-			<li>
-				Data Source  -
-				Displays the name of the data source for this data set so you can view or
-				change it.
-			</li>
+			
 		</ul>
 
 
@@ -134,10 +133,10 @@
 		<ul class="midlist">
 			<li>
 				Expand the Sample data source to see the schemas within this database.
-				There is only one: "APP".
+				There is only one: "CLASSICMODELS".
 			</li>
 			<li>
-				Expand "APP" to see the list of tables in the database.
+				Expand "CLASSICMODELS" to see the list of tables in the database.
 			</li>
 			<li>
 				Expand a table to see its columns.
@@ -153,12 +152,13 @@
 		<p>
 			Our query is very simple, so we'll just type it in:
 		</p>
-		<div class="homeitem">
+		<p>
 			<h3>Simple Query</h3>
 			SELECT *<br>
 			FROM CUSTOMERS<br>
-			WHERE COUNTRY = 'USA'
-		</div>
+			WHERE COUNTRY = 'USA'<br>
+		</p>
+		<br>
 
 
 

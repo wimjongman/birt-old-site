@@ -43,30 +43,29 @@
 		<h2><a name="about"></a>About Styles</h2>
 		<p>
 			We mentioned that BIRT uses CSS to define the styles for report items. BIRT also allows you to define the properties in a style sheet, then to apply the style to a report item, just as in HTML. The result is that you create the style once and use it multiple times. If you need to change the look of a report, you can change the style in one place rather then in many different report items. If you've defined your own styles when creating HTML pages, you're well on your way to understanding the BIRT style system.
+			Styles can also be placed into BIRT libraries (Using Themes) and shared across reports.
 		</p>
-		<div class="homeitem3col">
-			<h3>Release 1.0.1 Note</h3>
-			<p>
-				Styles in the first BIRT release work only within a single report (though you can copy & paste them across reports.) A later BIRT release will create separate style sheet files that let you share styles across a suite of reports. BIRT style sheets will be very similar to the external style sheet files in CSS.
-			</p>
-		</div>
+
 
 		<h2><a name="creating"></a>Creating a Style</h2>
 		<p>
-			Let's use the style feature to format the table header. Let's make the table header a blue bar with contrasting text. Instead of formatting each label one-by-one, we'll define a style, then apply it
+			Let's use the style feature to format the table header. Let's make the table header a blue bar with contrasting text. Instead of formatting each label one-by-one, we'll define a style, then apply it.  To do this:
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the first label in the Table Header band.
+				Select the first label (State label) in the Table Header band.
 			</li>
 			<li>
-				Select Style?Add Style from the context menu.
+				Right-click and select Style&rarr;Add Style from the context menu.
 			</li>
 			<li>
 				The Style Properties dialog appears.
 			</li>
 			<li>
-				Enter "Header" in the Name field on the General page.</li><li>Switch to the Background page.
+				Enter "Header" in the Custom Style (Name) field on the General page and make sure that the Custom Style radio button is checked.
+			</li>
+			<li>
+				Switch to the Background page from the left most column of the New Style dialog.
 			</li>
 			<li>
 				Click the Background color button and choose the same blue: third from the right in the top row.
@@ -98,7 +97,7 @@
 				Select the other three labels: click on the City label, then use Ctrl+click to add the other two to the selection.
 			</li>
 			<li>
-				Choose Style&rarr;Apply Style Rule&rarr;Header from the context menu.
+				Choose Style&rarr;Apply Style&rarr;Header from the context menu.
 			</li>
 		</ul>
 		<p>
