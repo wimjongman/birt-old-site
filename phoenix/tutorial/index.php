@@ -43,7 +43,7 @@
 
 		<h2><a name="movie"></a>Flash Movie of "My First Report"</h2>
 		<p>
-			This Flash movie shows the creation of  "<a href="http://download.eclipse.org/birt/downloads/demos/MyFirstReport.html" target="_blank">My First Report</a>" from the tutorial in  BIRT's online help.
+			This Flash movie shows the creation of  "<a href="http://download.eclipse.org/birt/downloads/demos/FirstReport/MyFirstReport.html" target="_blank">My First Report</a>" from the tutorial in  BIRT's online help.
 		</p>
 		<hr class="clearer" />
 
