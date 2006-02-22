@@ -66,7 +66,7 @@
 			</li>	
 		</ul>		
 		<p>
-		For details on BIRT 2.0.1, refer to the <a href="/birt/phoenix/project/Project_plan_R2_0_1.php">2.0.1 Project Devlopment Plan</a>
+		For details on BIRT 2.0.1, refer to the <a href="/birt/phoenix/project/project_plan_R2_0_1.php">2.0.1 Project Devlopment Plan</a>
 		</p>	
 		
 		<h2><i>BIRT Release 2.1</i></h2>

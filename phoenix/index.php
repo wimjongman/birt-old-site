@@ -157,6 +157,15 @@
 			<ul>
 				<li>
 					<a href="project/plan.php">
+						BIRT 2.0.1 Project Plan is available
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.0.1.
+					<span class="dates">
+						02/22/06
+					</span>
+				</li>			
+				<li>
+					<a href="project/plan.php">
 						BIRT 2.1 Project Plan is available
 					</a>
 					This page contains information on the project plan and the milestone dates for BIRT 2.1.
