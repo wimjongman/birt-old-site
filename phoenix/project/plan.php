@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Project Plan and Deliverables";
+	$pageTitle 		= "Business Intelligence and Reporting Tools (BIRT) Development Plans";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -27,66 +27,55 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
-		<blockquote>
-			<ul>
-				<li><a href="#introduction">Introduction</a></li>
-				<li><a href="#plan">Project Plan</a></li>
-				<li><a href="#milestone_dates">Milestone Dates</a></li>
-				<li><a href="#milestone_planning">Milestone Planning</a></li>
-				<li><a href="#archive">Archive</a></li>
-			</ul>
-		</blockquote>
-
-		<h2><a name="introduction"></a>Introduction</h2>
+		<h2><a name="Overview"></a>Overview</h2>
 		<p>
-			Welcome to the Business Intelligence and Reporting Tools (BIRT) Project pages. This page contains the Project Plan for the version of BIRT that is currently in Development. Selecting the milestone within the Milestone Planning List will allow you to see what features and bug fixes will be available in future milestones.
+			Welcome to the Business Intelligence and Reporting Tools (BIRT) Project pages. This page contains links to Project Plans for the version(s) of BIRT currently in Development, as well as archives of previous release plans.
 		</p>
 		
-
-		<h2><a name="plan"></a>Project Plan</h2>
-		<ul class="midlist">
-			<li>
-				<a href="/birt/phoenix/project/Project_plan_R2_1.php">2.1 Project Plan</a> –
-				The plans for the 2.1 release.
-			</li>
-		</ul>
-		
-
-		<h2><a name="milestone_dates"></a>Milestone Dates</h2>
+		<h2><a name="latest">Latest Release Available </a></h2>
 		<p>
-			Listed below are the milestone dates for this release of BIRT.
+		BIRT Release 2.0 (Jan 2006) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.0.php">New and Notable</a> page.
 		</p>
 
+		<h2>Releases Under Development/Planned</h2>
+
+
+
+		
+		<h2><i>BIRT Release 2.0.1</i></h2>
+		<p>
+		Target Date: Late February 2006
+		</p>		
+
+
+		<h4>Milestone Summary</h4>
 		<ul class="midlist">
 			<li>
-				Friday, March 3, 2006 BIRT 2.1 M5
-			</li>
-			<li>
-				Friday, April 7, 2006 BIRT 2.1 Release Candidate 0
-			</li>
-			<li>
-				Friday, April 14, 2006 BIRT 2.1 Release Candidate 1
-			</li>
-			<li>
-				Friday, April 28, 2006 BIRT 2.1 Release Candidate 2 
-			</li>
-			<li>
-				Friday, May 12, 2006 BIRT 2.1 Release Candidate 3
-			</li>
-			<li>
-				Friday, May 26, 2006 BIRT 2.1 Release Candidate 4
-			</li>
-			<li>
-				Friday, June 16, 2006 BIRT 2.1 Release Candidate 5
-			</li>
-			<li>
-				Wednesday, June 28, 2006 BIRT 2.1 Release Candidate 6
-			</li>
-		</ul>
-	
-		
+				BIRT 2.0.1 - 
+				<a
+				href="
+				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.0.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
+				"
+				>Enhancements, </a>
 
-		<h2><a name="milestone_planning"></a>Milestone Planning</h2>
+				<a
+				href = "
+				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.0.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
+				"
+				>Bug Fixes</a>
+			</li>	
+		</ul>		
+		<p>
+		For details on BIRT 2.0.1, refer to the <a href="/birt/phoenix/project/Project_plan_R2_0_1.php">2.0.1 Project Devlopment Plan</a>
+		</p>	
+		
+		<h2><i>BIRT Release 2.1</i></h2>
+		<p>
+		Part of the Callisto Simultaneous Release, currently targeted for June 2006
+		</p>		
+
+
+		<h4>Milestone Summary</h4>
 		<p>
 			Below is a list of the milestone builds. Each item has a link for the bug fixes and new features which are scheduled for each milestone. The FINAL links include all features and bug fixes for the release in total.
 		</p>
@@ -225,8 +214,11 @@
 			</li>		
 
 		</ul>
-		
+		<p>
+		For details on BIRT 2.1, refer to the <a href="/birt/phoenix/project/Project_plan_R2_1.php">2.1 Project Devlopment Plan</a>
+		</p>
 
+		
 		<h2><a name="archive"></a>Archive</h2>
 		<p>
 			This section contains links to information used in the development process for prior versions of BIRT.
