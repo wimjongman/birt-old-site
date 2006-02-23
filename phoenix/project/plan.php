@@ -42,7 +42,7 @@
 
 
 		
-		<h3><i>BIRT Release 2.0.1</i></h3>
+		<h3><i><font size="-1">BIRT Release 2.0.1</font></i></h3>
 		<p>
 		Target Date: Late February 2006
 		</p>		
@@ -69,7 +69,7 @@
 		For details on BIRT 2.0.1, refer to the <a href="/birt/phoenix/project/project_plan_R2_0_1.php">2.0.1 Project Devlopment Plan</a>
 		</p>	
 		
-		<h3><i>BIRT Release 2.1</i></h3>
+		<h3><i><font size="-1">BIRT Release 2.1</font></i></h3>
 		<p>
 		Target Date: Part of the Callisto Simultaneous Release, currently targeted for June 2006
 		</p>		
