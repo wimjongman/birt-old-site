@@ -42,7 +42,7 @@
 
 
 		
-		<h2><i>BIRT Release 2.0.1</i></h2>
+		<h3><i>BIRT Release 2.0.1</i></h3>
 		<p>
 		Target Date: Late February 2006
 		</p>		
@@ -69,9 +69,9 @@
 		For details on BIRT 2.0.1, refer to the <a href="/birt/phoenix/project/project_plan_R2_0_1.php">2.0.1 Project Devlopment Plan</a>
 		</p>	
 		
-		<h2><i>BIRT Release 2.1</i></h2>
+		<h3><i>BIRT Release 2.1</i></h3>
 		<p>
-		Part of the Callisto Simultaneous Release, currently targeted for June 2006
+		Target Date: Part of the Callisto Simultaneous Release, currently targeted for June 2006
 		</p>		
 
 
@@ -83,7 +83,7 @@
 		
 		
 			<li>
-				BIRT 2.1 M5 - 
+				Friday, March 3, 2006: BIRT 2.1 M5 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -97,7 +97,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 0 - 
+				Friday, April 7, 2006 : BIRT 2.1 Release Candidate 0 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC0&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -113,7 +113,7 @@
 
 
 			<li>
-				BIRT 2.1 Release Candidate 1 - 
+				Friday, April 14, 2006: BIRT 2.1 Release Candidate 1 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -127,7 +127,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 2 - 
+				Friday, April 28, 2006: BIRT 2.1 Release Candidate 2 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -141,7 +141,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 3 - 
+				Friday, May 12, 2006: BIRT 2.1 Release Candidate 3 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -155,7 +155,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 4 - 
+				Friday, May 26, 2006: BIRT 2.1 Release Candidate 4 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -169,7 +169,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 5 - 
+				Friday, June 16, 2006: BIRT 2.1 Release Candidate 5 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
@@ -183,7 +183,7 @@
 				>Bug Fixes</a>
 			</li>
 			<li>
-				BIRT 2.1 Release Candidate 6 - 
+				Wednesday, June 28, 2006: BIRT 2.1 Release Candidate 6 - 
 				<a
 				href="
 				https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=BIRT&target_milestone=2.1.0+RC6&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
