@@ -26,6 +26,7 @@
 		<blockquote>
 			<ul>
 				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#allinone">Report Designer Full Eclipse Install</a></li>
 				<li><a href="#designer">Designer Install</a></li>
 				<li><a href="#gef">GEF</a></li>
 				<li><a href="#emf">EMF</a></li>
@@ -78,9 +79,10 @@ And
 </ul>
 
 <h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
-BIRT now supplies a download that incudes Eclipse, GEF, EMF and BIRT.  Use this
+BIRT now supplies a <a href="http://download.eclipse.org/birt/downloads/">download</a> that incudes Eclipse, GEF, EMF and BIRT.  Use this
 download if you do not already have Eclipse installed.  You will still need iText.jar
-and prototype.js, which are described below.
+and prototype.js, which are described below.  
+
 
 <br>
 <h2><a name="designer"></a>Designer Install</h2>
