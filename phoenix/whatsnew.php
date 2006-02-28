@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.0.1
+					</a>
+					is now available for download. 
+					<span class="dates">
+						02/27/06
+					</span>
+				</li>			
+				<li>
 					<a href="project/plan.php">
 						BIRT 2.0.1 Project Plan is available
 					</a>

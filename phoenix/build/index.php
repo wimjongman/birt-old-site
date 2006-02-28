@@ -32,7 +32,6 @@
 				<li><a href="#birt">BIRT</a></li>
 				<li><a href="#optional">Optional Eclipse Link File</a></li>
 				<li><a href="#itext">iText</a></li>
-				<li><a href="#axis">Axis 1.2.1</a></li>
 				<li><a href="#prototype">prototype.js</a></li>
 				<li><a href="#example">Installation Example Flash</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
@@ -54,7 +53,7 @@ requirements and instructions on the
 download page</a>.
 Otherwise, follow along below for detailed steps for installing BIRT.
 <p>
-The instructions here are for the Release 2.0 (and later) builds. Please use 2.0 or later 
+The instructions here are for the Release 2.0.1 (and later) builds. Please use 2.0.1 or later 
 instead of the earlier milestone or stable builds.
 <h2>Java</h2>
 <p>
@@ -78,10 +77,15 @@ And
 <li>JRE 1.4.2/JRE 1.5.
 </ul>
 
+<h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
+BIRT now supplies a download that incudes Eclipse, GEF, EMF and BIRT.  Use this
+download if you do not already have Eclipse installed.  You will still need iText.jar
+and prototype.js, which are described below.
 
+<br>
 <h2><a name="designer"></a>Designer Install</h2>
-
-The instructions on this page cover the second configuration.
+Use these instructions if you have Eclipse installed or do not desire to use the
+Report Designer Full Eclipse Install.
 <br>
 Download and install the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
@@ -129,8 +133,8 @@ This is the same directory you used for GEF.
 
 <p>
 Download <a href="http://download.eclipse.org/birt/downloads/">
-Release 2.0.0</a> (or later). Download only the
-BIRT designer framework for now: "birt-report-framework-2_0_0.zip".
+Release 2.0.1</a> (or later). Download only the
+BIRT designer framework for now: "birt-report-framework-2_0_1.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
@@ -141,7 +145,7 @@ BIRT framework and unzip the contents to any directory.
 <li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse3.1\eclipse\links).
 <li>Within this directory create a file with a unique name like birt.2.0.link.
 <li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.0)
-<li>You will still need iText, Axis and prototype.js files.  See next section. 
+<li>You will still need iText and prototype.js files.  See next section. 
 </ul>
 
 <h2><a name="itext"></a>iText</h2>
@@ -152,20 +156,7 @@ BIRT framework and unzip the contents to any directory.
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 </p>
-<p>
 
-<h2><a name="axis"></a>Axis 1.2.1</h2>
-Also download Apache <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a> from <a href=http://www.apache.org/dyn/closer.cgi/ws/axis/1_2_1>Apache</a>
-and extract <b>only</b> the six jars listed below into the plugins/org.eclipse.birt.report.viewer_version/birt/WEB-INF/lib directory.
-<ul>
-<li>axis.jar 
-<li>axis-ant.jar 
-<li>commons-discovery-0.2.jar 
-<li>jaxrpc.jar 
-<li>saaj.jar 
-<li>wsdl4j-1.5.1.jar 
-</ul>
-</p>
 <p>
 <h2><a name="prototype"></a>prototype.js</h2>
 Lastly download <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> from <a href="http://dev.conio.net/repos/prototype/dist/">dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
@@ -213,11 +204,9 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <h3>Birt Runtime Note: </h3>
 <ul>
  <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
- The above files will need to be copied to the birt-runtime-2_0_0\Web Viewer Example directory structure.
+ The above files will need to be copied to the birt-runtime-2_0_1\Web Viewer Example directory structure.
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
- <li>Copy Axis jars to the /Web Viewer Example/WEB-INF/lib
- <li>If you are using the birt.war, you will need to extract it and add the above files.
  </ul>
 </div>
 <br>

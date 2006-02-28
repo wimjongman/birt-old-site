@@ -46,7 +46,7 @@
 	and PDF.
 	<p>
 	BIRT provides core reporting features such as report layout,
-	data access and scripting.  The current released version is 2.0. Please try BIRT and
+	data access and scripting.  The current released version is 2.0.1. Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
 	through Bugzilla as explained on the <a href="community.php">community</a>
 	page.
@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.0.1
+					</a>
+					is now available for download. 
+					<span class="dates">
+						02/27/06
+					</span>
+				</li>				
+				<li>
 					<a href="project/plan.php">
 						BIRT 2.0.1 Project Plan is available
 					</a>
@@ -244,16 +253,6 @@
 						New Examples
 					</a>
 					The examples have been restructured and many new examples are available.
-					<span class="dates">
-						10/21/05
-					</span>
-				</li>
-				<li>
-					<a href="project/plan.php">
-						New Project Plan Page
-					</a>
-					This page contains information on the project plan and the milestone dates for BIRT 2.0.
-					In addition the page contains bugzilla queries for feature and bug fixes for each milestone.
 					<span class="dates">
 						10/21/05
 					</span>
