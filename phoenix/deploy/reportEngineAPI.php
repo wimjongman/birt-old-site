@@ -652,7 +652,7 @@ testMyJavaObject = MyJavaScriptItem.getMyMethod();
 
 <h4>Rendering to an Output Stream</h4>
 <p>
-When rendering a report it may be disireable to output the report to an output stream, such as <code>HttpServletResponse</code>.
+When rendering a report it may be desirable to output the report to an output stream, such as <code>HttpServletResponse</code>.
 To do this modify your HTMLRenderOption instance to use <code>setOutputStream</code> instead of <code>setOutputFileName</code>.
 For example,
 <pre style="font-size: 10pt">
@@ -693,7 +693,7 @@ set your engine home to something similar to:
 <pre style="font-size: 10pt">
 config.setEngineHome( servletContext.getRealPath("/WEB-INF"));
 </pre>
-Doing this will result in the Application server looking for the BIRT jars and plugins in the /WEB-INF and /WEB-INF/Plugins diretories of
+Doing this will result in the Application server looking for the BIRT jars and plugins in the /WEB-INF and /WEB-INF/Plugins directories of
 your application ie servletContext.getResourcePaths( ).
 
 If you deploy your application in a war setup your code like:
@@ -708,8 +708,6 @@ config.setEngineContext( context );
 
 
 
-
-Modify image to show proper TOC 
 </p>
 
 
