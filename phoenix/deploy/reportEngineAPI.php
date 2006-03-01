@@ -86,11 +86,11 @@ engine is more than just a simple JAR file; it also includes a set of extensions
 <br>
 First download the Report Engine from the <a href=http://download.eclipse.org/birt/downloads">Eclipse download site.</a>
 <ul>
-<li>This file will be named birt-runtime-2_0_0.zip.
+<li>This file will be named birt-runtime-2_0_1.zip.
 <li>Unzip this file into a directory, such as c:\birtruntime.
 <li>Copy the iText jar file (see install page for location) to the 
-C:\birtruntime\birt-runtime-2_0_0\Report Engine\plugins\org.eclipse.birt.report.engine.emitter.pdf\lib directory.
-<li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_0/Report Engine as the value.
+C:\birtruntime\birt-runtime-2_0_1\Report Engine\plugins\org.eclipse.birt.report.engine.emitter.pdf\lib directory.
+<li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_0_1/Report Engine as the value.
 </ul>
 Some operating systems will have problems with the space in "Report Engine".  
 <br><br>
@@ -99,7 +99,6 @@ use this example, make sure you copy the additional files to the appropriate loc
 <ul>
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
- <li>Copy Axis jars (Only the six shown on the install page) to the /Web Viewer Example/WEB-INF/lib
  <li>If you are using the birt.war, you will need to extract it and add the above files.
 </ul>
 
@@ -119,7 +118,7 @@ consult the Engine Javadoc.</p>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
 
 <p>To do this, copy the driver jar file to the 
-ReportEngineInstall/birt-runtime-2_0_0/Report Engine/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
+ReportEngineInstall/birt-runtime-2_0_1/Report Engine/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
 directory.
 </p>
 
@@ -150,7 +149,7 @@ accomplish a given task.
 </p>
 </p>
 
-<img src="tasks.jpg" width="729" height="533" /><br/><br/>
+<img src="reportenginetask.jpg" width="834" height="549" /><br/><br/>
 
 </p>
 
@@ -671,6 +670,49 @@ task.run();
 }
 </pre>
 
+<h4>IPlatformContext - Web Based Plugin Loading</h4>
+<p>
+By default BIRT loads plugins located in the BIRT_HOME/plugins directory.  The plugins loaded provide functionallity for connecting to datasources,
+emitters for PDF and HTML, and chart rendering.  BIRT_HOME in the examples on this page is set using the setEngineHome method of the EngineConfig class.
+BIRT loads these plugins using the Java File API.  
+</p>
+<p>
+This method is usually sufficient.  If deployed to a web application, the developer can usually call ServletContext.getRealPath to retrieve the
+real path and set the BIRT_HOME accordingly.  This can present a problem when deploying to a war file. Certain application servers will return null
+when getRealPath is called.  This will result in the plugins not getting loaded.
+</p>
+<p>
+The IPlatformContext interface describes the methods needed to load the resources required by the BIRT runtime.  Within BIRT there are two implementations
+of this interface, PlatformFileContext() and PlatformServletContext().  The Platform Context is set using the setEngineContext method of the
+EngineConfig class.  If this method is not called it defaults to PlaformFileContext() and uses the Java File API to load the resources.  The 
+PlatformServletContext class uses Resource based operations.
+
+So if you are deploying an application to the Web that uses the BIRT API and it is not contained in a war you can use the default and
+set your engine home to something similar to:
+
+<pre style="font-size: 10pt">
+config.setEngineHome( servletContext.getRealPath("/WEB-INF"));
+</pre>
+Doing this will result in the Application server looking for the BIRT jars and plugins in the /WEB-INF and /WEB-INF/Plugins diretories of
+your application ie servletContext.getResourcePaths( ).
+
+If you deploy your application in a war setup your code like:
+<pre style="font-size: 10pt">
+//this causes the plugin loader to look in the current directory.
+config.setEngineHome("");
+//URLtoExamine is the location of the plugins directory.
+//In the case of the BIRT viewer this would be http://server:port/viewer 
+IPlatformContext context = new PlatformServletContext( servletContext, URLtoExamine );
+config.setEngineContext( context );
+</pre>
+
+
+
+
+Modify image to show proper TOC 
+</p>
+
+
 
 <h4>Embedding Report Output</h4>
 
@@ -798,7 +840,7 @@ public class ExecuteReport {
 	{
 		//Engine Configuration - set and get temp dir, BIRT home, Servlet context
 		EngineConfig config = new EngineConfig();
-		config.setEngineHome( <b>"C:/birt-runtime-2_0_0/birt-runtime-2_0_0/Report Engine"</b> );	
+		config.setEngineHome( <b>"C:/birt-runtime-2_0_1/birt-runtime-2_0_1/Report Engine"</b> );	
         
 		//Create the report engine
 		ReportEngine engine = new ReportEngine( config );
