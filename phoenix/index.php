@@ -157,6 +157,15 @@
 			<ul>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 Milestone 5
+					</a>
+					is now available for download. 
+					<span class="dates">
+						03/07/06
+					</span>
+				</li>						
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.0.1
 					</a>
 					is now available for download. 
@@ -248,15 +257,7 @@
 						10/31/05
 					</span>
 				</li>
-				<li>
-					<a href="examples">
-						New Examples
-					</a>
-					The examples have been restructured and many new examples are available.
-					<span class="dates">
-						10/21/05
-					</span>
-				</li>
+
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
