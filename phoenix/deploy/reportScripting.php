@@ -40,6 +40,7 @@
 				<li><a href="#reportitemexamples">Report Elements Events</a></li>
 				<li><a href="#reportitemexamples">Report Element Event Examples</a></li>
 				<li><a href="#datasource">Report Data Source(Set) Events</a></li>
+				<li><a href="#javaevents">Writting Events in Java</a></li>
 
 			</ul>
 		</blockquote>
@@ -60,7 +61,7 @@ is created and stored to disk.  This is the default behavior of the designer whe
 </p>
 <p>
 Events within each phase can be overridden to alter report content.  BIRT allows these events to be overridden in either JavaScript or Java.
-This page illustrates scripting in JavaScript.  If you wish to script in Java, go here.  If you code your event in both Java and JavaScript the
+This page illustrates scripting in JavaScript.  If you code your event in both Java and JavaScript the
 JavaScript version will be executed by default.
 </p>
 
@@ -468,14 +469,131 @@ return true;
 </pre>
 
 
+<h2><a name="javaevents"></a>Writting Events in Java</h2>
+<p>
+All of the BIRT Events can be written in Java.  This section will describe setting up a Birt Events
+Java project, assigning the events to elements and finally debugging the report.
+</p>
+<h4>Setting up the Java Project</h4>
+<p>
+Within Eclipse, open your workspace that contains the reports that will use the Java Events.
+Create a new Java project and add scriptapi.jar from the Report Engine download.
+</p>
+<img src="buildpath.jpg" width="594" height="532" /><br/><br/>
+<p>
+The scriptapi.jar file includes the event adapters that are needed to implement events.
+</p>
+<img src="eventadapters.jpg" width="451" height="589" /><br/><br/>
+<p>
+Create a new class, specifying TableEventAdapter as the super class.
+</p>
+<img src="tableadapter.jpg" width="500" height="668" /><br/><br/>
+<p>
+Enter the following code for the class.
+
+<pre style="font-size: 10pt">
+
+package my.test.events;
+
+import org.eclipse.birt.report.engine.api.script.eventadapter.TableEventAdapter;
+import org.eclipse.birt.report.engine.api.script.element.ITable;
+import org.eclipse.birt.report.engine.api.script.IReportContext;
 
 
+public class TableEH extends TableEventAdapter {
+
+    /* table onPrepare event */
+    public void onPrepare( ITable table, IReportContext reportContext )
+    {
+    	try 
+    	{
+    		table.setNamedExpression( "total_limit_avg", "Total.ave(row[\"CREDITLIMIT\"])" );
+        } catch ( Exception e ) {
+             e.printStackTrace( );
+        }
+    }
+}
 
 
+</pre>
+
+This code will add a named expression on a table.  The value of the named expression is set to 
+Total.ave(row["CREDITLIMIT"]).  In order for this to work there must be a column on the table with a value of
+row["CREDITLIMIT"].
+</p>
+<p>
+Repeat the process above for the class RowEH which extends RowEventAdapter and enter the following code.
+
+<pre style="font-size: 10pt">
+
+package my.test.events;
+
+import org.eclipse.birt.report.engine.api.script.eventadapter.RowEventAdapter;
+import org.eclipse.birt.report.engine.api.script.IReportContext;
+import org.eclipse.birt.report.engine.api.script.instance.IRowInstance;
+import org.eclipse.birt.report.engine.api.script.IRowData;
 
 
+public class RowEH extends RowEventAdapter {
+	public void onCreate(IRowInstance row, IReportContext context) {
+		IRowData data = row.getRowData();
+		double avgCreditLimit = ((Double) row.getParent().getNamedExpressionValue("total_limit_avg")).doubleValue();
+		try 
+		{
+			if (((Double) data.getExpressionValue("row[\"CREDITLIMIT\"]")).doubleValue() > avgCreditLimit ) {
+				row.getStyle( ).setFontWeight( "bolder" );
+				row.getStyle( ).setFontSize( "larger" );
+				row.getStyle( ).setColor( "olive" );
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
 
 
+</pre>
+<p>
+This event is executed on every row and looks for a column named "CREDITLIMIT".  If this credit limit is above the average for all entries in the 
+table, the font weight and size are changed and the color is changed to olive.
+</p>
+
+<h4>Adding the Events to the Report</h4>
+<p>
+Now that the Java classes are built we can create a simple report and apply the events.
+</p>
+<p>
+Build a listing report using the sample database "Classic Models".
+Enter the following query.
+<pre style="font-size: 10pt">
+select CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER,CLASSICMODELS.CUSTOMERS.CUSTOMERNAME,CLASSICMODELS.CUSTOMERS.CREDITLIMIT
+from CLASSICMODELS.CUSTOMERS
+</pre>
+Drag the data set to the report view and a table should be created automatically.
+Select the newly created table and enter my.test.events.TableEH in the Event Handler entry on the Properties tab.
+</p>
+<img src="tableeh.jpg" width="592" height="357" /><br/><br/>
+<p>
+Repeat the process for the row handler event, by selecting the row and entering my.test.events.RowEH in the Event Handler entry on the
+Properties tab.
+</p>
+<p>
+Selecting Preveiw should result in the following output.
+</p>
+<img src="scriptoutput.jpg" width="580" height="268" /><br/><br/>
+<h4>Debugging the Report</h4>
+<p>
+Switch to the Java Perspective and select either of the Java classes implemented earlier.
+Add breakpoints as usual and select the run->debug menu.
+Select BIRT Report under Configurations and click the new button.  Check the workspace containing the report created earlier and select debug.
+</p>
+<img src="birtdebug.jpg" width="737" height="587" /><br/><br/>
+<p>
+This launch a new Eclipse instance with the selected workspace.  Load the sample report completed earlier and select Preview.
+If breakpoints exist they will halt the code when the table or the row calls your code.
+</p>
+<br>
 
 
 
