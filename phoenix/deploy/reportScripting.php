@@ -17,7 +17,7 @@
 
 	require "../birt.inc";
 	require "deploy.inc";
-	$currentPage			= "Report Engine API";
+	$currentPage			= "Report Scripting";
 	$linkToTop				= linkToTop();
 	$deployLinksSideItem  	= getDeployLinksSideItem($currentPage);
 

@@ -110,7 +110,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/ref">Scripting</a>
+				Scripting<a href="/birt/phoenix/ref"> (Reference)</a><a href="reportScripting.php"> (Scripting Primer)</a>
 				<br>
 				BIRT provides extensive scripting support. You can create anything from computed columns to sophisticated business logic to extensive integration with existing Java code.
 			</li>
@@ -120,7 +120,7 @@
 				BIRT provides a JDBC data source. Use the ODA API to create custom data sources drivers. Each driver has run-time behavior along with optional design-time UI.
 			</li>
 			<li>
-				Scripted Data Source
+				Scripted Data Source <a href="reportScripting.php"> (Scripting Primer)</a>
 				<br>
 				The scripted data source and data set elements allow you to access custom data sources directly from your report without the need to create an ODA driver. This solution is ideal for one-off data sources, prototypes, and the like.
 			</li>
