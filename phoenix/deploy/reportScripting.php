@@ -77,7 +77,7 @@ particular phase, for a given object.
 <img src="events.jpg" width="646" height="423" /><br/><br/>
 <p>
 Pictured below is a representation of the event firing order for a simple report containing a table and a data element.
-The event order is shown for seperate generation and presentation phases.<br><br>
+The event order is shown for separate generation and presentation phases.<br><br>
 Generation phase.
 </p>
 <img src="eventgen.jpg" width="759" height="479" /><br/><br/>
@@ -483,7 +483,7 @@ BIRT event handlers can be written in Java.  This section will describe setting 
 Java project, assigning the event handlers to elements and finally debugging the report.
 </p>
 <p>
-When writting Java event handlers remember that a new event handler instance will be created for each invocation. 
+When writing Java event handlers remember that a new event handler instance will be created for each invocation. 
 The implication of this is that you can not use class data memeber to pass information between methods.  
 For example, if you want to pass information from "onPrepare()" to "onCreate()", you need to use the reportContext to
 hold the shared information.
@@ -594,7 +594,7 @@ Repeat the process for the row event handler, by selecting the row and entering 
 Properties tab.
 </p>
 <p>
-Selecting Preveiw should result in the following output.
+Selecting Preview should result in the following output.
 </p>
 <img src="scriptoutput.jpg" width="580" height="268" /><br/><br/>
 <h4>Debugging the Report</h4>
