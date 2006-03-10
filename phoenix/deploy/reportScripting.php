@@ -60,8 +60,8 @@ is the default behavior of the designer when "Preview as HTML" is chosen.  If ex
 is created and stored to disk.  This is the default behavior of the designer when "Preview in Web Viewer" is selected.
 </p>
 <p>
-Events within each phase can be overridden to alter report content.  BIRT allows these events to be overridden in either JavaScript or Java.
-This page illustrates scripting in JavaScript.  If you code your event in both Java and JavaScript the
+Events within each phase can be overridden, by creating event handlers, to alter report content.  BIRT allows these event handlers to be written in either JavaScript or Java.
+If you code your event handler in both Java and JavaScript the
 JavaScript version will be executed by default.
 </p>
 
@@ -74,12 +74,20 @@ Script events are defined for three objects, Report Object, Report Elements, and
 what events and which properties of the object are available for customization. The diagram below illustrates what Script Events are available in a 
 particular phase, for a given object.
 </p>
-<img src="events.jpg" width="728" height="444" /><br/><br/>
-
+<img src="events.jpg" width="646" height="423" /><br/><br/>
+<p>
+Pictured below is a representation of the event firing order for a simple report containing a table and a data element.
+The event order is shown for seperate generation and presentation phases.<br><br>
+Generation phase.
+</p>
+<img src="eventgen.jpg" width="759" height="479" /><br/><br/>
+<p>
+Presentation phase.
+</p><img src="eventpres.jpg" width="481" height="223" /><br/><br/>
 <h2><a name="context">reportContext and this</a></h2>
 <p>
 Selecting the Palette view while in the Script editor will display functions and variables that are available in the
-given event for the selected report element.  For example the screenshot below is for the onCreate method of a Data element.
+given event for the selected report element.  For example the screenshot below is for the onCreate event handler of a Data element.
 </p>
 <img src="palette.jpg" width="266" height="476" /><br/><br/>
 <p>
@@ -98,7 +106,7 @@ use of the Persistent version allows the variable to be persisted across generat
 Also note that the variable is an Object type allowing greater flexibility.
 
 <pre style="font-size: 10pt">
-onPrepare of a data control in a table
+onPrepare of a data element in a table
 this.valueExpr = "reportContext.getPersistentGlobalVariable('testglobal');"
 </pre>
 The reportContext also allows access to session variables.
@@ -119,7 +127,7 @@ myArrList.add("two");
 appContext.put("AppContextTest", myArrList);
 </pre>
 This loads the current application context and modifies it for later use.
-On a data element's onPrepare event, it could then be used as follows:
+Within a data element's onPrepare event handler, it could then be used as follows:
 
 <pre style="font-size: 10pt">
 appContext = reportContext.getAppContext();
@@ -217,13 +225,13 @@ instance).
 
 <h4>Setting Label, Text, Dynamic Text and Data Item values</h4>
 <p>
-Setting the value of a Label item can be achieved by overriding the onPrepare or onCreate event and entering similar code presented below:
+Setting the value of a Label item can be achieved by writting an event handler for the onPrepare or onCreate event and entering similar code presented below:
 <pre style="font-size: 10pt">
 this.text = "My New Label"
 </pre>
 Obviously this is a simple example and the value could be set simply by double clicking on the Text item.  Using the JavaScript editor allows
 complex logic can be implemented.<br>
-Setting the value of a Text item can be done in the onPrepare event by entering the following code:
+Setting the value of a Text item can be done in the onPrepare event by entering the following code in your event handler:
 
 <pre style="font-size: 10pt">
 this.content= = "My New Text"
@@ -231,7 +239,7 @@ this.content= = "My New Text"
 
 When setting the value of a Data or Dynamic Text item you will need to specify a value expression.  This
 value expression gets evaluated when generating the report.
-For either of these controls overriding the onPrepare event allows changing the value expression.
+For either of these elements creating an event handler for the onPrepare event allows changing the value expression.
 <pre style="font-size: 10pt">
 this.valueExpr = "row[0]";
 </pre>
@@ -251,7 +259,7 @@ this.tocExpression=this.tocExpression = "'tocbyrownumber: ' + row[0]";
 
 <h4>Using row data within scripts</h4>
 
-Row Data is available on the row event's onCreate event.
+Row Data is available in the onCreate event.
 This allows you to examine the values that will be used on the current row
 of a Table or List.  
 
@@ -302,7 +310,7 @@ this.getRowData().getExpressionValue("row[price]")
 </pre>
 
 <h4>Modifying Hyperlinks</h4>
-The hyperlink for a data control can be modified in the onPrepare by using code similar to:
+The hyperlink for a data element can be modified in the onPrepare by using code similar to:
 
 <pre style="font-size: 10pt">
 this.getAction().URI = "'http://www.google.com'";
@@ -318,7 +326,7 @@ given element.
 <img src="getStyle.jpg" width="483" height="221" /><br/><br/>
 </p>
 <p>
-for example to bold a particular control:
+for example to bold a particular element:
 </p>
 <pre style="font-size: 10pt">
 this.getStyle().fontWeight = "bold";
@@ -326,8 +334,8 @@ this.getStyle().fontWeight = "bold";
 
 <h4>Using getParent</h4>
 The getParent method allows access  to elements that contain the element you are currently working with.
-If you were scripting an onPrepare event for a table row, getParent would return a handle to the table.
-If you were scripting an onPrepare event for a data control, to access the table you will need to call getParent several times.
+If you were scripting an onPrepare event handler for a table row, getParent would return a handle to the table.
+If you were scripting an onPrepare event handler for a data element, to access the table you will need to call getParent several times.
 
 <pre style="font-size: 10pt">
 this.getParent().getParent().getParent()
@@ -360,7 +368,7 @@ if (this.getRowData().getExpressionValue("row[QtyOrdered]") > 30){
 <h4>Using Named Expressions</h4>
 <p>
 A named expression is an expression that is created on an element and given a name.
-The expression definition can be edited in onPrepare, and the value of the evaluated expression can be accessed in onCreate and onRender events.
+The expression definition can be edited in onPrepare, and the value of the evaluated expression can be accessed in onCreate and onRender.
 These are often useful when scripting in Java and use of a function like Total is needed.
 For example a named expression my be defined as totalCreditValue and it's value set to Total.sum(row[“CREDITLIMIT”]).  The named expression would then
 be available to other elements in JavaScript as well as Java.
@@ -471,17 +479,24 @@ return true;
 
 <h2><a name="javaevents"></a>Writting Events in Java</h2>
 <p>
-All of the BIRT Events can be written in Java.  This section will describe setting up a Birt Events
-Java project, assigning the events to elements and finally debugging the report.
+BIRT event handlers can be written in Java.  This section will describe setting up a Birt Events
+Java project, assigning the event handlers to elements and finally debugging the report.
 </p>
+<p>
+When writting Java event handlers remember that a new event handler instance will be created for each invocation. 
+The implication of this is that you can not use class data memeber to pass information between methods.  
+For example, if you want to pass information from "onPrepare()" to "onCreate()", you need to use the reportContext to
+hold the shared information.
+</p>
+
 <h4>Setting up the Java Project</h4>
 <p>
-Within Eclipse, open your workspace that contains the reports that will use the Java Events.
+Within Eclipse, open your workspace that contains the reports that will use the Java event handlers.
 Create a new Java project and add scriptapi.jar from the Report Engine download.
 </p>
 <img src="buildpath.jpg" width="594" height="532" /><br/><br/>
 <p>
-The scriptapi.jar file includes the event adapters that are needed to implement events.
+The scriptapi.jar file includes the event adapters that are needed to implement event handlers.
 </p>
 <img src="eventadapters.jpg" width="451" height="589" /><br/><br/>
 <p>
@@ -555,13 +570,13 @@ public class RowEH extends RowEventAdapter {
 
 </pre>
 <p>
-This event is executed on every row and looks for a column named "CREDITLIMIT".  If this credit limit is above the average for all entries in the 
+This event handler is executed on every row and looks for a column named "CREDITLIMIT".  If this credit limit is above the average for all entries in the 
 table, the font weight and size are changed and the color is changed to olive.
 </p>
 
-<h4>Adding the Events to the Report</h4>
+<h4>Adding the event handler to the Report</h4>
 <p>
-Now that the Java classes are built we can create a simple report and apply the events.
+Now that the Java classes are built we can create a simple report and apply the event handler.
 </p>
 <p>
 Build a listing report using the sample database "Classic Models".
@@ -575,7 +590,7 @@ Select the newly created table and enter my.test.events.TableEH in the Event Han
 </p>
 <img src="tableeh.jpg" width="592" height="357" /><br/><br/>
 <p>
-Repeat the process for the row handler event, by selecting the row and entering my.test.events.RowEH in the Event Handler entry on the
+Repeat the process for the row event handler, by selecting the row and entering my.test.events.RowEH in the Event Handler entry on the
 Properties tab.
 </p>
 <p>
@@ -594,8 +609,20 @@ This launch a new Eclipse instance with the selected workspace.  Load the sample
 If breakpoints exist they will halt the code when the table or the row calls your code.
 </p>
 <br>
+<h4>Deploying Java Event Handlers</h4>
+<p>
+To deploy the Java Event Handlers you can just place the classes/jars in the WEB-INF/lib directory of the web application.
+This is not ideal, because it usually requires a restart of the application server.  To handle this issue BIRT adds another directory
+within the web application that is searched when the engine executes reports containing Java event handlers.  By default this
+directory is BIRT_HOME/scriptlib.  To change this directory set the script lib directory in the web.xml file of the Birt Viewer.
+</p>
 
-
+<pre style="font-size: 10pt">
+&lt;context-param&gt;
+	&lt;param-name&gt;BIRT_VIEWER_SCRIPTLIB_DIR&lt;/param-name&gt;
+	&lt;param-value&gt;&lt;/param-value&gt;
+&lt;/context-param&gt;
+</pre>
 
 </div>
 EOHTML;
