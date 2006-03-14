@@ -48,8 +48,9 @@ Eclipse. If you simply want to use BIRT, it is easier to simply
 <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.
 <br>
 If you would like to watch a flash presentation of building BIRT 2.0 click
-<a href=http://download.eclipse.org/birt/downloads/examples/building/BuildingBirt2.0/BuildingBirt2.0.html target=_blank> here</a>
-
+<a href=http://download.eclipse.org/birt/downloads/examples/building/BuildingBirt2.0/BuildingBirt2.0.html target=_blank> here.</a>
+<br>Builing BIRT 2.0.1 is described below.
+ 
 <h1><a name="req">Requirements</a></h1>
 
 In order to successfully build and run the BIRT source, your system must meet 
@@ -304,13 +305,13 @@ A new node appears in the CVS Repositories window.
 the source node.
 <li>Select all the nodes under this node, with the exception of the test projects. On CVS Repositories, right-click and choose 
  Check Out from the context menu.<br/><br/>
-<img src="images/checkout.jpg" width="414" height="768" /><br/><br/>
+<img src="images/checkout.jpg" width="408" height="668" /><br/><br/>
 This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
 </ol>
 
-
 <h1><a name="checkoutdatatools">Checking out the Data Tools projects</a></h1>
 BIRT depends on other Libraries and Projects to build properly.
+This step is only needed if you plan on building the BIRT Viewer.
 After checking out the BIRT source, you will need to check out the Data Tools project source.
 This can be done by opening the CVS Repository Explorer prespective and following the steps below.
 
@@ -357,17 +358,24 @@ The data tools node appears in the CVS Repositories window.
 <li>Expand the data tools node in the repositories tree, then the head node and 
 the source node.
 <li>Select all the nodes under this node as shown in the image below. On CVS Repositories, right-click and choose 
- Check Out from the context menu.<br/><br/>
+ Check Out As... from the context menu.<br/><br/>
 <img src="images/dtoolsproj.jpg" width="457" height="558" /><br/><br/>
+<li>The Check Out As, wizard will be displayed.<br>
+<img src="images/dtpchk1.jpg" width="451" height="445" /><br/><br/>
+<li>Select Next, until the following is displayed.  Select the Configure Tags button.<br>
+<img src="images/dtpchk1a.jpg" width="445" height="430" /><br/><br/>
+<li>Select the .project file under the org.eclipse.datatools.connectivity.oda.flatfile project.  The additional tags shown below should be visible.  Select the Add Checked Tags button.  Select the OK button.<br>
+<img src="images/dtpchk1b.jpg" width="595" height="469" /><br/><br/>
+<li>Select the tag pictured below and press the finish button.<br>
+<img src="images/dtpchk1c.jpg" width="445" height="430" /><br/><br/>
+
 This choice gets the required Data Tools projects from CVS into your Eclipse workspace folder.
-</ol>
-
-
-
-
 
 
 </ol>
+
+
+
 
 
 <h1><a name="additional">Import Additional Files</a></h1>
@@ -377,28 +385,15 @@ BIRT currently requires additional files be included, to allow the source to bui
 Import <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> into the 
 org.eclipse.birt.report.engine.emitter.pdf/lib directory.  If the lib directory does not exist,
 create it.<br><br>
-<img src="images/itext.jpg" width="552" height="828" /><br/><br/>
+<img src="images/itext.jpg" width="458" height="792" /><br/><br/>
 
 <br>
 
-Also download Apache <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a>
-and extract <b>only</b> the six jars listed below and import into the org.eclipse.birt.report.viewer/birt/WEB-INF/lib directory.
-<ul>
-<li>axis.jar 
-<li>axis-ant.jar 
-<li>commons-discovery-0.2.jar 
-<li>jaxrpc.jar 
-<li>saaj.jar 
-<li>wsdl4j-1.5.1.jar 
-</ul>
-<br>
-<img src="images/axis.jpg" width="552" height="830" /><br/><br/>
-<br>
 
 Finally, import <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> into the
 org.eclipse.birt.report.viewer/birt/ajax/lib directory.  If the lib directory does not exist, create it.
 <br><br>
-<img src="images/prototype.jpg" width="557" height="877" /><br/><br/>
+<img src="images/prototype.jpg" width="458" height="826" /><br/><br/>
 <br>
 
 This designer build is now complete.  The final step in building BIRT is building the viewer described in the next section.
