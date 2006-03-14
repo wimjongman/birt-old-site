@@ -590,12 +590,9 @@ values as a <code>HashMap</code>. The <code>IRunAndRenderReportTask</code> provi
 the <code>validateParameters(&nbsp;)</code> method to validate the parameter values before you run 
 the report.</p>
 
-<p>You can produce HTML or PDF output. Each format offers a distinct set of 
-options. These options are set through the <code>HTMLRenderOption</code> and 
-<code>PDFRenderOption</code> 
-classes. Create the one for the output format you desire, set the options you 
-need, and pass the instance to <code>IRunAndRenderReportTask</code> before running the 
-report.</p>
+<p>You can produce HTML or PDF output. Set the output format by calling options.setOutputFormat("html) or ("pdf").
+If you rendering to PDF, using PDFRenderContext instead of HTMLRenderContext allows manipulation of font information, such as
+setting font directory.</p>
 
 <pre style="font-size: 10pt">
 
