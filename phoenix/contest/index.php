@@ -28,7 +28,7 @@
 		<h1><a name="top"></a>$pageTitle</h1>
 
 <h1>Welcome to the Eclipse BIRT Report Contest</h1>
-
+<img src="Birt-postcard-web-vert.jpg" width="397" height="607" /><br/><br/>
 <p class="subhead">Last revised March 8, 2006 <br>
 </p>
 
@@ -42,7 +42,7 @@ creativity and sharing the details.</p>
 <h2>Contest Details</h2>
 <ul>
   <li>There are two categories of awards
-    <ul>
+ 	<ul class="midlist">
       <li>Technical merit award: Recognizes a report that exercises the
         extensions, innovatively uses the API's, or deploys BIRT reports in a
         creative way.</li>
@@ -55,7 +55,7 @@ creativity and sharing the details.</p>
     extensions built, the kinds of integration and deployment, complexity,
     and real world application.</li>
   <li>The prizes will include
-    <ul>
+ 	<ul class="midlist">
       <li>The best reports in each category will receive a Sony PSP</li>
       <li>There will be five second prizes. Each second prize will be a set
         of the upcoming BIRT books -
