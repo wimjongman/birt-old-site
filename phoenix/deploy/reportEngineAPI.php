@@ -808,8 +808,9 @@ which in turn reads Image locations from the Web.xml file.
 
 <h2><a name="simpleexample"></a>Simple Example</h2>
 
-A simple example is presented below.
-To build this example:
+A simple example is presented below.<br>
+A more complex example can be found <a href="ReportRunner.java">here.</a> This example is from the Engine API Source code.<br>
+To build the simple example:
 <ul>
 <li>Verify that your Engine Home is set correctly.
 <li>Set the folder locations for the report design and output HTML file.
