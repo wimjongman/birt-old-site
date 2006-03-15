@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://www.eclipse.org/birt/phoenix/contest">
+						The BIRT Contest 
+					</a>
+					is now open for submissions.  The deadline for entries is Friday, April 28, 2006. 
+					<span class="dates">
+						03/14/06
+					</span>
+				</li>				
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 Milestone 5
 					</a>
@@ -247,17 +256,6 @@
 						11/03/05
 					</span>
 				</li>
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.0 Milestone 2
-					</a>
-					is available for download.
-					Read about the feature set at <a href="project/notable2.0M2.php">Notable Features - BIRT 2.0 M2</a>
-					<span class="dates">
-						10/31/05
-					</span>
-				</li>
-
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
