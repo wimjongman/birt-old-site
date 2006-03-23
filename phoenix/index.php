@@ -272,6 +272,16 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.informationweek.com/windows/showArticle.jhtml?articleID=183701657&subSection=Open+Source">
+						Eclipse Expands, Urges Shift Away From Windows User Interface
+					</a>
+					from
+					<a href="http://www.informationweek.com" target="_blank">InformationWeek</a>.
+					<span class="dates">
+						03/23/06
+					</span>
+				</li>				
+				<li>
 					<a href="http://www.computerworld.com/softwaretopics/software/story/0,10801,107949,00.html?SKC=software-107949">
 						Eclipse unveils updated BI tools
 					</a>
@@ -331,18 +341,6 @@
 					<a href="http://www.mysql.com/" target="_blank">MySQL</a>.
 					<span class="dates">
 						11/16/05
-					</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=171200352&pgno=1">
-						Open Source Goes Corporate
-					</a>
-					from
-					<a href="http://www.informationweek.com/" target="_blank">InformationWeek</a>.
-					<span class="dates">
-						07/28/05
 					</span>
 				</li>
 			</ul>
