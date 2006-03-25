@@ -75,7 +75,7 @@
 				Copy the Web Viewer Example directory to the webapps directory of your Tomcat installation. For ease of reference, rename the directory to "birt-viewer".
 			</li>
 			<li>
-				Copy additional files to the directory structure described in the BIRT Runtime Note.  This note is located on the install page, under Deploying to J2EE Server.
+				Copy additional files to the directory structure described in the BIRT Runtime Note.  This note is located on the install page, under <a href="http://www.eclipse.org/birt/phoenix/build/#j2ee"> Deploying to J2EE Server.</a>
 			</li>
 			<li>
 				Stop, then restart Tomcat.

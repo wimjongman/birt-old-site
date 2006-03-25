@@ -59,11 +59,11 @@
 			PHP has the ability to call Java classes. So, one integration option is to have
 			the PHP engine call BIRT directly. However, this would require changes to
 			Eclipse web server. Another option is to host BIRT on its own app server, such
-			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsagee.html">BIRT Viewer URLs</a> to work
+			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsage.php">BIRT Viewer URLs</a> to work
 			with BIRT.
 		</p>
 		<p>
-			The first step is to <a href="/birt/phoenix/deploy/viewerSetup.html">install Tomcat and the BIRT
+			The first step is to <a href="/birt/phoenix/deploy/viewerSetup.php">install Tomcat and the BIRT
 			viewer</a>. Let's assume that you've set up Tomcat on the same machine as the
 			web server running Apache, and that Tomcat listens on port 8080. Once the setup
 			works, we're ready to focus on the PHP side.
@@ -95,7 +95,7 @@
 		<p>
 			Suppose your report takes parameters. The test report above has one parameter
 			called <code>sample</code>. We simply  add them to the report URL in the form
-			described in <a href="/birt/phoenix/deploy/viewerUsage.html">Using the Report Viewer</a>.
+			described in <a href="/birt/phoenix/deploy/viewerUsage.php">Using the Report Viewer</a>.
 		</p>
 		<blockquote>
 			\$fname = "c:/temp/test.rptdesign";<br>
