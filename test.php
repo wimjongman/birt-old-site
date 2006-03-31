@@ -19,4 +19,5 @@ else
 <?php /* phpinfo(); */ ?> 
 
 </body>
+<!-- scott test -->
 </html>
