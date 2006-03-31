@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="project/Project_plan_R2_1.php">
+						BIRT 2.1 Project Plan has been revised
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.1.
+					<span class="dates">
+						03/31/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://www.eclipse.org/birt/phoenix/contest">
 						The BIRT Contest 
 					</a>
@@ -245,15 +254,6 @@
 					Read about the feature set at <a href="project/notable2.0M3.php">Notable Features - BIRT 2.0 M3</a>
 					<span class="dates">
 						12/07/05
-					</span>
-				</li>
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT/BIRT_demo_Camv3.html">
-						A new BIRT Demo
-					</a>
-					is available for viewing.
-					<span class="dates">
-						11/03/05
 					</span>
 				</li>
 				<li>

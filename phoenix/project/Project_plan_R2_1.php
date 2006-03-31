@@ -29,12 +29,16 @@
 
 
 <body>
-<p class="head">BIRT Project DRAFT 2.1 Plan</p>
+<p class="head">BIRT Project 2.1 Plan</p>
 
-<p class="subhead">Last revised January 30, 2006 <br>
+<p>Last revised March 29, 2006</p>
+
+<p class="subhead"><img src="new.gif" alt="New since last update" width="12"
+height="12"> marks interesting changes since the previous draft of January
+30, 2006 <br>
 </p>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
 
 <p>This document lays out the feature and API set for the next feature
 release of the Eclipse BIRT project after 2.0, designated release 2.1.</p>
@@ -70,13 +74,13 @@ without having to understand the nitty-gritty detail.</p>
 <p>Please send comments about this draft plan to the <a
 href="mailto:birt-dev@eclipse.org">BIRT Developer</a> mailing list.</p>
 
-<h2><a name="Deliverables"></a>Release deliverables</h2>
+<h2><a name="Deliverables" id="Deliverables"></a>Release deliverables</h2>
 
 <p>In order to improve the end user experience of downloading and installing
 BIRT, the release deliverables will be revised. Details will become available
 as progress is made on this project.</p>
 
-<h2><a name="Milestones"></a>Release milestones</h2>
+<h2><a name="Milestones" id="Milestones"></a>Release milestones</h2>
 
 <p>The Eclipse BIRT 2.1 release milestones will be synchronized with the
 Eclipse Callisto simultaneous release. The first BIRT 2.1 milestone will be
@@ -96,16 +100,17 @@ configurations listed below.</p>
   <li>Friday, June 16, 2006 BIRT 2.1 Release Candidate 5</li>
   <li>Wednesday, June 28, 2006 BIRT 2.1 Release Candidate 6</li>
 </ul>
-Our target is to complete and release BIRT 2.1 with the Callisto simultaneous
-release, currently targeted for late June 2006.
+
+<p>Our target is to complete and release BIRT 2.1 with the Callisto
+simultaneous release, currently targeted for late June 2006.</p>
 
 <p>For information about new features assigned to each milestone please refer
 to the <a href="https://bugs.eclipse.org/bugs">bugzilla database</a>. The
 bugzilla database will be updated on an ongoing basis as the plan
 progresses.</p>
 
-<h2><a name="TargetOperatingEnvironments"></a>Target Operating
-Environments</h2>
+<h2><a name="TargetOperatingEnvironments"
+id="TargetOperatingEnvironments"></a>Target Operating Environments</h2>
 
 <p>In order to remain current, each release of an Eclipse project targets
 reasonably current versions of underlying operating environments and other
@@ -118,7 +123,8 @@ Framework (EMF), and on the Java 2 Platform that runs it. </p>
 
 <p>The Eclipse BIRT 2.1 release depends on the following compatibility
 stack:</p>
-<b>BIRT 2.1 Reference Stack for Eclipse 3.2</b>
+
+<p><b>BIRT 2.1 Reference Stack for Eclipse 3.2</b></p>
 <ul>
   <li>Java 2 platform Java Development Kit (JDK) 1.4.2</li>
   <li>Eclipse Platform Runtime Binary 3.2</li>
@@ -173,7 +179,11 @@ reference platforms:</p>
       <td width="453">Sun Java 2 Standard Edition, version 1.4.2</td>
     </tr>
     <tr>
-      <td width="205">Red Hat Enterprise Linux WS 3.0</td>
+      <td width="205">Red Hat Enterprise Linux WS 3.0
+
+        <p><img src="new.gif" alt="New since last update" width="12"
+        height="12">Red Hat Enterprise Linux WS 4.0</p>
+      </td>
       <td width="76">Intel x86</td>
       <td width="59">GTK</td>
       <td width="453">Sun Java 2 Standard Edition, version 1.4.2</td>
@@ -267,7 +277,7 @@ windows.<br>
       </th>
     </tr>
     <tr>
-      <td width="405">Apache Tomcat 4.1.x, 5.5.x</td>
+      <td width="405">Apache Tomcat 5.0.x, 5.5.x</td>
     </tr>
     <tr>
       <td width="405">JBoss AS 4.0.2</td>
@@ -328,7 +338,8 @@ are provided as the default resource bundles. Translations are provided with
 this release for French (fr_FR), German (de_DE), Spanish (es_ES), Japanese
 (ja_JP), Simplified Chinese (zh_CN), and Korean (ko_KR).</p>
 
-<h2><a name="Compatibility"></a>Compatibility with Previous Releases</h2>
+<h2><a name="Compatibility" id="Compatibility"></a>Compatibility with
+Previous Releases</h2>
 
 <p>BIRT 2.1 will be compatible with earlier versions of BIRT to the greatest
 extent possible. The nature and scope of some of the key plan items for BIRT
@@ -383,7 +394,7 @@ anything other than what is specified in the BIRT API are inherently
 unsupportable and receive no guarantees about compatibility within a single
 release much less with an earlier releases.</p>
 
-<h2><a name="Themes">Themes</a></h2>
+<h2><a name="Themes" id="Themes">Themes</a></h2>
 
 <p>Continuing on the themes for previous releases of BIRT, the BIRT project's
 overriding release 2.1 theme remains extending the Eclipse platform to
@@ -406,30 +417,36 @@ Eclipse planning process.</p>
     the BIRT runtime widens BIRT's appeal.</li>
 </ul>
 
-<h2><a name="Projects">Projects</a></h2>
+<h2><a name="Projects" id="Projects">Projects</a></h2>
 
-<p>Project planning is still under way for BIRT 2.1 and this plan will be
-updated in the coming weeks to add new projects as they are identified.
-Projects already identified are:</p>
+<p>Projects identified are:</p>
 
 <blockquote>
-  <p><b>Integration with Eclipse Callisto Simultaneous Release</b> The goal
-  of the Callisto Simultaneous Release is to release ten major Eclipse
-  projects at the same time to support the needs of the ecosystem members who
-  integrate Eclipse frameworks into their own software and products. Callisto
-  is about developers helping developers serve the whole Eclipse community.
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><b>Integration with Eclipse Callisto Simultaneous Release</b>
+  The goal of the Callisto Simultaneous Release is to release ten major
+  Eclipse projects at the same time to support the needs of the ecosystem
+  members who integrate Eclipse frameworks into their own software and
+  products. Callisto is about developers helping developers serve the whole
+  Eclipse community. This project will ensure that 1) BIRT is integrated with
+  the Callisto Simultaneous Release 2) BIRT plug-ins will be made available
+  in jar files 3) BIRT will use message bundles and capabilities. [Bugzilla
+  ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133665">133665</a>]
   [Theme: Appeal to a Broader Community]</p>
 
   <p><b>Provide support for the Eclipse 3.2 Platform</b> The BIRT 2.1 release
-  will be tested on the Eclipse 3.2 Platform Release. [Theme: Scaling up and
-  Enterprise Ready]</p>
+  will be tested on the Eclipse 3.2 Platform Release. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133666">133666</a>][Theme:
+  Scaling up and Enterprise Ready]</p>
 
   <p><b>Improve distribution and installation of BIRT</b> Users of BIRT,
   especially new users, can sometimes be overwhelmed by the complexity of the
-  installation of BIRT and all the components that it depends on. This
-  project aims to improve the end user experience of downloading and
-  installing BIRT and all of its related components. [Theme: Simple to
-  Use]</p>
+  installation of BIRT and all the components that it depends on. BIRT 2.1
+  aims to improve the end user experience of downloading and installing BIRT
+  and all of its related components. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133665">133669</a>][Theme:
+  Simple to Use]</p>
 
   <p><b>ICU4J Integration</b> Integrating the International Components for
   Unicode for Java will enable BIRT 2.1 to work with text in any language for
@@ -437,19 +454,284 @@ Projects already identified are:</p>
   internationalization support, improving performance, staying current with
   the Unicode standard, and providing richer APIs, while remaining as
   compatible as possible with the original Java text and internationalization
-  API design. [Theme: Appeal to a Broader Community]</p>
+  API design. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133665">127012</a>][Theme:
+  Appeal to a Broader Community]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Report Viewing</span></p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Improved Drill
+  Through</span> The developer of a report likely does not know what sections
+  of that report are interesting enough to serve as destinations for links
+  from other reports. Instead of requiring the developer to guess at defining
+  bookmarks in the report, this project will focus on developing the
+  capability to link to the table of contents of a target report as well as
+  to link to a column name and value. This mechanism will provide more
+  flexibility and make report linking easier to use. Additionally, when
+  linking a report to another via the drill through mechanism, there is
+  currently no way of knowing which report parameters if any, are absolutely
+  required. The drill through builder will list whether a report parameter is
+  required. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124710">124710</a>][Theme:
+  Simple to Use]</p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Reportlet HTML
+  Output </span>Web pages often use HTML tables to organize and position
+  their content. In order to provide more flexibility for integrating report
+  content into a web page, it becomes necessary to introduce a new set of
+  formats that return content as &#8216;Reportlets&#8217;, or partial DHTML pages. These
+  Reportlets can then be included within web pages generated by a web
+  application. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=110681">110681</a>][Theme:
+  Simple to Use]</p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Page Break
+  Enhancements</span> Page breaks are currently supported for various report
+  items such as tables and grid rows. Additionally, page breaks are required
+  in a customer order report that groups information by customer and inserts
+  a page break before or after each customer's orders. However, an option is
+  required so that the last blank page is suppressed in the case that a page
+  break is inserted after every group. Similarly, in the case that a page
+  break is inserted before each group, an option should suppress the first
+  blank page. When a page break is inserted after every group, the group
+  header should automatically be repeated. This project also aims to improve
+  the documentation of pagination. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121275">121275</a>, <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124585">124585</a>, <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126120">126120</a>, and
+  <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=119580">119580</a>][Theme:
+  Scaling Up]</p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Determine
+  Columns Bound To A Table</span> In order to improve application
+  performance, the report developer needs to be able to tell what columns
+  from a dataset have been bound to a table. This will allow the developer to
+  then optimize the SQL statement. For example, if only 2 columns from a
+  dataset with 10 columns have been bound, then the select list does not need
+  to fetch all 10 columns from the database. This reduces the data fetch
+  thereby improving performance. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133678">133678</a>][Theme:
+  Scaling Up]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Total Page Count and Pagination
+  Hints For PDF Output</span> When generating PDF output from a BIRT report
+  there is no way of determining the total page count for the report. This
+  project fixes this shortcoming. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121159">121159</a>]
+  Pagination hints for HTML output are stored in the report document file.
+  These hints can not be utilized by the PDF emitter. This project also
+  generates PDF pagination hints which get stored in the report document
+  file. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131624">131624</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Data Sources</span></p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Support
+  Enhanced ODA Framework</span> BIRT 2.1 will incorporate enhancements to the
+  Open Data Access component of the Data Tools Project such as: Upgrades to
+  the ODA 3.0 design framework; specialized implementation in oda.jdbc.ui to
+  support the DTP textual SQL Editor and exposed database definition model;
+  embedding and launching the ODA custom designer's wizard and editor pages
+  in the data explorer. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133681">133681</a>][Theme:
+  Appeal to a Broader Community] Additionally, the Design Engine ROM will be
+  updated to support the DTP 3.0 model changes. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133682">133682</a>][Theme:
+  Appeal to a Broader Community]</p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">XML Data
+  Source Enhancements</span> The following items are included in BIRT 2.1: 1)
+  BIRT 2.0 supports URL's (with or without parameters) and XML files as input
+  streams for the XML Data Source. This project extends this capability by
+  using Java classes as input streams for the XML Data Source. Additionally,
+  web services as input streams are becoming an accepted method of
+  interacting with XML data streams. This will be considered as well. 2) The
+  XML Data Set builder appears complex to use for non Java developers who may
+  not be familiar with Xpath syntax. This project will explore options to
+  improve the usability of the builder. 3) XML files can contain large trees
+  and therefore users need a way to filter parts of the tree so that only the
+  interesting parts appear in the data set builder. 4) An XML Data Set does
+  not currently allow parameters. This project will allow parameters to be
+  passed into XML Data Sets. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=116636">116636</a>]
+  This project will enhance the BIRT XML ODA Driver to display non-English
+  strings properly. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=129424">129424</a>][Theme:
+  Appeal to a Broader Community]</p>
+
+  <p style="text-indent: 25pt"><span style="font-weight: bold">Join Two Data
+  Sets </span>It is a commonly requested feature that a BIRT table or list be
+  able to consume data from two or more data sets joined together with a set
+  of join conditions. This feature is very similar to SQL table joins. In
+  comparing BIRT&#8217;s data set join to SQL joins, a BIRT data set is equivalent
+  to a SQL table, while a data set column is equivalent to a column in a
+  table. Data set joins in BIRT are achieved via the introduction of a new
+  type of data set called Joint Data Set. A Joint Data Set is a derived data
+  set whose data comes from joining two data sets. Users can create a data
+  set that is the join of two data sets and can define one and only one join
+  key, outer/inner join, and filtering condition. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131040">131040</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Automatic Thumbnail Image
+  Creation</span> TTemplates ease the task of report creation by providing
+  pre-built starting points. To make it easy to select a template in the
+  report designer, the report developer needs to be able to visually inspect
+  the layout of a template. This project will automate the creation of a
+  thumbnail image from a report design. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127427">127427</a>]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Template Creation From Report
+  Design</span> There is no obvious way to create a report template from a
+  report design. This project will address this shortcoming. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=122575">122575</a>]
+  Some key usability improvements planned in this project include: 1)
+  Publishing a template from the right mouse button click in the outline
+  view. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126064">126064</a>] 2)
+  Indicating that the template display name is required in the template
+  publishing dialog. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126074">126074</a>] 3)
+  Providing a name for a report item when converting it to a template report
+  item. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126103">126103</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Highlighting Top N or Bottom N
+  rows</span> Highlighting is a powerful way to draw attention to report
+  items that meet certain conditions. For instance, in a product inventory
+  report, if the inventory level of a product drops below the minimum
+  stocking level, then that row in the report should be highlighted. This
+  project enhances the highlighting feature by supporting the capability to
+  highlight the top N or bottom N rows in a result set. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=123726">123726</a>]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Highlight Applies To Any Report
+  Element</span> When creating alternating bands of highlighted rows, the
+  backgrounds for the cells are not contiguous. This leaves white spaces
+  between highlighted cells in a band especially if the data value in a cell
+  is not available. Highlighting will now be applicable to any report element
+  and will not be cascading removing any gaps in highlight bands. [Bugzilla
+  ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=102511">102511</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Data Set Editor UI
+  Improvements</span> In order to make the data set editor consistent with
+  the Eclipse look and feel the following items are planned: 1)
+  Double-clicking on the data field should work exactly like drag and drop 2)
+  Arrows in the right corner will allow the user to navigate to the
+  next/previous option. 3) Make Preview Results option the last in the list;
+  4) Apply button will appear on each panel and apply the changes made
+  without closing the dialog; 5) Clicking the Preview Results button will
+  apply the changes made and switch to the Preview Results pane, populating
+  it with the data corresponding to the current query; 6) Add progress bar
+  (similar to the one in Report Preview) to the Preview Results operation; 7)
+  Aesthetic changes such as positioning of items in the dialog and size in
+  pixels of items. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126083">126083</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Chart Enhancements</span> A
+  number of enhancements are planned for this project. Some key ones include:
+  1) Support bar/stick display for Stock series - The bar/stick display
+  represents prices as a vertical line from the high to the low, with a left
+  tick representing the opening price and a right tick representing the
+  closing price. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=113179">113179</a>] 2)
+  Auto-wrapping/size of legend - Charts auto size and legends wrap so that
+  large data sets are handled. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=116709">116709</a>] 3)
+  %value for Pie Charts and expressions for data point labels - Provide the
+  ability to display the % value of the chart section in addition to
+  Orthogonal Value, Base Value and Series Value. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=117566">117566</a>] 4)
+  Support tool tips on various chart elements &#8211; Tool tips are used to
+  annotate chart components with extra information. Chart components that
+  should have tool tips are: chart title, axes, legend items, data sets, and
+  data point values. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=119136">119136</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Accelerator Keys</span> In
+  order to conform to the Accessibility guidelines for the Eclipse UI, this
+  project will provide accelerator keys for setting preferences. This will
+  enhance the adoption of BIRT in commercial products. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=125122">125122</a>][Theme:
+  Appeal to a Broader Community]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Ease Report Migration</span> To
+  encourage the use of BIRT by the development community, it must be easy for
+  developers to migrate BIRT reports across environments such as from
+  development to testing to production. To support this goal, BIRT 2.1 should
+  provide capabilities in the Eclipse environment that make it easy for the
+  developer to deploy the BIRT reports in their application using visual
+  tools. This includes packaging up reports and all their dependent
+  components such as libraries, scripted data source (Java class files), war
+  files for the BIRT runtime, images, and other related artifacts. [Bugzilla
+  ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133697">133697</a>][Theme:
+  Enterprise Ready]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Include BIRT source code with
+  downloads </span>Current downloads of Eclipse BIRT do not provide an SDK
+  like package which includes the source code for BIRT. There is a need for
+  such a package so that users do not have to handle the additional
+  complexities of downloading the source code from CVS. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104310">104310</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Specifying Report Item Event
+  Handlers</span> This project will provide an easier method of specifying
+  the class that implements the event handling for a particular report item.
+  [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=126109">126109</a>][Theme:
+  Simple to Use]</p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Multiple Master Pages <span
+  style="font-weight: normal">This project will provide support for multiple
+  master pages in a report. For each page break before a report item, a new
+  master page can be identified. This will remain in effect until the next
+  page break that identifies a different master page. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132316">132316</a>][Theme:
+  Simple to Use]</span></span></p>
+
+  <p><img src="new.gif" alt="New since last update" width="12"
+  height="12"><span style="font-weight: bold">Data Binding in Master Pages
+  </span>An often requested feature is the ability to provide data bindings
+  on the master page of a report. This project will provide the capability to
+  retrieve the first row in the dataset that binds to report items in the
+  master page. [Bugzilla ID: <a
+  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132316">122419</a>][Theme:
+  Simple to Use]</p>
 </blockquote>
 
-<h2><a name="Defects">Defects</a></h2>
-BIRT 2.1 will address defects reported by project members and the community.
-The <a
+<h2><a name="Defects" id="Defects">Defects</a></h2>
+
+<p>BIRT 2.1 will address defects reported by project members and the
+community. The <a
 href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=BIRT&amp;target_milestone=2.1.0+Final&amp;">list
 of defects</a> targeted for resolution in BIRT 2.1 can be found in the
 bugzilla database on <a
-href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</body>
-	</div>
-</div>
+href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
 
+<p></p>
 
 EOHTML;
 

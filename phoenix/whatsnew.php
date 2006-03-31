@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="project/Project_plan_R2_1.php">
+						BIRT 2.1 Project Plan has been revised
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.1.
+					<span class="dates">
+						03/31/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://www.eclipse.org/birt/phoenix/contest">
 						The BIRT Contest 
 					</a>
