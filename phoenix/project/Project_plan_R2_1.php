@@ -277,7 +277,8 @@ windows.<br>
       </th>
     </tr>
     <tr>
-      <td width="405">Apache Tomcat 5.0.x, 5.5.x</td>
+      <td width="405"><img src="new.gif" alt="New since last update"
+        width="12" height="12">Apache Tomcat 5.0.x, 5.5.x</td>
     </tr>
     <tr>
       <td width="405">JBoss AS 4.0.2</td>
@@ -580,7 +581,7 @@ Eclipse planning process.</p>
 
   <p><img src="new.gif" alt="New since last update" width="12"
   height="12"><span style="font-weight: bold">Automatic Thumbnail Image
-  Creation</span> TTemplates ease the task of report creation by providing
+  Creation</span> Templates ease the task of report creation by providing
   pre-built starting points. To make it easy to select a template in the
   report designer, the report developer needs to be able to visually inspect
   the layout of a template. This project will automate the creation of a
