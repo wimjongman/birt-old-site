@@ -61,6 +61,7 @@
 		<tag name="misleading" description="Answer provides either incorrect or inappropriate " />
 	</dimension>
 	<dimension name="audience" calculated="false">
+		<tag name="All" description="Applicable to anyone using BIRT" />
 		<tag name="GettingStarted" description="New to BIRT" />
 		<tag name="User" description="Report Development and Web Viewer Deployment schemes" />
 		<tag name="Integrator" description="Someone using BIRT within their product " />
