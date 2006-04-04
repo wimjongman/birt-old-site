@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+	<project name="BIRT"
+			description="Business Intelligence and Reporting Tools" 
+		 	tag_def="http://www.eclipse.org/birt/eclipse_tagbar_birt.xml"
+			 />
+	<project name="CDT" 
+			description="C/C++ Development Tool"  
+		 	tag_def=""
+			 />
+	<project name="DTP" 
+			description="Data Tools Platform"  
+		 	tag_def=""
+			 />
+	<project name="EMF" 
+			description="Eclipse Modeling Framework"  
+		 	tag_def=""
+			 />>
+	<project name="GEF" 
+			description="Graphical Editor Framework"  
+		 	tag_def=""
+			 />
+	<project name="GMF" 
+			description="Grapical Modeling Framework"  
+		 	tag_def=""
+			 />
+	<project name="JDT" 
+			description="Java Development Tools"  
+		 	tag_def=""
+			 />
+	<project name="PDE" 
+			description="Plug-in Development Environment"  
+		 	tag_def=""
+			 />
+	<project name="RCP" 
+			description="Rich Client Platform"  
+		 	tag_def=""
+			 />
+	<project name="TPTP" 
+			description="Testing Performance Tools Project"  
+		 	tag_def=""
+			 />
+	<project name="WTP" 
+			description="Web Tools Platform"  
+		 	tag_def=""
+			 />
+
+</projects>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project_dimension_tags
+	semanticTest="I am working on the {project} project.  
+					  I am trying to do build/work with {HowToTopic} to create a {HowToTask}.
+					  My experience level is {audience}.
+					  I am working with the BIRT source and the source project is {source_project}.
+					  I have a question about the BIRT Report Object Model element {rom_element}.
+					  This web page is very {quality}.
+					  I am using the following {project} api {api}."
+					  
+	accountUser="birt_tagbar" 
+	accountPass="birt_tagbar" 
+	defaultTags="eclipse"
+	calculated="false">
+	<dimension name="how_to_topic"
+		description="The HowToTopic is used to provide a very simple categorization of the top level activities in BIRT ">
+		<tag name="BirtInstall" description="I am trying to install BIRT" />
+		<tag name="ReportDesign"
+			description="I am trying to create a report with the BIRT report designer" />
+		<tag name="ChartDesign"
+			description="I am trying to build charts with the BIRT report designer" />
+		<tag name="Data" description="I am working on getting data into my report design" />
+		<tag name="ReportOutput"
+			description="I am trying to create or modify the output of the report" />
+		<tag name="BasicDeploy"
+			description="I am following the simplest BIRT deployment model, the BIRT Web Viewer" />
+		<tag name="ChartIntegration"
+			description="I want to include stand-alone charts in my application" />
+		<tag name="DeployIntegration"
+			description="I want to integrate running and viewing reports into my application without the Web Viewer" />
+		<tag name="Extension" description="Questions and discussion about extension of BIRT" />
+		<tag name="GettingInvolved"
+			description="Discussions of new projects, code contributions, and how to get involved." />
+		<tag name="BirtBusiness"
+			description="Questions about project goals, direction, management, etc." />
+	</dimension>
+	<dimension name="how_to_task"
+		description="This tag identifies a specific task within a broad HowToTopic area">
+		<tag name="script_logging" />
+		<tag name="script_globals" />
+		<tag name="script_reportContext" />
+		<tag name="script_debugging" />
+		<tag name="script_expressions" />
+		<tag name="row_format" />
+		<tag name="table_format" />
+		<tag name="row_format" />
+		<tag name="data_filter" />
+		<tag name="data_parameter" />
+		<tag name="data_query" />
+		<tag name="data_extension" />
+		<tag name="data_source" />
+		<tag name="data_calculation" />
+	</dimension>
+	<dimension name="quality" calculated="false">
+		<tag name="question" description="A question with no answer." />
+		<tag name="hint"
+			description="Doesn't really answer the question but points to some possible answers" />
+		<tag name="definitive" description="Provides a correct and appropriate answer" />
+		<tag name="misleading" description="Answer provides either incorrect or inappropriate " />
+	</dimension>
+	<dimension name="audience" calculated="false">
+		<tag name="GettingStarted" description="New to BIRT" />
+		<tag name="User" description="Report Development and Web Viewer Deployment schemes" />
+		<tag name="Integrator" description="Someone using BIRT within their product " />
+		<tag name="Committer"
+			description="Some working on contributing to the core BIRT source code" />
+	</dimension>
+	<dimension name="api" calculated="false">
+		<tag name="scriptApi" description="BIRT Report Scripting API Reference" />
+		<tag name="modelApi" description="Report Object Model API Reference" />
+		<tag name="engineApi" description="Report Engine API Reference" />
+		<tag name="oda202Api" description="Open Data Access (ODA) 2.0.2 API Reference" />
+		<tag name="oda300" description="Open Data Access (ODA) 3.0.0 API Reference" />
+		<tag name="dataEngineApi" description="Data Engine API Reference" />
+		<tag name="chartEngineApi" description="Chart Engine API Reference" />
+		<tag name="chartUiApi" description="Chart User Interface API Reference" />
+	</dimension>
+	<dimension name="source_project" calculated="false">
+		<tag name="org.eclipse.birt" />
+		<tag name="org.eclipse.birt-feature" />
+		<tag name="org.eclipse.birt.chart.device.extension" />
+		<tag name="org.eclipse.birt.chart.device.svg" />
+		<tag name="org.eclipse.birt.chart.engine" />
+		<tag name="org.eclipse.birt.chart.engine.extension" />
+		<tag name="org.eclipse.birt.chart.examples" />
+		<tag name="org.eclipse.birt.chart.reportitem" />
+		<tag name="org.eclipse.birt.chart.ui" />
+		<tag name="org.eclipse.birt.chart.ui.extension" />
+		<tag name="org.eclipse.birt.chart.ui.prototype" />
+		<tag name="org.eclipse.birt.core" />
+		<tag name="org.eclipse.birt.core.ui" />
+		<tag name="org.eclipse.birt.data" />
+		<tag name="org.eclipse.birt.data.oda" />
+		<tag name="org.eclipse.birt.data.oda.adapter.dtp" />
+		<tag name="org.eclipse.birt.doc" />
+		<tag name="org.eclipse.birt.framework.taskwizard.prototype" />
+		<tag name="org.eclipse.birt.report.data.oda.flatfile" />
+		<tag name="org.eclipse.birt.report.data.oda.flatfile.ui" />
+		<tag name="org.eclipse.birt.report.data.oda.jdbc" />
+		<tag name="org.eclipse.birt.report.data.oda.jdbc.ui" />
+		<tag name="org.eclipse.birt.report.data.oda.sampledb" />
+		<tag name="org.eclipse.birt.report.data.oda.sampledb.ui" />
+		<tag name="org.eclipse.birt.report.data.oda.xml" />
+		<tag name="org.eclipse.birt.report.data.oda.xml.ui" />
+		<tag name="org.eclipse.birt.report.debug.ui" />
+		<tag name="org.eclipse.birt.report.designer.core" />
+		<tag name="org.eclipse.birt.report.designer.rcp.ui" />
+		<tag name="org.eclipse.birt.report.designer.tests" />
+		<tag name="org.eclipse.birt.report.designer.ui" />
+		<tag name="org.eclipse.birt.report.designer.ui.ide" />
+		<tag name="org.eclipse.birt.report.designer.ui.lib" />
+		<tag name="org.eclipse.birt.report.designer.ui.lib.explorer" />
+		<tag name="org.eclipse.birt.report.designer.ui.rcp" />
+		<tag name="org.eclipse.birt.report.engine" />
+		<tag name="org.eclipse.birt.report.engine.emitter.fo" />
+		<tag name="org.eclipse.birt.report.engine.emitter.html" />
+		<tag name="org.eclipse.birt.report.engine.emitter.pdf" />
+		<tag name="org.eclipse.birt.report.engine.pdf" />
+		<tag name="org.eclipse.birt.report.model" />
+		<tag name="org.eclipse.birt.report.viewer" />
+		<tag name="org.eclipse.birt.sample.reportitem.rotatedtext" />
+		<tag name="org.eclipse.datatools.connectivity.oda" />
+		<tag name="org.eclipse.datatools.connectivity.oda.flatfile" />
+	</dimension>
+	<dimension name="rom_element" calculated="false">
+		<tag name="Cell" />
+		<tag name="Column" />
+		<tag name="Data" />
+		<tag name="DataSet" />
+		<tag name="DataSource" />
+		<tag name="DesignElement" />
+		<tag name="ExtendedItem" />
+		<tag name="Grid" />
+		<tag name="Image" />
+		<tag name="Label" />
+		<tag name="List" />
+		<tag name="ListGroup" />
+		<tag name="Listing" />
+		<tag name="MasterPage" />
+		<tag name="Module" />
+		<tag name="OdaDataSet" />
+		<tag name="OdaDataSource" />
+		<tag name="Parameter" />
+		<tag name="ParameterGroup" />
+		<tag name="ReportDesign" />
+		<tag name="ReportElement" />
+		<tag name="ReportItem" />
+		<tag name="Row" />
+		<tag name="ScalarParameter" />
+		<tag name="ScriptDataSet" />
+		<tag name="ScriptDataSource" />
+		<tag name="SimpleMasterPage" />
+		<tag name="StyleElement" />
+		<tag name="Table" />
+		<tag name="TableGroup" />
+		<tag name="Text" />
+		<tag name="TextData" />
+	</dimension>
+	<dimension name="responses" calculated="true" type="integer"></dimension>
+	<dimension name="age" calculated="true" default="0-30" type="string">
+		<search_tag>0-30</search_tag>
+		<search_tag>31-60</search_tag>
+		<search_tag>61-90</search_tag>
+		<search_tag>91-120</search_tag>
+		<search_tag>olderThan120</search_tag>
+	</dimension>
+
+</project_dimension_tags>
