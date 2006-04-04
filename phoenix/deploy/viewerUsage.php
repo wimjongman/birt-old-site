@@ -52,7 +52,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Create a parameter entry form based on the parameter definitions within the report design file.
+				Create a frameset based viewer that interacts with the servlet using AJAX to support more features.
 			</li>
 			<li>
 				Given a set of report parameter values, run a report and return the output as either HTML or PDF.
@@ -62,7 +62,7 @@
 			</li>
 		</ul>
 		<p>
-			You can use a full-feature Viewer frameset that displays a parameter form and runs the report. Or, you can supply the parameter values and simply run the report to produce a simple HTML or PDF output page.
+			You can use a full-feature Viewer frameset that handles parameter entry, Table of Contents, export to CSV and HTML pagination. Or, you can supply the parameter values and simply run the report to produce a simple HTML or PDF output page.
 		</p>
 
 
@@ -81,9 +81,8 @@
 			<tbody>
 			  <tr>
 				<td>frameset</td>
-				<td>Display a frameset that has one
-				frame that prompts the user for parameters, then displays the resulting
-				report in another frame.</td>
+				<td>Display a frameset that contains the report and additional AJAX components for
+				retrieving Table of Contents, exporting to CSV, parameter entry and paging controls.</td>
 			  </tr>
 			  <tr>
 				<td>run</td>
@@ -98,7 +97,7 @@
 
 		<h2><a name="run">Run a Report</a></h2>
 		<p>
-			The run servlet mapping runs a report given a set of report parameters, and returns the report as an HTML page or PDF document. This servlet mapping does not provide a frameset. Use this option if you want the report to appear as a stand-alone page. Parameters must be handled in one of three ways:
+			The run servlet mapping runs a report given a set of report parameters, and returns the report as an HTML page or PDF document. This servlet mapping does not provide a frameset. Use this option if you want the report to appear as a stand-alone page or if PDF output is required. Parameters must be handled in one of three ways:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -125,32 +124,31 @@
 
 		<h2><a name="frameset">Viewer Frameset</a></h2>
 		<p>
-			The <code>viewer</code> command provides additional UI to work with a report. Use this URL when your report contains parameters, and you want the Viewer to display a UI so the user can enter parameter values. (You should use the <code>run</code> command if the caller already has the parameter values.)
-		</p>
+			The <code>frameset</code> command provides additional UI to work with a report. Use this URL when your report contains parameters, and you want the Viewer to display a UI so the user can enter parameter values. Using the <code>frameset</code>
+			command also allows for HTML pagination.
+					</p>
 		<p>
-			The frame-based viewer displays a frameset that contains three frames:
+			The frame-based viewer displays a frameset that contains the report and controls for the following functions:
 		</p>
 		<ul class="midlist">
 			<li>
-				A left-hand navigation frame that contains the report parameters.
+				Table of Contents - Use this navigate reports.  Selecting a link in a multi-page report will automatically load the desired page.
 			</li>
 			<li>
-				A right-hand content frame that contains the report output
+				Run Report - Use this control to enter parameters and execute the report.
 			</li>
 			<li>
-				A top toolbar frame that contains the navigation bar.
+				Export Data - This control prompts the user to select what report data should be exported to CSV.
+			</li>
+			<li>
+				Page Controls - Navigate paginated HTML report output.
 			</li>
 		</ul>
 		<p>
-			The parameters frame displays a form for entering the parameters (if any) for
+			The parameters dialog displays a form for entering the parameters (if any) for
 			a report. It contains a  Run Report button that runs the report. The report then
 			appears in the report frame . The user can refine the report simply by modifying
 			parameters in the parameter frame and again by clicking Run Report.
-		</p>
-		<p>
-			The toolbar contains a button to maximize the report. When this is
-			done, the frameset switches to display a single frame that contains the report
-			output.
 		</p>
 		<p>
 			The viewer URL is of the form:
@@ -166,8 +164,14 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Run and display the report if it has no parameters, or
+				Run and display the report if any of the following conditions are true.
+				<ul>
+				<li>The report has no parameters</li>  
+				<li>All parameters have supplied default values.</li>
+				<li>All parameters have <code>allowNull</code> property checked</li>
+				</ul>
 			</li>
+			or
 			<li>
 				Display the parameter page and ask you to enter parameters. You can then click the Run Report button to run the report.
 			</li>
@@ -221,15 +225,15 @@
 				<td>The output format</td>
 				<td>html or pdf</td>
 				<td>html</td>
-				<td>Y</td>
 				<td>N</td>
+				<td>Y</td>
 			  </tr>
 			  <tr>
 				<td>__isnull</td>
 				<td>Identifies that a report parameter has a null value</td>
 				<td>Parameter name</td>
 				<td>None. Required.</td>
-				<td>Y</td>
+				<td>N</td>
 				<td>Y</td>
 			  </tr>
 			  <tr>
@@ -244,7 +248,7 @@
 
 			  <tr>
 				<td>__report</td>
-				<td>The absolute path to the report document.</td>
+				<td>The path to the report document.</td>
 				<td>&nbsp;</td>
 				<td>None. Required.</td>
 				<td>Y</td>
@@ -308,7 +312,7 @@
 		<p>
 			The <code>__report</code> Option names the
 			report design to run. It can be an absolute or relative file name. If
-			relative, the looks in the directory specified in the <code>BIRT_VIEWER_REPORT_ROOT</code> property in the viewer's <code>web.xml</code> file.
+			relative, the looks in the directory specified in the <code>BIRT_VIEWER_WORKING_FOLDER</code> property in the viewer's <code>web.xml</code> file.
 			The file search rules are:
 		</p>
 		<ul class="midlist">
@@ -316,7 +320,7 @@
 				If name is absolute, use it directly.
 			</li>
 			<li>
-				If <code>BIRT_VIEWER_REPORT_ROOT</code> is set, use this value as the base for the relative name.
+				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set, use this value as the base for the relative name.
 			</li>
 			<li>
 				Otherwise, use the viewer web app's directory as the base for the relative name.
