@@ -126,7 +126,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="mysql/ClassicModels-MySQL.zip">Download the zip file</a> containing the MySQL database scripts.
+				<a href="mysqlscr/ClassicModels-MySQL.zip">Download the zip file</a> containing the MySQL database scripts.
 			</li>
 			<li>
 				Expand the zip file into a convenient location.
