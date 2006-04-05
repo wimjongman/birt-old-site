@@ -120,12 +120,16 @@
 			<li>
 				If you've installed everything in its default location, then click on the following link. If you've changed anything, then copy the following URL into your browser and make the needed changes.
 				<blockquote>
-					http://localhost:8080/birt-viewer/run?__report=Report\SalesInvoice.rptdesign
-				</blockquote
+					http://localhost:8080/birt-viewer/run?__report=Report\SalesInvoice.rptdesign 
+				</blockquote>
+				or
+				<blockquote>
+					http://localhost:8080/birt-viewer/frameset?__report=Report\SalesInvoice.rptdesign
+				</blockquote>
 			</li>
 		
 		<p>
-			The report should run and appear in your browser, along with a parameter form in which you can enter a different value for the "Order Number " parameter for this report.
+			The report should run and appear in your browser.  See <a href="viewerUsage.php">Viewer Usage</a> for information on the Viewer Operations.
 		</p>
 		</ul>
 
