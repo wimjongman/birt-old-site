@@ -157,6 +157,15 @@ BIRT framework and unzip the contents to any directory.
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
+<br>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC0 or later the itext jar file needs to be copied to the plugins/com.lowagie.itext_*/lib directory.
+
+ </ul>
+</div>
+<br>
 </p>
 
 <p>
@@ -203,16 +212,25 @@ default location, this is "C:\program files\eclipse\plugins".
 <h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <div class="homeitem3col">
-<h3>Birt Runtime Note: </h3>
+<h3>Birt 2.0.0, 2.0.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT Runtime (J2EE Application Server Deployment),
- The above files will need to be copied to the birt-runtime-2_0_1\Web Viewer Example directory structure.
+ <li>If you are installing the BIRT 2.0.0 or 2.0.1 Runtime (J2EE Application Server Deployment),
+ The iText and prototype files will need to be copied to the birt-runtime/Web Viewer Example directory structure.
  <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
  <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
  </ul>
 </div>
 <br>
-
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 or Later Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.1 RC0 or Later Runtime (J2EE Application Server Deployment),
+ The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
+ <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy prototype.js to /WebViewerExample/ajax/lib.
+ </ul>
+</div>
+<br>
 <h2><a name="common"></a>Common Problems</h2>
 <p>
 Some problems are due to cached information within Eclipse. Eclipse caches
