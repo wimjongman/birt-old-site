@@ -90,19 +90,32 @@
 				A page confirming that the BIRT viewer has been installed should be displayed. Click on the link labeled "View Example" to confirm that your installation is working properly.
 			</li>
 		</ul>
+
 		<p>
 			If you choose to put the Viewer into some other location, you'll need to use a context entry within the server.xml file to indicate the deployment location. See Tomcat documentation for details.
 		</p>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC0 or the Web Viewer Example has been changed to WebViewerExample.
 
+ </ul>
+</div>
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
 		<p>
 			Add the jar files for your JDBC drivers  to the Viewer. They  go in the following directory:
 		</p>
 		<p>
 			birt-viewer/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
-		</p>
-		<p>
-			(Note: you must install the drivers both into the Eclipse-based design environment and the deployed viewer environment; these two environments do not share files.)
+			
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC0 or later the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers.
+
+ </ul>
+</div>
+			
 		</p>
 
 
@@ -159,19 +172,16 @@
 				Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /birt.war/ajax/lib directory.
 			</li>
 			<li>
-				Download <a href="http://apache.downlod.in/ws/axis/1_2_1/axis-bin-1_2_1.zip">Axis 1.2.1 ZIP</a> and extract <b>only</b> the six jars (listed below) to the birt.war/WEB-INF/lib directory.
-				<ol>axis.jar</ol>
-				<ol>axis-ant.jar</ol>
-				<ol>commons-discovery-0.2.jar</ol>
-				<ol>jaxrpc.jar  </ol>
-				<ol>saaj.jar</ol>
-				<ol>wsdl4j-1.5.1.jar</ol>
-			</li>
-			<li>
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report..
 			</li>
 		</ul>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC0 or the Web Viewer Example has been changed to WebViewerExample.
 
+ </ul>
+</div>
 
 		<h2><a name="other">Other J2EE Servers</a></h2>
 		<p>We are currently working on instructions for other application servers</p>
