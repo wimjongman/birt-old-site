@@ -34,6 +34,7 @@
 			<ul>
 				<li><a href="#using">Using Tomcat</a></li>
 				<li><a href="#install_viewer">Install the Viewer</a></li>
+				<li><a href="#xtra">iText and prototype.js</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
 				<li><a href="#jboss">Deploying to JBoss</a></li>
@@ -75,7 +76,7 @@
 				Copy the Web Viewer Example directory to the webapps directory of your Tomcat installation. For ease of reference, rename the directory to "birt-viewer".
 			</li>
 			<li>
-				Copy additional files to the directory structure described in the BIRT Runtime Note.  This note is located on the install page, under <a href="http://www.eclipse.org/birt/phoenix/build/#j2ee"> Deploying to J2EE Server.</a>
+				Copy additional files to the directory structure described in the BIRT Runtime Note below (iText and prototype.js).
 			</li>
 			<li>
 				Stop, then restart Tomcat.
@@ -101,6 +102,33 @@
 
  </ul>
 </div>
+
+
+		<h2><a name="xtra"></a>iText and prototype.js</h2>
+		<p>
+			Verify that you have downloaded <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> and <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> and follow the note below:
+		</p>
+<div class="homeitem3col">
+<h3>Birt 2.0.0, 2.0.1 Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.0.0 or 2.0.1 Runtime (J2EE Application Server Deployment),
+ The iText and prototype files will need to be copied to the birt-runtime/Web Viewer Example directory structure.
+ <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
+ <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
+ </ul>
+</div>
+<br>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 or Later Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.1 RC0 or Later Runtime (J2EE Application Server Deployment),
+ The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
+ <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy prototype.js to /WebViewerExample/ajax/lib.
+ </ul>
+</div>
+<br>
+
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
 		<p>
 			Add the jar files for your JDBC drivers  to the Viewer. They  go in the following directory:
@@ -178,7 +206,8 @@
 <div class="homeitem3col">
 <h3>Birt 2.1 RC0 Note: </h3>
 <ul>
- If you are installing BIRT 2.1 RC0 or the Web Viewer Example has been changed to WebViewerExample.
+ If you are installing BIRT 2.1 RC0 or the Web Viewer Example has been changed to WebViewerExample.  Also see note under <a href="#xtra">iText and prototype.js</a> on this
+ page to verify the location of these files.
 
  </ul>
 </div>
