@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="presos/index.php">
+						BIRT EclipseCon 2006 Presentations 
+					</a>
+					are now available for download.
+					<span class="dates">
+						04/12/06
+					</span>
+				</li>						
+				<li>
 					<a href="project/Project_plan_R2_1.php">
 						BIRT 2.1 Project Plan has been revised
 					</a>
@@ -244,16 +253,6 @@
 					is available for download.
 					<span class="dates">
 						01/04/06
-					</span>
-				</li>
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.0 Milestone 3
-					</a>
-					can now be downloaded.
-					Read about the feature set at <a href="project/notable2.0M3.php">Notable Features - BIRT 2.0 M3</a>
-					<span class="dates">
-						12/07/05
 					</span>
 				</li>
 				<li>

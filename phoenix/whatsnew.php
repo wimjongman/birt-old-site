@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="presos/index.php">
+						BIRT EclipseCon 2006 Presentations 
+					</a>
+					are now available for download.
+					<span class="dates">
+						04/12/06
+					</span>
+				</li>					
+				<li>
 					<a href="project/Project_plan_R2_1.php">
 						BIRT 2.1 Project Plan has been revised
 					</a>
