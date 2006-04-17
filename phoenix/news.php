@@ -34,6 +34,16 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://java.sys-con.com/read/204706.htm">
+						Java Feature — Business Intelligence and Reporting with BIRT
+					</a>
+					from
+					<a href="http://java.sys-con.com/ target="_blank">Java Developer's Journal</a>.
+					<span class="dates">
+						04/17/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://www.informationweek.com/windows/showArticle.jhtml?articleID=183701657&subSection=Open+Source">
 						Eclipse Expands, Urges Shift Away From Windows User Interface
 					</a>

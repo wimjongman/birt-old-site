@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC0
+					</a>
+					is now available for download.  BIRT SDK can now be downloaded as well.</a>
+					<span class="dates">
+						04/17/06
+					</span>
+				</li>						
+				<li>
 					<a href="presos/index.php">
 						BIRT EclipseCon 2006 Presentations 
 					</a>

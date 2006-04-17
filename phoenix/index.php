@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC0
+					</a>
+					is now available for download.  BIRT SDK can now be downloaded as well.</a>
+					<span class="dates">
+						04/17/06
+					</span>
+				</li>			
+				<li>
 					<a href="presos/index.php">
 						BIRT EclipseCon 2006 Presentations 
 					</a>
@@ -236,25 +245,6 @@
 						01/22/06
 					</span>
 				</li>
-				
-				<li>
-					<a href="project/pmc.php">
-						The BIRT PMC
-					</a>
-					is pleased to announce that Mike Fox, from IBM / Rational, has joined the Committee.
-					<span class="dates">
-						01/16/06
-					</span>
-				</li>
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.0 Release Candidate
-					</a>
-					is available for download.
-					<span class="dates">
-						01/04/06
-					</span>
-				</li>
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
@@ -270,6 +260,16 @@
 		<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
+				<li>
+					<a href="http://java.sys-con.com/read/204706.htm">
+						Java Feature — Business Intelligence and Reporting with BIRT
+					</a>
+					from
+					<a href="http://java.sys-con.com/ target="_blank">Java Developer's Journal</a>.
+					<span class="dates">
+						04/17/06
+					</span>
+				</li>						
 				<li>
 					<a href="http://www.informationweek.com/windows/showArticle.jhtml?articleID=183701657&subSection=Open+Source">
 						Eclipse Expands, Urges Shift Away From Windows User Interface
@@ -332,16 +332,6 @@
 					</span>
 				</li>
 		
-				<li>
-					<a href="http://dev.mysql.com/tech-resources/articles/using-birt/">
-						Using BIRT To Report On Bugzilla in MySQL
-					</a>
-					from
-					<a href="http://www.mysql.com/" target="_blank">MySQL</a>.
-					<span class="dates">
-						11/16/05
-					</span>
-				</li>
 			</ul>
 			<ul>
 				<li>
