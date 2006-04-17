@@ -29,7 +29,7 @@
 		<h2>EclipseCon2 2006 Presentations</h2>
 
 		<p>
-			<a href="eclipsecon2006/BirtInDepth.ppt">Birt In Depth</a><br>
+			<a href="eclipsecon2006/BIRTInDepth.ppt">Birt In Depth</a><br>
 			This Presentation was used an EclipseCon tutorial and covers the following topics in detail.
 			<ul>
 			<li>BIRT Introduction</li>
