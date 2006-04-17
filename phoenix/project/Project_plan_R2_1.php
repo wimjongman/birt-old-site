@@ -31,7 +31,7 @@
 <body>
 <p class="head">BIRT Project 2.1 Plan</p>
 
-<p>Last revised March 29, 2006</p>
+<p>Last revised April 17, 2006</p>
 
 <p class="subhead"><img src="new.gif" alt="New since last update" width="12"
 height="12"> marks interesting changes since the previous draft of January
@@ -92,12 +92,12 @@ configurations listed below.</p>
 <p>Release milestones:</p>
 <ul>
   <li>Friday, March 3, 2006 BIRT 2.1 M5</li>
-  <li>Friday, April 7, 2006 BIRT 2.1 Release Candidate 0</li>
-  <li>Friday, April 14, 2006 BIRT 2.1 Release Candidate 1</li>
-  <li>Friday, April 28, 2006 BIRT 2.1 Release Candidate 2</li>
-  <li>Friday, May 12, 2006 BIRT 2.1 Release Candidate 3</li>
-  <li>Friday, May 26, 2006 BIRT 2.1 Release Candidate 4</li>
-  <li>Friday, June 16, 2006 BIRT 2.1 Release Candidate 5</li>
+  <li>Friday, April 15, 2006 BIRT 2.1 Release Candidate 0</li>
+  <li>Friday, April 21, 2006 BIRT 2.1 Release Candidate 1</li>
+  <li>Friday, May 5, 2006 BIRT 2.1 Release Candidate 2</li>
+  <li>Friday, May 19, 2006 BIRT 2.1 Release Candidate 3</li>
+  <li>Friday, May 31, 2006 BIRT 2.1 Release Candidate 4</li>
+  <li>Friday, June 20, 2006 BIRT 2.1 Release Candidate 5</li>
   <li>Wednesday, June 28, 2006 BIRT 2.1 Release Candidate 6</li>
 </ul>
 
