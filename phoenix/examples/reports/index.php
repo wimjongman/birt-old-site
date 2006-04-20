@@ -83,7 +83,7 @@
 				This example demonstrates the Mapping Feature.
 			</li>
 			<li>
-				<a href="/birt/phoenix/examples/reports/mysql">MySQL Data Source</a> –
+				<a href="/birt/phoenix/examples/reports/mysqlex">MySQL Data Source</a> –
 				This example demonstrates configuring BIRT to report against MySQL Data.
 			</li>
 			<li>

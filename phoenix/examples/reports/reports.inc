@@ -16,7 +16,7 @@ $linkArray = array(
 	array("/birt/phoenix/examples/reports/image", "Image"),
 	array("/birt/phoenix/examples/reports/listing", "Listing"),
 	array("/birt/phoenix/examples/reports/mapping", "Mapping"),
-	array("/birt/phoenix/examples/reports/mysql", "MySQL Data Source"),
+	array("/birt/phoenix/examples/reports/mysqlex", "MySQL Data Source"),
 	array("/birt/phoenix/examples/reports/parallel", "Parallel Reports"),
 	array("/birt/phoenix/examples/reports/parameters", "Parameters"),
 	array("/birt/phoenix/examples/reports/subreports", "Sub Report")
