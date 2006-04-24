@@ -54,8 +54,7 @@ requirements and instructions on the
 download page</a>.
 Otherwise, follow along below for detailed steps for installing BIRT.
 <p>
-The instructions here are for the Release 2.0.1 (and later) builds. Please use 2.0.1 or later 
-instead of the earlier milestone or stable builds.
+The instructions here are for the Release 2.0.1 (and later) builds.
 <h2>Java</h2>
 <p>
  You'll need a <a href="http://java.sun.com">Java runntime environment (JRE)</a>
@@ -65,16 +64,18 @@ instead of the earlier milestone or stable builds.
 <p>
 BIRT is currently tested with the following configurations:<br>
 <ul>
-<li>Eclipse 3.0.1, and 3.0.2.
-<li>GEF 3.0.1.
-<li>EMF 2.0.3.
-<li>JRE 1.4.2.
+<li><b>BIRT 2.0.1</b>
+<li>Eclipse 3.1
+<li>GEF 3.1.
+<li>EMF 2.1.
+<li>JRE 1.4.2/JRE 1.5.
 </ul>
 And
 <ul>
-<li>Eclipse 3.1.
-<li>GEF 3.1.
-<li>EMF 2.1.
+<li><b>BIRT 2.1 RC0 and Later</b>
+<li>Eclipse 3.2.
+<li>GEF 3.2.
+<li>EMF 2.2.
 <li>JRE 1.4.2/JRE 1.5.
 </ul>
 
@@ -91,7 +92,7 @@ Report Designer Full Eclipse Install.
 <br>
 Download and install the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
-Eclipse Platform 3.1 Release</a>
+Eclipse Platform 3.1/3.2 Release</a>
 <p>
 (Note: Eclipse, EMF, GEF and BIRT are all available from the
 <a href="http://www.eclipse.org/downloads/index.php">Eclipse download page</a>.)
@@ -114,7 +115,7 @@ To make it easier to start Eclipse on Windows, create a shortcut to Eclipse on y
 GEF, the Graphic Editor Framework, is an Eclipse plugin used by the BIRT UI.
 Download the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/tools/gef/downloads/index.php">
-GEF 3.1 Release, GEF Runtime</a>.
+GEF 3.1/3.2 Release, GEF Runtime</a>.
 <p>
 GEF comes as a zip file. Unzip GEF into directory that contains Eclipse. If you
 installed Eclipse into the standard location on Windows, then unzip GEF into
@@ -125,7 +126,7 @@ installed Eclipse into the standard location on Windows, then unzip GEF into
 <p>
 The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
 <a href="http://download.eclipse.org/tools/emf/scripts/downloads.php">
-EMF & SDO RT version 2.1</a>. Look in the Latest Releases sections of the
+EMF & SDO RT version 2.1/2.2</a>. Look in the Latest Releases sections of the
 download page.
 <p>
 EMF also comes as a zip file. Unzip EMF into directory that contains Eclipse.
@@ -159,7 +160,7 @@ The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Ho
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC0 Note: </h3>
+<h3>Birt 2.1 RC0 or Later Note: </h3>
 <ul>
  If you are installing BIRT 2.1 RC0 or later the itext jar file needs to be copied to the plugins/com.lowagie.itext_*/lib directory.
 
