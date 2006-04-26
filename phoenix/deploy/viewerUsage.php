@@ -248,12 +248,20 @@
 
 			  <tr>
 				<td>__report</td>
-				<td>The path to the report document.</td>
+				<td>The path to the report design.</td>
 				<td>&nbsp;</td>
 				<td>None. Required.</td>
 				<td>Y</td>
 				<td>Y</td>
 			  </tr>
+			  <tr>
+				<td>__document</td>
+				<td>The path to the report document.</td>
+				<td>&nbsp;</td>
+				<td>None. Required.</td>
+				<td>Y</td>
+				<td>N</td>
+			  </tr>			  
 			  <tr>
 				<td><i>reportParam</i></td>
 				<td>Report parameter.</td>
@@ -312,6 +320,24 @@
 		<p>
 			The <code>__report</code> Option names the
 			report design to run. It can be an absolute or relative file name. If
+			relative, the looks in the directory specified in the <code>BIRT_VIEWER_WORKING_FOLDER</code> property in the viewer's <code>web.xml</code> file.
+			The file search rules are:
+		</p>
+		<ul class="midlist">
+			<li>
+				If name is absolute, use it directly.
+			</li>
+			<li>
+				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set, use this value as the base for the relative name.
+			</li>
+			<li>
+				Otherwise, use the viewer web app's directory as the base for the relative name.
+			</li>
+		</ul>
+		<h3>The __document Option</h3>
+		<p>
+			The <code>__document</code> Option names the
+			report document to run with the frameset mapping.  This file is the intermediate file when run and render are separate phases. It can be an absolute or relative file name. If
 			relative, the looks in the directory specified in the <code>BIRT_VIEWER_WORKING_FOLDER</code> property in the viewer's <code>web.xml</code> file.
 			The file search rules are:
 		</p>
