@@ -7,13 +7,11 @@
 					  I have a question about the BIRT Report Object Model element {rom_element}.
 					  This web page is very {quality}.
 					  I am using the following {project} api {api}."
-	accountAuth="c3NjaGFmZXI6aWFmcmVlZA=="				  
-	calculated="false">
-	<!-- 	
+					  
 	accountUser="birt_tagbar" 
 	accountPass="birt_tagbar" 
 	defaultTags="eclipse"
-	 -->
+	calculated="false">
 	<dimension name="how_to_topic"
 		description="The HowToTopic is used to provide a very simple categorization of the top level activities in BIRT ">
 		<tag name="BirtInstall" description="I am trying to install BIRT" />
@@ -61,7 +59,6 @@
 		<tag name="misleading" description="Answer provides either incorrect or inappropriate " />
 	</dimension>
 	<dimension name="audience" calculated="false">
-		<tag name="All" description="Applicable to anyone using BIRT" />
 		<tag name="GettingStarted" description="New to BIRT" />
 		<tag name="User" description="Report Development and Web Viewer Deployment schemes" />
 		<tag name="Integrator" description="Someone using BIRT within their product " />

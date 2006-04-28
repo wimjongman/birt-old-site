@@ -2,7 +2,7 @@
 <projects>
 	<project name="BIRT"
 			description="Business Intelligence and Reporting Tools" 
-		 	tag_def="http://www.eclipse.org/birt/eclipse_tagbar_birt.xml"
+		 	tag_def="http://www.eclipse.org/birt/tagbar/eclipse_tagbar_birt.xml"
 			 />
 	<project name="CDT" 
 			description="C/C++ Development Tool"  
