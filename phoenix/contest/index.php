@@ -90,7 +90,7 @@ creativity and sharing the details.</p>
   <li>Submitter understands and agrees that all Submissions are being made
     under <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse
     Public License - v 1.0</a>.</li>
-  <li><img src="new.gif" alt="New since last update" width="12"height="12">The deadline for all Submissions is Friday, June 30, 2006, 5 pm Pacific
+  <li><img src="new.gif" alt="New since last update" width="12"height="12">The deadline for all Submissions is Friday, May 26, 2006, 5 pm Pacific
     Standard Time.</li>
 </ul>
 If you have questions, please email <a
