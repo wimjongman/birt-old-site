@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://www.eclipse.org/birt/phoenix/contest">
+						The BIRT Contest 
+					</a>
+					deadline has been extended due to technical problems with the submission process.  The deadline for entries is Friday, May 26, 2006. 
+					<span class="dates">
+						05/01/06
+					</span>
+				</li>							
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 RC0
 					</a>
