@@ -28,8 +28,9 @@
 		<h1><a name="top"></a>$pageTitle</h1>
 
 <h1>Welcome to the Eclipse BIRT Report Contest</h1>
-<img src="Birt-postcard-web-vert.jpg" width="397" height="607" /><br/><br/>
-<p class="subhead">Last revised March 8, 2006 <br>
+<p class="subhead">Last revised May 1, 2006 <br>
+<img src="new.gif" alt="New since last update" width="12" height="12"> marks
+interesting changes since the last update <br>
 </p>
 
 <h2>Enter to Win a Sony PSP. Submit your favorite report.</h2>
@@ -42,7 +43,7 @@ creativity and sharing the details.</p>
 <h2>Contest Details</h2>
 <ul>
   <li>There are two categories of awards
- 	<ul class="midlist">
+    <ul>
       <li>Technical merit award: Recognizes a report that exercises the
         extensions, innovatively uses the API's, or deploys BIRT reports in a
         creative way.</li>
@@ -55,7 +56,7 @@ creativity and sharing the details.</p>
     extensions built, the kinds of integration and deployment, complexity,
     and real world application.</li>
   <li>The prizes will include
- 	<ul class="midlist">
+    <ul>
       <li>The best reports in each category will receive a Sony PSP</li>
       <li>There will be five second prizes. Each second prize will be a set
         of the upcoming BIRT books -
@@ -66,8 +67,9 @@ creativity and sharing the details.</p>
       </li>
     </ul>
   </li>
-  <li>Winners will be notified on May 26, 2006. By entering this contest, you
-    agree that your name and report may be showcased on <a
+  <li><img src="new.gif" alt="New since last update" width="12"
+    height="12">Winners will be notified on Friday June 30, 2006. By entering
+    this contest, you agree that your name and report may be showcased on <a
     href="http://www.eclipse.org/birt">http://www.eclipse.org/BIRT</a>.</li>
 </ul>
 
@@ -88,14 +90,13 @@ creativity and sharing the details.</p>
   <li>Submitter understands and agrees that all Submissions are being made
     under <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse
     Public License - v 1.0</a>.</li>
-  <li>The deadline for all Submissions is Friday, April 28, 2006, 5 pm
-  PST.</li>
+  <li><img src="new.gif" alt="New since last update" width="12"height="12">The deadline for all Submissions is Friday, June 30, 2006, 5 pm Pacific
+    Standard Time.</li>
 </ul>
 If you have questions, please email <a
-href="mailto:birtcontest@eclipse.org">birtcontest@eclipse.org</a>.
+href="mailto:birtcontest@eclipse.org">birtcontest@eclipse.org</a>.</body>
+</html>
 
-
-</div>
 EOHTML;
 
 
