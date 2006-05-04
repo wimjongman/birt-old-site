@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC2
+					</a>
+					is now available for download.</a>
+					<span class="dates">
+						05/02/06
+					</span>
+				</li>					
+				<li>
 					<a href="http://www.eclipse.org/birt/phoenix/contest">
 						The BIRT Contest 
 					</a>

@@ -34,6 +34,14 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.scapatech.com/news_events/press_releases/2006-02-05.html">
+						Scapa Adds BIRT Reporting to Test Platform
+					</a>
+					<span class="dates">
+						05/04/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://java.sys-con.com/read/204706.htm">
 						Java Feature — Business Intelligence and Reporting with BIRT
 					</a>

@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC2
+					</a>
+					is now available for download.</a>
+					<span class="dates">
+						05/02/06
+					</span>
+				</li>		
+				<li>
 					<a href="http://www.eclipse.org/birt/phoenix/contest">
 						The BIRT Contest 
 					</a>
@@ -260,6 +269,14 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.scapatech.com/news_events/press_releases/2006-02-05.html">
+						Scapa Adds BIRT Reporting to Test Platform
+					</a>
+					<span class="dates">
+						05/04/06
+					</span>
+				</li>		
+				<li>
 					<a href="http://java.sys-con.com/read/204706.htm">
 						Java Feature — Business Intelligence and Reporting with BIRT
 					</a>
@@ -317,17 +334,6 @@
 					<a href="http://www.eclipsezone.com" target="_blank">published by EclipseZone</a>.
 					<span class="dates">
 						01/18/06
-					</span>
-				</li>
-
-				<li>
-					<a href="http://www.theserverside.com/articles/article.tss?l=EclipseBRT" target="_blank">
-						Using Eclipse BIRT Report Libraries and Templates
-					</a>
-					Written by Mark Gamble
-					<a href="http://www.theserverside.com/" target="_blank">published by TheServerSide</a>.
-					<span class="dates">
-						01/04/06
 					</span>
 				</li>
 		
