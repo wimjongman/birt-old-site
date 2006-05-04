@@ -34,7 +34,6 @@
 				<li><a href="#optional">Optional Eclipse Link File</a></li>
 				<li><a href="#itext">iText</a></li>
 				<li><a href="#prototype">prototype.js</a></li>
-				<li><a href="#example">Installation Example Flash</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
 				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
@@ -172,12 +171,18 @@ The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report
 <p>
 <h2><a name="prototype"></a>prototype.js</h2>
 Lastly download <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> from <a href="http://dev.conio.net/repos/prototype/dist/">dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
+
+
+<div class="homeitem3col">
+<h3>Birt 2.1 RC2 or Later Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC2 or later prototype.js needs to be copied to the plugins/org.eclipse.birt.report.viewer_version/birt/webcontent/birt/ajax/lib directory.
+
+ </ul>
+</div>
+<br>
 </p>
 
-<h2><a name="example"></a>Installation Example Flash</h2>
-<p>For file size and location verification, you may wish to watch the following example installation video.
-<a href="http://download.eclipse.org/birt/downloads/examples/installing/installing.html" target="_blank" class="top">Installation Flash Example</a>
-</p>
 <br>
 
 
@@ -223,12 +228,12 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 </div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC0 or Later Runtime Note: </h3>
+<h3>Birt 2.1 RC2 or Later Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 RC0 or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1 RC2 or Later Runtime (J2EE Application Server Deployment),
  The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
  <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy prototype.js to /WebViewerExample/ajax/lib.
+ <li>Copy prototype.js to /WebViewerExample/webcontent/birt/ajax/lib.
  </ul>
 </div>
 <br>
