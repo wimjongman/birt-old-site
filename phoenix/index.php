@@ -155,6 +155,16 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
+			
+				<li>
+					<a href="presos/index.php">
+						Eclipse Forum Europe Presentation 
+					</a>
+					is available for download.
+					<span class="dates">
+						05/19/06
+					</span>
+				</li>						
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 RC2

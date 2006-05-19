@@ -25,7 +25,17 @@
 	<div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+		<h2>Eclipse Forum Europe 2006 Presentation</h2>
 
+		<p>
+			<a href="efe2006/EFEBIRT.ppt">Introduction to BIRT</a><br>
+			This Presentation was used as an Introduction to BIRT at Eclipse Forum Europe 2006.
+			<ul>
+			<li>Source Code for the examples can be found <a href="http://download.eclipse.org/birt/downloads/share/engine_api.zip">here</a>.  These examples were built with BIRT 2.0.1</li>
+			</ul>
+			<br>
+		</p>
+		
 		<h2>EclipseCon2 2006 Presentations</h2>
 
 		<p>
