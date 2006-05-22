@@ -34,7 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 			
-			
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC3
+					</a>
+					is available for download.</a>
+					<span class="dates">
+						05/22/06
+					</span>
+				</li>					
 				<li>
 					<a href="presos/index.php">
 						Eclipse Forum Europe Presentation 
