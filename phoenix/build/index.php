@@ -37,6 +37,7 @@
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
 				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
+				<li><a href="#langpack">Installing BIRT Language Packs on Windows</a></li>
 				<li><a href="#common">Common Problems</a></li>
 
 			</ul>
@@ -237,6 +238,19 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
  </ul>
 </div>
 <br>
+<br>
+<h2><a name="langpack"></a>Installing BIRT Language Packs on Windows</h2>
+<p>
+<ol>
+<li><a href="http://download.eclipse.org/birt/downloads/">Download</a> the Language Pack for the desired product and extract into your eclipse install.
+<li><a href="http://download.eclipse.org/birt/downloads/">Download</a> the Language Pack Feature Overlay for the desired product and extract into your eclipse install.
+<li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.
+<li>Select the group 1 language you desire from the drop-down combo box.
+<li>Save changes and restart the system.
+<li>Launch Eclipse and select <b>Window->Preferences->BIRT->Preview</b>.  Select the desired language from the drop-down combo box.
+<li>Restart Eclipse.
+</ol>
+</p>
 <h2><a name="common"></a>Common Problems</h2>
 <p>
 Some problems are due to cached information within Eclipse. Eclipse caches
