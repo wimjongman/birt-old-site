@@ -35,10 +35,18 @@
 			<ul>
 			
 				<li>
+					<a href="http://www.eclipse.org/callisto/webinars.php">
+						Callisto Webinar on June 5 showcasing BIRT/DTP RCP Integration.
+					</a>
+					<span class="dates">
+						05/30/06
+					</span>
+				</li>					
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 RC3
 					</a>
-					is available for download.</a>
+					is available for download.
 					<span class="dates">
 						05/22/06
 					</span>
