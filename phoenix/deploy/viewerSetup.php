@@ -119,12 +119,22 @@
 </div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC2 or Later Runtime Note: </h3>
+<h3>Birt 2.1 RC2 or RC3 Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.1 RC2 or RC3 Runtime (J2EE Application Server Deployment),
+ The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
+ <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy prototype.js to /WebViewerExample/webcontent/birt/ajax/lib.
+ </ul>
+</div>
+<br>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC4 or Later Runtime Note: </h3>
 <ul>
  <li>If you are installing the BIRT 2.1 RC0 or Later Runtime (J2EE Application Server Deployment),
  The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
  <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy prototype.js to /WebViewerExample/webcontent/birt/ajax/lib.
+ <li>prototype.js is already included.
  </ul>
 </div>
 <br>

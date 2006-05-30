@@ -82,7 +82,7 @@ And
 <h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
 BIRT now supplies a <a href="http://download.eclipse.org/birt/downloads/">download</a> that incudes Eclipse, GEF, EMF and BIRT.  Use this
 download if you do not already have Eclipse installed.  You will still need iText.jar
-and prototype.js, which are described below.  
+and prototype.js (this file is no longer needed with 2.1 RC4 or later), which are described below.  
 
 
 <br>
@@ -175,9 +175,19 @@ Lastly download <a href="http://dev.conio.net/repos/prototype/dist/prototype.js"
 
 
 <div class="homeitem3col">
-<h3>Birt 2.1 RC2 or Later Note: </h3>
+<h3>Birt 2.1 RC2 or RC3 Note: </h3>
 <ul>
- If you are installing BIRT 2.1 RC2 or later prototype.js needs to be copied to the plugins/org.eclipse.birt.report.viewer_version/birt/webcontent/birt/ajax/lib directory.
+ If you are installing BIRT 2.1 RC2 or RC3 prototype.js needs to be copied to the plugins/org.eclipse.birt.report.viewer_version/birt/webcontent/birt/ajax/lib directory.
+
+ </ul>
+</div>
+<br>
+
+
+<div class="homeitem3col">
+<h3>Birt 2.1 RC4 or Later Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC4 or Later prototype.js is already included.
 
  </ul>
 </div>
@@ -229,15 +239,27 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 </div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC2 or Later Runtime Note: </h3>
+<h3>Birt 2.1 RC2 or RC3 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 RC2 or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1 RC2 or RC3 Runtime (J2EE Application Server Deployment),
  The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
  <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy prototype.js to /WebViewerExample/webcontent/birt/ajax/lib.
  </ul>
 </div>
 <br>
+
+<div class="homeitem3col">
+<h3>Birt 2.1 RC4 or Later Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.1 RC4 or Later Runtime (J2EE Application Server Deployment),
+ The iText file will need to be copied to the birt-runtime/WebViewerExample directory structure.
+ <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>prototype.js is already included.
+ </ul>
+</div>
+<br>
+
 <br>
 <h2><a name="langpack"></a>Installing BIRT Language Packs on Windows</h2>
 <p>
