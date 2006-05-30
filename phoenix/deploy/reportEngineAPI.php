@@ -120,7 +120,6 @@ consult the Engine Javadoc.</p>
 <p>To do this, copy the driver jar file to the 
 ReportEngineInstall/birt-runtime-2_0_1/Report Engine/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
 directory.
-</p>
 <div class="homeitem3col">
 <h3>Birt 2.1 RC0 Note: </h3>
 <ul>
@@ -130,6 +129,8 @@ directory.
 
  </ul>
 </div>
+</p>
+
 <h2><a name="api"></a>API Overview</h2>
 
 <p>The following are the key steps to use the API, identifying the classes and 
