@@ -121,7 +121,15 @@ consult the Engine Javadoc.</p>
 ReportEngineInstall/birt-runtime-2_0_1/Report Engine/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
 directory.
 </p>
+<div class="homeitem3col">
+<h3>Birt 2.1 RC0 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 RC0 or later the driver needs to be copied
+ ReportEngineInstall/birt-runtime-2_1_0/ReportEngine/plugins/org.eclipse.birt.report.data.oda.jdbc_2.1.0/drivers
+ Directory.
 
+ </ul>
+</div>
 <h2><a name="api"></a>API Overview</h2>
 
 <p>The following are the key steps to use the API, identifying the classes and 
