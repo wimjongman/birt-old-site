@@ -110,7 +110,13 @@
 				Your application has created a parameter page specifically for the report.
 			</li>
 		</ul>
-
+<div class="homeitem3col">
+<h3>Birt 2.1 RC3 or Later Runtime Note: </h3>
+<ul>
+ <li>If your report has a required parameter with no default value, the parameter entry screen will be displayed automatically.
+ </ul>
+</div>
+<br>
 		<p>
 			The run report URL is of the form:
 		</p>
