@@ -31,7 +31,7 @@
 <body>
 <p class="head">BIRT Project 2.1 Plan</p>
 
-<p>Last revised April 17, 2006</p>
+<p>Last revised May 30, 2006</p>
 
 <p class="subhead"><img src="new.gif" alt="New since last update" width="12"
 height="12"> marks interesting changes since the previous draft of January
@@ -92,12 +92,12 @@ configurations listed below.</p>
 <p>Release milestones:</p>
 <ul>
   <li>Friday, March 3, 2006 BIRT 2.1 M5</li>
-  <li>Friday, April 15, 2006 BIRT 2.1 Release Candidate 0</li>
-  <li>Friday, April 21, 2006 BIRT 2.1 Release Candidate 1</li>
-  <li>Friday, May 5, 2006 BIRT 2.1 Release Candidate 2</li>
-  <li>Friday, May 19, 2006 BIRT 2.1 Release Candidate 3</li>
-  <li>Friday, May 31, 2006 BIRT 2.1 Release Candidate 4</li>
-  <li>Friday, June 20, 2006 BIRT 2.1 Release Candidate 5</li>
+  <li>Friday, April 7, 2006 BIRT 2.1 Release Candidate 0</li>
+  <li>Friday, April 14, 2006 BIRT 2.1 Release Candidate 1</li>
+  <li>Friday, April 28, 2006 BIRT 2.1 Release Candidate 2</li>
+  <li>Friday, May 12, 2006 BIRT 2.1 Release Candidate 3</li>
+  <li>Friday, May 26, 2006 BIRT 2.1 Release Candidate 4</li>
+  <li>Friday, June 16, 2006 BIRT 2.1 Release Candidate 5</li>
   <li>Wednesday, June 28, 2006 BIRT 2.1 Release Candidate 6</li>
 </ul>
 
@@ -556,12 +556,9 @@ Eclipse planning process.</p>
   not be familiar with Xpath syntax. This project will explore options to
   improve the usability of the builder. 3) XML files can contain large trees
   and therefore users need a way to filter parts of the tree so that only the
-  interesting parts appear in the data set builder. 4) An XML Data Set does
-  not currently allow parameters. This project will allow parameters to be
-  passed into XML Data Sets. [Bugzilla ID: <a
-  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=116636">116636</a>]
-  This project will enhance the BIRT XML ODA Driver to display non-English
-  strings properly. [Bugzilla ID: <a
+  interesting parts appear in the data set builder. This project will enhance
+  the BIRT XML ODA Driver to display non-English strings properly. [Bugzilla
+  ID: <a
   href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=129424">129424</a>][Theme:
   Appeal to a Broader Community]</p>
 
@@ -578,15 +575,6 @@ Eclipse planning process.</p>
   key, outer/inner join, and filtering condition. [Bugzilla ID: <a
   href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131040">131040</a>][Theme:
   Simple to Use]</p>
-
-  <p><img src="new.gif" alt="New since last update" width="12"
-  height="12"><span style="font-weight: bold">Automatic Thumbnail Image
-  Creation</span> Templates ease the task of report creation by providing
-  pre-built starting points. To make it easy to select a template in the
-  report designer, the report developer needs to be able to visually inspect
-  the layout of a template. This project will automate the creation of a
-  thumbnail image from a report design. [Bugzilla ID: <a
-  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127427">127427</a>]</p>
 
   <p><img src="new.gif" alt="New since last update" width="12"
   height="12"><span style="font-weight: bold">Template Creation From Report
@@ -733,7 +721,6 @@ bugzilla database on <a
 href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
 
 <p></p>
-
 EOHTML;
 
 
