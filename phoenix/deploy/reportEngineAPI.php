@@ -126,7 +126,6 @@ directory.
  If you are installing BIRT 2.1 RC0 or later the driver needs to be copied
  ReportEngineInstall/birt-runtime-2_1_0/ReportEngine/plugins/org.eclipse.birt.report.data.oda.jdbc_2.1.0/drivers
  Directory.
-
  </ul>
 </div>
 </p>
