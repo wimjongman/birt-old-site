@@ -1,4 +1,12 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php  	
+ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
+ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
+ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
+ $App 	= new App();	
+ $Nav	= new Nav();	
+ $Menu 	= new Menu();		
+ include($App->getProjectCommon());    
+ # All on the same line to unclutter the user's desktop'
 
 	#
 	# Begin: page-specific settings.  Change these.
@@ -23,15 +31,23 @@
 
 
 	# Paste your HTML content between the EOHTML markers!
-$bn = "<div id='maincontent'><br>";
-$bn = $bn .	"<div id='midcolumn'><br>";
-$en = "</div></div><br>";
-$filename = "http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html";
-$handle = fopen($filename, "r" );
-$sz =  filesize($filename);
-$mn = fread($handle, $sz );
-fclose($handle);
-$html = $bn . $mn . $en;
+	
+	ob_start();
+?>
+	
+	<div id="maincontent">
+		<div id="midcolumn">
+<?php
+			include("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html");
+?>
+		</div>
+	</div>
+<?php
+
+
+	$html = ob_get_contents();
+	ob_end_clean();
+
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
