@@ -38,7 +38,8 @@
 	<div id="maincontent">
 		<div id="midcolumn">
 <?php
-		include("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html");
+		echo "Example Test";
+		include("example.html");
 
 
 ?>
