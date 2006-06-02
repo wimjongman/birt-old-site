@@ -38,14 +38,9 @@
 	<div id="maincontent">
 		<div id="midcolumn">
 <?php
-		$handle = fopen("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html", "rb");
-		$contnt = '';
-		echo "test";
-		while (!feof($handle)) {
-			$contnt = fgets( $handle, 4096);
-			echo $contnt;
-		}
-		fclose($handle);
+		include("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html");
+
+
 ?>
 		</div>
 	</div>
