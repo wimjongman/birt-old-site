@@ -156,6 +156,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC4
+					</a>
+					is available for download.
+					<span class="dates">
+						06/02/06
+					</span>
+				</li>				
+				<li>
 					<a href="http://www.eclipse.org/callisto/webinars.php">
 						Callisto Webinar on June 5 showcasing BIRT/DTP RCP Integration.
 					</a>
@@ -261,16 +270,7 @@
 					<span class="dates">
 						02/22/06
 					</span>
-				</li>			
-				<li>
-					<a href="project/plan.php">
-						BIRT 2.1 Project Plan is available
-					</a>
-					This page contains information on the project plan and the milestone dates for BIRT 2.1.
-					<span class="dates">
-						02/06/06
-					</span>
-				</li>							
+				</li>						
 
 				<li>
 					<a href="whatsnew.php">
