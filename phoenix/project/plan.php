@@ -72,6 +72,8 @@
 		<h3><i><font size="-1">BIRT Release 2.1</font></i></h3>
 		<p>
 		Target Date: Part of the Callisto Simultaneous Release, currently targeted for June 2006
+		<br>
+		<a href="releasereview/Eclipse BIRT Project 2_1 Release Review 2006-05-30.pdf">BIRT Project 2.1 Release Review presentation</a>
 		</p>		
 
 

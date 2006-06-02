@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="project/releasereview/Eclipse BIRT Project 2_1 Release Review 2006-05-30.pdf">
+						BIRT 2.1 Release Review Presentation
+					</a>
+					 has been uploaded.
+					<span class="dates">
+						06/02/06
+					</span>
+				</li>				
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 RC4
 					</a>
