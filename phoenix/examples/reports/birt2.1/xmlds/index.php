@@ -40,12 +40,12 @@
 <?php
 		$handle = fopen("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html", "rb");
 		$contnt = '';
+		echo "test";
 		while (!feof($handle)) {
-			$contnt .= fread( $handle, 8192);
-			echo "read a line";
+			$contnt = fgets( $handle, 4096);
+			echo $contnt;
 		}
 		fclose($handle);
-		echo $contnt;	
 ?>
 		</div>
 	</div>
