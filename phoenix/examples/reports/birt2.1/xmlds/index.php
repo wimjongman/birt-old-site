@@ -25,11 +25,11 @@
 	# Paste your HTML content between the EOHTML markers!
 $bn = "<div id='maincontent'><br>";
 $bn = $bn .	"<div id='midcolumn'><br>";
-$en = "</div></div>";
+$en = "</div></div><br>";
 $filename = "http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html";
 $handle = fopen($filename, "r" );
-//$sz =  filesize($filename);
-$mn = fread($handle, 4096 );
+$sz =  filesize($filename);
+$mn = fread($handle, $sz );
 fclose($handle);
 $html = $bn . $mn . $en;
 	# Generate the web page
