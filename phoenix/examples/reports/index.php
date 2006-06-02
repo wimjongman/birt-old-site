@@ -41,6 +41,16 @@
 		<p>
 			This section of Examples focuses on the feature set within BIRT. Simple reports are used to illustrate a function within BIRT. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation.
 		</p>
+		<h1>BIRT 2.1 Examples</h1>
+		<ul class="midlist">
+			<li>
+				<a href="birt2.1/xmlds/index.php">XML Data Source</a> –
+				This example demonstrates creating a report using the XML Datasource.
+			</li>
+		</ul>		
+		
+		
+		<h1>BIRT 2.0 Examples</h1>
 		<ul class="midlist">
 			<li>
 				<a href="/birt/phoenix/examples/reports/charting">Charting</a> –
@@ -101,7 +111,7 @@
 		</ul>
 
 	</div>
-	$reportLinksSideItem
+	
 </div>
 
 
