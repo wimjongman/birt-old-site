@@ -26,7 +26,11 @@
 $bn = "<div id='maincontent'><br>";
 $bn = $bn .	"<div id='midcolumn'><br>";
 $en = "</div></div>";
-$mn = file_get_contents("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html");
+$filename = "http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html";
+$handle = fopen($filename, "r" );
+//$sz =  filesize($filename);
+$mn = fread($handle, 4096 );
+fclose($handle);
 $html = $bn . $mn . $en;
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
