@@ -38,7 +38,14 @@
 	<div id="maincontent">
 		<div id="midcolumn">
 <?php
-			include("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html");
+		$handle = fopen("http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/index.html", "rb");
+		$contnt = '';
+		while (!feof($handle)) {
+			$contnt .= fread( $handle, 8192);
+			echo "read a line";
+		}
+		fclose($handle);
+		echo $contnt;	
 ?>
 		</div>
 	</div>
