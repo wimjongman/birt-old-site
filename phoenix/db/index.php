@@ -55,7 +55,7 @@
 
 		<h2><a name="schema">Schema</a></h2>
 		<p>
-			The database consists of seven tables:
+			The database consists of eight tables:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -79,6 +79,9 @@
 			<li>
 				Products: The list of scale model cars
 			</li>
+			<li>
+				Product Lines: The list of product line classifcation
+			</li>
 		</ul>
 		<p>
 			This <a href="/birt/phoenix/db/dbschema/ClassicModelsDBSchema.jpg" target="_new">ER-diagram</a> shows the
@@ -89,7 +92,7 @@
 
 		<h2><a name="install"></a>Install</h2>
 		<p>
-			The sample database is available in three forms:
+			The sample database is available in two forms:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -99,6 +102,10 @@
 				<a href="#mysql">Scripts to load a MySQL database</a>
 			</li>
 		</ul>
+		<p>
+			The scripts to load a MySQL database are contained in the <a href="mysqlscr/birt-database-2_0_1.zip">sample database</a> zip file.  This zip also has documentation
+			and logos for the sample database.
+		</p>
 		<h3><a name="mysql"></a>MySQL Version</h3>
 		<p>
 			To install the MySQL version of the sample database, you must have MySQL
@@ -126,15 +133,16 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="mysqlscr/ClassicModels-MySQL.zip">Download the zip file</a> containing the MySQL database scripts.
+				<a href="mysqlscr/birt-database-2_0_1.zip">Download the zip file</a> containing the MySQL database scripts.
 			</li>
 			<li>
 				Expand the zip file into a convenient location.
 			</li>
 			<li>
-				Expanding the zip file created a scripts directory with some MySQL scripts. From the command line, move to the scripts directory:
+				Expanding the zip file created the ClassicModels/mysql directory with some MySQL scripts. From the command line, move to the this directory:
+								
 				<blockquote>
-					% cd <location of the zip file contents>/scripts
+					% cd <location of the zip file contents>/ClassicModels/mysql
 				</blockquote>
 			</li>
 			<li>
@@ -222,11 +230,7 @@
 				</tbody>
 			</table>
 		</p>
-		<h3>Logos</h3>
-		<p>
-			See also the <a href="logos.php">logos page</a> for images you can use in
-			sample reports against this database.
-		</p>
+
 
 	</div>
 </div>
