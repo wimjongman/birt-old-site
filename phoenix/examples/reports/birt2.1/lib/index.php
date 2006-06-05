@@ -38,8 +38,7 @@
 	<div id="maincontent">
 		<div id="midcolumn">
 <?php
-
-		include("example.html");
+			include("example.html");
 
 
 ?>

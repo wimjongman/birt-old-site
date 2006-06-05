@@ -47,6 +47,10 @@
 				<a href="birt2.1/xmlds/index.php">XML Data Source</a> –
 				This example demonstrates creating a report using the XML Datasource.
 			</li>
+			<li>
+				<a href="birt2.1/lib/index.php">Libraries</a> –
+				This example demonstrates creating and using BIRT libraries.
+			</li>
 		</ul>		
 		
 		
