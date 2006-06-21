@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1 RC5
+					</a>
+					is available for download.
+					<span class="dates">
+						06/21/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://www.eclipse.org/downloads/download.php?file=/datatools/downloads/callisto/webinar_060506/webinar_demo.zip">
 						Source code 
 					</a>
