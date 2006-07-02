@@ -159,7 +159,7 @@ After the Joined Data Set is created, it functions as any other Data Set in the 
 <h1><a name="jump_8">Internationalization and Accessibility</a></h1>
 
 <p>
-BIRT 2.1 supplies language packs for easy translation.  Currently twenty-three languages are available.
+BIRT 2.1 supplies language packs for easy translation.  Currently twenty-two languages are available.
 </p>
 <p>
 All of the BIRT offerings have been improved in the area of accessibility.  These include proper HTML formatting, shortcut keys, keyboard access to most functions and proper tagging of images and charts.
