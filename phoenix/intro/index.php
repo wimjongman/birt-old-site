@@ -38,7 +38,7 @@
 		</p>
 		<p></p>
 		<p>
-			The current released version is 2.0. We encourage you to download
+			The current released version is 2.1.0. We encourage you to download
 			BIRT, try it, and give us your feedback though the <a href="../community.php">newsgroups and Bugzilla</a>.
 		</p>
 		<p></p>
@@ -65,7 +65,7 @@
 				Crosstabs -
 				Crosstabs (also called a cross-tabulation or matrix) shows data in two
 				dimensions: sales per quarter or hits per web page. (Crosstabs are not yet
-				in Release 2.0, but are planned for a future release.)
+				in Release 2.1.0, but are planned for a future release.)
 			</li>
 			<li>
 				Letters &amp; Documents -
@@ -92,10 +92,11 @@
 			<li>
 				Data -
 				Databases, web services, Java objects all can supply data to your BIRT report.
-				Release 2.0 provides JDBC and XML support, as well as support for using code to get at
-				other sources of data. BIRT's Open Data Access (ODA) framework allows anyone to
+				Release 2.1.0 provides JDBC and XML support, as well as support for using code to get at
+				other sources of data. BIRT's use of the Open Data Access (ODA) framework allows anyone to
 				build new UI and runtime support for any kind of tabular data. Further, a single
-				report can include data from any number of data sources.
+				report can include data from any number of data sources. BIRT also supplies a feature that
+				allows disparate data sources to be combined using inner and outer joins.
 			</li>
 			<li>
 				Data Transforms -
