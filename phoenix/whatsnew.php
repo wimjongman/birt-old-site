@@ -35,6 +35,15 @@
 			<ul>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1
+					</a>
+					is now available for download.  Read about the feature set at <a href="project/notable2.1.php">Notable Features - BIRT 2.1</a>
+					<span class="dates">
+						07/01/06
+					</span>
+				</li>
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1 RC5
 					</a>
 					is available for download.

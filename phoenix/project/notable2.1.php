@@ -92,7 +92,7 @@ Specifying a report document as the target for a hyperlink can be useful in case
 <p>
 When deploying data centric applications to the Web tier it is often desirable to share pooled data base connections for performance and resource management reasons. BIRT 2.1 has expanded on the capabilities of the JDBC Data Source, by adding the option to specify a JNDI Name to look up a data source name service   for retrieving a pooled connection.  
 </p>
-<img src="/birt/phoenix/project/images/2.1/jndi.jpg" width="556" height="407"/>
+<img src="/birt/phoenix/project/images/2.1/jndi.JPG" width="556" height="407"/>
 <br>
 <i>
 JDBC Data Source Editor
