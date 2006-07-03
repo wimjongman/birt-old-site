@@ -36,7 +36,8 @@
 		<h2>BIRT Report Designer</h2>
 		<p>
 			Application development with BIRT starts with the report designer. This
-			Eclipse-based plugin offers a variety of tools to build reports quickly.
+			Eclipse-based set of plug-ins offers a variety of tools to build reports quickly.
+			Some of these are listed below.
 		</p>
 		<hr class="clearer" />
 		<ul class="midlist">
@@ -44,13 +45,17 @@
 				Data Explorer -
 				Organizes your data sources (connections) and data sets (queries). The data
 				set editor allows you to test your data set to ensure the report receives the
-				correct data.
+				correct data.  This view also is used to design report parameters.
 			</li>
 			<li>
 				Layout View -
 				WYSIWYG editor that provides drag &amp; drop
-				creation of the presentation portion of your report. Includes a palette of
-				standard report items.
+				creation of the presentation portion of your report. 
+			</li>
+			<li>
+				Palette -
+				Contains the standard BIRT report elements such as labels, tables, and charts and is used
+				in conjunction with the Layout View to design reports.
 			</li>
 			<li>
 				Property Editor -
@@ -67,9 +72,7 @@
 				Script Editor -
 				Scripting adds business logic to reports during data access, during report
 				generation, or during viewing. The code editor provides standard Eclipse features
-				for editing your scripts: syntax coloring, auto-complete and more. BIRT expressions
-				are really just simple scripts, and an expression builder makes it easy to build
-				expressions.
+				for editing your scripts: syntax coloring, auto-complete and more. 
 			</li>
 			<li>
 				Outline -
@@ -89,8 +92,20 @@
 				BIRT allows the reuse of report objects, such as tables, data sources and styles.
 				Objects created for reuse are stored in a library file.  
 				To browse the contents of report libraries BIRT supplies a Library Explorer view.
-			</li>			
-			
+			</li>
+			<li>
+				Chart Builder -
+				Adding Charts to BIRT designs is expedited with the Chart Builder.
+				Chart creation is separated into three phases: Select Chart Type, Select Data, and Format Chart. 
+				
+			</li>				
+			<li>
+				Expression Builder -
+				BIRT expressions are really just simple scripts that return a value. 
+				Expressions are used for assigning data values to report elements, building image locations, hyperlinks, parameter default values
+				and many other places.  Expressions are 
+				constructed within BIRT using the Expression Builder.
+			</li>							
 			
 		</ul>
 	</div>

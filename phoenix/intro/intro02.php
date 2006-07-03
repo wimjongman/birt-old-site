@@ -33,69 +33,49 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>BIRT in a J2EE Application</h2>
+		<h2>BIRT Components</h2>
 		<p>
-			The BIRT Report Engine is packaged as a JAR file that you add to your J2EE
-			application. The Report Engine is a series of POJOs (Plain Old Java Objects)
-			that your JSP pages can call to integrate reporting into your application.
+		The BIRT project delivers many components.  These are listed below with a brief description.
+		More information about specific integration points is available in the <a href="../deploy">integration</a> section.
 		</p>
-		<p>
-			BIRT also delivers an example web application that can be deployed to an 
-			existing application server.
-		</p>
-		<p>
-			<img src="../project/chart1.jpg" width="658" height="237">
-		</p>
-		<p>
-			BIRT has four main integration points with your application:
-		</p>
-		<hr class="clearer" />
 		<ul class="midlist">
 			<li>
-				Parameter UI -
-				Most reports allow the user to specify some kind of input, called a
-				<i>report parameter</i>. For example, a customer report might ask for the
-				customer to display. Your parameter page can be static: custom designed
-				for each report. Or, you can use a dynamic page powered by parameter
-				meta-data so that a single page works for any report.  BIRT also supports
-				the concept of dynamic and cascaded parameters.  This allows parameters to be
-				tied to Data Sets defined within the report. 
+			BIRT Report Designer -  The BIRT Report Designer is an Eclipse perspective that is used to create BIRT report designs.  
+			These designs are stored in an open	XML format.  The Designer can be downloaded as a Rich Client Platform (RCP) application, a set of plug-ins to
+			enable the Designer perspective within an existing Eclipse build or as an all in one download that includes
+			Eclipse.<br>
 			</li>
+			<br>
 			<li>
-				Running the Report -
-				When the user submits the parameter form, your web application passes the
-				parameters to the BIRT report engine which reads the report design file,
-				reads the data, and produces the report output. BIRT uses the term
-				<i>factory</i> when the engine runs a report.
+			Design Engine - This engine is responsible for creating and modifying report designs.  The 
+			Design Engine API (DE API) wraps the functionality of the design engine and is available for use
+			within any Java/J2EE project.  The BIRT Report Designer uses this API internally to construct the XML designs.<br>
 			</li>
+			<br>
 			<li>
-				Data Access -
-				Reports obtain data from your application as explained above. Java applications
-				often provide data to the BIRT factory via Java objects.
+			Report Engine - The Report Engine uses the report design files to generate and render reports.  Using the
+			Report Engine API (RE API) the engine can be embedded within any Java/J2EE application.
+			The BIRT Web Viewer uses this API to execute and display reports.<br>
 			</li>
+			<br>
 			<li>
-				Viewing -
-				BIRT uses a Java servlet, called the viewer, to enable the user to view the output
-				of the report in paginated HTML.  The viewer also supports exporting data to CSV, parameter
-				collection and table of contents functionality..
+			Charting Engine - The Charting Engine is used to design and generate Charts either in standalone or embedded within BIRT reports.
+			The Charting Engine API (CE API) allows Java/J2EE developers to add charting capabilities to their applications.  The Design and Report
+			Engines make use of this API to deliver Charts.<br>
 			</li>
-		</ul>
+			<br>
+			<li>
+			BIRT Viewer - The BIRT project provides a sample "viewer" that is used to preview reports within Eclipse. 
+			BIRT includes an Apache Tomcat server invoked each time you preview your report. In addition to being packaged
+			as an Eclipse Plug-in, the Viewer is also available as a standalone J2EE application, which
+			can be used in any JSP-compliant J2EE server.  The Viewer Plug-in can also be embedded within a Rich Client Platform (RCP) application.
+			BIRT Release 2.1.0 provides web output as a single HTML document, paginated HTML and PDF.  Additionally the
+			viewer allows exporting the data to CSV, printing, and Table of Contents functionality.<br>
+			</li>
+			<br>
+		</ul>	
+			<img src="../project/chart1.jpg" width="658" height="237">
 
-		<h2>Example Viewer</h2>
-		<p>
-			The BIRT project provides a sample "viewer" to help you get get started. The
-			sample viewer is also used to preview reports within Eclipse: BIRT includes an
-			Apache Tomcat server invoked each time you preview your report. The viewer
-			can also be used in any JSP-compliant J2EE server.
-		</p>
-		<p>
-			BIRT Release 2.0 provides web output as a single HTML document, paginated HTML and PDF.  Additionally the
-			viewer allows exporting the data to CSV and Table of Contents functionality..<p>
-		</p>
-		<p>
-			More information about the sample viewer is available in the <a href="../deploy">
-			integration</a> section.
-		</p>
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">

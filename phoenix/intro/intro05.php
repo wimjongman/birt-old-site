@@ -42,7 +42,7 @@
 		</p>
 		<h2>Data Access</h2>
 		<p>
-			BIRT provides an Open Data Access (ODA) framework for adding custom data access
+			BIRT uses the Data Tools Open Data Access (ODA) framework for adding custom data access
 			methods. Data access extensions include a runtime component for getting the data.
 			They can also include custom design-time UI for building a custom query. For
 			example, a packaged application vendor can use ODA to build data access UI
@@ -60,11 +60,11 @@
 		<p>
 			The BIRT chart package provides a wide variety of chart types. However, some
 			industries have developed very specific chart formats. Developers can create
-			chart plugins that add these chart types into the BIRT charting engine.
+			chart plug-ins that add these chart types into the BIRT charting engine.
 		</p>
 		<h2>Output Formats</h2>
 		<p>
-			BIRT Release 2.0 provides output in HTML, Paginated HTML and PDF. Many other types of output
+			BIRT Release 2.1.0 provides output in HTML, Paginated HTML and PDF. Many other types of output
 			are possible: Excel, Rich Text Format (RTF), Scalable Vector Graphic (SVG),
 			images, and more. While BIRT will add some of these over time, others may
 			have a more limited audience. Developers can use BIRT engine interfaces to

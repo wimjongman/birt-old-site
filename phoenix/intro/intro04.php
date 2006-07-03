@@ -120,9 +120,9 @@
 		</p>
 		<h2>Java Event Coding</h2>
 		<p>
-			In addition to JavaScript, events can be coded in Java.  BIRT supplies a 
+			In addition to JavaScript, event handlers can be coded in Java.  BIRT supplies a 
 			set of interfaces for report item creation and data collection.
-			Once the event is written in Java and associated with a report element, the report
+			Once the event handler is written in Java and associated with a report element, the report
 			can be debugged through the Eclipse Java Development Tools.
 		</p>
 		<h2>Project Management</h2>
@@ -141,7 +141,7 @@
 		</p>
 		<p>
 			BIRT provides a similar style feature. Indeed, BIRT styles are based on CSS
-			styles, making BIRT's visual properies familiar to web application developers.
+			styles, making BIRT's visual properties familiar to web application developers.
 			BIRT styles cascade, allowing you to set a style in one place and have it affect
 			the entire report, a section of the report, or a single report item.  BIRT also
 			allows importing of existing Cascading Style Sheets.
@@ -171,7 +171,6 @@
 			The web allows worldwide access to your application. BIRT provides excellent
 			support for internationalization and localization.
 		</p>
-		<hr class="clearer" />
 		<ul class="midlist">
 			<li>
 				Text Localization -
@@ -179,6 +178,10 @@
 				user's language. All labels and report text can be externalized and translated using the
 				standard Java localization rules. At runtime, BIRT uses resource keys to locate
 				the correct translations of your text.
+			</li>
+			<li>
+				Language Packs - 
+				Language Packs are available to translate the BIRT offerings into many different languages.
 			</li>
 			<li>
 				Localization -
