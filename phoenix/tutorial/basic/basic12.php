@@ -171,13 +171,18 @@
 				Drag a Data item from the Palette into the right-most cell of your grid.
 			</li>
 			<li>
+				The Binding Editor will be displayed.  Left click on "Input New Value Here ..." and change the name to current_date.
+			</li>
+			<li>
+				Set the Data Type column to Date Time.
+				Select the ellipse within the Expression column
 				The expression builder will appear.
 			</li>
 			<li>
 				Type "new Date( )" (without the quotes) to display the current date.
 			</li>
 			<li>
-				Click OK.
+				Click OK, select the check box next to current_date, and click OK again.
 			</li>
 			<li>
 				Set the date format. Select the Format DateTime page within the Property Editor.
@@ -187,7 +192,7 @@
 			</li>
 		</ul>
 		<p>
-			BIRT uses Java formatting (based on Microsoft Excel) for dates, numbers and
+			BIRT uses Java formatting for dates, numbers and
 			strings. In addition, BIRT adds a number of specialized, locale-aware date formats
 			described in the <a href="/birt/phoenix/ref/ROM_Styles_SPEC.pdf">ROM Styles Specification</a>.
 		</p>

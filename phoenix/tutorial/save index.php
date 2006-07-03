@@ -29,19 +29,42 @@
 			<ul>
 				<li><a href="#tutorial">Basic Tutorial</a></li>
 				<li><a href="#movie">Flash Movie of "My First Report"</a></li>
+				<li><a href="#screenshots">Other Screencasts</a></li>
 			</ul>
 		</blockquote>
 
 		<h2><a name="tutorial"></a>Basic Tutorial</h2>
 		<p>
-			The Basic Tutorial walks you though the steps to build
-			a basic listing report and introduces the basic
-			BIRT concepts. This is the place to start.  To begin the tutorial click <a href="/birt/phoenix/tutorial/basic">here</>.
+			The <a href="/birt/phoenix/tutorial/basic">Basic Tutorial</a> walks you though the steps to build
+			a basic listing report. Introduces the basic
+			BIRT concepts. This is the place to start
 		</p>
+		<hr class="clearer" />
+
 		<h2><a name="movie"></a>Flash Movie of "My First Report"</h2>
 		<p>
-			(Offline)This Flash movie shows the creation of My First Report from the tutorial in  BIRT's online help.
+			This Flash movie shows the creation of  "<a href="http://download.eclipse.org/birt/downloads/demos/FirstReport/MyFirstReport.html" target="_blank">My First Report</a>" from the tutorial in  BIRT's online help.
 		</p>
+		<hr class="clearer" />
+
+		<h2><a name="screenshots"></a>Other Screencasts</h2>
+		<p>
+			In the following screencasts, Scott Rosenbaum (BIRT PMC) show how to perform some specific tasks in BIRT.
+		</p>
+		<ul class="midlist">
+			<li>
+				<a href="http://www.eclipse.org/downloads/download.php?file=/birt/downloads/demos/parameter_demo.wmv&amp;r=1">
+				Using data set parameters and report parameters.</a>
+			</li>
+			<li>
+				<a href="http://www.eclipse.org/downloads/download.php?file=/birt/downloads/demos/sub_report_demo.wmv&amp;r=1">
+				Creating a subreport.</a>
+			</li>
+			<li>
+				<a href="http://www.eclipse.org/downloads/download.php?file=/birt/downloads/demos/scripted_data_src.wmv&amp;r=1">
+				Creating a scripted data set.</a>
+			</li>
+		</ul>
 		$linkToTop
 	</div>
 </div>

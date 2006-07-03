@@ -56,13 +56,13 @@
 				Select the first label (State label) in the Table Header band.
 			</li>
 			<li>
-				Right-click and select Style&rarr;Add Style from the context menu.
+				Right-click and select Style&rarr;New Style from the context menu.
 			</li>
 			<li>
 				The Style Properties dialog appears.
 			</li>
 			<li>
-				Enter "Header" in the Custom Style (Name) field on the General page and make sure that the Custom Style radio button is checked.
+				Enter "Header" in the Custom Style (Name) field on the General page and make sure that the Custom Style radio button is selected.
 			</li>
 			<li>
 				Switch to the Background page from the left most column of the New Style dialog.
@@ -120,6 +120,9 @@
 			</li>
 			<li>
 				Double-click the style you want to edit.
+			</li>
+			<li>
+				You can also edit a style by selecting Style&rarr;Edit Style&rarr;Style Name from the context menu when a report item is selected.
 			</li>
 		</ul>
 

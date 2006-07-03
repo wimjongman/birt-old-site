@@ -133,11 +133,6 @@
 				Side by Side Chart &amp; Listing -
 				Creates a grouped report where each group contains a chart and a listing side by side.
 			</li>
-			<li>
-				Letter -
-				A form letter in which database data is "mail-merged" into the
-				text. The letter text can be formatted using a subset of HTML.
-			</li>
 		</ul>
 		<p>
 			We're now ready to choose our template:

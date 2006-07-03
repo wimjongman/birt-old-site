@@ -43,7 +43,7 @@
 		<p>
 			We're now ready to test the report layout. We verified the
 			data set earlier, so now we want to verify that the report is presenting the
-			data as we expected.
+			data as we expect.
 		</p>
 		<p>
 			We preview the report by clicking on the Preview tab in the lower left corner of the report editor.
@@ -53,7 +53,7 @@
 			The window that appears is an embedded web browser, which displays the report in HTML format. 
 			The report appears as a single page. This works best for smaller data sets. 
 			Since the sample database has quite a bit of data, we used a WHERE clause to limit the results. 
-			We could also use a report parameter and a data set filter to limit the amount of data displayed at any one time.
+			We could also use a report parameter or a data set filter to limit the amount of data displayed at any one time.
 		</p>
 		<p>
 			There are a number of ways we can improve the report's appearance:

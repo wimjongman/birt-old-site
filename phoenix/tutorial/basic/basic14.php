@@ -50,7 +50,10 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Scripting and expressions using JavaScript
+				Charting with interactivity
+			</li>
+			<li>
+				Scripting and Expressions using JavaScript
 			</li>
 			<li>
 				Custom data access extensions
@@ -70,6 +73,13 @@
 			<li>
 				Extended data items
 			</li>
+			<li>
+				Dynamic and cascaded parameters
+			</li>
+			<li>
+				Joined Data Sets
+			</li>
+			
 		</ul>
 
 

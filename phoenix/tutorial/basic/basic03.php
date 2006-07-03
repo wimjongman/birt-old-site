@@ -60,7 +60,7 @@
 
 		<h2><a name="layout_editor"></a>Layout Editor</h2>
 		<p>
-			The central area is the Layout Editor. This is the place where you create your report design. The editor has three tabs:
+			The central area is the Layout Editor. This is the place where you create your report design. The editor has five tabs:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -75,6 +75,14 @@
 				Script -
 				Where you add JavaScript to your report to customize its behavior.
 			</li>
+			<li>
+				XML Source -
+				You can view and modify the XML source of a report from here.
+			</li>
+			<li>
+				Master Page -
+				Used to format page data such as page headers.
+			</li>						
 		</ul>
 
 
@@ -82,7 +90,7 @@
 		<p>
 			Around the editor are a number of views:
 			
-			The views below can be arranged to the left, right or bottom of Around the Layout Editor 			
+			The views below can be arranged to the left, right or bottom of the Layout Editor 			
 			
 			
 		</p>
@@ -115,9 +123,18 @@
 			<li>
 				Properties View -
 				Standard Eclipse view that shows all properties for
-				a report item as a simple list. This view is optional, and we'll not use it in
+				a report item as a simple list. This view is optional, and we will not use it in
 				this tutorial.
 			</li>
+			<li>
+				Library Explorer View -
+				BIRT allows the reuse of report objects, such as tables, data sources and styles.
+				Objects created for reuse are stored in a library file.  The Library Explorer will display
+				Libraries that exist in the resource folder.  Developed libraries can be added to the resource folder by
+				selecting File&rarr;Publish Library to Resource Folder or by right clicking in Library Explorer and selecting 
+				add.  The resource folder location can be configured at:<br> 
+				Window&rarr;Preferences&rarr;Report Design&rarr;Resource.
+			</li>			
 		</ul>
 
 

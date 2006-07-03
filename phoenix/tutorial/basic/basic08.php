@@ -44,7 +44,7 @@
 
 		<h2><a name="resizing"></a>Resizing Table Columns</h2>
 		<p>
-			Let's adjust the size of the table columns. Tables & columns can be sized using absolute sizes (inches, centimeters), or relative sizes (percentage of the width of the page.) Here, we'll adjust the column widths by directly changing their in the report layout. To do this:
+			Let's adjust the size of the table columns. Tables & columns can be sized using absolute sizes (inches, centimeters), or relative sizes (percentage of the width of the page.) Here, we'll adjust the column widths by directly changing them in the report layout. To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -68,7 +68,7 @@
 
 		<h2><a name="background_color"></a>Setting the Background Color</h2>
 		<p>
-			Let's dress up the state heading. Let's give it a color band by setting the row's background color. To do this:
+			Let's dress up the state heading by setting the row's background color. To do this:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -81,7 +81,7 @@
 				A list of property types appears at the left of the view. Click on the General group.
 			</li>
 			<li>
-				Find the Background color field. Click on the empty gray button to display the color chooser.
+				Find the Background color field. Click on the empty gray button to display the color picker.
 			</li>
 			<li>
 				Pick the blue color third from the right in the top row. This is a standard color, but is a bit too dark for our needs.
@@ -104,7 +104,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the state data item. (it’s located below the state label.)
+				Select the state Data Element. (it’s located below the state label.)
 			</li><li>
 				Switch to the General property group in the Property Editor.
 			</li>
@@ -115,7 +115,7 @@
 				Click the [B] (bold) button to make the font bold.
 			</li>
 			<li>
-				Select the city data item.
+				Select the city Data Element.
 			</li>
 			<li>
 				Again, switch to the General property group.
@@ -140,7 +140,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Select the phone number item.
+				Select the phone number Data Element.
 			</li>
 			<li>
 				Switch to the Format String page in the Property Editor.
@@ -175,7 +175,7 @@
 				Set the Style field to a solid line. (This is the default.)
 			</li>
 			<li>
-				Set the Color field to a black. (Use the color name pull-down, or choose the bottom left color in the color chooser.)&nbsp; (This is the default.)
+				Set the Color field to a black. (Use the color name pull-down, or choose the bottom left color in the color picker.)&nbsp; (This is the default.)
 			</li>
 			<li>
 				Set the Width property to the thinnest line.&nbsp; 
@@ -203,10 +203,6 @@
 			(Cascading Style Sheet) standard. If you've ever used CSS
 			to format HTML, you are well on your way to understanding formatting in BIRT.
 
-		</p>
-		<p>
-			BIRT adds additional, report-specific properties such as the date, number and string
-			formatting that we just set. However, even these act just like CSS properties.
 		</p>
 
 

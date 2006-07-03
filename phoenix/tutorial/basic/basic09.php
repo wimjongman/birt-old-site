@@ -71,7 +71,7 @@
 			  	filters to display sales in one chart, returns in another.
 			</li>
 			<li>
-				Groups: provide ability to create subtotals in addition to visual affects we've seen so far.
+				Groups: provide ability to create subtotals as we have already seen.
 			</li>
 			<li>
 				Sorting: controls the order of the detail rows within a table. This is the property we'll use.
@@ -87,10 +87,10 @@
 			<li>
 				Select the table. (by clicking on the table tab in the Layout Editor.)</li>
 			<li>
-				Choose the Sorting tab within the Property Editor. (Note: Sorting is a tab on the bottom of the Property Editor and not a page on the left as we've used thus far.)
+				Choose the Sorting tab within the Property Editor. (Note: Sorting is a tab on the top of the Property Editor and not a page on the left as we've used thus far.)
 			</li>
 			<li>
-				Click the Add button to add a new line.
+				Click the Add button to add a new sort condition.
 			</li>
 			<li>
 				Use the pull-down under Sort Key to choose "CUSTOMERNAME".

@@ -49,9 +49,9 @@
 		</p>
 
 
-		<h2><a name="items"></a>Report Items</h2>
+		<h2><a name="items"></a>Report Items (Elements)</h2>
 		<p>
-			BIRT provides a variety of report items for use when creating your report. Report items appear in the Palette view. Report items include:
+			BIRT provides a variety of report items or Elements for use when creating your report. Report items appear in the Palette view. Report items include:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -76,21 +76,23 @@
 			<li>
 				Image -
 				Any kind of image supported by a web browser. Images can be embedded
-				in the report, or links to a file on your web server.
+				in the report, referenced through a URI, read from the resource folder or retrieved from a BLOB field in a data set.
 			</li>
 			<li>
 				Grid -
-				Provides a tabular arrangement of report items, much like an HTML table.
+				Provides a tabular arrangement of report items, much like an HTML table.  This element 
+				doesnt iterate over data sets like a List or a Table.
 			</li>
 			<li>
 				List -
 				Presents data from a data set in any kind of format. Used when the layout for
-				each row is more sophisticated than a simple table row.
+				each row is more sophisticated than a simple table row.  This Element will iterate over a bound Data Set.
 			</li>
 			<li>
 				Table -
 				Presents data from a data set in the form of a table. Can contain grouping levels.
-				Like an HTML table that has a table row for each data set row.
+				Like an HTML table that has a table row for each data set row.  This Element, like a list will iterate over a bound
+				Data Set.
 			</li>
 			<li>
 				Chart -
@@ -131,17 +133,27 @@
 			</li>
 			<li>
 				Drag the CUSTOMERNAME column into the detail band cell second from the
-				left. Notice that the designer automatically adds the corresponding column header.
+				left. Notice that the designer automatically displays the Binding Editor.  
+				This operation adds a Data Element and a Label Element to the Table Element.
+				The Binding Editor maps the Data Element to the Data Set row column CUSTOMERNAME.
+				You can change this value by selecting the ellipse next to the expression within the Binding Editor. 
+				You will now see that the Table Element contains the new Label Element and the new Data Element.
 			</li>
 			<li>
+				Click OK.
+			</>
+			<li>
 				Drag the PHONE column into the rightmost cell of the detail band.
+			</li>
+			<li>
+				Click OK
 			</li>
 		</ul>
 
 
 		<h2><a name="state_group"></a>Create the State Group</h2>
 		<p>
-			We want our customer listing to be grouped by state, then city. Using a group causes all rows within the same state to appear together. Let's create the group heading for states:
+			We want our customer listing to be grouped by state, then city. Using a group causes all rows within the same state to appear together. Let's create the group header for states:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -149,6 +161,9 @@
 			</li>
 			<li>
 				Drag the STATE column into the leftmost cell within the Group Header row.
+			</li>
+			<li>
+				Click OK.
 			</li>
 		</ul>
 		<div class="homeitem3col">
@@ -181,10 +196,23 @@
 				Click on the Table tab to display the table scaffolding.
 			</li>
 			<li>
+				Select the Property Editor&rarr;Binding Tab. You will see that the Table is bound to the
+				Customers Data Set.  Under Data Column Binding you will notice the three Table columns that have already been created.
+			</li>
+			<li>
+				Select Add.  The BIRT Expression Builder will be displayed.
+			</li>
+			<li>
+				Select Available Data Sets under Category, Customers under Sub-Category and then double-click on the CITY column.
+			</li>
+			<li>
+				Select OK and change the Binding name from New Binding to CITY.  The Data Set Row column CITY is now available to be used within the Table.
+			</li>
+			<li>
 				Right-click on the row header for the state group header and a context menu will be displayed.
 			</li>
 			<li>
-				From the context menu choose Insert Group ? Below. The Group Details dialog appears.
+				From the context menu choose Insert Group&rarr;Below. The Group Details dialog appears.
 			</li>
 			<li>
 				Chose the CITY column in the Group On field and type City in the Name field.
@@ -194,7 +222,7 @@
 			</li>
 		</ul>
 		<p>
-			Notice that BIRT automatically inserted a Data report item for the city group.
+			Notice that BIRT automatically inserted a Data element for the city group.
 		</p>
 
 
@@ -210,7 +238,7 @@
 				Choose Insert&rarr;Column to the Right from the context menu. A new column appears.
 			</li>
 			<li>
-				Move the row[“CITY”] expression (the expression in the first column of the second group header) to the second column of the second group header by dragging it.
+				Move the CITY Data Element (the Element in the first column of the second group header) to the second column of the second group header by dragging it.
 			</li>
 		</ul>
 

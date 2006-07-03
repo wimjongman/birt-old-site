@@ -50,7 +50,7 @@
 			<i>For internal use only</i>
 		</p>
 		<p>
-			We could build this up with two labels. But, we'll take this opportunity to try out the Text element which allows us to use HTML formatting directly within the text.
+			We could create this with two labels. But, we'll take this opportunity to try out the Text element which allows us to use HTML formatting within the text.
 		</p>
 
 
@@ -60,7 +60,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				Drag a Text item from the palette and drop it into the center cell within our grid.
+				Drag a Text Element from the palette and drop it into the center cell within our grid.
 			</li>
 			<li>
 				The Edit Text Item dialog appears.
@@ -90,7 +90,7 @@
 		</blockquote>
 		<ul class="midlist">
 			<li>
-				Continue adding elements and typing to create the finished HTML:
+				Continue using the editor to create the text below:
 			</li>
 		</ul>
 		<blockquote>
@@ -104,21 +104,24 @@
 		</blockquote>
 		<ul class="midlist">
 			<li>
-				Click OK to save your changes.
+				Click OK and save your changes.
 			</li>
 		</ul>
 
 
 		<h2><a name="dynamic_text"></a>Dynamic Text</h2>
 		<p>
-			While we won't use it in this tutorial, there is one other feature of text items to note. Select the Dynamic Text category and you'll see a <value-of> tag. This allows you to insert expressions directly into your HTML. For example, to display an address line in US format, we could say:
+			While we won't use it in this tutorial, there is one other feature of Text Elements to note. Select the Dynamic Text category and you'll see a <value-of> tag. This allows you to insert expressions directly into your HTML. For example, to display an address line in US format, we could type:
 		</p>
 		<blockquote>
-			&lt;value-of&gt;row.city&lt;/value-of&gt;,<br>
-			&lt;value-of&gt;row.state&lt;/value-of&gt;<br>
-			&lt;value-of format="@@@@@-@@@@"&gt;row.zip&lt;value-of&gt;
+			&lt;value-of&gt;row["city"]&lt;/value-of&gt;,<br>
+			&lt;value-of&gt;row["state"]&lt;/value-of&gt;<br>
+			&lt;value-of format="@@@@@-@@@@"&gt;row["zip"]&lt;value-of&gt;
 		</blockquote>
-
+		<p>
+			The row values correspond to the name column within the Binding Editor for the given report container element.
+			So for example if we added a Text Element to our Table, we could use row["CUSTOMERNAME"] within the value-of tag.
+		</p>
 
 		<h2><a name="test"></a>Final Test</h2>
 		<p>

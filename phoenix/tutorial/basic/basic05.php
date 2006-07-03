@@ -69,6 +69,15 @@
 				Ensure that the Data Set Type field shows "SQL Select Query".
 			</li>
 			<li>
+				Click Next.
+			</li>
+			<li>
+			Enter the following Query:<br>
+			SELECT *<br>
+			FROM CUSTOMERS<br>
+			WHERE COUNTRY = 'USA'<br>
+			</li>
+			<li>
 				Click Finish.
 			</li>
 		</ul>
@@ -76,7 +85,7 @@
 
 		<h2><a name="pages"></a>Data Set Editor Pages</h2>
 		<p>
-			The data set editor now opens. We'll use this to define our query. Before we do, let's take a look at the pages within this editor. The data set editor provides the following pages:
+			The data set editor now opens. Let's take a look at the pages within this editor. The data set editor provides the following pages:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -142,22 +151,10 @@
 				Expand a table to see its columns.
 			</li>
 			<li>
-				Drag and drop a table or column to add its name to the SQL editor.
+				This editor support drag and drop.
 			</li>
 		</ul>
 
-		<hr class="clearer" />
-
-		<h2><a name="create_query"></a>Create the Query</h2>
-		<p>
-			Our query is very simple, so we'll just type it in:
-		</p>
-		<p>
-			<h3>Simple Query</h3>
-			SELECT *<br>
-			FROM CUSTOMERS<br>
-			WHERE COUNTRY = 'USA'<br>
-		</p>
 		<br>
 
 
