@@ -265,7 +265,6 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <p>
 <ol>
 <li><a href="http://download.eclipse.org/birt/downloads/">Download</a> the Language Pack for the desired product and extract into your eclipse install.
-<li><a href="http://download.eclipse.org/birt/downloads/">Download</a> the Language Pack Feature Overlay for the desired product and extract into your eclipse install.
 <li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.
 <li>Select the group 1 language you desire from the drop-down combo box.
 <li>Save changes and restart the system.
