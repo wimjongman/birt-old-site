@@ -47,40 +47,33 @@ This document describes how to get the BIRT source from CVS and build it under
 Eclipse. If you simply want to use BIRT, it is easier to simply
 <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.
 <br>
-If you would like to watch a flash presentation of building BIRT 2.0 click
-<a href=http://download.eclipse.org/birt/downloads/examples/building/BuildingBirt2.0/BuildingBirt2.0.html target=_blank> here.</a>
-<br>Builing BIRT 2.0.1 is described below.
+<br>Building BIRT 2.1.0 is described below.
  
 <h1><a name="req">Requirements</a></h1>
-
-In order to successfully build and run the BIRT source, your system must meet 
-the following requirements:
-
-<ul class="arrow-list">
-	<li>Eclipse Release 3.0.1 or higher</li>
-	<li>JDK 1.4.2 or higher</li>
-	<li>GEF 3.0.0 or higher</li>
-	<li>EMF 2.0.1 or higher</li>
-</ul>
-
+<p>
+Download the BIRT all in one designer.
+It is listed under "Report Designer Full Eclipse Install" on the download page.
+It is possible to build BIRT with an existing Eclipse install, but
+this method is the quickest, as all the required files, with the exception
+of iText.jar are present.
+</p>
 <h1><a name="config">Configuring Eclipse</a></h1>
 
 The BIRT source code uses some features that are only present in JDK 1.4.2 or later.
 In order for it to successfully build you need to set your compiler compliance 
-to 1.4.
+to 1.4.  <b>Make sure this is not set to 5.0</b>.
 You can set this for the entire workbench as follows:
 
 <ol>
 <li>From the menu, choose Window->Preferences.</li>
 <li>In the tree, expand Java and choose Compiler.</li>
-<li>On the tabs on the right, choose Compliance and Classfiles.</li>
 <li>On Compiler compliance level, select 1.4.</li>
 <li>Unselect Use default compliance settings.</li>
 <li>On Generated .class files compatibility, select 1.4.</li>
 <li>On Source compatibility, select 1.4.<br><br>
 The following illustration shows these settings.<br><br>
 
-<img src="images/compliancepreference.jpg" width="672" height="539"/><br><br></li>
+<img src="images/compliancepreference.jpg" /><br><br></li>
 <li>Choose OK.</li>
 </ol>
 
@@ -89,7 +82,7 @@ The following illustration shows these settings.<br><br>
 The BIRT modules are available in CVS in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/?cvsroot=BIRT_Project">source</a> folder under 
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/?cvsroot=BIRT_Project">
 /home/birt</a>. 
-BIRT consists of the following modules.
+BIRT has over 150 modules, some of these are described below.
 
 <table BORDER="1">
  <thead>
@@ -262,10 +255,10 @@ contains other classes that can be used by any other module</td>
 <li>To open the CVS Repository Exploring perspective, choose Window -&gt; 
 Open Perspective -&gt; Other. In Select Perspective, select CVS Repository 
 Exploring and choose OK.<br><br>
-<img src="images/selectperspective.jpg" width="245" height="420"/><br><br>
+<img src="images/selectperspective.jpg"/><br><br>
 <li>Right-click on the CVS repositories window. From the context menu, 
 choose New -&gt; Repository Location.<br><br>
-<img src="images/newrepository.jpg" width="485" height="361"/><br><br>
+<img src="images/newrepository.jpg"/><br><br>
 <li>On Add CVS Repository, set the following values:<br><br>
 
 <table border="1">
@@ -293,7 +286,7 @@ choose New -&gt; Repository Location.<br><br>
  </tbody>
 </table>
 <br/>
-<img src="images/addcvsrepository.jpg" width="438" height="551" /><br/><br/>
+<img src="images/addcvsrepository.jpg"  /><br/><br/>
 <li>Choose Finish.
 </ol>
 A new node appears in the CVS Repositories window.
@@ -301,154 +294,99 @@ A new node appears in the CVS Repositories window.
 <h2>Check Out Code for the First Time</h2>
 
 <ol>
-<li>Expand the new node in the repositories tree, then the head node and 
-the source node.
-<li>Select all the nodes under this node, with the exception of the test projects. On CVS Repositories, right-click and choose 
+<li>Expand the new node in the repositories tree.<br><br>
+<li>Refresh Branches<br>
+<img src="images/refreshbranches.jpg"/><br/><br/>
+<li>Select source and click finish.<br><br>
+<img src="images/refreshbranches2.jpg"/><br/><br/>
+<li>Open the Branches node and select the BIRT_2_1_0_Branch and then the source folder.<br><br>
+<li>Select all the nodes under this node, with the exception of the these projects:<br>
+org.eclipse.birt.chart.tests<br>
+org.eclipse.birt.report.data.oda.flatfile<br>
+org.eclipse.birt.report.data.oda.flatfile.nl<br>
+org.eclipse.birt.report.data.oda.flatfile.ui<br>
+org.eclipse.birt.report.data.oda.flatfile.ui.nl<br>
+org.eclipse.birt.report.designer.rcp.ui<br>
+org.eclipse.birt.report.designer.tests<br>
+org.eclipse.birt.report.tests.chart<br>
+org.eclipse.birt.report.tests.engine<br>
+org.eclipse.birt.report.tests.model<br>
+org.eclipse.birt.test.performance<br>
+org.eclipse.birt.tests.core<br>
+org.eclipse.birt.tests.data<br><br>
+
+<li>On CVS Repositories, right-click and choose 
  Check Out from the context menu.<br/><br/>
-<img src="images/checkout.jpg" width="408" height="668" /><br/><br/>
-This choice gets all the BIRT projects from CVS into your Eclipse workspace folder.
+<img src="images/checkout.jpg" /><br/><br/>
+This will get the BIRT projects from CVS and load them into your Eclipse workspace folder.
+This will take some time.  Once finished, change to the Java perspective.
 </ol>
-
-<h1><a name="checkoutdatatools">Checking out the Data Tools projects</a></h1>
-BIRT depends on other Libraries and Projects to build properly.
-This step is only needed if you plan on building the BIRT Viewer.
-After checking out the BIRT source, you will need to check out the Data Tools project source.
-This can be done by opening the CVS Repository Explorer prespective and following the steps below.
-
-<ol>
-<li>Right-click on the CVS repositories window. From the context menu, 
-choose New -&gt; Repository Location.<br><br>
-<img src="images/secondrep.jpg" width="423" height="179"/><br><br>
-<li>On Add CVS Repository, set the following values:<br><br>
-
-<table border="1">
- <tbody>
-  <tr>
-   <td>Host</td>
-   <td>dev.eclipse.org</td>
-  </tr>
-  <tr>
-   <td>Repository path</td>
-   <td>/home/datatools</td>
-  </tr>
-  <tr>
-   <td>User</td>
-   <td>anonymous</td>
-  </tr>
-  <tr>
-   <td>Connection type</td>
-   <td>pserver</td>
-  </tr>
-  <tr>
-   <td>Use Default Port</td>
-   <td>Selected</td>
-  </tr>
- </tbody>
-</table>
-<br/>
-<img src="images/dtrep.jpg" width="438" height="542" /><br/><br/>
-<li>Choose Finish.
-
-
-
-
-The data tools node appears in the CVS Repositories window.
-
-
-<li>Expand the data tools node in the repositories tree, then the head node and 
-the source node.
-<li>Select all the nodes under this node as shown in the image below. On CVS Repositories, right-click and choose 
- Check Out As... from the context menu.<br/><br/>
-<img src="images/dtoolsproj.jpg" width="457" height="558" /><br/><br/>
-<li>The Check Out As, wizard will be displayed.<br>
-<img src="images/dtpchk1.jpg" width="451" height="445" /><br/><br/>
-<li>Select Next, until the following is displayed.  Select the Configure Tags button.<br>
-<img src="images/dtpchk1a.jpg" width="445" height="430" /><br/><br/>
-<li>Select the .project file under the org.eclipse.datatools.connectivity.oda.flatfile project.  The additional tags shown below should be visible.  Select the Add Checked Tags button.  Select the OK button.<br>
-<img src="images/dtpchk1b.jpg" width="595" height="469" /><br/><br/>
-<li>Select the tag pictured below and press the finish button.<br>
-<img src="images/dtpchk1c.jpg" width="445" height="430" /><br/><br/>
-
-This choice gets the required Data Tools projects from CVS into your Eclipse workspace folder.
-
-
-</ol>
-
-
-
 
 
 <h1><a name="additional">Import Additional Files</a></h1>
 
-BIRT currently requires additional files be included, to allow the source to build properly.<br>
-
 Import <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> into the 
-org.eclipse.birt.report.engine.emitter.pdf/lib directory.  If the lib directory does not exist,
-create it.<br><br>
-<img src="images/itext.jpg" width="458" height="792" /><br/><br/>
+com.lowagie.itext/lib directory. <br><br>
+<img src="images/itext.jpg" /> <br/><br/>
 
 <br>
 
+This designer build is now complete.  
+If you wish to build the Web Viewer proceed to the next section.
 
-Finally, import <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> into the
-org.eclipse.birt.report.viewer/birt/ajax/lib directory.  If the lib directory does not exist, create it.
-<br><br>
-<img src="images/prototype.jpg" width="458" height="826" /><br/><br/>
-<br>
-
-This designer build is now complete.  The final step in building BIRT is building the viewer described in the next section.
 <h1><a name="viewer">Preparing the Viewer</a></h1>
 
-
-To include all the required project libraries under the viewer's WEB-INF folder, 
-you must build the viewer separately.
-The viewer project contains an ant build script that performs this task. To use 
+The viewer project contains an ant build script that builds the Web Viewer. To use 
 this script, perform the following steps.
 
 <ol>
-<li>In Package Explorer, expand the org.eclipse.birt.report.viewer project.
-<li>Right-click the BuildViewer.xml file. From the context menu, choose Run -&gt;
- Ant Build.
+<li>In Package Explorer, expand the org.eclipse.birt.report.data.adapter project.<br><br>
+<li>Right-click the BuildDataAdapter.xml file. From the context menu, choose Run -&gt;
+ Ant Build....
  <br/><br/>
-<img src="images/runantbuild.jpg" width="541" height="682" />
+<img src="images/issue.jpg"  />
+<br/><br/>
+<li>Select Run and verify that the build is successful.<br><br>
+
+<li>In Package Explorer, expand the org.eclipse.birt.report.viewer project.<br><br>
+<li>Right-click the BuildWebViewer.xml file. From the context menu, choose Run -&gt;
+ Ant Build....
+ <br/><br/>
+<img src="images/runantbuild.jpg" />
 <br/><br/>
 
 <li>In org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. 
 Unselect Use global properties specified in the Ant runtime preferences 
-as shown in the following illustration.
+as shown in the following illustration.  Add the eclipse.home property and
+set it to your all in one Eclipse install directory.
 <br/><br/>
-<img src="images/enginehome.jpg" width="692" height="560" />
+<img src="images/enginehome.jpg" />
 <br/><br/>
 </ol>
 
-Choose Run. The ant build of the viewer runs in the console.
+Choose Run. The ant build of the Web Viewer runs in the console.
+This will create a birt directory within the project that contains the Web Viewer.
 
 <h1><a name="running">Running BIRT</a></h1>
 
-Start BIRT by using running it as an Eclipse Application. This can be done as follows:
+Start BIRT by running it as an Eclipse Application. This can be done as follows:
   <ol>
-  	<li>
-  		Close the org.eclipse.birt.report.designer.ui.rcp project as shown below.
-  		<br/><br/>
-		<img src="images/closercp.jpg" width="679" height="875" />
-		<br/><br/>
-	</li>
   	<li>
   		Select Run... from the Run menu on the menu bar
 		<br/><br/>
-		<img src="images/run.jpg" width="371" height="399" />
+		<img src="images/run.jpg"  />
 		<br/><br/>
 	</li>
 	<li>
 		Select Eclipse Applicaiton from the list on the left and click on the New button as shown in the following illustration:
 		<br/><br/>
-		<img src="images/runconfig1.jpg" width="784" height="597" />
+		<img src="images/runconfig1.jpg"  />
 		<br/><br/>
 	</li>
 	<li>
 		Click the Run button to launch the Eclipse Application.
 		<br/><br/>
-		<img src="images/runconfig2.jpg" width="784" height="597" />
+		<img src="images/runconfig2.jpg"  />
 		<br/><br/>
 	</li>
   </ol>
