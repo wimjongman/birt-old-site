@@ -268,7 +268,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.
 <li>Select the group 1 language you desire from the drop-down combo box.
 <li>Save changes and restart the system.
-<li>Launch Eclipse and select <b>Window->Preferences->BIRT->Preview</b>.  Select the desired language from the drop-down combo box.
+<li>Launch Eclipse and select <b>Window->Preferences->Report Design->Preview</b>.  Select the desired language from the drop-down combo box.
 <li>Restart Eclipse.
 </ol>
 </p>
