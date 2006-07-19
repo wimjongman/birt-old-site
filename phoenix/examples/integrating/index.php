@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "BIRT Sample Database";
+	$pageTitle 		= "BIRT Integration Examples";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
