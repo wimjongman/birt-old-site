@@ -39,14 +39,9 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/examples/integrating/designengine">Design Engine API</a> –
+				<a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">Report Engine API Examples</a> –
 
-				This example presents a Java program that utilizes the BIRT Design Engine API.
-			</li>
-			<li>
-				<a href="/birt/phoenix/examples/integrating/dynamicparameters">Dynamic Parameters</a> –
-
-				This example demonstrates using the BIRT APIs to programmatically build a custom parameter page.
+				Several examples demonstrating the report engine API.
 			</li>
 		</ul>
 		$linkToTop
