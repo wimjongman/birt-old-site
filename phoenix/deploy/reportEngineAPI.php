@@ -527,8 +527,9 @@ options.setOutputFileName("c:\\work\\test\\pages.html");
 options.setOutputFormat("html");
 task.setRenderOption(options);
 				
-//Render Pages 1-2
-task.render("1-2");
+//Render Pages 1
+task.setPageNumber(1);
+task.render();
 task.close();
 
 </pre>
