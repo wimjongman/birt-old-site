@@ -34,6 +34,14 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.bizintelligencepipeline.com/blog/archives/2006/06/bi_gets_a_boost.html">
+						BI Gets A Boost From Open-Source Community
+					</a>
+					<span class="dates">
+						06/29/06
+					</span>
+				</li>						
+				<li>
 					<a href="http://www.scapatech.com/news_events/press_releases/2006-02-05.html">
 						Scapa Adds BIRT Reporting to Test Platform
 					</a>
