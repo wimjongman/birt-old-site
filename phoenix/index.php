@@ -290,6 +290,14 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.onjava.com/pub/a/onjava/2006/07/26/deploying-birt.html">
+						Deploying BIRT
+					</a>
+					<span class="dates">
+						07/26/06
+					</span>
+				</li>			
+				<li>
 					<a href="http://www.bizintelligencepipeline.com/blog/archives/2006/06/bi_gets_a_boost.html">
 						BI Gets A Boost From Open-Source Community
 					</a>
