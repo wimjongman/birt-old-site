@@ -54,6 +54,13 @@
 				Mike has over 20 years experience with software product development and software project management. Mike has been responsible for developing reporting solutions for several companies. He is now the Technical Lead and Architect for the reporting components of IBM/Rational's Team Products, and involved with reporting work in other parts of IBM Software Group.
 			</li>
 			<hr class="clearer" />
+
+			<li>
+				<b>Larry Liang, Inetsoft</b><br>
+				Larry has over 15 years experience in software development and advanced research. He currently serves as the chief architect at Inetsoft Technology, and is responsible for the development of its BI solutions.
+			</li>
+			<hr class="clearer" />
+
 			<li>
 				<b>Scott Rosenbaum, Innovent Solutions</b><br>
 				Scott has been providing professional services consulting in the business intelligence space for more than seven years and has been involved in software development for more than 15.
