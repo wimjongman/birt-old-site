@@ -32,7 +32,18 @@
 
 		<div class="homeitem">
 		<h3>What's New</h3>
+		
+		
 			<ul>
+				<li>
+					<a href="http://www.eclipse.org/birt/phoenix/project/pmc.php">
+						BIRT 2.1
+					</a>
+					Larry Liang has joined the BIRT PMC.  Larry currently serves as chief architect at Inetsoft Technology.
+					<span class="dates">
+						07/27/06
+					</span>
+				</li>			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1

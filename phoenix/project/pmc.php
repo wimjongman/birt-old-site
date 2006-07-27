@@ -56,7 +56,7 @@
 			<hr class="clearer" />
 
 			<li>
-				<b>Larry Liang, Inetsoft</b><br>
+				<b>Larry Liang, Inetsoft Technology</b><br>
 				Larry has over 15 years experience in software development and advanced research. He currently serves as the chief architect at Inetsoft Technology, and is responsible for the development of its BI solutions.
 			</li>
 			<hr class="clearer" />
