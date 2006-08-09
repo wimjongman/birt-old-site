@@ -37,7 +37,6 @@
 				<li><a href="#config">Installing the Engine</a></li>
 				<li><a href="#jdbc">Configuring JDBC Drivers</a></li>
 				<li><a href="#api">API Overview</a></li>
-				<li><a href="#simpleexample">Simple Example</a></li>
 				<li><a href="#engineconfig">EngineConfig</a></li>
 				<li><a href="#reportengine">ReportEngine</a></li>
 				<li><a href="#ireportrunnable">IReportRunnable</a></li>
