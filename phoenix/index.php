@@ -38,7 +38,7 @@
 	$html = <<<EOHTML
 
 <div id="maincontent">
-	<div id="midcolumn">
+	
 	
 	<h1>BIRT Project</h1>
 	<h2>Business Intelligence and Reporting Tools</h2>
@@ -375,7 +375,7 @@
 			</ul>
 
 		</div>
-	</div>
+	
 </div>
 
 
