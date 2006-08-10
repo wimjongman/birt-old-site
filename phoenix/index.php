@@ -37,7 +37,9 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div align=LEFT style="padding-left: 120px">
+<div id="maincontent">
+	<div id="midcolumn">
+	
 	<h1>BIRT Project</h1>
 	<h2>Business Intelligence and Reporting Tools</h2>
 	BIRT is an open source, Eclipse-based reporting system that integrates
@@ -373,6 +375,7 @@
 			</ul>
 
 		</div>
+	</div>
 </div>
 
 
