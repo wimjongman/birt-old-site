@@ -37,8 +37,8 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div id="maincontent">
-	
+<div id="container">
+	<div id="midcolumn">
 	
 	<h1>BIRT Project</h1>
 	<h2>Business Intelligence and Reporting Tools</h2>
@@ -283,11 +283,11 @@
 			</ul>
 		</div>
 		
+		<br/>
 		
 		
 		
-		
-		<div class="homeitem">
+		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
 				<li>
