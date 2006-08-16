@@ -29,19 +29,30 @@
     <release name="1.0" 
              status="completed" 
              date="5/2005"
-	     	 plan="/birt/index.php?page=project/project_plan_R1_0.html" />
+	     	 plan="/birt/phoenix/project/project_plan_R1_0.html" />
     <release name="1.0.1" 
              status="completed" 
              date="7/2005"
-	     	 plan="/birt/index.php?page=project/project_plan_R1_0_1.html" />
+	     	 plan="/birt/phoenix/project/project_plan_R1_0_1.php" />             
     <release name="2.0" 
              status="completed" 
              date="1/2006"
              download="/birt/downloads/"
-	     	 plan="/birt/index.php?page=project/project_plan_R2_0_0.html" />
+	     	 plan="/birt/phoenix/project/Project_plan_R2_0_0.php" />
+   <release name="2.0" 
+             status="completed" 
+             date="2/2006"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/Project_plan_R2_0_1.php" />  	     	              
 	<release name="2.1" 
+             status="completed" 
+             date="6/2006"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/Project_plan_R2_1.php" />             
+	      />
+	<release name="2.1.1" 
              status="planning" 
              date="6/2006"
-	      />
+	      />	      
   </releases>
 </project>
