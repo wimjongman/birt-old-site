@@ -51,6 +51,10 @@
 				<a href="birt2.1/lib/index.php">Libraries</a> –
 				This example demonstrates creating and using BIRT libraries.
 			</li>
+			<li>
+				<a href="birt2.1/combochart/index.php">Combination Chart</a> –
+				This example demonstrates building a Combinatio Chart with Drill to details.
+			</li>			
 		</ul>		
 		
 		
