@@ -96,9 +96,9 @@
 			If you choose to put the Viewer into some other location, you'll need to use a context entry within the server.xml file to indicate the deployment location. See Tomcat documentation for details.
 		</p>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC0 Note: </h3>
+<h3>Birt 2.1 Note: </h3>
 <ul>
- If you are installing BIRT 2.1 RC0 or the Web Viewer Example has been changed to WebViewerExample.
+ If you are installing BIRT 2.1 or later the Web Viewer Example has been renamed to WebViewerExample.
 
  </ul>
 </div>
@@ -106,50 +106,56 @@
 
 		<h2><a name="xtra"></a>iText and prototype.js</h2>
 		<p>
-			Verify that you have downloaded <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> and <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> and follow the note below:
+			Verify that you have downloaded <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> and <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a>(only required for BIRT 2.0.2 and earlier builds) and follow the note below:
 		</p>
 <div class="homeitem3col">
-<h3>Birt 2.0.0, 2.0.1 Runtime Note: </h3>
+<h3>Birt 2.0.2 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.0.0 or 2.0.1 Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.0.2 Runtime (J2EE Application Server Deployment),
  The iText and prototype files will need to be copied to the birt-runtime/Web Viewer Example directory structure.
- <li>Copy itext-1.3.jar to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
- <li>Copy prototype.js to /Web Viewer Example/ajax/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
+ <li>Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /Web Viewer Example/ajax/lib.
  </ul>
 </div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC2 or RC3 Runtime Note: </h3>
+<h3>Birt 2.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 RC2 or RC3 Runtime (J2EE Application Server Deployment),
- The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
- <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy prototype.js to /WebViewerExample/webcontent/birt/ajax/lib.
+ <li>If you are installing the BIRT 2.1 Runtime (J2EE Application Server Deployment),
+ The iText file will need to be copied to the birt-runtime/WebViewerExample directory structure.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  </ul>
 </div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 RC4 or Later Runtime Note: </h3>
+<h3>Birt 2.1.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 RC0 or Later Runtime (J2EE Application Server Deployment),
- The iText and prototype files will need to be copied to the birt-runtime/WebViewerExample directory structure.
- <li>Copy itext-1.3.jar to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>prototype.js is already included.
+ <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsianCmaps.jar">iTextAsianCmaps.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+
  </ul>
 </div>
 <br>
 
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
 		<p>
-			Add the jar files for your JDBC drivers  to the Viewer. They  go in the following directory:
+			Add the jar files for your JDBC drivers  to the Viewer. Copy the driver the following directory:
 		</p>
 		<p>
-			birt-viewer/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers
 			
 <div class="homeitem3col">
-<h3>Birt 2.1 RC0 Note: </h3>
+<h3>Birt 2.0.2 Note: </h3>
 <ul>
- If you are installing BIRT 2.1 RC0 or later the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers.
+ If you are installing BIRT 2.0.2 or earlier the driver needs to be copied to birt-viewer/plugins/org.eclipse.birt.report.data.oda.jdbc/drivers.
+
+ </ul>
+</div>			
+<div class="homeitem3col">
+<h3>Birt 2.1 Note: </h3>
+<ul>
+ If you are installing BIRT 2.1 or later the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers.
 
  </ul>
 </div>
@@ -203,25 +209,15 @@
 			<li>
 				Rename the Web Viewer Example directory to birt.war, so it will deploy in place.
 			</li>
-			<li>
-				Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> jar file to the /birt.war/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib directory.		
-			</li>
-			<li>
-				Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /birt.war/ajax/lib directory.
-			</li>
+
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>(BIRT 2.1.1 or later) Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsianCmaps.jar">iTextAsianCmaps.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>(BIRT 2.1.1 or later) Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+			
 			<li>
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report..
 			</li>
 		</ul>
-<div class="homeitem3col">
-<h3>Birt 2.1 RC2 Note: </h3>
-<ul>
- If you are installing BIRT 2.1 RC2 or later the Web Viewer Example has been changed to WebViewerExample.  Also see note under <a href="#xtra">iText and prototype.js</a> on this
- page to verify the location of these files.
-
- </ul>
-</div>
-
 		<h2><a name="other">Other J2EE Servers</a></h2>
 		<p>We are currently working on instructions for other application servers</p>
 		
