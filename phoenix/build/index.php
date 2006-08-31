@@ -239,7 +239,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <div class="homeitem3col">
 <h3>Birt 2.1.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1. or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsianCmaps.jar">iTextAsianCmaps.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
