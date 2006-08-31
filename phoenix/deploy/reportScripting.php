@@ -87,11 +87,11 @@ Presentation phase.
 <h2><a name="context">reportContext and this</a></h2>
 <p>
 Selecting the Palette view while in the Script editor will display functions and variables that are available in the
-given event for the selected report element.  For example the screenshot below is for the onCreate event handler of a Data element.
+given event for the selected report element.  For example the screenshot below is for the onCreate event handler of a data element.
 </p>
 <img src="palette.jpg" width="266" height="476" /><br/><br/>
 <p>
-Using the <b><font color="purple">this</font></b> operator list available methods and properties for the given element in the
+Using the <b><font color="purple">this</font></b> operator list available methods and properties for the element in the
 given event and is used to view or alter styles, values etc.  See examples illustrated later.
 </p>
 <p>
@@ -106,15 +106,24 @@ use of the Persistent version allows the variable to be persisted across generat
 Also note that the variable is an Object type allowing greater flexibility.
 
 <pre style="font-size: 10pt">
-onPrepare of a data element in a table
-this.valueExpr = "reportContext.getPersistentGlobalVariable('testglobal');"
+onPrepare of a label element in a table
+this.text = reportContext.getPersistentGlobalVariable('testglobal');
 </pre>
+This global variable can be assigned to a data element using the binding editor.  Simply reference the variable in the expression builder for the 
+desired column.  For example, if a column exist in the binding editor that retrieves a string from a data base, you could append your global variable
+to the value by entering the following expression:
+
+<pre style="font-size: 10pt">
+dataSetRow["MyString"] + "-" + reportContext.getPersistentGlobalVariable('testglobal');
+</pre>
+
+<br>
 The reportContext also allows access to session variables.
 <pre style="font-size: 10pt">
 //attributeBean is a Birt Viewer supplied session variable
 myAttributeBean = reportContext.getHttpServletRequest().getAttribute('attributeBean');
 reportDoc = myAttributeBean.getReportDocumentName( );
-this.valueExpr = "reportDoc";
+this.text = reportDoc;
 </pre>
 The reportContext allows reading and modifying the context for use within scripts.  For example:
 <pre style="font-size: 10pt">
@@ -127,12 +136,12 @@ myArrList.add("two");
 appContext.put("AppContextTest", myArrList);
 </pre>
 This loads the current application context and modifies it for later use.
-Within a data element's onPrepare event handler, it could then be used as follows:
+Within a label element's onPrepare event handler, it could then be used as follows:
 
 <pre style="font-size: 10pt">
 appContext = reportContext.getAppContext();
 myObject = appContext.get("AppContextTest");
-this.valueExpr = "myObject.size()";
+this.text = myObject.size();
 </pre>
 
 The above example could have also been implemented using:
@@ -140,12 +149,7 @@ The above example could have also been implemented using:
 <pre style="font-size: 10pt">
 reportContext.setPersistentGlobalVariable("testglobal", myArrList);
 </pre>
-
-Using Global variables and application context can be very useful when adding your own Java objects to the script context.  This method alleviates the need to use the Report Engine API.
-Combining this approach with report templates offers a nice reusable
-solution.
-<br>
-The reportContext can be used to retrieve the current Locale and messages stored within a resource file.
+The reportContext can also be used to retrieve the current locale and messages stored within a resource file.
 </p>
 <h2><a name="eventsreportelement"></a>Report Level Events</h2>
 <ul class="midlist">
@@ -179,9 +183,23 @@ or
 gTest = reportContext.getPersistentGlobalVariable("gTest");
 val = gTest("Use Persistent");
 </pre>
+To access the reportContext object within a chart script use the following:
+<pre style="font-size: 10pt">
+context.getExternalContext().getScriptable()
+</pre>
+To illustrate, the chart title could be altered with the following chart script:
+
+<pre style="font-size: 10pt">
+function beforeGeneration( chart, context ){
+	importPackage(Packages.org.eclipse.birt.chart.model.type.impl);
+	newChartTitle = context.getExternalContext().getScriptable().getPersistentGlobalVariable("testglobal");
+	chart.getTitle().getLabel().getCaption().setValue(newChartTitle);
+}
+</pre>
+
 In the beforeFactory event there are several methods that allow accessing elements within the report.
 The elements usually require a name.  For example, using a Data Set named "orders", I want to display the
-query that was executed in a Dynamic Text field named "TestHeader".  This can be achieved by entering the following
+query that was executed in a dynamic text element named "TestHeader".  This can be achieved by entering the following
 script in beforeFactory
 <pre style="font-size: 10pt">
 query = this.getDataSet("orders").queryText
@@ -198,7 +216,6 @@ This event gets called in the report generation phase. It is called once for eac
 This is an opportunity to change the element design. The changes will affect all instances of the element, i.e. all table rows.
 <li>onCreate:
 Also a generation phase event. Here, the instance of the element can be modified and accessed. For example, an instance of a table row might be changed (setting every 10th rows background to red for example). 
-Here you also have access to available data (for a data item, cell or row element).
 <li>onRender:
 Presentation phase event. Similar to onCreate in that the instance is modifiable. Access to data is not available.
 </ul>
@@ -212,7 +229,7 @@ onPrepare;
 this.getStyle().backgroundColor = "red";//This would change all row instances
 
 onCreate:
-if (this.rowData.getExpressionValue(3) > 100)
+if (this.getRowData().getExpressionValue(3) > 100)
 this.getStyle().backgroundColor="red";//This will only change the row instance
 
 For a table with 100 rows, onPrepare will be called once (to change the 
@@ -223,32 +240,36 @@ instance).
 
 <h2><a name="reportitemexamples"></a>Report Element Event Examples</h2>
 
-<h4>Setting Label, Text, Dynamic Text and Data Item values</h4>
+<h4>Setting Label, Text, Dynamic Text and Data Element values</h4>
 <p>
-Setting the value of a Label item can be achieved by writting an event handler for the onPrepare or onCreate event and entering similar code presented below:
+Setting the value of a label element can be achieved by writting an event handler for the onPrepare or onCreate event and entering similar code presented below:
 <pre style="font-size: 10pt">
 this.text = "My New Label"
 </pre>
-Obviously this is a simple example and the value could be set simply by double clicking on the Text item.  Using the JavaScript editor allows
-complex logic can be implemented.<br>
-Setting the value of a Text item can be done in the onPrepare event by entering the following code in your event handler:
+Obviously this is a simple example and the value could be set simply by double clicking on the text element.  Using the JavaScript editor allows
+complex logic to be implemented.<br>
+Setting the value of a text element can be done in the onPrepare event by entering the following code in your event handler:
 
 <pre style="font-size: 10pt">
 this.content= = "My New Text"
 </pre>
 
-When setting the value of a Data or Dynamic Text item you will need to specify a value expression.  This
+When setting the value of a dynamic text element you will need to specify a value expression.  This
 value expression gets evaluated when generating the report.
-For either of these elements creating an event handler for the onPrepare event allows changing the value expression.
+Creating an event handler for the onPrepare event allows changing the value expression.
 <pre style="font-size: 10pt">
-this.valueExpr = "row[0]";
+this.valueExpr = "row['CITY']";
 </pre>
 It is important to note that valueExpr expects a string.  This is similar to what you would enter in the Expression Builder, but wrapped in quotes.
 So if you want to enter a string or partial string use single quotes.
+<br>
 
 <pre style="font-size: 10pt">
 this.valueExpr = this.valueExpr = "'my row count: ' + (row[0] + 1)";
 </pre>
+Setting values for data elements is accomplished by using the binding editor.  If you wish to change this value in script you can set the value in the
+binding editor to a JavaScript variable.  This variable can then be changed within script.  If you use this method remember that order of execution
+is important.  Changing the variable after the element is created will not change the data element value.
 
 <h4>Setting TOC Entries in Script</h4>
 The TOC expression is similar to value expressions in that it expects a string.
@@ -259,9 +280,9 @@ this.tocExpression=this.tocExpression = "'tocbyrownumber: ' + row[0]";
 
 <h4>Using row data within scripts</h4>
 
-Row Data is available in the onCreate event.
+Row data is available in the onCreate event.
 This allows you to examine the values that will be used on the current row
-of a Table or List.  
+of a table or list.  
 
 <pre style="font-size: 10pt">
 this.getRowData().getExpressionValue(int) 
@@ -291,23 +312,18 @@ product1    |    $20
 product2    |    $30
 
 Script on row.onCreate:
-if (this.rowData.getExpressionValue(1) == "product1")
+if (this.getRowData().getExpressionValue(1) == "product1")
     this.getStyle().backgroundColor = "red";
 
-if (this.rowData.getExpressionValue("row[price]") == "$20")
+if (this.getRowData().getExpressionValue("row[price]") == "$30")
     this.getStyle().backgroundColor = "blue";
-
+</pre>
 Result of script:
 
 First row should be red, second row should be blue.
 
-Remember that the the expressions are the one defined on the table, not the 
-dataset. So if a table has the following expression: row["price"]/100, the 
-following if ok:
-the.getRowData().getExpressionValue("row[price]/100")
-but this is not:
-this.getRowData().getExpressionValue("row[price]")
-</pre>
+Remember that the the expressions are the ones defined on the table using the binding editor, not the 
+dataset.  Using the row[name] syntax corresponds to the name field defined in the binding editor. 
 
 <h4>Modifying Hyperlinks</h4>
 The hyperlink for a data element can be modified in the onPrepare by using code similar to:
@@ -349,7 +365,7 @@ this.getParent().getParent().getParent().getStyle().backgroundColor = "Silver";
 
 <h4>Using getValue</h4>
 <p>
-Often it is required to alter the visual appearance of an item based on its value.  This can be usually done within the mapping or highlights tab.
+Often it is required to alter the visual appearance of an element based on its value.  This can be usually done within the mapping or highlights tab.
 When more complex logic is required it can be accomplished by using the getValue method within the onCreate of a row or data element.
 
 On the data element
