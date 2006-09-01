@@ -47,8 +47,8 @@ PRE;
 		</div>
 	</div>
 POST;
-	$return .= <<<PRE
-	
+
+
 	return $return;
 }
 
