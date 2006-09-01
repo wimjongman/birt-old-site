@@ -123,7 +123,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="http://www.eclipse.org/erd">Eclipse Report Designer (ERD)</a>
+				Eclipse Report Designer (ERD)
 				<br>
 				The Eclipse Report Designer is an Eclipse-based desktop authoring
 				environment for report development. Eclipse Report Designer enables application
@@ -133,7 +133,7 @@
 				application developer looking for sophisticated control over report creation.
 			</li>
 			<li>
-				<a href="http://www.eclipse.org/ere">Eclipse Report Engine (ERE)</a>
+				Eclipse Report Engine (ERE)
 				<br>
 				The Report Engine allows Java application developers to quickly integrate
 				powerful report generation and viewing capabilities into their applications without
@@ -150,7 +150,7 @@
 				output documents such as PDF.
 			</li>
 			<li>
-				<a href="http://www.eclipse.org/ece">Eclipse Charting Engine (ECE) </a>
+				Eclipse Charting Engine (ECE)
 				<br>
 				The Chart Engine project provides a rich business chart generation
 				capability that can be used as a standalone charting component, as well
@@ -161,7 +161,7 @@
 				and Reporting Tools project.
 			</li>
 			<li>
-				<a href="http://www.eclipse.org/wrd">Web Based Report Designer (WRD)</a>
+				Web Based Report Designer (WRD)
 				<br>
 				The Web Based Report Designer project delivers a fully customizable and
 				extensible, 100% HTML based tool for creating reports with basic layouts
