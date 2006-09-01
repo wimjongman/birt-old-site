@@ -73,7 +73,7 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/project/archived.php">Archived Development Plans</a> – 1.0, 1.0.1 and 2.0 Releases
+				<a href="/birt/phoenix/project/archived.php">Archived Development Plans</a> – 1.x and 2.x Releases
 			</li>
 		</ul>
 		
