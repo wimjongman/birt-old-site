@@ -33,6 +33,23 @@
 			Resources used in version 2.0 development.
 		</p>
 		<ul class="midlist">
+
+			<li>
+				<a href="/birt/phoenix/project/project_plan_R2_1.php">2.1 Project Plan</a> –
+
+				The plans for the 2.1 release.
+			</li>
+			<li>
+				<a href="/birt/phoenix/project/notable2.1.php">2.1 New and Notable Features</a> –
+
+				New and Notable Features within BIRT 2.1.
+			</li>
+			
+			<li>
+				<a href="releasereview/Eclipse BIRT Project 2_1 Release Review 2006-05-30.pdf">BIRT Project 2.1 Release Review presentation</a>
+			</li>
+			
+			
 			<li>
 				<a href="/birt/phoenix/project/project_plan_R2_0_0.php">2.0 Project Plan</a> –
 
