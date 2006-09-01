@@ -49,27 +49,6 @@ PRE;
 POST;
 	$return .= <<<PRE
 	
-	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>BIRT Projects</h6>
-			<ul>
-PRE;
-	foreach ($projectLinkArray as $link)
-	{
-		if ($link[1] == $currentPage) 
-		{
-			$return .= "<li>". $link[1] . "</li>";
-		}
-		else
-		{
-			$return .= "<li><a href=\"" . $link[0] . "\">" . $link[1] . "</a></li>\n";
-		}
-	}
-	$return .= <<<POST
-			</ul>
-		</div>
-	</div>
-POST;
 	return $return;
 }
 
