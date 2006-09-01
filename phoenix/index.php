@@ -167,8 +167,17 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="project/plan.php">
+						BIRT 2.1.1 Project Plan is available
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.1.1.
+					<span class="dates">
+						09/01/06
+					</span>
+				</li>				
+				<li>
 					<a href="http://www.eclipse.org/birt/phoenix/project/pmc.php">
-						BIRT 2.1
+						New addition to PMC
 					</a>
 					Larry Liang has joined the BIRT PMC.  Larry currently serves as chief architect at Inetsoft Technology.
 					<span class="dates">
