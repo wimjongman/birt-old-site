@@ -88,7 +88,7 @@
 				</li>
 				<li>
 					<a href="http://wiki.eclipse.org/index.php/BIRT_Project">
-						Tutorial
+						FAQ/Wiki
 					</a>
 					
 					- Access to the BIRT FAQ and BIRT Project Specifications(BPS).
