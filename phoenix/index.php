@@ -87,13 +87,14 @@
 					
 				</li>
 				<li>
-					<a href="db">
-						Sample Database
+					<a href="http://wiki.eclipse.org/index.php/BIRT_Project">
+						Tutorial
 					</a>
 					
-					- BIRT provides a sample database used by the tutorial and some of the example reports. This database lets you learn BIRT on a simple, known database before you experiment with your own, real-world data sources.
+					- Access to the BIRT FAQ and BIRT Project Specifications(BPS).
 					
 				</li>
+								
 				<li>
 					<a href="examples">
 						Examples
@@ -110,6 +111,15 @@
 					- You can integrate BIRT into your application using  the BIRT web app, design API, or engine API.
 					
 				</li>
+				<li>
+					<a href="db">
+						Sample Database
+					</a>
+					
+					- BIRT provides a sample database used by the tutorial and some of the example reports. This database lets you learn BIRT on a simple, known database before you experiment with your own, real-world data sources.
+					
+				</li>
+
 				<li>
 					<a href="community.php">
 						Community
