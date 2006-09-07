@@ -125,7 +125,7 @@
 				The scripted data source and data set elements allow you to access custom data sources directly from your report without the need to create an ODA driver. This solution is ideal for one-off data sources, prototypes, and the like.
 			</li>
 			<li>
-				Open Data Access (ODA) Extension API
+				Report Item Extension API
 				<br>
 				The BIRT model is extensible; you can add new report items. Use this API to include design-time, run-time or presentation-time behavior.
 			</li>
