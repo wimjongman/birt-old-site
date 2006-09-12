@@ -49,9 +49,9 @@ In either case, the Eclipse Foundation needs to ensure that all committers to th
 
 The BIRT PMC has outlined the process under which a new contributor would get started with a significant contribution in an existing area of the project. 
 
-Note that if the proposed contribution is for a new sub-project with BIRT, then the process is different and is described in the Proposal Phase [link: http://www.eclipse.org/projects/dev_process/proposal-phase.php] of the Eclipse Development Process [link: http://www.eclipse.org/projects/dev_process/index.php].
+Note that if the proposed contribution is for a new sub-project with BIRT, then the process is different and is described in the <a href="http://www.eclipse.org/projects/dev_process/proposal-phase.php">Proposal Phase</a> of the <a href="http://www.eclipse.org/projects/dev_process/index.php">Eclipse Development Process</a>.
 
-This process is intended to work in tandem with, and does not replace, the Eclipse Foundation New Committer guidelines [link: http://www.eclipse.org/legal/newcommitter.php].
+This process is intended to work in tandem with, and does not replace, the Eclipse Foundation <a href="http://www.eclipse.org/legal/newcommitter.php">New Committer guidelines</a>.
 <ol>
 <li>New contributor develops a proposal a submits this to the BIRT PMC 
 <li>The PMC and existing BIRT contributors review the proposal 
@@ -67,7 +67,7 @@ This process is intended to work in tandem with, and does not replace, the Eclip
 
 <li>Assuming bug fixing goes well, an existing Committer will nominate at least one individual from the new contributor to be a committer on the BIRT project after 10+ fixes have been submitted. Additional committers could be nominated once the project is underway.
 
-<li>If the individual is accepted and they are not already an Eclipse Committer, the individual must complete the appropriate Eclipse process for New Committers [link: http://www.eclipse.org/legal/newcommitter.php].
+<li>If the individual is accepted and they are not already an Eclipse Committer, the individual must complete the appropriate <a href="http://www.eclipse.org/legal/newcommitter.php">Eclipse process for New Committers</a>.
 
 <li>Once the new contributor attains Committer status, they contribute the new code (which they will hopefully have been developing in parallel according to their high level project plan).
 
