@@ -203,7 +203,7 @@
 				Look under the birt-runtime-<version#> directory and locate the "Web Viewer Example" directory.
 			</li>
 			<li>
-				Copy the "Web Viewer Example" directory to your JBoss installation, under the deploy directory for your configuration. For example happened to be C:\jboss-4.0.3SP1\server\default\deploy. 
+				Copy the "Web Viewer Example" directory to your JBoss installation, under the deploy directory for your configuration. (eg) C:\jboss-4.0.3SP1\server\default\deploy. 
 			</li>
 			<li>
 				Rename the Web Viewer Example directory to birt.war, so it will deploy in place.
