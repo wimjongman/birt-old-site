@@ -210,7 +210,6 @@
 			</li>
 
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>(BIRT 2.1.1 or later) Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsianCmaps.jar">iTextAsianCmaps.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>(BIRT 2.1.1 or later) Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 			
 			<li>
