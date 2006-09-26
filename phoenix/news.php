@@ -33,6 +33,15 @@
 			<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
+			
+				<li>
+					<a href="http://www.itweek.co.uk/itweek/news/2164968/open-source-server-monitor">
+						Open-source server monitor boosts support 
+					</a>
+					<span class="dates">
+						09/26/06
+					</span>
+				</li>						
 				<li>
 					<a href="http://www.onjava.com/pub/a/onjava/2006/07/26/deploying-birt.html">
 						Deploying BIRT

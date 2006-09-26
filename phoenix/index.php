@@ -309,6 +309,15 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
+			
+				<li>
+					<a href="http://www.itweek.co.uk/itweek/news/2164968/open-source-server-monitor">
+						Open-source server monitor boosts support 
+					</a>
+					<span class="dates">
+						09/26/06
+					</span>
+				</li>						
 				<li>
 					<a href="http://www.onjava.com/pub/a/onjava/2006/07/26/deploying-birt.html">
 						Deploying BIRT
@@ -369,16 +378,6 @@
 					</a>
 					from
 					<a href="http://www.eweek.com" target="_blank">eWeek</a>.
-					<span class="dates">
-						01/23/06
-					</span>
-				</li>
-				<li>
-					<a href="http://www.infoworld.com/article/06/01/23/74664_HNbirt_1.html" target="_blank">
-						Eclipse focuses on reports in new business intelligence tool
-					</a>
-					from
-					<a href="http://www.infoworld.com" target="_blank">InfoWorld</a>.
 					<span class="dates">
 						01/23/06
 					</span>
