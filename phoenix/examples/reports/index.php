@@ -54,7 +54,11 @@
 			<li>
 				<a href="birt2.1/combochart/index.php">Combination Chart</a> –
 				This example demonstrates building a Combinatio Chart with Drill to details.
-			</li>			
+			</li>
+			<li>
+				<a href="birt2.1/cascade/index.php">Cascaded Parameter Report</a> –
+				This example demonstrates building a BIRT Report that uses a cascaded parameter.
+			</li>								
 		</ul>		
 		
 		

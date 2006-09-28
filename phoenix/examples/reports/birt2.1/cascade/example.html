@@ -1,0 +1,36 @@
+
+<h1>BIRT Example Report - Library</h1>
+<ul>
+  <li><a href="#Intro">Introduction</a></li>
+  <li><a href="#Demo">Demonstration</a></li>
+  <li><a href="#Reports">Reports</a></li>
+</ul>
+
+<h2><a name="Intro"></a>Introduction</h2>
+This example demonstrates how to build a BIRT report that uses a cascaded parameter group.
+A cascaded parameter group allows a group of parameters to be interlinked, where selecting a value
+for the first parameter affects the choices available in the subsequent parameters.  Cascaded parameters
+can be tied to one or more Data Sets.  The Data Sets populate each level of the cascade.  Combined with Data Set parameters
+this offers very good flexibility for culling of returned data for a report.
+<br><br>
+In this particular example we demonstrate cascading parameters by producing a order details report.
+The user of the report is presented with a cascaded parameter group that contains customers and orders.
+When a customer is selected the orders for the customer is updated in the parameter selection.  After the order is
+selected a order detail report is generated for the selected order.  This report contains three Data Sets.  The customers
+Data Set is used to retrieve customers for the first level of the cascade.  The orders Data Set is used to display orders in the
+parameter cascade for the selected customer.  This Data Set uses the customer selected as part of the where clause and demonstrates tying
+a report parameter to a Data Set parameter.  The final Data Set is orderdetails and uses the order report parameter in its where clause to
+retrieve the details about the selected order.  This is the only Data Set used in the actual output of the report.
+
+<h2><a name="Demo"></a>Demonstration</h2>
+<ul>
+  <li><a
+    href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/cascade/cascade.html" target="_blank">Using a Multi Data Set Cascaded Parameter
+    Flash Recording</a> - A flash demonstration of the example.</li>
+</ul>
+
+<h2><a name="Reports"></a>Reports</h2>
+<ul>
+  <li><a
+    href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/cascade/cascade.rptdesign" target="_blank">Example Report Using a Cascaded Parameter</a></li>
+</ul>
