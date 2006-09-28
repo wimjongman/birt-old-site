@@ -44,14 +44,14 @@
   <h2><a name="sourcecode"></a>Source Code</h2>
   <ul class="midlist">
    <li>
-    <a href=""/birt/phoenix/examples/extending/aggregate/optimiticSum.zip" target="_blank" class="top">Example Source Code</a> –
+    <a href="/birt/phoenix/examples/extending/aggregate/optimiticSum.zip" target="_blank">Example Source Code</a> –
     Source Code for the example demonstrated in the video.
    </li>
   </ul>
  <h2><a name="reports"></a>Reports</h2>
   <ul class="midlist">
    <li>
-    <a href=""/birt/phoenix/examples/extending/aggregate/optim.rptdesign"" target="_blank" class="top">Example Report</a> –
+    <a href="/birt/phoenix/examples/extending/aggregate/optim.rptdesign" target="_blank" >Example Report</a> –
    Example report to test the created aggregate function.
    </li>
   </ul>
