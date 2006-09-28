@@ -77,7 +77,7 @@
 				This section demonstrates several examples of deploying and using the APIs of BIRT
 			</li>
 			<li>
-				Extending BIRT –
+				<a href="/birt/phoenix/examples/extending">Extending BIRT</a> –
 				This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc
 			</li>
 		</ul>
