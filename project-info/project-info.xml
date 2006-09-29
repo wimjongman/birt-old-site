@@ -12,7 +12,7 @@
                paragraph-url="/birt/project-info/project-page-paragraph.html" />
   <summary paragraph-url="/birt/project-info/summary.html"/>
   <getting-started url="/birt/tutorial/" />
-  <ip-log url="/birt/project-info/ProjectLog.html" /> 
+  <ip-log url="/birt/project-info/ProjectLog2.1.html" /> 
   <mailing-lists>
    <list name="birt-charting-dev"/>
    <list name="birt-dev"/>
@@ -49,10 +49,11 @@
              date="6/2006"
              download="/birt/downloads/"
 	     	 plan="/birt/phoenix/project/Project_plan_R2_1.php" />             
-	      />
 	<release name="2.1.1" 
-             status="planning" 
-             date="6/2006"
-	      />	      
+             status="completed" 
+             date="9/2006"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/project_plan_R2_1_1.php" />             
+	      
   </releases>
 </project>
