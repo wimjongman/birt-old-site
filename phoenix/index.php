@@ -140,7 +140,7 @@
 					<a href="project">
 						Project Organization
 					</a>
-					<
+					
 					- Information on the BIRT project, including charter, leadership, organization, etc.
 					
 				</li>
