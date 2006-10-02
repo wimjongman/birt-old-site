@@ -167,7 +167,7 @@ The itext-1.3.jar file needs to be copied to the plugins/com.lowagie.itext_*/lib
 <h3>Birt 2.1.1 or Later Note: </h3>
 <ul>
  To Support Asian fonts in PDF, download the following jar and place it in the plugins/com.lowagie.itext_*/lib directory.
-<li><a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a>.
+<li><a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar">iTextAsian.jar</a>.
 
  </ul>
 </div>
@@ -240,7 +240,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <ul>
  <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar.">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://itextdocs.lowagie.com/downloads/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 
  </ul>
 </div>
