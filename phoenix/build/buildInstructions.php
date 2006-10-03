@@ -47,7 +47,7 @@ This document describes how to get the BIRT source from CVS and build it under
 Eclipse. If you simply want to use BIRT, it is easier to simply
 <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.
 <br>
-<br>Building BIRT 2.1.0 is described below.
+<br>Building BIRT 2.1.1 is described below.
  
 <h1><a name="req">Requirements</a></h1>
 <p>
@@ -55,7 +55,7 @@ Download the BIRT all in one designer.
 It is listed under "Report Designer Full Eclipse Install" on the download page.
 It is possible to build BIRT with an existing Eclipse install, but
 this method is the quickest, as all the required files, with the exception
-of iText.jar are present.
+of iText.jar and iTextAsian.jar are present.
 </p>
 <h1><a name="config">Configuring Eclipse</a></h1>
 
@@ -294,30 +294,26 @@ A new node appears in the CVS Repositories window.
 <h2>Check Out Code for the First Time</h2>
 
 <ol>
-<li>Expand the new node in the repositories tree.<br><br>
-<li>Refresh Branches<br>
-<img src="images/refreshbranches.jpg"/><br/><br/>
-<li>Select source and click finish.<br><br>
-<img src="images/refreshbranches2.jpg"/><br/><br/>
-<li>Open the Branches node and select the BIRT_2_1_0_Branch and then the source folder.<br><br>
+<li>Expand the new node in the repositories tree.<br>
+<li>Select Versions<br>
+<li>Select source<br>
+<li>Open the source BIRT_2_1_1_Release_20060927 node<br><br>
+<img src="images/birt2.1.1/projects.jpg"  /><br/><br/>
+
 <li>Select all the nodes under this node, with the exception of the these projects:<br>
-org.eclipse.birt.chart.tests<br>
 org.eclipse.birt.report.data.oda.flatfile<br>
 org.eclipse.birt.report.data.oda.flatfile.nl<br>
 org.eclipse.birt.report.data.oda.flatfile.ui<br>
 org.eclipse.birt.report.data.oda.flatfile.ui.nl<br>
-org.eclipse.birt.report.designer.rcp.ui<br>
-org.eclipse.birt.report.designer.tests<br>
-org.eclipse.birt.report.tests.chart<br>
 org.eclipse.birt.report.tests.engine<br>
 org.eclipse.birt.report.tests.model<br>
+org.eclipse.birt.tests.viewer<br>
 org.eclipse.birt.test.performance<br>
 org.eclipse.birt.tests.core<br>
-org.eclipse.birt.tests.data<br><br>
+<br>
 
 <li>On CVS Repositories, right-click and choose 
  Check Out from the context menu.<br/><br/>
-<img src="images/checkout.jpg" /><br/><br/>
 This will get the BIRT projects from CVS and load them into your Eclipse workspace folder.
 This will take some time.  Once finished, change to the Java perspective.
 </ol>
@@ -325,47 +321,57 @@ This will take some time.  Once finished, change to the Java perspective.
 
 <h1><a name="additional">Import Additional Files</a></h1>
 
-Import <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> into the 
+Import <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar" target="blank">iText 1.3</a> and
+<a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar" target="blank">iTextAsian</a> into the 
 com.lowagie.itext/lib directory. <br><br>
 <img src="images/itext.jpg" /> <br/><br/>
 
 <br>
-
-This designer build is now complete.  
-If you wish to build the Web Viewer proceed to the next section.
+If your Eclipse environment is not setup to build automatically, build the source now.
+This designer should build correctly.
+If you wish to build the Web Viewer proceed to the next section.  Do this if you wish to make changes
+to the deployable Web Viewer Example.
 
 <h1><a name="viewer">Preparing the Viewer</a></h1>
 
-The viewer project contains an ant build script that builds the Web Viewer. To use 
+The viewer project contains an ant build script that builds the Web Viewer. When executed it will create a birt_web directory
+in the root of the viewer project.  This directory can then be exported and deployed in a similar fasion to the Web Viewer example
+in the Report Engine download.  To use 
 this script, perform the following steps.
 
 <ol>
-<li>In Package Explorer, expand the org.eclipse.birt.report.data.adapter project.<br><br>
-<li>Right-click the BuildDataAdapter.xml file. From the context menu, choose Run -&gt;
- Ant Build....
- <br/><br/>
-<img src="images/issue.jpg"  />
-<br/><br/>
-<li>Select Run and verify that the build is successful.<br><br>
+<li>Copy the following plugins from the all in one download to the source directory of the workspace you are currently using to build BIRT.<br>
+org.apache.batik.pdf_1.6.0.v20060623-1511<br>
+org.apache.batik_1.6.0.v20060623-1511<br>
+org.apache.xerces_2.8.0.v20060815-0630<br>
+<br>
+When copying these plugins rename them to the following:<br>
+org.apache.batik.pdf<br>
+org.apache.batik<br>
+org.apache.xerces<br>
+<br>
+eg. If you have checked the projects out to c:/work/birt2.1.1/source and your all in one distribution is located under c:/birt2.1.1,
+copy the three plugins from c:/birt2.1.1/eclipse/plugins to c:/work/birt2.1.1/source and rename them as stated above.<br><br>
 
 <li>In Package Explorer, expand the org.eclipse.birt.report.viewer project.<br><br>
 <li>Right-click the BuildWebViewer.xml file. From the context menu, choose Run -&gt;
  Ant Build....
  <br/><br/>
-<img src="images/runantbuild.jpg" />
+<img src="images/birt2.1.1/antbuild.jpg" />
 <br/><br/>
 
-<li>In org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. 
+<li>In the org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. 
 Unselect Use global properties specified in the Ant runtime preferences 
 as shown in the following illustration.  Add the eclipse.home property and
 set it to your all in one Eclipse install directory.
 <br/><br/>
-<img src="images/enginehome.jpg" />
+<img src="images/birt2.1.1/eclipsehome.jpg" />
 <br/><br/>
 </ol>
 
 Choose Run. The ant build of the Web Viewer runs in the console.
-This will create a birt directory within the project that contains the Web Viewer.
+This will create the birt_web directory within the project that contains the Web Viewer.  Refresh the viewer project and the birt_web directory
+will be displayed.  
 
 <h1><a name="running">Running BIRT</a></h1>
 
@@ -373,8 +379,6 @@ Start BIRT by running it as an Eclipse Application. This can be done as follows:
   <ol>
   	<li>
   		Select Run... from the Run menu on the menu bar
-		<br/><br/>
-		<img src="images/run.jpg"  />
 		<br/><br/>
 	</li>
 	<li>
@@ -384,7 +388,8 @@ Start BIRT by running it as an Eclipse Application. This can be done as follows:
 		<br/><br/>
 	</li>
 	<li>
-		Click the Run button to launch the Eclipse Application.
+		Click the Run button to launch the Eclipse Application.  In the new Eclipse application start a new BIRT project and build reports as
+		usual.  You should be able to step through and debug the BIRT code.
 		<br/><br/>
 		<img src="images/runconfig2.jpg"  />
 		<br/><br/>
