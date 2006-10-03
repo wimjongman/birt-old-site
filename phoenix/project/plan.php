@@ -34,7 +34,7 @@
 		
 		<h2><a name="latest">Latest Release Available </a></h2>
 		<p>
-		BIRT Release 2.1.1 (sept 2006) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">New and Notable</a> page.
+		BIRT Release 2.1.1 (Sept 2006) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">New and Notable</a> page.
 		</p>
 
 		<h2>Releases Under Development/Planned</h2>
