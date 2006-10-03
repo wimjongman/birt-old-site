@@ -35,6 +35,15 @@
 		
 		
 			<ul>
+				<li>
+					<a href="project/plan.php">
+						BIRT 2.2 Project Plan is available
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.2.
+					<span class="dates">
+						10/03/06
+					</span>
+				</li>					
 			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">

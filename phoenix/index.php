@@ -166,7 +166,15 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
-			
+				<li>
+					<a href="project/plan.php">
+						BIRT 2.2 Project Plan is available
+					</a>
+					This page contains information on the project plan and the milestone dates for BIRT 2.2.
+					<span class="dates">
+						10/03/06
+					</span>
+				</li>			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.1.1
@@ -284,16 +292,7 @@
 					<span class="dates">
 						05/01/06
 					</span>
-				</li>				
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1 RC0
-					</a>
-					is now available for download.  BIRT SDK can now be downloaded as well.</a>
-					<span class="dates">
-						04/17/06
-					</span>
-				</li>													
+				</li>															
 
 				<li>
 					<a href="whatsnew.php">
