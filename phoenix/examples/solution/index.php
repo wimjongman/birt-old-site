@@ -91,6 +91,24 @@
 				This requires multiple passes over the data, but it is all done "under the covers" by the BIRT report engine. 
 				N and M are passed into the report as parameters to allow report users to select the number and percentage at run time.
 			</li>
+			
+			
+			<li>
+				<b>
+					<a href="/birt/phoenix/examples/solution/crosstab.html" target="_blank" class="top">Annual Sales By Product Lines</a>
+					(<a href="/birt/phoenix/examples/solution/StaticCrosstab.rptdesign" target="_blank">rptdesign</a>)
+				</b>
+				<br>
+				
+				This example illustrates building a static crosstab report using the BIRT Total function.  The report presents annual sales revenue
+				by quarter for each of the product lines that Classic Models Inc currently sales.  In addition totals are aggregated across horizontal
+				and vertical dimensions.  The BIRT Total function can accept a second parameter that filters the aggregate data.  In this example
+				this feature is used to only display values that pertain to a product offering, such as Trains. The first parameter in the Total function is
+				the value to aggregate, and in this example it is set to quantity sold multiplied by price each.  The second parameter is the filter.  So if the filter 
+				where specified as dataSetRow["Products::PRODUCTLINE"]=="Motorcycles", only the Motorcycles product line would be aggregated.
+				 
+			</li>			
+			
 		</ul>
 
 
