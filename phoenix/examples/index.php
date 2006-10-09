@@ -49,7 +49,7 @@
 
 		<h2><a name="demo">BIRT Demo</a></h2>
 		<p>
-			<a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT/BIRT_demo_Camv3.html" target="_blank" class="top">BIRT Demo</a>
+			<a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT2.1Demo/EclipseDemo.html" target="_blank" class="top">BIRT Demo</a>
 			–
 			This demonstration is a Flash presentation of BIRT that showcases some
 			of its powerful features including summary and line graphs, JavaScript
