@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Written by Eclipse BIRT 2.0 -->
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.2" id="1">
+<!-- Written by Eclipse BIRT 1.0 -->
+<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
     <property name="author">Paul Clenahan</property>
     <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050601-0809></property>
     <property name="units">in</property>
     <text-property name="title">Classic Models Top Selling Products</text-property>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Classic Models" id="5"/>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Classic Models"/>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Total Sales By Product Line" id="6">
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">PRODUCTLINE</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">TOTALREVENUE</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                </list-property>
-            </structure>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Total Sales By Product Line">
             <property name="dataSource">Classic Models</property>
             <property name="queryText">SELECT PRODUCTLINE,
        SUM( PRICEEACH*QUANTITYORDERED ) AS "TOTALREVENUE"
@@ -31,21 +17,7 @@ FROM   CLASSICMODELS.ORDERDETAILS, CLASSICMODELS.PRODUCTS
 WHERE  CLASSICMODELS.ORDERDETAILS.PRODUCTCODE = CLASSICMODELS.PRODUCTS.PRODUCTCODE
 GROUP BY CLASSICMODELS.PRODUCTS.PRODUCTLINE</property>
         </oda-data-set>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Total Sales By Product" id="7">
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">PRODUCTNAME</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">TOTALREVENUE</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                </list-property>
-            </structure>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Total Sales By Product">
             <property name="dataSource">Classic Models</property>
             <property name="queryText">SELECT PRODUCTNAME,
        SUM( PRICEEACH*QUANTITYORDERED ) AS "TOTALREVENUE"
@@ -55,20 +27,20 @@ GROUP BY CLASSICMODELS.PRODUCTS.PRODUCTNAME</property>
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="BackgroundLightGray" id="2">
+        <style name="BackgroundLightGray">
             <property name="backgroundColor">#EAEAEA</property>
         </style>
-        <style name="BackgroundBlue" id="3">
+        <style name="BackgroundBlue">
             <property name="backgroundColor">#4B6987</property>
         </style>
-        <style name="BackgroundYellow" id="4">
+        <style name="BackgroundYellow">
             <property name="backgroundColor">#FAD764</property>
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Simple MasterPage" id="8">
+        <simple-master-page name="Simple MasterPage">
             <page-footer>
-                <text id="9">
+                <text>
                     <property name="contentType">html</property>
                     <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
                 </text>
@@ -76,19 +48,19 @@ GROUP BY CLASSICMODELS.PRODUCTS.PRODUCTNAME</property>
         </simple-master-page>
     </page-setup>
     <body>
-        <grid id="10">
+        <grid>
             <property name="width">100%</property>
-            <column id="11">
+            <column>
                 <property name="width">2.8in</property>
             </column>
-            <column id="12">
+            <column>
                 <property name="width">3.2in</property>
             </column>
-            <row id="13">
+            <row>
                 <property name="style">BackgroundLightGray</property>
-                <cell id="14">
+                <cell>
                     <property name="style">BackgroundLightGray</property>
-                    <image id="15">
+                    <image>
                         <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
@@ -101,27 +73,27 @@ GROUP BY CLASSICMODELS.PRODUCTS.PRODUCTNAME</property>
                         <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
-                        <property name="imageName">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</property>
+                        <expression name="imageName">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</expression>
                     </image>
                 </cell>
-                <cell id="16">
+                <cell>
                     <property name="style">BackgroundLightGray</property>
                     <property name="verticalAlign">middle</property>
-                    <label id="17">
+                    <label>
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">20pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">#000080</property>
                         <text-property name="text">Classic Models, Inc.</text-property>
                     </label>
-                    <text id="18">
+                    <text>
                         <property name="fontFamily">sans-serif</property>
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[701 Gateway Boulevard,<BR>
 San Francisco, CA 94107<BR>
 <BR>]]></text-property>
                     </text>
-                    <label id="19">
+                    <label>
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">18pt</property>
                         <property name="fontWeight">bold</property>
@@ -129,45 +101,35 @@ San Francisco, CA 94107<BR>
                     </label>
                 </cell>
             </row>
-            <row id="20">
+            <row>
                 <property name="height">0.25in</property>
-                <cell id="21"/>
-                <cell id="22"/>
+                <cell/>
+                <cell/>
             </row>
         </grid>
-        <grid id="23">
+        <grid>
             <property name="width">100%</property>
-            <column id="24"/>
-            <row id="25">
+            <column/>
+            <row>
                 <property name="height">0.1in</property>
                 <property name="style">BackgroundBlue</property>
-                <cell id="26"/>
+                <cell/>
             </row>
-            <row id="27">
-                <cell id="28">
-                    <label id="29">
+            <row>
+                <cell>
+                    <label>
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">x-large</property>
                         <text-property name="text">Product Line Revenue</text-property>
                     </label>
                 </cell>
             </row>
-            <row id="30">
-                <cell id="31">
-                    <extended-item extensionName="Chart" id="32">
+            <row>
+                <cell>
+                    <extended-item extensionName="Chart">
                         <property name="height">250pt</property>
                         <property name="width">400pt</property>
                         <property name="dataSet">Total Sales By Product Line</property>
-                        <list-property name="boundDataColumns">
-                            <structure>
-                                <property name="name">PRODUCTLINE</property>
-                                <expression name="expression">dataSetRow["PRODUCTLINE"]</expression>
-                            </structure>
-                            <structure>
-                                <property name="name">TOTALREVENUE</property>
-                                <expression name="expression">dataSetRow["TOTALREVENUE"]</expression>
-                            </structure>
-                        </list-property>
                         <xml-property name="xmlRepresentation"><![CDATA[<model:ChartWithoutAxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attribute="http://www.birt.eclipse.org/ChartModelAttribute" xmlns:layout="http://www.birt.eclipse.org/ChartModelLayout" xmlns:model="http://www.birt.eclipse.org/ChartModel" xmlns:type="http://www.birt.eclipse.org/ChartModelType">
   <Type>Pie Chart</Type>
   <SubType>Standard Pie Chart</SubType>
@@ -378,56 +340,14 @@ San Francisco, CA 94107<BR>
       </Text>
       <Orientation>Vertical</Orientation>
       <Direction>Top_Bottom</Direction>
-      <Separator>
-        <Style>Solid</Style>
-        <Thickness>1</Thickness>
-        <Color>
-          <Transparency>255</Transparency>
-          <Red>0</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
-        </Color>
-        <Visible>true</Visible>
-      </Separator>
       <Position>Right</Position>
       <ItemType>Categories</ItemType>
-      <Title>
-        <Caption>
-          <Value></Value>
-          <Font>
-            <Alignment/>
-          </Font>
-        </Caption>
-        <Background xsi:type="attribute:ColorDefinition">
-          <Transparency>0</Transparency>
-          <Red>255</Red>
-          <Green>255</Green>
-          <Blue>255</Blue>
-        </Background>
-        <Outline>
-          <Style>Solid</Style>
-          <Thickness>1</Thickness>
-          <Color>
-            <Transparency>255</Transparency>
-            <Red>0</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
-          </Color>
-        </Outline>
-        <Insets>
-          <Top>0.0</Top>
-          <Left>2.0</Left>
-          <Bottom>0.0</Bottom>
-          <Right>3.0</Right>
-        </Insets>
-        <Visible>false</Visible>
-      </Title>
     </Children>
     <Bounds>
       <Left>0.0</Left>
       <Top>0.0</Top>
-      <Width>399.75</Width>
-      <Height>249.75</Height>
+      <Width>400.0</Width>
+      <Height>250.0</Height>
     </Bounds>
     <Insets>
       <Top>3.0</Top>
@@ -471,7 +391,6 @@ San Francisco, CA 94107<BR>
       <SeriesDefinitionIndex>0</SeriesDefinitionIndex>
     </OrthogonalSampleData>
   </SampleData>
-  <Interactivity/>
   <SeriesDefinitions>
     <Query>
       <Definition>Base Series</Definition>
@@ -592,7 +511,7 @@ San Francisco, CA 94107<BR>
             <Value>&lt;undefined></Value>
             <Font>
               <Name>SansSerif</Name>
-              <Size>10.0</Size>
+              <Size>12.0</Size>
               <Bold>false</Bold>
               <Italic>false</Italic>
               <Strikethrough>false</Strikethrough>
@@ -638,29 +557,23 @@ San Francisco, CA 94107<BR>
         <DataDefinition>
           <Definition>row[&quot;TOTALREVENUE&quot;]</Definition>
         </DataDefinition>
-        <SeriesIdentifier>Revenue (in Millions)</SeriesIdentifier>
+        <SeriesIdentifier>valueSeriesIdentifier</SeriesIdentifier>
         <DataPoint>
           <Components>
             <Type>Orthogonal_Value</Type>
-            <FormatSpecifier xsi:type="attribute:NumberFormatSpecifier">
-              <Prefix></Prefix>
-              <Suffix></Suffix>
-              <Multiplier>1.0E-6</Multiplier>
-              <FractionDigits>2</FractionDigits>
-            </FormatSpecifier>
           </Components>
           <Separator>, </Separator>
         </DataPoint>
         <LabelPosition>Outside</LabelPosition>
         <Stacked>false</Stacked>
-        <Translucent>true</Translucent>
         <Explosion>20</Explosion>
         <Title>
           <Caption>
             <Value>valueSeries</Value>
             <Font>
               <Name>SansSerif</Name>
-              <Size>10.0</Size>
+              <Size>16.0</Size>
+              <Bold>true</Bold>
               <Italic>false</Italic>
               <Strikethrough>false</Strikethrough>
               <Underline>false</Underline>
@@ -699,7 +612,7 @@ San Francisco, CA 94107<BR>
             <Bottom>0.0</Bottom>
             <Right>3.0</Right>
           </Insets>
-          <Visible>true</Visible>
+          <Visible>false</Visible>
         </Title>
         <TitlePosition>Below</TitlePosition>
         <LeaderLineAttributes>
@@ -708,13 +621,13 @@ San Francisco, CA 94107<BR>
           <Color>
             <Transparency>255</Transparency>
             <Red>0</Red>
-            <Green>50</Green>
-            <Blue>100</Blue>
+            <Green>0</Green>
+            <Blue>0</Blue>
           </Color>
           <Visible>true</Visible>
         </LeaderLineAttributes>
         <LeaderLineStyle>Stretch_To_Side</LeaderLineStyle>
-        <LeaderLineLength>5.0</LeaderLineLength>
+        <LeaderLineLength>100.0</LeaderLineLength>
       </Series>
       <Grouping>
         <Enabled>false</Enabled>
@@ -776,7 +689,7 @@ San Francisco, CA 94107<BR>
       <DataDefinition>
         <Definition>row[&quot;PRODUCTLINE&quot;]</Definition>
       </DataDefinition>
-      <SeriesIdentifier></SeriesIdentifier>
+      <SeriesIdentifier>&lt;undefined></SeriesIdentifier>
       <DataPoint>
         <Components>
           <Type>Orthogonal_Value</Type>
@@ -795,86 +708,75 @@ San Francisco, CA 94107<BR>
   </SeriesDefinitions>
 </model:ChartWithoutAxes>
 ]]></xml-property>
-                        <property name="outputFormat">SVG</property>
                     </extended-item>
                 </cell>
             </row>
         </grid>
-        <grid id="33">
+        <grid>
             <property name="width">100%</property>
-            <column id="34"/>
-            <row id="35">
+            <column/>
+            <row>
                 <property name="height">0.25in</property>
-                <cell id="36"/>
+                <cell/>
             </row>
-            <row id="37">
+            <row>
                 <property name="height">0.1in</property>
                 <property name="style">BackgroundBlue</property>
-                <cell id="38">
+                <cell>
                     <property name="style">BackgroundBlue</property>
                 </cell>
             </row>
-            <row id="39">
-                <cell id="40">
-                    <label id="41">
+            <row>
+                <cell>
+                    <label>
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">x-large</property>
                         <text-property name="text">Product Revenue (Best Sellers First)</text-property>
                     </label>
                 </cell>
             </row>
-            <row id="42">
+            <row>
                 <property name="height">0.25in</property>
-                <cell id="43"/>
+                <cell/>
             </row>
-            <row id="44">
-                <cell id="45">
-                    <table id="46">
+            <row>
+                <cell>
+                    <table>
                         <property name="marginTop">0pt</property>
                         <property name="width">6in</property>
                         <property name="dataSet">Total Sales By Product</property>
-                        <list-property name="boundDataColumns">
-                            <structure>
-                                <property name="name">TOTALREVENUE</property>
-                                <expression name="expression">dataSetRow["TOTALREVENUE"]</expression>
-                            </structure>
-                            <structure>
-                                <property name="name">PRODUCTNAME</property>
-                                <expression name="expression">dataSetRow["PRODUCTNAME"]</expression>
-                            </structure>
-                        </list-property>
                         <list-property name="sort">
                             <structure>
                                 <expression name="key">row["TOTALREVENUE"]</expression>
                                 <property name="direction">desc</property>
                             </structure>
                         </list-property>
-                        <column id="57">
+                        <column>
                             <property name="width">4in</property>
                         </column>
-                        <column id="58">
+                        <column>
                             <property name="width">2in</property>
                         </column>
                         <header>
-                            <row id="47">
+                            <row>
                                 <property name="style">BackgroundYellow</property>
-                                <cell id="48">
+                                <cell>
                                     <property name="paddingTop">2pt</property>
                                     <property name="paddingLeft">2pt</property>
                                     <property name="paddingBottom">2pt</property>
                                     <property name="paddingRight">2pt</property>
-                                    <label id="49">
+                                    <label>
                                         <property name="fontFamily">sans-serif</property>
                                         <property name="fontWeight">bold</property>
                                         <text-property name="text">Product Name</text-property>
                                     </label>
                                 </cell>
-                                <cell id="50">
+                                <cell>
                                     <property name="paddingTop">2pt</property>
                                     <property name="paddingLeft">2pt</property>
                                     <property name="paddingBottom">2pt</property>
                                     <property name="paddingRight">2pt</property>
-                                    <label id="51">
+                                    <label>
                                         <property name="fontFamily">sans-serif</property>
                                         <property name="fontWeight">bold</property>
                                         <property name="textAlign">right</property>
@@ -884,9 +786,9 @@ San Francisco, CA 94107<BR>
                             </row>
                         </header>
                         <detail>
-                            <row id="52">
+                            <row>
                                 <property name="style">BackgroundLightGray</property>
-                                <cell id="53">
+                                <cell>
                                     <property name="borderBottomColor">#808080</property>
                                     <property name="borderBottomStyle">solid</property>
                                     <property name="borderBottomWidth">thin</property>
@@ -894,12 +796,12 @@ San Francisco, CA 94107<BR>
                                     <property name="paddingLeft">2pt</property>
                                     <property name="paddingBottom">2pt</property>
                                     <property name="paddingRight">2pt</property>
-                                    <data id="54">
+                                    <data>
                                         <property name="fontFamily">sans-serif</property>
-                                        <property name="resultSetColumn">PRODUCTNAME</property>
+                                        <expression name="valueExpr">row["PRODUCTNAME"]</expression>
                                     </data>
                                 </cell>
-                                <cell id="55">
+                                <cell>
                                     <property name="borderBottomColor">#808080</property>
                                     <property name="borderBottomStyle">solid</property>
                                     <property name="borderBottomWidth">thin</property>
@@ -907,14 +809,14 @@ San Francisco, CA 94107<BR>
                                     <property name="paddingLeft">2pt</property>
                                     <property name="paddingBottom">2pt</property>
                                     <property name="paddingRight">2pt</property>
-                                    <data id="56">
+                                    <data>
                                         <property name="fontFamily">sans-serif</property>
                                         <structure name="numberFormat">
                                             <property name="category">Currency</property>
                                             <property name="pattern">$#,##0.00</property>
                                         </structure>
                                         <property name="textAlign">right</property>
-                                        <property name="resultSetColumn">TOTALREVENUE</property>
+                                        <expression name="valueExpr">row["TOTALREVENUE"]</expression>
                                     </data>
                                 </cell>
                             </row>

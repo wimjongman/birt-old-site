@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Written by Eclipse BIRT 1.0 -->
-<report xmlns=" http://www.eclipse.org/birt/2005/design" version="1">
+<!-- Written by Eclipse BIRT 2.0 -->
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.2" id="1">
     <property name="author">Paul Clenahan</property>
     <property name="createdBy">Eclipse BIRT Designer Version 1.0.0 Build &lt;20050601-0809></property>
     <property name="units">in</property>
     <text-property name="title">Classic Models Inc. Product Catalog (Using Sample Database)</text-property>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Classic Models"/>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.sampledb" name="Classic Models" id="5"/>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Product List">
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Product List" id="6">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">PRODUCTCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PRODUCTLINE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PRODUCTDESCRIPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">QUANTITYINSTOCK</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">MSRP</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">PRODUCTSCALE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
             <property name="dataSource">Classic Models</property>
             <property name="queryText">select 	CLASSICMODELS.PRODUCTS.PRODUCTCODE,
 		CLASSICMODELS.PRODUCTS.PRODUCTNAME,
@@ -24,20 +63,20 @@ Order By 	CLASSICMODELS.PRODUCTS.PRODUCTLINE,
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="BackgroundLightGray">
+        <style name="BackgroundLightGray" id="2">
             <property name="backgroundColor">#EAEAEA</property>
         </style>
-        <style name="BackgroundBlue">
+        <style name="BackgroundBlue" id="3">
             <property name="backgroundColor">#4B6987</property>
         </style>
-        <style name="BackgroundYellow">
+        <style name="BackgroundYellow" id="4">
             <property name="backgroundColor">#FAD764</property>
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Simple MasterPage">
+        <simple-master-page name="Simple MasterPage" id="7">
             <page-footer>
-                <text>
+                <text id="8">
                     <property name="contentType">html</property>
                     <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
                 </text>
@@ -45,19 +84,19 @@ Order By 	CLASSICMODELS.PRODUCTS.PRODUCTLINE,
         </simple-master-page>
     </page-setup>
     <body>
-        <grid>
+        <grid id="9">
             <property name="width">100%</property>
-            <column>
+            <column id="10">
                 <property name="width">2.8in</property>
             </column>
-            <column>
+            <column id="11">
                 <property name="width">3.2in</property>
             </column>
-            <row>
+            <row id="12">
                 <property name="style">BackgroundLightGray</property>
-                <cell>
+                <cell id="13">
                     <property name="style">BackgroundLightGray</property>
-                    <image>
+                    <image id="14">
                         <property name="borderBottomColor">#808080</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
@@ -70,27 +109,27 @@ Order By 	CLASSICMODELS.PRODUCTS.PRODUCTLINE,
                         <property name="borderTopColor">#808080</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
-                        <expression name="imageName">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</expression>
+                        <property name="imageName">C:\Documents and Settings\pclenahan\My Documents\ClassicModels\logos\Classic-Models-Full-M.jpg</property>
                     </image>
                 </cell>
-                <cell>
+                <cell id="15">
                     <property name="style">BackgroundLightGray</property>
                     <property name="verticalAlign">middle</property>
-                    <label>
+                    <label id="16">
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">20pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">#000080</property>
                         <text-property name="text">Classic Models, Inc.</text-property>
                     </label>
-                    <text>
+                    <text id="17">
                         <property name="fontFamily">sans-serif</property>
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[701 Gateway Boulevard,<BR>
 San Francisco, CA 94107<BR>
 <BR>]]></text-property>
                     </text>
-                    <label>
+                    <label id="18">
                         <property name="fontFamily">sans-serif</property>
                         <property name="fontSize">18pt</property>
                         <property name="fontWeight">bold</property>
@@ -98,135 +137,162 @@ San Francisco, CA 94107<BR>
                     </label>
                 </cell>
             </row>
-            <row>
+            <row id="19">
                 <property name="height">0.25in</property>
-                <cell/>
-                <cell/>
+                <cell id="20"/>
+                <cell id="21"/>
             </row>
         </grid>
-        <table>
+        <table id="22">
             <property name="width">100%</property>
             <property name="dataSet">Product List</property>
-            <column/>
-            <column/>
-            <column/>
-            <group>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">PRODUCTNAME</property>
+                    <expression name="expression">dataSetRow["PRODUCTNAME"]</expression>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTSCALE</property>
+                    <expression name="expression">dataSetRow["PRODUCTSCALE"]</expression>
+                </structure>
+                <structure>
+                    <property name="name">"Scale: " + row["PRODUCTSCALE"]</property>
+                    <expression name="expression">"Scale: " + row["PRODUCTSCALE"]</expression>
+                </structure>
+                <structure>
+                    <property name="name">MSRP</property>
+                    <expression name="expression">dataSetRow["MSRP"]</expression>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTDESCRIPTION</property>
+                    <expression name="expression">dataSetRow["PRODUCTDESCRIPTION"]</expression>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTLINE</property>
+                    <expression name="expression">dataSetRow["PRODUCTLINE"]</expression>
+                    <property name="aggregateOn">Product Line</property>
+                </structure>
+            </list-property>
+            <column id="57"/>
+            <column id="58"/>
+            <column id="59"/>
+            <group id="23">
                 <property name="groupName">Product Line</property>
                 <property name="interval">none</property>
                 <property name="sortDirection">asc</property>
                 <expression name="keyExpr">row["PRODUCTLINE"]</expression>
                 <header>
-                    <row>
+                    <row id="24">
                         <property name="height">0.1in</property>
                         <property name="style">BackgroundBlue</property>
-                        <cell>
+                        <cell id="25">
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
                             <property name="style">BackgroundBlue</property>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row id="26">
+                        <cell id="27">
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
-                            <grid>
+                            <grid id="28">
                                 <property name="width">100%</property>
-                                <column>
+                                <column id="29">
                                     <property name="width">1.989in</property>
                                 </column>
-                                <column>
+                                <column id="30">
                                     <property name="width">3.927in</property>
                                 </column>
-                                <row>
-                                    <cell>
-                                        <label>
+                                <row id="31">
+                                    <cell id="32">
+                                        <label id="33">
                                             <property name="fontFamily">sans-serif</property>
                                             <property name="fontSize">x-large</property>
                                             <property name="fontWeight">bold</property>
                                             <text-property name="text">Product Category:</text-property>
                                         </label>
                                     </cell>
-                                    <cell>
-                                        <data>
+                                    <cell id="34">
+                                        <data id="35">
                                             <property name="fontFamily">sans-serif</property>
                                             <property name="fontSize">x-large</property>
                                             <property name="fontWeight">bold</property>
                                             <property name="fontStyle">italic</property>
-                                            <expression name="valueExpr">row["PRODUCTLINE"]</expression>
+                                            <property name="resultSetColumn">PRODUCTLINE</property>
                                         </data>
                                     </cell>
                                 </row>
                             </grid>
                         </cell>
                     </row>
-                    <row>
+                    <row id="36">
                         <property name="height">0.1in</property>
                         <property name="style">BackgroundBlue</property>
-                        <cell>
+                        <cell id="37">
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
                             <property name="style">BackgroundBlue</property>
                         </cell>
                     </row>
-                    <row>
+                    <row id="38">
                         <property name="height">0.25in</property>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell id="39"/>
+                        <cell id="40"/>
+                        <cell id="41"/>
                     </row>
                 </header>
             </group>
             <detail>
-                <row>
+                <row id="42">
                     <property name="style">BackgroundYellow</property>
-                    <cell>
+                    <cell id="43">
                         <property name="style">BackgroundYellow</property>
-                        <data>
+                        <data id="44">
                             <property name="fontFamily">sans-serif</property>
                             <property name="fontWeight">bold</property>
-                            <expression name="valueExpr">row["PRODUCTNAME"]</expression>
+                            <property name="resultSetColumn">PRODUCTNAME</property>
                         </data>
                     </cell>
-                    <cell>
+                    <cell id="45">
                         <property name="style">BackgroundYellow</property>
-                        <data>
+                        <data id="46">
                             <property name="fontFamily">sans-serif</property>
-                            <expression name="valueExpr">"Scale: " + row["PRODUCTSCALE"]</expression>
+                            <property name="resultSetColumn">"Scale: " + row["PRODUCTSCALE"]</property>
                         </data>
                     </cell>
-                    <cell>
+                    <cell id="47">
                         <property name="style">BackgroundYellow</property>
-                        <data>
+                        <data id="48">
                             <property name="fontFamily">sans-serif</property>
                             <structure name="numberFormat">
                                 <property name="category">Custom</property>
                                 <property name="pattern">MSRP $####.00</property>
                             </structure>
-                            <expression name="valueExpr">row["MSRP"]</expression>
+                            <property name="resultSetColumn">MSRP</property>
                         </data>
                     </cell>
                 </row>
-                <row>
-                    <cell>
+                <row id="49">
+                    <cell id="50">
                         <property name="colSpan">3</property>
                         <property name="rowSpan">1</property>
-                        <label>
+                        <label id="51">
                             <property name="fontFamily">sans-serif</property>
                             <property name="fontSize">x-small</property>
                             <text-property name="text">Model Description:</text-property>
                         </label>
-                        <text>
+                        <text id="52">
                             <property name="fontFamily">sans-serif</property>
                             <property name="contentType">html</property>
-                            <text-property name="content"><![CDATA[<VALUE-OF>row["PRODUCTDESCRIPTION"]</VALUE-OF>]]></text-property>
+                            <text-property name="content"><![CDATA[<value-of>row["PRODUCTDESCRIPTION"]</value-of>]]></text-property>
                         </text>
                     </cell>
                 </row>
-                <row>
+                <row id="53">
                     <property name="height">0.25in</property>
-                    <cell/>
-                    <cell/>
-                    <cell/>
+                    <cell id="54"/>
+                    <cell id="55"/>
+                    <cell id="56"/>
                 </row>
             </detail>
         </table>
