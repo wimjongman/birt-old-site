@@ -25,8 +25,8 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-	<div id="midcolumn">
 	
+	<div align=LEFT style="padding-left: 165px">
 	$deployLinksSideItem
 
 
