@@ -26,7 +26,7 @@
 	$html = <<<EOHTML
 
 	
-	<div align=LEFT style="padding-left: 165px">
+	<div align=LEFT style="padding-left: 135px">
 	$deployLinksSideItem
 
 
