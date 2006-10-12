@@ -39,9 +39,14 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">Report Engine API Examples</a> –
+				<a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">BIRT Wiki Report Engine API Examples</a> –
 
 				Several examples demonstrating the report engine API.
+			</li>
+			<li>
+				<a href="http://wiki.eclipse.org/index.php/BIRT_Design_Engine_API">BIRT Wiki Design Engine API Examples</a> –
+
+				Several examples demonstrating the design engine API.
 			</li>
 		</ul>
 		$linkToTop

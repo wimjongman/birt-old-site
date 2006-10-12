@@ -49,7 +49,7 @@
 				<li><a href="#irunandrendertask">IRunAndRenderTask</a></li>
 				<li><a href="#miscellaneous">Miscellaneous</a></li>
 				<li><a href="#emitterconfiguration">Emitter Configuration</a></li>
-				<li><a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">RE API Examples</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">BIRT Wiki RE API Examples</a></li>
 			</ul>
 		</blockquote>
 

@@ -36,6 +36,8 @@
 				<li><a href="#services">API Services</a></li>
 				<li><a href="#sdk">DEAPI SDK</a></li>
 				<li><a href="#example">Example</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/BIRT_Design_Engine_API">BIRT Wiki DE API Examples</a></li>
+				
 			</ul>
 		</blockquote>
 
