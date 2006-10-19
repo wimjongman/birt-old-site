@@ -167,6 +167,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.2M1
+					</a>
+					is now available for download.  Read about the feature set at <a href="project/notable2.2M1.php">Notable Features - BIRT 2.2 Milestone 1</a>
+					<span class="dates">
+						10/19/06
+					</span>
+				</li>					
+				<li>
 					<a href="project/plan.php">
 						BIRT 2.2 Project Plan is available
 					</a>
@@ -274,25 +283,7 @@
 					<span class="dates">
 						05/19/06
 					</span>
-				</li>						
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1 RC2
-					</a>
-					is now available for download.</a>
-					<span class="dates">
-						05/02/06
-					</span>
-				</li>		
-				<li>
-					<a href="http://www.eclipse.org/birt/phoenix/contest">
-						The BIRT Contest 
-					</a>
-					deadline has been extended due to technical problems with the submission process.  The deadline for entries is Friday, May 26, 2006. 
-					<span class="dates">
-						05/01/06
-					</span>
-				</li>															
+				</li>																				
 
 				<li>
 					<a href="whatsnew.php">
