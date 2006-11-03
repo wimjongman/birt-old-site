@@ -31,7 +31,7 @@
 <body>
 <p class="head">BIRT Project 2.2 Plan</p>
 
-<p>Last revised October 2, 2006</p>
+<p>Last revised November 2, 2006</p>
 
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
 
@@ -284,7 +284,7 @@ windows.<br>
       <td width="405">MySQL Connector/J 3.x JDBC driver</td>
     </tr>
     <tr>
-      <td width="405">Derby V5.1 JDBC driver</td>
+      <td width="405">Derby V10.1.2.1 JDBC driver</td>
     </tr>
   </tbody>
 </table>
@@ -768,6 +768,7 @@ of defects</a> targeted for resolution in BIRT 2.2 can be found in the
 bugzilla database on <a
 href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
 
+<p></p>
 </body>
 <br>
 <br>
