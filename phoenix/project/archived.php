@@ -39,7 +39,7 @@
 				The project plan for the 2.1.1 release.
 			</li>
 			<li>
-				<a href="/birt/phoenix/project/project_plan_R2_1.php">2.1 Project Plan</a> –
+				<a href="/birt/phoenix/project/Project_plan_R2_1.php">2.1 Project Plan</a> –
 
 				The plans for the 2.1 release.
 			</li>
