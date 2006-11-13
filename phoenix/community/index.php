@@ -64,6 +64,9 @@
 				 –
 				Eclipse keeps a history of past newsgroup postings for your reference.
 			</li>
+			<li>
+				<a href="http://www.eclipse.org/search/search.cgi?q=&cmd=Search%21&form=extended&wf=574a74&ps=10&m=all&t=5&ul=%2Fnewslists%2Fnews.eclipse.birt&wm=wrd&t=News&t=Mail">Search the BIRT Newsgroup archives</a> for previously asked questions. 
+			</li>
 		</ul>
 		<p>
 			BIRT charting APIs are described elsewhere. (Not yet available.)
