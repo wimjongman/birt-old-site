@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "Installing BIRT";
+	$pageTitle 		= "Pre-Requisites and Detailed Installation Instructions for BIRT Release 2.1.1";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
