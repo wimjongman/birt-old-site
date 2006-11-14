@@ -22,9 +22,14 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-<div id="maincontent">
-	<div id="midcolumn">
-
+		<table>
+			<COLGROUP>
+				<COL width="3%">
+				<COL width="97%">
+		<tr>
+			<td></td>
+			<td>
+			
 		<h1><a name="top"></a>$pageTitle</h1>
 
 		<blockquote>
@@ -38,6 +43,7 @@
 				<li><a href="#additional">Import Additional Files</a></li>
 				<li><a href="#viewer">Preparing the Viewer</a></li>
 				<li><a href="#running">Running BIRT</a></li>
+				<li><a href="#junit">Instructions for Running JUnit Tests</a></li>
 			</ul>
 		</blockquote>
 
@@ -397,8 +403,39 @@ Start BIRT by running it as an Eclipse Application. This can be done as follows:
 		<br/><br/>
 	</li>
   </ol>
-	</div>
-</div>
+  
+  
+ <h1><a name="junit">Instructions for Running JUnit Tests</a></h1>
+<ol>
+<li>Open debug perspective
+<li>click on Run --> Run --> Double click on JUnit Plug-in Test , this will
+create a new configuration. In the window, you can select among different
+options.<br><br>
+To run all tests in a selected project, click on the option
+'Run all tests in selected project,package or source folder'. On the right
+side, select the package to run tests for by clicking on Search and selecting a
+required source folder.
+<br><br>
+In this example, we will run tests in org.eclipse.birt.report.engine
+project. So lets name this configuration as ReportEngineTests in the 'Name:'
+box on the top of the configuration window.  And then click 'Apply' to save the
+changes.<br><br>
+		<img src="images/runcreateconfig.jpg"  />
+<br><br>
+To run the test, in the ReportEngineTests window, click on 'Run'. This will run
+all tests in org.eclipse.birt.report.engine.<br><br>
+		<img src="images/runtests75.jpg"  />
+<br><br>
+If you want to see the progress of the tests, look at the JUnit window.
+<br><br>
+The results for birt2_1_1_Release_20060927 should be 613 tests
+ran, with 2 failures and no errors.
+<br><br>
+
+
+		</td>
+		</tr>
+		</table>
 
 
 EOHTML;
