@@ -31,7 +31,7 @@
 <body>
 <p class="head">BIRT Project 2.2 Plan</p>
 
-<p>Last revised November 2, 2006</p>
+<p>Last revised November 13, 2006</p>
 
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
 
@@ -85,9 +85,14 @@ complete BIRT 2.2 in late June 2007. Additional milestones and their dates
 will be announced at a later date. Please revisit this page for more details
 on the release milestones.</p>
 <ul>
-  <li>Friday, October 13, 2006 - BIRT 2.2 M1</li>
+  <li>Friday, October 17, 2006 - BIRT 2.2 M1</li>
   <li>Friday, November 17, 2006 - BIRT 2.2 M2</li>
-  <li>Wednesday, December 20, 2006 - BIRT 2.2 M3</li>
+  <li>Friday, December 15, 2006 - BIRT 2.2 M4</li>
+  <li>Friday, February 9, 2007 - BIRT 2.2 M5</li>
+  <li>Friday, March 23, 2007 - BIRT 2.2 M6</li>
+  <li>Friday, May 4, 2007 - BIRT 2.2 RC0</li>
+  <li>Friday, June 15, 2007 - BIRT 2.2 RC1</li>
+  <li>Friday, June 29, 2007 - BIRT 2.2</li>
 </ul>
 
 <p>For information about new features assigned to each milestone please refer
