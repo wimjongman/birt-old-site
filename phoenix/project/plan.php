@@ -41,6 +41,34 @@
 
 
 
+
+		<h3><i><font size="-1">BIRT Release 2.1.2</font></i></h3>
+		<p>
+		Target Date: February 2007
+		</p>		
+
+
+		<h4>Milestone Summary</h4>
+		<ul class="midlist">
+			<li>
+				BIRT 2.1.2 - 
+				<a
+				href="
+https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="
+				>Enhancements and Bug Fixes </a>
+
+			</li>	
+		</ul>		
+		<p>
+		For details on BIRT 2.1.2, refer to the <a href="/birt/phoenix/project/project_plan_R2_1_2.php">2.1.2 Project Devlopment Plan</a>
+		</p>	
+
+
+
+
+
+
+
 		
 		<h3><i><font size="-1">BIRT Release 2.2.0</font></i></h3>
 		<p>
