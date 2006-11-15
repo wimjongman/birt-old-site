@@ -16,11 +16,14 @@ function checkLink($link=0)
 $install_instructions_version = "http://www.eclipse.org/birt/phoenix/build/" . "install_" . "R2_1_1" . ".php";
 if ( checkLink( $install_instructions_version ) ){
 ?>
-	Found it
-<?php }else{ ?>
-    Did not find it
- <?php}
- ?>
+	Found it!
+<?php 
+}else{ 
+?>
+    Did not find it!
+<?php 
+}
+
 
 	
 	
