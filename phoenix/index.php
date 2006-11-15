@@ -36,15 +36,42 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-
-
-	<div id="midcolumn">
+	
+		<table>
+			<COLGROUP>
+				<COL width="2%">
+				<COL width="98%">
+		<tr>
+			<td></td>
+			<td>
 	
 	<h1>BIRT Project</h1>
 	<h2>Business Intelligence and Reporting Tools</h2>
+	<p>
 	BIRT is an open source, Eclipse-based reporting system that integrates
 	with your  application to produce compelling reports for both web
 	and PDF.
+	</p>
+	<table>
+	<tr>
+	<td>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="downloadbirt.jpg"></a>
+	</td>
+	<td>
+	Get started now by going directly to the BIRT download page.
+	</td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+	<td>
+	<a href="birthelp.php"><img src="birthelp.jpg"></a>
+	</td>
+	<td>
+	Need help with BIRT?
+	</td>
+	</tr>
+	</table>
 	<p>
 	BIRT provides core reporting features such as report layout,
 	data access and scripting.  The current released version is 2.1.1. Please try BIRT and
@@ -385,7 +412,11 @@
 
 		</div>
 	
-</div>
+		</td>
+		</tr>
+		</table>
+
+	
 
 
 EOHTML;

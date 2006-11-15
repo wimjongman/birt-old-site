@@ -15,7 +15,8 @@
 		$theme = $App->getUserPreferedTheme();
 	}
 
-    $Nav->addCustomNav("BIRT Home", "/birt/phoenix", "_self", 1);
+	$Nav->setLinkList( array() );
+    $Nav->addNavSeparator("BIRT Home", "http://www.eclipse.org/birt/phoenix", "_self");
     $Nav->addCustomNav("Introduction", "/birt/phoenix/intro", "_self", 1);
 	$Nav->addCustomNav("Download", 			"http://download.eclipse.org/birt/downloads", 	"_self", 	1);
 	$Nav->addCustomNav("Install", 			"/birt/phoenix/build/", 	"_self", 							1);
