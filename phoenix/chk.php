@@ -18,11 +18,11 @@ $install_instructions_version = "http://www.google.com";
 
 if ( checkLink( $install_instructions_version ) ){
 ?>
-	Found it!
+	Found it!!!!
 <?php 
 }else{ 
 ?>
-    Did not find it!
+    Did not find it!!!!
 <?php 
 }
 
