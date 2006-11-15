@@ -48,8 +48,12 @@ if ( url_exists( $install_instructions_version ) ){
     Did not find google!!!!
 
 <?php
-print_r(get_headers($install_instructions_version));
-    
+$fp = fopen('http://www.google.com', 'r');
+
+// the variable $http_response_header magically appears
+print_r($http_response_header);
+
+  
 }
 
 
