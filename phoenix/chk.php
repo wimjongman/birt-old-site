@@ -45,7 +45,7 @@ if ( url_exists( $install_instructions_version ) ){
 <?php 
 }else{ 
 ?>
-    Did not find it!!!!
+    Did not find google!!!!
 
 <?php
 print_r(get_headers($install_instructions_version));
