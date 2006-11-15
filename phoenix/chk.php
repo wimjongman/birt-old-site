@@ -45,7 +45,7 @@ if ( url_exists( $install_instructions_version ) ){
 <?php 
 }else{ 
 ?>
-    Did not find google!!!!
+    Did not find !!!google!!!!
 
 <?php
 $fp = fopen('http://www.google.com', 'r');
