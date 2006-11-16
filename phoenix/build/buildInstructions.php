@@ -275,7 +275,7 @@ choose New -&gt; Repository Location.<br><br>
   </tr>
   <tr>
    <td>Repository path</td>
-   <td>/home/birt</td>
+   <td>/cvsroot/birt</td>
   </tr>
   <tr>
    <td>User</td>
