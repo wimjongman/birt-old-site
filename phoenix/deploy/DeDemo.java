@@ -9,21 +9,27 @@
  *  Actuate Corporation  - created
  *******************************************************************************/
 
-package org.eclipse.org.demo.de;
+
 
 import java.io.IOException;
 
+import org.eclipse.birt.core.framework.Platform;
 import org.eclipse.birt.report.model.api.CellHandle;
+import org.eclipse.birt.report.model.api.DesignConfig;
 import org.eclipse.birt.report.model.api.DesignElementHandle;
 import org.eclipse.birt.report.model.api.DesignEngine;
 import org.eclipse.birt.report.model.api.ElementFactory;
 import org.eclipse.birt.report.model.api.GridHandle;
+import org.eclipse.birt.report.model.api.IDesignEngine;
+import org.eclipse.birt.report.model.api.IDesignEngineFactory;
 import org.eclipse.birt.report.model.api.ImageHandle;
 import org.eclipse.birt.report.model.api.LabelHandle;
 import org.eclipse.birt.report.model.api.ReportDesignHandle;
 import org.eclipse.birt.report.model.api.RowHandle;
 import org.eclipse.birt.report.model.api.SessionHandle;
 import org.eclipse.birt.report.model.api.activity.SemanticException;
+
+import com.ibm.icu.util.ULocale;
 
 /**
  * Simple BIRT Design Engine API (DEAPI) demo.
@@ -57,9 +63,28 @@ public class DeDemo
 	{
 		// Create a session handle. This is used to manage all open designs.
 		// Your app need create the session only once.
+
 		
-		SessionHandle session = DesignEngine.newSession( null );
+		//Configure the Engine and start the Platform
+		DesignConfig config = new DesignConfig( );
+
+		config.setProperty("BIRT_HOME", "C:/birt-runtime-2_1_1/birt-runtime-2_1_1/ReportEngine");
+		IDesignEngine engine = null;
+		try{
+					
+			
+		Platform.startup( config );
+		IDesignEngineFactory factory = (IDesignEngineFactory) Platform
+		.createFactoryObject( IDesignEngineFactory.EXTENSION_DESIGN_ENGINE_FACTORY );
+		engine = factory.createDesignEngine( config );
+
+		}catch( Exception ex){
+			ex.printStackTrace();
+		}		
 		
+			
+		SessionHandle session = engine.newSessionHandle( ULocale.ENGLISH ) ;
+			
 		// Create a new report design.
 		
 		ReportDesignHandle design = session.createDesign( );
@@ -97,7 +122,7 @@ public class DeDemo
 		ImageHandle image = factory.newImage( null );
 		CellHandle cell = (CellHandle) row.getCells( ).get( 0 );
 		cell.getContent( ).add( image );
-		image.setURI( "http://www.eclipse.org/birt/tutorial/multichip-4.jpg" ); //$NON-NLS-1$
+		image.setURL( "\"http://www.eclipse.org/birt/phoenix/tutorial/basic/multichip-4.jpg\"" ); 
 		
 		// Create a label and add it to the second cell.
 		
@@ -108,9 +133,11 @@ public class DeDemo
 		
 		// Save the design and close it.
 		
-		design.saveAs( "sample.rptdesign" ); //$NON-NLS-1$
+		design.saveAs( "c:/tmp/sample.rptdesign" ); //$NON-NLS-1$
 		design.close( );
+		System.out.println("Finished");
 		
 		// We're done!
 	}
 }
+
