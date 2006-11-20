@@ -37,6 +37,15 @@
 			<ul>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.2M2
+					</a>
+					is now available for download.  
+					<span class="dates">
+						11/20/06
+					</span>
+				</li>				
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
 						BIRT 2.2M1
 					</a>
 					is now available for download.  Read about the feature set at <a href="project/notable2.2M1.php">Notable Features - BIRT 2.2 Milestone 1</a>
