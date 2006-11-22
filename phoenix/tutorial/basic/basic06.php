@@ -133,9 +133,10 @@
 			</li>
 			<li>
 				Drag the CUSTOMERNAME column into the detail band cell second from the
-				left. Notice that the designer automatically displays the Binding Editor.  
+				left.   
 				This operation adds a Data Element and a Label Element to the Table Element.
 				The Binding Editor maps the Data Element to the Data Set row column CUSTOMERNAME.
+				The Binding Editor is available by selecting the Binding tab in the Property Editor for the Table.
 				You can change this value by selecting the ellipse next to the expression within the Binding Editor. 
 				You will now see that the Table Element contains the new Label Element and the new Data Element.
 			</li>
