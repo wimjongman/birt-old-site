@@ -197,7 +197,7 @@
 
 		<h2><a name="properties"></a>More on Properties</h2>
 		<p>
-			BIRT provide a wide variety of properties for formatting report items. The properties
+			BIRT provides a wide variety of properties for formatting report items. The properties
 			are based on the
 			<a href="http://www.w3.org/TR/CSS21/">W3C CSS</a>
 			(Cascading Style Sheet) standard. If you've ever used CSS
