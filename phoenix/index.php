@@ -194,7 +194,7 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2M2-200611171020">
 						BIRT 2.2M2
 					</a>
 					is now available for download.  
