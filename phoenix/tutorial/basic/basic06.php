@@ -141,13 +141,7 @@
 				You will now see that the Table Element contains the new Label Element and the new Data Element.
 			</li>
 			<li>
-				Click OK.
-			</>
-			<li>
 				Drag the PHONE column into the rightmost cell of the detail band.
-			</li>
-			<li>
-				Click OK
 			</li>
 		</ul>
 
