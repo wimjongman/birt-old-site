@@ -40,7 +40,7 @@
 		</p>
 		<h2><a name="movie"></a>Flash Movie of "My First Report"</h2>
 		<p>
-			(Offline)This Flash movie shows the creation of My First Report from the tutorial in  BIRT's online help.
+			<a href-"http://download.eclipse.org/birt/downloads/examples/reports/2.1/tutorial/tutorial.html">This Flash movie</a> shows the creation of My First Report from the tutorial in  BIRT's online help.
 		</p>
 		$linkToTop
 	</div>
