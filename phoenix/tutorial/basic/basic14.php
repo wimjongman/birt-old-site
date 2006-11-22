@@ -100,6 +100,9 @@
 			<li>
 				<a href="/birt/phoenix/community/index.php">BIRT newsgroup</a>
 			</li>
+			<li>
+				<a href="/birt/phoenix/birthelp.php">How to get help on using BIRT.</a>
+			</li>
 		</ul>
 
 
