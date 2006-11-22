@@ -157,9 +157,6 @@
 			<li>
 				Drag the STATE column into the leftmost cell within the Group Header row.
 			</li>
-			<li>
-				Click OK.
-			</li>
 		</ul>
 		<div class="homeitem3col">
 			<h3>Creating Groups on your Own</h3>
@@ -195,7 +192,10 @@
 				Customers Data Set.  Under Data Column Binding you will notice the three Table columns that have already been created.
 			</li>
 			<li>
-				Select Add.  The BIRT Expression Builder will be displayed.
+				Select Add.  Then Data Binding dialog will be displayed.
+			</li>	
+			<li>	
+				Enter City in the Name field and select ellipse next to Expression.  The BIRT Expression Builder will be displayed.
 			</li>
 			<li>
 				Select Available Data Sets under Category, Customers under Sub-Category and then double-click on the CITY column.
