@@ -36,6 +36,15 @@
 		
 			<ul>
 				<li>
+					<a href="http://www.surveymonkey.com/s.asp?u=597922894309">
+						Eclipse BIRT Awareness Survey.
+					</a>
+					The BIRT team is interested in your feedback. 
+					<span class="dates">
+						11/22/06
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2M2-200611171020">
 						BIRT 2.2M2
 					</a>
