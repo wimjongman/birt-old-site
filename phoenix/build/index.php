@@ -156,7 +156,8 @@ BIRT framework and unzip the contents to any directory.
 <li><a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a>.
 </ul>
 <p>
-The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br> 
+The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br><br> 
+If you are installing BIRT 2.2 M2 or later, download version 1.4.6 of iText instead of 1.3.<br><br>
 <b>BIRT 2.0.2</b><br>
 The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
 <br><b>BIRT 2.1.0 (or later)</b><br>
@@ -171,7 +172,13 @@ The itext-1.3.jar file needs to be copied to the plugins/com.lowagie.itext_*/lib
 
  </ul>
 </div>
-
+<div class="homeitem3col">
+<h3>Birt 2.2 M2 or Later Note: </h3>
+<ul>
+ The iText version has been updated, download the following jar and place it in the plugins/com.lowagie.itext_*/lib directory.
+<li><a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">iText 1.4.6</a>.
+ </ul>
+</div>
 <br>
 </p>
 
