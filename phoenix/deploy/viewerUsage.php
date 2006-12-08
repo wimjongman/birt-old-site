@@ -326,15 +326,17 @@
 		<p>
 			The <code>__report</code> Option names the
 			report design to run. It can be an absolute or relative file name. If
-			relative, the looks in the directory specified in the <code>BIRT_VIEWER_WORKING_FOLDER</code> property in the viewer's <code>web.xml</code> file.
-			The file search rules are:
+			relative, the following search rules are used.
 		</p>
 		<ul class="midlist">
 			<li>
 				If name is absolute, use it directly.
 			</li>
 			<li>
-				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set, use this value as the base for the relative name.
+				If <code>BIRT_VIEWER_DOCUMENT_FOLDER</code> is set in the web.xml, use this value as the base for the relative name.
+			</li>
+			<li>
+				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set in the web.xml, use this value as the base for the relative name.
 			</li>
 			<li>
 				Otherwise, use the viewer web app's directory as the base for the relative name.
@@ -344,15 +346,17 @@
 		<p>
 			The <code>__document</code> Option names the
 			report document to run with the frameset mapping.  This file is the intermediate file when run and render are separate phases. It can be an absolute or relative file name. If
-			relative, the looks in the directory specified in the <code>BIRT_VIEWER_WORKING_FOLDER</code> property in the viewer's <code>web.xml</code> file.
-			The file search rules are:
+			relative, the following search rules are used.  If the __document parameter is used without the __report parameter and existing report document can be rendered.
 		</p>
 		<ul class="midlist">
 			<li>
 				If name is absolute, use it directly.
 			</li>
 			<li>
-				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set, use this value as the base for the relative name.
+				If <code>BIRT_VIEWER_DOCUMENT_FOLDER</code> is set in the web.xml, use this value as the base for the relative name.
+			</li>
+			<li>
+				If <code>BIRT_VIEWER_WORKING_FOLDER</code> is set in the web.xml, use this value as the base for the relative name.
 			</li>
 			<li>
 				Otherwise, use the viewer web app's directory as the base for the relative name.
