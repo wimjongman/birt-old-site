@@ -333,6 +333,14 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
+				<li>
+					<a href="http://jdj.sys-con.com/read/295339.htm">
+						Developing an Eclipse BIRT Report Item Extension 
+					</a>
+					<span class="dates">
+						11/20/06
+					</span>
+				</li>						
 			
 				<li>
 					<a href="http://www.itweek.co.uk/itweek/news/2164968/open-source-server-monitor">
