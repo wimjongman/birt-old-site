@@ -87,7 +87,7 @@ on the release milestones.</p>
 <ul>
   <li>Friday, October 17, 2006 - BIRT 2.2 M1</li>
   <li>Friday, November 17, 2006 - BIRT 2.2 M2</li>
-  <li>Friday, December 15, 2006 - BIRT 2.2 M4</li>
+  <li>Friday, December 25, 2006 - BIRT 2.2 M4</li>
   <li>Friday, February 9, 2007 - BIRT 2.2 M5</li>
   <li>Friday, March 23, 2007 - BIRT 2.2 M6</li>
   <li>Friday, May 4, 2007 - BIRT 2.2 RC0</li>
