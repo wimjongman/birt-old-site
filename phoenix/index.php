@@ -194,7 +194,20 @@
 			<h3>What's New</h3>
 			<ul>
 
-			
+		
+				<li>
+					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321442598&rl=1">
+						<i>BIRT: A Field Guide to Reporting</i>
+					</a>
+					and 
+					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321443853&rl=1">
+						<i>Integrating and Extending BIRT</i> 
+					</a>
+					- Two books covering many aspects of BIRT are now available from Addison-Wesley. 
+					<span class="dates">
+						12/08/06
+					</span>
+				</li>				
 				<li>
 					<a href="http://www.surveymonkey.com/s.asp?u=597922894309">
 						Eclipse BIRT Awareness Survey.
@@ -304,25 +317,7 @@
 					<span class="dates">
 						06/02/06
 					</span>
-				</li>				
-				<li>
-					<a href="http://www.eclipse.org/callisto/webinars.php">
-						Callisto Webinar on June 5 showcasing BIRT/DTP RCP Integration.
-					</a>
-					<span class="dates">
-						05/30/06
-					</span>
-				</li>					
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1 RC3
-					</a>
-					is available for download.
-					<span class="dates">
-						05/22/06
-					</span>
-				</li>																							
-
+				</li>																										
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...

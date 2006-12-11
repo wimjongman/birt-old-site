@@ -35,6 +35,23 @@
 		
 		
 			<ul>
+
+
+		
+				<li>
+					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321442598&rl=1">
+						<i>BIRT: A Field Guide to Reporting</i>
+					</a>
+					and 
+					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321443853&rl=1">
+						<i>Integrating and Extending BIRT</i> 
+					</a>
+					- Two books covering many aspects of BIRT are now available from Addison-Wesley. 
+					<span class="dates">
+						12/08/06
+					</span>
+				</li>			
+			
 				<li>
 					<a href="http://www.surveymonkey.com/s.asp?u=597922894309">
 						Eclipse BIRT Awareness Survey.
