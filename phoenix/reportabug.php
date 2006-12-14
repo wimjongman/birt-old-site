@@ -33,7 +33,7 @@
 
 
 <p>
-BIRT uses Eclipse Bugzilla system to track bugs and enhancements.
+BIRT uses the Eclipse Bugzilla system to track bugs and enhancements.
 
 
 		<ul class="midlist">
