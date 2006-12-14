@@ -192,13 +192,11 @@ Want to contribute to the BIRT project?
 					who help develop BIRT.				
 				</li>
 				<li>
-					<a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=BIRT">
-						Contribute Fixes
+					<a href="http://www.eclipse.org/birt/phoenix/project/contribute.php">
+						Contribute Fixes and Code
 					</a>
-					The first step in contributing to BIRT is to learn the code, and there is no
-					better way to do that then to fix some bugs or add a minor feature. Contribute the
-					code back to the project by attaching it to a Bugzilla entry. Let the team know
-					about the fix via the mailing list.				
+Interested in joining the BIRT project as a contributor? Maybe you found a bug and made a patch to the source code to address this, or perhaps you would like to make significant contribution in a specific area. This page provides more information on how to contribute code to the project.
+				
 				</li>
 		</ul>
 
