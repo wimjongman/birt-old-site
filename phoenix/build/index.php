@@ -125,7 +125,7 @@ installed Eclipse into the standard location on Windows, then unzip GEF into
 
 <p>
 The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
-<a href="http://download.eclipse.org/tools/emf/scripts/downloads.php">
+<a href="http://www.eclipse.org/emf/downloads/">
 EMF & SDO RT version 2.1/2.2</a>. Look in the Latest Releases sections of the
 download page.
 <p>
