@@ -313,7 +313,7 @@ org.eclipse.birt.report.data.oda.flatfile.ui<br>
 org.eclipse.birt.report.data.oda.flatfile.ui.nl<br>
 org.eclipse.birt.report.tests.engine<br>
 org.eclipse.birt.report.tests.model<br>
-org.eclipse.birt.reports.tests.viewer<br>
+org.eclipse.birt.report.tests.viewer<br>
 org.eclipse.birt.test.performance<br>
 org.eclipse.birt.tests.core<br>
 org.eclipse.birt.tests.data<br>
