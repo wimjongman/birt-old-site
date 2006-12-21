@@ -36,7 +36,12 @@
 		
 			<ul>
 
-
+				<li>
+	 				<a href="project/notable2.2M2.php">Notable Features - BIRT 2.2 Milestone 2</a>
+					<span class="dates">
+						12/21/06
+					</span>
+				</li>			
 		
 				<li>
 					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321442598&rl=1">

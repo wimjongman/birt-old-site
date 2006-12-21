@@ -193,7 +193,12 @@
 			<h3>What's New</h3>
 			<ul>
 
-		
+				<li>
+	 				<a href="project/notable2.2M2.php">Notable Features - BIRT 2.2 Milestone 2</a>
+					<span class="dates">
+						12/21/06
+					</span>
+				</li>			
 				<li>
 					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321442598&rl=1">
 						<i>BIRT: A Field Guide to Reporting</i>
@@ -308,15 +313,7 @@
 						06/02/06
 					</span>
 				</li>				
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1 RC4
-					</a>
-					is available for download.
-					<span class="dates">
-						06/02/06
-					</span>
-				</li>																										
+																									
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
