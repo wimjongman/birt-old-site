@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "Pre-Requisites and Detailed Installation Instructions for BIRT Release 2.1.1";
+	$pageTitle 		= "Pre-Requisites and Detailed Installation Instructions for BIRT";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -78,6 +78,15 @@ And
 <li>EMF 2.2.
 <li>JRE 1.4.2/JRE 1.5.
 </ul>
+And
+<ul>
+<li><b>BIRT 2.2M4 and higher</b>
+<li>Eclipse 3.3.
+<li>GEF 3.3.
+<li>EMF 2.3.
+<li>JRE 1.5.
+</ul>
+
 
 <h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
 BIRT now supplies a <a href="http://download.eclipse.org/birt/downloads/">download</a> that incudes Eclipse, GEF, EMF and BIRT.  Use this
@@ -92,7 +101,7 @@ Report Designer Full Eclipse Install.
 <br>
 Download and install the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
-Eclipse Platform 3.1/3.2 Release</a>
+Eclipse Platform 3.1/3.2/3.3 Release</a>
 <p>
 (Note: Eclipse, EMF, GEF and BIRT are all available from the
 <a href="http://www.eclipse.org/downloads/index.php">Eclipse download page</a>.)
@@ -115,7 +124,7 @@ To make it easier to start Eclipse on Windows, create a shortcut to Eclipse on y
 GEF, the Graphic Editor Framework, is an Eclipse plugin used by the BIRT UI.
 Download the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/tools/gef/downloads/index.php">
-GEF 3.1/3.2 Release, GEF Runtime</a>.
+GEF 3.1/3.2/3.3 Release, GEF Runtime</a>.
 <p>
 GEF comes as a zip file. Unzip GEF into directory that contains Eclipse. If you
 installed Eclipse into the standard location on Windows, then unzip GEF into
@@ -126,7 +135,7 @@ installed Eclipse into the standard location on Windows, then unzip GEF into
 <p>
 The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
 <a href="http://www.eclipse.org/emf/downloads/">
-EMF & SDO RT version 2.1/2.2</a>. Look in the Latest Releases sections of the
+EMF & SDO RT version 2.1/2.2/2.3</a>. Look in the Latest Releases sections of the
 download page.
 <p>
 EMF also comes as a zip file. Unzip EMF into directory that contains Eclipse.
@@ -136,8 +145,8 @@ This is the same directory you used for GEF.
 
 <p>
 Download <a href="http://download.eclipse.org/birt/downloads/">
-Release 2.1.0</a> (or later). Download only the
-BIRT designer framework for now: "birt-report-framework-2_1_0.zip".
+Release 2.1.1</a> (or later). Download only the
+BIRT designer framework for now: "birt-report-framework-2_1_1.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
@@ -145,8 +154,8 @@ BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 <p>If you currently have an Eclipse install with GEF and EMF, you can download the
 BIRT framework and unzip the contents to any directory.
 <ul>
-<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse3.1\eclipse\links).
-<li>Within this directory create a file with a unique name like birt.2.0.link.
+<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse3.2\eclipse\links).
+<li>Within this directory create a file with a unique name like birt.2.1.link.
 <li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.1)
 <li>You will still need iText and prototype.js files.  See next section. 
 </ul>
@@ -245,8 +254,18 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <div class="homeitem3col">
 <h3>Birt 2.1.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1.1. or 2.1.2 Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+
+ </ul>
+</div>
+<br>
+<div class="homeitem3col">
+<h3>Birt 2.2M2 Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.2M2 or later Runtime (J2EE Application Server Deployment),
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">itext-1.4.6.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 
  </ul>

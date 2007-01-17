@@ -192,7 +192,15 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
-
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=N-R1-2.2M4-200701100630">
+						BIRT 2.2M4
+					</a>
+					is now available for download.  
+					<span class="dates">
+						01/16/07
+					</span>
+				</li>
 				<li>
 	 				<a href="project/notable2.2M2.php">Notable Features - BIRT 2.2 Milestone 2</a>
 					<span class="dates">
@@ -304,15 +312,7 @@
 						06/16/06
 					</span>
 				</li>			
-				<li>
-					<a href="project/releasereview/Eclipse BIRT Project 2_1 Release Review 2006-05-30.pdf">
-						BIRT 2.1 Release Review Presentation
-					</a>
-					 has been uploaded.
-					<span class="dates">
-						06/02/06
-					</span>
-				</li>				
+				
 																									
 				<li>
 					<a href="whatsnew.php">

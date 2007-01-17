@@ -130,12 +130,23 @@
 <div class="homeitem3col">
 <h3>Birt 2.1.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1.1. or 2.1.2 Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 
  </ul>
 </div>
+<br>
+<div class="homeitem3col">
+<h3>Birt 2.2M2 Runtime Note: </h3>
+<ul>
+ <li>If you are installing the BIRT 2.2M2 or later Runtime (J2EE Application Server Deployment),
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">itext-1.4.6.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+
+ </ul>
+</div>
+<br>
 <br>
 
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
@@ -209,7 +220,7 @@
 				Rename the Web Viewer Example directory to birt.war, so it will deploy in place.
 			</li>
 
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar (BIRT 2.1)</a> or <a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">itext-1.4.6.jar (BIRT 2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>(BIRT 2.1.1 or later) Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 			
 			<li>
