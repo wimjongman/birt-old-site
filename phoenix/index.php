@@ -193,6 +193,12 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+	 				<a href="project/notable2.2M4.php">Notable Features - BIRT 2.2 Milestone 4</a>
+					<span class="dates">
+						01/19/07
+					</span>
+				</li>				
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=N-R1-2.2M4-200701100630">
 						BIRT 2.2M4
 					</a>
@@ -300,18 +306,7 @@
 					<span class="dates">
 						06/21/06
 					</span>
-				</li>					
-				<li>
-					<a href="http://www.eclipse.org/downloads/download.php?file=/datatools/downloads/callisto/webinar_060506/webinar_demo.zip">
-						Source code 
-					</a>
-					 for the Callisto webinar covering DTP/BIRT/RCP integration has been uploaded.
-					 The Webinar recording is available 
-					 <a href="http://adobedev.breezecentral.com/p89156273"/>here</a>
-					<span class="dates">
-						06/16/06
-					</span>
-				</li>			
+				</li>							
 				
 																									
 				<li>
