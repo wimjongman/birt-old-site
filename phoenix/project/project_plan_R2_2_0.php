@@ -31,7 +31,7 @@
 <body>
 <p class="head">BIRT Project 2.2 Plan</p>
 
-<p>Last revised November 13, 2006</p>
+<p>Last revised January 23, 2007</p>
 
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
 
@@ -115,14 +115,20 @@ Framework (EMF), and on the Java 2 Platform that runs it. </p>
 <p>The Eclipse BIRT 2.2 release depends on the following compatibility
 stack:</p>
 
-<p><b>BIRT 2.2 Reference Stack for Eclipse 3.3</b></p>
+<p><b>BIRT 2.2 Reference Stack for JDK 1.4.2</b></p>
 <ul>
   <li>Java 2 platform Java Development Kit (JDK) 1.4.2</li>
   <li>Eclipse Platform Runtime Binary 3.3</li>
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
   <li>Eclipse Modeling Framework (EMF) 2.2</li>
 </ul>
-
+<p><b>BIRT 2.2 Reference Stack for JDK 1.5</b></p>
+<ul>
+  <li>Java 2 platform Java Development Kit (JDK) 1.5</li>
+  <li>Eclipse Platform Runtime Binary 3.3</li>
+  <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
+  <li>Eclipse Modeling Framework (EMF) 2.3</li>
+</ul>
 <p>The Eclipse Platform and BIRT run in a variety of operating environments.
 Testing is focused on a handful of popular <span class="header">combinations
 of operating system and Java 2 Platform; these are our <em>reference
