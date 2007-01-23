@@ -40,7 +40,7 @@
 <h1><a name="intro">Introduction</a></h1>		
 
 <p>
-BIRT 2.2 Milestone 5 has officially been released to the public.  Below is a description of some of the key features that are now available in the M2 build.  Keep in mind, as with all milestone releases, the product continues to evolve.
+BIRT 2.2 Milestone 4 has officially been released to the public.  Below is a description of some of the key features that are now available in the M2 build.  Keep in mind, as with all milestone releases, the product continues to evolve.
 </p>
 <p>
 To review the projects slated for the 2.2 release, see the draft project plan, which is available <a href="http://www.eclipse.org/birt/phoenix/project/project_plan_R2_2_0.php">here</a>.</p>
