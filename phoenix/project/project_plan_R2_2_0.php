@@ -121,6 +121,9 @@ stack:</p>
   <li>Eclipse Platform Runtime Binary 3.3</li>
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
   <li>Eclipse Modeling Framework (EMF) 2.2</li>
+  <li>Data Tools Project 1.5 (DTP) 2.2</li>
+  <li>Web Tools Project (WTP) 2.0</li>
+  
 </ul>
 <p><b>BIRT 2.2 Reference Stack for JDK 1.5</b></p>
 <ul>
@@ -128,6 +131,8 @@ stack:</p>
   <li>Eclipse Platform Runtime Binary 3.3</li>
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
   <li>Eclipse Modeling Framework (EMF) 2.3</li>
+  <li>Data Tools Project 1.5 (DTP) 2.2</li>
+  <li>Web Tools Project (WTP) 2.0</li>  
 </ul>
 <p>The Eclipse Platform and BIRT run in a variety of operating environments.
 Testing is focused on a handful of popular <span class="header">combinations
