@@ -121,7 +121,7 @@ stack:</p>
   <li>Eclipse Platform Runtime Binary 3.3</li>
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
   <li>Eclipse Modeling Framework (EMF) 2.2</li>
-  <li>Data Tools Project 1.5 (DTP) 2.2</li>
+  <li>Data Tools Platform Project 1.5 (DTP)</li>
   <li>Web Tools Project (WTP) 2.0</li>
   
 </ul>
@@ -131,7 +131,7 @@ stack:</p>
   <li>Eclipse Platform Runtime Binary 3.3</li>
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
   <li>Eclipse Modeling Framework (EMF) 2.3</li>
-  <li>Data Tools Project 1.5 (DTP) 2.2</li>
+  <li>Data Tools Platform Project 1.5 (DTP)</li>
   <li>Web Tools Project (WTP) 2.0</li>  
 </ul>
 <p>The Eclipse Platform and BIRT run in a variety of operating environments.
