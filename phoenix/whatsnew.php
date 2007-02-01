@@ -37,7 +37,7 @@
 			<ul>
 				<li>
 	 				<a href="http://www.eclipse.org/community/webinars2006.php">BIRT Webinar</a> - The BIRT PMC will be presenting a Webinar
-	 				next week.  We will cover developing reports and highlighting 2.2 Features.
+	 				next week.  BIRT report development will be discussed with an emphasis on 2.2 Features.
 					<span class="dates">
 						02/01/07
 					</span>
