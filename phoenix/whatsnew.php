@@ -36,6 +36,13 @@
 		
 			<ul>
 				<li>
+	 				<a href="http://www.eclipse.org/community/webinars2006.php">BIRT Webinar</a> - The BIRT PMC will be presenting a Webinar
+	 				next week.  We will cover developing reports and highlighting 2.2 Features.
+					<span class="dates">
+						02/01/07
+					</span>
+				</li>				
+				<li>
 	 				<a href="project/notable2.2M4.php">Notable Features - BIRT 2.2 Milestone 4</a>
 					<span class="dates">
 						01/19/07
