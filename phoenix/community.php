@@ -148,7 +148,7 @@ BIRT also provides mailing lists for developers contributing to BIRT:
 					Suggestions on how to improve the website or wiki are also welcome.  
 					Note: This mailing list receives numerous check-in and build notices.  If you are not 
 					interested in these notifications setting up a filter in your email client will allow 
-					you to delete these messages or filter to a different folder for reading at a later tim					
+					you to delete these messages or filter to a different folder for reading at a later time.					
 				
 				</li>
 				<li>
