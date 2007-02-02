@@ -143,6 +143,13 @@ BIRT also provides mailing lists for developers contributing to BIRT:
 					Development discussions about BIRT of interest to all BIRT 
 					committers. Topics include PMC meeting minutes, source code structure, 
 					CVS management, and integration among the various BIRT components.					
+					contributors and committers. Topics include PMC meeting minutes, source code structure, 
+					CVS management, and integration among the various BIRT components. 
+					Suggestions on how to improve the website or wiki are also welcome.  
+					Note: This mailing list receives numerous check-in and build notices.  If you are not 
+					interested in these notifications setting up a filter in your email client will allow 
+					you to delete these messages or filter to a different folder for reading at a later tim					
+				
 				</li>
 				<li>
 					<a href="http://dev.eclipse.org/mailman/listinfo/birt-charting-dev">
