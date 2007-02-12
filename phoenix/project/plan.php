@@ -34,7 +34,7 @@
 		
 		<h2><a name="latest">Latest Release Available </a></h2>
 		<p>
-		BIRT Release 2.1.1 (Sept 2006) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">New and Notable</a> page.
+		BIRT Release 2.1.2 (Feb 2007) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">New and Notable</a> page.
 		</p>
 
 		<h2>Releases Under Development/Planned</h2>
@@ -42,25 +42,20 @@
 
 
 
-		<h3><i><font size="-1">BIRT Release 2.1.2</font></i></h3>
+		<h3><i>BIRT Release 2.1.3</i></h3>
+		Target Date: TBD
+		
 		<p>
-		Target Date: February 2007
-		</p>		
 
 
-		<h4>Milestone Summary</h4>
-		<ul class="midlist">
-			<li>
-				BIRT 2.1.2 - 
+				 
 				<a
 				href="
-https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="
-				>Enhancements and Bug Fixes </a>
+https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.1.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="
+				>BIRT 2.1.3 Enhancements and Bug Fixes </a>
 
-			</li>	
-		</ul>		
-		<p>
-		For details on BIRT 2.1.2, refer to the <a href="/birt/phoenix/project/project_plan_R2_1_2.php">2.1.2 Project Devlopment Plan</a>
+		<br>
+		<a href="/birt/phoenix/project/project_plan_R2_1_2.php">BIRT 2.1.3 Project Devlopment Plan</a>
 		</p>	
 
 
@@ -70,26 +65,21 @@ https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=
 
 
 		
-		<h3><i><font size="-1">BIRT Release 2.2.0</font></i></h3>
-		<p>
+		<h3><i>BIRT Release 2.2.0</i></h3>
 		Target Date: Late June 2007
-		</p>		
+<p>
 
 
-		<h4>Milestone Summary</h4>
-		<ul class="midlist">
-			<li>
-				BIRT 2.2.0 - 
+
 				<a
 				href="
 https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.2.0&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
 				"
-				>Enhancements and Bug Fixes </a>
+				>BIRT 2.2.0 Enhancements and Bug Fixes </a>
 
-			</li>	
-		</ul>		
-		<p>
-		For details on BIRT 2.2.0, refer to the <a href="/birt/phoenix/project/project_plan_R2_2_0.php">2.2.0 Project Devlopment Plan</a>
+	
+<br>
+		<a href="/birt/phoenix/project/project_plan_R2_2_0.php">BIRT 2.2.0 Project Devlopment Plan</a>
 		</p>	
 		
 
