@@ -193,6 +193,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1.2
+					</a>
+					is now available for download.
+					<span class="dates">
+						02/12/07
+					</span>
+				</li>			
+				<li>
 	 				<a href="http://www.eclipse.org/community/webinars2006.php">BIRT Webinar</a> - The BIRT PMC will be presenting a Webinar
 	 				next week.  BIRT report development will be discussed with an emphasis on 2.2 Features.
 					<span class="dates">
@@ -296,15 +305,7 @@
 						07/27/06
 					</span>
 				</li>				
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1
-					</a>
-					is now available for download.  Read about the feature set at <a href="project/notable2.1.php">Notable Features - BIRT 2.1</a>
-					<span class="dates">
-						07/01/06
-					</span>
-				</li>			
+			
 																									
 				<li>
 					<a href="whatsnew.php">

@@ -36,6 +36,15 @@
 		
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads">
+						BIRT 2.1.2
+					</a>
+					is now available for download.
+					<span class="dates">
+						02/12/07
+					</span>
+				</li>
+				<li>
 	 				<a href="http://www.eclipse.org/community/webinars2006.php">BIRT Webinar</a> - The BIRT PMC will be presenting a Webinar
 	 				next week.  BIRT report development will be discussed with an emphasis on 2.2 Features.
 					<span class="dates">
