@@ -323,6 +323,24 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://www.itjungle.com/tlb/tlb021307-story03.html">
+						Zend Upgrades Commercial Add-Ons for Its PHP Engine  
+					</a>
+					<span class="dates">
+						02/13/07
+					</span>
+				</li>
+
+				<li>
+					<a href="http://opensource.sys-con.com/read/336872.htm">
+						Developing an Application Using the Eclipse BIRT Report Engine API  
+					</a>
+					<span class="dates">
+						02/12/07
+					</span>
+				</li>
+						
+				<li>
 					<a href="http://jdj.sys-con.com/read/295339.htm">
 						Developing an Eclipse BIRT Report Item Extension 
 					</a>
@@ -383,26 +401,7 @@
 						03/23/06
 					</span>
 				</li>				
-				<li>
-					<a href="http://www.computerworld.com/softwaretopics/software/story/0,10801,107949,00.html?SKC=software-107949">
-						Eclipse unveils updated BI tools
-					</a>
-					from
-					<a href="http://www.computerworld.com" target="_blank">Computerworld</a>.
-					<span class="dates">
-						01/23/06
-					</span>
-				</li>
-				<li>
-					<a href="http://www.eweek.com/article2/0,1895,1914364,00.asp" target="_blank">
-						Eclipse Advances Open-Source BI Platform
-					</a>
-					from
-					<a href="http://www.eweek.com" target="_blank">eWeek</a>.
-					<span class="dates">
-						01/23/06
-					</span>
-				</li>
+
 		
 			</ul>
 			<ul>

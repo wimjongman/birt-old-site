@@ -33,7 +33,32 @@
 			<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
-			
+
+				<li>
+					<a href="http://www.itjungle.com/tlb/tlb021307-story03.html">
+						Zend Upgrades Commercial Add-Ons for Its PHP Engine  
+					</a>
+					<span class="dates">
+						02/13/07
+					</span>
+				</li>
+
+				<li>
+					<a href="http://opensource.sys-con.com/read/336872.htm">
+						Developing an Application Using the Eclipse BIRT Report Engine API  
+					</a>
+					<span class="dates">
+						02/12/07
+					</span>
+				</li>
+				<li>
+					<a href="http://jdj.sys-con.com/read/295339.htm">
+						Developing an Eclipse BIRT Report Item Extension 
+					</a>
+					<span class="dates">
+						11/20/06
+					</span>
+				</li>				
 				<li>
 					<a href="http://www.itweek.co.uk/itweek/news/2164968/open-source-server-monitor">
 						Open-source server monitor boosts support 
