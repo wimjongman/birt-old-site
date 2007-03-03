@@ -394,7 +394,7 @@
 						New Project Plan Page
 					</a>
 					This page contains information on the project plan and the milestone dates for BIRT 2.0.
-					In addition the page contains bugzilla queries for feature and bug fixes for each milestone.
+					In addition the page contains bugzilla queries for feature and bug fixes for each milestone.Test
 					<span class="dates">
 						10/21/05
 					</span>
