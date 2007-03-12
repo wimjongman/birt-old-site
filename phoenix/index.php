@@ -193,6 +193,12 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+	 				<a href="project/notable2.2M5.php">Notable Features - BIRT 2.2 Milestone 5</a>
+					<span class="dates">
+						03/11/07
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2M5-200702281100">
 						BIRT 2.2M5
 					</a>
@@ -296,16 +302,7 @@
 					<span class="dates">
 						09/29/06
 					</span>
-				</li>					
-				<li>
-					<a href="project/plan.php">
-						BIRT 2.1.1 Project Plan is available
-					</a>
-					This page contains information on the project plan and the milestone dates for BIRT 2.1.1.
-					<span class="dates">
-						09/01/06
-					</span>
-				</li>				
+				</li>								
 																					
 				<li>
 					<a href="whatsnew.php">
