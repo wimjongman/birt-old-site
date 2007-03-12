@@ -93,6 +93,9 @@ The <a href="http://wiki.eclipse.org/index.php/BIRT_Project">BIRT Wiki</a> conta
 The <a href="examples">BIRT Examples</a> section of the website is used to store report designs and videos that showcase BIRT Designer functionality.  The major difference between
 these examples and the ones in the Wiki, is that the Wiki examples can be modified and enhanced by the BIRT community.  
 
+<h2><a name="googlesearch">Search BIRT Google List</a></h2>
+<script src="http://gmodules.com/ig/ifr?url=http://www.google.com/coop/api/014174978771484586416/cse/mnr_1kk6rkg/gadget&amp;synd=open&amp;w=274&amp;h=87&amp;title=BIRT&amp;border=http%3A%2F%2Fgmodules.com%2Fig%2Fimages%2F&amp;output=js"></script>
+
 <h2><a name="integration">BIRT Integration</a></h2>
 The <a href="deploy">BIRT Integration</a> pages are designed to explain how the different BIRT APIs work and how to deploy the BIRT engine in different environments.
 <br>
