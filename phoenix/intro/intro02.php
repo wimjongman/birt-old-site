@@ -69,7 +69,7 @@
 			BIRT includes an Apache Tomcat server invoked each time you preview your report. In addition to being packaged
 			as an Eclipse Plug-in, the Viewer is also available as a standalone J2EE application, which
 			can be used in any JSP-compliant J2EE server.  The Viewer Plug-in can also be embedded within a Rich Client Platform (RCP) application.
-			BIRT Release 2.1.1 provides web output as a single HTML document, paginated HTML and PDF.  Additionally the
+			BIRT Release 2.1.2 provides web output as a single HTML document, paginated HTML and PDF.  Additionally the
 			viewer allows exporting the data to CSV, printing, and Table of Contents functionality.<br>
 			</li>
 			<br>

@@ -73,7 +73,7 @@
 	</table>
 	<p>
 	BIRT provides core reporting features such as report layout,
-	data access and scripting.  The current released version is 2.1.1. Please try BIRT and
+	data access and scripting.  The current released version is 2.1.2. Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
 	through Bugzilla as explained on the <a href="community.php">community</a>
 	page.
