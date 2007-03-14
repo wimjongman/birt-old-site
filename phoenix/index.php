@@ -138,6 +138,14 @@
 					
 				</li>
 				<li>
+					<a href="presos">
+						BIRT Presentations
+					</a>
+					
+					- Provides presentations previously given on BIRT topics.
+					
+				</li>				
+				<li>
 					<a href="db">
 						Sample Database
 					</a>
@@ -192,6 +200,12 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
+				<li>
+	 				<a href="presos">EclipseCon 2007 Presentations</a>
+					<span class="dates">
+						03/14/07
+					</span>
+				</li>			
 				<li>
 	 				<a href="project/notable2.2M5.php">Notable Features - BIRT 2.2 Milestone 5</a>
 					<span class="dates">

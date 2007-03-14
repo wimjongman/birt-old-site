@@ -35,6 +35,12 @@
 		
 			<ul>
 				<li>
+	 				<a href="presos">EclipseCon 2007 Presentations</a>
+					<span class="dates">
+						03/14/07
+					</span>
+				</li>			
+				<li>
 	 				<a href="project/notable2.2M5.php">Notable Features - BIRT 2.2 Milestone 5</a>
 					<span class="dates">
 						03/11/07

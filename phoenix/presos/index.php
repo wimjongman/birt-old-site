@@ -25,6 +25,46 @@
 	<div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+	<h2>EclipseCon 2007 Presentations</h2>
+		
+			<p>
+			<ul>
+			<li><a href="eclipsecon2007/EclipseCon 2007 Introduction to the BIRT Project 2007-03-04.pdf">BIRT: Introduction to the Eclipse Business Intelligence & Reporting Tools Project</a><br>
+			This Presentation provides an introduction to the BIRT Project.<br><br>	
+
+			<li><a href="eclipsecon2007/3644 - Building Reports with BIRT.zip">Building Reports with BIRT</a><br>
+			This long tutorial progressively walks through BIRT Reporting features.	<a href="eclipsecon2007/3644-Exercises.zip">Exercises Available.</a><br><br>
+
+			<li><a href="eclipsecon2007/EclipseCon 2007 - (3804) Charting With Eclipse BIRT.zip">Charting with Eclipse BIRT</a><br>
+			This long talk discusses the capabilities of the Charting package.<br><br>
+
+
+			<li><a href="eclipsecon2007/BIRTWebApplication.zip">How to Easily Integrate BIRT Reports into your Web Application</a><br>
+			This presentation discusses deploying BIRT applications.	<a href="eclipsecon2007/demoSamples.zip">Samples Available.</a><br><br>
+
+
+			<li><a href="eclipsecon2007/EclipseCon_2007_3798.zip">Integrating Java code with Eclipse BIRT</a><br>
+			This presentation covers event handling within BIRT.	<a href="eclipsecon2007/ScriptAccessToAWS.zip">Samples Available.</a><br><br>
+
+
+			<li><a href="eclipsecon2007/Report_Integration_Tutorial_EclipseCon_2007.zip">Report Integration - The BIRT API's</a><br>
+			This presentation provides details on the Report and Design Engine APIs.	<a href="eclipsecon2007/SourceCode.zip">Samples Available.</a><br><br>
+
+			<li><a href="eclipsecon2007/EclipseCon 2007 - Eclipse Chart Engine API and Integration - Short Tutorial.zip">Eclipse Chart Engine API and Integration</a><br>
+			This short tutorial details the Charting Engine API.<a href="eclipsecon2007/tutorial projects.zip">Samples Available.</a><br><br>
+
+			<li><a href="eclipsecon2007/Extending_BIRT_2007.zip">Extending BIRT</a><br>
+			This presentation details implementing some of the BIRT extension points.	<a href="eclipsecon2007/extension_example_src.zip">Samples Available.</a><br><br>
+
+			<li><a href="eclipsecon2007/ODAExtenders_outline.zip">Open Data Access Extension Framework</a><br>
+			This presentation discusses developing an ODA Data Provider for Custom Data Sources.<br><br>
+
+ 			</ul>
+
+			
+			
+			</p>
+		
 		<h2>Eclipse Forum Europe 2006 Presentation</h2>
 
 		<p>
@@ -36,7 +76,7 @@
 			<br>
 		</p>
 		
-		<h2>EclipseCon2 2006 Presentations</h2>
+		<h2>EclipseCon 2006 Presentations</h2>
 
 		<p>
 			<a href="eclipsecon2006/BIRTInDepth.ppt">Birt In Depth</a><br>
