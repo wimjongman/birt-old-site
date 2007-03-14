@@ -55,7 +55,7 @@ https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=
 				>BIRT 2.1.3 Enhancements and Bug Fixes </a>
 
 		<br>
-		<a href="/birt/phoenix/project/project_plan_R2_1_2.php">BIRT 2.1.3 Project Devlopment Plan</a>
+		<a href="/birt/phoenix/project/project_plan_R2_1_3.php">BIRT 2.1.3 Project Devlopment Plan</a>
 		</p>	
 
 
