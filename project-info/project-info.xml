@@ -4,14 +4,14 @@
   <bugzilla>
     <product name="BIRT"/>
   </bugzilla>
-  <committers url="/birt/index.php?page=project/contributors.html"/>
-  <contributors url="/birt/index.php?page=project/contributors.html"/>
-  <leaders url="/birt/index.php?page=project/pmc.html"/>
+  <committers url="/birt/phoenix/project/contributors.php"/>
+  <contributors url="/birt/phoenix/project/contributors.ph"/>
+  <leaders url="/birt/phoenix/project/pmc.php"/>
   <cvs repository="/cvsroot/birt/" />
   <description url="/birt/intro/"
                paragraph-url="/birt/project-info/project-page-paragraph.html" />
   <summary paragraph-url="/birt/project-info/summary.html"/>
-  <getting-started url="/birt/tutorial/" />
+  <getting-started url="/birt/phoenix/tutorial/" />
   <ip-log url="/birt/project-info/ProjectLog2.1.html" /> 
   <mailing-lists>
    <list name="birt-charting-dev"/>
@@ -54,6 +54,23 @@
              date="9/2006"
              download="/birt/downloads/"
 	     	 plan="/birt/phoenix/project/project_plan_R2_1_1.php" />             
+	<release name="2.1.2" 
+             status="completed" 
+             date="2/2007"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/project_plan_R2_1_2.php" />   	     	 
+	     	 
+	<release name="2.1.3" 
+             status="tentative" 
+             date="4/2007"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/project_plan_R2_1_3.php" />   
+	<release name="2.2.0" 
+             status="scheduled" 
+             date="6/2007"
+             download="/birt/downloads/"
+	     	 plan="/birt/phoenix/project/project_plan_R2_2_0.php" />   
+	     	 	     	 
 	      
   </releases>
 </project>
