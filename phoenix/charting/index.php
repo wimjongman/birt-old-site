@@ -21,7 +21,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "Eclipse Charting";
+	$pageTitle 		= "Eclipse Chart Engine";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -45,7 +45,7 @@
 			<td></td>
 			<td>
 	
-	<h1>Charting Engine</h1>
+	<h1>Eclipse Chart Engine</h1>
 	
 		<blockquote>
 			<ul>
@@ -91,7 +91,13 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 <table>
 	<tr>
 		<td>
-		<a href="gallery.php#bar">Bart Chart</a>
+		<a href="gallery.php#bar">Bar Chart</a><br>
+		<ul>
+		<li>Bar, Tube, Cone, Pyramid</li>
+		<li>2D, 2D with depth, 3D</li>
+		<li>Side by side, Stacked, 100% Stacked</li>
+		<li>Horizontal/Vertical</li>
+		</ul>
 		</td>
 		<td><center>
 			<a href="gallery.php#bar"><img src="images/barthumb.PNG"></a>
@@ -99,6 +105,13 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 
 		<td>
 		<a href="gallery.php#line">Line Chart</a>
+		<ul>
+		<li>2D, 2D with depth, 3D</li>
+		<li>Overlay, Stacked, 100% Stacked</li>
+		<li>Horizontal/Vertical</li>
+		<li>Various Markers</li>
+		<li>Curved or Straight Lines</li>
+		</ul>			
 		</td>
 		<td><center>
 			<a href="gallery.php#line"><img src="images/linethumb.PNG"></a>
@@ -107,6 +120,12 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 	<tr>
 		<td>
 		<a href="gallery.php#area">Area Chart</a>
+		<ul>
+		<li>2D, 2D with depth, 3D</li>
+		<li>Overlay, Stacked, 100% Stacked</li>
+		<li>Horizontal/Vertical</li>
+		<li>Straight or Curved Area</li>
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#area"><img src="images/areathumb.PNG"></a>
@@ -114,6 +133,11 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 
 		<td>
 		<a href="gallery.php#pie">Pie Chart</a>
+		<ul>
+		<li>2D, 2D with depth</li>
+		<li>Minimum slice</li>
+		<li>Slice explosion</li>		
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#pie"><img src="images/piethumb.PNG"></a>
@@ -122,6 +146,11 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 	<tr>
 		<td>
 		<a href="gallery.php#meter">Meter Chart</a>
+		<ul>
+		<li>Region coloring</li>
+		<li>Custom angles</li>
+		<li>Custom needles</li>	
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#meter"><img src="images/meterthumb.PNG"></a>
@@ -129,6 +158,10 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 
 		<td>
 		<a href="gallery.php#scatter">Scatter Chart</a>
+		<ul>
+		<li>Markers palette</li>
+		<li>Linear Scales</li>	
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#scatter"><img src="images/scatterthumb.PNG"></a>
@@ -137,6 +170,9 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 	<tr>
 		<td>
 		<a href="gallery.php#stock">Stock Chart</a>
+		<ul>
+		<li>CandleStick, Bar Stick</li>
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#stock"><img src="images/stockthumb.PNG"></a>
@@ -144,6 +180,9 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 
 		<td>
 		<a href="gallery.php#bubble">Bubble Chart</a>
+		<ul>
+		<li>Various Bubble Shapes</li>
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#bubble"><img src="images/bubblethumb.PNG"></a>
@@ -152,6 +191,10 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 	<tr>
 		<td>
 		<a href="gallery.php#difference">Difference Chart</a>
+		<ul>
+		<li>Curved or Straight Lines</li>
+		<li>Two color areas</li>	
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#difference"><img src="images/differencethumb.PNG"></a>
@@ -159,6 +202,10 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 
 		<td>
 		<a href="gallery.php#gantt">Gantt Chart</a>
+		<ul>
+		<li>Task progress</li>
+		<li>Projects timeline</li>	
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#gantt"><img src="images/ganttthumb.PNG"></a>
@@ -167,6 +214,13 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 	<tr>
 		<td>
 		<a href="gallery.php#combination">Combination Chart</a>
+		<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		</ul>		
 		</td>
 		<td><center>
 			<a href="gallery.php#combination"><img src="images/combothumb.PNG"></a>
