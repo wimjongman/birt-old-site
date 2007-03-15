@@ -54,7 +54,6 @@
 				<li><a href="#reports">Report Developers</a></li>
 				<li><a href="#standalone">Standalone Chart Users</a></li>
 				<li><a href="#developers">Developers/Contributors</a></li>
-				<li><a href="#developers">Developers/Contributors</a></li>
 <li><a href="http://wiki.eclipse.org/index.php/BIRT/FAQ/Charts2.1">Charting FAQ</a></li>				
 			</ul>
 		</blockquote>	
@@ -64,7 +63,7 @@
 The Eclipse Chart Engine is a complete open-source charting library that can be used either standalone or embedded within BIRT Reports. It includes the following components:
 </p>
 <ul class="midlist">
-	<li>A chart builder user interface, featuring live preview</li> <br><a href="images/chartbuildermid.png" target="_blank"><img src="images/chartbuilderthumnail.PNG"></a>
+	<li>A chart builder user interface, featuring live preview</li> <br><a href="images/chartbuildermid.PNG" target="_blank"><img src="images/chartbuilderthumnail.PNG"></a>
     <li>A rich model API based on the Eclipse Modeling Framework (EMF)</li>
 	<li>An engine API to load/save the model to XML, bind data, and render charts</li>
 </ul>
