@@ -33,7 +33,6 @@
 		<blockquote>
 			<ul>
 				<li><a href="#committers">Project Committers</a></li>
-				<li><a href="#participants">Project Participants</a></li>
 				<li><a href="#initial_contribution">Initial Code Contribution</a></li>
 			</ul>
 		</blockquote>
@@ -57,60 +56,31 @@
 				<a href="http://www.ibm.com" target="_blank">
 				http://www.ibm.com</a>
 			</li>
-		</ul>
-		<p>
-			BIRT uses the standard Eclipse process to elect new committers. 
-		</p>
-
-
-		<h2><a name="participants"></a>Project Participants</h2>
-		<p>
-			Companies or entities that are providing feedback on requirements, design or testing the software:
-		</p>
-		<ul class="midlist">
 			<li>
-				Siebel –
-				<a href="http://www.siebel.com" target="_blank">
-				http://www.siebel.com</a>
+				InetSof –
+				<a href="http://www.inetsoft.com" target="_blank">
+				http://www.inetsoft.com</a>
 			</li>
 			<li>
-				PeopleSoft –
-				<a href="http://www.peoplesoft.com" target="_blank">
-				http://www.peoplesoft.com</a>
-			</li>
-			<li>
-				Data Beacon –
-				<a href="http://www.databeacon.com" target="_blank">
-				http://www.databeacon.com</a>
-			</li>
-			<li>
-				Niku Corporation –
-				<a href="http://www.niku.com" target="_blank">
-				http://www.niku.com</a>
-			</li>
-			<li>
-				State Street Bank –
-				<a href="http://www.statestreetbank.com" target="_blank">
-				http://www.statestreetbank.com</a>
-			</li>
-			<li>
-				Accept Software Corporation –
-				<a href="http://www.acceptsoft.com" target="_blank">
-				http://www.acceptsoft.com</a>
-			</li>
-			<li>
-				Tsinghua University (Beijing, China) –
+				Tsinghua University (Beijing, China)  –
 				<a href="http://www.sist.tsinghua.edu.cn/Article_show_eng1.asp?articleID=486" target="_blank">
-				http://www.sist.tsinghua.edu.cn/Article_show_eng1.asp?articleID=486</a>
-				and <a href="http://www.sist.tsinghua.edu.cn/index.asp" target="_blank">
-				http://www.sist.tsinghua.edu.cn/index.asp</a>
-			</li>
+				http://www.sist.tsinghua.edu.cn/Article_show_eng1.asp?articleID=486</a> and
+				<a href="http://www.sist.tsinghua.edu.cn/index.asp">http://www.sist.tsinghua.edu.cn/index.asp</a>
+			</li>			
+
+
+
+
 		</ul>
+		<p>
+			BIRT uses the standard <a href="http://www.eclipse.org/projects/dev_process/new-committer.php">Eclipse process</a> to elect new committers. 
+		</p>
+
 
 
 		<h2><a name="initial_contribution"></a>Initial Code Contribution</h2>
 		<p>
-			During the six months prior to the creation of the Eclipse BIRT project, Actuate has been actively researching and developing capabilities that correspond to the initial BIRT projects. This has involved researching the requirements and needs for the XML Report Design, development of initial code, and investigating utilizing existing commercial code from other Actuate products. Actuate is seeding the BIRT project by donating the work from this research and development. Specifically:
+During the six months prior to the creation of the Eclipse BIRT project, Actuate was actively researching and developing capabilities that correspond to the initial BIRT projects. This involved researching the requirements, developing design for the BIRT XML Report Design, and development of initial code. Actuate seeded the BIRT project by donating the work from this research and development. Specifically:
 		</p>
 		<ul class="midlist">
 			<li>
@@ -124,40 +94,31 @@
 
 				<b>Report Design Object Model Component</b>
 				<br>
-				A component that encapsulates
-				  the logic of resolving report element properties based on report object
-				  hierarchy, style sheets and report scripting, as well as providing report
-				  design read/write and persistency. A subset of the functionality with
-				  unit test programs has been completed.
+A component that encapsulates the logic of resolving report element properties based on report object hierarchy, style sheets and report scripting, as well as providing report design read/write and persistency. Initial design work, implementation, and unit tests were contributed.
 			</li>
 			<li>
 				<b>Report Execution and Rending Engine Component</b>
 				<br>
-				A component that takes
-				  a report design file as input and generates various report output format
-				  such as HTML, PDF, and PostScript for printing. A subset of the functionality
+A component that takes a report design file as input and generates various report output format such as HTML, PDF, and PostScript for printing. Initial design work, implementation, and unit tests were contributed.
 			</li>
 			<li>
 				<b>Report Designer</b>
 				<br>
-				An Eclipse plug-in that helps users design report
-				  layout through a user friendly GUI. A subset of the functionality with
-				  unit test program has been completed.
+An Eclipse plug-in that helps users design report layout through a user friendly GUI. Initial design work, implementation, and unit tests were contributed.
 			</li>
 		</ul>
 		<p>
-			Innovent and Actuate have 10 years of experience in the business intelligence
-			market. The BIRT project will involve a significant number of experienced
-			developers in this field and will work with the Eclipse community to build
-			on this initial code to deliver capabilities to market as soon as possible.
+Innovent and Actuate have over 10 years of experience each in the business intelligence market. 
+The initial contribution for the BIRT project involved a significant number of experienced developers in 
+this field and, going forward, the project is working with the Eclipse community to build on this initial code 
+to deliver marketing leading reporting functionality to the open source Eclipse ecosystem.
 		</p>
 		<p>
-			In addition to the Actuate research and development work, Actuate is working
-			with other Eclipse members to leverage existing code in other areas.
+In addition to the Actuate research and development work, 
+Actuate is working with other Eclipse members to leverage existing code in other areas.
 		</p>
 
 	</div>
-	$projectLinksSideItem
 </div>
 
 

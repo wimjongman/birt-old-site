@@ -31,27 +31,47 @@
 		<h1><a name="top"></a>$pageTitle</h1>
 
 <p>
-Interested in joining the BIRT project as a contributor? Maybe you found a bug and made a patch to the source code to address this, or perhaps you would like to make significant contribution in a specific area.<br>
+Interested in joining the BIRT project as a contributor? Maybe you found a bug and made a patch to the source code to address this, or perhaps you would like to make significant contribution in a specific area.
+</p>
+<p>
+You can submit patches and minor enhancements via Bugzilla (see below). 
+If you contribute a number of quality patches to the BIRT project, an existing project Committer 
+may suggest you become a Committer yourself -- this would allow you to contribute directly to the source 
+code for the project. In this case, the process outlined in the 
+<a href="http://www.eclipse.org/birt/phoenix/project/charter.php#roles">BIRT Project Charter</a> would be followed to elect you to Committer status.
+</p>
+<p>
+For more significant contributions to an existing area of the project, the BIRT Project Management Committee (PMC) has outlined a process that provides for review of the proposed contribution, as well as working towards becoming a Committer for that contribution. This is also described below.
 </p><p>
-For patches to specific bugs, you should make sure that the bug is entered in bugzilla (with clear steps to reproduce the problem) and then attach your code changes to the same bugzilla entry with any explanation required in order to apply the fix to the source code. One of the existing project Committers will then review this and contact you as needed.<br>
+In either case, the Eclipse Foundation needs to ensure that all committers to the code and/or the 
+website and/or the bug system understand their role in safeguarding the intellectual property of Eclipse. 
+The Foundation also needs to ensure that we have accurate records of the people who are acting as change 
+agents on the projects. To understand this better, you should review the 
+<a href="http://www.eclipse.org/legal/newcommitter.php">Eclipse New Committer guidelines</a>.
 </p><p>
 
-If you contribute a number of quality fixes to the BIRT project, an existing project Committer may suggest you become a Committer yourself -- this would allow you to contribute directly to the source code for the project. In this case, the process outlined in the  <a href="http://www.eclipse.org/birt/phoenix/project/charter.php#roles">BIRT Project Charter</a> would be followed to elect you to Committer status.<br>
-</p><p>
-
-For more significant contributions to an existing area of the project, the BIRT Project Management Committee (PMC) has outlined a process that provides for review of the proposed contribution, as well as working towards becoming a Committer for that contribution. This is described below.<br>
-</p><p>
-
-In either case, the Eclipse Foundation needs to ensure that all committers to the code and/or the website and/or the bug system understand their role in safeguarding the intellectual property of Eclipse. The Foundation also needs to ensure that we have accurate records of the people who are acting as change agents on the projects. To understand this better, you should review the Eclipse  <a href="http://www.eclipse.org/legal/newcommitter.php">New Committer guidelines</a>.<br>
-</p><p>
+<h1>Process for Patch and Minor Enhancement Contributions</h1> 
+<p>
+For patches to specific bugs, you should make sure that there is a <a href="https://bugs.eclipse.org/bugs/">Bugzilla</a> 
+entry to track the item (with clear steps to reproduce the problem in the case of a bug) and then attach 
+your code changes to the same Bugzilla entry with any explanation required in order to apply your changes 
+to the source code. One of the existing project Committers will then review this and contact you as needed.
+</p>
+<p>
+For enhancements, we also request that you provide:
+</p>
+<ul>
+<li>A good example that illustrates the new feature in action. This will help us and the community understand how to use the new feature.</li>
+<li>Documentation on the feature. This should describe the purpose of the feature, any public APIs in detail, any User Interface options and so on. This will provide a basis for the final documentation that gets incorporated into the project.</li>
+</ul>
 
 <h1>Process for Significant Contributions</h1> 
 
-The BIRT PMC has outlined the process under which a new contributor would get started with a significant contribution in an existing area of the project. 
-
-Note that if the proposed contribution is for a new sub-project with BIRT, then the process is different and is described in the <a href="http://www.eclipse.org/projects/dev_process/proposal-phase.php">Proposal Phase</a> of the <a href="http://www.eclipse.org/projects/dev_process/index.php">Eclipse Development Process</a>.
-
-This process is intended to work in tandem with, and does not replace, the Eclipse Foundation <a href="http://www.eclipse.org/legal/newcommitter.php">New Committer guidelines</a>.
+The BIRT PMC has outlined the process under which a new contributor would get started with a significant 
+contribution in an existing area of the project. Note that if the proposed contribution is for a new sub-project with 
+BIRT, then the process is different and is described in the <a href="http://www.eclipse.org/projects/dev_process/proposal-phase.php">Proposal Phase</a> 
+of the <a href="http://www.eclipse.org/projects/dev_process/development_process.php">Eclipse Development Process</a>.
+This process is intended to work in tandem with, and does not replace, the Eclipse Foundation <a href="http://www.eclipse.org/projects/dev_process/new-committer.php">New Committer guidelines</a>.
 <ol>
 <li>New contributor develops a proposal a submits this to the BIRT PMC 
 <li>The PMC and existing BIRT contributors review the proposal 
@@ -74,7 +94,7 @@ This process is intended to work in tandem with, and does not replace, the Eclip
 <li>Once the new controibutor(s) are active on the project, the PMC would nominate and vote on the "Observer" becoming a full member of the PMC. 
 </ol>
 	</div>
-	$projectLinksSideItem
+
 </div>
 
 
