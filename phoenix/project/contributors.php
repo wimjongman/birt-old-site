@@ -57,7 +57,7 @@
 				http://www.ibm.com</a>
 			</li>
 			<li>
-				InetSof –
+				InetSoft –
 				<a href="http://www.inetsoft.com" target="_blank">
 				http://www.inetsoft.com</a>
 			</li>
@@ -111,7 +111,7 @@ An Eclipse plug-in that helps users design report layout through a user friendly
 Innovent and Actuate have over 10 years of experience each in the business intelligence market. 
 The initial contribution for the BIRT project involved a significant number of experienced developers in 
 this field and, going forward, the project is working with the Eclipse community to build on this initial code 
-to deliver marketing leading reporting functionality to the open source Eclipse ecosystem.
+to deliver market leading reporting functionality to the open source Eclipse ecosystem.
 		</p>
 		<p>
 In addition to the Actuate research and development work, 

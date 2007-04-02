@@ -102,11 +102,6 @@ The material here is for people who want know more about the BIRT project or who
 				Who is running the project?
 			</li>
 			<li>
-				<a href="/birt/phoenix/project/contribute.php">How to Contribute to the BIRT Project</a> –
-
-				Find out how to contribute development work to the BIRT project.
-			</li>
-			<li>
 				<a href="/birt/phoenix/project/contributors.php">Project Contributors and Committers</a> –
 
 				List of the project contributors and committers.
