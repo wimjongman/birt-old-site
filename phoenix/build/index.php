@@ -149,11 +149,12 @@ This is the same directory you used for GEF.
 BIRT sources data for reports using the Data Tools Platform Project. Download 
 <a href="http://www.eclipse.org/datatools/downloads.html">
 DTP version 1.5</a>. Note that 1.5 is only a requirement for versions of BIRT newer than
-BIRT 2.2 M6.  2.2 M6 is the last version of BIRT to include the required DTP plugins in the designer download.  The
-allinone download will continue to include the required DTP plugins though.  Additionally a separate download is now
+BIRT 2.2 M6.  2.2 M6 is the last version of BIRT to include the required DTP plugins in the designer download.
+</p><p>  
+The BIRT allinone download will continue to include the required DTP plugins.  Additionally a separate download is now
 available on the BIRT site that is a subset of the DTP plugins.  This package referred to as the BIRT/DTP Integration package
 contains only the required DTP Plugins needed for BIRT to function. 
-
+</p>
 
 
 
