@@ -30,6 +30,7 @@
 				<li><a href="#designer">Designer Install</a></li>
 				<li><a href="#gef">GEF</a></li>
 				<li><a href="#emf">EMF</a></li>
+				<li><a href="#dtp">DTP</a></li>
 				<li><a href="#birt">BIRT</a></li>
 				<li><a href="#optional">Optional Eclipse Link File</a></li>
 				<li><a href="#itext">iText</a></li>
@@ -85,6 +86,7 @@ And
 <li>GEF 3.3.
 <li>EMF 2.3.
 <li>JRE 1.5.
+<li>DTP 1.5.
 </ul>
 
 
@@ -103,7 +105,7 @@ Download and install the
 <a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
 Eclipse Platform 3.1/3.2/3.3 Release</a>
 <p>
-(Note: Eclipse, EMF, GEF and BIRT are all available from the
+(Note: Eclipse, EMF, GEF, DTP and BIRT are all available from the
 <a href="http://www.eclipse.org/downloads/index.php">Eclipse download page</a>.)
 <p>
 Eclipse comes as a zip file or tar file. On Windows, unzip the install file
@@ -140,6 +142,20 @@ download page.
 <p>
 EMF also comes as a zip file. Unzip EMF into directory that contains Eclipse.
 This is the same directory you used for GEF.
+
+<h2><a name="dtp"></a>DTP</h2>
+
+<p>
+BIRT sources data for reports using the Data Tools Platform Project. Download 
+<a href="http://www.eclipse.org/datatools/downloads.html">
+DTP version 1.5</a>. Note that 1.5 is only a requirement for versions of BIRT newer than
+BIRT 2.2 M6.  2.2 M6 is the last version of BIRT to include the required DTP plugins in the designer download.  The
+allinone download will continue to include the required DTP plugins though.  Additionally a separate download is now
+available on the BIRT site that is a subset of the DTP plugins.  This package referred to as the BIRT/DTP Integration package
+contains only the required DTP Plugins needed for BIRT to function. 
+
+
+
 
 <h2><a name="birt"></a>BIRT</h2>
 
