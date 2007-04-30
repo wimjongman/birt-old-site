@@ -30,10 +30,11 @@
 		<h2>Eclipse Forum Europe 2007 Presentation</h2>
 
 		<p>
-			<a href="efe2007/BirtIntegration.ppt">Integrating BIRT</a><br>
+		<ul>
+			<li><a href="efe2007/BirtIntegration.ppt">Integrating BIRT</a><br>
 			This Presentation discusses the BIRT Design Engine and Report Engine APIs.
-			<ul>
-			<li>Source Code for the examples can be found <a href="efe2007/efe2007.zip">here</a>.  These examples were built with BIRT 2.2 M5</li>
+			
+			Source Code for the examples can be found <a href="efe2007/efe2007.zip">here</a>.  These examples were built with BIRT 2.2 M5</li>
 			</ul>
 			<br>
 		</p>		

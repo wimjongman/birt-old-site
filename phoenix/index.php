@@ -201,6 +201,12 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+	 				<a href="presos">Eclipse Forum Europe 2007 Presentation</a>
+					<span class="dates">
+						04/30/07
+					</span>
+				</li>			
+				<li>
 	 				<a href="project/notable2.2M6.php">Notable Features - BIRT 2.2 Milestone 6</a>
 					<span class="dates">
 						04/17/07
@@ -332,6 +338,14 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://eclipse.sys-con.com/read/367994.htm">
+						How to Develop an Application Using the Eclipse BIRT Design Engine API  
+					</a>
+					<span class="dates">
+						04/30/07
+					</span>
+				</li>			
+				<li>
 					<a href="http://www.itjungle.com/tlb/tlb021307-story03.html">
 						Zend Upgrades Commercial Add-Ons for Its PHP Engine  
 					</a>
@@ -400,16 +414,6 @@
 						04/17/06
 					</span>
 				</li>						
-				<li>
-					<a href="http://www.informationweek.com/windows/showArticle.jhtml?articleID=183701657&subSection=Open+Source">
-						Eclipse Expands, Urges Shift Away From Windows User Interface
-					</a>
-					from
-					<a href="http://www.informationweek.com" target="_blank">InformationWeek</a>.
-					<span class="dates">
-						03/23/06
-					</span>
-				</li>				
 
 		
 			</ul>
