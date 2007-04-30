@@ -35,6 +35,12 @@
 		
 			<ul>
 				<li>
+	 				<a href="presos">Eclipse Forum Europe 2007 Presentation</a>
+					<span class="dates">
+						04/30/07
+					</span>
+				</li>				
+				<li>
 	 				<a href="project/notable2.2M6.php">Notable Features - BIRT 2.2 Milestone 6</a>
 					<span class="dates">
 						04/17/07

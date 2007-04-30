@@ -35,6 +35,14 @@
 			<ul>
 
 				<li>
+					<a href="http://eclipse.sys-con.com/read/367994.htm">
+						How to Develop an Application Using the Eclipse BIRT Design Engine API  
+					</a>
+					<span class="dates">
+						04/30/07
+					</span>
+				</li>
+				<li>
 					<a href="http://www.itjungle.com/tlb/tlb021307-story03.html">
 						Zend Upgrades Commercial Add-Ons for Its PHP Engine  
 					</a>
