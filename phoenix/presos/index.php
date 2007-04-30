@@ -25,6 +25,20 @@
 	<div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+		
+		
+		<h2>Eclipse Forum Europe 2007 Presentation</h2>
+
+		<p>
+			<a href="efe2007/BirtIntegration.ppt">Integrating BIRT</a><br>
+			This Presentation discusses the BIRT Design Engine and Report Engine APIs.
+			<ul>
+			<li>Source Code for the examples can be found <a href="efe2007/efe2007.zip">here</a>.  These examples were built with BIRT 2.2 M5</li>
+			</ul>
+			<br>
+		</p>		
+		
+		
 	<h2>EclipseCon 2007 Presentations</h2>
 		
 			<p>
