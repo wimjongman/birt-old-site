@@ -35,6 +35,13 @@
 		
 			<ul>
 				<li>
+	 				<a href="http://reporting.eu-survey.com/webprod/cgi-bin/askiaext.dll?Action=StartSurvey&T1=ActuateOSw2&lin=10">2nd Annual Open Source BI Survey</a>
+					 Click here to participate and add your opinions. 
+					<span class="dates">
+						05/03/07
+					</span>
+				</li>				
+				<li>
 	 				<a href="presos">Eclipse Forum Europe 2007 Presentation</a>
 					<span class="dates">
 						04/30/07
