@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "New and Notable Features within BIRT 2.2 Milestone 6";
+	$pageTitle 		= "New and Notable Features within BIRT 2.2 Release Candidate 0";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
