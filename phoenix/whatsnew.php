@@ -37,7 +37,7 @@
 				<li>
 	 				<a href="project/notable2.2RC0.php">Notable Features - BIRT 2.2 Release Candidate 0</a>
 					<span class="dates">
-						05/04/07
+						06/04/07
 					</span>
 				</li>
 				<li>
