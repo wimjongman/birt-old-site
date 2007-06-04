@@ -34,7 +34,12 @@
 		<h3>What's New</h3>
 		
 			<ul>
-
+				<li>
+	 				<a href="project/notable2.2RC0.php">Notable Features - BIRT 2.2 Release Candidate 0</a>
+					<span class="dates">
+						05/04/07
+					</span>
+				</li>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC0-200705210630">
 						BIRT 2.2RC0
