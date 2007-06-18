@@ -201,6 +201,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC3-200706141812">
+						BIRT 2.2RC3
+					</a>
+					is now available for download.  
+					<span class="dates">
+						06/15/07
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC2-200706011658">
 						BIRT 2.2RC2
 					</a>
@@ -311,20 +320,7 @@
 					<span class="dates">
 						12/21/06
 					</span>
-				</li>			
-				<li>
-					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321442598&rl=1">
-						<i>BIRT: A Field Guide to Reporting</i>
-					</a>
-					and 
-					<a href="http://www.awprofessional.com/bookstore/product.asp?isbn=0321443853&rl=1">
-						<i>Integrating and Extending BIRT</i> 
-					</a>
-					- Two books covering many aspects of BIRT are now available from Addison-Wesley. 
-					<span class="dates">
-						12/08/06
-					</span>
-				</li>																												
+				</li>																															
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
