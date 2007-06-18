@@ -35,6 +35,15 @@
 		
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC3-200706141812">
+						BIRT 2.2RC3
+					</a>
+					is now available for download.  
+					<span class="dates">
+						06/15/07
+					</span>
+				</li>				
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC2-200706011658">
 						BIRT 2.2RC2
 					</a>
