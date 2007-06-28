@@ -52,7 +52,7 @@
 				<li><a href="#jump_24">XML Source Editor</a></li>
 				<li><a href="#jump_25">Property Editor Changes</a></li>
 				<li><a href="#jump_26">Advanced Properties</a></li>				
-				<li><a href="#jump_26">Miscellaneous</a></li>				
+				<li><a href="#jump_27">Miscellaneous</a></li>				
 
 
 				
