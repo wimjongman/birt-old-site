@@ -29,9 +29,18 @@
 
 
 <body>
+
+<div id="container">
+<div id="maincontent">
+<div id="midcolumn">
+<h1>BIRT 2.2 Project Plan</h1>
+
 <p class="head">BIRT Project 2.2 Plan</p>
 
-<p>Last revised February 7, 2007</p>
+<p>Last revised June 27, 2007</p>
+
+<p class="subhead"><img src="new.gif" alt="New since last update" height="12" width="12" />
+marks interesting changes since the previous draft of February 7, 2007 </p>
 
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
 
@@ -282,7 +291,7 @@ Reference Platforms</font></b></div>
   </tbody>
 </table>
 
-<br>
+<br />
 
 <table border="1">
 
@@ -414,9 +423,9 @@ BIRT Runtime 2.2 and Eclipse BIRT Charts 2.2 Reference Platforms</font></b></div
 </table>
 
 *Window system only required when displaying charts within SWT or SWING
-windows.<br>
+windows.<br />
 
-<br>
+<br />
 
 <table border="1">
 
@@ -447,7 +456,7 @@ Application Server Reference Platform</font></b></div>
   </tbody>
 </table>
 
-<br>
+<br />
 
 <table border="1">
 
@@ -478,7 +487,7 @@ JDBC Reference Platforms</font></b></div>
   </tbody>
 </table>
 
-<br>
+<br />
 
 <table border="1">
 
@@ -496,7 +505,7 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
     <tr>
 
-      <td width="405">Mozilla Firefox 1.5</td>
+      <td width="405">Mozilla Firefox 1.5, 2.0 <img src="new.gif" alt="New since last update" height="12" width="12" /> </td>
 
     </tr>
 
@@ -515,7 +524,7 @@ Browsers and Viewers Reference Platforms</font></b></div>
   </tbody>
 </table>
 
-<br>
+<br />
 
 <h4>Internationalization</h4>
 
@@ -687,18 +696,7 @@ project makes the flat file data source more flexible by allowing
 delimiters
 other than just the comma character. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152210">152210</a>]</p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Parameters for
-XML Data Sources</span> In certain situations it is important to
-be able to
-specify parameters to an XML data source. An example of this is an XML
-data
-source that needs to fetch information from a finance web site given a
-certain stock ticker symbol . Without being able to specify a symbol,
-the
-data source would be at a loss to determine what is to be fetched. This
-project examines the capability to provide parameters to an XML data
-source.
-[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=116636">116636</a>]</p>
+<p style="text-indent: 25pt; text-decoration: line-through;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Predicates in
 XML Data Sets</span> It is not currently possible to apply
@@ -740,23 +738,27 @@ columns.
 
 <p><span style="font-weight: bold;">Emitters</span></p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Microsoft Word
-and Excel Output</span>s Users who receive reports often want to
+<p style="text-indent: 25pt;"><span style="font-weight: bold;">Microsoft Word, Excel, and
+PowerPoint<img src="new.gif" alt="New since last update" height="12" width="12" />
+Output</span>s Users who receive reports often want to
 distribute
 these reports to a wider audience via email in order to share
 information. In
 the process of doing this, they may want to export the report to a
 common
-format such as MS Word or Excel, make the edits and then distribute the
-Word
-file or Excel spreadsheet. For usability, the receiver of the email
+format such as MS Word, Excel, or PowerPoint make the edits and then
+distribute the
+Word, Excel spreadsheet, or PowerPoint file. For usability, the
+receiver of the email
 would
 rather access the document as an MS Office file. PDF is often not an
 option
-since the user wants to make edits to the file. The MS Word and Excel
+since the user wants to make edits to the file. The MS Word, Excel, and
+PowerPoint
 report
 format converters approximate the look and spacing of elements in the
-original report to Word and Excel formats respectively. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159491">159491</a>]</p>
+original report to Word, Excel, and PowerPoint formats respectively.
+[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159491">159491</a>]</p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Postscript
 Output</span> The widespread availability and acceptance of
@@ -784,12 +786,7 @@ extensible so that custom data sources can now be made available and
 selected
 from in the Data Explorer view. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159495">159495</a>]</p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved Project
-Explorer View</span> This project looks at improving the
-usability of the
-project navigator view especially since this view is not available in
-the RCP
-based designer. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159496">159496</a>]</p>
+<p style="text-indent: 25pt; text-decoration: line-through;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved and
 Extensible Property Editor View</span> This project aims to make
@@ -898,33 +895,6 @@ project aims to allow the report developer to define this default
 value.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153495">153495</a>]</p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Dataset Ad-hoc
-Parameters </span>A report such as an Employee report may allow
-an end user
-to supply numerous report parameters such as first name, last name,
-telephone
-extension, office location amongst many others. Based on the values
-supplied
-by the end user the Employee report would filter the records fetched
-from the
-database using only those parameters that the end user supplied and
-ignoring
-other &quot;unsupplied&quot; parameters. In order to meet this requirement in
-BIRT
-currently, the report developer needs to utilize scripting. This
-project
-explores providing ad-hoc dataset parameters which in most respects
-behave
-like regular dataset parameters. They differ in that they do not have
-default
-values and if a value is not specified when a report is run then they
-are not
-used in filtering the rows fetched from a data source. Additionally,
-the user
-can specify multiple items for a single parameter. For example, the
-user can
-request all Employees located in the US or Canada. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142609">142609</a>]</p>
-
 <p><span style="font-weight: bold;">Usability</span></p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Debugging</span>
@@ -942,18 +912,28 @@ the error. If there is an error in the XML underlying the report
 design, then
 focus would shift to the line in the XML with the error. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159502">159502</a>]</p>
 
+<p style="text-indent: 25pt;"><span style="font-weight: bold;">Aggregation Builder </span>Novice
+users of BIRT sometimes find it challenging to define aggregations of
+data in a BIRT report. This is especially true for some of the more
+complex aggregation functions that take numerous parameters. This
+project looks at alleviating this by making it easier to define
+aggregations in a report.&nbsp;[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=130686">130686</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
+</p>
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart Designer
 Usability</span> This project aims at improving the layout and
 general
-usability of the chart designer to include areas such as better
+usability of the chart designer to include areas such as new icons,
+better
 grouping of
-data, reorganize the UI for quick access to commonly used settings, the
+data, reorganize the UI for easier scripting for charts, quick access
+to commonly used settings, the
 interactivity UI, easy creation of drill-through URL's using chart
 values as
 parameters, navigation improvements, and Eclipse wizard-like error
-notification. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132040">132040</a>]</p>
+notification.&nbsp;[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132040">132040</a>]</p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Ease of Plugin
+<p style="text-indent: 25pt;"><span style="font-weight: bold;"></span>&nbsp;<span style="font-weight: bold;">Ease of Plugin
 Development</span> The Open Data Access (ODA) framework is key
 component of
 the Data Tools Project (DTP). ODA presents the Java developer with a
@@ -997,13 +977,6 @@ types of emitters.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.
 
 <p><span style="font-weight: bold;">Scripting</span></p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved
-JavaScript Editor</span> JavaScript is very approachable by a
-broad class of
-developers. This project improves the support for JavaScript in BIRT
-reports,
-including more powerful debugging capabilities. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159508">159508</a>]</p>
-
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Scripting
 Implementation</span> This project proposes to enhance the
 scripting
@@ -1020,7 +993,7 @@ scripting API's for both Java and JavaScript based scripting. [Bugzilla
 ID:
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132031">132031</a>]</p>
 
-<p><span style="font-weight: bold;">Depoyment and
+<p><span style="font-weight: bold;">Deployment and
 Integration</span></p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Easy Deployment
@@ -1034,7 +1007,12 @@ Runtime
 and reports in their application using easy-to-use tools. This project
 explores the use of tools from the WTP project in order to accomplish
 this
-goal. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159510">159510</a>]</p>
+goal. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159510">159510</a>]
+This project also provides developers the ability to easily deploy
+charts in their applications&nbsp;using easy-to-use tools from the
+WTP project. [Bugzilla ID:
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=181746">181746</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
+</p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">JSP Tag Library
 for Charts</span> Java Server Pages is a widely used technology
@@ -1042,67 +1020,55 @@ in web
 application development. In order to simplify the integration of Charts
 within a JSP based application, this project will provide a JSP tag
 library.
-This library can be used with standalone charts as well. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159511">159511</a>]</p>
+This library can be used only with standalone charts. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159511">159511</a>]</p>
 
 <p><span style="font-weight: bold;">Charting</span></p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">New Chart
 Types</span> This project extends the different types of charts
 available to
-include Gantt, Bubble, Difference/Range, Radar/Polar, Donut, Tubes for
-2d/2d+/3d and richer Meter charts. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147770">147770</a>]</p>
-
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Smart
-Labels</span> The layout of various chart elements becomes
-complicated when
-there are a lot of data points. This project will focus on
-automatically
-setting font sizes based on the chart size, auto wrapping, and auto
-positioning of X-Axis labels. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=119068">119068</a>]</p>
+include Gantt, Bubble, Difference<span style="text-decoration: line-through;"></span>, Cones,
+Tubes for
+2d/2d+3d<span style="text-decoration: line-through;"></span>.
+Enhancement of cone and pyramid types
+to support stacking.<span style="font-size: 11pt; line-height: 115%; font-family: Calibri;"></span>
+[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147770">147770</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
+</p>
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Scaling and
 Grouping</span> This project improves the scaling and grouping of
 charts.
-Items include 2 levels X grouping (e.g. by Year and months, shown on
-Axis as
-2 layers of labels); improved datetime and range grouping; multiple Y
+Items include improved datetime and range grouping; multiple Y
 aggregates for X series grouping (each Y series can use its own
 aggregate
-function); multiple Y series grouping (each Y series can have its own
-grouping key); support linear axis for Line/Bar/Area (non-stacked)
+function); support linear axis for Line/Bar/Area (non-stacked)
 charts;
 datetime scaling support; overflow data handling; steps number
-customization;
-integer scale support. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159513">159513</a>]</p>
+customization. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159513">159513</a>]</p>
 
-<p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart API</span>
-This project aims to simplify the chart model API and make it
-accessible from
-scripting. It will only expose a set of clear interfaces that determine
-what
-can be changed using scripting. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159514">159514</a>]</p>
+<p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart API</span> This
+project aims to provide a simple API for chart scripting inside BIRT
+reports similar to the design engine script API, and that integrates
+with it. This is another API to easily modify the chart model inside
+BIRT report scripts. In addition, the chart engine API has been
+centralized
+into a single class called 'ChartEngine'. This provides access to all
+the chart engine interfaces&nbsp;making it easier for a user to get
+started with the chart engine API.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159514">159514</a>]</p>
 
-<p><span style="font-weight: bold;">Multiple Choices
-in Single Drill Through
-Action</span> In a sales analysis report that looks at the
-revenue generated
-by various products, it is useful to present multiple options for drill
-down
-to the end user. For example, when the mouse is positioned over the
-revenue
-for Classic Cars, which contains a hyperlink, a pop-up could let the
-end user
-select either &quot;Revenue By Region&quot; or &quot;Revenue By Sales Person&quot;.
-Selecting
-&quot;Revenue By Region&quot; would drill through to a report that presents
-regional
-distribution of revenue for Classic Cars. Selecting &quot;Revenue By Sales
-Person&quot;
-would drill through to a report that lists the sales persons who have
-sold
-Classic Cars. This concept would be useful for charts as well.
-[Bugzilla ID:
-<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=151903">151903</a>]</p>
+<p style="text-indent: 25pt;"><span style="font-weight: bold;">Multiple Aggregations per Series</span>
+When doing base series aggregations, all orthogonal series definitions
+have to share the same function. This project looks at allowing each
+orthogonal series definition to specify its own aggregate function. The
+aggregate function defined in the base series definition is treated as
+the default function.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=170057">
+170057</a>]</p>
+
+<p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart Examples View </span>A
+new chart examples view lets developers get started
+with
+building chart&nbsp;by viewing charting examples. [Bugzilla ID:
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159608">159608</a>]<img src="new.gif" alt="New since last update" height="12" width="12" /></p>
 
 <h2><a name="Defects" id="Defects">Defects</a></h2>
 
@@ -1113,7 +1079,13 @@ of defects</a> targeted for resolution in BIRT 2.2 can be found
 in the
 bugzilla database on <a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
 
-<p></p>
+</div>
+
+</div>
+
+</div>
+
+
 </body>
 <br>
 <br>
