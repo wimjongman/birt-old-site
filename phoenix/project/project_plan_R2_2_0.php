@@ -30,9 +30,7 @@
 
 <body>
 
-<div id="container">
-<div id="maincontent">
-<div id="midcolumn">
+
 <h1>BIRT 2.2 Project Plan</h1>
 
 <p class="head">BIRT Project 2.2 Plan</p>
@@ -1079,11 +1077,6 @@ of defects</a> targeted for resolution in BIRT 2.2 can be found
 in the
 bugzilla database on <a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
 
-</div>
-
-</div>
-
-</div>
 
 
 </body>
