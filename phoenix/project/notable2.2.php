@@ -278,8 +278,8 @@ Chart Example
 <p>
 BIRT provides output in various formats such as PDF and HTML.  These output formats are generated using BIRT emitters.  The framework provides Eclipse extension points to allow additional emitters to be created.  BIRT 2.2 provides a new XLS emitter.  
 </p>
-<img src="images/2.2/xlsemitter.PNG"><br>
-<i>Prototype XLS Emitter</i>
+<img src="images/2.2/xlsemitterfinal.png"><br>
+<i>XLS Emitter</i>
 
 
 <h1><a name="jump_12">Word Emitter</a></h1>
