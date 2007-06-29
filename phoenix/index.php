@@ -52,22 +52,22 @@
 	with your Java/J2EE application to produce compelling reports.
 	</p>
 	<table>
-	<tr>
-	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="db2.2.jpg"></a>
-	</td>
-
-
-	<td>
-	Get started now by going directly to the BIRT download page.
-	</td>
-	</tr>
     <tr>
 	<td>
 	<a href="http://download.eclipse.org/birt/downloads/index2.1.2.php"><img src="db2.1.2.jpg"></a>
 	</td>
-	    
+	<td>
+	Get started with the latest in the BIRT 2.1 series, the release used in many commercial products.
+	</td>	    
     </tr>		
+	<tr>
+	<td>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="db2.2.jpg"></a>
+	</td>
+	<td>
+	Get started with the newest major release, BIRT 2.2.
+	</td>
+	</tr>
 	</table>
 	<table>
 	<tr>
