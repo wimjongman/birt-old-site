@@ -35,6 +35,16 @@
 		
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.2
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.2.php">Notable Features - BIRT 2.2</a> 
+					<span class="dates">
+						06/29/07
+					</span>
+				</li>		
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC4-200706211707">
 						BIRT 2.2RC4
 					</a>

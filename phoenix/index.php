@@ -54,17 +54,25 @@
 	<table>
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="downloadbirt.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="db2.2.jpg"></a>
 	</td>
+
+
 	<td>
 	Get started now by going directly to the BIRT download page.
 	</td>
 	</tr>
+    <tr>
+	<td>
+	<a href="http://download.eclipse.org/birt/downloads/index2.1.2.php"><img src="db2.1.2.jpg"></a>
+	</td>
+	    
+    </tr>		
 	</table>
 	<table>
 	<tr>
 	<td>
-	<a href="birthelp.php"><img src="birthelp.jpg"></a>
+	<a href="birthelp.php"><img src="birthelpwide.jpg"></a>
 	</td>
 	<td>
 	Need help with BIRT?
@@ -73,7 +81,7 @@
 	</table>
 	<p>
 	BIRT provides core reporting features such as report layout,
-	data access and scripting.  The current released version is 2.1.2. Please try BIRT and
+	data access and scripting.  Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
 	through Bugzilla as explained on the <a href="community.php">community</a>
 	page.
@@ -200,7 +208,16 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
-			
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.2
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.2.php">Notable Features - BIRT 2.2</a> 
+					<span class="dates">
+						06/29/07
+					</span>
+				</li>				
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC4-200706211707">
 						BIRT 2.2RC4
@@ -325,12 +342,7 @@
 						01/16/07
 					</span>
 				</li>
-				<li>
-	 				<a href="project/notable2.2M2.php">Notable Features - BIRT 2.2 Milestone 2</a>
-					<span class="dates">
-						12/21/06
-					</span>
-				</li>																															
+																														
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
