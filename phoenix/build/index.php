@@ -152,8 +152,8 @@ contains only the required DTP Plugins needed for BIRT to function.
 <h2><a name="birt"></a>BIRT</h2>
 
 <p>
-Download <a href="http://download.eclipse.org/birt/downloads/">
-Release 2.1.2</a> (or later). Download only the
+Download <a href="http://download.eclipse.org/birt/downloads/index2.1.2.php">
+Release 2.1.2</a> (or <a href="http://download.eclipse.org/birt/downloads/>later</a>). Download only the
 BIRT designer framework for now: "birt-report-framework-2_1_2.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
