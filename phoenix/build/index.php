@@ -34,7 +34,6 @@
 				<li><a href="#birt">BIRT</a></li>
 				<li><a href="#optional">Optional Eclipse Link File</a></li>
 				<li><a href="#itext">iText</a></li>
-				<li><a href="#prototype">prototype.js</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
 				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
