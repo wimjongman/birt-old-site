@@ -55,7 +55,7 @@ requirements and instructions on the
 download page</a>.
 Otherwise, follow along below for detailed steps for installing BIRT.
 <p>
-The instructions here are for the Release 2.1/2.0.2 (and later) builds.
+The instructions here are for the Release 2.2/2.1.2 (and later) builds.
 <h2>Java</h2>
 <p>
  You'll need a <a href="http://java.sun.com">Java runntime environment (JRE)</a>
@@ -65,15 +65,7 @@ The instructions here are for the Release 2.1/2.0.2 (and later) builds.
 <p>
 BIRT is currently tested with the following configurations:<br>
 <ul>
-<li><b>BIRT 2.0.2</b>
-<li>Eclipse 3.1
-<li>GEF 3.1.
-<li>EMF 2.1.
-<li>JRE 1.4.2/JRE 1.5.
-</ul>
-And
-<ul>
-<li><b>BIRT 2.1/2.1.1</b>
+<li><b>BIRT 2.1.2</b>
 <li>Eclipse 3.2.
 <li>GEF 3.2.
 <li>EMF 2.2.
@@ -81,7 +73,7 @@ And
 </ul>
 And
 <ul>
-<li><b>BIRT 2.2M4 and higher</b>
+<li><b>BIRT 2.2</b>
 <li>Eclipse 3.3.
 <li>GEF 3.3.
 <li>EMF 2.3.
@@ -93,7 +85,7 @@ And
 <h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
 BIRT now supplies a <a href="http://download.eclipse.org/birt/downloads/">download</a> that incudes Eclipse, GEF, EMF and BIRT.  Use this
 download if you do not already have Eclipse installed.  You will still need iText.jar
-and prototype.js (this file is no longer needed with 2.1 or later builds), which are described below.  
+for the 2.1.2 install, which are described below.  
 
 
 <br>
@@ -162,8 +154,8 @@ contains only the required DTP Plugins needed for BIRT to function.
 
 <p>
 Download <a href="http://download.eclipse.org/birt/downloads/">
-Release 2.1.1</a> (or later). Download only the
-BIRT designer framework for now: "birt-report-framework-2_1_1.zip".
+Release 2.1.2</a> (or later). Download only the
+BIRT designer framework for now: "birt-report-framework-2_1_2.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
@@ -183,37 +175,23 @@ BIRT framework and unzip the contents to any directory.
 </ul>
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br><br> 
-If you are installing BIRT 2.2 M2 or later, download version 1.4.6 of iText instead of 1.3.<br><br>
-<b>BIRT 2.0.2</b><br>
-The itext-1.3.jar file needs to be copied to the plugins/org.eclipse.birt.report.engine.emitter.pdf_version/lib directory.
-<br><b>BIRT 2.1.0 (or later)</b><br>
+If you are installing BIRT 2.2, this file is already included. <br><br>
+<br><b>BIRT 2.1.2</b><br>
 The itext-1.3.jar file needs to be copied to the plugins/com.lowagie.itext_*/lib directory.
 
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1.1 or Later Note: </h3>
+<h3>Birt 2.1.2 (This file is included in the 2.2 release): </h3>
 <ul>
  To Support Asian fonts in PDF, download the following jar and place it in the plugins/com.lowagie.itext_*/lib directory.
 <li><a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a>.
 
  </ul>
 </div>
-<div class="homeitem3col">
-<h3>Birt 2.2 M2 or Later Note: </h3>
-<ul>
- The iText version has been updated, download the following jar and place it in the plugins/com.lowagie.itext_*/lib directory.
-<li><a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">iText 1.4.6</a>.
- </ul>
-</div>
+
 <br>
 </p>
 
-<p>
-<h2><a name="prototype"></a>prototype.js</h2>
-This step is only required if installing BIRT 2.0.2 or earlier.<br>
-Download <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> from <a href="http://dev.conio.net/repos/prototype/dist/">dev.conio.net</a>. Copy it into the plugins/org.eclipse.birt.report.viewer_version/birt/ajax/lib directory.
-<br>
-</p>
 
 <br>
 
@@ -249,44 +227,17 @@ default location, this is "C:\program files\eclipse\plugins".
 
 <h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
-<div class="homeitem3col">
-<h3>Birt 2.0.2 Runtime Note: </h3>
-<ul>
- <li>If you are installing the BIRT 2.0.2 Runtime (J2EE Application Server Deployment),
- The iText and prototype files will need to be copied to the birt-runtime/Web Viewer Example directory structure.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
- <li>Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /Web Viewer Example/ajax/lib.
- </ul>
-</div>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1 Runtime Note: </h3>
+<h3>Birt 2.1.2 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 Runtime (J2EE Application Server Deployment),
- The iText file will need to be copied to the birt-runtime/WebViewerExample directory structure.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- </ul>
-</div>
-<br>
-<div class="homeitem3col">
-<h3>Birt 2.1.1 Runtime Note: </h3>
-<ul>
- <li>If you are installing the BIRT 2.1.1. or 2.1.2 Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the 2.1.2 Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 
  </ul>
 </div>
 <br>
-<div class="homeitem3col">
-<h3>Birt 2.2M2 Runtime Note: </h3>
-<ul>
- <li>If you are installing the BIRT 2.2M2 or later Runtime (J2EE Application Server Deployment),
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.4.6.jar">itext-1.4.6.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
-
- </ul>
-</div>
 <br>
 
 
