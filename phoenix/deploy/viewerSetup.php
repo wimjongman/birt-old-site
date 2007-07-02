@@ -57,7 +57,15 @@
 			BIRT works with the 4.1.x and 5.5.x verisons of Tomcat.
 		</p>
 
-
+<div class="homeitem3col">
+<h3>Tomcat 6 Note: </h3>
+<ul>
+ <li>
+   If you are installing the Web Viewer to Tomcat 6, you will need to download the <a href="http://jakarta.apache.org/commons/logging">commons logging library</a>. You can add this library to  WebViewerExample/WEB-INF/lib or to Tomcat's lib directory.
+ </li>
+ 
+ </ul>
+</div>
 		<h2><a name="install_viewer"></a>Install the Viewer</h2>
 		<p>
 			Deploy the BIRT Viewer application. Follow these steps:
