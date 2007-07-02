@@ -45,7 +45,9 @@
 				Data Explorer -
 				Organizes your data sources (connections) and data sets (queries). The data
 				set editor allows you to test your data set to ensure the report receives the
-				correct data.  This view also is used to design report parameters.
+				correct data.  Within this view multi dimensional cubes can be created using existing data sets.
+				Cubes are currently used when building dynamic cross tables.
+				This view also is used to design report parameters.
 			</li>
 			<li>
 				Layout View -

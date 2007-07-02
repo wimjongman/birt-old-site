@@ -144,7 +144,7 @@
 			styles, making BIRT's visual properties familiar to web application developers.
 			BIRT styles cascade, allowing you to set a style in one place and have it affect
 			the entire report, a section of the report, or a single report item.  BIRT also
-			allows importing of existing Cascading Style Sheets.
+			allows importing or referencing of existing Cascading Style Sheets.
 		</p>
 
 		<h2>Libraries</h2>
