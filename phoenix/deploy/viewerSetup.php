@@ -61,7 +61,7 @@
 <h3>Tomcat 6 Note: </h3>
 <ul>
  <li>
-   If you are installing the Web Viewer to Tomcat 6, you will need to download the <a href="http://jakarta.apache.org/commons/logging">commons logging library</a>. You can add this library to  WebViewerExample/WEB-INF/lib or to Tomcat's lib directory.
+   If you are installing the Web Viewer on Tomcat 6, you will need to download the <a href="http://jakarta.apache.org/commons/logging">commons logging library</a>. You can add this library to  WebViewerExample/WEB-INF/lib or to Tomcat's lib directory.
  </li>
  
  </ul>
