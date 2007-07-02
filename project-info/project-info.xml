@@ -66,7 +66,7 @@
              download="http://download.eclipse.org/birt/downloads/"
 	     	 plan="/birt/phoenix/project/project_plan_R2_1_3.php" />   
 	<release name="2.2.0" 
-             status="scheduled" 
+             status="completed" 
              date="6/2007"
              download="http://download.eclipse.org/birt/downloads/"
 	     	 plan="/birt/phoenix/project/project_plan_R2_2_0.php" />   
