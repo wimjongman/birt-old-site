@@ -34,6 +34,16 @@
 		</p>
 		<ul class="midlist">
 			<li>
+				<a href="/birt/phoenix/project/notable2.2.php">2.2 New and Notable Features</a> –
+
+				New and Notable Features within BIRT 2.2.
+			</li>		
+			<li>
+				<a href="/birt/phoenix/project/project_plan_R2_2_0.php">2.2 Project Plan</a> –
+
+				The project plan for the 2.2 release.
+			</li>			
+			<li>
 				<a href="/birt/phoenix/project/project_plan_R2_1_2.php">2.1.2 Project Plan</a> –
 
 				The project plan for the 2.1.2 release.
