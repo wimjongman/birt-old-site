@@ -33,38 +33,53 @@
 
 <h1>BIRT 2.2 Project Plan</h1>
 
+
 <p class="head">BIRT Project 2.2 Plan</p>
 
+
 <p>Last revised June 27, 2007</p>
+
 
 <p class="subhead"><img src="new.gif" alt="New since last update" height="12" width="12" />
 marks interesting changes since the previous draft of February 7, 2007 </p>
 
+
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
+
 
 <p>This document lays out the feature and API set for the next
 feature
 release of the Eclipse BIRT project after 2.1.1, designated release 2.2.</p>
 
+
 <ul>
+
 
   <li><a href="#Deliverables">Release deliverables</a></li>
 
+
   <li><a href="#Milestones">Release milestones</a></li>
+
 
   <li><a href="#TargetOperatingEnvironments">Target
 operating environments</a></li>
 
+
   <li><a href="#Compatibility">Compatibility with
 previous releases</a></li>
 
+
   <li><a href="#Themes">Themes</a></li>
+
 
   <li><a href="#Projects">Projects</a></li>
 
+
   <li><a href="#Defects">Defects</a></li>
 
+
 </ul>
+
 
 <p>Plans do not materialize out of nowhere, nor are they entirely
 static. To
@@ -74,12 +89,14 @@ community, plans are posted in an embryonic form and then revised from
 time
 to time throughout the release cycle.</p>
 
+
 <p>The first part of the plan deals with the important matters of
 release
 deliverables, release milestones, target operating environments, and
 release-to-release compatibility. These are all things that need to be
 clear
 for any release, even if no features were to change.</p>
+
 
 <p>The remainder of the plan consists of plan items for the
 projects under
@@ -95,11 +112,14 @@ enough level so that everyone can readily understand what the work item
 is
 without having to understand the nitty-gritty detail.</p>
 
+
 <p>Please send comments about this draft plan to the <a href="mailto:birt-dev@eclipse.org">BIRT Developer</a>
 mailing list.</p>
 
+
 <h2><a name="Deliverables" id="Deliverables"></a>Release
 deliverables</h2>
+
 
 <p>In order to improve the end user experience of downloading and
 installing
@@ -107,8 +127,10 @@ BIRT, the release deliverables will be revised. Details will become
 available
 as progress is made on this project.</p>
 
+
 <h2><a name="Milestones" id="Milestones"></a>Release
 milestones</h2>
+
 
 <p>The Eclipse BIRT 2.2 release is part of the
 Eclipse Europa simultaneous release. All release deliverables will be
@@ -119,9 +141,12 @@ of the Europa release. For detailed dates refer to the <a href="http://wiki.ecli
 Europa simultaneous release</a>.
 </p>
 
+
 <ul>
 
+
 </ul>
+
 
 <p>For information about new features assigned to each milestone
 please refer
@@ -130,14 +155,17 @@ database</a>. The
 bugzilla database will be updated on an ongoing basis as the plan
 progresses.</p>
 
+
 <h2><a name="TargetOperatingEnvironments" id="TargetOperatingEnvironments"></a>Target Operating
 Environments</h2>
+
 
 <p>In order to remain current, each release of an Eclipse project
 targets
 reasonably current versions of underlying operating environments and
 other
 Eclipse projects on which it depends.&nbsp;</p>
+
 
 <p>Most of Eclipse, and all of BIRT, is
 &ldquo;pure&rdquo; Java&trade; code and has no direct
@@ -146,45 +174,65 @@ dependence
 is on the Eclipse Platform, Graphical Editor Framework (GEF), Modeling
 Framework (EMF), and on the Java 2 Platform that runs it. </p>
 
+
 <p>The Eclipse BIRT 2.2 release depends on the following
 compatibility
 stack:</p>
 
+
 <p><b>BIRT 2.2 Reference Stack for JDK 1.4.2</b></p>
 
+
 <ul>
+
 
   <li>Java 2 platform Java Development Kit (JDK) 1.4.2</li>
 
+
   <li>Eclipse Platform Runtime Binary 3.3</li>
 
+
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
+
 
   <li>Eclipse Modeling Framework (EMF) 2.2</li>
 
+
   <li>Data Tools Platform Project 1.5 (DTP)</li>
+
 
   <li>Web Tools Project (WTP) 2.0</li>
 
+
 </ul>
+
 
 <p><b>BIRT 2.2 Reference Stack for JDK 1.5</b></p>
 
+
 <ul>
+
 
   <li>Java 2 platform Java Development Kit (JDK) 1.5</li>
 
+
   <li>Eclipse Platform Runtime Binary 3.3</li>
+
 
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
 
+
   <li>Eclipse Modeling Framework (EMF) 2.3</li>
+
 
   <li>Data Tools Platform Project 1.5 (DTP)</li>
 
+
   <li>Web Tools Project (WTP) 2.0</li>
 
+
 </ul>
+
 
 <p>The Eclipse Platform and BIRT run in a variety of operating
 environments.
@@ -201,330 +249,488 @@ recreated on
 any reference platform will be given lower priority than problems with
 running Eclipse BIRT on a reference platform.</span></p>
 
+
 <p>For BIRT 2.2, the project team plans to tests and validate the
 following
 reference platforms:</p>
 
+
 <table border="1">
+
 
   <tbody>
 
+
     <tr bgcolor="#cccccc">
 
+
       <th colspan="4">
+      
       <div align="center"> <b><font size="+1">Eclipse
 BIRT Report Framework 2.2 and Eclipse BIRT RCP Report Designer 2.2
 Reference Platforms</font></b></div>
 
+
       </th>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205"><b>Operating system</b></td>
 
+
       <td width="76"><b>Processor architecture</b></td>
+
 
       <td width="59"><b>Window system</b></td>
 
+
       <td width="453"><b>Java 2 Platform</b></td>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205">Microsoft Windows XP</td>
 
+
       <td width="76">Intel x86</td>
+
 
       <td width="59">Win32</td>
 
-      <td>Sun Java 2 Standard Edition, version 1.4.2</td>
+
+      <td>Sun Java 2 Standard Edition, version 5.0</td>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205">Microsoft Windows 2000</td>
 
+
       <td width="76">Intel x86</td>
+
 
       <td width="59">Win32</td>
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2</td>
+
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205">Microsoft Windows Server 2003</td>
 
+
       <td width="76">Intel x86</td>
+
 
       <td width="59">Win32</td>
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2</td>
+
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
 
     </tr>
 
+
     <tr>
 
+
       <td width="205">Red Hat Enterprise Linux WS 3.0
+      
       <p>Red Hat Enterprise Linux WS 4.0</p>
+
 
       </td>
 
+
       <td width="76">Intel x86</td>
+
 
       <td width="59">GTK</td>
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2</td>
+
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
 
     </tr>
 
+
+  
   </tbody>
 </table>
+
 
 <br />
 
+
 <table border="1">
+
 
   <tbody>
 
+
     <tr bgcolor="#cccccc">
 
+
       <th colspan="4">
+      
       <div align="center"> <b><font size="+1">Eclipse
 BIRT Runtime 2.2 and Eclipse BIRT Charts 2.2 Reference Platforms</font></b></div>
 
+
       </th>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205"><b>Operating system</b></td>
 
+
       <td width="76"><b>Processor architecture</b></td>
+
 
       <td width="59"><b>Window system</b></td>
 
+
       <td width="453"><b>Java 2 Platform</b></td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="205">Microsoft Windows XP</td>
 
+
       <td width="76">Intel x86</td>
 
+
       <td width="59">Win32*</td>
+
 
       <td width="453">Sun Java 2 Standard Edition, version
 1.4.2, version 5.0</td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="205">Microsoft Windows XP</td>
 
+
       <td width="76">Intel x86</td>
 
+
       <td width="59">Win32*</td>
+
 
       <td width="453">IBM SDK 1.4.2, 5.0</td>
 
+
     </tr>
+
 
     <tr>
 
+
       <td width="205">Microsoft Windows Server 2003</td>
+
 
       <td width="76">Intel x86</td>
 
+
       <td width="59">Win32*</td>
+
 
       <td width="453">Sun Java 2 Standard Edition, version
 1.4.2, version 5.0</td>
 
+
     </tr>
+
 
     <tr>
 
+
       <td width="205">Microsoft Windows Server 2003</td>
+
 
       <td width="76">Intel x86</td>
 
+
       <td width="59">Win32*</td>
+
 
       <td width="453">IBM SDK 1.4.2, 5.0</td>
 
+
     </tr>
+
 
     <tr>
 
+
       <td width="205">Red Hat Enterprise Linux WS 3.0</td>
+
 
       <td width="76">Intel x86</td>
 
+
       <td width="59">GTK*</td>
+
 
       <td width="453">Sun Java 2 Standard Edition, version
 1.4.2, version 5.0</td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="205">Red Hat Enterprise Linux WS 3.0</td>
 
+
       <td width="76">Intel x86</td>
+
 
       <td width="59">GTK*</td>
 
+
       <td width="453">BlackDown SDK 1.4.2</td>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="205">SUSE Linux Enterprise Server 9</td>
 
+
       <td width="76">Intel x86</td>
 
+
       <td width="59">YaST*</td>
+
 
       <td width="453">Sun Java 2 Standard Edition, version
 1.4.2, version 5.0</td>
 
+
     </tr>
+
 
     <tr>
 
+
       <td width="205">SUSE Linux Enterprise Server 9</td>
+
 
       <td width="76">Intel x86</td>
 
+
       <td width="59">YaST*</td>
+
 
       <td width="453">BlackDown SDK 1.4.2</td>
 
+
     </tr>
 
+
+  
   </tbody>
 </table>
+
 
 *Window system only required when displaying charts within SWT or SWING
 windows.<br />
 
+
 <br />
+
 
 <table border="1">
 
+
   <tbody>
+
 
     <tr bgcolor="#cccccc">
 
+
       <th colspan="1">
+      
       <div align="center"> <b><font size="+1">BIRT
 Application Server Reference Platform</font></b></div>
 
+
       </th>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="405">Apache Tomcat 5.0.x, 5.5.x</td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="405">JBoss AS 4.0.2</td>
 
+
     </tr>
 
+
+  
   </tbody>
 </table>
 
+
 <br />
+
 
 <table border="1">
 
+
   <tbody>
+
 
     <tr bgcolor="#cccccc">
 
+
       <th colspan="1">
+      
       <div align="center"> <b><font size="+1">BIRT
 JDBC Reference Platforms</font></b></div>
 
+
       </th>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="405">MySQL Connector/J 3.x JDBC driver</td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="405">Derby V10.1.2.1 JDBC driver</td>
 
+
     </tr>
 
+
+  
   </tbody>
 </table>
 
+
 <br />
+
 
 <table border="1">
 
+
   <tbody>
+
 
     <tr bgcolor="#cccccc">
 
+
       <th colspan="1">
+      
       <div align="center"> <b><font size="+1">BIRT
 Browsers and Viewers Reference Platforms</font></b></div>
 
+
       </th>
+
 
     </tr>
 
+
     <tr>
+
 
       <td width="405">Mozilla Firefox 1.5, 2.0 <img src="new.gif" alt="New since last update" height="12" width="12" /> </td>
 
+
     </tr>
 
+
     <tr>
+
 
       <td width="405">Microsoft Internet Explorer 6.0</td>
 
+
     </tr>
+
 
     <tr>
 
+
       <td width="405">Adobe Acrobat Reader 7.0</td>
+
 
     </tr>
 
+
+  
   </tbody>
 </table>
 
+
 <br />
 
+
 <h4>Internationalization</h4>
+
 
 <p>Eclipse is designed as the basis for internationalized
 products. The user
@@ -537,9 +743,11 @@ this release for French (fr_FR), German (de_DE), Spanish (es_ES),
 Japanese
 (ja_JP), Simplified Chinese (zh_CN), and Korean (ko_KR).</p>
 
+
 <h2><a name="Compatibility" id="Compatibility"></a>Compatibility
 with
 Previous Releases</h2>
+
 
 <p>BIRT 2.2 will be compatible with earlier versions of BIRT to
 the greatest
@@ -552,8 +760,10 @@ aim to
 minimize the effort required to port an existing plug-in to the 2.2
 APIs.</p>
 
+
 <h3>Compatibility of Release 2.2 with 2.1, 2.1.1, 2.1.2, 2.1.3,
 2.0.x and 1.x</h3>
+
 
 <p>BIRT 2.2 will be compatible with BIRT 2.1, 2.1.1, 2.1.2,
 2.1.3, 2.0.x and
@@ -562,6 +772,7 @@ noted. The detailed compatibility statement is listed below. In this
 statement, &quot;BIRT&quot; refers to all BIRT components: BIRT Report Framework,
 BIRT
 Runtime, and BIRT Chart SDK.</p>
+
 
 <p><b>API Contract Compatibility:</b> BIRT 2.2 will
 be upwards
@@ -577,11 +788,13 @@ APIs</a> for a discussion of the kinds of API changes that
 maintain contract
 compatibility.</p>
 
+
 <p>The BIRT Chart UI API v2.2 is compatible with the v2.1, 2.1.1,
 2.1.2, 2.1.3, 2.0.x API
 but not compatible with the v1.x APIs due to a full redesign of the
 Chart UI
 in the BIRT 2.0 release.</p>
+
 
 <p><b>Binary (plug-in) Compatibility:</b> The BIRT
 2.2 plug-in framework will
@@ -595,6 +808,7 @@ or 1.x. Extension plug-ins for BIRT 2.1, 2.1.1, 2.1.2, 2.1.3, 2.0.x and
 1.x will be
 upwards
 binary-compatible with BIRT 2.2.</p>
+
 
 <p><b>Source Compatibility:</b> BIRT 2.2 will be
 upwards source-compatible
@@ -610,6 +824,7 @@ compatibility is not supported. If source files use new BIRT APIs, they
 will
 not be usable with an earlier version of BIRT.</p>
 
+
 <p><b>Report Design Compatibility:</b>BIRT 2.2 will
 be upwards report design
 compatible with BIRT 2.1, 2.1.1, 2.1.2, 2.1.3, 2.0.x and 1.x unless
@@ -619,6 +834,7 @@ reports created with BIRT 2.1, 2.1.1, 2.1.2, 2.1.3, 2.0.x or 1.x can be
 successfully
 opened
 by BIRT 2.2 and upgraded to a 2.2 format.</p>
+
 
 <p><b>Non-compliant usage of API's: </b> All non-API
 methods and classes, and
@@ -633,7 +849,9 @@ unsupportable and receive no guarantees about compatibility within a
 single
 release much less with an earlier releases.</p>
 
+
 <h2><a name="Themes" id="Themes">Themes</a></h2>
+
 
 <p>Continuing on the themes for previous releases of BIRT, the
 BIRT project's
@@ -645,24 +863,31 @@ context,
 the BIRT project also adopts and supports key themes within the overall
 Eclipse planning process.</p>
 
+
 <ul>
+
 
   <li><b>Scaling up and Enterprise Ready</b> The
 Eclipse platform 3.3 continues to improve on scalability and readiness
 for the enterprise. BIRT 2.2 leverages the support that 3.3 provides by
 ensuring that it is tested and it supports Eclipse 3.3.</li>
 
+
   <li><b>Simple to Use - </b>BIRT 2.2 includes ease
 of use enhancements such as improvements to the BIRT report designer.</li>
+
 
   <li><b>Appeal to a Broader Community - </b>BIRT
 2.2 will broaden the appeal of BIRT by its integration with the Eclipse
 Europa simultaneous release. In addition, BIRT 2.2 provides new report
 types via additional report items such as the Crosstab report item.</li>
 
+
 </ul>
 
+
 <h2><a name="Projects" id="Projects">Projects</a></h2>
+
 
 <p>The candidate projects being considered for this release
 include the
@@ -670,7 +895,9 @@ following list. Please note that the final list will depend on sign off
 from
 the project committers.</p>
 
+
 <p><span style="font-weight: bold;">Data Sources</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Web Service Data
 Source</span> One of the key goals of BIRT is to support data
@@ -683,6 +910,7 @@ the report developer to specify data source parameters in order to
 filter the
 data that is fetched. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159490">159490</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Extend Flat File
 Data Source</span> Instead of specifying the column data types in
 the first
@@ -694,7 +922,9 @@ project makes the flat file data source more flexible by allowing
 delimiters
 other than just the comma character. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152210">152210</a>]</p>
 
+
 <p style="text-indent: 25pt; text-decoration: line-through;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Predicates in
 XML Data Sets</span> It is not currently possible to apply
@@ -706,6 +936,7 @@ project
 extends the predicates that are supported in the XML data
 source.[Bugzilla
 ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152823">152823</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Dynamic
 Reference to Connection Profile</span> A connection profile
@@ -725,6 +956,7 @@ report. This makes migration from a test to a production environment
 easy.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=149945">149945</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Boolean Data
 Type in Data Set</span> In a data set, when creating a computed
 column it
@@ -734,7 +966,9 @@ This project will now allow the creation of Boolean type computed
 columns.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152443">152443</a>]</p>
 
+
 <p><span style="font-weight: bold;">Emitters</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Microsoft Word, Excel, and
 PowerPoint<img src="new.gif" alt="New since last update" height="12" width="12" />
@@ -758,6 +992,7 @@ format converters approximate the look and spacing of elements in the
 original report to Word, Excel, and PowerPoint formats respectively.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159491">159491</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Postscript
 Output</span> The widespread availability and acceptance of
 PostScript has
@@ -769,13 +1004,16 @@ workload involved in printing documents, transferring it to the
 printer.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=158748">158748</a>]</p>
 
+
 <p><span style="font-weight: bold;">Use of Eclipse
 3.2 Features</span></p>
+
 
 <p style="text-indent: 25pt;">This project aims to make
 use of the new Eclipse
 3.2 SWT widgets and upgrades to the latest version of EMF. [Bugzilla
 ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159493">159493</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Extensible Data
 Explorer View</span> This project aims to make the data explorer
@@ -784,12 +1022,15 @@ extensible so that custom data sources can now be made available and
 selected
 from in the Data Explorer view. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159495">159495</a>]</p>
 
+
 <p style="text-indent: 25pt; text-decoration: line-through;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved and
 Extensible Property Editor View</span> This project aims to make
 the property
 editor view extensible and improves its look and feel. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159497">159497</a>]</p>
+
 
 <p><span style="font-weight: bold;">Contributions to
 Eclipse's DTP
@@ -804,7 +1045,9 @@ common behavior from BIRT odaconsumer to DTP oda.consumer 4) Migrate
 BIRT
 oda.xml plugins to DTP Enablement namespace. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159498">159498</a>]</p>
 
+
 <p><span style="font-weight: bold;">Formatting</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Highlight Rule
 References Style Element</span> Highlighting is a powerful way to
@@ -825,6 +1068,7 @@ This makes it easy for report developers to maintain changes to styles
 and
 highlighting rules. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=146642">146642</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Table of
 Contents Formatting</span> The table of contents in a BIRT report
 currently
@@ -834,6 +1078,7 @@ their layout. This project aims to allow the use of styles as well as
 more
 flexibility in the layout of the table of contents in a BIRT report.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159499">159499</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Reference to
 External CSS file</span> Style sheets provide an easy to use and
@@ -849,7 +1094,9 @@ This makes it easy to modify CSS files and have the changes reflected
 in a
 report design. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=140619">140619</a>]</p>
 
+
 <p><span style="font-weight: bold;">Report Item</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Dynamic Crosstab
 Report Item</span> A cross tabulation report (often abbreviated
@@ -874,7 +1121,9 @@ OLAP data source metadata to populate the crosstab report item's
 initial
 configuration. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=102521">102521</a>]</p>
 
+
 <p><span style="font-weight: bold;">Parameters</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Designating
 Default for a List of Values</span> Report parameters allow users
@@ -893,7 +1142,9 @@ project aims to allow the report developer to define this default
 value.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153495">153495</a>]</p>
 
+
 <p><span style="font-weight: bold;">Usability</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Debugging</span>
 When designing a report the developer encounters errors occasionally.
@@ -910,6 +1161,7 @@ the error. If there is an error in the XML underlying the report
 design, then
 focus would shift to the line in the XML with the error. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159502">159502</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Aggregation Builder </span>Novice
 users of BIRT sometimes find it challenging to define aggregations of
 data in a BIRT report. This is especially true for some of the more
@@ -917,6 +1169,7 @@ complex aggregation functions that take numerous parameters. This
 project looks at alleviating this by making it easier to define
 aggregations in a report.&nbsp;[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=130686">130686</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
 </p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart Designer
 Usability</span> This project aims at improving the layout and
@@ -930,6 +1183,7 @@ interactivity UI, easy creation of drill-through URL's using chart
 values as
 parameters, navigation improvements, and Eclipse wizard-like error
 notification.&nbsp;[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132040">132040</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;"></span>&nbsp;<span style="font-weight: bold;">Ease of Plugin
 Development</span> The Open Data Access (ODA) framework is key
@@ -945,11 +1199,13 @@ runtime and designer plugin with default implementation and stub source
 code.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159503">159503</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Building
 BIRT</span> This project focuses on making it easy for the
 Eclipse community
 to compile and build BIRT and therefore to make contributions to BIRT.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159504">159504</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Quick Start to
 Report Development</span> First time users and novice users of
@@ -959,12 +1215,14 @@ learning
 to design reports. This project looks at making a set of sample reports
 easily accessible by these users. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159505">159505</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved XML
 Editor</span> This project will look at improving the
 capabilities of the XML
 editor by leveraging the capabilities of the XML editor from Eclipse's
 Web
 Tools Project. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159507">159507</a>]</p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Improved
 Extensibility of Emitters</span> BIRT provides a framework that
@@ -973,7 +1231,9 @@ extensible. This project aims to make it easier for developers to add
 new
 types of emitters.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=158714">158714</a>]</p>
 
+
 <p><span style="font-weight: bold;">Scripting</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Scripting
 Implementation</span> This project proposes to enhance the
@@ -984,6 +1244,7 @@ same implementation and therefore have very similar levels of
 functionality.
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159509">159509</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Documentation of
 Scripting API's</span> This project looks at documenting the
 current
@@ -991,8 +1252,10 @@ scripting API's for both Java and JavaScript based scripting. [Bugzilla
 ID:
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=132031">132031</a>]</p>
 
+
 <p><span style="font-weight: bold;">Deployment and
 Integration</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Easy Deployment
 and Integration</span> To encourage the use of BIRT by the
@@ -1012,6 +1275,7 @@ WTP project. [Bugzilla ID:
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=181746">181746</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
 </p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">JSP Tag Library
 for Charts</span> Java Server Pages is a widely used technology
 in web
@@ -1020,7 +1284,9 @@ within a JSP based application, this project will provide a JSP tag
 library.
 This library can be used only with standalone charts. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159511">159511</a>]</p>
 
+
 <p><span style="font-weight: bold;">Charting</span></p>
+
 
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">New Chart
 Types</span> This project extends the different types of charts
@@ -1033,6 +1299,7 @@ to support stacking.<span style="font-size: 11pt; line-height: 115%; font-family
 [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147770">147770</a>]<img src="new.gif" alt="New since last update" height="12" width="12" />
 </p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Scaling and
 Grouping</span> This project improves the scaling and grouping of
 charts.
@@ -1044,6 +1311,7 @@ charts;
 datetime scaling support; overflow data handling; steps number
 customization. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159513">159513</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart API</span> This
 project aims to provide a simple API for chart scripting inside BIRT
 reports similar to the design engine script API, and that integrates
@@ -1054,6 +1322,7 @@ into a single class called 'ChartEngine'. This provides access to all
 the chart engine interfaces&nbsp;making it easier for a user to get
 started with the chart engine API.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159514">159514</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Multiple Aggregations per Series</span>
 When doing base series aggregations, all orthogonal series definitions
 have to share the same function. This project looks at allowing each
@@ -1062,13 +1331,16 @@ aggregate function defined in the base series definition is treated as
 the default function.[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=170057">
 170057</a>]</p>
 
+
 <p style="text-indent: 25pt;"><span style="font-weight: bold;">Chart Examples View </span>A
 new chart examples view lets developers get started
 with
 building chart&nbsp;by viewing charting examples. [Bugzilla ID:
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159608">159608</a>]<img src="new.gif" alt="New since last update" height="12" width="12" /></p>
 
+
 <h2><a name="Defects" id="Defects">Defects</a></h2>
+
 
 <p>BIRT 2.2 will address defects reported by project members and
 the
@@ -1076,6 +1348,7 @@ community. The <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=a
 of defects</a> targeted for resolution in BIRT 2.2 can be found
 in the
 bugzilla database on <a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.</p>
+
 
 
 
