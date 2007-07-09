@@ -34,7 +34,7 @@
 		
 		<h2><a name="latest">Latest Release(s) Available </a></h2>
 		<p>
-		BIRT Release 2.1.2 (Feb 2007) is available for <a href=http://download.eclipse.org/birt/downloads/index2.1.2.php>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">BIRT 2.1.2 New and Notable</a> page.
+		BIRT Release 2.1.2 (Feb 2007) is available for <a href=http://download.eclipse.org/birt/downloads/index2.1.2.php>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.1.php">BIRT 2.1.2 New and Notable</a> page.<br>
 		BIRT Release 2.2 (Jun 2007) is available for <a href=http://download.eclipse.org/birt/downloads/>download</a>. For information on features in this release, see the <a href="/birt/phoenix/project/notable2.2.php">BIRT 2.2 New and Notable</a> page.
 		</p>
 
