@@ -172,7 +172,7 @@ BIRT framework and unzip the contents to any directory.
 </ul>
 <p>
 The iText APIs are discussed at <a href="http://www.lowagie.com/iText/">iText Homepage</a><br><br> 
-If you are installing BIRT 2.2, this file is already included. <br><br>
+If you are installing BIRT 2.1.3/2.2, this file is already included. <br><br>
 <br><b>BIRT 2.1.2</b><br>
 The itext-1.3.jar file needs to be copied to the plugins/com.lowagie.itext_*/lib directory.
 
