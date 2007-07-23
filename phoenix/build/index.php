@@ -64,7 +64,7 @@ The instructions here are for the Release 2.2/2.1.3 (and later) builds.
 <p>
 BIRT is currently tested with the following configurations:<br>
 <ul>
-<li><b>BIRT 2.1.2</b>
+<li><b>BIRT 2.1.3</b>
 <li>Eclipse 3.2.
 <li>GEF 3.2.
 <li>EMF 2.2.
