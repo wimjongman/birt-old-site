@@ -111,7 +111,7 @@
 			Verify that you have downloaded <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> (only required for BIRT 2.1.2 and earlier builds) and follow the note below:
 		</p>
 <div class="homeitem3col">
-<h3>Birt 2.1.2 Runtime Note: </h3>
+<h3>Birt 2.1.2 Runtime Note (Not required for 2.2 or 2.1.3 builds): </h3>
 <ul>
  <li>If you are installing the BIRT 2.1.2 Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
@@ -186,8 +186,8 @@
 				Rename the WebViewerExample directory to birt.war, so it will deploy in place.
 			</li>
 
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar (BIRT 2.1.x only;  This step is not required for 2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar (BIRT 2.1.x only;  This step is not required for 2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar (BIRT 2.1.2 only;  This step is not required for 2.1.3/2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
+ <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar (BIRT 2.1.2 only;  This step is not required for 2.1.3/2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 			
 			<li>
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report.

@@ -54,7 +54,7 @@ requirements and instructions on the
 download page</a>.
 Otherwise, follow along below for detailed steps for installing BIRT.
 <p>
-The instructions here are for the Release 2.2/2.1.2 (and later) builds.
+The instructions here are for the Release 2.2/2.1.3 (and later) builds.
 <h2>Java</h2>
 <p>
  You'll need a <a href="http://java.sun.com">Java runntime environment (JRE)</a>
@@ -83,9 +83,7 @@ And
 
 <h2><a name="allinone"></a>Report Designer Full Eclipse Install</h2>
 BIRT now supplies a <a href="http://download.eclipse.org/birt/downloads/">download</a> that incudes Eclipse, GEF, EMF and BIRT.  Use this
-download if you do not already have Eclipse installed.  You will still need iText.jar
-for the 2.1.2 install, which are described below.  
-
+download if you do not already have Eclipse installed. 
 
 <br>
 <h2><a name="designer"></a>Designer Install</h2>
@@ -152,9 +150,9 @@ contains only the required DTP Plugins needed for BIRT to function.
 <h2><a name="birt"></a>BIRT</h2>
 
 <p>
-Download <a href="http://download.eclipse.org/birt/downloads/index2.1.2.php">
-Release 2.1.2</a> (or <a href="http://download.eclipse.org/birt/downloads/">later</a>). Download only the
-BIRT designer framework for now: "birt-report-framework-2_1_2.zip".
+Download <a href="http://download.eclipse.org/birt/downloads/index2.1.3.php">
+Release 2.1.3</a> (or <a href="http://download.eclipse.org/birt/downloads/">later</a>). Download only the
+BIRT designer framework for now: "birt-report-framework-2_1_3.zip".
 <p>
 BIRT is also a zip file. Unzip BIRT into the directory that contains Eclipse.
 
@@ -180,7 +178,7 @@ The itext-1.3.jar file needs to be copied to the plugins/com.lowagie.itext_*/lib
 
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1.2 (This file is included in the 2.2 release): </h3>
+<h3>Birt 2.1.2 (This file is included in the 2.1.3/2.2 release): </h3>
 <ul>
  To Support Asian fonts in PDF, download the following jar and place it in the plugins/com.lowagie.itext_*/lib directory.
 <li><a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a>.
@@ -228,7 +226,7 @@ default location, this is "C:\program files\eclipse\plugins".
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <br>
 <div class="homeitem3col">
-<h3>Birt 2.1.2 Runtime Note: </h3>
+<h3>Birt 2.1.2 Runtime Note (Not needed for BIRT 2.1.3/2.2): </h3>
 <ul>
  <li>If you are installing the 2.1.2 Runtime (J2EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.

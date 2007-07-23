@@ -54,7 +54,7 @@
 	<table>
     <tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.1.2.php"><img src="db2.1.2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php"><img src="db2.1.3.jpg"></a>
 	</td>
 	<td>
 	Get started with the latest in the BIRT 2.1 series, the release used in many commercial products.
@@ -208,6 +208,15 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php">
+						BIRT 2.1.3
+					</a>
+					is now available for download.
+					<span class="dates">
+						06/23/07
+					</span>
+				</li>						
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.2
