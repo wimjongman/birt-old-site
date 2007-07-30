@@ -67,7 +67,7 @@ https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=
 
 		
 		<h3><i>BIRT Release 2.2.1</i></h3>
-		Target Date: TBD
+		Target Date: September 28, 2007
 <p>
 
 
