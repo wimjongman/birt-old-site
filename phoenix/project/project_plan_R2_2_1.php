@@ -33,11 +33,17 @@
 
 
 
-<p>Last revised June 28, 2007</p>
+
+
+<p>Last revised August 10, 2007</p>
+
+
 
 
 
 <h2><a name="Introduction" id="Introduction"></a>Introduction</h2>
+
+
 
 
 
@@ -47,7 +53,11 @@ release of the Eclipse BIRT project after 2.2, designated release 2.2.1.</p>
 
 
 
+
+
 <ul>
+
+
 
 
 
@@ -55,7 +65,11 @@ release of the Eclipse BIRT project after 2.2, designated release 2.2.1.</p>
 
 
 
+
+
   <li><a href="#Milestones">Release milestones</a></li>
+
+
 
 
 
@@ -64,8 +78,12 @@ operating environments</a></li>
 
 
 
+
+
   <li><a href="#Compatibility">Compatibility with
 previous releases</a></li>
+
+
 
 
 
@@ -73,7 +91,17 @@ previous releases</a></li>
 
 
 
+
+
   <li><a href="#Projects">Projects</a></li>
+
+
+
+
+
+  <li><a href="#Defects">Defects</a></li>
+
+
 
 
 
@@ -81,7 +109,10 @@ previous releases</a></li>
 
 
 
-<p>Plans do not materialize out of nowhere, nor are they entirely
+
+
+<p>Plans do not materialize out
+of nowhere, nor are they entirely
 static. To
 ensure the planning process is transparent and open to the entire
 Eclipse
@@ -91,7 +122,10 @@ to time throughout the release cycle.</p>
 
 
 
-<p>The first part of the plan deals with the important matters of
+
+
+<p>The first part of the plan
+deals with the important matters of
 release
 deliverables, release milestones, target operating environments, and
 release-to-release compatibility. These are all things that need to be
@@ -100,7 +134,10 @@ for any release, even if no features were to change.</p>
 
 
 
-<p>The remainder of the plan consists of plan items for the
+
+
+<p>The remainder of the plan
+consists of plan items for the
 projects under
 the Eclipse BIRT project. Each plan item covers a feature or API that
 is to
@@ -116,13 +153,20 @@ without having to understand the nitty-gritty detail.</p>
 
 
 
-<p>Please send comments about this draft plan to the <a href="mailto:birt-dev@eclipse.org">BIRT Developer</a>
+
+
+<p>Please send comments about
+this draft plan to the <a href="mailto:birt-dev@eclipse.org">BIRT Developer</a>
 mailing list.</p>
+
+
 
 
 
 <h2><a name="Deliverables" id="Deliverables"></a>Release
 deliverables</h2>
+
+
 
 
 
@@ -132,17 +176,27 @@ downloads as BIRT 2.2.</p>
 
 
 
+
+
 <h2><a name="Milestones" id="Milestones"></a>Release
 milestones</h2>
 
 
 
+
+
+  Friday, 
+August 10 BIRT 2.2.1 M3<span style="font-family: Times New Roman;"><br>
+
+</span>Friday, August 
+24 BIRT 2.2.1 M4<span style="font-family: Times New Roman;"><br>
+
+</span>Friday, September 14&nbsp;BIRT 2.2.1 RC1<font color="blue" face="Times New Roman" size="3"><span style="font-size: 12pt; color: blue;"><span style="color: rgb(0, 0, 0);"><br>
+
+Friday, September 28&nbsp;BIRT 2.2.1</span> </span></font><span class="939140701-28062007"></span>
 <ul>
 
 
-
-  <li>BIRT 2.2.1 Maintenance Release&nbsp;<span class="939140701-28062007">will follow 
-the Europa simultaneous maintenance release milestones</span></li>
 
 
 
@@ -150,9 +204,9 @@ the Europa simultaneous maintenance release milestones</span></li>
 
 
 
-<p>Our target is to complete and release BIRT 2.2.1 with the
-Europa
-Coordinated Maintenance release.</p>
+
+
+
 
 
 
@@ -165,8 +219,12 @@ progresses.</p>
 
 
 
+
+
 <h2><a name="TargetOperatingEnvironments" id="TargetOperatingEnvironments"></a>Target Operating
 Environments</h2>
+
+
 
 
 
@@ -175,6 +233,8 @@ targets
 reasonably current versions of underlying operating environments and
 other
 Eclipse projects on which it depends.&nbsp;</p>
+
+
 
 
 
@@ -187,9 +247,13 @@ Framework (EMF), and on the Java 2 Platform that runs it. </p>
 
 
 
+
+
 <p>The Eclipse BIRT 2.2.1 release depends on the following
 compatibility
 stack:</p>
+
+
 
 
 
@@ -197,7 +261,11 @@ stack:</p>
 
 
 
+
+
 <ul>
+
+
 
 
 
@@ -205,11 +273,17 @@ stack:</p>
 
 
 
+
+
   <li>Eclipse Platform Runtime Binary 3.3</li>
 
 
 
+
+
   <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
+
+
 
 
 
@@ -217,7 +291,11 @@ stack:</p>
 
 
 
+
+
   <li>Data Tools Platform Project 1.5 (DTP)</li>
+
+
 
 
 
@@ -225,7 +303,11 @@ stack:</p>
 
 
 
+
+
 </ul>
+
+
 
 
 
@@ -233,7 +315,11 @@ stack:</p>
 
 
 
+
+
 <ul>
+
+
 
 
 
@@ -241,7 +327,11 @@ stack:</p>
 
 
 
+
+
   <li>Eclipse Platform Runtime Binary 3.3</li>
+
+
 
 
 
@@ -249,7 +339,11 @@ stack:</p>
 
 
 
+
+
   <li>Eclipse Modeling Framework (EMF) 2.3</li>
+
+
 
 
 
@@ -257,11 +351,17 @@ stack:</p>
 
 
 
+
+
   <li>Web Tools Project (WTP) 2.0</li>
 
 
 
+
+
 </ul>
+
+
 
 
 
@@ -282,9 +382,13 @@ running Eclipse BIRT on a reference platform.</span></p>
 
 
 
+
+
 <p>For BIRT 2.2.1, the project team plans to tests and validate
 the following
 reference platforms:</p>
+
+
 
 
 
@@ -292,7 +396,11 @@ reference platforms:</p>
 
 
 
+
+
 <table border="1">
+
+
 
 
 
@@ -300,11 +408,17 @@ reference platforms:</p>
 
 
 
+
+
     <tr bgcolor="#cccccc">
 
 
 
+
+
       <th colspan="4">
+      
+      
       
       
       <div align="center"> <b><font size="+1">Eclipse
@@ -313,7 +427,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       </th>
+
+
 
 
 
@@ -321,7 +439,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -329,7 +451,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="76"><b>Processor architecture</b></td>
+
+
 
 
 
@@ -337,7 +463,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="453"><b>Java 2 Platform</b></td>
+
+
 
 
 
@@ -345,7 +475,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -353,7 +487,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -361,7 +499,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td>Sun Java 2 Standard Edition, version 5.0</td>
+
+
 
 
 
@@ -369,7 +511,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -377,7 +523,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -385,7 +535,12 @@ Reference Platforms</font></b></div>
 
 
 
-      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
+
+      <td width="453">Sun Java 2 Standard Edition, version
+5.0</td>
+
+
 
 
 
@@ -393,7 +548,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -401,7 +560,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -409,7 +572,12 @@ Reference Platforms</font></b></div>
 
 
 
-      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
+
+      <td width="453">Sun Java 2 Standard Edition, version
+5.0</td>
+
+
 
 
 
@@ -417,7 +585,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -425,7 +597,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td>Intel x86</td>
+
+
 
 
 
@@ -433,7 +609,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td>Sun Java 2 Standard Edition, version 5.0</td>
+
+
 
 
 
@@ -441,14 +621,22 @@ Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
       <td width="205">Red Hat Enterprise Linux WS 3.0
       
       
+      
+      
       <p>Red Hat Enterprise Linux WS 4.0</p>
+
+
 
 
 
@@ -456,7 +644,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -464,7 +656,12 @@ Reference Platforms</font></b></div>
 
 
 
-      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
+
+
+      <td width="453">Sun Java 2 Standard Edition, version
+5.0</td>
+
+
 
 
 
@@ -472,6 +669,10 @@ Reference Platforms</font></b></div>
 
 
 
+
+
+  
+  
   
   
   </tbody>
@@ -479,7 +680,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
 <br>
+
+
 
 
 
@@ -487,7 +692,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
   <tbody>
+
+
 
 
 
@@ -495,7 +704,11 @@ Reference Platforms</font></b></div>
 
 
 
+
+
       <th colspan="4">
+      
+      
       
       
       <div align="center"> <b><font size="+1">Eclipse
@@ -503,7 +716,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       </th>
+
+
 
 
 
@@ -511,7 +728,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -519,7 +740,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="76"><b>Processor architecture</b></td>
+
+
 
 
 
@@ -527,11 +752,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="453"><b>Java 2 Platform</b></td>
 
 
 
+
+
     </tr>
+
+
 
 
 
@@ -539,7 +770,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="205">Microsoft Windows XP</td>
+
+
 
 
 
@@ -547,7 +782,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="59">Win32*</td>
+
+
 
 
 
@@ -556,11 +795,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -568,11 +813,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="76">Intel x86</td>
 
 
 
+
+
       <td width="59">Win32*</td>
+
+
 
 
 
@@ -580,7 +831,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
+
+
 
 
 
@@ -588,7 +843,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="205">Microsoft Windows Server 2003</td>
+
+
 
 
 
@@ -596,7 +855,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="59">Win32*</td>
+
+
 
 
 
@@ -605,11 +868,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -617,7 +886,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -625,7 +898,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="453">IBM SDK 1.4.2, 5.0</td>
+
+
 
 
 
@@ -633,7 +910,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -641,11 +922,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td>Intel x86</td>
 
 
 
+
+
       <td>Win32*</td>
+
+
 
 
 
@@ -654,7 +941,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
+
+
 
 
 
@@ -662,7 +953,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="205">Red Hat Enterprise Linux WS 3.0</td>
+
+
 
 
 
@@ -670,7 +965,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="59">GTK*</td>
+
+
 
 
 
@@ -679,11 +978,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -691,7 +996,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="76">Intel x86</td>
+
+
 
 
 
@@ -699,7 +1008,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="453">BlackDown SDK 1.4.2</td>
+
+
 
 
 
@@ -707,7 +1020,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -715,11 +1032,17 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="76">Intel x86</td>
 
 
 
+
+
       <td width="59">YaST*</td>
+
+
 
 
 
@@ -728,7 +1051,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
+
+
 
 
 
@@ -736,7 +1063,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="205">SUSE Linux Enterprise Server 9</td>
+
+
 
 
 
@@ -744,7 +1075,11 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
       <td width="59">YaST*</td>
+
+
 
 
 
@@ -752,14 +1087,22 @@ BIRT Runtime 2.2.1 and Eclipse BIRT Charts 2.2.1 Reference Platforms</font></b><
 
 
 
+
+
     </tr>
 
 
 
+
+
+  
+  
   
   
   </tbody>
 </table>
+
+
 
 
 
@@ -768,7 +1111,11 @@ windows.<br>
 
 
 
+
+
 <br>
+
+
 
 
 
@@ -776,7 +1123,11 @@ windows.<br>
 
 
 
+
+
   <tbody>
+
+
 
 
 
@@ -784,7 +1135,11 @@ windows.<br>
 
 
 
+
+
       <th colspan="1">
+      
+      
       
       
       <div align="center"> <b><font size="+1">BIRT
@@ -792,7 +1147,11 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
       </th>
+
+
 
 
 
@@ -800,7 +1159,11 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -808,11 +1171,17 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -820,10 +1189,16 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
     </tr>
 
 
 
+
+
+  
+  
   
   
   </tbody>
@@ -831,7 +1206,11 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
 <br>
+
+
 
 
 
@@ -839,7 +1218,11 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
   <tbody>
+
+
 
 
 
@@ -847,7 +1230,11 @@ Application Server Reference Platform</font></b></div>
 
 
 
+
+
       <th colspan="1">
+      
+      
       
       
       <div align="center"> <b><font size="+1">BIRT
@@ -855,7 +1242,11 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
       </th>
+
+
 
 
 
@@ -863,7 +1254,11 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -871,11 +1266,17 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -883,10 +1284,16 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
     </tr>
 
 
 
+
+
+  
+  
   
   
   </tbody>
@@ -894,7 +1301,11 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
 <br>
+
+
 
 
 
@@ -902,7 +1313,11 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
   <tbody>
+
+
 
 
 
@@ -910,7 +1325,11 @@ JDBC Reference Platforms</font></b></div>
 
 
 
+
+
       <th colspan="1">
+      
+      
       
       
       <div align="center"> <b><font size="+1">BIRT
@@ -918,7 +1337,11 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
       </th>
+
+
 
 
 
@@ -926,7 +1349,11 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -934,11 +1361,17 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
     </tr>
 
 
 
+
+
     <tr>
+
+
 
 
 
@@ -946,7 +1379,11 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
     </tr>
+
+
 
 
 
@@ -954,7 +1391,11 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
       <td width="405">Adobe Acrobat Reader 7.0</td>
+
+
 
 
 
@@ -962,6 +1403,10 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
+  
+  
   
   
   </tbody>
@@ -969,11 +1414,17 @@ Browsers and Viewers Reference Platforms</font></b></div>
 
 
 
+
+
 <br>
 
 
 
+
+
 <h4>Internationalization</h4>
+
+
 
 
 
@@ -990,9 +1441,13 @@ Japanese
 
 
 
+
+
 <h2><a name="Compatibility" id="Compatibility"></a>Compatibility
 with
 Previous Releases</h2>
+
+
 
 
 
@@ -1009,9 +1464,13 @@ APIs.</p>
 
 
 
+
+
 <h3>Compatibility of Release 2.2.1 with 2.2, 2.1, 2.1.1, 2.1.2,
 2.1.3,
 2.0.x and 1.x</h3>
+
+
 
 
 
@@ -1023,6 +1482,8 @@ noted. The detailed compatibility statement is listed below. In this
 statement, &quot;BIRT&quot; refers to all BIRT components: BIRT Report Framework,
 BIRT
 Runtime, and BIRT Chart SDK.</p>
+
+
 
 
 
@@ -1044,12 +1505,16 @@ compatibility.</p>
 
 
 
+
+
 <p>The BIRT Chart UI API&nbsp;2.2.1 is compatible with the
 2.2, 2.1, 2.1.1,
 2.1.2, 2.1.3, 2.0.x API
 but not compatible with the v1.x APIs due to a full redesign of the
 Chart UI
 in the BIRT 2.0 release.</p>
+
+
 
 
 
@@ -1071,6 +1536,8 @@ binary-compatible with BIRT 2.2.1.</p>
 
 
 
+
+
 <p><b>Source Compatibility:</b> BIRT 2.2.1 will be
 upwards source-compatible
 with BIRT 2.2, 2.1, 2.1.1, 2.1.2, 2.1.3, 2.0.x and 1.x to the greatest
@@ -1088,6 +1555,8 @@ not be usable with an earlier version of BIRT.</p>
 
 
 
+
+
 <p><b>Report Design Compatibility:</b>BIRT 2.2.1 will
 be upwards report design
 compatible with BIRT 2.2, 2.1, 2.1.1, 2.1.2, 2.1.3, 2.0.x and 1.x
@@ -1099,6 +1568,8 @@ can be
 successfully
 opened
 by BIRT 2.2.1 and upgraded to a 2.2.1 format.</p>
+
+
 
 
 
@@ -1117,7 +1588,11 @@ release much less with an earlier releases.</p>
 
 
 
+
+
 <h2><a name="Themes" id="Themes">Themes</a></h2>
+
+
 
 
 
@@ -1127,7 +1602,96 @@ in BIRT
 
 
 
+
+
 <h2><a name="Projects" id="Projects">Projects</a></h2>
+
+
+
+
+
+<div style="margin-left: 40px;"><span style="font-weight: bold;">Crosstab Enhancements</span><br>
+
+
+
+
+<span style="font-weight: bold;">
+</span></div>
+
+
+
+
+
+<div style="margin-left: 80px;"><span style="font-weight: bold;">Time Dimension Enhancements</span>
+This project looks at providing additional pre-defined date time
+formats for date/time dimensions. Users will be able to specify the
+default format for each level of a date/time item. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196894">196894</a>]<br>
+
+
+
+
+
+<span style="font-weight: bold;">Create In-memory Cube</span>
+Cubes are currently always created on disk. This project looks at
+enhancing performance by creating cubes in memory for small cubes.
+[Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=185034">185034</a>]<br>
+
+
+
+
+
+</div>
+
+
+
+
+
+<span style="font-weight: bold;"><br>
+
+
+
+
+
+</span>
+<div style="margin-left: 40px;"><span style="font-weight: bold;"><span style="font-weight: bold;">Result Set Sharing</span></span>
+This project aims to enable multiple BIRT report items to share the
+same data binding definition and result set. [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196745">196745</a>,
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196746">196746</a>,
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196747">196747</a>,
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196748">196748</a>]<br>
+
+
+
+
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+
+
+
+<span style="font-weight: bold;"></span><span style="font-weight: bold;"><span style="font-weight: bold;">Usability Improvements
+for XML Dataset Editor</span></span> This project looks at
+enhancing the ease of use of the XML Dataset editor UI. [Bugzilla ID:
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=182027">182027</a>]<br>
+
+
+
+
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+
+
+
+<span style="font-weight: bold;">
+Support for Microsoft
+Windows Vista </span>Provide support for Microsoft Windows Vista
+as a reference
+platform [Bugzilla ID: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=183643">
+183643</a>]
+</div>
+
+
+
+
 
 
 
@@ -1135,21 +1699,24 @@ in BIRT
 
 
 
-  <li>Provide support for Microsoft Windows Vista as a reference platform [Bugzilla ID:
-    <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=183643">
-183643</a>]</li>
-
 
 
 </ul>
 
 
 
+
+
+<h2><a name="Defects" id="Defects"></a>Defects</h2>
+
+
+
+
+
 BIRT 2.2.1 will address defects reported by project members and the
-community. The <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.2.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=plan&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">list
+community. The <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=BIRT&amp;product=BIRT&amp;target_milestone=2.2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=plan&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">list
 of defects</a> targeted for resolution in BIRT 2.2.1 can be found
 in the bugzilla database on <a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</a>.
-
 </body>
 <br>
 <br>
