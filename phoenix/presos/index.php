@@ -33,7 +33,7 @@
 			<li><a href="aiuc2007/AIUCDeployingBIRTEngine.ppt">Deploying the BIRT Engine</a><br>
 			This Presentation discusses deploying the BIRT Engine.
 			
-			Source Code for the examples can be found <a href="aiuc2007/scrcode.zip">here</a>.  </li>
+			Source Code for the examples can be found <a href="aiuc2007/srccode.zip">here</a>.  </li>
 			</ul>
 			<br>
 		</p>				
