@@ -26,7 +26,17 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		
-		
+		<h2>AIUC 2007 Presentation</h2>
+
+		<p>
+		<ul>
+			<li><a href="aiuc2007/AIUCDeployingBIRTEngine.ppt">Deploying the BIRT Engine</a><br>
+			This Presentation discusses deploying the BIRT Engine.
+			
+			Source Code for the examples can be found <a href="aiuc2007/scrcode.zip">here</a>.  These examples were built with BIRT 2.2 M5</li>
+			</ul>
+			<br>
+		</p>				
 		<h2>Eclipse Forum Europe 2007 Presentation</h2>
 
 		<p>
