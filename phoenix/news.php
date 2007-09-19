@@ -33,7 +33,14 @@
 			<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
-
+				<li>
+					<a href="http://www.eclipsemag.net">
+						BIRT 2.2 Web Service ODA  
+					</a>
+					<span class="dates">
+						09/19/07
+					</span>
+				</li>
 				<li>
 					<a href="http://eclipse.sys-con.com/read/367994.htm">
 						How to Develop an Application Using the Eclipse BIRT Design Engine API  
