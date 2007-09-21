@@ -44,7 +44,7 @@
 		<ul class="midlist">
 			<li>
 				Actuate –
-				<http://www.birt-exchange.com" target="_blank">http://www.birt-exchange.com</a> and				
+				<a http://www.birt-exchange.com" target="_blank">http://www.birt-exchange.com</a> and				
 				<a href="http://www.actuate.com" target="_blank">http://www.actuate.com</a>
 			</li>
 			<li>
