@@ -209,6 +209,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="project/project_plan_R2_3_0.php">
+						BIRT 2.3
+					</a>
+					Draft Project Plan is now available.
+					<span class="dates">
+						09/24/07
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php">
 						BIRT 2.1.3
 					</a>
@@ -341,17 +350,7 @@
 					<span class="dates">
 						01/19/07
 					</span>
-				</li>				
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/build.php?build=N-R1-2.2M4-200701100630">
-						BIRT 2.2M4
-					</a>
-					is now available for download.  
-					<span class="dates">
-						01/16/07
-					</span>
-				</li>
-																														
+				</li>																												
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...

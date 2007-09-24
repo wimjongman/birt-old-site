@@ -36,7 +36,7 @@
 			<ul>
 				<li>
 					<a href="project/project_plan_R2_3_0.php">
-						BIRT 2.1.3
+						BIRT 2.3
 					</a>
 					Draft Project Plan is now available.
 					<span class="dates">
