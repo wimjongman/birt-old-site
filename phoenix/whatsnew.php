@@ -35,6 +35,15 @@
 		
 			<ul>
 				<li>
+					<a href="project/project_plan_R2_3_0.php">
+						BIRT 2.1.3
+					</a>
+					Draft Project Plan is now available.
+					<span class="dates">
+						09/24/07
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php">
 						BIRT 2.1.3
 					</a>
