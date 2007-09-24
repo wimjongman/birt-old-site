@@ -43,7 +43,7 @@
 
 
 
-		<h3><i>BIRT Release 2.1.3</i></h3>
+		<h3><i>BIRT Release 2.3</i></h3>
 		Target Date: TBD
 		
 		<p>
@@ -52,11 +52,11 @@
 				 
 				<a
 				href="
-https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.1.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="
-				>BIRT 2.1.3 Enhancements and Bug Fixes </a>
+https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=BIRT&product=BIRT&target_milestone=2.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_severity=enhancement&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="
+				>BIRT 2.3 Enhancements and Bug Fixes </a>
 
 		<br>
-		<a href="/birt/phoenix/project/project_plan_R2_1_3.php">BIRT 2.1.3 Project Development Plan</a>
+		<a href="/birt/phoenix/project/project_plan_R2_3_0.php">BIRT 2.3 Project Development Plan</a>
 		</p>	
 
 
