@@ -35,6 +35,15 @@
 		
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.2.1
+					</a>
+					is now available for download.
+					<span class="dates">
+						10/03/07
+					</span>
+				</li>			
+				<li>
 					<a href="project/project_plan_R2_3_0.php">
 						BIRT 2.3
 					</a>
