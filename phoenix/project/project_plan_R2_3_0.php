@@ -200,7 +200,7 @@ stacks:</p>
   <li>Data Tools Platform Project 1.6 (DTP)</li>
 
 
-  <li>Web Tools Project (WTP) 2.0</li>
+  <li>Web Tools Project (WTP) 3.4</li>
 
 
 </ul>
@@ -227,7 +227,7 @@ stacks:</p>
   <li>Data Tools Platform Project 1.6 (DTP)</li>
 
 
-  <li>Web Tools Project (WTP) 2.0</li>
+  <li>Web Tools Project (WTP) 3.4</li>
 
 
 </ul>
