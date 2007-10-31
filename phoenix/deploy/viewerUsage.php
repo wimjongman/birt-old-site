@@ -31,6 +31,8 @@
 		<h1><a name="top"></a>$pageTitle</h1>
 
 		<blockquote>
+		
+				
 			<ul>
 				<li><a href="#overview">Overview</a></li>
 				<li><a href="#operations">Viewer Operations</a></li>
@@ -44,7 +46,10 @@
 
 		<h2><a name="overview"></a>Overview</h2>
 		<p>
+		    If you are using the 2.2.x Birt Viewer please see this <a href="viewerUsage2.2.php">page</a>.<br>
+		 </p><p>   
 			The sample BIRT viewer is optimized for use within Eclipse for the preview operation. When used outside Eclipse, it simply acts as an example of the application you might build to run and view reports. Your report viewer application must be in Java so that it has access to the BIRT engine.
+			The viewer can also be deployed as an Eclipse plugin in an RCP application.
 		</p>
 
 		<p>
