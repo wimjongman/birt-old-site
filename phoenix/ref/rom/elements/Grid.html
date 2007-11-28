@@ -43,6 +43,8 @@ Represents a Grid item, it's divided into a series of rows and columns.</div>
 <dl class="section-text">
 <dt><a href="#Method-onCreate">onCreate</a></dt>
 <dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPageBreak">onPageBreak</a></dt>
+<dd></dd>
 <dt><a href="#Method-onPrepare">onPrepare</a></dt>
 <dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
 <dt><a href="#Method-onRender">onRender</a></dt>
@@ -62,8 +64,11 @@ Represents a Grid item, it's divided into a series of rows and columns.</div>
 
 <p class="section-text">
 <a href="ReportItem.html#Property-bookmark">bookmark</a>, 
+<a href="ReportItem.html#Property-boundDataColumns">boundDataColumns</a>, 
 <a href="ReportElement.html#Property-comments">comments</a>, 
+<a href="ReportItem.html#Property-cube">cube</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
+<a href="ReportItem.html#Property-dataBindingRef">dataBindingRef</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
 <a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
@@ -77,10 +82,12 @@ Represents a Grid item, it's divided into a series of rows and columns.</div>
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
+<a href="ReportElement.html#Property-viewAction">viewAction</a>, 
 <a href="ReportItem.html#Property-visibility">visibility</a>, 
 <a href="ReportItem.html#Property-width">width</a>, 
 <a href="ReportItem.html#Property-x">x</a>, 
-<a href="ReportItem.html#Property-y">y</a>
+<a href="ReportItem.html#Property-y">y</a>, 
+<a href="ReportItem.html#Property-zIndex">zIndex</a>
 </p>
 <h3>Style Properties</h3>
 
@@ -105,6 +112,7 @@ Represents a Grid item, it's divided into a series of rows and columns.</div>
 <a href="Style.html#Property-borderTopWidth">borderTopWidth</a>, 
 <a href="Style.html#Property-canShrink">canShrink</a>, 
 <a href="Style.html#Property-color">color</a>, 
+<a href="Style.html#Property-dateFormat">dateFormat</a>, 
 <a href="Style.html#Property-dateTimeFormat">dateTimeFormat</a>, 
 <a href="Style.html#Property-display">display</a>, 
 <a href="Style.html#Property-fontFamily">fontFamily</a>, 
@@ -139,6 +147,7 @@ Represents a Grid item, it's divided into a series of rows and columns.</div>
 <a href="Style.html#Property-textOverline">textOverline</a>, 
 <a href="Style.html#Property-textTransform">textTransform</a>, 
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
+<a href="Style.html#Property-timeFormat">timeFormat</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>, 
 <a href="Style.html#Property-whiteSpace">whiteSpace</a>, 
 <a href="Style.html#Property-widows">widows</a>, 
@@ -259,6 +268,29 @@ the item is saved to the report document file. See the scripting spec for additi
 about this script. Applications should perform visual customization in the on-render script instead.</p></div>
 
 <hr>
+<h2><a name="Method-onPageBreak">onPageBreak Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPageBreak(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+
+<hr>
 <h2><a name="Method-onPrepare">onPrepare Method</a></h2>
 
 <p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
@@ -326,7 +358,7 @@ preferred place for visual customizations.</p></div>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
-<td><code>columns</code></td></tr>
+<td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>
 <td>List of <a href="Column.html">Column</a></td></tr>
 <tr><td>Default Style:</td>

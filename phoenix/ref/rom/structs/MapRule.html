@@ -25,9 +25,11 @@ translated value</div>
 
 <dl class="section-text">
 <dt><a href="#Property-display">display</a></dt>
-<dd>The value to display when the map rule &quot;triggers.&quot;</dd>
+<dd>The value to display when the map rule �triggers.�</dd>
 <dt><a href="#Property-displayID">displayID</a></dt>
 <dd>Resource key for the display value.</dd>
+<dt><a href="#Property-isDesignTime">isDesignTime</a></dt>
+<dd></dd>
 <dt><a href="#Property-operator">operator</a></dt>
 <dd>The operator for a simple condition</span></dd>
 <dt><a href="#Property-testExpr">testExpr</a></dt>
@@ -43,14 +45,14 @@ translated value</div>
 
 <div class="section-text">
 <p>A map rule is part of the map rules. Each map rule contains a condition that
-matches the value, and a value to display when the rule &quot;triggers.&quot; For
-example, a set of map rules for a &quot;gender&quot; database column may map the
-values null, M, F into the display values &quot;No data&quot;, &quot;Male&quot; and &quot;Female&quot;.</p></div>
+matches the value, and a value to display when the rule �triggers.� For
+example, a set of map rules for a �gender� database column may map the
+values null, M, F into the display values �No data�, �Male� and �Female�.</p></div>
 <h1>Property Detail</h1>
 
 <h2><a name="Property-display">display Property</a></h2>
 
-<p class="section-text">The value to display when the map rule &quot;triggers.&quot;</p>
+<p class="section-text">The value to display when the map rule �triggers.�</p>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -111,6 +113,30 @@ not further formatted</p></div>
 <p>&nbsp;</p></div>
 
 <hr>
+<h2><a name="Property-isDesignTime">isDesignTime Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#boolean">boolean</a></td></tr>
+<tr><td>Since:</td>
+<td>2.2</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Is Design Time</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>true</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
 <h2><a name="Property-operator">operator Property</a></h2>
 
 <p class="section-text">The operator for a simple condition</span></p>
@@ -140,11 +166,11 @@ not further formatted</p></div>
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>eq</td>
-<td>Equal</td>
+<td>Equal to</td>
 <td>eq</td>
 <td></td></tr>
 <tr><td>ne</td>
-<td>Not Equal</td>
+<td>Not Equal to</td>
 <td>ne</td>
 <td></td></tr>
 <tr><td>lt</td>
@@ -156,11 +182,11 @@ not further formatted</p></div>
 <td>le</td>
 <td></td></tr>
 <tr><td>ge</td>
-<td>Larger than or Equal </td>
+<td>Greater than or Equal </td>
 <td>ge</td>
 <td></td></tr>
 <tr><td>gt</td>
-<td>Larger than</td>
+<td>Greater than</td>
 <td>gt</td>
 <td></td></tr>
 <tr><td>between</td>
@@ -194,6 +220,30 @@ not further formatted</p></div>
 <tr><td>match</td>
 <td>Match</td>
 <td>match</td>
+<td></td></tr>
+<tr><td>top-n</td>
+<td>Top n</td>
+<td>top-n</td>
+<td></td></tr>
+<tr><td>bottom-n</td>
+<td>Bottom n</td>
+<td>bottom-n</td>
+<td></td></tr>
+<tr><td>top-percent</td>
+<td>Top percent</td>
+<td>top-percent</td>
+<td></td></tr>
+<tr><td>bottom-percent</td>
+<td>Bottom percent</td>
+<td>bottom-percent</td>
+<td></td></tr>
+<tr><td>not-like</td>
+<td>Not Like</td>
+<td>not-like</td>
+<td></td></tr>
+<tr><td>not-match</td>
+<td>Not Match</td>
+<td>not-match</td>
 <td></td></tr>
 </tbody></table><br>
 <h3>See Also</h3>

@@ -52,6 +52,8 @@ the design.</dd>
 <dd>Allows an element to extend another element of the same type.</dd>
 <dt><a href="#Property-name">name</a></dt>
 <dd>Internal element name used to reference the element within the report design and in scripts.</dd>
+<dt><a href="#Property-viewAction">viewAction</a></dt>
+<dd></dd>
 </dl>
 
 <h3>Inherited Properties</h3>
@@ -261,14 +263,14 @@ which define the scripting behavior that will be executed at runtime.</p>
 <p>Most elements can inherit properties, styles and behavior 
 from another element of the same type. For example, a label can inherit from 
 another label. This property identifies the &quot;parent&quot; element by name. The parent 
-must exist. If it does not, the ERD will display an error and the report won’t 
+must exist. If it does not, the ERD will display an error and the report wonï¿½t 
 run.</p>
 <p>ROM uses prototype-based inheritance, much like 
 JavaScript. Suppose derived element D extends parent element P. The <i>effective 
 value</i> of the property of element D is found by first looking for the 
 property value in the definition of element D. If the property is not set in 
 element D, then BIRT repeats the search in element P. P may in turn extend yet 
-another element, and the search repeats for P’s parent. The search terminates if 
+another element, and the search repeats for Pï¿½s parent. The search terminates if 
 when there are no more parent elements to search. In this case, the property 
 takes its default value as defined in this specification.</p>
 <p>Style properties use an additional level of search as 
@@ -281,7 +283,7 @@ GUI does not.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot;</i>…&gt;</p></div>
+<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot;</i>ï¿½&gt;</p></div>
 
 <hr>
 <h2><a name="Property-name">name Property</a></h2>
@@ -335,11 +337,64 @@ on. ROM names are case-sensitive.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>…&gt;</p></div>
+<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>ï¿½&gt;</p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
 <p><code>ReportElementDefn.displayName</code> 
 property</p></div>
+
+<hr>
+<h2><a name="Property-viewAction">viewAction Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (viewAction)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>View action</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>NoChange</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>NoChange</td>
+<td>No Change</td>
+<td>NoChange</td>
+<td></td></tr>
+<tr><td>Changed</td>
+<td>Changed</td>
+<td>Changed</td>
+<td></td></tr>
+<tr><td>Added</td>
+<td>Added</td>
+<td>Added</td>
+<td></td></tr>
+<tr><td>Deleted</td>
+<td>Deleted</td>
+<td>Deleted</td>
+<td></td></tr>
+</tbody></table><br>
 </body>
 </html>
