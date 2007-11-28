@@ -9,6 +9,8 @@
 <p class="title">Eclipse BIRT Report Object Model (ROM)</p>
 <p class="subtitle">Grid Element</p>
 <h1>Element Overview</h1>
+<div class="section-text">
+Represents a Grid item, it's divided into a series of rows and columns.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -36,12 +38,25 @@
 <td><a href="../styles.html#grid">grid</a></td></tr>
 </table>
 
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onCreate">onCreate</a></dt>
+<dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPageBreak">onPageBreak</a></dt>
+<dd></dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+<dt><a href="#Method-onRender">onRender</a></dt>
+<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
+</dl>
+
 <h3>Slot Summary</h3>
 
 <dl class="section-text">
 <dt><a href="#Slot-columns">columns</a></dt>
 <dd>Describes the columns that make up the grid.</dd>
-<dt><a href="#Slot-row">row</a></dt>
+<dt><a href="#Slot-rows">rows</a></dt>
 <dd>Any number of row entries.</dd>
 </dl>
 
@@ -49,22 +64,30 @@
 
 <p class="section-text">
 <a href="ReportItem.html#Property-bookmark">bookmark</a>, 
+<a href="ReportItem.html#Property-boundDataColumns">boundDataColumns</a>, 
 <a href="ReportElement.html#Property-comments">comments</a>, 
+<a href="ReportItem.html#Property-cube">cube</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
+<a href="ReportItem.html#Property-dataBindingRef">dataBindingRef</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
+<a href="ReportElement.html#Property-viewAction">viewAction</a>, 
 <a href="ReportItem.html#Property-visibility">visibility</a>, 
 <a href="ReportItem.html#Property-width">width</a>, 
 <a href="ReportItem.html#Property-x">x</a>, 
-<a href="ReportItem.html#Property-y">y</a>
+<a href="ReportItem.html#Property-y">y</a>, 
+<a href="ReportItem.html#Property-zIndex">zIndex</a>
 </p>
 <h3>Style Properties</h3>
 
@@ -89,6 +112,7 @@
 <a href="Style.html#Property-borderTopWidth">borderTopWidth</a>, 
 <a href="Style.html#Property-canShrink">canShrink</a>, 
 <a href="Style.html#Property-color">color</a>, 
+<a href="Style.html#Property-dateFormat">dateFormat</a>, 
 <a href="Style.html#Property-dateTimeFormat">dateTimeFormat</a>, 
 <a href="Style.html#Property-display">display</a>, 
 <a href="Style.html#Property-fontFamily">fontFamily</a>, 
@@ -97,11 +121,9 @@
 <a href="Style.html#Property-fontVariant">fontVariant</a>, 
 <a href="Style.html#Property-fontWeight">fontWeight</a>, 
 <a href="Style.html#Property-highlightRules">highlightRules</a>, 
-<a href="Style.html#Property-highlightTestExpr">highlightTestExpr</a>, 
 <a href="Style.html#Property-letterSpacing">letterSpacing</a>, 
 <a href="Style.html#Property-lineHeight">lineHeight</a>, 
 <a href="Style.html#Property-mapRules">mapRules</a>, 
-<a href="Style.html#Property-mapTestExpr">mapTestExpr</a>, 
 <a href="Style.html#Property-marginBottom">marginBottom</a>, 
 <a href="Style.html#Property-marginLeft">marginLeft</a>, 
 <a href="Style.html#Property-marginRight">marginRight</a>, 
@@ -125,16 +147,12 @@
 <a href="Style.html#Property-textOverline">textOverline</a>, 
 <a href="Style.html#Property-textTransform">textTransform</a>, 
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
+<a href="Style.html#Property-timeFormat">timeFormat</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>, 
 <a href="Style.html#Property-whiteSpace">whiteSpace</a>, 
 <a href="Style.html#Property-widows">widows</a>, 
 <a href="Style.html#Property-wordSpacing">wordSpacing</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -176,7 +194,7 @@ simplify the layout of some or all of the report.</p>
 <p>To understand why, simply consider a tool that provides only free-form layout. The simplest report layout is to 
 place text onto lines, and fields into columns. A layout that supports just (x, 
 y) positioning forces the user to manually align controls vertically and 
-horizontally. Typical tools provide an align option to help with this – the user 
+horizontally. Typical tools provide an align option to help with this ? the user 
 can select a set of elements and cause them to be aligned with the same left or 
 right side, or the same top or bottom position. However, manual alignment is not 
 &quot;sticky.&quot; If the user decides to move the line or column position, he must 
@@ -219,6 +237,114 @@ as a whole.</p>
 <li>Row alignment: how to align items within a row. Options are top, middle, bottom or baseline (described below).</li>
 
 </ul></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onCreate">onCreate Method</a></h2>
+
+<p class="section-text">Script executed when the element is created in the Factory.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is created in the Factory. Called after the item is created, but before 
+the item is saved to the report document file. See the scripting spec for additional information 
+about this script. Applications should perform visual customization in the on-render script instead.</p></div>
+
+<hr>
+<h2><a name="Method-onPageBreak">onPageBreak Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPageBreak(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
+
+<hr>
+<h2><a name="Method-onRender">onRender Method</a></h2>
+
+<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is prepared for rendering in the Presentation engine. Changes made to the 
+element are written to the target output format, but not saved to the report document file. This is the
+preferred place for visual customizations.</p></div>
 <h1>Slot Detail</h1>
 
 <h2><a name="Slot-columns">columns Slot</a></h2>
@@ -228,11 +354,11 @@ as a whole.</p>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>columns</td></tr>
+<td>Columns</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
-<td><code>columns</code></td></tr>
+<td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>
 <td>List of <a href="Column.html">Column</a></td></tr>
 <tr><td>Default Style:</td>
@@ -255,16 +381,16 @@ or other properties of each column.</p></p></div>
 Table Specification</i>.</p></div>
 
 <hr>
-<h2><a name="Slot-row">row Slot</a></h2>
+<h2><a name="Slot-rows">rows Slot</a></h2>
 
 <p class="section-text">Any number of row entries.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>row</td></tr>
+<td>Rows</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>

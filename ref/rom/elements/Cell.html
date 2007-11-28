@@ -9,6 +9,8 @@
 <p class="title">Eclipse BIRT Report Object Model (ROM)</p>
 <p class="subtitle">Cell Element</p>
 <h1>Element Overview</h1>
+<div class="section-text">
+Represents a cell element within a grid row or table row.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -19,7 +21,7 @@
 <tr><td>XML Element:</td>
 <td><code>cell</code></td></tr>
 <tr><td>Extends:</td>
-<td><a href="DesignElement.html">DesignElement</a></td></tr>
+<td>None</td></tr>
 <tr><td>Extendable:</td>
 <td>No</td></tr>
 <tr><td>Abstract:</td>
@@ -29,7 +31,7 @@
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>Yes</td></tr>
 <tr><td>Default Style:</td>
@@ -45,14 +47,29 @@
 <dd>The column in which the cell starts.</dd>
 <dt><a href="#Property-drop">drop</a></dt>
 <dd>Whether the cells defined in this row should expand to fill the entire table or group.</dd>
+<dt><a href="#Property-eventHandlerClass">eventHandlerClass</a></dt>
+<dd>The full qulified name of the event handler class.</dd>
 <dt><a href="#Property-height">height</a></dt>
 <dd>Minimum cell height.</dd>
 <dt><a href="#Property-rowSpan">rowSpan</a></dt>
 <dd>The number of rows that this cell spans.</dd>
 <dt><a href="#Property-style">style</a></dt>
 <dd>Name of the style applied to this cell.</dd>
+<dt><a href="#Property-viewAction">viewAction</a></dt>
+<dd></dd>
 <dt><a href="#Property-width">width</a></dt>
 <dd>Minimum cell width.</dd>
+</dl>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onCreate">onCreate</a></dt>
+<dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+<dt><a href="#Method-onRender">onRender</a></dt>
+<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
 </dl>
 
 <h3>Slot Summary</h3>
@@ -85,6 +102,7 @@
 <a href="Style.html#Property-borderTopWidth">borderTopWidth</a>, 
 <a href="Style.html#Property-canShrink">canShrink</a>, 
 <a href="Style.html#Property-color">color</a>, 
+<a href="Style.html#Property-dateFormat">dateFormat</a>, 
 <a href="Style.html#Property-dateTimeFormat">dateTimeFormat</a>, 
 <a href="Style.html#Property-display">display</a>, 
 <a href="Style.html#Property-fontFamily">fontFamily</a>, 
@@ -93,11 +111,9 @@
 <a href="Style.html#Property-fontVariant">fontVariant</a>, 
 <a href="Style.html#Property-fontWeight">fontWeight</a>, 
 <a href="Style.html#Property-highlightRules">highlightRules</a>, 
-<a href="Style.html#Property-highlightTestExpr">highlightTestExpr</a>, 
 <a href="Style.html#Property-letterSpacing">letterSpacing</a>, 
 <a href="Style.html#Property-lineHeight">lineHeight</a>, 
 <a href="Style.html#Property-mapRules">mapRules</a>, 
-<a href="Style.html#Property-mapTestExpr">mapTestExpr</a>, 
 <a href="Style.html#Property-marginBottom">marginBottom</a>, 
 <a href="Style.html#Property-marginLeft">marginLeft</a>, 
 <a href="Style.html#Property-marginRight">marginRight</a>, 
@@ -121,6 +137,7 @@
 <a href="Style.html#Property-textOverline">textOverline</a>, 
 <a href="Style.html#Property-textTransform">textTransform</a>, 
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
+<a href="Style.html#Property-timeFormat">timeFormat</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>, 
 <a href="Style.html#Property-whiteSpace">whiteSpace</a>, 
 <a href="Style.html#Property-widows">widows</a>, 
@@ -269,6 +286,41 @@ See explanation in the <i>ROM List and Table Specification</i>. Ignored for
 grids, and for cells that are not in group headers.</p></p></div>
 
 <hr>
+<h2><a name="Property-eventHandlerClass">eventHandlerClass Property</a></h2>
+
+<p class="section-text">The full qulified name of the event handler class.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Event handler class</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Full quilified name of the event handler class, used to specify an external Java class
+which define the scripting behavior that will be executed at runtime.</p></div>
+
+<hr>
 <h2><a name="Property-height">height Property</a></h2>
 
 <p class="section-text">Minimum cell height.</p>
@@ -388,6 +440,59 @@ element &quot;override&quot; those inherited from a parent element or a shared s
 <p>Style element in the <i>ROM Styles Specification</i>.</p></div>
 
 <hr>
+<h2><a name="Property-viewAction">viewAction Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (viewAction)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>View action</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>NoChange</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>NoChange</td>
+<td>No Change</td>
+<td>NoChange</td>
+<td></td></tr>
+<tr><td>Changed</td>
+<td>Changed</td>
+<td>Changed</td>
+<td></td></tr>
+<tr><td>Added</td>
+<td>Added</td>
+<td>Added</td>
+<td></td></tr>
+<tr><td>Deleted</td>
+<td>Deleted</td>
+<td>Deleted</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
 <h2><a name="Property-width">width Property</a></h2>
 
 <p class="section-text">Minimum cell width.</p>
@@ -431,6 +536,91 @@ width of the column.</p>
 
 <div class="section-text">
 <p><code>width</code> property of the Column element</p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onCreate">onCreate Method</a></h2>
+
+<p class="section-text">Script executed when the element is created in the Factory.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is created in the Factory. Called after the item is created, but before 
+the item is saved to the report document file. See the scripting spec for additional information 
+about this script. Applications should perform visual customization in the on-render script instead.</p></div>
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
+
+<hr>
+<h2><a name="Method-onRender">onRender Method</a></h2>
+
+<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is prepared for rendering in the Presentation engine. Changes made to the 
+element are written to the target output format, but not saved to the report document file. This is the
+preferred place for visual customizations.</p></div>
 <h1>Slot Detail</h1>
 
 <h2><a name="Slot-content">content Slot</a></h2>
@@ -442,11 +632,11 @@ width of the column.</p>
 <tr><td>Display Name:</td>
 <td>Content</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
-<td><code>content</code></td></tr>
+<td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>
-<td>List of <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="Line.html">Line</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
+<td>List of <a href="AutoText.html">AutoText</a>, <a href="Data.html">Data</a>, <a href="ExtendedItem.html">ExtendedItem</a>, <a href="FreeForm.html">FreeForm</a>, <a href="Grid.html">Grid</a>, <a href="Image.html">Image</a>, <a href="Label.html">Label</a>, <a href="Line.html">Line</a>, <a href="List.html">List</a>, <a href="Table.html">Table</a>, <a href="TemplateReportItem.html">TemplateReportItem</a>, <a href="Text.html">Text</a>, <a href="TextData.html">TextData</a></td></tr>
 <tr><td>Default Style:</td>
 <td>None</td></tr>
 </table>

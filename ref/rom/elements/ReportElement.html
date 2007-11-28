@@ -31,7 +31,7 @@ Abstract element for user-visible elements.</div>
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>No</td></tr>
 </table>
@@ -44,10 +44,16 @@ Abstract element for user-visible elements.</div>
 the design.</dd>
 <dt><a href="#Property-displayName">displayName</a></dt>
 <dd>Provides a user-friendly name for the element.</dd>
+<dt><a href="#Property-displayNameID">displayNameID</a></dt>
+<dd>Message ID property for the display name.</dd>
+<dt><a href="#Property-eventHandlerClass">eventHandlerClass</a></dt>
+<dd>The full qulified name of the event handler class.</dd>
 <dt><a href="#Property-extends">extends</a></dt>
 <dd>Allows an element to extend another element of the same type.</dd>
 <dt><a href="#Property-name">name</a></dt>
 <dd>Internal element name used to reference the element within the report design and in scripts.</dd>
+<dt><a href="#Property-viewAction">viewAction</a></dt>
+<dd></dd>
 </dl>
 
 <h3>Inherited Properties</h3>
@@ -115,17 +121,17 @@ tags; but cannot be localized.</p></p></div>
 <tr><td>Type:</td>
 <td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.displayName</td></tr>
+<td>Display name</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
 <td>None</td></tr>
 <tr><td>Inherited:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
 <td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
@@ -146,8 +152,78 @@ designer.</p></p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
-<p>Report Element<code> name</code> 
-property</p>
+<p>Report Element<code> name</code> property</p></div>
+
+<hr>
+<h2><a name="Property-displayNameID">displayNameID Property</a></h2>
+
+<p class="section-text">Message ID property for the display name.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
+<tr><td>Since:</td>
+<td>reserved</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Display name key</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p><p>The display name of the element can be externalized, the ID property will
+link to an external message key where the user put his message files.</p></div>
+
+<hr>
+<h2><a name="Property-eventHandlerClass">eventHandlerClass Property</a></h2>
+
+<p class="section-text">The full qulified name of the event handler class.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Event handler class</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Full quilified name of the event handler class, used to specify an external Java class
+which define the scripting behavior that will be executed at runtime.</p>
+
 <p>&nbsp;</p></div>
 
 <hr>
@@ -160,11 +236,11 @@ property</p>
 <tr><td>Type:</td>
 <td><a href="../types.html#extends">extends</a></td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.extends</td></tr>
+<td>Extends</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -187,14 +263,14 @@ property</p>
 <p>Most elements can inherit properties, styles and behavior 
 from another element of the same type. For example, a label can inherit from 
 another label. This property identifies the &quot;parent&quot; element by name. The parent 
-must exist. If it does not, the ERD will display an error and the report won’t 
+must exist. If it does not, the ERD will display an error and the report wonï¿½t 
 run.</p>
 <p>ROM uses prototype-based inheritance, much like 
 JavaScript. Suppose derived element D extends parent element P. The <i>effective 
 value</i> of the property of element D is found by first looking for the 
 property value in the definition of element D. If the property is not set in 
 element D, then BIRT repeats the search in element P. P may in turn extend yet 
-another element, and the search repeats for P’s parent. The search terminates if 
+another element, and the search repeats for Pï¿½s parent. The search terminates if 
 when there are no more parent elements to search. In this case, the property 
 takes its default value as defined in this specification.</p>
 <p>Style properties use an additional level of search as 
@@ -207,7 +283,7 @@ GUI does not.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot; </i>…</p></div>
+<p>&lt;<i>elementName </i>extends=&quot;<i>value&quot;</i>ï¿½&gt;</p></div>
 
 <hr>
 <h2><a name="Property-name">name Property</a></h2>
@@ -223,7 +299,7 @@ GUI does not.</p></p>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Element.DesignElement.name</td></tr>
+<td>Name</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -261,11 +337,64 @@ on. ROM names are case-sensitive.</p></p>
 
 <h4>XML Summary</h4>
 
-<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>…</p></div>
+<p>&lt;<i>elementName </i>name=&quot;<i>value&quot; </i>ï¿½&gt;</p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
 <p><code>ReportElementDefn.displayName</code> 
 property</p></div>
+
+<hr>
+<h2><a name="Property-viewAction">viewAction Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (viewAction)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>View action</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>NoChange</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>NoChange</td>
+<td>No Change</td>
+<td>NoChange</td>
+<td></td></tr>
+<tr><td>Changed</td>
+<td>Changed</td>
+<td>Changed</td>
+<td></td></tr>
+<tr><td>Added</td>
+<td>Added</td>
+<td>Added</td>
+<td></td></tr>
+<tr><td>Deleted</td>
+<td>Deleted</td>
+<td>Deleted</td>
+<td></td></tr>
+</tbody></table><br>
 </body>
 </html>

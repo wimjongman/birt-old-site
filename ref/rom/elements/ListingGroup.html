@@ -18,11 +18,11 @@ list and table groups.</div>
 <tr><td>Display Name:</td>
 <td>Listing Group</td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
+<td>none</td></tr>
 <tr><td>XML Element:</td>
 <td><code>None</code></td></tr>
 <tr><td>Extends:</td>
-<td><a href="DesignElement.html">DesignElement</a></td></tr>
+<td>None</td></tr>
 <tr><td>Extendable:</td>
 <td>No</td></tr>
 <tr><td>Abstract:</td>
@@ -40,34 +40,42 @@ list and table groups.</div>
 <h3>Property Summary</h3>
 
 <dl class="section-text">
+<dt><a href="#Property-bookmark">bookmark</a></dt>
+<dd></dd>
+<dt><a href="#Property-eventHandlerClass">eventHandlerClass</a></dt>
+<dd>The full qulified name of the event handler class.</dd>
 <dt><a href="#Property-filter">filter</a></dt>
 <dd>A filter to apply to the each group as a whole.</dd>
 <dt><a href="#Property-groupName">groupName</a></dt>
 <dd>Optional name of the group.</dd>
+<dt><a href="#Property-hideDetail">hideDetail</a></dt>
+<dd></dd>
 <dt><a href="#Property-interval">interval</a></dt>
 <dd>When creating intervals, this property allows grouping on a range of contiguous values.</dd>
+<dt><a href="#Property-intervalBase">intervalBase</a></dt>
+<dd>In conjunction with Interval and IntervalRange, determines how data is divided into groups.</dd>
 <dt><a href="#Property-intervalRange">intervalRange</a></dt>
-<dd>When creating intervals, this attribute allows 
-grouping on a range of contiguous values.</dd>
+<dd>Number of contiguous groups to merge to create a single group.</dd>
 <dt><a href="#Property-keyExpr">keyExpr</a></dt>
 <dd>The expression for the group key.</dd>
+<dt><a href="#Property-pageBreakAfter">pageBreakAfter</a></dt>
+<dd></dd>
+<dt><a href="#Property-pageBreakBefore">pageBreakBefore</a></dt>
+<dd></dd>
+<dt><a href="#Property-pageBreakInside">pageBreakInside</a></dt>
+<dd></dd>
+<dt><a href="#Property-repeatHeader">repeatHeader</a></dt>
+<dd></dd>
 <dt><a href="#Property-sort">sort</a></dt>
 <dd>Custom sort criteria to apply to the groups as a whole.</dd>
 <dt><a href="#Property-sortDirection">sortDirection</a></dt>
 <dd>The sort direction for the groups at this level.</dd>
+<dt><a href="#Property-sortType">sortType</a></dt>
+<dd>Sort type property</dd>
 <dt><a href="#Property-toc">toc</a></dt>
 <dd>The table of contents expression for this group.</dd>
-</dl>
-
-<h3>Method Summary</h3>
-
-<dl class="section-text">
-<dt><a href="#Method-onFinish">onFinish</a></dt>
-<dd>Called after the last row for this group.</dd>
-<dt><a href="#Method-onRow">onRow</a></dt>
-<dd>Called for each detail row that appears within this group.</dd>
-<dt><a href="#Method-onStart">onStart</a></dt>
-<dd>Called before the first row is retrieved from the data set for this group.</dd>
+<dt><a href="#Property-viewAction">viewAction</a></dt>
+<dd></dd>
 </dl>
 
 <h3>Description</h3>
@@ -82,6 +90,75 @@ column from the query. If the group key is a time field then user often want to
 group on an <i>interval</i> such as month or quarter.</p></div>
 <h1>Property Detail</h1>
 
+<h2><a name="Property-bookmark">bookmark Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#expression">expression</a></td></tr>
+<tr><td>Context:</td>
+<td></td></tr>
+<tr><td>Expression Type:</td>
+<td>string</td></tr>
+<tr><td>Since:</td>
+<td>2.2</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Bookmark</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-eventHandlerClass">eventHandlerClass Property</a></h2>
+
+<p class="section-text">The full qulified name of the event handler class.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Event handler class</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Full quilified name of the event handler class, used to specify an external Java class
+which define the scripting behavior that will be executed at runtime.</p></div>
+
+<hr>
 <h2><a name="Property-filter">filter Property</a></h2>
 
 <p class="section-text">A filter to apply to the each group as a whole.</p>
@@ -89,7 +166,7 @@ group on an <i>interval</i> such as month or quarter.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/FilterCond.html">FilterCond</a> Structures</td></tr>
+<td>List of <a href="../structs/FilterCondition.html">FilterCondition</a> Structures</td></tr>
 <tr><td>Since:</td>
 <td>reserved</td></tr>
 <tr><td>Required:</td>
@@ -157,6 +234,36 @@ within the list or table. The name is used to identify the group in aggregates
 as explained in the scripting specification.</p></div>
 
 <hr>
+<h2><a name="Property-hideDetail">hideDetail Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#boolean">boolean</a></td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Hide detail</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>false</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
 <h2><a name="Property-interval">interval Property</a></h2>
 
 <p class="section-text">When creating intervals, this property allows grouping on a range of contiguous values.</p>
@@ -182,7 +289,7 @@ as explained in the scripting specification.</p></div>
 <tr><td>Property Sheet Visibility:</td>
 <td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
+<td>Interval</td></tr>
 </table>
 
 <h3>Choices</h3>
@@ -192,7 +299,7 @@ as explained in the scripting specification.</p></div>
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No interval</td>
 <td>none</td>
 <td>Group on individual 
     values.</td></tr>
@@ -265,10 +372,43 @@ with an <code>intervalRange</code> of 2.</p></div>
 <p><code>intervalRange</code> Property</p></div>
 
 <hr>
+<h2><a name="Property-intervalBase">intervalBase Property</a></h2>
+
+<p class="section-text">In conjunction with Interval and IntervalRange, determines how data is divided into groups.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Interval base</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Interval</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>In conjunction with Interval and IntervalRange, determines how data is divided into groups.</p></div>
+
+<hr>
 <h2><a name="Property-intervalRange">intervalRange Property</a></h2>
 
-<p class="section-text">When creating intervals, this attribute allows 
-grouping on a range of contiguous values.</p>
+<p class="section-text">Number of contiguous groups to merge to create a single group.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -283,7 +423,7 @@ grouping on a range of contiguous values.</p>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
-<td>1.0</td></tr>
+<td>None</td></tr>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
@@ -291,7 +431,7 @@ grouping on a range of contiguous values.</p>
 <tr><td>Property Sheet Visibility:</td>
 <td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
+<td>Interval</td></tr>
 </table>
 
 <h3>Description</h3>
@@ -387,6 +527,187 @@ ended, and a new group started. The expression most often is just a column, but
 can be a computed value.</p></div>
 
 <hr>
+<h2><a name="Property-pageBreakAfter">pageBreakAfter Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (pageBreakAfter)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Page break after</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>auto</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>auto</td>
+<td>Auto</td>
+<td>auto</td>
+<td></td></tr>
+<tr><td>always</td>
+<td>Always</td>
+<td>always</td>
+<td></td></tr>
+<tr><td>avoid</td>
+<td>Avoid</td>
+<td>avoid</td>
+<td></td></tr>
+<tr><td>always-excluding-last</td>
+<td>Always Excluding Last</td>
+<td>always-excluding-last</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
+<h2><a name="Property-pageBreakBefore">pageBreakBefore Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (pageBreakBefore)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Page break before</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>auto</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>auto</td>
+<td>Auto</td>
+<td>auto</td>
+<td></td></tr>
+<tr><td>always</td>
+<td>Always</td>
+<td>always</td>
+<td></td></tr>
+<tr><td>avoid</td>
+<td>Avoid</td>
+<td>avoid</td>
+<td></td></tr>
+<tr><td>always-excluding-first</td>
+<td>Always Excluding First</td>
+<td>always-excluding-first</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
+<h2><a name="Property-pageBreakInside">pageBreakInside Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (pageBreakInside)</td></tr>
+<tr><td>Since:</td>
+<td>2.2</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Page break inside</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>auto</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>avoid</td>
+<td>Avoid</td>
+<td>avoid</td>
+<td></td></tr>
+<tr><td>auto</td>
+<td>Auto</td>
+<td>auto</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
+<h2><a name="Property-repeatHeader">repeatHeader Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#boolean">boolean</a></td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Repeat header</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>true</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
 <h2><a name="Property-sort">sort Property</a></h2>
 
 <p class="section-text">Custom sort criteria to apply to the groups as a whole.</p>
@@ -440,7 +761,7 @@ customers by total sales or by customer name.</p></div>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Sort direction</td></tr>
+<td>Sort Direction</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -484,6 +805,59 @@ default group sort key is the group key.</p></div>
 <p><code>sort</code> Property</p></div>
 
 <hr>
+<h2><a name="Property-sortType">sortType Property</a></h2>
+
+<p class="section-text">Sort type property</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (sortType)</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Sort type</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>none</td></tr>
+<tr><td>Inherited:</td>
+<td>Yes</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>none</td>
+<td>No sort type</td>
+<td>none</td>
+<td></td></tr>
+<tr><td>sort-on-group-key</td>
+<td>Sort on group key</td>
+<td>sort-on-group-key</td>
+<td></td></tr>
+<tr><td>complex-sort</td>
+<td>Complex sort</td>
+<td>complex-sort</td>
+<td></td></tr>
+</tbody></table><br>
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Sort type</p></div>
+
+<hr>
 <h2><a name="Property-toc">toc Property</a></h2>
 
 <p class="section-text">The table of contents expression for this group.</p>
@@ -491,13 +865,9 @@ default group sort key is the group key.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#expression">expression</a></td></tr>
-<tr><td>Context:</td>
-<td></td></tr>
-<tr><td>Expression Type:</td>
-<td>string</td></tr>
+<td><a href="../structs/TOCStructure.html">TOCStructure</a> Structure</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.2</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -509,7 +879,7 @@ default group sort key is the group key.</p></div>
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Property Sheet Visibility:</td>
 <td>Hidden</td></tr>
 <tr><td>Property Sheet Group:</td>
@@ -521,91 +891,58 @@ default group sort key is the group key.</p></div>
 <div class="section-text">
 <p>The table of contents (TOC) expression for the group. The 
 value of the expression appears for the table of contents for the report.</p></div>
-<h1>Method Detail</h1>
-
-<h2><a name="Method-onFinish">onFinish Method</a></h2>
-
-<p class="section-text">Called after the last row for this group.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onFinish(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called after the last row is read from the data set for this group, but 
-before the footer band is created.</p></div>
 
 <hr>
-<h2><a name="Method-onRow">onRow Method</a></h2>
+<h2><a name="Property-viewAction">viewAction Property</a></h2>
 
-<p class="section-text">Called for each detail row that appears within this group.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onRow(&nbsp;)</code></p>
-<h3>Details
-</h3>
+<p class="section-text"></p>
+<h3>Details</h3>
 
 <table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (viewAction)</td></tr>
 <tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>View action</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>NoChange</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
 </table>
 
-<h3>Description</h3>
+<h3>Choices</h3>
 
-<div class="section-text">
-<p>Method called for each detail row that appears within this group. Called 
-before the detail band is created. This script is a convenient place to 
-accumulate custom running total variables.</p></div>
-
-<hr>
-<h2><a name="Method-onStart">onStart Method</a></h2>
-
-<p class="section-text">Called before the first row is retrieved from the data set for this group.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.onStart(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>factory</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>Called before the first row is retrieved from the data set for this group. 
-Called before the header band is created. This script is a convenient place to 
-initialize custom running total variables.</p></div>
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>NoChange</td>
+<td>No Change</td>
+<td>NoChange</td>
+<td></td></tr>
+<tr><td>Changed</td>
+<td>Changed</td>
+<td>Changed</td>
+<td></td></tr>
+<tr><td>Added</td>
+<td>Added</td>
+<td>Added</td>
+<td></td></tr>
+<tr><td>Deleted</td>
+<td>Deleted</td>
+<td>Deleted</td>
+<td></td></tr>
+</tbody></table><br>
 </body>
 </html>

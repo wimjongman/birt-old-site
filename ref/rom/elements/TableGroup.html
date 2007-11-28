@@ -31,10 +31,19 @@ Represents a group break level within a table.</div>
 <tr><td>Name Requirement:</td>
 <td>Not Supported</td></tr>
 <tr><td>Allows User Properties:</td>
-<td>No</td></tr>
+<td>Yes</td></tr>
 <tr><td>Has Style:</td>
 <td>No</td></tr>
 </table>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onPageBreak">onPageBreak</a></dt>
+<dd></dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+</dl>
 
 <h3>Slot Summary</h3>
 
@@ -48,21 +57,25 @@ Represents a group break level within a table.</div>
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
+<a href="ListingGroup.html#Property-bookmark">bookmark</a>, 
+<a href="ListingGroup.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ListingGroup.html#Property-filter">filter</a>, 
 <a href="ListingGroup.html#Property-groupName">groupName</a>, 
+<a href="ListingGroup.html#Property-hideDetail">hideDetail</a>, 
 <a href="ListingGroup.html#Property-interval">interval</a>, 
+<a href="ListingGroup.html#Property-intervalBase">intervalBase</a>, 
 <a href="ListingGroup.html#Property-intervalRange">intervalRange</a>, 
 <a href="ListingGroup.html#Property-keyExpr">keyExpr</a>, 
+<a href="ListingGroup.html#Property-pageBreakAfter">pageBreakAfter</a>, 
+<a href="ListingGroup.html#Property-pageBreakBefore">pageBreakBefore</a>, 
+<a href="ListingGroup.html#Property-pageBreakInside">pageBreakInside</a>, 
+<a href="ListingGroup.html#Property-repeatHeader">repeatHeader</a>, 
 <a href="ListingGroup.html#Property-sort">sort</a>, 
 <a href="ListingGroup.html#Property-sortDirection">sortDirection</a>, 
-<a href="ListingGroup.html#Property-toc">toc</a>
+<a href="ListingGroup.html#Property-sortType">sortType</a>, 
+<a href="ListingGroup.html#Property-toc">toc</a>, 
+<a href="ListingGroup.html#Property-viewAction">viewAction</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ListingGroup.html#Method-onStart">onStart</a>, 
-<a href="ListingGroup.html#Method-onRow">onRow</a>, 
-<a href="ListingGroup.html#Method-onFinish">onFinish</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -73,6 +86,56 @@ and region.</p>
 <p>A group is defined by a <i>group key.</i> The key is a 
 column from the query. If the group key is a time field then user often want to 
 group on an <i>interval</i> such as month or quarter.</p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onPageBreak">onPageBreak Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPageBreak(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
 <h1>Slot Detail</h1>
 
 <h2><a name="Slot-header">header Slot</a></h2>
@@ -82,7 +145,7 @@ group on an <i>interval</i> such as month or quarter.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>header</td></tr>
+<td>Header</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
@@ -90,7 +153,7 @@ group on an <i>interval</i> such as month or quarter.</p></div>
 <tr><td>Contents:</td>
 <td>List of <a href="Row.html">Row</a></td></tr>
 <tr><td>Default Style:</td>
-<td><a href="../styles.html#table-group-header-1">table-group-header-<i>n</i></a></td></tr>
+<td><a href="../styles.html#table-group-header">table-group-header</a></td></tr>
 </table>
 
 <h3>Description</h3>
@@ -119,7 +182,7 @@ group.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>footer</td></tr>
+<td>Footer</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Element:</td>
@@ -127,7 +190,7 @@ group.</p></div>
 <tr><td>Contents:</td>
 <td>List of <a href="Row.html">Row</a></td></tr>
 <tr><td>Default Style:</td>
-<td><a href="../styles.html#table-group-footer-1">table-group-footer-<i>n</i></a></td></tr>
+<td><a href="../styles.html#table-group-footer">table-group-footer</a></td></tr>
 </table>
 
 <h3>Description</h3>

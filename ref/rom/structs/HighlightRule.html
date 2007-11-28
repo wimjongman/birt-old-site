@@ -9,13 +9,15 @@
 <p class="title">Eclipse BIRT Report Object Model (ROM)</p>
 <p class="subtitle">HighlightRule Structure</p>
 <h1>Structure Overview</h1>
+<div class="section-text">
+Represents a highlight rule;each highlight rule consists of an expression, operator, values, and corresponding format style</div>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
 <td>HighlightRule</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 </table>
 
 <h3>Property Summary</h3>
@@ -61,14 +63,20 @@
 <dd></dd>
 <dt><a href="#Property-fontWeight">fontWeight</a></dt>
 <dd></dd>
+<dt><a href="#Property-isDesignTime">isDesignTime</a></dt>
+<dd></dd>
 <dt><a href="#Property-numberAlign">numberAlign</a></dt>
 <dd></dd>
 <dt><a href="#Property-numberFormat">numberFormat</a></dt>
 <dd></dd>
 <dt><a href="#Property-operator">operator</a></dt>
-<dd></dd>
+<dd>The operator for a simple condition</dd>
 <dt><a href="#Property-stringFormat">stringFormat</a></dt>
 <dd></dd>
+<dt><a href="#Property-style">style</a></dt>
+<dd></dd>
+<dt><a href="#Property-testExpr">testExpr</a></dt>
+<dd>An expression used to apply a particular format style</dd>
 <dt><a href="#Property-textAlign">textAlign</a></dt>
 <dd></dd>
 <dt><a href="#Property-textIndent">textIndent</a></dt>
@@ -82,11 +90,17 @@
 <dt><a href="#Property-textUnderline">textUnderline</a></dt>
 <dd></dd>
 <dt><a href="#Property-value1">value1</a></dt>
-<dd></dd>
+<dd>The value for simple conditions with the operators: &lt;,
+&lt;=, =, &lt;&gt;, &gt;=, &gt;, between, not between, like</dd>
 <dt><a href="#Property-value2">value2</a></dt>
-<dd></dd>
+<dd>The value for simple conditions with the operators: between, not between</dd>
 </dl>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A highlight rule gives a set of conditional style properties. The style is
+applied only if the rule �fires.�</p></div>
 <h1>Property Detail</h1>
 
 <h2><a name="Property-backgroundColor">backgroundColor Property</a></h2>
@@ -98,7 +112,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -197,7 +211,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -296,7 +310,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (lineStyle)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -316,7 +330,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line style</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>solid</td>
@@ -363,7 +377,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -406,7 +420,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -505,7 +519,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (lineStyle)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -525,7 +539,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line style</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>solid</td>
@@ -572,7 +586,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -615,7 +629,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -714,7 +728,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (lineStyle)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -734,7 +748,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line style</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>solid</td>
@@ -781,7 +795,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -824,7 +838,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -923,7 +937,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (lineStyle)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -943,7 +957,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line style</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>solid</td>
@@ -990,7 +1004,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1033,7 +1047,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#color">color</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1132,7 +1146,7 @@
 <tr><td>Type:</td>
 <td><a href="../structs/DateTimeFormatValue.html">DateTimeFormatValue</a> Structure</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1156,7 +1170,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1207,7 +1221,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1274,7 +1288,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (fontStyle)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1317,7 +1331,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (fontVariant)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1356,7 +1370,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (fontWeight)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1430,6 +1444,30 @@
 </tbody></table><br>
 
 <hr>
+<h2><a name="Property-isDesignTime">isDesignTime Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#boolean">boolean</a></td></tr>
+<tr><td>Since:</td>
+<td>2.2</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Is Design Time</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>true</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
 <h2><a name="Property-numberAlign">numberAlign Property</a></h2>
 
 <p class="section-text"></p>
@@ -1439,7 +1477,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (textAlign)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1486,7 +1524,7 @@
 <tr><td>Type:</td>
 <td><a href="../structs/NumberFormatValue.html">NumberFormatValue</a> Structure</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1503,14 +1541,14 @@
 <hr>
 <h2><a name="Property-operator">operator Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The operator for a simple condition</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (mapOperator)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1530,11 +1568,11 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>eq</td>
-<td>Equal</td>
+<td>Equal to</td>
 <td>eq</td>
 <td></td></tr>
 <tr><td>ne</td>
-<td>Not Equal</td>
+<td>Not Equal to</td>
 <td>ne</td>
 <td></td></tr>
 <tr><td>lt</td>
@@ -1546,11 +1584,11 @@
 <td>le</td>
 <td></td></tr>
 <tr><td>ge</td>
-<td>Larger than or Equal </td>
+<td>Greater than or Equal </td>
 <td>ge</td>
 <td></td></tr>
 <tr><td>gt</td>
-<td>Larger than</td>
+<td>Greater than</td>
 <td>gt</td>
 <td></td></tr>
 <tr><td>between</td>
@@ -1561,31 +1599,59 @@
 <td>Not Between</td>
 <td>not-between</td>
 <td></td></tr>
-<tr><td>null</td>
-<td>Null</td>
-<td>null</td>
+<tr><td>is-null</td>
+<td>Is Null</td>
+<td>is-null</td>
 <td></td></tr>
-<tr><td>not-null</td>
-<td>Not Null</td>
-<td>not-null</td>
+<tr><td>is-not-null</td>
+<td>Is Not Null</td>
+<td>is-not-null</td>
 <td></td></tr>
-<tr><td>true</td>
-<td>True</td>
-<td>true</td>
+<tr><td>is-true</td>
+<td>Is True</td>
+<td>is-true</td>
 <td></td></tr>
-<tr><td>false</td>
-<td>False</td>
-<td>false</td>
+<tr><td>is-false</td>
+<td>Is False</td>
+<td>is-false</td>
 <td></td></tr>
 <tr><td>like</td>
 <td>Like</td>
 <td>like</td>
 <td></td></tr>
-<tr><td>any</td>
-<td>Any</td>
-<td>any</td>
+<tr><td>match</td>
+<td>Match</td>
+<td>match</td>
+<td></td></tr>
+<tr><td>top-n</td>
+<td>Top n</td>
+<td>top-n</td>
+<td></td></tr>
+<tr><td>bottom-n</td>
+<td>Bottom n</td>
+<td>bottom-n</td>
+<td></td></tr>
+<tr><td>top-percent</td>
+<td>Top percent</td>
+<td>top-percent</td>
+<td></td></tr>
+<tr><td>bottom-percent</td>
+<td>Bottom percent</td>
+<td>bottom-percent</td>
+<td></td></tr>
+<tr><td>not-like</td>
+<td>Not Like</td>
+<td>not-like</td>
+<td></td></tr>
+<tr><td>not-match</td>
+<td>Not Match</td>
+<td>not-match</td>
 <td></td></tr>
 </tbody></table><br>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-stringFormat">stringFormat Property</a></h2>
@@ -1597,7 +1663,7 @@
 <tr><td>Type:</td>
 <td><a href="../structs/StringFormatValue.html">StringFormatValue</a> Structure</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1612,6 +1678,62 @@
 
 
 <hr>
+<h2><a name="Property-style">style Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../elements/Style.html">Style</a> Reference</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Style</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-testExpr">testExpr Property</a></h2>
+
+<p class="section-text">An expression used to apply a particular format style</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#expression">expression</a></td></tr>
+<tr><td>Context:</td>
+<td></td></tr>
+<tr><td>Expression Type:</td>
+<td>any</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>TestExpression</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
+
+<hr>
 <h2><a name="Property-textAlign">textAlign Property</a></h2>
 
 <p class="section-text"></p>
@@ -1621,7 +1743,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (textAlign)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1668,7 +1790,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#dimension">dimension</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1692,7 +1814,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (textLineThrough)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1712,7 +1834,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line through text</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>line-through</td>
@@ -1731,7 +1853,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (textOverline)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1751,7 +1873,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No line over text</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>overline</td>
@@ -1770,7 +1892,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (transform)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1802,7 +1924,7 @@
 <td>lowercase</td>
 <td></td></tr>
 <tr><td>none</td>
-<td>None</td>
+<td>No transformation</td>
 <td>none</td>
 <td></td></tr>
 </tbody></table><br>
@@ -1817,7 +1939,7 @@
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (textUnderline)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1837,7 +1959,7 @@
 <td>Value</td><td>Description</td></tr></thead>
 <tbody>
 <tr><td>none</td>
-<td>None</td>
+<td>No underline</td>
 <td>none</td>
 <td></td></tr>
 <tr><td>underline</td>
@@ -1849,7 +1971,8 @@
 <hr>
 <h2><a name="Property-value1">value1 Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The value for simple conditions with the operators: &lt;,
+&lt;=, =, &lt;&gt;, &gt;=, &gt;, between, not between, like</p>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -1860,7 +1983,7 @@
 <tr><td>Expression Type:</td>
 <td>any</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1873,11 +1996,15 @@
 <td>Yes</td></tr>
 </table>
 
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-value2">value2 Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The value for simple conditions with the operators: between, not between</p>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -1888,7 +2015,7 @@
 <tr><td>Expression Type:</td>
 <td>any</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -1901,5 +2028,9 @@
 <td>Yes</td></tr>
 </table>
 
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
 </body>
 </html>

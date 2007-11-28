@@ -42,7 +42,7 @@ Visual grouping of report parameters.</div>
 <dt><a href="#Property-helpText">helpText</a></dt>
 <dd>Additional pop-up help text associated with the group.</dd>
 <dt><a href="#Property-helpTextID">helpTextID</a></dt>
-<dd></dd>
+<dd>Resource key for the help text.</dd>
 <dt><a href="#Property-startExpanded">startExpanded</a></dt>
 <dd>Whether the group should start expanded in the UI, or start collapsed.</dd>
 </dl>
@@ -60,10 +60,13 @@ Visual grouping of report parameters.</div>
 <a href="ReportElement.html#Property-comments">comments</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
-<a href="DesignElement.html#Property-userProperties">userProperties</a>
+<a href="DesignElement.html#Property-userProperties">userProperties</a>, 
+<a href="ReportElement.html#Property-viewAction">viewAction</a>
 </p>
 <h3>Inherited Property Notes</h3>
 
@@ -72,14 +75,6 @@ Visual grouping of report parameters.</div>
 <dd>The internal name of the group. The name must be 
 unique among parameters and parameter groups. The user will see this name unless 
 the display name is defined. The name cannot be externalized.</dd>
-<dt><a href="ReportElement.html#Property-displayName">displayName</a></dt>
-<dd>The name displayed to the end-user for the group.</dd>
-<dt><a href="ReportElement.html#Property-extends">extends</a></dt>
-<dd>A parameter group can extend a group defined in a 
-library. In this case, the report will include all parameters from the library 
-group. The application cannot change the set of parameters within the group. If 
-the application wishes to change the group; create a new group within the report 
-and add the parameters that should appear for the report.</dd>
 </dl>
 
 <h3>Description</h3>
@@ -129,14 +124,14 @@ of how a set of parameters work together. The help text can be localized.</p></d
 <hr>
 <h2><a name="Property-helpTextID">helpTextID Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Resource key for the help text.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -148,13 +143,17 @@ of how a set of parameters work together. The help text can be localized.</p></d
 <tr><td>Inherited:</td>
 <td>Yes</td></tr>
 <tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
+<td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
 <td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Resource bundle key for the localizable help text.</p></div>
 
 <hr>
 <h2><a name="Property-startExpanded">startExpanded Property</a></h2>
@@ -203,7 +202,7 @@ the UI does not support group expand/collapse.</p></div>
 <tr><td>Display Name:</td>
 <td>Parameters</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>parameters</code></td></tr>
 <tr><td>Contents:</td>

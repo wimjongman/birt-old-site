@@ -45,8 +45,19 @@ Presents data from a data set in using a tabular layout.</div>
 <dd>Text to appear as a table caption in HTML.</dd>
 <dt><a href="#Property-captionID">captionID</a></dt>
 <dd></dd>
-<dt><a href="#Property-repeatHeader">repeatHeader</a></dt>
-<dd>Whether to repeat the headings at the top of each page.</dd>
+</dl>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onCreate">onCreate</a></dt>
+<dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPageBreak">onPageBreak</a></dt>
+<dd></dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+<dt><a href="#Method-onRender">onRender</a></dt>
+<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
 </dl>
 
 <h3>Slot Summary</h3>
@@ -55,7 +66,7 @@ Presents data from a data set in using a tabular layout.</div>
 <dt><a href="#Slot-header">header</a></dt>
 <dd>Rows to appear at the top of the table, and 
 optionally at the top of each page.</dd>
-<dt><a href="#Slot-group">group</a></dt>
+<dt><a href="#Slot-groups">groups</a></dt>
 <dd>Level breaks within the data. Each has its own header 
 &amp; footer.</dd>
 <dt><a href="#Slot-detail">detail</a></dt>
@@ -71,24 +82,35 @@ columns.</dd>
 
 <p class="section-text">
 <a href="ReportItem.html#Property-bookmark">bookmark</a>, 
+<a href="ReportItem.html#Property-boundDataColumns">boundDataColumns</a>, 
 <a href="ReportElement.html#Property-comments">comments</a>, 
+<a href="ReportItem.html#Property-cube">cube</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
+<a href="ReportItem.html#Property-dataBindingRef">dataBindingRef</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="Listing.html#Property-filter">filter</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
+<a href="Listing.html#Property-pageBreakInterval">pageBreakInterval</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
+<a href="Listing.html#Property-repeatHeader">repeatHeader</a>, 
 <a href="Listing.html#Property-sort">sort</a>, 
+<a href="Listing.html#Property-sortByGroups">sortByGroups</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
+<a href="ReportElement.html#Property-viewAction">viewAction</a>, 
 <a href="ReportItem.html#Property-visibility">visibility</a>, 
 <a href="ReportItem.html#Property-width">width</a>, 
 <a href="ReportItem.html#Property-x">x</a>, 
-<a href="ReportItem.html#Property-y">y</a>
+<a href="ReportItem.html#Property-y">y</a>, 
+<a href="ReportItem.html#Property-zIndex">zIndex</a>
 </p>
 <h3>Style Properties</h3>
 
@@ -113,6 +135,7 @@ columns.</dd>
 <a href="Style.html#Property-borderTopWidth">borderTopWidth</a>, 
 <a href="Style.html#Property-canShrink">canShrink</a>, 
 <a href="Style.html#Property-color">color</a>, 
+<a href="Style.html#Property-dateFormat">dateFormat</a>, 
 <a href="Style.html#Property-dateTimeFormat">dateTimeFormat</a>, 
 <a href="Style.html#Property-display">display</a>, 
 <a href="Style.html#Property-fontFamily">fontFamily</a>, 
@@ -121,11 +144,9 @@ columns.</dd>
 <a href="Style.html#Property-fontVariant">fontVariant</a>, 
 <a href="Style.html#Property-fontWeight">fontWeight</a>, 
 <a href="Style.html#Property-highlightRules">highlightRules</a>, 
-<a href="Style.html#Property-highlightTestExpr">highlightTestExpr</a>, 
 <a href="Style.html#Property-letterSpacing">letterSpacing</a>, 
 <a href="Style.html#Property-lineHeight">lineHeight</a>, 
 <a href="Style.html#Property-mapRules">mapRules</a>, 
-<a href="Style.html#Property-mapTestExpr">mapTestExpr</a>, 
 <a href="Style.html#Property-marginBottom">marginBottom</a>, 
 <a href="Style.html#Property-marginLeft">marginLeft</a>, 
 <a href="Style.html#Property-marginRight">marginRight</a>, 
@@ -149,19 +170,12 @@ columns.</dd>
 <a href="Style.html#Property-textOverline">textOverline</a>, 
 <a href="Style.html#Property-textTransform">textTransform</a>, 
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
+<a href="Style.html#Property-timeFormat">timeFormat</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>, 
 <a href="Style.html#Property-whiteSpace">whiteSpace</a>, 
 <a href="Style.html#Property-widows">widows</a>, 
 <a href="Style.html#Property-wordSpacing">wordSpacing</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="Listing.html#Method-onStart">onStart</a>, 
-<a href="Listing.html#Method-onRow">onRow</a>, 
-<a href="Listing.html#Method-onFinish">onFinish</a>, 
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -210,7 +224,7 @@ with a Single Data Set&quot; section below for details.</p></div>
 <p>This property provides text to appear as the table 
 caption in HTML. The text can be localized. From the HTML 4.0 spec:</p>
 <p>When present, the CAPTION element's text should describe the 
-nature of the table. … Visual user agents allow sighted people to quickly grasp 
+nature of the table. ? Visual user agents allow sighted people to quickly grasp 
 the structure of the table from the headings as well as the caption. A 
 consequence of this is that captions will often be inadequate as a summary of 
 the purpose and structure of the table from the perspective of people relying on 
@@ -226,7 +240,7 @@ non-visual user agents.</p></div>
 <tr><td>Type:</td>
 <td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -245,46 +259,114 @@ non-visual user agents.</p></div>
 <td>Top</td></tr>
 </table>
 
+<h1>Method Detail</h1>
 
-<hr>
-<h2><a name="Property-repeatHeader">repeatHeader Property</a></h2>
+<h2><a name="Method-onCreate">onCreate Method</a></h2>
 
-<p class="section-text">Whether to repeat the headings at the top of each page.</p>
-<h3>Details</h3>
+<p class="section-text">Script executed when the element is created in the Factory.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
+<h3>Details
+</h3>
 
 <table class="detail-table">
-<tr><td>Type:</td>
-<td><a href="../types.html#boolean">boolean</a></td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
-<tr><td>Required:</td>
-<td>No</td></tr>
-<tr><td>Display Name:</td>
-<td>Repeat header</td></tr>
-<tr><td>JavaScript Type:</td>
-<td></td></tr>
-<tr><td>Default Value:</td>
-<td>true</td></tr>
-<tr><td>Inherited:</td>
-<td>Yes</td></tr>
-<tr><td>Runtime Settable:</td>
-<td>No</td></tr>
-<tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
-<tr><td>Property Sheet Group:</td>
-<td>Top</td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
 </table>
 
 <h3>Description</h3>
 
 <div class="section-text">
-<p>This property specifies whether to repeat the headings at 
-the top of each page. If true (the default), the headings repeat. If false, the 
-header appears only on the first page.</p></div>
-<h3>See Also</h3>
+<p>Executed when the element is created in the Factory. Called after the item is created, but before 
+the item is saved to the report document file. See the scripting spec for additional information 
+about this script. Applications should perform visual customization in the on-render script instead.</p></div>
+
+<hr>
+<h2><a name="Method-onPageBreak">onPageBreak Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPageBreak(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
 
 <div class="section-text">
-<p><code>header</code> slot</p></div>
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
+
+<hr>
+<h2><a name="Method-onRender">onRender Method</a></h2>
+
+<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is prepared for rendering in the Presentation engine. Changes made to the 
+element are written to the target output format, but not saved to the report document file. This is the
+preferred place for visual customizations.</p></div>
 <h1>Slot Detail</h1>
 
 <h2><a name="Slot-header">header Slot</a></h2>
@@ -295,9 +377,9 @@ optionally at the top of each page.</p>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>header</td></tr>
+<td>Header</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>header</code></td></tr>
 <tr><td>Contents:</td>
@@ -317,7 +399,7 @@ combined with a list as described in the &quot;Combining a List and a Table with
 Single Data Set&quot; section below.</p></div>
 
 <hr>
-<h2><a name="Slot-group">group Slot</a></h2>
+<h2><a name="Slot-groups">groups Slot</a></h2>
 
 <p class="section-text">Level breaks within the data. Each has its own header 
 &amp; footer.</p>
@@ -325,9 +407,9 @@ Single Data Set&quot; section below.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>group</td></tr>
+<td>Groups</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>
@@ -353,9 +435,9 @@ innermost group.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>detail</td></tr>
+<td>Detail</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>detail</code></td></tr>
 <tr><td>Contents:</td>
@@ -379,9 +461,9 @@ different row for debits vs. credits.</p></div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>footer</td></tr>
+<td>Footer</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>footer</code></td></tr>
 <tr><td>Contents:</td>
@@ -405,11 +487,11 @@ columns.</p>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>columns</td></tr>
+<td>Columns</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Element:</td>
-<td><code>columns</code></td></tr>
+<td>None. (The contents appear directly within the container element.)</td></tr>
 <tr><td>Contents:</td>
 <td>List of <a href="Column.html">Column</a></td></tr>
 <tr><td>Default Style:</td>

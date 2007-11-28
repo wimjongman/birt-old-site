@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
 <html>
 <head>
-<title>Element.Module Element (Eclipse BIRT ROM Documentation)</title>
+<title>Module Element (Eclipse BIRT ROM Documentation)</title>
 <link rel="stylesheet" href="../style/style.css" type="text/css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
@@ -16,13 +16,13 @@ libraries. This is most of the report except for the body.</div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>Element.Module</td></tr>
+<td>Module</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>XML Element:</td>
 <td><code>None</code></td></tr>
 <tr><td>Extends:</td>
-<td><a href="DesignElement.html">DesignElement</a></td></tr>
+<td>None</td></tr>
 <tr><td>Extendable:</td>
 <td>No</td></tr>
 <tr><td>Abstract:</td>
@@ -42,57 +42,42 @@ libraries. This is most of the report except for the body.</div>
 <dl class="section-text">
 <dt><a href="#Property-author">author</a></dt>
 <dd>The person who created the report.</dd>
+<dt><a href="#Property-base">base</a></dt>
+<dd>A base directory to use when computing relative links from this report.</dd>
 <dt><a href="#Property-colorPalette">colorPalette</a></dt>
 <dd>A set of custom color names.</dd>
 <dt><a href="#Property-comments">comments</a></dt>
 <dd>Text that describes the report design.</dd>
 <dt><a href="#Property-configVars">configVars</a></dt>
-<dd></dd>
+<dd>List of configuration variables.</dd>
 <dt><a href="#Property-createdBy">createdBy</a></dt>
 <dd>Name of the tool that created the design.</dd>
 <dt><a href="#Property-description">description</a></dt>
 <dd>A description presented to the end user of report when it is deployed.</dd>
 <dt><a href="#Property-descriptionID">descriptionID</a></dt>
-<dd></dd>
+<dd>The resource key for the description.</dd>
 <dt><a href="#Property-helpGuide">helpGuide</a></dt>
 <dd>External file that provides help information for the report.</dd>
 <dt><a href="#Property-images">images</a></dt>
 <dd>A list of images embedded in this report.</dd>
-<dt><a href="#Property-includeLibraries">includeLibraries</a></dt>
-<dd>The name(s) of BIRT library files for this report.</dd>
+<dt><a href="#Property-includeResource">includeResource</a></dt>
+<dd>Resource file name which stores the externalized strings.</dd>
 <dt><a href="#Property-includeScripts">includeScripts</a></dt>
 <dd>The name(s) of JavaScript files to include into this report.</dd>
-<dt><a href="#Property-msgBaseName">msgBaseName</a></dt>
+<dt><a href="#Property-libraries">libraries</a></dt>
+<dd>Libraries that are included by this module.</dd>
+<dt><a href="#Property-propertyBindings">propertyBindings</a></dt>
+<dd>Binds a property from an element to an expression.</dd>
+<dt><a href="#Property-scriptLibs">scriptLibs</a></dt>
 <dd></dd>
+<dt><a href="#Property-theme">theme</a></dt>
+<dd>Specify the theme that is to be used by the design or library.</dd>
 <dt><a href="#Property-title">title</a></dt>
 <dd>A short description of the report presented to the user when the report is deployed.</dd>
 <dt><a href="#Property-titleID">titleID</a></dt>
-<dd></dd>
+<dd>The resource key for the title</dd>
 <dt><a href="#Property-units">units</a></dt>
-<dd></dd>
-</dl>
-
-<h3>Method Summary</h3>
-
-<dl class="section-text">
-<dt><a href="#Method-initialize">initialize</a></dt>
-<dd>Called when the report starts executing in either the 
-Factory or Presentation engine.</dd>
-</dl>
-
-<h3>Slot Summary</h3>
-
-<dl class="section-text">
-<dt><a href="#Slot-styles">styles</a></dt>
-<dd>List of user-defined styles used to format elements in the report.</dd>
-<dt><a href="#Slot-parameters">parameters</a></dt>
-<dd>A list of Parameter elements that describe the data that the user can enter when running the report.</dd>
-<dt><a href="#Slot-dataSources">dataSources</a></dt>
-<dd>The connections used by the report.</dd>
-<dt><a href="#Slot-dataSets">dataSets</a></dt>
-<dd>Data sets (queries) defined in the design.</dd>
-<dt><a href="#Slot-pageSetup">pageSetup</a></dt>
-<dd>The layout of the master pages within the report.</dd>
+<dd>Default units to be used for the report design.</dd>
 </dl>
 
 <h3>Description</h3>
@@ -192,6 +177,50 @@ property at runtime.</p></div>
 <p>Module element createdBy Property</p></div>
 
 <hr>
+<h2><a name="Property-base">base Property</a></h2>
+
+<p class="section-text">A base directory to use when computing relative links from this report.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>reserved</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Base</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A base directory to use when computing relative links 
+from this report. Most often used for reports created externally to the server 
+and submitted on the fly. Used when computing hyperlinks, library includes, 
+image includes and other relative file references.  See the W3C XML Base 
+standard for background:
+<a href="http://www.w3.org/TR/2001/REC-xmlbase-20010627/">http://www.w3.org/TR/2001/REC-xmlbase-20010627/</a>. 
+</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
+
+<hr>
 <h2><a name="Property-colorPalette">colorPalette Property</a></h2>
 
 <p class="section-text">A set of custom color names.</p>
@@ -286,14 +315,14 @@ information for the users of the report.</p></div>
 <hr>
 <h2><a name="Property-configVars">configVars Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">List of configuration variables.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td>List of <a href="../structs/ConfigVar.html">ConfigVar</a> Structures</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -312,6 +341,22 @@ information for the users of the report.</p></div>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Reports frequently have deployment-specific dependencies. For example,
+developers often use a test database during development, but target a production
+database once the report is deployed. Or, an OEM may use a different company
+name in report titles for each of their customers. BIRT provides configuration
+variables to support such cases. A configuration variable is a name/value pair.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>See the <code>helpGuide</code> and the
+<code>description</code> properties for a way to provide 
+information for the users of the report.</p>
+
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-createdBy">createdBy Property</a></h2>
@@ -364,7 +409,7 @@ documentation property; BIRT does not use it at runtime.</p></div>
 <tr><td>Type:</td>
 <td><a href="../types.html#html">html</a></td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -399,14 +444,14 @@ this property is determined by the application UI.</p></div>
 <hr>
 <h2><a name="Property-descriptionID">descriptionID Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The resource key for the description.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>2.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -425,6 +470,15 @@ this property is determined by the application UI.</p></div>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Localization resource key for the description presented to the end user of report.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p> description property</p>
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-helpGuide">helpGuide Property</a></h2>
@@ -466,8 +520,7 @@ window.</p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
-<p><code>description</code> property</p>
-<p><code>title</code> property</p></div>
+<p>Library element</p></div>
 
 <hr>
 <h2><a name="Property-images">images Property</a></h2>
@@ -477,11 +530,11 @@ window.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/Image.html">Image</a> Structures</td></tr>
+<td>List of <a href="../structs/EmbeddedImage.html">EmbeddedImage</a> Structures</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
-<td>Yes</td></tr>
+<td>No</td></tr>
 <tr><td>Display Name:</td>
 <td>Images</td></tr>
 <tr><td>JavaScript Type:</td>
@@ -518,20 +571,20 @@ image from the images array:</p>
 <p>Image item</p></div>
 
 <hr>
-<h2><a name="Property-includeLibraries">includeLibraries Property</a></h2>
+<h2><a name="Property-includeResource">includeResource Property</a></h2>
 
-<p class="section-text">The name(s) of BIRT library files for this report.</p>
+<p class="section-text">Resource file name which stores the externalized strings.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td>List of <a href="../structs/IncludeLibrary.html">IncludeLibrary</a> Structures</td></tr>
+<td><a href="../types.html#string">string</a></td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Include libraries</td></tr>
+<td>Include resource</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -541,7 +594,7 @@ image from the images array:</p>
 <tr><td>Runtime Settable:</td>
 <td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Hidden</td></tr>
+<td>Visible</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -549,14 +602,13 @@ image from the images array:</p>
 <h3>Description</h3>
 
 <div class="section-text">
-<p>The name(s) of BIRT library files for this report. A 
-library can include reusable components, styles, page setup, scripts, and so on. 
-A report design can also be used as a library. If so, the Body portion of the 
-included design is ignored.</p></div>
+<p>Report designs support externalized strings by storing the resource keys;
+which are stored in the resource file. This property stores the resource file
+name.</p></div>
 <h3>See Also</h3>
 
 <div class="section-text">
-<p>Library element</p></div>
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-includeScripts">includeScripts Property</a></h2>
@@ -601,20 +653,20 @@ design can contain any number of script includes.</p></div>
 <p><code>initialize</code> method</p></div>
 
 <hr>
-<h2><a name="Property-msgBaseName">msgBaseName Property</a></h2>
+<h2><a name="Property-libraries">libraries Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Libraries that are included by this module.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#string">string</a></td></tr>
+<td>List of <a href="../structs/IncludedLibrary.html">IncludedLibrary</a> Structures</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>reserved</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
-<td>Message base name</td></tr>
+<td>libraries</td></tr>
 <tr><td>JavaScript Type:</td>
 <td></td></tr>
 <tr><td>Default Value:</td>
@@ -622,13 +674,119 @@ design can contain any number of script includes.</p></div>
 <tr><td>Inherited:</td>
 <td>No</td></tr>
 <tr><td>Runtime Settable:</td>
-<td>Yes</td></tr>
+<td>No</td></tr>
 <tr><td>Property Sheet Visibility:</td>
 <td>Hidden</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Includes a list of libraries.</p></div>
+
+<hr>
+<h2><a name="Property-propertyBindings">propertyBindings Property</a></h2>
+
+<p class="section-text">Binds a property from an element to an expression.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td>List of <a href="../structs/PropertyBinding.html">PropertyBinding</a> Structures</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Property bindings</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>There is requirement that a property value for an elemenet can be overridden at runtime. 
+This list is used to bind a property of an element to an expression, user can override the 
+value if expression bind to an parameter.</p></div>
+
+<hr>
+<h2><a name="Property-scriptLibs">scriptLibs Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td>List of <a href="../structs/ScriptLib.html">ScriptLib</a> Structures</td></tr>
+<tr><td>Since:</td>
+<td>2.1.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Script Libs</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Hidden</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-theme">theme Property</a></h2>
+
+<p class="section-text">Specify the theme that is to be used by the design or library.</p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../elements/Theme.html">Theme</a> Reference</td></tr>
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Theme</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Inherited:</td>
+<td>No</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>No</td></tr>
+<tr><td>Property Sheet Visibility:</td>
+<td>Visible</td></tr>
+<tr><td>Property Sheet Group:</td>
+<td>Top</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>When a report/library include another library, it can use one of the theme
+provided by the included library. When a theme is applied, the report/library
+is able to reuse all the styles contained in this theme.</p></div>
 
 <hr>
 <h2><a name="Property-title">title Property</a></h2>
@@ -675,14 +833,14 @@ string depends on the application UI used at deployment.</p></div>
 <hr>
 <h2><a name="Property-titleID">titleID Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">The resource key for the title</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -701,18 +859,28 @@ string depends on the application UI used at deployment.</p></div>
 <td>Top</td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Localization resource key for the title</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p><code>title</code> property</p>
+
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-units">units Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Default units to be used for the report design.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#choice">choice</a> (units)</td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -726,7 +894,7 @@ string depends on the application UI used at deployment.</p></div>
 <tr><td>Runtime Settable:</td>
 <td>Yes</td></tr>
 <tr><td>Property Sheet Visibility:</td>
-<td>Visible</td></tr>
+<td>Hidden</td></tr>
 <tr><td>Property Sheet Group:</td>
 <td>Top</td></tr>
 </table>
@@ -774,226 +942,5 @@ string depends on the application UI used at deployment.</p></div>
 <td>%</td>
 <td></td></tr>
 </tbody></table><br>
-<h1>Method Detail</h1>
-
-<h2><a name="Method-initialize">initialize Method</a></h2>
-
-<p class="section-text">Called when the report starts executing in either the 
-Factory or Presentation engine.</p>
-<h3>Synopsis
-</h3>
-
-<p class="section-text"><code>None&nbsp;obj.initialize(&nbsp;)</code></p>
-<h3>Details
-</h3>
-
-<table class="detail-table">
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>Context:</td>
-<td>startup</td></tr>
-<tr><td>Arguments:</td>
-<td>None</td></tr>
-<tr><td>Return Type:</td>
-<td>None</td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>BIRT calls this method before calling any other method in 
-the design. </p>
-
-<p>BIRT calls this method at the start of the Factory and 
-Presentation engines, just after loading the imports, before opening the report 
-document. Implement this method to define global functions, objects, Java 
-imports and other resources used throughout the report.</p>
-
-<p>Libraries can also contain an init script and imports. 
-BIRT executes these scripts in the following order:</p>
-
-<ul>
-<li>For each library, in the order that the library is included:</li>
-
-<ul>
-<li>Locate, read and execute the imported scripts in the order they appear in 
-the Code Modules element.</li>
-<li>Execute the <code>initialize</code> script.</li>
-</ul>
-
-<li>For the report design itself.</li>
-
-<ul>
-<li>Locate, read and execute the imported scripts in the order they appear in 
-the Code Modules element.</li>
-<li>Execute the init script.</li>
-</ul>
-</ul>
-
-<p>In general, the <code>initialize</code> 
-method of a report design or library can reference resources defined in the
-<code>initialize</code> script of any included libraries, but 
-not visa-versa. This is the generally accepted meaning of an include.</p></div>
-<h3>See Also</h3>
-
-<div class="section-text">
-<p>Report Design <code>beforeFactory</code> method</p>
-<p>Report Design <code>beforeRender</code> method</p></div>
-<h1>Slot Detail</h1>
-
-<h2><a name="Slot-styles">styles Slot</a></h2>
-
-<p class="section-text">List of user-defined styles used to format elements in the report.</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Styles</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Element:</td>
-<td><code>styles</code></td></tr>
-<tr><td>Contents:</td>
-<td>List of <a href="Style.html">Style</a></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>User-defined styles used to format elements in the 
-report. Each style must have a unique name within the set of styles for this 
-report.</p></div>
-
-<hr>
-<h2><a name="Slot-parameters">parameters Slot</a></h2>
-
-<p class="section-text">A list of Parameter elements that describe the data that the user can enter when running the report.</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Parameters</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Element:</td>
-<td><code>parameters</code></td></tr>
-<tr><td>Contents:</td>
-<td>List of <a href="Parameter.html">Parameter</a>, <a href="ParameterGroup.html">ParameterGroup</a></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>A list of parameter elements that describe the data that 
-the user can enter when running the report. BIRT supports four kinds of 
-parameters identified above. The design can also include parameter groups that 
-organize parameters visually.</p>
-
-<p>The order of parameters within this slot in the design 
-file determines the order that they will appear in the requester UI.</p>
-
-<p>The parameters property provides a &quot;flattened&quot; list of 
-parameters. Each parameter identifies the group (if any) to which it belongs.</p>
-<p>Parameter values are also available using the
-<code>params</code> global variable.</p></div>
-
-<hr>
-<h2><a name="Slot-dataSources">dataSources Slot</a></h2>
-
-<p class="section-text">The connections used by the report.</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Data Sources</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Element:</td>
-<td><code>data-sources</code></td></tr>
-<tr><td>Contents:</td>
-<td>List of <a href="DataSource.html">DataSource</a></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>This slot holds the list of data sources defined within 
-the report itself. Each data source must have a unique name. The order of items 
-within this slot is unimportant.</p></div>
-
-<hr>
-<h2><a name="Slot-dataSets">dataSets Slot</a></h2>
-
-<p class="section-text">Data sets (queries) defined in the design.</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Data Sets</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Element:</td>
-<td><code>data-sets</code></td></tr>
-<tr><td>Contents:</td>
-<td>List of <a href="DataSet.html">DataSet</a></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>This slot holds the list of data sets defined within the 
-report itself. Each data set must have a unique name. The order of items within 
-this slot is unimportant.</p></div>
-
-<hr>
-<h2><a name="Slot-pageSetup">pageSetup Slot</a></h2>
-
-<p class="section-text">The layout of the master pages within the report.</p>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>Page Setup</td></tr>
-<tr><td>Since:</td>
-<td>1.0</td></tr>
-<tr><td>XML Element:</td>
-<td><code>page-setup</code></td></tr>
-<tr><td>Contents:</td>
-<td>List of <a href="MasterPage.html">MasterPage</a></td></tr>
-</table>
-
-<h3>Description</h3>
-
-<div class="section-text">
-<p>The page setup defines the way that the report will 
-appear when printed. It consists of a master page that defines the page size, 
-page &quot;decoration&quot;, margins and so on. Some reports need to use different master 
-pages, perhaps to have the first page of the report appear in letterhead, with 
-the remaining pages on plain paper. Other reports may be printed and bound, 
-requiring differing page layout for the left and right pages.</p>
-
-<p>A report can omit the page setup information. If so, page 
-setup is taken from a library, if provided. If the library is not provided, or 
-does not have a page setup, or the master page does not have page dimensions, 
-then the setup comes from BIRT preferences, or from locale-specific defaults.</p>
-
-<p>If the user lists multiple master pages, but no page 
-sequences, then BIRT uses the first master page by default. If the user defines 
-one or more page sequences, then BIRT uses the first page sequence by default. 
-Other than these two cases, the order of elements within the page setup slot is 
-unimportant.</p>
-
-<p>This slot defines a name space; the name of each master 
-page and page sequence must be unique across the set of other page setup 
-elements.</p>
-
-<p>Only the simple master page is available in the first 
-release, and the design can contain at most one simple master page in the first 
-release.</p>
-
-<p>The page setup can contain zero or more master pages (of 
-either type) and zero or more page sequences (of either type). The simplest 
-report provides no master page. It will appear with the default pages size and 
-margins, and with no page header or footer.</p></div>
 </body>
 </html>

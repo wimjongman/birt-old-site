@@ -16,7 +16,7 @@ data types used within this specification. The JavaScript types below are the
 types of the design-time information. See the specification if there is an 
 additional run-time type. (For example, an expression is a string at design 
 time, but will evaluate to a string or integer or other value at runtime.)</p><p>A property can be a list: 
-in this case the property is a list of values such as structures, strings, etc.</p><h4>Property Lists</h4><p>A list property is defined as being a &quot;list of x&quot; where x can be one of the 
+in this case the property is a list of values such as structures, strings, etc.</p><h4>Property Lists</h4><p>A list property is defined as being a �list of x� where x can be one of the 
 simple data types, or one of the structures defined below. A list property is 
 represented as an array in JavaScript. For example, the list of custom colors 
 for a report design is represented by a list property. The following obtains the 
@@ -31,7 +31,7 @@ A simple true/false value.</div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>Boolean</td></tr>
+<td>boolean</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Name:</td>
@@ -56,7 +56,7 @@ The value must be selected from a predefined list of choices.</div>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>Choice</td></tr>
+<td>choice</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Name:</td>
@@ -98,28 +98,22 @@ An RGB color value or color name.</div>
 <p>Represents a color. Colors can use the CSS color names, a CSS-format RGB 
 value (#RRGGBB), or a custom color name defined within the report.</p></div>
 <hr>
-<h2><a name="column">column</a></h2>
-<div class="section-text">
-Reference to a column in a data set.</div>
+<h2><a name="contentElement">contentElement</a></h2>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>column</td></tr>
+<td>element as property value</td></tr>
 <tr><td>Since:</td>
-<td>reserved</td></tr>
+<td>1.0</td></tr>
 <tr><td>XML Name:</td>
-<td><code>column</code></td></tr>
+<td><code>contentElement</code></td></tr>
 <tr><td>JavaScript Design Type:</td>
 <td></td></tr>
 <tr><td>JavaScript Runtime Type:</td>
 <td></td></tr>
 </table>
 
-<h3>Description</h3>
-
-<div class="section-text">
-<p>This property type is not used and may be removed.</p></div>
 <hr>
 <h2><a name="dateTime">dateTime</a></h2>
 <div class="section-text">
@@ -166,9 +160,9 @@ A physical dimension.</div>
 
 <div class="section-text">
 <p>A CSS dimension. The units are expressed as a floating point number such as 
-&quot;1.25&quot;. To override that default, specify a suffix as one of &quot;in&quot; (inches), &quot;mm&quot; 
-(millimeters), &quot;cm&quot; (centimeters), &quot;pt&quot; (points), &quot;pc&quot; (picas), &quot;%&quot; (percent), 
-&quot;em&quot; (&quot;em&quot; size for the current font) or &quot;ex&quot; (&quot;ex&quot; size for the current font.)</p>
+�1.25�. To override that default, specify a suffix as one of �in� (inches), �mm� 
+(millimeters), �cm� (centimeters), �pt� (points), �pc� (picas), �%� (percent), 
+�em� (�em� size for the current font) or �ex� (�ex� size for the current font.)</p>
 
 <p>A dimension is a physical measurement. Dimensions always have a unit. 
 Supported units include the following defined in CSS:</p>
@@ -245,6 +239,23 @@ A reference to another element in the design.</div>
 property when the name of the referenced element changes. BIRT will issue an 
 error if the target element does not exist.</p></div>
 <hr>
+<h2><a name="elementRef">elementRef</a></h2>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>element reference</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Name:</td>
+<td><code>elementRef</code></td></tr>
+<tr><td>JavaScript Design Type:</td>
+<td></td></tr>
+<tr><td>JavaScript Runtime Type:</td>
+<td></td></tr>
+</table>
+
+<hr>
 <h2><a name="expression">expression</a></h2>
 <div class="section-text">
 A JavaScript expression.</div>
@@ -318,6 +329,8 @@ A decimal number such as "1", "1.33" or "2.5."</div>
 <p>A floating-point number. Not used in Release 1.</p></div>
 <hr>
 <h2><a name="html">html</a></h2>
+<div class="section-text">
+Represents a html value</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -333,6 +346,10 @@ A decimal number such as "1", "1.33" or "2.5."</div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Property that stores html value. Model doesn't do validation to this property type.</p></div>
 <hr>
 <h2><a name="integer">integer</a></h2>
 <div class="section-text">
@@ -353,16 +370,50 @@ An integer in the range 0 to 2<sup>32</sup> - 1.</div>
 </table>
 
 <hr>
+<h2><a name="list">list</a></h2>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>list</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Name:</td>
+<td><code>list</code></td></tr>
+<tr><td>JavaScript Design Type:</td>
+<td></td></tr>
+<tr><td>JavaScript Runtime Type:</td>
+<td></td></tr>
+</table>
+
+<hr>
 <h2><a name="literalString">literalString</a></h2>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Display Name:</td>
-<td>Property.literalString</td></tr>
+<td>literal string</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>XML Name:</td>
 <td><code>literalString</code></td></tr>
+<tr><td>JavaScript Design Type:</td>
+<td></td></tr>
+<tr><td>JavaScript Runtime Type:</td>
+<td></td></tr>
+</table>
+
+<hr>
+<h2><a name="memberKey">memberKey</a></h2>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>member key</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Name:</td>
+<td><code>memberKey</code></td></tr>
 <tr><td>JavaScript Design Type:</td>
 <td></td></tr>
 <tr><td>JavaScript Runtime Type:</td>
@@ -398,13 +449,13 @@ for associative lookup in property lists.</p>
 
 <p>All property lists allow numeric indexes. Some also allow associative lookup 
 using the name of an item in the list. For example, to look up the custom color: 
-&quot;seaGreen&quot;:</p>
+�seaGreen�:</p>
 
 <pre class="code-block">var colorDefn = designDefn.palette.seaGreen</pre>
 
 <p>or,</p>
 
-<pre class="code-block">var colorDefn = designDefn.palette[ &quot;seaGreen&quot; ]</pre>
+<pre class="code-block">var colorDefn = designDefn.palette[ �seaGreen� ]</pre>
 
 <p>The first form can be used when the name to be looked up is known when the 
 code is written, and follow the JavaScript identifier naming rules. The second 
@@ -412,7 +463,7 @@ form can be used to look up a value when the value is not known ahead of time,
 or when the name does not follow JavaScript identifier rules. For example:</p>
 
 <pre class="code-block">var colorDefn = designDefn.palette[ params.colorName ];
-var colorDefn = designDefn.palette[ &quot;Sea-Green&quot; ]</pre>
+var colorDefn = designDefn.palette[ �Sea-Green� ]</pre>
 
 <p>The associative lookup is provided when:</p>
 
@@ -446,6 +497,8 @@ Arbitrary-precision decimal number</div>
 largest currency amounts down to two decimal places.</p></div>
 <hr>
 <h2><a name="resourceKey">resourceKey</a></h2>
+<div class="section-text">
+A string that should match a message in the customer's message category.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -461,8 +514,15 @@ largest currency amounts down to two decimal places.</p></div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A string value, which should match a message in the customer's message category. It allows user
+to localize an exteralizable property </p></div>
 <hr>
 <h2><a name="script">script</a></h2>
+<div class="section-text">
+Stores a block of script value that can be executed at runtime.</div>
 <h3>Details</h3>
 
 <table class="detail-table">
@@ -478,6 +538,10 @@ largest currency amounts down to two decimal places.</p></div>
 <td></td></tr>
 </table>
 
+<h3>Description</h3>
+
+<div class="section-text">
+<p>A block of script value that is to be executed at runtime, script are not validated in model at design-time</p></div>
 <hr>
 <h2><a name="string">string</a></h2>
 <div class="section-text">
@@ -501,6 +565,29 @@ A string value.</div>
 
 <div class="section-text">
 <p>A string value. The string cannot be externalized.</p></div>
+<hr>
+<h2><a name="structRef">structRef</a></h2>
+<div class="section-text">
+Represents a reference to another structure.</div>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>structure reference</td></tr>
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>XML Name:</td>
+<td><code>structRef</code></td></tr>
+<tr><td>JavaScript Design Type:</td>
+<td></td></tr>
+<tr><td>JavaScript Runtime Type:</td>
+<td></td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Simply references to another structure, it can be in two states: resolved or unresolved.</p></div>
 <hr>
 <h2><a name="structure">structure</a></h2>
 <div class="section-text">
@@ -548,23 +635,6 @@ A Uniform Resource Identifier (URI).</div>
 
 <div class="section-text">
 <p>A URI of the form "http:", "file:", "iServer:", or "mailto:".</p></div>
-<hr>
-<h2><a name="variant">variant</a></h2>
-<h3>Details</h3>
-
-<table class="detail-table">
-<tr><td>Display Name:</td>
-<td>variant</td></tr>
-<tr><td>Since:</td>
-<td>reserved</td></tr>
-<tr><td>XML Name:</td>
-<td><code>variant</code></td></tr>
-<tr><td>JavaScript Design Type:</td>
-<td></td></tr>
-<tr><td>JavaScript Runtime Type:</td>
-<td></td></tr>
-</table>
-
 <hr>
 <h2><a name="xml">xml</a></h2>
 <div class="section-text">

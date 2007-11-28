@@ -45,31 +45,52 @@ report. Can contain embedded formatting and value expressions.</div>
 <dt><a href="#Property-content">content</a></dt>
 <dd>The text for the item.</dd>
 <dt><a href="#Property-contentID">contentID</a></dt>
-<dd></dd>
+<dd>Resource key for the content.</dd>
 <dt><a href="#Property-contentType">contentType</a></dt>
 <dd>The formatting within the text: HTML or plain text.</dd>
+</dl>
+
+<h3>Method Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Method-onCreate">onCreate</a></dt>
+<dd>Script executed when the element is created in the Factory.</dd>
+<dt><a href="#Method-onPageBreak">onPageBreak</a></dt>
+<dd></dd>
+<dt><a href="#Method-onPrepare">onPrepare</a></dt>
+<dd>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</dd>
+<dt><a href="#Method-onRender">onRender</a></dt>
+<dd>Script executed when the element is prepared for rendering in the Presentation engine.</dd>
 </dl>
 
 <h3>Inherited Properties</h3>
 
 <p class="section-text">
 <a href="ReportItem.html#Property-bookmark">bookmark</a>, 
+<a href="ReportItem.html#Property-boundDataColumns">boundDataColumns</a>, 
 <a href="ReportElement.html#Property-comments">comments</a>, 
+<a href="ReportItem.html#Property-cube">cube</a>, 
 <a href="DesignElement.html#Property-customXml">customXml</a>, 
+<a href="ReportItem.html#Property-dataBindingRef">dataBindingRef</a>, 
 <a href="ReportItem.html#Property-dataSet">dataSet</a>, 
 <a href="ReportElement.html#Property-displayName">displayName</a>, 
+<a href="ReportElement.html#Property-displayNameID">displayNameID</a>, 
+<a href="ReportElement.html#Property-eventHandlerClass">eventHandlerClass</a>, 
 <a href="ReportElement.html#Property-extends">extends</a>, 
 <a href="ReportItem.html#Property-height">height</a>, 
 <a href="ReportElement.html#Property-name">name</a>, 
 <a href="ReportItem.html#Property-paramBindings">paramBindings</a>, 
 <a href="DesignElement.html#Property-propertyMasks">propertyMasks</a>, 
+<a href="ReportItem.html#Property-refTemplateParameter">refTemplateParameter</a>, 
 <a href="ReportItem.html#Property-style">style</a>, 
 <a href="ReportItem.html#Property-toc">toc</a>, 
 <a href="DesignElement.html#Property-userProperties">userProperties</a>, 
+<a href="ReportElement.html#Property-viewAction">viewAction</a>, 
 <a href="ReportItem.html#Property-visibility">visibility</a>, 
 <a href="ReportItem.html#Property-width">width</a>, 
 <a href="ReportItem.html#Property-x">x</a>, 
-<a href="ReportItem.html#Property-y">y</a>
+<a href="ReportItem.html#Property-y">y</a>, 
+<a href="ReportItem.html#Property-zIndex">zIndex</a>
 </p>
 <h3>Style Properties</h3>
 
@@ -100,6 +121,7 @@ report. Can contain embedded formatting and value expressions.</div>
 <a href="Style.html#Property-fontStyle">fontStyle</a>, 
 <a href="Style.html#Property-fontVariant">fontVariant</a>, 
 <a href="Style.html#Property-fontWeight">fontWeight</a>, 
+<a href="Style.html#Property-highlightRules">highlightRules</a>, 
 <a href="Style.html#Property-letterSpacing">letterSpacing</a>, 
 <a href="Style.html#Property-lineHeight">lineHeight</a>, 
 <a href="Style.html#Property-marginBottom">marginBottom</a>, 
@@ -107,12 +129,14 @@ report. Can contain embedded formatting and value expressions.</div>
 <a href="Style.html#Property-marginRight">marginRight</a>, 
 <a href="Style.html#Property-marginTop">marginTop</a>, 
 <a href="Style.html#Property-masterPage">masterPage</a>, 
+<a href="Style.html#Property-orphans">orphans</a>, 
 <a href="Style.html#Property-paddingBottom">paddingBottom</a>, 
 <a href="Style.html#Property-paddingLeft">paddingLeft</a>, 
 <a href="Style.html#Property-paddingRight">paddingRight</a>, 
 <a href="Style.html#Property-paddingTop">paddingTop</a>, 
 <a href="Style.html#Property-pageBreakAfter">pageBreakAfter</a>, 
 <a href="Style.html#Property-pageBreakBefore">pageBreakBefore</a>, 
+<a href="Style.html#Property-pageBreakInside">pageBreakInside</a>, 
 <a href="Style.html#Property-showIfBlank">showIfBlank</a>, 
 <a href="Style.html#Property-textAlign">textAlign</a>, 
 <a href="Style.html#Property-textIndent">textIndent</a>, 
@@ -122,13 +146,9 @@ report. Can contain embedded formatting and value expressions.</div>
 <a href="Style.html#Property-textUnderline">textUnderline</a>, 
 <a href="Style.html#Property-verticalAlign">verticalAlign</a>, 
 <a href="Style.html#Property-whiteSpace">whiteSpace</a>, 
+<a href="Style.html#Property-widows">widows</a>, 
 <a href="Style.html#Property-wordSpacing">wordSpacing</a>
 </p>
-<h3>Inherited Methods</h3>
-
-<p class="section-text">
-<a href="ReportItem.html#Method-onCreate">onCreate</a>, 
-<a href="ReportItem.html#Method-onRender">onRender</a></p>
 <h3>Description</h3>
 
 <div class="section-text">
@@ -192,7 +212,7 @@ spacing, paragraph spacing and similar properties.</p>
 
 <p>For example:</p>
 
-<pre class="code-block">&lt;center&gt;&lt;b&gt;&lt;span style=&quot;font-size: larger&quot;&gt;
+<pre class="code-block">&lt;center&gt;&lt;b&gt;&lt;span style=�font-size: larger�&gt;
 Monthly Sales Summary&lt;/span&gt;&lt;br&gt;
 For the month of:
 &lt;value-of&gt;Date.monthName( params.MonthParam )&lt;/value-of&gt;,
@@ -247,18 +267,22 @@ For the month of:
 <div class="section-text">
 <p>The text for the item. See the <code>contentType</code> property for how to identify the text 
 formatting. The text can be externalized.</p></div>
+<h3>See Also</h3>
+
+<div class="section-text">
+<p>&nbsp;</p></div>
 
 <hr>
 <h2><a name="Property-contentID">contentID Property</a></h2>
 
-<p class="section-text"></p>
+<p class="section-text">Resource key for the content.</p>
 <h3>Details</h3>
 
 <table class="detail-table">
 <tr><td>Type:</td>
 <td><a href="../types.html#resourceKey">resourceKey</a></td></tr>
 <tr><td>Since:</td>
-<td></td></tr>
+<td>1.0</td></tr>
 <tr><td>Required:</td>
 <td>No</td></tr>
 <tr><td>Display Name:</td>
@@ -286,7 +310,7 @@ formatting. The text can be externalized.</p></div>
 
 <table class="detail-table">
 <tr><td>Type:</td>
-<td><a href="../types.html#choice">choice</a> (contentType)</td></tr>
+<td><a href="../types.html#choice">choice</a> (textContentType)</td></tr>
 <tr><td>Since:</td>
 <td>1.0</td></tr>
 <tr><td>Required:</td>
@@ -328,10 +352,6 @@ formatting. The text can be externalized.</p></div>
 <td>html</td>
 <td>Formatting using a 
     subset of HTML tags.</td></tr>
-<tr><td>rtf</td>
-<td>RTF</td>
-<td>rtf</td>
-<td></td></tr>
 </tbody></table><br>
 <h3>Description</h3>
 
@@ -346,5 +366,113 @@ upper case or lower case), then the string is assumed to be HTML. Otherwise, the
 text is plain text. Any white space before these characters is ignored. That is, 
 &quot;&lt;html&gt;&quot; and &quot;&nbsp;&nbsp; &lt;html&gt;&quot; are both taken to indicate that the text is formatted 
 in HTML.</p></div>
+<h1>Method Detail</h1>
+
+<h2><a name="Method-onCreate">onCreate Method</a></h2>
+
+<p class="section-text">Script executed when the element is created in the Factory.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onCreate(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>factory</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is created in the Factory. Called after the item is created, but before 
+the item is saved to the report document file. See the scripting spec for additional information 
+about this script. Applications should perform visual customization in the on-render script instead.</p></div>
+
+<hr>
+<h2><a name="Method-onPageBreak">onPageBreak Method</a></h2>
+
+<p class="section-text"></p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPageBreak(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Method-onPrepare">onPrepare Method</a></h2>
+
+<p class="section-text">It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onPrepare(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>2.0</td></tr>
+<tr><td>Context:</td>
+<td>startup</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>It is for a script startup phase. No data binding yet. The design of an element can be changed here.</p></div>
+
+<hr>
+<h2><a name="Method-onRender">onRender Method</a></h2>
+
+<p class="section-text">Script executed when the element is prepared for rendering in the Presentation engine.</p>
+<h3>Synopsis
+</h3>
+
+<p class="section-text"><code>None&nbsp;obj.onRender(&nbsp;)</code></p>
+<h3>Details
+</h3>
+
+<table class="detail-table">
+<tr><td>Since:</td>
+<td>1.0</td></tr>
+<tr><td>Context:</td>
+<td>presentation</td></tr>
+<tr><td>Arguments:</td>
+<td>None</td></tr>
+<tr><td>Return Type:</td>
+<td>None</td></tr>
+</table>
+
+<h3>Description</h3>
+
+<div class="section-text">
+<p>Executed when the element is prepared for rendering in the Presentation engine. Changes made to the 
+element are written to the target output format, but not saved to the report document file. This is the
+preferred place for visual customizations.</p></div>
 </body>
 </html>
