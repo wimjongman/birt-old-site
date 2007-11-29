@@ -35,6 +35,14 @@
 			<ul>
 				<li>
 					<a href="http://www.eclipsemag.net">
+						BIRT 2.2 Dynamic Cross Tables  
+					</a>
+					<span class="dates">
+						011/15/07
+					</span>
+				</li>			
+				<li>
+					<a href="http://www.eclipsemag.net">
 						BIRT 2.2 Web Service ODA  
 					</a>
 					<span class="dates">
