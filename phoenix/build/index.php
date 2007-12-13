@@ -91,7 +91,7 @@ Use these instructions if you have Eclipse installed or do not desire to use the
 Report Designer Full Eclipse Install.
 <br>
 Download and install the
-<a href="/birt/frameizer.php?page=http://download.eclipse.org/downloads/index.php">
+<a href="http://download.eclipse.org/eclipse/downloads/">
 Eclipse Platform 3.1/3.2/3.3 Release</a>
 <p>
 (Note: Eclipse, EMF, GEF, DTP and BIRT are all available from the
@@ -125,7 +125,7 @@ installed Eclipse into the standard location on Windows, then unzip GEF into
 
 <p>
 The BIRT charting feature uses EMF, the Eclipse Modeling Framework. Download the
-<a href="http://www.eclipse.org/emf/downloads/">
+<a href="http://www.eclipse.org/modeling/emf/downloads/">
 EMF & SDO RT version 2.1/2.2/2.3</a>. Look in the Latest Releases sections of the
 download page.
 <p>
