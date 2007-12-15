@@ -68,9 +68,9 @@ The engine supports the following operations:
 <ul>
 <li>Discover the set of parameters defined for a report. 
 <li>Get the default values for parameters. 
-<li>Run a report to produce HTML/Paginated HTML or PDF output. 
+<li>Run a report to produce HTML/Paginated HTML, WORD, XLS, PS, or PDF output. 
 <li>Fetch an image or chart for a report. 
-<li>Export CSV
+<li>Export Report data to CSV
 <li>Retrieve TOCs, Bookmarks, etc
 
 </ul>
@@ -90,11 +90,11 @@ engine is more than just a simple JAR file; it also includes a set of extensions
 <br>
 <ul>
 <li>First download the Report Engine from the <a href="http://download.eclipse.org/birt/downloads">Eclipse download site.</a>
-<li>This file will be named birt-runtime-2_1_0.zip. 
+<li>This file will be named birt-runtime-version.zip. 
 <li>Unzip this file into a directory, such as c:\birtruntime. 
-<li>Copy the <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> jar file to the C:/birtruntime/birt-runtime-2_1_0/ReportEngine/plugins/com.lowagie.itext/lib directory.  If this directory doesn’t exist, create it. 
-<li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-2_1_0/ReportEngine as the value. 
+<li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-version/ReportEngine as the value. 
 </ul><br>
+Note that if you are using the RE API within an RCP/Eclipse application these steps are not needed. Just add the RE API plugins to your application and call the needed functions.
 <p>
 The BIRT Viewer sample is also bundled with the Report Engine download. It is located under the WebViewerExample directory. If you decide to use this example, see <a href="viewerSetup">Viewer Setup</a> for an explanation. 
 The Viewer uses the RE API to generate reports within the context of a servlet.  It provides additional features, such as printing, TOCs, Page controls, etc.
@@ -104,18 +104,18 @@ Before using the RE API, verify that the Viewer is not applicable to your applic
 <p>If you prefer to work directly with the BIRT source code, the Engine API is 
 in the <code>org.eclipse.birt.report.engine project</code> within Eclipse CVS
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.engine/src/org/eclipse/birt/report/engine/api/?cvsroot=BIRT_Project">
-Eclipse CVS</a>.</p>
+Eclipse CVS</a>.  The source is also available from the BIRT site in one package (the BIRT Source Code Package), which can be downloaded from the<a href="http://download.eclipse.org/birt/downloads"> download site.</a></p>
 
 <h2>Javadoc</h2>
 
-<p>This article provides an overview of the engine. To do actual development, 
-consult the Engine Javadoc.</p>
+<p>This page provides an overview of the engine. To do actual development, 
+consult the Engine Javadoc.  These docs are available within BIRT Help.</p>
 
 <h2><a name="jdbc"></a>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
 
 <p>To do this, copy the driver jar file to the 
- ReportEngineInstall/birt-runtime-2_1_0/ReportEngine/plugins/org.eclipse.birt.report.data.oda.jdbc_2.1.0/drivers
+ ReportEngineInstall/birt-runtime-version/ReportEngine/plugins/org.eclipse.birt.report.data.oda.jdbc_version/drivers
  Directory.
 </p>
 
@@ -126,15 +126,15 @@ interfaces you use for each step.</p>
 
 <ol>
   <li>Create an instance of <code>EngineConfig</code> to set options for the report engine.</li>
-  <li>Set the Engine Home and start the Platform (Loads the plug-ins)
+  <li>Set the Engine Home and start the Platform (Loads the plug-ins).  If you are using the RE API in plugin format there is no need to set BIRT Home.  If you are using the RE API from within a servlet, be sure to read about PlatformServletContext later on this page.
   <li>Create an instance of the <code>ReportEngine</code> class. You can use this object to 
   perform multiple tasks.</li>
   <li>Open a report design using one of the <code>openReport(&nbsp;)</code> methods of <code>ReportEngine</code>.</li>
   <li>Obtain information about report parameters using 
-  <code>IGetParameterDefinitionTask</code>.</li>
-  <li>Run and render a report using <code>IRunAndRenderReportTask</code>.</li>
+  <code>IGetParameterDefinitionTask</code>.  This is only needed if you want to build a custom parameter page or collect parameter definition information.  The IRunTask and the IRunAndRenderTask interfaces have methods for setting parameter values.</li>
+  <li>Run and render a report using <code>IRunAndRenderReportTask</code> or <code>IRunTask</code> and <code>IRenderTask</code>.</li>
   <li>Repeat steps 4-6 for the next report.</li>
-  <li>When done, call <code>shutdown(&nbsp;)</code> on your engine instance.</li>
+  <li>When done, call <code>shutdown(&nbsp;)</code> on your engine instance.  If using the engine in a servlet shudown the engine when the servlet shuts down.</li>
 </ol>
 
 <p>The following sections describe the primary Engine classes in detail. The 
@@ -153,9 +153,7 @@ accomplish a given task.
 
 <p>Use the <code>EngineConfig</code> class to set global options for the report engine as a 
 whole. Use it to specify the location of engine plug-ins, the location of data 
-drivers, and to add application-wide scriptable objects. At a minimum, you'll 
-want to set the location of the engine installation using the <code>setEngineHome(&nbsp;)</code> 
-method.</p>
+drivers, and to add application-wide scriptable objects.</p>
 <pre style="font-size: 10pt">>
 EngineConfig config = new EngineConfig( );
 config.setEngineHome( &quot;put engine path here&quot; );
@@ -192,14 +190,14 @@ engine, you should start the Platform, which will load the appropriate plug-ins.
 
 <pre style="font-size: 10pt">
 try{
-	config = new EngineConfig( );
+	final config = new EngineConfig( );
 	config.setEngineHome( "C:\\birt-runtime-2_1_0\\birt-runtime-2_1_0\\ReportEngine" );
 	config.setLogConfig(c:/temp, Level.FINE);
 			
-	Platform.startup( config );
+	Platform.startup( config );  //If using RE API in Eclipse/RCP application this is not needed.
 	IReportEngineFactory factory = (IReportEngineFactory) Platform
 			.createFactoryObject( IReportEngineFactory.EXTENSION_REPORT_ENGINE_FACTORY );
-	engine = factory.createReportEngine( config );
+	IReportEngine engine = factory.createReportEngine( config );
 	engine.changeLogLevel( Level.WARNING );
 			
 }catch( Exception ex){
@@ -208,10 +206,10 @@ try{
 // Run reports, etc.
 ...
 
-// Shut down the engine.
+// destroy the engine.
 try
 {
-	engine.shutdown();
+	engine.destroy();
 	Platform.shutdown();    
 }
 catch ( EngineException e1 )
@@ -258,7 +256,7 @@ Use the returned object to obtain parameter data or run the report.<br> The clas
 provides methods for getting report properties such as the title, author and so 
 on. It also provides methods for getting images embedded (stored) within the 
 report design. If your application requires more information about the design, you can 
-obtain a Design Engine report handle, then use the BIRT <a href="de-api.html">
+obtain a Design Engine report handle, then use the BIRT <a href="designEngineAPI.php">
 Design Engine API</a> to traverse the report design.</p>
 
 
@@ -266,7 +264,7 @@ Design Engine API</a> to traverse the report design.</p>
 
 
 <p>BIRT optionally can store reports in an intermediate format, after generation and before rendering.
-This document, with the default extension rptdocument, can be manipulated with the <code>IReportDocument</code> class.
+This document, with the default extension rptdocument, can be manipulated with the <code>IReportDocument</code> interface.
 The Engine will create this document when the <code>runTask</code> is used.  The BIRT viewer uses this
 format to do pagination, TOCs, CSV extraction, bookmarks, etc.
 </p>
@@ -411,8 +409,7 @@ values are expressions, and so a scripting context (represented by the task) is
 required. Parameter definitions provide access to the parameter 
 definition information that the report designer entered at design time. If a 
 parameter has custom XML or user-defined properties defined, then these are also 
-available. Applications typically use the standard and custom properties to 
-create a parameter UI that prompts the user for parameter values. Parameters can 
+available. Parameters can 
 be organized into groups. Your application has the choice of retrieving the 
 parameters organized by group (as they should be displayed to the user), or in 
 ungrouped form (useful for creating a programmatic interface.)</p>
@@ -494,8 +491,8 @@ Object value = task.getDefaultValue( param );</pre>
 
 
 <h2><a name="irendertask"></a>IRenderTask</h2>
-<p>Use this task to render a report document to either HTML or PDF. This task
-expects the document to exist, which means it has been generated with the <code>IRunTask</code> engine task.
+<p>Use this task to render a report document to a specific output (eg, HTML, PDF, ...). This task
+expects the document to exist, which means it has been generated with the RunTask engine task.
 This class renders the report, based on the supplied page range, page number or all if no page is specified.</p>
 <p>
 The following example renders the first two pages of the "Pages" report document.  You will notice that
@@ -507,30 +504,43 @@ it renders the two pages as one page of HTML.
 IReportDocument iReportDocument = engine.openReportDocument("c:/work/test/Pages.rptdocument");
 //Create Render Task
 IRenderTask task = engine.createRenderTask(iReportDocument);
-		
-//Set Render context to handle url and image locataions
-HTMLRenderContext renderContext = new HTMLRenderContext();
-renderContext.setBaseURL("http://localhost/");
-		
-//You must define HTMLServerImageHandler to use a URL
-renderContext.setBaseImageURL("http://localhost/");
-renderContext.setImageDirectory("myimages");
-renderContext.setImageDirectory("C:/xampplite/htdocs/myimages");
-renderContext.setSupportedImageFormats("JPG;PNG;BMP;SVG");
-HashMap<String, HTMLRenderContext> contextMap = new HashMap<String, HTMLRenderContext>();
-contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
-rtask.setAppContext( contextMap );
-		
-//Set Render Options
-HTMLRenderOption options = new HTMLRenderOption();
-options.setOutputFileName("c:\\work\\test\\pages.html");
+//Set parent classloader report engine
+task.getAppContext().put(EngineConstants.APPCONTEXT_CLASSLOADER_KEY, RenderTaskExample.class.getClassLoader()); 
+
+IRenderOption options = new RenderOption();		
 options.setOutputFormat("html");
+options.setOutputFileName("output/resample/eventorder.html");
+	
+			
+if( options.getOutputFormat().equalsIgnoreCase("html")){
+	HTMLRenderOption htmlOptions = new HTMLRenderOption( options);
+	htmlOptions.setImageDirectory("output/image");
+	htmlOptions.setHtmlPagination(false);
+	//set this if you want your image source url to be altered
+	//If using the setBaseImageURL, make sure to set image handler to HTMLServerImageHandler
+	htmlOptions.setBaseImageURL("http://myhost/prependme?image=");
+			
+	htmlOptions.setHtmlRtLFlag(false);
+	htmlOptions.setEmbeddable(false);
+}else if( options.getOutputFormat().equalsIgnoreCase("pdf") ){
+			
+	PDFRenderOption pdfOptions = new PDFRenderOption( options );
+	pdfOptions.setOption( IPDFRenderOption.FIT_TO_PAGE, new Boolean(true) );
+	pdfOptions.setOption( IPDFRenderOption.PAGEBREAK_PAGINATION_ONLY, new Boolean(true) );
+
+}
+//Use this method if you want to provide your own action handler
+options.setActionHandler(new MyActionHandler());
+
+//file based images
+//options.setImageHandler(new HTMLCompleteImageHandler())
+//Web based images.  Allows setBaseImageURL to prepend to img src tag
+options.setImageHandler(new HTMLServerImageHandler());
+		
+IRenderTask task = engine.createRenderTask(document); 		
 task.setRenderOption(options);
-				
-//Render Pages 1
-task.setPageNumber(1);
+task.setPageRange("1-2");
 task.render();
-task.close();
 
 </pre>
 
@@ -545,7 +555,9 @@ IReportRunnable design = engine.openReportDesign("C:/work/test/MyOrders.rptdesig
 		
 //Create task to run the report - use the task to execute the report and save to disk.
 IRunTask task = engine.createRunTask(design); 
-			
+//Set parent classloader for engine
+task.getAppContext().put(EngineConstants.APPCONTEXT_CLASSLOADER_KEY, RunTaskExample.class.getClassLoader()); 
+					
 //run the report and destroy the engine
 task.run("c:/work/test/MyOrders.rptdocument");		
 
@@ -555,42 +567,41 @@ task.close();
 
 <h2><a name="irunandrendertask"></a>IRunAndRenderTask</h2>
 <p>Use this task to run a report and 
-convert it to either HTML or PDF. This task does not save the report document 
-itself to disk. Create a new task for each report that you run.</p>
+output it to one of the supported output formats. This task does not create a report document. Create a new task for each report that you run.</p>
 
 <p>Reports may take parameters. The <code>IRunAndRenderReportTask</code> takes parameter 
-values as a <code>HashMap</code>. The <code>IRunAndRenderReportTask</code> provides 
+values as a <code>HashMap</code> or you can set them individually. The <code>IRunAndRenderReportTask</code> provides 
 the <code>validateParameters(&nbsp;)</code> method to validate the parameter values before you run 
 the report.</p>
 
-<p>You can produce HTML or PDF output. Set the output format by calling options.setOutputFormat("html) or ("pdf").
-If you are rendering to PDF, using a PDFRenderContext instead of HTMLRenderContext allows manipulation of font information, such as
-setting font directory.</p>
 
 <pre style="font-size: 10pt">
 
-//Open a report design - use design to modify design, retrieve embedded images etc. 
-IReportRunnable design = engine.openReportDesign("C:/work/test/TopDeals.rptdesign"); 
-		
-//Create task to run the report and render the report
+//Open the report design
+IReportRunnable design = engine.openReportDesign("Reports/TopNPercent.rptdesign"); 
+	
+
+//Create task to run and render the report,
 IRunAndRenderTask task = engine.createRunAndRenderTask(design); 
+//Set parent classloader for engine
+task.getAppContext().put(EngineConstants.APPCONTEXT_CLASSLOADER_KEY, RunAndRenderTaskExample.class.getClassLoader()); 
 		
-//Set Render context to handle url and image locataions
-HTMLRenderContext renderContext = new HTMLRenderContext();
-renderContext.setImageDirectory("image");
-HashMap contextMap = new HashMap();
-contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
-task.setAppContext( contextMap );
-		
-//Set rendering options - such as file or stream output, 
-//output format, whether it is embeddable, etc
-HTMLRenderOption options = new HTMLRenderOption();
-//options.setOutputStream(System.out);
-options.setOutputFileName("c:\\work\\test\\pfilter.html");
+//Set parameter values and validate
+task.setParameterValue("Top Percentage", (new Integer(3)));;
+task.setParameterValue("Top Count", (new Integer(5)));
+task.validateParameters();
+				
+//Setup rendering to HTML
+HTMLRenderOption options = new HTMLRenderOption();		
+options.setOutputFileName("output/resample/TopNPercent.html");
 options.setOutputFormat("html");
-task.setRenderOption(options);
+//Setting this to true removes html and body tags
+options.setEmbeddable(false);
 		
+task.setRenderOption(options);
+//run and render report
 task.run();
+task.close();
 
 </pre>
 
@@ -602,15 +613,15 @@ task.run();
 <p>
 
 BIRT's script engine supports adding Java objects at the API level.  If you wish the
-Java object to be available to the Report, use the <code>task.addScriptableJavaObject("ScriptName", JavaObjectInstance)</code>
-method available to the task.
+Java object to be available to the Report, retrieve the application context at the EngineConfig or Task level and add the object to the Map.
+For example, adding a Java object to the task.
 </p>
 <p>
 Add the following code to your task.
 </p>
 <pre style="font-size: 10pt">
 MyJavaObject jo = new MyJavaObject();
-task.addScriptableJavaObject("MyJavaScriptItem", jo);
+task.getAppContext().put("MyJavaScriptItem", jo);
 </pre>
 <p>
 Now within the the script editor, you can reference your Java Object as follows:
@@ -623,7 +634,7 @@ testMyJavaObject = MyJavaScriptItem.getMyMethod();
 <h4>Rendering to an Output Stream</h4>
 <p>
 When rendering a report it may be desirable to output the report to an output stream, such as <code>HttpServletResponse</code>.
-To do this modify your HTMLRenderOption instance to use <code>setOutputStream</code> instead of <code>setOutputFileName</code>.
+To do this modify your RenderOption instance to use <code>setOutputStream</code> instead of <code>setOutputFileName</code>.
 For example,
 <pre style="font-size: 10pt">
 public void webReport( HttpServletResponse response )
@@ -643,7 +654,7 @@ task.run();
 <h4>IPlatformContext - Web Based Plugin Loading</h4>
 <p>
 By default BIRT loads plug-ins located in the BIRT_HOME/plugins directory.  The plug-ins loaded provide functionality for connecting to data sources,
-emitters for PDF and HTML, and chart rendering.  BIRT_HOME in the examples on this page is set using the setEngineHome method of the <code>EngineConfig</code> class.
+emitters (eg, PDF, WORD, XLS, HTML ...), and chart rendering.  BIRT_HOME in the examples on this page is set using the setEngineHome method of the <code>EngineConfig</code> class.
 BIRT loads these plug-ins using the Java File API.  
 </p>
 <p>
@@ -711,8 +722,19 @@ task.run();
 
 
 <h2><a name="emitterconfiguration"></a>Emitter Configuration</h2>
-<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides two emitters: HTML and PDF. You'll want to configure the HTML 
-emitter to manage images and links.<br>
+<p>An &quot;emitter&quot; is the component of the report engine that produces output. BIRT provides many emitters such as HTML, XLS and PDF. 
+To configure emitter options you need to use the RenderOption class.  In some of the examples above this was done, with
+code similar to the following:
+
+<pre style="font-size: 10pt">
+IRenderOption options = new RenderOption();		
+options.setOutputFormat("html");
+options.setOutputFileName("output/resample/eventorder.html");
+</pre>
+BIRT also provides an extended RenderOption class for the PDF and HTML emitters (PDFRenderOption and HTMLRenderOption).
+The PDFRenderOption class provides methods for handling fonts and the HTMLRenderOption class provides methods for
+handling images, url encoding, and other html specific settings.
+You may need to configure the HTML emitter to manage images.<br>
 BIRT supports several image types:</p>
 
 <ul>
@@ -731,59 +753,34 @@ default implementations:</p>
   <li><code>HTMLCompleteImageHandler</code>: used to write images to disk when rendering a 
   report to produce an HTML file on disk.</li>
   <li><code>HTMLServerImageHandler</code>: used to handle images for an engine running in an 
-  app server. This class is used by the BIRT web app.</li>
+  app server. This class is used by the BIRT example web viewer.</li>
 </ul>
 <p>When you instantiate a <code>EngineConfig</code> class the <code>HTMLCompleteImageHandler</code> class is used by default.
 Images will be created in your temporary files location (ie C:\Documents and Settings\User\Local Settings\Temp).
-If this is not desired you can use the <code>HTMLRenderContext</code> class.
+If this is not desired you can use the <code>HTMLRenderOption</code> class to change this location.
 
 
 <pre style="font-size: 10pt">
 
-//Create the HTMLRenderContext class
-HTMLRenderContext renderContext = new HTMLRenderContext();
-//Set the image directory to be ./image
-renderContext.setImageDirectory("image");
+HTMLRenderOption htmlOptions = new HTMLRenderOption( options);
+htmlOptions.setImageDirectory("output/image");
 		
-//Set context for the RunAndRender Task
-HashMap contextMap = new HashMap();
-contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
-task.setAppContext( contextMap );
-
    </pre>    
 <p>
 Setting the Image Directory instructs the RE API to store images, used within the report output, in that directory.
 If your emitter is setup with the standard <code>HTMLCompleteImageHandler</code>, the output image src attribute will point to this directory using
-the File protocol.  If your emitter is configured with the <code>HTMLServerImageHandler</code>, you can specify an image base URL using the <code>HTMLRenderContext</code>.  The engine
+the File protocol.  If your emitter is configured with the <code>HTMLServerImageHandler</code>, you can specify an image base URL using the <code>HTMLRenderOption</code> class.  The engine
 will prepend all images with this URL in the src attribute of the report output. 
 </p> 
 <pre style="font-size: 10pt">
 
-//Create the report engine
-HTMLEmitterConfig emitterConfig = new HTMLEmitterConfig( );
-emitterConfig.setActionHandler( new HTMLActionHandler( ) );
-HTMLServerImageHandler imageHandler = new HTMLServerImageHandler( );
-emitterConfig.setImageHandler( imageHandler );
-config.getEmitterConfigs( ).put( "html", emitterConfig ); //$NON-NLS-1$
-		
-IReportRunnable design = null;
-
-design = engine.openReportDesign("C:/test/2.1/executereport/blob.rptdesign"); 
-		
-//Create task to run the report - use the task to execute and run the report,
-IRunAndRenderTask task = engine.createRunAndRenderTask(design); 
-		
-		
-//Set Render context to handle url and image locataions
-HTMLRenderContext renderContext = new HTMLRenderContext();
-renderContext.setBaseImageURL("http://localhost/myimages");
-renderContext.setImageDirectory("C:/xampplite/htdocs/myimages");
-
-//When rendering charts in SVG make sure that the setSupportedImageFormats command is called
-renderContext.setSupportedImageFormats("JPG;PNG;BMP;SVG");
-HashMap<String, HTMLRenderContext> contextMap = new HashMap<String, HTMLRenderContext>();
-contextMap.put( EngineConstants.APPCONTEXT_HTML_RENDER_CONTEXT, renderContext );
-task.setAppContext( contextMap );
+HTMLRenderOption options = new HTMLRenderOption();		
+options.setOutputFileName("output/resample/TopNPercent.html");
+options.setOutputFormat("html");
+options.setImageDirectory("C:\\apps\\apache-tomcat-5.5.20\\webapps\\2.2\\images");
+options.setBaseImageURL("http://localhost:8080/2.2/images/");		
+options.setImageHandler(new HTMLServerImageHandler());
+task.setRenderOption(options);
 </pre>    
        
 <p>You can also create your own implementation of <code>IHTMLImageHandler</code> if the above 
