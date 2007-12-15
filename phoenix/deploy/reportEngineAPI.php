@@ -93,6 +93,7 @@ engine is more than just a simple JAR file; it also includes a set of extensions
 <li>This file will be named birt-runtime-version.zip. 
 <li>Unzip this file into a directory, such as c:\birtruntime. 
 <li>When you set the Engine Home, which is explained later, use C:/birtruntime/birt-runtime-version/ReportEngine as the value. 
+<li>Add the jars in the ReportEngine/lib directory to your classpath/buildpath.
 </ul><br>
 Note that if you are using the RE API within an RCP/Eclipse application these steps are not needed. Just add the RE API plugins to your application and call the needed functions.
 <p>
