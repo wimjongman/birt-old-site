@@ -54,7 +54,8 @@ Eclipse. If you simply want to use BIRT, it is easier to simply
 <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.
 <br>
 <br>Building BIRT 2.1.1 is described below.
- 
+<br>For the latest instructions, see the <a href="http://wiki.eclipse.org/BIRT/FAQ/Birt_Project#Q:_How_do_I_build_BIRT.3F">BIRT Wiki.</a> 
+<br>
 <h1><a name="req">Requirements</a></h1>
 <p>
 Download the BIRT all in one designer.
