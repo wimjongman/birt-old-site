@@ -35,6 +35,18 @@
 		
 			<ul>
 				<li>
+					Want to help improve BIRT usability?  Take the 
+					<a href="http://www.surveymonkey.com/s.aspx?sm=lyIMZ7S5OXtuS_2fW8y1f9aQ_3d_3d">
+						BIRT Survey
+					</a>
+					<span class="dates">
+						12/18/07
+					</span>
+				</li>			
+			
+			
+			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.2.1
 					</a>
