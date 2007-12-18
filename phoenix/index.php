@@ -209,6 +209,16 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					Want to help improve BIRT usability?  Take the 
+					<a href="http://www.surveymonkey.com/s.aspx?sm=lyIMZ7S5OXtuS_2fW8y1f9aQ_3d_3d">
+						BIRT Survey
+					</a>
+					<span class="dates">
+						12/18/07
+					</span>
+				</li>			
+						
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.2.1
 					</a>
@@ -346,14 +356,7 @@
 					<span class="dates">
 						02/12/07
 					</span>
-				</li>			
-				<li>
-	 				<a href="http://www.eclipse.org/community/webinars2006.php">BIRT Webinar</a> - The BIRT PMC will be presenting a Webinar
-	 				next week.  BIRT report development will be discussed with an emphasis on 2.2 Features.
-					<span class="dates">
-						02/01/07
-					</span>
-				</li>																																	
+				</li>																																				
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...

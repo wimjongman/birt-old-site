@@ -44,8 +44,6 @@
 					</span>
 				</li>			
 			
-			
-			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.2.1
