@@ -97,7 +97,7 @@ engine is more than just a simple JAR file; it also includes a set of extensions
 </ul><br>
 Note that if you are using the RE API within an RCP/Eclipse application these steps are not needed. Just add the RE API plugins to your application and call the needed functions.
 <p>
-The BIRT Viewer sample is also bundled with the Report Engine download. It is located under the WebViewerExample directory. If you decide to use this example, see <a href="viewerSetup">Viewer Setup</a> for an explanation. 
+The BIRT Viewer sample is also bundled with the Report Engine download. It is located under the WebViewerExample directory. If you decide to use this example, see <a href="viewerSetup.php">Viewer Setup</a> for an explanation. 
 The Viewer uses the RE API to generate reports within the context of a servlet.  It provides additional features, such as printing, TOCs, Page controls, etc.
 Before using the RE API, verify that the Viewer is not applicable to your application.
 </p>
