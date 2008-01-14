@@ -131,8 +131,8 @@
 		</p>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/deploy/chartEngineAPI.php">Using the Chart Engine API</a> explains how to use the
-  				Chart Engine API.
+				Using the Chart Engine API explains how to use the
+  				Chart Engine API.  TBD
 			</li>
 		</ul>
 
