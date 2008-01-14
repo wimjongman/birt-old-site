@@ -56,12 +56,6 @@
 			<hr class="clearer" />
 
 			<li>
-				<b>Larry Liang, Inetsoft Technology</b><br>
-				Larry has over 15 years experience in software development and advanced research. He currently serves as the chief architect at Inetsoft Technology, and is responsible for the development of its BI solutions.
-			</li>
-			<hr class="clearer" />
-
-			<li>
 				<b>Scott Rosenbaum, Innovent Solutions</b><br>
 				Scott has been providing professional services consulting in the business intelligence space for more than seven years and has been involved in software development for more than 15.
 			</li>
