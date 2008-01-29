@@ -340,7 +340,7 @@ library contains tags to configure and set parameters as well.</p>
  <tr>
   <td 
   >
-  <p >__showTitle</p>
+  <p >__showtitle</p>
   </td>
   <td 
   
@@ -1125,7 +1125,7 @@ format="html"
   
   >
   <p>
-  showTitle
+  showtitle
   </p>
   </td>
   <td
@@ -2146,7 +2146,7 @@ format="html"
   
   >
   <p>
-  showTitle
+  showtitle
   </p>
   </td>
   <td
