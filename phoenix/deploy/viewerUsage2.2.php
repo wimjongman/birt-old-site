@@ -1125,7 +1125,7 @@ format="html"
   
   >
   <p>
-  showtitle
+  showTitle
   </p>
   </td>
   <td
@@ -2146,7 +2146,7 @@ format="html"
   
   >
   <p>
-  showtitle
+  showTitle
   </p>
   </td>
   <td
