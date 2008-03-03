@@ -74,7 +74,7 @@
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-2-1.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-2-2.jpg"></a>
 	</td>
 	<td>
 	Get started with the newest major release, BIRT 2.2.
@@ -221,6 +221,15 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.2.2
+					</a>
+					is now available for download.
+					<span class="dates">
+						03/03/08
+					</span>
+				</li>				
+				<li>
 					Want to help improve BIRT usability?  Take the 
 					<a href="http://www.surveymonkey.com/s.aspx?sm=lyIMZ7S5OXtuS_2fW8y1f9aQ_3d_3d">
 						BIRT Survey
@@ -359,16 +368,7 @@
 						03/06/07
 					</span>
 				</li>
-			
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads">
-						BIRT 2.1.2
-					</a>
-					is now available for download.
-					<span class="dates">
-						02/12/07
-					</span>
-				</li>																																				
+																																							
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
