@@ -47,7 +47,6 @@
 <p>
 BIRT 2.3 Milestone 5 has officially been released to the public.  Below is a description of some of the key features that are now available in the M5 build.  Keep in mind, as with all milestone releases, the product continues to evolve.   
 </p>
-BIRT provides an extensive event model that allows handlers, written in Java or JavaScript, to be called during the generation and presentation of BIRT reports.  These event handlers can be used to modify report content based external code or on data currently being processed by the report engine.  BIRT event handlers, written in Java, can be debugged using the Eclipse Debug perspective.  BIRT provides a Report debug launch configuration to setup the debug session.  This debug method works well, for Java event handlers, but does not provide debugging capabilities for JavaScript event handlers.  This method also launches a new copy of Eclipse to debug the selected report.  With the 2.2 M5 release, BIRT now provides a native JavaScript debugger.  This debugger works with the Report debug launch configuration, which has been improved to support many new features.
 <p>
 To review the projects slated for the 2.3 release, see the project plan, which is available <a href="http://www.eclipse.org/birt/phoenix/project/project_plan_R2_3_0.php">here</a>.</p>
 <h1><a name="jump_2">BIRT JavaScript Debugger</a></h1>
