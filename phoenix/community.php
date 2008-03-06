@@ -114,6 +114,20 @@ into your bug report, preferably as a file attachment.
 				</li>
 		</ul>
 
+<h2>Community Locations</h2>
+		<ul class="midlist">
+				<li>
+<a href=http://www.birt-exchange.com>BIRT Exchange</a> is a community site where BIRT users can share ideas, technical tips and code snippets, as well as download software, documentation and examples.
+</li><li>
+<a href=http://www.birt-exchange.com/modules/wfdownloads/index.php?contenttype=-1 >DevShare</a> – Browse the repository of developer-contributed report designs, code samples, tutorials and articles
+</li><li>
+<a href=http://www.birt-exchange.com/modules/documentation/>Documentation</a> – Access and download online versions of BIRT documentation
+</li><li>
+<a href=http://www.birt-exchange.com/register.php?subflag=1 >Newsletter</a> – Subscribe to the monthly newsletter to get BIRT tips and tricks emailed to you
+
+				</li>
+		</ul>
+
 
 <h2>Mailing Lists</h2>
 
