@@ -114,7 +114,7 @@ into your bug report, preferably as a file attachment.
 				</li>
 		</ul>
 
-<h2>Community Locations</h2>
+<h2>External Resources</h2>
 		<ul class="midlist">
 				<li>
 <a href=http://www.birt-exchange.com>BIRT Exchange</a> is a community site where BIRT users can share ideas, technical tips and code snippets, as well as download software, documentation and examples.
@@ -125,6 +125,9 @@ into your bug report, preferably as a file attachment.
 </li><li>
 <a href=http://www.birt-exchange.com/register.php?subflag=1 >Newsletter</a> – Subscribe to the monthly newsletter to get BIRT tips and tricks emailed to you
 
+				</li>
+				<li>
+				<a href=http://birtworld.blogspot.com>BIRT World</a> is a blog covering all things related to BIRT with frequent contributions from Jason Weathersby and Scott Rosenbaum
 				</li>
 		</ul>
 
