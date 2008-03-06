@@ -221,6 +221,12 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+	 				<a href="project/notable2.3M5.php">Notable Features - BIRT 2.3 Milestone 5</a>
+					<span class="dates">
+						03/05/08
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.2.2
 					</a>
@@ -228,7 +234,16 @@
 					<span class="dates">
 						03/03/08
 					</span>
-				</li>				
+				</li>			
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.3M5-200802191157">
+						BIRT 2.3M5
+					</a>
+					is now available for download.  
+					<span class="dates">
+						02/19/08
+					</span>
+				</li>		
 				<li>
 					Want to help improve BIRT usability?  Take the 
 					<a href="http://www.surveymonkey.com/s.aspx?sm=lyIMZ7S5OXtuS_2fW8y1f9aQ_3d_3d">
@@ -353,21 +368,6 @@
 						03/14/07
 					</span>
 				</li>			
-				<li>
-	 				<a href="project/notable2.2M5.php">Notable Features - BIRT 2.2 Milestone 5</a>
-					<span class="dates">
-						03/11/07
-					</span>
-				</li>			
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2M5-200702281100">
-						BIRT 2.2M5
-					</a>
-					is now available for download.  
-					<span class="dates">
-						03/06/07
-					</span>
-				</li>
 																																							
 				<li>
 					<a href="whatsnew.php">
