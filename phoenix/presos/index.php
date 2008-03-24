@@ -25,6 +25,22 @@
 	<div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+
+	<h2>EclipseCon 2008 Presentations</h2>
+		
+			<p>
+			<ul>
+			<li><a href="http://www.birt-exchange.com/modules/wfdownloads/singlefile.php?cid=2&lid=339">Advanced BIRT Report Customization: Report and Chart Scripting</a><br>
+			This Presentation provides an explanation and examples using both report and chart scripting.<br><br>	
+
+			<li><a href="http://www.birt-exchange.com/modules/wfdownloads/singlefile.php?cid=2&lid=340">BIRT Chart APIs</a><br>
+			This long talk discusses the capabilities of the Charting APIs.  Examples are provided<br><br>
+ 			</ul>
+			
+			</p>
+
+
+
 		
 		<h2>AIUC 2007 Presentation</h2>
 
