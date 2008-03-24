@@ -34,7 +34,7 @@
 			This Presentation provides an explanation and examples using both report and chart scripting.<br><br>	
 
 			<li><a href="http://www.birt-exchange.com/modules/wfdownloads/singlefile.php?cid=2&lid=340">BIRT Chart APIs</a><br>
-			This long talk discusses the capabilities of the Charting APIs.  Examples are provided<br><br>
+			This long talk discusses the capabilities of the Charting APIs.  Examples are included.<br><br>
  			</ul>
 			
 			</p>
