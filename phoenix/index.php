@@ -49,11 +49,7 @@
 <td>
 	<h1>BIRT Project</h1>
 	</td>
-	<td>
-	<a href="http://www.eclipsecon.org/2008/"><img border="0"
- src="http://www.eclipsecon.org/2008/image125x125.gif"
- height="125" width="125" alt="EclipseCon 2008"/></a>	
-	</td>
+
 	</tr>
 </table>
 	<h2>Business Intelligence and Reporting Tools</h2>
