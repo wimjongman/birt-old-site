@@ -44,14 +44,9 @@
 		<tr>
 			<td></td>
 			<td>
-<table cellspacing="20">
-<tr>
-<td>
-	<h1>BIRT Project</h1>
-	</td>
 
-	</tr>
-</table>
+	<h1>BIRT Project</h1>
+
 	<h2>Business Intelligence and Reporting Tools</h2>
 	<p>
 	BIRT is an open source Eclipse-based reporting system that integrates
