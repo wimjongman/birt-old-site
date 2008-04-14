@@ -59,7 +59,7 @@ Once the data source is created, create a new data set and the Query Builder Pro
 </p>
 <img src="images/2.3/newdatasource.png"><br>
 <i>New Data Set Wizard</i>
-<h1><a name="jump_3">Scripting Improvements/a></h1>
+<h1><a name="jump_3">Scripting Improvements</a></h1>
 <p>
 BIRT uses the Mozilla Rhino JavaScript engine to implement server side scripting, for event handling and building BIRT expressions.  One of the major improvements for 2.3 was the release of the JavaScript debugger in the previous milestone.  In an effort to continue to improve scripting, several report elements have been enhanced to support additional event triggers.  The cross tab element now supports onPrepare, onCreate, and onRender events for the cross tab and for each cell within the cross tab.  Using these new events the rendered cross tab element can be altered in many ways.  The following screenshot illustrates script that alters the cross tab element in its onPrepare method and alters the individual cell element instances based on data within the cross tab.
 </p>
