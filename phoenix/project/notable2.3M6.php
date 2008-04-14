@@ -93,7 +93,7 @@ Cross tabs cells can also contain charts.  In this milestone, individual charts 
 <img src="images/2.3/xtabmultichart.png"><br>
 <i>Chart/Crosstab Examples</i>
 <p>
-With milestone 6 it is now possible to set the start angle of the first slice in a pie chart.  This can be done by using the Pie Rotation slider in the Format Chart tab of the Edit Chart wizard.
+With milestone 6 it is now possible to set the start angle of the first slice in a pie chart.  This can be done by using the Pie Rotation slider in the Format Chart tab of the Chart Editor wizard.
 </p>
 <img src="images/2.3/pierotation.png"><br>
 <i>Pie Chart Rotation</i>
