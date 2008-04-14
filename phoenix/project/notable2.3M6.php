@@ -98,7 +98,7 @@ With milestone 6 it is now possible to set the start angle of the first slice in
 <img src="images/2.3/pierotation.png"><br>
 <i>Pie Chart Rotation</i>
 <p>
-Other chart improvements include the ability to display individual charts for each measure within a cross tab cell and ellipsis support for long axis labels.  
+Other chart improvements include ellipsis support for long axis labels.  
 </p>
 
 <h1><a name="jump_5">Preview Extension Point</a></h1>
