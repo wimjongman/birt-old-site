@@ -106,7 +106,7 @@ Other chart improvements include ellipsis support for long axis labels.
 BIRT currently uses an application context object to store engine configuration information, such as image locations, URL configurations when generating hyperlinks, and setting image formats for chart generation. This application context object is available throughout the generation and rendering phases of the reporting pipeline.  This object can be manipulated in the Report Engine API and with the use of session variables, before executing a report.  This can be beneficial for storing your custom objects in the application context, which can then be retrieved using BIRT expressions or scripting.  Testing reports that use this feature within the designer can be somewhat difficult, as your custom objects are usually not available at design time.  To address this issue, BIRT now provides a preview extension point.  This extension point allows the developer to create a plug-in that can modify the application context within the designer, before a report is executed.  
 </p>
 <p>
-This extension point provides two methods.  The getName method is used to name your implementation and the getAppContext method is used to retrieve the application context object from your plug-in.  In the following example we are implementing a preview extension point to add a test string to the application context.
+This extension point provides two methods.  The getName method is used to name your implementation and the getAppContext method is used to retrieve the application context object from your plug-in.  In the following example we implement a preview extension point to add a test string to the application context.
 </p>
 <img src="images/2.3/previewextpt1.png"><br>
 <i>Preview Extension Point</i>
