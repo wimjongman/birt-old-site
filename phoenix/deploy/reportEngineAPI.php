@@ -267,7 +267,7 @@ Design Engine API</a> to traverse the report design.</p>
 <p>BIRT optionally can store reports in an intermediate format, after generation and before rendering.
 This document, with the default extension rptdocument, can be manipulated with the <code>IReportDocument</code> interface.
 The Engine will create this document when the <code>runTask</code> is used.  The BIRT viewer uses this
-format to do pagination, TOCs, CSV extraction, bookmarks, etc.
+format to do pagination, TOCs, CSV extraction, bookmarks, etc.  When finished with a IReportDocument, be sure to close it, with the close() method.
 </p>
 <p>The Engine's <code>openDocument</code> method returns a <code>IReportDocument</code> that represents the intermediate report document. 
 </p>
@@ -542,6 +542,7 @@ IRenderTask task = engine.createRenderTask(document);
 task.setRenderOption(options);
 task.setPageRange("1-2");
 task.render();
+iReportDocument.close();
 
 </pre>
 
