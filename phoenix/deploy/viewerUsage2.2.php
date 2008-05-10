@@ -304,7 +304,7 @@ the report designs and configuration parameters affect the appearance and
 features available to the example Viewer application.  In either case these
 parameters can be passed as URL parameters by entering the &amp;parmname=value
 syntax, passed in a html form, or passed using the jsp:parm tag.  Configuration
-parameters by default start with a “__” prefixed to the parameter name.</p>
+parameters by default start with two underscore characters “__” prefixed to the parameter name.</p>
 
 <p >Report parameters that are designated in the design as
 required and are not entered in one of the above methods will cause the viewer
