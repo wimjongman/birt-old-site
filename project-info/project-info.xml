@@ -8,7 +8,7 @@
   <contributors url="/birt/phoenix/project/contributors.ph"/>
   <leaders url="/birt/phoenix/project/pmc.php"/>
   <cvs repository="/cvsroot/birt/" />
-  <description url="/birt/intro/"
+  <description url="/birt/phoenix/intro/"
                paragraph-url="/birt/project-info/project-page-paragraph.html" />
   <summary paragraph-url="/birt/project-info/summary.html"/>
   <getting-started url="/birt/phoenix/tutorial/" />
