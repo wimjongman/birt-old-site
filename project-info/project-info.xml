@@ -12,7 +12,7 @@
                paragraph-url="/birt/project-info/project-page-paragraph.html" />
   <summary paragraph-url="/birt/project-info/summary.html"/>
   <getting-started url="/birt/phoenix/tutorial/" />
-  <ip-log url="/birt/project-info/ProjectLog2.1.html" /> 
+  <ip-log url="/birt/project-info/ProjectLog2.2.html" /> 
   <mailing-lists>
    <list name="birt-charting-dev"/>
    <list name="birt-dev"/>
