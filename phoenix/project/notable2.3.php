@@ -364,14 +364,14 @@ The test string can now be referenced in BIRT expressions and scripting within t
 
 <h1><a name="jump_18">Miscellaneous</a></h1>
 <p>
-This release contains many other features, including support for parameter retrieval while using a Java scripted data set, support for the includeScripts property in libraries, data engine changes to support cached result sets, and support for computed measures.<br>  
+This release contains many other features, including support for parameter retrieval while using a Java scripted data set, support for the includeScripts property in libraries, and support for computed measures.<br>  
 In addition to these some other features of note include:
 <ul>  
 <li>BIRT currently supports extracting of data results using a data extraction task.  In the example viewer, this task is used to export data to various output formats such as CSV.  An extension point is now available that will allow developers to create a plug-in that controls how the extracted data is formatted and stored.</li>
 <li>This release also supports generating a report document directly from the report, while in the designer.  To access this feature, select the Generate Document item located within the Run menu.</li>
 <li>Borders have also been improved to support Groove, Ridge, Inset, and Outset styles.</li> 
 <li>The pdf and postscript emitter algorithms have been improved to reduce the size of these document types.</li>
-<li>A new CONCAT function is available to the aggregation element, bringing the total number of available functions to thirty.  This function can be used to concatenate row values in table and group footers.</li>
+<li>A new CONCATENATE function is available to the aggregation element, bringing the total number of available functions to thirty.  This function can be used to concatenate row values in table and group footers.</li>
 <li>The application context object now offers a setting to allow the JDBC driver classpath to be set at runtime.  This setting ("OdaJDBCDriverClassPath") can be passed in to the report viewer or set using the reportContext object.</li>
 </ul><br>
 In addition many API changes have been made in the Report Engine, Design Engine, and the Chart Engine to support the new features described above.
