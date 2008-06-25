@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "New and Notable Features within BIRT 2.3 - Draft";
+	$pageTitle 		= "New and Notable Features within BIRT 2.3";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -175,7 +175,7 @@ The Charting package continues to be a highlight for BIRT and with this release 
 <img src="images/2.3/chartsortingandgrouping.png"><br>
 <i>Chart Wizard Data Grouping and Sorting</i>
 <p>
-Charts can now consume data from report cubes.  This is in addition to the existing support for BIRT data sets and report items.
+Charts, embedded in reports, can now consume data from report cubes.  This is in addition to the existing support for BIRT data sets and report items.
 </p>
 <img src="images/2.3/multisourcecharts.png"><br>
 <i>Chart Editor Wizard</i>
@@ -322,7 +322,8 @@ BIRT 2.3 delivers a prototype feature that adopts the DTP SQL Query Builder tool
 <img src="images/2.3/sqlbuilder.png"><br>
 <i>SQL Query Builder Prototype</i>
 <p>
-To use this feature when creating a data source, select the “create from a connection profile in the profile store” radial in the New Data Source wizard.  Using the connection profile wizards create a new profile.
+To use this feature when creating a data source, select the “create from a connection profile in the profile store” radial in the New Data Source wizard.  Using the connection profile wizards create a new profile or
+select the pre-defined connection profile named "BIRT Classic Models Sample Database".  
 </p>
 <img src="images/2.3/createconnprof.png"><br>
 <i>New Connection Profile</i>
