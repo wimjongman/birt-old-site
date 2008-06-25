@@ -57,18 +57,18 @@
 	<table>
     <tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php"><img src="db2.1.3.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index2.2.2.php"><img src="DB2-2-2.jpg"</a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.1 series, the release used in many commercial products.
+	Get started with the latest in the BIRT 2.2 series, the release used in many commercial products.
 	</td>	    
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-2-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.2.
+	Get started with the newest major release, BIRT 2.3.
 	</td>
 	</tr>
 	</table>
@@ -212,6 +212,18 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.3
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.3.php">Notable Features - BIRT 2.3</a>.   To view a webinar demonstrating the 2.3 features see the
+					 <a href="http://live.eclipse.org/node/484">BIRT 2.3 Overview and New Features</a> webinar.  Examples demonstrated in the webinar are located 
+					 <a href="http://www.birt-exchange.com/modules/wfdownloads/singlefile.php?cid=2&lid=425"> here.</a>
+					<span class="dates">
+						06/25/08
+					</span>
+				</li>				
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.3RC4-200806121055">
 						BIRT 2.3 RC4 
 					</a>
@@ -342,34 +354,7 @@
 					<span class="dates">
 						06/29/07
 					</span>
-				</li>				
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC4-200706211707">
-						BIRT 2.2RC4
-					</a>
-					is now available for download.  
-					<span class="dates">
-						06/26/07
-					</span>
-				</li>			
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC3-200706141812">
-						BIRT 2.2RC3
-					</a>
-					is now available for download.  
-					<span class="dates">
-						06/15/07
-					</span>
-				</li>			
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.2RC2-200706011658">
-						BIRT 2.2RC2
-					</a>
-					is now available for download.  
-					<span class="dates">
-						06/06/07
-					</span>
-				</li>																																											
+				</li>																																																	
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
@@ -385,6 +370,22 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
+				<li>
+					<a href="http://live.eclipse.org/node/484">
+						BIRT 2.3 Overview and New Features webinar.
+					</a>
+					<span class="dates">
+						06/24/08
+					</span>
+				</li>
+				<li>
+					<a href="http://www.birt-exchange.com/modules/news-events/">
+						BIRT Webinar Series.
+					</a>
+					<span class="dates">
+						06/02/08
+					</span>
+				</li>
 				<li>
 					<a href="http://www.eclipsemag.net">
 						BIRT 2.2 Dynamic Cross Tables  
@@ -459,15 +460,7 @@
 					<span class="dates">
 						06/29/06
 					</span>
-				</li>			
-				<li>
-					<a href="http://www.scapatech.com/news_events/press_releases/2006-02-05.html">
-						Scapa Adds BIRT Reporting to Test Platform
-					</a>
-					<span class="dates">
-						05/04/06
-					</span>
-				</li>		
+				</li>					
 		
 			</ul>
 			<ul>

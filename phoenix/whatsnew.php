@@ -35,6 +35,18 @@
 		
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.3
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.3.php">Notable Features - BIRT 2.3</a>.   To view a webinar demonstrating the 2.3 features see the
+					 <a href="http://live.eclipse.org/node/484">BIRT 2.3 Overview and New Features</a> webinar.  Examples demonstrated in the webinar are located 
+					 <a href="http://www.birt-exchange.com/modules/wfdownloads/singlefile.php?cid=2&lid=425"> here.</a>
+					<span class="dates">
+						06/25/08
+					</span>
+				</li>		
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.3RC4-200806121055">
 						BIRT 2.3 RC4 
 					</a>
