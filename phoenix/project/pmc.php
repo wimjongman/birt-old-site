@@ -80,13 +80,13 @@
 			</li>
 			<hr class="clearer" />
 			<li>
-				<b>David Michonneau, Actuate</b><br>
-    			David is the project lead for the BIRT Charting Engine. His experience in Eclipse technology includes the graphical architecture of the BIRT Report Editor and the design of the iStudio IDE framework. Prior to that, he led the development of Actuate's Active Portal for .NET, a highly customizable ASP.NET web application used to generate and view reports.
+				<b>Hank Christensen, Actuate</b><br>
+				Hank is the project lead for the BIRT Charting Engine.  He also manages the development of Actuate's Information Object Designer, an Eclipse-based IDE for Enterprise Information Integration (EII), as well as components of Actuate's BIRT Report Designer.  Prior to working with BIRT, he led the development of Actuate's e.Report Designer Professional, and has developed enterprise reporting technologies for the last 10 years.
 			</li>
 			<hr class="clearer" />
 			<li>
-				<b>Stanley Wang, Actuate</b><br>
-    			Stanley is project lead for the BIRT Report Engine. Prior to working on BIRT, he led development of Actuate's Information Object Designer, an Eclipse-based IDE for Enterprise Information Integration (EII). He also served as project lead for report rendering and printing at Actuate for more than 5 years.
+				<b>Gary Xue, Actuate</b><br>
+				Gary leads the BIRT Report Engine and Data Engine projects. Gary has 11 years of experience in developing Business Intelligence software, 7 of which are with Actuate working on the iServer reporting platform. His interest and expertise are in areas of databases, data access technologies, distributed and high performance system design and Web technologies.
 			</li>
 		</ul>
 
