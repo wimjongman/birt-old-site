@@ -26,6 +26,18 @@
 
 		<h1><a name="top"></a>$pageTitle</h1>
 
+	<h2>IBM Rational Software Devlopment Conference Presentations</h2>
+		
+			<p>
+			<ul>
+			<li><a href="rad2008/OC07.ppt">Introduction to Business Intelligence and Reporting Tools 2.2</a></li><br>
+			This Presentation discusses BIRT 2.2/2.3 Features.
+			</ul>
+			
+			</p>
+
+
+
 	<h2>EclipseCon 2008 Presentations</h2>
 		
 			<p>
