@@ -326,9 +326,11 @@ To use this feature when creating a data source, select the “create from a conne
 select the pre-defined connection profile named "BIRT Classic Models Sample Database".   Using the sample database profile is shown below. 
 </p>
 <img src="images/2.3/createconnection.png"><br>
-<i>New Connection Profile - Using predefined sample db</i>
+<i>New Connection Profile - Using predefined sample db</i><br>
+
+
 <img src="images/2.3/createconnection2.png"><br>
-<i>Select Connection Profile - Using predefined sample db</i>
+<i>Select Connection Profile - Using predefined sample db</i><br>
 
 <p>
 Once the data source is created, create a new data set and the Query Builder Prototype should be available in the Data Set Type drop-down control.
