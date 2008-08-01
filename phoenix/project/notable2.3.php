@@ -323,14 +323,17 @@ BIRT 2.3 delivers a prototype feature that adopts the DTP SQL Query Builder tool
 <i>SQL Query Builder Prototype</i>
 <p>
 To use this feature when creating a data source, select the “create from a connection profile in the profile store” radial in the New Data Source wizard.  Using the connection profile wizards create a new profile or
-select the pre-defined connection profile named "BIRT Classic Models Sample Database".  
+select the pre-defined connection profile named "BIRT Classic Models Sample Database".   Using the sample database profile is shown below. 
 </p>
-<img src="images/2.3/createconnprof.png"><br>
-<i>New Connection Profile</i>
+<img src="images/2.3/createconnection.png"><br>
+<i>New Connection Profile - Using predefined sample db</i>
+<img src="images/2.3/createconnection2.png"><br>
+<i>Select Connection Profile - Using predefined sample db</i>
+
 <p>
 Once the data source is created, create a new data set and the Query Builder Prototype should be available in the Data Set Type drop-down control.
 </p>
-<img src="images/2.3/newdatasource.png"><br>
+<img src="images/2.3/createconnection3.png"><br>
 <i>New Data Set Wizard</i>
 
 
