@@ -37,7 +37,7 @@
 
 		<h2><a name="introduction"></a>Introduction</h2>
 		<p>
-			Weclome to the examples section of the BIRT site.
+			Welcome to the examples section of the BIRT site.
 			<br>
 			Here you will find examples that illustrate some of the features of
 			BIRT. This section will be changed frequently to add new examples. The
