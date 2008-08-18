@@ -137,9 +137,7 @@ and others within the Eclipse Foundation. Below are links to help answer frequen
 		<h2><a name="pmc_minutes"></a>PMC Minutes</h2>
 		<p>
 			The BIRT PMC meets weekly. All minutes are posted to the
-			<a href="http://dev.eclipse.org/mailman/listinfo/birt-dev">birt-dev</a>
-			mailing list. Past minutes can be found in the birt-dev mailing list
-			<a href="http://dev.eclipse.org/mhonarc/lists/birt-dev/maillist.html">archive</a>.
+			<a href="http://wiki.eclipse.org/BIRT_PMC_Minutes">BIRT Wiki</a>.
 		</p>
 
 
