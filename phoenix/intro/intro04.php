@@ -197,6 +197,11 @@
 				works like HTML in this regard: the size of content expands as needed to hold its
 				data.
 			</li>
+			<li>
+			Bidirectional Support - 
+			With the 2.3 release, BIRT now supports bidirectional(BIDI) formatting for report content.  No only 
+			can content be formatted RTL or LTR, this feature supports combining both within a single report.
+			</li>
 		</ul>
 	</div>
 	<div id="rightcolumn">

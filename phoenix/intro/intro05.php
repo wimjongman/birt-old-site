@@ -38,7 +38,8 @@
 			The spectrum of reporting applications is enormous, and the BIRT team can never
 			provide every feature needed by every application. BIRT's scripting support is
 			one way to extend BIRT. Another is to create BIRT extensions that plug into
-			BIRT.
+			BIRT.  The project provides many extension points that can be used to extend BIRT.  Some 
+			of the more common ones are listed below.
 		</p>
 		<h2>Data Access</h2>
 		<p>
@@ -64,7 +65,7 @@
 		</p>
 		<h2>Output Formats</h2>
 		<p>
-			BIRT Release 2.2 provides output in HTML, Paginated HTML, PDF, XLS, DOC, PPT, and Postscript. Many other types of output
+			BIRT provides output in HTML, Paginated HTML, PDF, XLS, DOC, PPT, and Postscript. Many other types of output
 			are possible: ERich Text Format (RTF), Scalable Vector Graphic (SVG),
 			images, and more. While BIRT will add some of these over time, others may
 			have a more limited audience. Developers can use BIRT engine interfaces to

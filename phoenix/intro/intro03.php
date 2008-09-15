@@ -74,7 +74,8 @@
 				Script Editor -
 				Scripting adds business logic to reports during data access, during report
 				generation, or during viewing. The code editor provides standard Eclipse features
-				for editing your scripts: syntax coloring, auto-complete and more. 
+				for editing your scripts: syntax coloring, auto-complete and more.  An interesting new feature, for 
+				BIRT 2.3 is the ability to debug scripts while the report is running. 
 			</li>
 			<li>
 				Outline -
@@ -90,10 +91,12 @@
 				through new tasks.
 			</li>
 			<li>
-				Library Explorer -
+				Resource Explorer -
 				BIRT allows the reuse of report objects, such as tables, data sources and styles.
 				Objects created for reuse are stored in a library file.  
-				To browse the contents of report libraries BIRT supplies a Library Explorer view.
+				To browse the contents of report libraries BIRT supplies a Resource Explorer view.  This view
+				list all libraries within the resource folder, in addition other shared content
+				such as images and JavaScript files.
 			</li>
 			<li>
 				Chart Builder -
