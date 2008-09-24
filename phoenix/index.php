@@ -65,10 +65,10 @@
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3-1.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.3.
+	Get started with the newest major release, BIRT 2.3.1.
 	</td>
 	</tr>
 	</table>
@@ -211,7 +211,17 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
+
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.3.1 
+					</a>
+					is now available for download.
+					<span class="dates">
+						09/24/08
+					</span>
+				</li>
+				<li>				
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.3
 					</a>

@@ -36,6 +36,15 @@
 			<ul>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.3.1 
+					</a>
+					is now available for download.
+					<span class="dates">
+						09/24/08
+					</span>
+				</li>			
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.3
 					</a>
 					 has been officially released.  To discover what is available, see the 
