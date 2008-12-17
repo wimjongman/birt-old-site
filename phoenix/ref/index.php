@@ -138,7 +138,7 @@
 		</ul>
 		<h2><a name="bps"></a>BPS Specifications</h2>
 		<p>
-		BIRT Project Specifications documents.
+		BIRT Project Specification documents.
 		</p>
 		<ul>
 			<li>
