@@ -31,6 +31,7 @@
 			<ul>
 				<li><a href="#documentation">Report Object Model Documentation</a></li>
 				<li><a href="#suite">Report Object Model Specification Suite</a></li>
+				<li><a href="#bps">BIRT Project Specifications</a></li>
 			</ul>
 		</blockquote>
 
@@ -135,6 +136,20 @@
 				The data source and data set classes (coming soon)
 			</li>
 		</ul>
+		<h2><a name="bps"></a>BPS Specifications</h2>
+		<p>
+		BIRT Project Specifications documents.
+		</p>
+		<ul>
+			<li>
+				<a href="/birt/release20specs/listspecs.php" target="_new">BPS Specs</a>
+			</li>
+			<li>
+				<a href="http://wiki.eclipse.org/BPS" target="_new">BPS Wiki Pages</a>
+			</li>
+
+		</ul>
+
 		$linkToTop
 		<hr class="clearer" />
 	</div>
