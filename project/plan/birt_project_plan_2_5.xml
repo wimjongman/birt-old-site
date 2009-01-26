@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--  <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> 
+<p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
+   <p:release projectid="birt" version="2.5"/>
+   <p:introduction><html:div><html:p>This document lays out the feature and API set for the next feature release of the Eclipse BIRT project after 2.3, designated release 2.5.</html:p>
+<html:p>Plans do not materialize out of nowhere, nor are they entirely static. To ensure the planning process is transparent and open to the entire
+Eclipse community, plans are posted in an embryonic form and then revised from time to time throughout the release cycle.</html:p>
+<html:p>The first part of the plan deals with the important matters of release deliverables, release milestones, target operating environments, and
+release-to-release compatibility. These are all things that need to be clear for any release, even if no features were to change.</html:p>
+<html:p>The remainder of the plan consists of plan items for the projects under the Eclipse BIRT project. Each plan item covers a feature or API that
+is to be added, or some aspect that is to be improved. Each plan item has its own entry in the Eclipse bugzilla database, with a title and a concise
+summary(usually a single paragraph) that explains the work item at a suitably high enough level so that everyone can readily understand what the work item
+is without having to understand the nitty-gritty detail.</html:p><html:p>Please send comments about this draft plan to the <html:a href="mailto:birt-dev@eclipse.org">BIRT Developer</html:a> mailing list.</html:p></html:div></p:introduction>
+   <p:release_deliverables>
+	<html:p>This release of BIRT will focus on providing the same downloads as BIRT 2.3.</html:p>
+   </p:release_deliverables>
+   <p:release_milestones>
+      <p:preamble>
+         <html:div><html:ul>
+		  <html:li>The BIRT 2.5 Release will follow the Galileo simultaneous release milestones</html:li>
+		  </html:ul>
+			<html:p>Our target is to complete and release BIRT 2.5 with the Galileo Coordinated release.</html:p>
+			<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
+			database</html:a>. The bugzilla database will be updated on an ongoing basis as the plan progresses.</html:p>
+		</html:div>
+      </p:preamble>
+      <p:milestone date="11/19/2008" milestone="M3"><html:div>2.5 M3</html:div></p:milestone>
+      <p:milestone date="01/12/2009" milestone="M4"><html:div>2.5 M4</html:div></p:milestone>
+      <p:milestone date="02/16/2009" milestone="M5"><html:div>2.5 M5</html:div></p:milestone>
+      <p:milestone date="03/23/2009" milestone="M6"><html:div>2.5 M6</html:div></p:milestone>
+      <p:milestone date="05/11/2009" milestone="M7"><html:div>2.5 M7</html:div></p:milestone>
+      <p:milestone date="05/25/2009" milestone="RC1"><html:div>2.5 RC1</html:div></p:milestone>
+      <p:milestone date="06/01/2009" milestone="RC2"><html:div>2.5M RC2</html:div></p:milestone>
+      <p:milestone date="06/08/2009" milestone="RC3"><html:div>2.5M RC3</html:div></p:milestone>
+      <p:milestone date="06/15/2009" milestone="RC4"><html:div>2.5M RC4</html:div></p:milestone>
+      <p:milestone date="06/26/2009" milestone="RC5"><html:div>2.5 Galileo</html:div></p:milestone>
+   </p:release_milestones>
+   <p:target_environments>
+     	<html:p>In order to remain current, each release of an Eclipse project targets reasonably current versions of underlying operating environments and
+		other Eclipse projects on which it depends.</html:p>
+		<html:p>Most of Eclipse, and all of BIRT, is "pure" Java code and has no direct dependence on the underlying operating system. For BIRT, the chief
+		dependence is on the Eclipse Platform, Graphical Editor Framework (GEF), Modeling Framework (EMF), and on the Java 2 Platform that runs it. </html:p>
+		<html:p>The Eclipse BIRT 2.5 release depends on the following compatibility stacks:</html:p>
+		<html:p><html:b>BIRT 2.5 Reference Stack for JDK 1.4.2</html:b></html:p>
+		<html:ul>
+  		<html:li>Java 2 platform Java Development Kit (JDK) 1.4.2</html:li>
+  		<html:li>Eclipse Platform Runtime Binary 3.4</html:li>
+  		<html:li>Graphical Editor Framework (GEF) Runtime 3.2</html:li>
+  		<html:li>Eclipse Modeling Framework (EMF) 2.2</html:li>
+  		<html:li>Data Tools Platform Project 1.6 (DTP)</html:li>
+  		<html:li>Web Tools Project (WTP) 3.4</html:li>
+		</html:ul>
+		
+		<html:p><html:b>BIRT 2.5 Reference Stack for JDK 1.5</html:b></html:p>
+		<html:ul>
+  		<html:li>Java 2 platform Java Development Kit (JDK) 1.5</html:li>
+  		<html:li>Eclipse Platform Runtime Binary 3.4</html:li>
+  		<html:li>Graphical Editor Framework (GEF) Runtime 3.2</html:li>
+  		<html:li>Eclipse Modeling Framework (EMF) 2.3</html:li>
+  		<html:li>Data Tools Platform Project 1.6 (DTP)</html:li>
+  		<html:li>Web Tools Project (WTP) 3.4</html:li>
+		</html:ul>
+
+		<html:p><html:b>BIRT 2.5 Reference Stack for JDK 1.6</html:b> (This is only a proposal and depends on whether various projects provide support for JDK 1.6)</html:p>
+
+		<html:ul>
+  		<html:li>Java 2 platform Java Development Kit (JDK) 1.6 </html:li>
+  		<html:li>Eclipse Platform Runtime Binary &lt;TBD&gt; </html:li>
+  		<html:li>Graphical Editor Framework (GEF) Runtime &lt;TBD&gt; </html:li>
+  		<html:li>Eclipse Modeling Framework (EMF) &lt;TBD&gt; </html:li>
+  		<html:li>Data Tools Platform Project (DTP) &lt;TBD&gt; </html:li>
+  		<html:li>Web Tools Project (WTP) &lt;TBD&gt;</html:li>
+		</html:ul>
+		
+
+		<html:p>The Eclipse Platform and BIRT run in a variety of operating environments. Testing is focused on a handful of popular combinations
+		of operating system and Java 2 Platform; these are our reference platforms. Eclipse BIRT undoubtedly runs fine in many
+		operating environments beyond the reference platforms we test. However, since we do not systematically test them we cannot vouch for them. Problems encountered
+		when running Eclipse BIRT on non-reference platforms that cannot be recreated on any reference platform will be given lower priority than problems with
+		running Eclipse BIRT on a reference platform.</html:p>
+
+		<html:p>For BIRT 2.5, the project team plans to tests and validate the following reference platforms:</html:p>
+		<html:table style="width: 825px; height: 188px;" border="1">
+		  <html:tbody>
+		    <html:tr bgcolor="#cccccc">
+		      <html:th colspan="4">
+        	    <html:div align="center"> <html:b><html:font size="+1">Eclipse BIRT Report Framework 2.5 and Eclipse BIRT RCP Report Designer 2.5
+				Reference Platforms</html:font></html:b></html:div>
+		      </html:th>
+		    </html:tr>
+			<html:tr>
+		      <html:td width="205"><html:b>Operating system</html:b></html:td>
+		      <html:td width="76"><html:b>Processor architecture</html:b></html:td>
+		      <html:td width="59"><html:b>Window system</html:b></html:td>
+		      <html:td width="453"><html:b>Java 2 Platform</html:b></html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows XP</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows XP</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32</html:td>
+		      <html:td>IBM SDK 1.4.2, 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows Server 2003</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows Server 2003</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32</html:td>
+		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td>Microsoft Windows Vista</html:td>
+		      <html:td>Intel x86</html:td>
+		      <html:td>Win32</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">
+		      Red Hat Enterprise Linux WS 3.0<html:br />
+      		  Red Hat Enterprise Linux WS 4.0
+		      </html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">GTK</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
+		    </html:tr>
+		  </html:tbody>
+		</html:table>
+		
+		<html:br />
+		<html:table border="1">
+		  <html:tbody>
+		    <html:tr bgcolor="#cccccc">
+		      <html:th colspan="4">
+      	      <html:div align="center"> <html:b><html:font size="+1">Eclipse BIRT Runtime 2.5 and Eclipse BIRT Charts 2.5 Reference Platforms</html:font></html:b></html:div>
+		      </html:th>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205"><html:b>Operating system</html:b></html:td>
+		      <html:td width="76"><html:b>Processor architecture</html:b></html:td>
+		      <html:td width="59"><html:b>Window system</html:b></html:td>
+		      <html:td width="453"><html:b>Java 2 Platform</html:b></html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows XP</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32*</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows XP</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32*</html:td>
+		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows Server 2003</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32*</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Microsoft Windows Server 2003</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32*</html:td>
+		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td>Microsoft Windows Vista</html:td>
+		      <html:td>Intel x86</html:td>
+		      <html:td>Win32*</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Red Hat Enterprise Linux WS 3.0</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">GTK*</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">Red Hat Enterprise Linux WS 3.0</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">GTK*</html:td>
+		      <html:td width="453">BlackDown SDK 1.4.2</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">SUSE Linux Enterprise Server 9</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">YaST*</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="205">SUSE Linux Enterprise Server 9</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">YaST*</html:td>
+		      <html:td width="453">BlackDown SDK 1.4.2</html:td>
+		    </html:tr>
+		  </html:tbody>
+		</html:table>
+		<html:div>*Window system only required when displaying charts within SWT or SWING windows.</html:div><html:br />
+		<html:br />
+		<html:table border="1">
+		  <html:tbody>
+		    <html:tr bgcolor="#cccccc">
+		      <html:th colspan="1">
+      		     <html:div align="center"> <html:b><html:font size="+1">BIRT Application Server Reference Platform</html:font></html:b></html:div>
+		      </html:th>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">Apache Tomcat 5.0.x, 5.5.x</html:td>
+		    </html:tr>
+		    <html:tr>
+			  <html:td width="405">JBoss AS 4.0.2</html:td>
+		    </html:tr>
+		  </html:tbody>
+		</html:table>
+
+		<html:br />
+
+		<html:table border="1">
+		  <html:tbody>
+		    <html:tr bgcolor="#cccccc">
+		      <html:th colspan="1">
+      		      <html:div align="center"> <html:b><html:font size="+1">BIRT JDBC Reference Platforms</html:font></html:b></html:div>
+		      </html:th>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">MySQL Connector/J 3.x JDBC driver</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">Derby V10.1.2.1 JDBC driver</html:td>
+		    </html:tr>
+		  </html:tbody>
+		</html:table>
+
+		<html:br />
+
+		<html:table border="1">
+		  <html:tbody>
+		    <html:tr bgcolor="#cccccc">
+		      <html:th colspan="1">
+      		      <html:div align="center"> <html:b><html:font size="+1">BIRT Browsers and Viewers Reference Platforms</html:font></html:b></html:div>
+		      </html:th>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">Mozilla Firefox 2.0 </html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">Microsoft Internet Explorer 6.0, 7.0</html:td>
+		    </html:tr>
+		    <html:tr>
+		      <html:td width="405">Adobe Acrobat Reader 7.0, 8.0</html:td>
+		    </html:tr>
+		</html:tbody>
+		</html:table>
+		<html:br />
+		<html:span style="font-weight: bold;"><html:a name="CommunityOperatingEnvironments" id="CommunityOperatingEnvironments">Community
+		Tested Operating Environments</html:a></html:span>
+		<html:p>Due to the finite resources available to the BIRT project, we would like to encourage the BIRT community to contribute to testing BIRT in
+		operating environments other than those listed as target operating environments for the 2.5 release of BIRT and to share this
+		information with the rest of the community. If you have been able to test BIRT in a non-targeted operating environment please take a few
+		minutes to update this <html:a href="http://wiki.eclipse.org/BIRT_Community_Tested_Operating_Environments_for_2.5">wiki
+		page</html:a> and report this information there. If you have encountered bugs during your testing, please report these in
+		bugzilla.</html:p>
+	<p:internationalization>
+          <html:div>
+          	<html:p>Eclipse is designed as the basis for internationalized products. The user interface elements provided by the various Eclipse projects, including
+			dialogs and error messages, are externalized. The English strings for BIRT are provided as the default resource bundles. Translations are provided
+			with this release for French (fr_FR), German (de_DE), Spanish (es_ES), Japanese (ja_JP), Simplified Chinese (zh_CN), and Korean (ko_KR).</html:p>
+		</html:div>
+     </p:internationalization>
+   </p:target_environments>
+   <p:compatibility_with_previous_releases>
+       <html:div>		
+       	<html:p>BIRT 2.5 will be compatible with earlier versions of BIRT to the greatest extent possible. The nature and scope of some of the key plan items for
+		BIRT 2.5 are such that the only feasible solutions might break compatibility. In other regards, BIRT 2.5 will be compatible with 2.x and 1.x. We also
+		aim to minimize the effort required to port an existing plug-in to the 2.5 APIs.</html:p>
+		<html:b>Compatibility of Release 2.5 with Prior Releases</html:b>
+
+		<html:p>BIRT 2.5 will be compatible with prior releases of BIRT unless noted otherwise. The detailed compatibility statement is listed below.
+		In this statement, "BIRT" refers to all BIRT components: BIRT Report Framework, BIRT Runtime, and BIRT Chart SDK.</html:p>
+		<html:p><html:b>API Contract Compatibility:</html:b> BIRT 2.5 will be upwards contract-compatible with BIRT prior releases to the greatest
+		extent possible. All incompatibility exceptions will be documented.Downward contract compatibility is not supported. There is no guarantee that
+		compliance with BIRT 2.5 APIs will ensure compliance with prior BIRT release APIs. Refer to general Eclipse document on <html:a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">Evolving
+		APIs</html:a> for a discussion of the kinds of API changes that maintain contract compatibility.</html:p>
+
+		<html:p>The BIRT Chart UI API 2.5 is compatible with the 2.x.x API's but not compatible with the v1.x APIs due to a full redesign of the
+		Chart UI in the BIRT 2.0 release.</html:p>
+
+		<html:p><html:b>Binary (plug-in) Compatibility:</html:b> The BIRT 2.5 plug-in framework will be upwards binary-compatible with prior BIRT release plug-ins to
+		the greatest extent possible. Downward plug-in compatibility is not supported. Plug-ins for BIRT 2.5 will not be usable in prior BIRT
+		releases. Extension plug-ins for prior BIRT releases will be upwards binary-compatible with BIRT 2.5.</html:p>
+
+		<html:p><html:b>Source Compatibility:</html:b> BIRT 2.5 will be upwards source-compatible with prior BIRT releases to the greatest
+		extent possible. This means that source files written to use prior BIRT release APIs will successfully compile and run against BIRT 2.5 APIs. Downward
+		source compatibility is not supported. If source files use new BIRT APIs, they will not be usable with an earlier version of BIRT.</html:p>
+
+		<html:p><html:b>Report Design Compatibility:</html:b>BIRT 2.5 will be upwards report design compatible with prior BIRT releases unless
+		noted otherwise. This means that reports created with prior BIRT releases can be successfully opened by BIRT 2.5 and upgraded to a 2.5 format.</html:p>
+
+		<html:p><html:b>Non-compliant usage of API's: </html:b> All non-API methods and classes, and certainly everything in a package with "internal" in its name, are
+		considered implementation details which may vary between operating environment and are subject to change without notice. Client plug-ins that directly depend
+		on anything other than what is specified in the BIRT API are inherently unsupportable and receive no guarantees about compatibility within a
+		single release much less with an earlier releases.</html:p>
+	</html:div>
+   </p:compatibility_with_previous_releases>
+   <p:themes_and_priorities>
+     <p:preamble>
+         <html:div>
+         	<html:p>Continuing on the themes for previous releases of BIRT, the BIRT project's overriding release 2.5 theme remains extending the Eclipse platform to
+			provide infrastructure and tools that allow application developers to design, deploy, generate and view reports within their applications. In this
+			context,the BIRT project also adopts and supports key themes within the overall Eclipse planning process.</html:p>
+         </html:div>
+     </p:preamble>
+     <p:theme name="Improve Report Layout Capabilities">
+        <p:description>
+        	<html:div>As BIRT reports gain prevalence in reporting applications, more report layouts are encountered. This theme addresses 
+        	the	types of report layouts that can be created using the BIRT report designer and aims to provide the necessary support for 
+        	more kinds of report layouts. These project also aims to provide greater flexibility and more layout options for the current set of 
+        	supported report layouts.</html:div>
+        </p:description>
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Report+Layout+Capabilities&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Report+Layout+Capabilities&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Improve Page Aggregate capabilities">
+        <p:description>
+        	<html:div>These projects aim at providing more capabilities to access and display page aggregates and summary data. This project will enable the report developers to access the report data from the auto-text elements and vice-versa so that 
+        	they can setup the desired page output efficiently. This project also looks at providing more summary data capabilities 
+        	like displaying page aggregates.
+        	</html:div>
+        </p:description>
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Aggregate+capabilities&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Aggregate+capabilities&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Improve Page Break Management">
+        <p:description>
+        	<html:div>Most BIRT reports span across multiple pages and hence, it is essential that the report developer is 
+        	able to control both the individual page layout as well as the page break behavior. This set of projects aims at 
+        	improving the page setup capabilities as well providing more flexibility in configuring the page breaks in the 
+        	report output.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Break+Management&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Break+Management&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Improve emitters">
+        <p:description>
+        	<html:div>This theme aims at providing an extension point to the UI to register and expose custom emitters. This will enable report developers 
+        	to write their own custom emitters and then be able to customize the display of its properties in the UI.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+emitters&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+emitters&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="General designer usability">
+        <p:description>
+        	<html:div>This theme aims at improving the usability of the various features and wizards available in BIRT to 
+        	make both new as well as seasoned report developers more efficient.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=General+designer+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=General+designer+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Parameter usability">
+        <p:description>
+        	<html:div>This theme aims at providing support for multiple default values for list box parameters.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Parameter+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Parameter+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Chart usability">
+        <p:description>
+        	<html:div>This theme aims at improving the usability of the charting capabilities. This set of projects 
+        	aims at providing meaningful messages and support for developer-selected behavior when no data is retrieved for the chart.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Chart+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Chart+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Data Access usability">
+        <p:description>
+        	<html:div>This theme aims at improving the usability of the data access capabilities of BIRT. The focus of this 
+        	set of projects is to provide greater flexibility in using data sets by supporting union of data sets and joins on multiple fields.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Data+Access+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Data+Access+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Scripting usability">
+        <p:description>
+        	<html:div>This set of projects aims at improving the support for scripts and expressions written by BIRT report developers.
+        	The focus of these projects is to improve the usability of using constants or expressions as values for properties defined in 
+        	BIRT and also to lay the foundation to provide support for more scripting languages in addition to JavaScript.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Scripting+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Scripting+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Performance Improvements">
+        <p:description>
+        	<html:div>This set of projects aims to improve the performance of various components in BIRT.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Performance+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Performance+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Charting improvements">
+        <p:description>
+        	<html:div>This project aims at improving the charting capabilities of BIRT.  The focus of these projects is to provide extension points
+        	to deliver greater interactivity in charts.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Charting+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Charting+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Crosstab improvements">
+        <p:description>
+        	<html:div>This project aims at providing miscellaneous improvements to Crosstabs. The focus of these projects is to 
+        	provide greater flexibility in designing and displaying Crosstabs in BIRT reports.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Crosstab+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Crosstab+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="XML Data Source Improvements">
+        <p:description>
+        	<html:div>XML files are commonly used as data sources for BIRT reports. This set of projects aims to provide more
+        	capabilities to the report developer to leverage these XML data sources. 
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=XML+Data+Source+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=XML+Data+Source+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Improve support for stylesheets">
+        <p:description>
+        	<html:div>This set of projects look at extending the support of stylesheets across multiple report output formats. 
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+support+for+stylesheets&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+support+for+stylesheets&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+   </p:themes_and_priorities>
+   <p:appendix/>
+</p:plan>
