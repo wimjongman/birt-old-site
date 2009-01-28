@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> 
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="2.5"/>
    <p:introduction><html:div><html:p>This document lays out the feature and API set for the next feature release of the Eclipse BIRT project after 2.3, designated release 2.5.</html:p>
@@ -441,6 +441,15 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=XML+Data+Source+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=XML+Data+Source+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
+     </p:theme>
+     <p:theme name="Improve Bidirectional (Bidi) Support">
+        <p:description>
+        	<html:div>This set of projects aims at improving the Bidirectional (Bidi) support provided by the BIRT designer and report engine.
+        	The focus of these projects is to provide data source Bidi layout transformations and to enhance RTL support at runtime.
+        	</html:div>
+		</p:description>        	
+        <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Bidi&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Bidi&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
      <p:theme name="Improve support for stylesheets">
         <p:description>
