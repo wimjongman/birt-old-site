@@ -627,9 +627,8 @@ If breakpoints exist they will halt the code when the table or the row calls you
 <br>
 <h4>Deploying Java Event Handlers</h4>
 <p>
-To deploy the Java Event Handlers you can just place the classes/jars in the WEB-INF/lib directory of the web application.
-This is not ideal, because it usually requires a restart of the application server.  To handle this issue BIRT adds another directory
-within the web application that is searched when the engine executes reports containing Java event handlers.  By default this
+To deploy the Java Event Handlers you can just place the jar containing the event handler in the SCRIPTLIB directory of the web application.
+The SCRIPTLIB directory is defined in the web.xml of the Viewer application.  By default this
 directory is BIRT_HOME/scriptlib.  To change this directory set the script lib directory in the web.xml file of the Birt Viewer.
 </p>
 
@@ -639,7 +638,13 @@ directory is BIRT_HOME/scriptlib.  To change this directory set the script lib d
 	&lt;param-value&gt;&lt;/param-value&gt;
 &lt;/context-param&gt;
 </pre>
+<p>
+If you are testing the event handler in the designer either add the jar to the scriptlib folder of the viewer plugin (org.eclipse.birt.report.viewer_version located
+in the designer install/eclipse/plugins directory) or add the Java project that contains the event handler to the workspace which contains your BIRT report project. 
+Additionally you can select the report, click the properties tab, select the resources property and add the jar.  When using this method import the jar to the BIRT Project 
+workspace before adding the resource.
 
+</p>
 </div>
 EOHTML;
 
