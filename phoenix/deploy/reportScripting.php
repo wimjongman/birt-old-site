@@ -627,9 +627,9 @@ If breakpoints exist they will halt the code when the table or the row calls you
 <br>
 <h4>Deploying Java Event Handlers</h4>
 <p>
-To deploy the Java Event Handlers you can just place the jar containing the event handler in the SCRIPTLIB directory of the web application.
+To deploy the Java Event Handlers you can place the jar containing the event handler in the SCRIPTLIB directory of the web application.
 The SCRIPTLIB directory is defined in the web.xml of the Viewer application.  By default this
-directory is BIRT_HOME/scriptlib.  To change this directory set the script lib directory in the web.xml file of the Birt Viewer.
+directory is BIRT_HOME/scriptlib.  To change this directory set the BIRT_VIEWER_SCRIPTLIB_DIR entry in the web.xml.
 </p>
 
 <pre style="font-size: 10pt">
