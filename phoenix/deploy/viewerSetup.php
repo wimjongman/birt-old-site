@@ -98,6 +98,9 @@
 			<li>
 				A page confirming that the BIRT viewer has been installed should be displayed. Click on the link labeled "View Example" to confirm that your installation is working properly.
 			</li>
+			<li>
+			    The BIRT Viewer requires that cookies be enabled.
+			</li>
 		</ul>
 
 		<p>

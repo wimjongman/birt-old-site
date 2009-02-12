@@ -53,7 +53,8 @@
 
 		<h2><a name="viewer"></a>Example Report Viewer (J2EE App/Plugin)</h2>
 		<p>
-			The BIRT Viewer can be used in a variety of ways:
+			The BIRT Viewer can be used in a variety of ways:<br>
+			Note that the BIRT Viewer requires that cookies be enabled.
 		</p>
 		<ul class="midlist">
 			<li>
