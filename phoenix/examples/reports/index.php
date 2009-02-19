@@ -39,7 +39,7 @@
 
 		<h2><a name="introduction"></a>Introduction</h2>
 		<p>
-			This section of Examples focuses on the feature set within BIRT. Simple reports are used to illustrate a function within BIRT. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation.
+			This section of Examples focuses on the feature set within BIRT. Simple reports are used to illustrate a function within BIRT. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation.  The examples use popups to explain the process and provide no sound.
 		</p>
 		<h1>BIRT 2.1 Examples</h1>
 		<ul class="midlist">
