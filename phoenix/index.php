@@ -65,10 +65,10 @@
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3-1.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.3.1.
+	Get started with the newest major release, BIRT 2.3.2.
 	</td>
 	</tr>
 	</table>
@@ -211,7 +211,15 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
-
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.3.2 
+					</a>
+					is now available for download.
+					<span class="dates">
+						02/25/09
+					</span>
+				</li>
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/">
 						BIRT 2.3.1 
@@ -354,17 +362,7 @@
 					<span class="dates">
 						06/23/07
 					</span>
-				</li>						
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/">
-						BIRT 2.2
-					</a>
-					 has been officially released.  To discover what is available, see the 
-					 <a href="project/notable2.2.php">Notable Features - BIRT 2.2</a> 
-					<span class="dates">
-						06/29/07
-					</span>
-				</li>																																																	
+				</li>																																																							
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
