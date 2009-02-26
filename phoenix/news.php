@@ -33,6 +33,31 @@
 			<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
+			
+				<li>
+					<a href="http://live.eclipse.org/">
+						DTP SQL Query Builder Webinar Mar 5.
+					</a>
+					<span class="dates">
+						02/26/09
+					</span>
+				</li>
+				<li>
+					<a href="http://live.eclipse.org/node/484">
+						BIRT 2.3 Overview and New Features webinar.
+					</a>
+					<span class="dates">
+						06/24/08
+					</span>
+				</li>
+				<li>
+					<a href="http://www.birt-exchange.com/modules/news-events/">
+						BIRT Webinar Series.
+					</a>
+					<span class="dates">
+						06/02/08
+					</span>
+				</li>							
 				<li>
 					<a href="http://www.eclipsemag.net">
 						BIRT 2.2 Dynamic Cross Tables  
