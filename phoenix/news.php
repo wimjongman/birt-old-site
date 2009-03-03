@@ -35,6 +35,14 @@
 			<ul>
 			
 				<li>
+					<a href="http://www.theserverside.com/tt/articles/article.tss?l=IntegratingBIRTwithPHP">
+						Integrating BIRT with PHP
+					</a>
+					<span class="dates">
+						03/03/09
+					</span>
+				</li>
+				<li>
 					<a href="http://live.eclipse.org/">
 						DTP SQL Query Builder Webinar Mar 5.
 					</a>
