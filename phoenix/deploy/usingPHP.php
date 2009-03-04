@@ -56,9 +56,11 @@
 
 		<h2><a name="setup"></a>Setup</h2>
 		<p>
-			PHP has the ability to call Java classes. So, one integration option is to have
-			the PHP engine call BIRT directly. However, this would require changes to
-			Eclipse web server. Another option is to host BIRT on its own app server, such
+			PHP has the ability to call Java classes using a PHP/Java Bridge. So, one integration option is to have
+			the PHP engine call BIRT directly. The scenario is discussed in an article <a href="http://www.theserverside.com/tt/articles/article.tss?l=IntegratingBIRTwithPHP">here.</a>  The examples associated with the
+			article are posted <a href=" http://www.birt-exchange.com/devshare/deploying-birt-reports/743-calling-birt-from-php/">here.</a> 
+			<br>
+			Another option is to host BIRT on its own app server, such
 			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsage.php">BIRT Viewer URLs</a> to work
 			with BIRT.
 		</p>
