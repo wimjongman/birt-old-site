@@ -35,6 +35,12 @@
 		
 			<ul>
 				<li>
+	 				<a href="project/notable2.5M6.php">Notable Features - BIRT 2.5 Milestone 6</a>
+					<span class="dates">
+						04/01/09
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5M6-200903181537">
 						BIRT 2.5 M6 
 					</a>
