@@ -212,6 +212,12 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+	 				<a href="project/notable2.5M6.php">Notable Features - BIRT 2.5 Milestone 6</a>
+					<span class="dates">
+						04/01/09
+					</span>
+				</li>			
+				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5M6-200903181537">
 						BIRT 2.5 M6 
 					</a>
@@ -362,16 +368,7 @@
 					<span class="dates">
 						09/24/07
 					</span>
-				</li>			
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/index2.1.3.php">
-						BIRT 2.1.3
-					</a>
-					is now available for download.
-					<span class="dates">
-						06/23/07
-					</span>
-				</li>																																																							
+				</li>																																																									
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
