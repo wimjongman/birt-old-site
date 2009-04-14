@@ -179,32 +179,6 @@ compatibility
 stacks:</p>
 
 
-<p><b>BIRT 2.3 Reference Stack for JDK 1.4.2</b></p>
-
-
-<ul>
-
-
-  <li>Java 2 platform Java Development Kit (JDK) 1.4.2</li>
-
-
-  <li>Eclipse Platform Runtime Binary 3.4</li>
-
-
-  <li>Graphical Editor Framework (GEF) Runtime 3.2</li>
-
-
-  <li>Eclipse Modeling Framework (EMF) 2.2</li>
-
-
-  <li>Data Tools Platform Project 1.6 (DTP)</li>
-
-
-  <li>Web Tools Project (WTP) 3.4</li>
-
-
-</ul>
-
 
 <p><b>BIRT 2.3 Reference Stack for JDK 1.5</b></p>
 
