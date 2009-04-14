@@ -42,15 +42,6 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		<html:p>Most of Eclipse, and all of BIRT, is "pure" Java code and has no direct dependence on the underlying operating system. For BIRT, the chief
 		dependence is on the Eclipse Platform, Graphical Editor Framework (GEF), Modeling Framework (EMF), and on the Java 2 Platform that runs it. </html:p>
 		<html:p>The Eclipse BIRT 2.5 release depends on the following compatibility stacks:</html:p>
-		<html:p><html:b>BIRT 2.5 Reference Stack for JDK 1.4.2</html:b></html:p>
-		<html:ul>
-  		<html:li>Java 2 platform Java Development Kit (JDK) 1.4.2</html:li>
-  		<html:li>Eclipse Platform Runtime Binary 3.4</html:li>
-  		<html:li>Graphical Editor Framework (GEF) Runtime 3.2</html:li>
-  		<html:li>Eclipse Modeling Framework (EMF) 2.2</html:li>
-  		<html:li>Data Tools Platform Project 1.6 (DTP)</html:li>
-  		<html:li>Web Tools Project (WTP) 3.4</html:li>
-		</html:ul>
 		
 		<html:p><html:b>BIRT 2.5 Reference Stack for JDK 1.5</html:b></html:p>
 		<html:ul>
@@ -105,7 +96,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="205">Microsoft Windows XP</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32</html:td>
-		      <html:td>IBM SDK 1.4.2, 5.0</html:td>
+		      <html:td>IBM SDK 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
@@ -117,7 +108,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32</html:td>
-		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		      <html:td width="453">IBM SDK 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td>Microsoft Windows Vista</html:td>
@@ -155,55 +146,43 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="205">Microsoft Windows XP</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows XP</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		      <html:td width="453">IBM SDK 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">IBM SDK 1.4.2, 5.0</html:td>
+		      <html:td width="453">IBM SDK 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td>Microsoft Windows Vista</html:td>
 		      <html:td>Intel x86</html:td>
 		      <html:td>Win32*</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Red Hat Enterprise Linux WS 3.0</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
-		    </html:tr>
-		    <html:tr>
-		      <html:td width="205">Red Hat Enterprise Linux WS 3.0</html:td>
-		      <html:td width="76">Intel x86</html:td>
-		      <html:td width="59">GTK*</html:td>
-		      <html:td width="453">BlackDown SDK 1.4.2</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">SUSE Linux Enterprise Server 9</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">YaST*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.4.2, version 5.0</html:td>
-		    </html:tr>
-		    <html:tr>
-		      <html:td width="205">SUSE Linux Enterprise Server 9</html:td>
-		      <html:td width="76">Intel x86</html:td>
-		      <html:td width="59">YaST*</html:td>
-		      <html:td width="453">BlackDown SDK 1.4.2</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>
@@ -322,17 +301,18 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 			context,the BIRT project also adopts and supports key themes within the overall Eclipse planning process.</html:p>
          </html:div>
      </p:preamble>
-     <p:theme name="Improve Report Layout Capabilities">
+     <p:theme name="Support size based pagination for fixed layout reports">
         <p:description>
-        	<html:div>As BIRT reports gain prevalence in reporting applications, more report layouts are encountered. This theme addresses 
-        	the	types of report layouts that can be created using the BIRT report designer and aims to provide the necessary support for 
-        	more kinds of report layouts. These project also aims to provide greater flexibility and more layout options for the current set of 
-        	supported report layouts.</html:div>
+        	<html:div>This project aims to ensure that the layout of the report output is consistent across all report output formats. To achieve this functionality,
+        	the pagination scheme of fixed layout reports would be strictly governed by the page size and the data present in the report. This project also aims to
+        	ensure that the layout of the report output viewed by the report consumer is consistent with that seen by the report developer in the report design window. 
+        	These improvements would enhance the design experience for the report developer and make BIRT the product of choice for report developers.
+        	</html:div>
         </p:description>
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Report+Layout+Capabilities&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Report+Layout+Capabilities&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Improve Page Aggregate capabilities">
+     <p:theme name="Add support for page aggregates">
         <p:description>
         	<html:div>These projects aim at providing more capabilities to access and display page aggregates and summary data. This project will enable the report developers to access the report data from the auto-text elements and vice-versa so that 
         	they can setup the desired page output efficiently. This project also looks at providing more summary data capabilities 
@@ -342,18 +322,16 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Aggregate+capabilities&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Aggregate+capabilities&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Improve Page Break Management">
+     <p:theme name="Support Page Break Avoid and control page breaks through scripts">
         <p:description>
-        	<html:div>Most BIRT reports span across multiple pages and hence, it is essential that the report developer is 
-        	able to control both the individual page layout as well as the page break behavior. This set of projects aims at 
-        	improving the page setup capabilities as well providing more flexibility in configuring the page breaks in the 
-        	report output.
+        	<html:div>This project aims to enable the report developer to control the page break behavior through the user interface as well as scripts for custom logic. 
+        	The features that are planned for this project include support for page break avoid and to allow report developers to use scripting to control page breaks.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Break+Management&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+Page+Break+Management&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Improve emitters">
+     <p:theme name="Add support for emitter UI extension">
         <p:description>
         	<html:div>This theme aims at providing an extension point to the UI to register and expose custom emitters. This will enable report developers 
         	to write their own custom emitters and then be able to customize the display of its properties in the UI.
@@ -362,81 +340,81 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+emitters&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+emitters&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="General designer usability">
+     <p:theme name="General designer usability improvements including Extension Point for custom Report Templates">
         <p:description>
-        	<html:div>This theme aims at improving the usability of the various features and wizards available in BIRT to 
-        	make both new as well as seasoned report developers more efficient.
+        	<html:div>This theme consists of various projects aimed at improving the usability of the various features and wizards available in BIRT to 
+        	make both new as well as seasoned report developers more efficient in designing BIRT reports.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=General+designer+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=General+designer+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Parameter usability">
+     <p:theme name="Allow multiple default values for list-box parameters">
         <p:description>
-        	<html:div>This theme aims at providing support for multiple default values for list box parameters.
+        	<html:div>This projects aim to provide support for multiple default values for list box parameters. This would enable report developers to select multiple data values as default values for the list box parameters.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Parameter+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Parameter+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Chart usability">
+     <p:theme name="Enable developers to control chart output when dataset is empty">
         <p:description>
-        	<html:div>This theme aims at improving the usability of the charting capabilities. This set of projects 
-        	aims at providing meaningful messages and support for developer-selected behavior when no data is retrieved for the chart.
+        	<html:div>This project aims at providing a framework that would enable the report developers to design alternative chart output when no data is retrieved for the chart.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Chart+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Chart+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Data Access usability">
+     <p:theme name="Provide the ability to create a connection profile from an existing datasource">
         <p:description>
-        	<html:div>This theme aims at improving the usability of the data access capabilities of BIRT. The focus of this 
-        	set of projects is to provide greater flexibility in using data sets by supporting union of data sets and joins on multiple fields.
+        	<html:div>This project aims to enhance the design time experience of the report developer when using connection profiles. This will enable report
+        	developers to create connection profiles from existing data sources.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Data+Access+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Data+Access+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Scripting usability">
+     <p:theme name="Enable use of expressions as default parameter values">
         <p:description>
-        	<html:div>This set of projects aims at improving the support for scripts and expressions written by BIRT report developers.
-        	The focus of these projects is to improve the usability of using constants or expressions as values for properties defined in 
-        	BIRT and also to lay the foundation to provide support for more scripting languages in addition to JavaScript.
+        	<html:div>The focus of this project is to enable report developers to seamlessly use constants and expressions as values for properties defined in 
+        	BIRT. This project also looks at enabling the use of expressions as default parameter values and also to lay the foundation to provide support for more scripting languages in addition to JavaScript.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Scripting+usability&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Scripting+usability&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Performance Improvements">
+     <p:theme name="Performance improvements in data processing and rendering of report output in various formats">
         <p:description>
-        	<html:div>This set of projects aims to improve the performance of various components in BIRT.
+        	<html:div>This project looks at various performance improvements in the data processing and the report output rendering so that report data is processed 
+        	and delivered to the consumers in the most timely and efficient manner.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Performance+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Performance+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Charting improvements">
+     <p:theme name="Support multiple drill down hyperlinks in charts">
         <p:description>
-        	<html:div>This project aims at improving the charting capabilities of BIRT.  The focus of these projects is to provide extension points
-        	to deliver greater interactivity in charts.
+        	<html:div>This theme aims at delivering interactivity to the report consumers through BIRT charts. These projects aim to support multiple drill-down 
+        	hyperlinks in charts. This will enable report developers to design charts such that report consumers can drill-through and analyze chart data 
+        	in multiple ways. This project also looks at providing the report developers the ability to define end-user interactivity for the right mouse click event.
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Charting+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Charting+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Crosstab improvements">
+     <p:theme name="Support page dimension for crosstabs">
         <p:description>
-        	<html:div>This project aims at providing miscellaneous improvements to Crosstabs. The focus of these projects is to 
-        	provide greater flexibility in designing and displaying Crosstabs in BIRT reports.
+        	<html:div>The focus of these projects is to provide greater flexibility in designing and displaying crosstabs in BIRT reports.
+        	Some of the following features that are planned for this project are support for page dimension, support page-break-inside in crosstabs and allow
+        	filtering on any dimension. 
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Crosstab+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Crosstab+improvements&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="XML Data Source Improvements">
+     <p:theme name="Support Parameters for XML data sources">
         <p:description>
-        	<html:div>XML files are commonly used as data sources for BIRT reports. This set of projects aims to provide more
-        	capabilities to the report developer to leverage these XML data sources. 
+        	<html:div>This project aims to enable report developers to efficiently use XML files as a data source by adding several capabilities to the XML data source processing engine. The features that are planned for this project include support for parameters and the duration data type for XML data sources. 
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=XML+Data+Source+improvements&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
@@ -451,9 +429,10 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Bidi&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Bidi&amp;product=BIRT&amp;target_milestone=2.5.0&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
-     <p:theme name="Improve support for stylesheets">
+     <p:theme name="Consistent stylesheet support across all report output formats">
         <p:description>
-        	<html:div>This set of projects look at extending the support of stylesheets across multiple report output formats. 
+        	<html:div>These projects aim to ensure that style sheets are supported in a consistent manner across multiple report output formats, especially the Word and the PDF formats. This would enable the report developers to design reports that have consistent
+        	layout across the various report output formats.  
         	</html:div>
 		</p:description>        	
         <p:committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Improve+support+for+stylesheets&amp;product=BIRT&amp;target_milestone=2.5.0+M1&amp;target_milestone=2.5.0+M2&amp;target_milestone=2.5.0+M3&amp;target_milestone=2.5.0+M4&amp;target_milestone=2.5.0+M5&amp;target_milestone=2.5.0+M6&amp;target_milestone=2.5.0+RC0&amp;target_milestone=2.5.0+RC1&amp;target_milestone=2.5.0+RC2&amp;target_milestone=2.5.0+RC3&amp;target_milestone=2.5.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:committed>
