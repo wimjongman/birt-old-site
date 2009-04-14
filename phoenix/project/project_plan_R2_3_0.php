@@ -445,8 +445,7 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">Win32*</td>
 
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2, version 5.0</td>
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
 
 
     </tr>
@@ -464,7 +463,7 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">Win32*</td>
 
 
-      <td width="453">IBM SDK 1.4.2, 5.0</td>
+      <td width="453">IBM SDK 5.0</td>
 
 
     </tr>
@@ -482,8 +481,7 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">Win32*</td>
 
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2, version 5.0</td>
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
 
 
     </tr>
@@ -501,7 +499,7 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">Win32*</td>
 
 
-      <td width="453">IBM SDK 1.4.2, 5.0</td>
+      <td width="453">IBM SDK 5.0</td>
 
 
     </tr>
@@ -519,8 +517,7 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td>Win32*</td>
 
 
-      <td>Sun Java 2 Standard Edition, version
-1.4.2, version 5.0</td>
+      <td>Sun Java 2 Standard Edition, version 5.0</td>
 
 
     </tr>
@@ -538,30 +535,10 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">GTK*</td>
 
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2, version 5.0</td>
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
 
 
     </tr>
-
-
-    <tr>
-
-
-      <td width="205">Red Hat Enterprise Linux WS 3.0</td>
-
-
-      <td width="76">Intel x86</td>
-
-
-      <td width="59">GTK*</td>
-
-
-      <td width="453">BlackDown SDK 1.4.2</td>
-
-
-    </tr>
-
 
     <tr>
 
@@ -575,29 +552,13 @@ BIRT Runtime 2.3 and Eclipse BIRT Charts 2.3 Reference Platforms</font></b></div
       <td width="59">YaST*</td>
 
 
-      <td width="453">Sun Java 2 Standard Edition, version
-1.4.2, version 5.0</td>
+      <td width="453">Sun Java 2 Standard Edition, version 5.0</td>
 
 
     </tr>
 
 
-    <tr>
 
-
-      <td width="205">SUSE Linux Enterprise Server 9</td>
-
-
-      <td width="76">Intel x86</td>
-
-
-      <td width="59">YaST*</td>
-
-
-      <td width="453">BlackDown SDK 1.4.2</td>
-
-
-    </tr>
 
 
   
