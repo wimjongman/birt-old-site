@@ -210,7 +210,17 @@
 
 		<div class="homeitem">
 			<h3>What's New</h3>
-			<ul>
+			<ul>		
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5M7-200905061338	">
+						BIRT 2.5 M7 
+					</a>
+					is now available for download.
+					<span class="dates">
+						05/07/09
+					</span>
+				</li>			
+			
 				<li>
 	 				<a href="project/notable2.5M6.php">Notable Features - BIRT 2.5 Milestone 6</a>
 					<span class="dates">
