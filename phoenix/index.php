@@ -210,7 +210,13 @@
 
 		<div class="homeitem">
 			<h3>What's New</h3>
-			<ul>		
+			<ul>
+				<li>
+	 				<a href="project/notable2.5M7.php">Notable Features - BIRT 2.5 Milestone 7</a>
+					<span class="dates">
+						05/18/09
+					</span>
+				</li>					
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5M7-200905061338	">
 						BIRT 2.5 M7 
@@ -369,16 +375,7 @@
 					<span class="dates">
 						10/03/07
 					</span>
-				</li>				
-				<li>
-					<a href="project/project_plan_R2_3_0.php">
-						BIRT 2.3
-					</a>
-					Draft Project Plan is now available.
-					<span class="dates">
-						09/24/07
-					</span>
-				</li>																																																									
+				</li>																																																													
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
