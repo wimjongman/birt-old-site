@@ -212,6 +212,24 @@
 			<h3>What's New</h3>
 			<ul>
 				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5RC4-200906100630">
+						BIRT 2.5 RC4 is avaialble for download. 
+					</a>
+					is now available for download.
+					<span class="dates">
+						06/10/09
+					</span>
+				</li>				
+				<li>
+					<a href="http://download.eclipse.org/birt/downloads/build.php?build=R-R1-2_3_2_2-200906011507">
+						BIRT 2.3.2.2 is avaialble for download.  If you need the all in one build, please use this link. 
+					</a>
+					is now available for download.
+					<span class="dates">
+						06/10/09
+					</span>
+				</li>				
+				<li>
 	 				<a href="project/notable2.5M7.php">Notable Features - BIRT 2.5 Milestone 7</a>
 					<span class="dates">
 						05/18/09
