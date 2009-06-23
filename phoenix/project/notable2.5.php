@@ -2,7 +2,7 @@
 
 	#
 	# Begin: page-specific settings.  Change these.
-	$pageTitle 		= "New and Notable Features within BIRT 2.5 Milestone 7";
+	$pageTitle 		= "New and Notable Features within BIRT 2.5";
 	$pageKeywords	= "";
 	$pageAuthor		= "";
 
@@ -46,8 +46,7 @@
 				<li><a href="#jump_18">Duration Script Functions</a></li>
 				<li><a href="#jump_19">Progress Monitoring Information</a></li>	
 				<li><a href="#jump_20">Event Handler Performance Improvement</a></li>
-				<li><a href="#jump_21">Data Connection Profile Exports</a></li>				
-				<li><a href="#jump_22">Miscellaneous</a></li>	
+				<li><a href="#jump_21">Data Connection Profile Exports</a></li>					
 						
 			</ul>
 		</blockquote>
