@@ -45,7 +45,7 @@ BIRT can be downloaded and installed in different ways.<br>
 <ul>
 <li>The complete BIRT designer or RCP Designer can be installed by downloading the required package <a href="http://download.eclipse.org/birt/downloads">here</a>.
 </li>
-<li>or by downloading the <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-reporting-ganymede-win32.zip">Ganymede Eclipse IDE for Java and Report Developers Package</a>   
+<li>or by downloading the <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-reporting-galileo-win32.zip">Galileo Eclipse IDE for Java and Report Developers Package</a>   
 </li>
 <li>or through the update manager as described <a href="http://download.eclipse.org/birt/downloads/updmaninst2.2.php">here</a>.
 </li>
