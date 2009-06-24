@@ -34,6 +34,16 @@
 		<h3>What's New</h3>
 		
 			<ul>
+				<li>				
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.5
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
+					<span class="dates">
+						06/24/09
+					</span>
+				</li>			
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5RC4-200906100630">
 						BIRT 2.5 RC4 is avaialble for download. 

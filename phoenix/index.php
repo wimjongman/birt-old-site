@@ -57,18 +57,18 @@
 	<table>
     <tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.2.2.php"><img src="DB2-2-2.jpg"</a>
+	<a href="http://download.eclipse.org/birt/downloads/index2.3.2.php"><img src="DB2-3-2.jpg"</a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.2 series, the release used in many commercial products.
+	Get started with the latest in the BIRT 2.3.2 series, the release used in many commercial products.
 	</td>	    
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-3-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-5.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.3.2.
+	Get started with the newest major release, BIRT 2.5.
 	</td>
 	</tr>
 	</table>
@@ -211,6 +211,17 @@
 		<div class="homeitem">
 			<h3>What's New</h3>
 			<ul>
+			
+				<li>				
+					<a href="http://download.eclipse.org/birt/downloads/">
+						BIRT 2.5
+					</a>
+					 has been officially released.  To discover what is available, see the 
+					 <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
+					<span class="dates">
+						06/24/09
+					</span>
+				</li>				
 				<li>
 					<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.5RC4-200906100630">
 						BIRT 2.5 RC4 is avaialble for download. 
@@ -383,17 +394,7 @@
 					<span class="dates">
 						12/18/07
 					</span>
-				</li>			
-						
-				<li>
-					<a href="http://download.eclipse.org/birt/downloads/">
-						BIRT 2.2.1
-					</a>
-					is now available for download.
-					<span class="dates">
-						10/03/07
-					</span>
-				</li>																																																													
+				</li>																																																															
 				<li>
 					<a href="whatsnew.php">
 						More of What's New...
