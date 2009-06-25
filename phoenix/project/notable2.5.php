@@ -61,7 +61,7 @@ To review the projects included in the 2.5 release, see the project plan, which 
 
 <h1><a name="jump_2">Default Parameter Values</a></h1>
 <p>
-Most report use parameters to customize reports to the consumer’s needs.  BIRT provides fully functional parameter capabilities, including dynamic parameters, where values are retrieved from a dataset to populate list and combo boxes.  Parameters can be required or optional and when a user does not enter a value for a parameter BIRT provides the capability to use a default parameter.  In BIRT 2.5, this feature has been improved to support both JavaScript expressions and event scripting.  
+Most developers use parameters to customize reports to the consumer’s needs.  BIRT provides fully functional parameter capabilities, including dynamic parameters, where values are retrieved from a dataset to populate list and combo boxes.  Parameters can be required or optional and when a user does not enter a value for a parameter BIRT provides the capability to use a default parameter.  In BIRT 2.5, this feature has been improved to support both JavaScript expressions and event scripting.  
 </p>
 <p>
 The Parameter editor now provides an expression builder button to set the default value for a parameter using a JavaScript expression.  In the example illustrated below, the expression is just converting the current date into a string, for the default value of a string parameter.  
@@ -225,7 +225,7 @@ BIRT uses the crosstab report item to display hierarchal data that is constructe
 <img src="images/2.5/emptytimerows.PNG"><br>
 <i>Crosstab Empty Rows (Time Dimension)</i>
 <p>
-The data explorer view also feature new icons for dimension attributes, which will allow the developer to drag attributes directly into the crosstab.
+The data explorer view also features new icons for dimension attributes, which will allow the developer to drag attributes directly into the crosstab.
 </p>
 <img src="images/2.5/dimensionattributes.PNG"><br>
 <i>Dimension Attributes</i>
