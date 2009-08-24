@@ -32,7 +32,7 @@
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
 
 	# End: page-specific settings
-	#test
+	#
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
