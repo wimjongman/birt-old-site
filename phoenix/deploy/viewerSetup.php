@@ -34,7 +34,6 @@
 			<ul>
 				<li><a href="#using">Using Tomcat</a></li>
 				<li><a href="#install_viewer">Install the Viewer</a></li>
-				<li><a href="#xtra">iText</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
 				<li><a href="#jboss">Deploying to JBoss</a></li>
@@ -107,22 +106,6 @@
 			If you choose to put the Viewer into some other location, you'll need to use a context entry within the server.xml file to indicate the deployment location. See Tomcat documentation for details.
 		</p>
 
-
-
-		<h2><a name="xtra"></a>iText</h2>
-		<p>
-			Verify that you have downloaded <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">iText 1.3</a> (only required for BIRT 2.1.2 and earlier builds) and follow the note below:
-		</p>
-<div class="homeitem3col">
-<h3>Birt 2.1.2 Runtime Note (Not required for 2.2 or 2.1.3 builds): </h3>
-<ul>
- <li>If you are installing the BIRT 2.1.2 Runtime (J2EE Application Server Deployment),
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
-
- </ul>
-</div>
-<br>
 
 		<h2><a name="install_jdbc">Install your JDBC Drivers</a></h2>
 		<p>
