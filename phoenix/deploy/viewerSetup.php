@@ -187,18 +187,14 @@
 			</li>
 			<li>
 				Rename the WebViewerExample directory to birt.war, so it will deploy in place.
-			</li>
-
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar (BIRT 2.1.2 only;  This step is not required for 2.1.3/2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
- <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar (BIRT 2.1.2 only;  This step is not required for 2.1.3/2.2)</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
-			
+			</li>			
 			<li>
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report.
 			</li>
 		</ul>
 		<h2><a name="other">Other J2EE Servers</a></h2>
 		<p>We are currently working on instructions for other application servers.</p>
-		
+		<p>If you are deploying to Websphere please see this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=282448">bug.</a>
 	</div>
 	$deployLinksSideItem
 </div>
