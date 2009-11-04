@@ -22,14 +22,9 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-		<table>
-			<COLGROUP>
-				<COL width="3%">
-				<COL width="97%">
-		<tr>
-			<td></td>
-			<td>
-			
+<div id="maincontent">
+        <div id="midcolumn">
+	
 		<h1><a name="top"></a>$pageTitle</h1>
 
 		<blockquote>
@@ -434,9 +429,8 @@ ran, with 2 failures and no errors.
 <br><br>
 
 
-		</td>
-		</tr>
-		</table>
+	</div>
+</div>
 
 
 EOHTML;
