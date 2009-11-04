@@ -1,8 +1,8 @@
 <?php
 
 	# set default theme
-	$_theme = "";
-	$theme = "";
+	$_theme = "Nova";
+	$theme = "Nova";
 	if(isset($_POST['theme'])) {
 		$_theme = $_POST['theme'];
 	}
