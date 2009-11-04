@@ -208,34 +208,36 @@
 			</ul>
 		</div>
 
-		<div class="rightcolumn">
-			<h3>What's New</h3>
-			<ul>
-				<li>				
-					<a href="http://download.eclipse.org/birt/downloads/">
-						BIRT 2.5.1
-					</a>
-					 has been officially released.  
-					<span class="dates">
-						09/26/09
-					</span>
-				</li>			
-				<li>				
-					<a href="http://download.eclipse.org/birt/downloads/">
-						BIRT 2.5
-					</a>
-					 has been officially released.  To discover what is available, see the 
-					 <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
-					<span class="dates">
-						06/24/09
-					</span>
-				</li>				
-				<li>
-					<a href="whatsnew.php">
-						More of What's New...
-					</a>
-				</li>
-			</ul>
+		<div id="rightcolumn">
+			<div class="sideitem">
+				<h6>What's New</h6>
+				<ul>
+					<li>				
+						<a href="http://download.eclipse.org/birt/downloads/">
+							BIRT 2.5.1
+						</a>
+						 has been officially released.  
+						<span class="dates">
+							09/26/09
+						</span>
+					</li>			
+					<li>				
+						<a href="http://download.eclipse.org/birt/downloads/">
+							BIRT 2.5
+						</a>
+						 has been officially released.  To discover what is available, see the 
+						 <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
+						<span class="dates">
+							06/24/09
+						</span>
+					</li>				
+					<li>
+						<a href="whatsnew.php">
+							More of What's New...
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		
 		<br/>
