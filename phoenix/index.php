@@ -36,14 +36,9 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	
-		<table>
-			<COLGROUP>
-				<COL width="2%">
-				<COL width="98%">
-		<tr>
-			<td></td>
-			<td>
+
+<div id="maincontent">
+        <div id="midcolumn">
 
 	<h1>BIRT Project</h1>
 
@@ -52,8 +47,7 @@
 	BIRT is an open source Eclipse-based reporting system that integrates
 	with your Java/J2EE application to produce compelling reports.
 	</p>
-	
-	
+	<p>	
 	<table>
     <tr>
 	<td>
@@ -71,8 +65,6 @@
 	Get started with the newest major release, BIRT 2.5.
 	</td>
 	</tr>
-	</table>
-	<table>
 	<tr>
 	<td>
 	<a href="birthelp.php"><img src="birthelpwide.jpg"></a>
@@ -82,12 +74,14 @@
 	</td>
 	</tr>
 	</table>
+	</p>
 	<p>
 	BIRT provides core reporting features such as report layout,
 	data access and scripting.  Please try BIRT and
 	tell us what you think by filling bugs reports &amp; enhancement requests
 	through Bugzilla as explained on the <a href="community.php">community</a>
 	page.
+	</p>
 		<div class="homeitem">
 			<h3>New to BIRT?</h3>
 			<ul>
@@ -208,42 +202,6 @@
 			</ul>
 		</div>
 
-		<div id="rightcolumn">
-			<div class="sideitem">
-				<h6>What's New</h6>
-				<ul>
-					<li>				
-						<a href="http://download.eclipse.org/birt/downloads/">
-							BIRT 2.5.1
-						</a>
-						 has been officially released.  
-						<span class="dates">
-							09/26/09
-						</span>
-					</li>			
-					<li>				
-						<a href="http://download.eclipse.org/birt/downloads/">
-							BIRT 2.5
-						</a>
-						 has been officially released.  To discover what is available, see the 
-						 <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
-						<span class="dates">
-							06/24/09
-						</span>
-					</li>				
-					<li>
-						<a href="whatsnew.php">
-							More of What's New...
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		
-		<br/>
-		
-		
-		
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
@@ -358,10 +316,34 @@
 			</ul>
 
 		</div>
+	</div>
+	<div id="rightcolumn">
+                <div class="sideitem">
+                        <h6>What's New</h6>
+                        <ul>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 2.5.1
+                                        </a>
+                                         has been officially released.
+                                        <span class="dates">
+                                                09/26/09
+                                        </span>
+                                </li>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 2.5
+                                        </a>
+                                         has been officially released.  To discover what is available, see the
+                                         <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
+                                        <span class="dates">
+                                                06/24/09
+                                        </span>
+                                </li>
+		</div>
+	</div>
+</div>
 	
-		</td>
-		</tr>
-		</table>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
