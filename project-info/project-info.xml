@@ -24,7 +24,7 @@
   <newsgroups>
    <newsgroup name="eclipse.birt" /> 
   </newsgroups>
-  <project-plan url="/birt/phoenix/project/plan.php"/>
+  <project-plan url="http://wiki.eclipse.org/BIRT_Project_Plan"/>
   <releases>
     <release name="1.0" 
              status="completed" 
@@ -103,6 +103,12 @@
              status="completed" 
              date="06/25/2009"
              download="http://download.eclipse.org/birt/downloads/"
-	     	 plan="http://wiki.eclipse.org/BIRT_Project_Plan_for_Release_2.5.0" />	
+	     	 plan="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/birt/project/plan/birt_project_plan_2_5.xml" />	  	 
+	<release name="2.5.1" 
+             status="completed" 
+             date="09/25/2009"
+             download="http://download.eclipse.org/birt/downloads/"
+	     	 plan="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/birt/project/plan/birt_project_plan_2_5_1.xml" />	
+	     	 
   </releases>
 </project>
