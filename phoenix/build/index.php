@@ -48,6 +48,7 @@ BIRT can be downloaded and installed in different ways.<br>
 <li>or by downloading the <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-reporting-galileo-win32.zip">Galileo Eclipse IDE for Java and Report Developers Package</a>   
 </li>
 <li>or through the update manager as described <a href="http://download.eclipse.org/birt/downloads/updmaninst2.2.php">here</a>.
+<br><a href="http://wiki.eclipse.org/BIRT_Update_Site_URL">Update Manager URLs</a>
 </li>
 <li>as a package that only contains the BIRT plugins (Framework) from the <a href="http://download.eclipse.org/birt/downloads">download page</a>.  Note additional requirements are located on the download page as well.  These
 include dependencies on other Eclipse projects.  These dependencies are listed on the download page for the specific build.
