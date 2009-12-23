@@ -83,9 +83,6 @@
 				Copy the Web Viewer Example directory to the webapps directory of your Tomcat installation. For ease of reference, rename the directory to "birt-viewer".
 			</li>
 			<li>
-				Copy additional files to the directory structure described in the BIRT Runtime Note below (iText and prototype.js).
-			</li>
-			<li>
 				Stop, then restart Tomcat.
 			</li>
 			<li>
