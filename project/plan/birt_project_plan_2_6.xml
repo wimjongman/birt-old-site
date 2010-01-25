@@ -309,7 +309,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	before flowing onto the next page. 
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=133218;query_format=advanced"></p:proposed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Newspaper+Page+Layout&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
 
      <p:theme name="Support Master Page selection based on Page Sequences">
@@ -320,7 +320,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	are needed for odd and even numbered pages.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=153316;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Support+for+Page+Sequences&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>        
      </p:theme>
 
      <p:theme name="Allow selection of multiple values for cascading parameters">
@@ -330,7 +330,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	satisfy any of the selected values (similar to an "in" clause of a sql query).
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=208477;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=cascading+parameters+to+allow+multiple+selections&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
 
      <p:theme name="Support multiple hyperlinks in all report items that support hyperlinks">
@@ -341,7 +341,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	and analyze report data in multiple paths.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=265391;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=multiple+hyperlinks+from+all+report+items+that+support+hyperlinks&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
 
      <p:theme name="Add visual notifications of status of report items added from a library">
@@ -352,7 +352,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	understand and leverage libraries especially in large development teams.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=289728;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Visual+notification+that+item+from+library+is+overwritten&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
 
      <p:theme name="Support crosstab level visibility">
@@ -362,7 +362,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	displaying empty columns corresponding to the original cell of that level.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=251775;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=Support+crosstab+level+visibility&amp;product=BIRT&amp;target_milestone=2.6.0&amp;target_milestone=2.6.0+M1&amp;target_milestone=2.6.0+M2&amp;target_milestone=2.6.0+M3&amp;target_milestone=2.6.0+M4&amp;target_milestone=2.6.0+M5&amp;target_milestone=2.6.0+M6&amp;target_milestone=2.6.0+M7&amp;target_milestone=2.6.0+RC0&amp;target_milestone=2.6.0+RC1&amp;target_milestone=2.6.0+RC2&amp;target_milestone=2.6.0+RC3&amp;target_milestone=2.6.0+RC4&amp;long_desc_type=allwordssubstr&amp;cmdtype=doit"></p:proposed>
      </p:theme>
 
      <p:theme name="Improve Report Layout capabilities">
