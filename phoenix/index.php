@@ -318,7 +318,22 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-                <div class="sideitem">
+  <br/>              
+<a href="http://www.birt-exchange.com" >
+<img border="0" alt="Innovent Home" src="images/BIRT-Exchange-120W.jpg"/>
+</a>
+<br/>
+
+<a href="http://www.innoventsolutions.com/business-intelligence/birt.html" >
+<img border="0" alt="Innovent Home" src="http://www.innoventsolutions.com/pics/logo_innovent.gif"/>
+</a>
+<br/>
+<a href="http://www.ibm.com/" >
+<img border="0" alt="IBM Home" src="images/IBMLogo.gif"/>
+</a>
+<br/>
+<div class="sideitem">
+                
                         <h6>What's New</h6>
                         <ul>
                                 <li>
