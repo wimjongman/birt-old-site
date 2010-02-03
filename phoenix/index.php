@@ -323,14 +323,16 @@
 <img border="0" alt="BIRT-Exchange Home" src="images/BIRT-Exchange-120W.jpg"/>
 </a>
 <br/>
-
+<br/>
 <a href="http://www.innoventsolutions.com/business-intelligence/birt.html" >
 <img border="0" alt="Innovent Home" src="http://www.innoventsolutions.com/pics/logo_innovent.gif"/>
 </a>
 <br/>
+<br/>
 <a href="http://www.ibm.com/" >
 <img border="0" alt="IBM Home" src="images/IBMLogo.gif"/>
 </a>
+<br/>
 <br/>
 <div class="sideitem">
                 
