@@ -320,7 +320,7 @@
 	<div id="rightcolumn">
   <br/>              
 <a href="http://www.birt-exchange.com" >
-<img border="0" alt="BIRT-Exchange Home" src="images/BIRT-Exchange-120W.jpg"/>
+<img border="0" alt="BIRT-Exchange Home" src="images/BIRT-Exchange-200W.jpg"/>
 </a>
 <br/>
 <br/>
