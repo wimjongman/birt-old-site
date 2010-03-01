@@ -325,7 +325,7 @@
 <br/>
 <br/>
 <br/>
-<a href="http://www.innoventsolutions.com/consulting/business-intelligence/birt.html" >
+<a href="http://www.innoventsolutions.com/birt-overview.html" >
 <img border="0" alt="Innovent Home" src="http://www.innoventsolutions.com/pics/logo_innovent.gif"/>
 </a>
 <br/>
