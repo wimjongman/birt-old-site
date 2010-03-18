@@ -193,7 +193,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="405">Apache Tomcat 5.0.x, 5.5.x</html:td>
 		    </html:tr>
 		    <html:tr>
-			  <html:td width="405">JBoss AS 4.0.2</html:td>
+			  <html:td width="405">JBoss AS 5.0</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>

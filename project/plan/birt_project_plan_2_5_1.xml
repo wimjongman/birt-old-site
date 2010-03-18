@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<!--  <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>--> 
+<!--  <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="2.5 SR1"/>
@@ -193,7 +193,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="405">Apache Tomcat 5.0.x, 5.5.x</html:td>
 		    </html:tr>
 		    <html:tr>
-			  <html:td width="405">JBoss AS 4.0.2</html:td>
+			  <html:td width="405">JBoss AS 5.0</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>
