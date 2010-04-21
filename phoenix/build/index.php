@@ -92,11 +92,11 @@ BIRT framework and unzip the contents to any directory.
 <p>
 You will likely want to use your own JDBC driver with BIRT. Use the data source editor’s JDBC 
 driver management wizard. To start the wizard, open a BIRT report design, go to 
-the Data Explorer view, right click on “Data Sources” and select “New Data 
-Source”. Choose “JDBC Data Source” and click “Next”. In the next dialog, choose 
-“Manage Drivers…” to bring up the “Manage JDBC Drivers” dialog.
-<p>In the “JAR Files” tab, click on “Add…” to add the JAR file required by your 
-JDBC driver. Then go to the “Driver” tab to confirm that the list of drivers 
+the Data Explorer view, right click on "Data Sources" and select "New Data 
+Source". Choose "JDBC Data Source" and click "Next". In the next dialog, choose 
+"Manage Drivers…" to bring up the "Manage JDBC Drivers" dialog.
+<p>In the "JAR Files" tab, click on "Add…" to add the JAR file required by your 
+JDBC driver. Then go to the "Driver" tab to confirm that the list of drivers 
 includes the new drivers added. You may also want to assign a display name and URL 
 template for the new drivers in this tab.</p>
 
