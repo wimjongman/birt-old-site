@@ -342,6 +342,15 @@
                         <h6>What's New</h6>
                         <ul>
 								<li>
+									<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.6RC3-201006011048">
+										BIRT 2.6 RC3. 
+									</a>
+									is now available for download.
+									<span class="dates">
+										06/01/10
+									</span>
+								</li>	                        
+								<li>
 									<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.6RC2-201005251749">
 										BIRT 2.6 RC2. 
 									</a>
