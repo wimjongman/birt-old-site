@@ -66,7 +66,7 @@ BIRT provides a very extensible Chart Engine with support for thirteen main char
 <p>
 Some of the more significant chart changes are listed below.  Other chart improvements not documented below include proper chart rendering on AIX, horizontal scroll bar support within the chart builder, better jpg quality and proper data inheritance when nesting charts in existing containers.
 </p>
-<h1><a name="jump_3">Charting Improvements – Polar/Radar Chart</a></h1>
+<h1><a name="jump_3">Charting Improvements: Polar/Radar Chart</a></h1>
 <p>
 Extensibility is a key advantage when using any Eclipse based product, and the BIRT Chart Engine contains many extension points that allow the package to be enhanced and customized.  These include adding new chart types, output formats, and data processors.  The framework has been extended in this release of BIRT to better support using these extension points.  Building on some of the extension points is a new Radar/Polar style chart type.  
 </p>
@@ -80,7 +80,7 @@ This chart type supports standard radar style, bulls-eye, and spider charts.  Se
 <p>
 To better support the community the source for this chart type is also available in the org.eclipse.birt.chart.examples plugin as an illustrative example on how to add your own chart types to BIRT.
 </p>
-<h1><a name="jump_4">Charting Improvements – Palette Hashing</a></h1>
+<h1><a name="jump_4">Charting Improvements: Palette Hashing</a></h1>
 <p>
 The Chart Palette has also been improved.  Currently the palette supports adding custom colors, gradients, images, and positive/negative combination entries.  With this release, pattern support has been added to the palette.
 </p>
@@ -93,21 +93,21 @@ Using the new pattern editor you can select foreground and background colors.  Y
 <i>Palette Pattern Editor</i>
 <img src="images/2.6/patternouts.png"><br>
 <i>Pattern Examples</i>
-<h1><a name="jump_5">Charting Improvements – Pie Chart Rotation</a></h1>
+<h1><a name="jump_5">Charting Improvements: Pie Chart Rotation</a></h1>
 <p>
 Currently a report designer can set the start angle of a pie chart, which will dictate where the first slice of the chart will be rendered.  These charts have been further enhanced to allow the direction in which the slices are rendered to be set to clockwise or counter clockwise.
 </p>
 <img src="images/2.6/pieclockwise.png"><br>
 <i>Pie Chart Rotation Direction</i>
 
-<h1><a name="jump_6">Charting Improvements – Chart Background Images</a></h1>
+<h1><a name="jump_6">Charting Improvements: Chart Background Images</a></h1>
 <p>
 Chart Background images can now be set to not repeat using standard BIRT styles.
 </p>
 <img src="images/2.6/chartimagebackground.png"><br>
 <i>Chart Background Images</i>
 
-<h1><a name="jump_7">Charting Improvements – Sort Locale and Strength</a></h1>
+<h1><a name="jump_7">Charting Improvements: Sort Locale and Strength</a></h1>
 <p>
 When configuring chart data in the chart builder, the designer can specify sort order and sort column on the category and optional grouping data points.  This allows a chart to be grouped by one field and sorted by another.  While this feature works well, in previous releases of BIRT it was not possible to sort based on a different locale or sort strength.  With this release both options have been added to chart sorting.
 </p>
@@ -115,21 +115,21 @@ When configuring chart data in the chart builder, the designer can specify sort 
 <i>Sort Locale and Strength</i>
 
 
-<h1><a name="jump_8">*Charting Improvements – Outside Axis Range</a></h1>
+<h1><a name="jump_8">*Charting Improvements: Outside Axis Range</a></h1>
 <p>
 When manually setting a scale for a bar/tube/pyramid/cone chart users can now select the Show values outside Axis range and a visual indicator will be rendered when series values fall outside of the axis range. 
 </p>
 <img src="images/2.6/outsiderange.png"><br>
 <i>Outside Range Indication</i>
 
-<h1><a name="jump_9">*Charting Improvements – Better Cube Filter Support</a></h1>
+<h1><a name="jump_9">*Charting Improvements: Better Cube Filter Support</a></h1>
 <p>
 When using a data cube as a data source for a chart, filters can be applied to all dimensions and measures defined in the cube.  In prior versions of BIRT filtering was only available to dimensions and measures used in the chart.
 </p>
 <img src="images/2.6/chartcubefiltering.png"><br>
 <i>Chart Cube Filtering</i>
 
-<h1><a name="jump_10">*Charting Improvements – Native PDF Drawing from SVG</a></h1>
+<h1><a name="jump_10">*Charting Improvements: Native PDF Drawing from SVG</a></h1>
 <p>
 If using the report engine API, rendering of PDF files now supports native PDF drawing commands when emitting a report that contains an SVG chart.  This will result in a larger PDF, but charts will be presented in much more detail.  To enable this feature simply add SVG to the supported image format string using the PDFRenderOption.
 </p>
