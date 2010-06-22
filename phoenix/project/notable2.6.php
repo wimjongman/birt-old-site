@@ -28,14 +28,14 @@
 			<ul>
 				<li><a href="#intro">Introduction</a></li>
 				<li><a href="#jump_2">Charting Improvements</a></li>
-				<li><a href="#jump_3">Charting Improvements – Polar/Radar Chart</a></li>
-				<li><a href="#jump_4">Charting Improvements – Palette Hashing</a></li>				
-				<li><a href="#jump_5">Charting Improvements – Pie Chart Rotation</a></li>
-				<li><a href="#jump_6">Charting Improvements – Chart Background Images</a></li>
-				<li><a href="#jump_7">Charting Improvements – Sort Locale and Strength</a></li>
-				<li><a href="#jump_8">*Charting Improvements – Outside Axis Range</a></li>
-				<li><a href="#jump_9">*Charting Improvements – Better Cube Filter Support</a></li>
-				<li><a href="#jump_10">*Charting Improvements – Native PDF Drawing from SVG</a></li>
+				<li><a href="#jump_3">Charting Improvements: Polar/Radar Chart</a></li>
+				<li><a href="#jump_4">Charting Improvements: Palette Hashing</a></li>				
+				<li><a href="#jump_5">Charting Improvements: Pie Chart Rotation</a></li>
+				<li><a href="#jump_6">Charting Improvements: Chart Background Images</a></li>
+				<li><a href="#jump_7">Charting Improvements: Sort Locale and Strength</a></li>
+				<li><a href="#jump_8">*Charting Improvements: Outside Axis Range</a></li>
+				<li><a href="#jump_9">*Charting Improvements: Better Cube Filter Support</a></li>
+				<li><a href="#jump_10">*Charting Improvements: Native PDF Drawing from SVG</a></li>
 				<li><a href="#jump_11">Overridden Library Properties</a></li>				
 				<li><a href="#jump_12">*Viewtime-value-of</a></li>
 				<li><a href="#jump_13">*SQL Query Builder</a></li>		
