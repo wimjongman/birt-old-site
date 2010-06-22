@@ -23,7 +23,7 @@
 	$html = <<<EOHTML
 <div id="maincontent">
         <div id="midcolumn">	
-	<div align=LEFT style="padding-left: 80px">
+
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
@@ -258,7 +258,7 @@ The BIRT team has spent a great deal of time improving and refining existing fea
 
 
 
-</div>
+
 </div>
 </div>
 
