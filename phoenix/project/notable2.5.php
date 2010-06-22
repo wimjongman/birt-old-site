@@ -21,7 +21,8 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	<div align=LEFT style="padding-left: 80px">
+<div id="maincontent">
+        <div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
@@ -359,7 +360,7 @@ When building a BIRT report the designer has many options for data sources.  One
 
 
 </div>
-
+</div>
 
 EOHTML;
 
