@@ -73,7 +73,7 @@ Some of the more significant chart changes are listed below.  Other chart improv
 Extensibility is a key advantage when using any Eclipse based product, and the BIRT Chart Engine contains many extension points that allow the package to be enhanced and customized.  These include adding new chart types, output formats, and data processors.  The framework has been extended in this release of BIRT to better support using these extension points.  Building on some of the extension points is a new Radar/Polar style chart type.  
 </p>
 <img src="images/2.6/radarcharttype.png"><br>
-<i>Radar/Polar Chart Type</i><br>
+<i>Radar/Polar Chart Type</i><br><br>
 <p>
 This chart type supports standard radar style, bulls-eye, and spider charts.  Series points can be plotted as disconnected lines, filled and unfilled polygons, or as single points when using optional grouping.
 </p>

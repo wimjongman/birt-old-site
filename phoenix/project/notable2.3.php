@@ -21,7 +21,8 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	<div align=LEFT style="padding-left: 80px">
+<div id="maincontent">
+        <div id="midcolumn">	
 
 		<h1><a name="top"></a>$pageTitle</h1>
 		<blockquote>
@@ -389,7 +390,7 @@ In addition many API changes have been made in the Report Engine, Design Engine,
 
 
 </div>
-
+</div>
 
 EOHTML;
 
