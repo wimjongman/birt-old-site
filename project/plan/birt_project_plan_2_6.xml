@@ -295,7 +295,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	report developer will be able to easily revert back to the original properties of the report item.
         	</html:div>
         </p:description>
-		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=289728;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;short_desc=Visual%20notification%20that%20item%20from%20library%20is%20overwritten;short_desc_type=allwordssubstr;classification=BIRT;product=BIRT;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4"></p:proposed>
      </p:theme>
 
      <p:theme name="New Polar / Radar Chart">
@@ -306,7 +306,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	support standard radar style, bulls-eye and spider charts.
         	</html:div>
         </p:description>
-		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=178354;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;short_desc=BPS38-%20New%20Radar%2FPolar%20Chart%20type;short_desc_type=allwordssubstr;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4;product=BIRT;classification=BIRT"></p:proposed>
      </p:theme>
 
      <p:theme name="Miscellaneous Enhancements in Charts">
@@ -315,7 +315,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	customize the data intervals and display of charts. 
         	</html:div>
         </p:description>
-		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=298673,303457,252915;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;short_desc=chart;bug_severity=enhancement;short_desc_type=allwordssubstr;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4;product=BIRT;classification=BIRT"></p:proposed>
      </p:theme>
 
      <p:theme name="Support multiple resource files for localization">
@@ -325,7 +325,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	without having to create a resource file specific for each report. 
         	</html:div>
         </p:description>
-		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=230313;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;short_desc=BIRT%20reports%20should%20allow%20multiple%20resource%20%28localization%29%20files;short_desc_type=allwordssubstr;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4;product=BIRT;classification=BIRT"></p:proposed>
      </p:theme>
 
      <p:theme name="ODA Context Sensitive Help">
@@ -336,7 +336,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         	Data Source and Data Set Editors.  
         	</html:div>
         </p:description>
-		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bugidtype=include;bug_id=302357;query_format=advanced"></p:proposed>
+		<p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;short_desc=Support%20Custom%20context-sensitive%20help%20in%20Property%20Binding%20page%20in%20Data%20Source%2FSet%20Editor;short_desc_type=allwordssubstr;classification=BIRT;product=BIRT;target_milestone=2.6.0;target_milestone=2.6.0%20M4;target_milestone=2.6.0%20M5;target_milestone=2.6.0%20M6;target_milestone=2.6.0%20M7;target_milestone=2.6.0%20RC0;target_milestone=2.6.0%20RC1;target_milestone=2.6.0%20RC2;target_milestone=2.6.0%20RC3;target_milestone=2.6.0%20RC4"></p:proposed>
      </p:theme>
 
    </p:themes_and_priorities>
@@ -348,4 +348,5 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
      For more information on how you can contribute to the BIRT project, refer to <html:a href="http://www.eclipse.org/birt/phoenix/project/contribute.php">How to Contribute to the BIRT Project</html:a>
      </html:div>
    </p:appendix>	
+
 </p:plan>
