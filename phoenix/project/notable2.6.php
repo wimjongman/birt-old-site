@@ -241,7 +241,7 @@ In this release of BIRT, localization support has been enhanced to support multi
 
 <h1><a name="jump_18">ODA Context Sensitive Help</a></h1>
 <p>
-BIRT uses the Data Tools Platform (DTP) project’s Open Data Access (ODA) functionality to provide access to data. This provides BIRT with many out of the box data sources and supplies the capability for developers to implement their own data sources that can be packaged and shared.  BIRT 2.6 enhances the use of the ODA framework to allow developers to supply their own specific context sensitive help for their data source properties in the BIRT Data Source and Data Set Editors. 
+BIRT uses the Data Tools Platform (DTP) project's Open Data Access (ODA) functionality to provide access to data. This provides BIRT with many out of the box data sources and supplies the capability for developers to implement their own data sources that can be packaged and shared.  BIRT 2.6 enhances the use of the ODA framework to allow developers to supply their own specific context sensitive help for their data source properties in the BIRT Data Source and Data Set Editors. 
 </p>
 <p>
 See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302357">Bug 302357</a> for more details and a reference implementation.
