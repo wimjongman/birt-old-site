@@ -223,7 +223,7 @@ A new Report Template and Cheat Sheet are available for creating a cross tab sty
 
 <h1><a name="jump_17">Multiple Resource Files</a></h1>
 <p>
-BIRT currently supports localization of many items through the use of a resource file.  These settings are available in the properties editor’s localization tab for most report items.  The chart editor provides an externalized text editor for many of the labels used by the chart engine.  Messages from the resource file can also be selected using script.
+BIRT currently supports localization of many items through the use of a resource file.  These settings are available in the properties editor's localization tab for most report items.  The chart editor provides an externalized text editor for many of the labels used by the chart engine.  Messages from the resource file can also be selected using script.
 </p>
 <img src="images/2.6/localize.png"><br>
 <i>BIRT Localization</i><br>
