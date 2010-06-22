@@ -78,7 +78,7 @@ Extensibility is a key advantage when using any Eclipse based product, and the B
 This chart type supports standard radar style, bulls-eye, and spider charts.  Series points can be plotted as disconnected lines, filled and unfilled polygons, or as single points when using optional grouping.
 </p>
 <img src="images/2.6/radarout.png"><br>
-<i>Radar/Polar Examples</i><br>
+<i>Radar/Polar Examples</i><br><br>
 <p>
 To better support the community the source for this chart type is also available in the org.eclipse.birt.chart.examples plugin as an illustrative example on how to add your own chart types to BIRT.
 </p>
@@ -87,34 +87,34 @@ To better support the community the source for this chart type is also available
 The Chart Palette has also been improved.  Currently the palette supports adding custom colors, gradients, images, and positive/negative combination entries.  With this release, pattern support has been added to the palette.
 </p>
 <img src="images/2.6/chartpalette.png"><br>
-<i>Chart Palette</i><br>
+<i>Chart Palette</i><br><br>
 <p>
 Using the new pattern editor you can select foreground and background colors.  You can also choose a predefined pattern or create your own.
 </p>
 <img src="images/2.6/patterneditor.png"><br>
 <i>Palette Pattern Editor</i><br>
 <img src="images/2.6/patternouts.png"><br>
-<i>Pattern Examples</i><br>
+<i>Pattern Examples</i><br><br>
 <h1><a name="jump_5">Charting Improvements: Pie Chart Rotation</a></h1>
 <p>
 Currently a report designer can set the start angle of a pie chart, which will dictate where the first slice of the chart will be rendered.  These charts have been further enhanced to allow the direction in which the slices are rendered to be set to clockwise or counter clockwise.
 </p>
 <img src="images/2.6/pieclockwise.png"><br>
-<i>Pie Chart Rotation Direction</i><br>
+<i>Pie Chart Rotation Direction</i><br><br>
 
 <h1><a name="jump_6">Charting Improvements: Chart Background Images</a></h1>
 <p>
 Chart Background images can now be set to not repeat using standard BIRT styles.
 </p>
 <img src="images/2.6/chartimagebackground.png"><br>
-<i>Chart Background Images</i><br>
+<i>Chart Background Images</i><br><br>
 
 <h1><a name="jump_7">Charting Improvements: Sort Locale and Strength</a></h1>
 <p>
 When configuring chart data in the chart builder, the designer can specify sort order and sort column on the category and optional grouping data points.  This allows a chart to be grouped by one field and sorted by another.  While this feature works well, in previous releases of BIRT it was not possible to sort based on a different locale or sort strength.  With this release both options have been added to chart sorting.
 </p>
 <img src="images/2.6/sortstr.png"><br>
-<i>Sort Locale and Strength</i><br>
+<i>Sort Locale and Strength</i><br><br>
 
 
 <h1><a name="jump_8">*Charting Improvements: Outside Axis Range</a></h1>
@@ -122,14 +122,14 @@ When configuring chart data in the chart builder, the designer can specify sort 
 When manually setting a scale for a bar/tube/pyramid/cone chart users can now select the Show values outside Axis range and a visual indicator will be rendered when series values fall outside of the axis range. 
 </p>
 <img src="images/2.6/outsiderange.png"><br>
-<i>Outside Range Indication</i><br>
+<i>Outside Range Indication</i><br><br>
 
 <h1><a name="jump_9">*Charting Improvements: Better Cube Filter Support</a></h1>
 <p>
 When using a data cube as a data source for a chart, filters can be applied to all dimensions and measures defined in the cube.  In prior versions of BIRT filtering was only available to dimensions and measures used in the chart.
 </p>
 <img src="images/2.6/chartcubefiltering.png"><br>
-<i>Chart Cube Filtering</i><br>
+<i>Chart Cube Filtering</i><br><br>
 
 <h1><a name="jump_10">*Charting Improvements: Native PDF Drawing from SVG</a></h1>
 <p>
@@ -151,7 +151,7 @@ If using the report engine API, rendering of PDF files now supports native PDF d
 BIRT provides library support for commonly used report items that need to be shared across many reports.  These items can include such things as logos, data sources, charts, or standard labels.  When incorporating report items provided by a library, the report designer can further customize the specific component for a particular design.  In previous releases of BIRT it was not obvious which items had been modified.  In the 2.6 release of BIRT, the outline view has been enhanced to give a visual indication of report items that are linked to a library which have been further customized by the report designer.  In addition, in the general properties of the item, the user is given an indication as well as a revert button to remove customized properties on the report item.
 </p>
 <img src="images/2.6/override.png"><br>
-<i>Overridden Library Components</i><br>
+<i>Overridden Library Components</i><br><br>
 
 <h1><a name="jump_12">*Viewtime-value-of</a></h1>
 <p>
@@ -178,12 +178,12 @@ This feature can also be used to display pageNumber and totalPage within the rep
 The SQL Query Builder is now directly available without creating a connection profile.  When adding a new data source, the query builder is listed as one of the data sources available.
 </p>
 <img src="images/2.6/newdatasource.png"><br>
-<i>SQB Data Source</i><br>
+<i>SQB Data Source</i><br><br>
 <p>
 After selecting the Query Builder data source you are prompted with a list of available databases.  Once you select the type of database you can then specify the specific driver and connection properties that will be used.
 </p>
 <img src="images/2.6/driver.png"><br>
-<i>SQB Data Source Driver</i><br>
+<i>SQB Data Source Driver</i><br><br>
 <p>
 One of the advantages to using this driver is that the jar location of the driver is a data source property and can be changed using Property Binding or an Event Handler Script.
 </p>
@@ -196,7 +196,7 @@ One of the advantages to using this driver is that the jar location of the drive
 After the data source is created, you create a dataset just like you would with any other BIRT data source.  The editor allows graphic query creation as shown in the following image.
 </p>
 <img src="images/2.6/newdataset.png"><br>
-<i>SQB Data Set</i><br>
+<i>SQB Data Set</i><br><br>
 
 
 <h1><a name="jump_14">*Designer Classpath Configuration</a></h1>
@@ -204,21 +204,21 @@ After the data source is created, you create a dataset just like you would with 
 In prior releases of BIRT, the classloader while in the designer would search all projects within the workspace to locate a class that was used within the design.  This would happen for classes invoked used in expressions or JavaScript event handlers.  Event handlers written in Java where located in this fashion as well.  BIRT now allows you to configure the classpath for the workspace or for the individual project.  To set this preference select the window->preferences->Report Design->Classpath entry.
 </p>
 <img src="images/2.6/classpath.png"><br>
-<i>Designer Classpath</i><br>
+<i>Designer Classpath</i><br><br>
 
 <h1><a name="jump_15">*Sorting Enhancement</a></h1>
 <p>
 BIRT provides sorting on many report items, such as tables, group sections, and crosstabs.  BIRT now features the ability to set the collation strength and locale for the sorter.  This same improvement is available for Charting and is described above.
 </p>
 <img src="images/2.6/sort.png"><br>
-<i>Sort Strength and Locale</i><br>
+<i>Sort Strength and Locale</i><br><br>
 
 <h1><a name="jump_16">*Crosstab Cheat Sheet and Template</a></h1>
 <p>
 A new Report Template and Cheat Sheet are available for creating a cross tab style report.
 </p>
 <img src="images/2.6/xtab.png"><br>
-<i>Crosstab Template and Cheat Sheet</i><br>
+<i>Crosstab Template and Cheat Sheet</i><br><br>
 
 
 <h1><a name="jump_17">Multiple Resource Files</a></h1>
@@ -226,12 +226,12 @@ A new Report Template and Cheat Sheet are available for creating a cross tab sty
 BIRT currently supports localization of many items through the use of a resource file.  These settings are available in the properties editor's localization tab for most report items.  The chart editor provides an externalized text editor for many of the labels used by the chart engine.  Messages from the resource file can also be selected using script.
 </p>
 <img src="images/2.6/localize.png"><br>
-<i>BIRT Localization</i><br>
+<i>BIRT Localization</i><br><br>
 <p>
 In this release of BIRT, localization support has been enhanced to support multiple resource files.  This will allow a designer to share resource elements across multiple reports without having to create a resource file specific for each report.  To add additional resource files, select the report and choose the Resources tab under the properties editor.
 </p>
 <img src="images/2.6/multipleresources.png"><br>
-<i>Multiple Resource Files</i><br>
+<i>Multiple Resource Files</i><br><br>
 
 
 
