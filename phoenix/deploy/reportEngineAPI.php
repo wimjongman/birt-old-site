@@ -26,7 +26,8 @@
 	$html = <<<EOHTML
 
 	
-	<div align=LEFT style="padding-left: 165px">
+<div id="maincontent">
+        <div id="midcolumn">
 	$deployLinksSideItem
 
 
@@ -799,6 +800,7 @@ which in turn reads Image locations from the web.xml file.
 <br><br>
 
 
+</div>
 </div>
 
 EOHTML;
