@@ -54,7 +54,7 @@
 	<a href="http://download.eclipse.org/birt/downloads/index2.3.2.php"><img src="DB2-3-2.jpg"</a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.3.2 series, the release used in many commercial products.
+	Get started with the latest in the BIRT 2.3.2 series.
 	</td>	    
     </tr>		
 	<tr>
