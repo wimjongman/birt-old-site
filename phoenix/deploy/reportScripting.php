@@ -25,8 +25,8 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
-	<div align=LEFT style="padding-left: 185px">
-	$deployLinksSideItem
+<div id="maincontent">
+	<div id="midcolumn">
 
 
 		<h1><a name="top"></a>$pageTitle</h1>
@@ -645,6 +645,9 @@ Additionally you can select the report, click the properties tab, select the res
 workspace before adding the resource.
 
 </p>
+
+</div>
+	$deployLinksSideItem
 </div>
 EOHTML;
 

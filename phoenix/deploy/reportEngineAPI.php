@@ -28,7 +28,7 @@
 	
 <div id="maincontent">
         <div id="midcolumn">
-	$deployLinksSideItem
+
 
 
 		<h1><a name="top"></a>$pageTitle</h1>
@@ -801,6 +801,7 @@ which in turn reads Image locations from the web.xml file.
 
 
 </div>
+	$deployLinksSideItem
 </div>
 
 EOHTML;
