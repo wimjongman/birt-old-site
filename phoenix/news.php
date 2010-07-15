@@ -33,6 +33,22 @@
 			<div class="homeitem">
 			<h3>In the News</h3>
 			<ul>
+				<li>
+					<a href="http://www.birt-exchange.org/org/forum/index.php/blog/6/entry-150-federal-birt-competition/ ">
+						Federal BIRT Competition
+					</a>
+					<span class="dates">
+						07/15/10
+					</span>
+				</li>
+				<li>
+					<a href="http://live.eclipse.org/node/910">
+						New BIRT 2.6 Features in Helios
+					</a>
+					<span class="dates">
+						07/08/10
+					</span>
+				</li>					
 			
 				<li>
 					<a href="http://www.theserverside.com/tt/articles/article.tss?l=IntegratingBIRTwithPHP">
