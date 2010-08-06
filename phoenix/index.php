@@ -372,7 +372,7 @@
                                         <a href="http://www.actuate.com/be/news-events/resources/?articleid=20188">
                                                 BIRT Roadshow 
                                         </a>
-                                         – Introductory and Accelerated Series – Coming to a city near you
+                                         - Introductory and Accelerated Series - Coming to a city near you
                                         <span class="dates">
                                                 08/06/10
                                         </span>
