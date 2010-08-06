@@ -369,6 +369,15 @@
                         <h6>What's New</h6>
                         <ul>
                                 <li>
+                                        <a href="http://www.actuate.com/be/news-events/resources/?articleid=20188">
+                                                BIRT Roadshow 
+                                        </a>
+                                         – Introductory and Accelerated Series – Coming to a city near you
+                                        <span class="dates">
+                                                08/06/10
+                                        </span>
+                                </li>                         
+                                <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 2.6
                                         </a>
