@@ -100,7 +100,7 @@ The <a href="deploy">BIRT Integration</a> pages are designed to explain how the 
 <table>
 <tr>
 <td>
-<img src="BIRT2_2ndEd_frontsmall.jpg">
+<img src="BIRT1_2ndEd_frontsmall.jpg">
 </td>
 <td>
 BIRT: A Field Guide to Reporting presents information about how to develop and customize reports of progressive complexity using BIRT Report Designer. This tool was designed from the ground up for Web applications and uses a Web page-oriented design metaphor in contrast to older banded report writers that were developed before the advent of the Internet. This unique approach to report creation makes BIRT an approachable and effective tool for developers of all levels.
@@ -110,7 +110,7 @@ BIRT: A Field Guide to Reporting presents information about how to develop and c
 </tr>
 <tr>
 <td>
-<img src="BIRT1_2ndEd_frontsmall.jpg">
+<img src="BIRT2_2ndEd_frontsmall.jpg">
 </td>
 <td>
 This book describes the key components of BIRT architecture, applications, and engines, including installing, deploying, and troubleshooting the Reporting and Charting engines in a J2EE application server environment.
