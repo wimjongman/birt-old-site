@@ -59,7 +59,7 @@
     </tr>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5-2.jpg"></a>
 	</td>
 	<td>
 	Get started with the latest in the BIRT 2.5.2 series, the release used in many commercial products.
@@ -67,10 +67,10 @@
 	</tr>
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6-1.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.6.
+	Get started with the newest major release, BIRT 2.6.1.
 	</td>
 	</tr>
 
@@ -369,6 +369,15 @@
                         <h6>What's New</h6>
                         <ul>
                                 <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 2.6.1
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                09/24/10
+                                        </span>
+                                </li>                        
+                                <li>
                                         <a href="http://www.actuate.com/be/news-events/resources/?articleid=20188">
                                                 BIRT Roadshow 
                                         </a>
@@ -441,16 +450,7 @@
                                                 09/26/09
                                         </span>
                                 </li>
-                                <li>
-                                        <a href="http://download.eclipse.org/birt/downloads/">
-                                                BIRT 2.5
-                                        </a>
-                                         has been officially released.  To discover what is available, see the
-                                         <a href="project/notable2.5.php">Notable Features - BIRT 2.5</a>.
-                                        <span class="dates">
-                                                06/24/09
-                                        </span>
-                                </li>
+
 		</div>
 	</div>
 </div>

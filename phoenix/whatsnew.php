@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 		
 			<ul>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 2.6.1
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                09/24/10
+                                        </span>
+                                </li>  			
 			                    <li>
                                         <a href="http://www.actuate.com/be/news-events/resources/?articleid=20188">
                                                 BIRT Roadshow 
