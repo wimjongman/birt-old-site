@@ -48,23 +48,7 @@
 	with your Java/J2EE application to produce compelling reports.
 	</p>
 	<p>	
-	<table>
-    <tr>
-	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.3.2.php"><img src="DB2-3-2.jpg"</a>
-	</td>
-	<td>
-	Get started with the latest in the BIRT 2.3.2 series.
-	</td>	    
-    </tr>		
-	<tr>
-	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5-2.jpg"></a>
-	</td>
-	<td>
-	Get started with the latest in the BIRT 2.5.2 series, the release used in many commercial products.
-	</td>
-	</tr>
+	<table>		
 	<tr>
 	<td>
 	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6-1.jpg"></a>
@@ -72,7 +56,16 @@
 	<td>
 	Get started with the newest major release, BIRT 2.6.1.
 	</td>
+	</tr>	
+	<tr>
+	<td>
+	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5-2.jpg"></a>
+	</td>
+	<td>
+	Get started with the latest in the BIRT 2.5.2 series.
+	</td>
 	</tr>
+
 
 	<tr>
 	<td>
