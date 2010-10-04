@@ -62,7 +62,7 @@
 	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.5.2 series.
+	Get started with the latest in the BIRT 2.5 series.
 	</td>
 	</tr>
 
