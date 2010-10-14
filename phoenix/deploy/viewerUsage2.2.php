@@ -619,7 +619,7 @@ Additional Jar files that are used by deployed reports can be placed in the WEB-
 </p>
 <h2><a name="tags"></a>Viewer Tag Library</h2>
 <p>
-The Web Viewer now contains a tag library that can be used to customize the behavior of the Viewer.  This tag library can be deployed by either deploying the viewer as normal or by using the BIRT Web Deployment project wizard.  In addition, if you desire to have BIRT deployed in one context and include the tag library in a separate context this can be done by copying the birt.tld file to your WEB-INF\tlds directory and copying coreapi.jar, modelapi,jar, viewerservlets.jar, engineapi.jar,  and com.ibm.icu_3.6.1v20070417.jar from the Viewer libs directory to the new context/web-inf/lib directory.  Add the following reference to your web.xml
+The Web Viewer now contains a tag library that can be used to customize the behavior of the Viewer.  This tag library can be deployed by either deploying the viewer as normal or by using the BIRT Web Deployment project wizard.  In addition, if you desire to have BIRT deployed in one context and include the tag library in a separate context this can be done by copying the birt.tld file to your WEB-INF\tlds directory and copying coreapi.jar, modelapi,jar, viewerservlets.jar, engineapi.jar,  and com.ibm.icu_version.jar from the Viewer libs directory to the new context/web-inf/lib directory.  Add the following reference to your web.xml
 <br>
 <pre>
 	&lt;jsp-config>
