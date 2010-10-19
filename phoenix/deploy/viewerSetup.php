@@ -145,7 +145,7 @@
 			</li>
 		
 		<p>
-			The report should run and appear in your browser.  See <a href="viewerUsage.php">Viewer Usage</a> for information on the Viewer Operations.
+			The report should run and appear in your browser.  See <a href="viewerUsageMain.php">Viewer Usage</a> for information on the Viewer Operations.
 		</p>
 		</ul>
 

@@ -7,8 +7,7 @@
 
 $linkArray = array(
 	array("/birt/phoenix/deploy/viewerSetup.php", "Viewer Setup"),
-	array("/birt/phoenix/deploy/viewerUsage.php", "2.1.x Viewer Usage"),
-	array("/birt/phoenix/deploy/viewerUsage2.2.php", "2.2.x Viewer Usage"),
+	array("/birt/phoenix/deploy/viewerUsageMain.php", "Viewer Usage"),
 	array("/birt/phoenix/deploy/usingPHP.php", "Using PHP"),
 	array("/birt/phoenix/deploy/reportScripting.php", "Report Scripting"),
 	array("/birt/phoenix/deploy/designEngineAPI.php", "Design Engine API"),
