@@ -69,9 +69,6 @@
 			<li>
 				As a plugin in existing RCP applications.
 			</li>
-			<li>
-				As a way to run a report using a URL. This option provides a simple way to integrate BIRT reporting into applications build using non-Java technology such as Perl, PHP or even static web pages.
-			</li>
 		</ul>
 		<p>
 		     Web Viewer Links
@@ -81,16 +78,13 @@
 				<a href="/birt/phoenix/deploy/viewerSetup.php">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.
 			</li>
 			<li>
-				<a href="/birt/phoenix/deploy/viewerUsage.php">Using the BIRT Viewer BIRT 2.1.3</a> and <a href="/birt/phoenix/deploy/viewerUsage2.2.php">Using the BIRT Viewer BIRT 2.2</a> discuss the viewer operation URLs, parameters and settings.
+				<a href="/birt/phoenix/deploy/viewerUsageMain.php">Using the BIRT Viewer</a> discusses the viewer operation URLs, parameters and settings.
 			</li>
 			<li>
-				<a href="/birt/phoenix/deploy/usingPHP.php">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. Also briefly summarizes how to use PHP to generate custom report designs.
+				<a href="/birt/phoenix/deploy/usingPHP.php">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP. 
 			</li>
 			<li>
-				Viewer Pages discusses the JSP that make up the viewer. (Not yet available.)
-			</li>
-			<li>
-				Viewer Tag Lirary. (Not yet available.)
+				<a href="/birt/phoenix/deploy/viewerUsageMain.php#tags">Viewer Tag Lirary.</a>  discusses how to integrate BIRT using the Tag Libraries.
 			</li>			
 			<li>
 				The viewer code is available in the BIRT CVS repository in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project"> org.eclipse.birt.report.viewer</a> project. See the <a href="/birt/phoenix/build/buildInstructions.php">BIRT build instructions</a> for information on how to access CVS and build the viewer.
