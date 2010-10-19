@@ -158,6 +158,9 @@
 				Report Item Extension API
 				<br>
 				The BIRT model is extensible; you can add new report items. Use this API to include design-time, run-time or presentation-time behavior.
+				A two part tutuorial is available:
+				<a href="http://www.eclipse.org/articles/article.php?file=Article-BIRT-ExtensionTutorial1/index.html">Part 1</a>
+				<a href="http://www.eclipse.org/articles/article.php?file=Article-BIRT-ExtensionTutorial2/index.html">Part 2</a>
 			</li>
 			
 		</ul>
