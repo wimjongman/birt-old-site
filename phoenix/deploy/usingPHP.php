@@ -57,7 +57,7 @@
 		</p><p>	
 			Another option is to host BIRT on its own app server, such
 			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsageMain.php">BIRT Viewer URLs</a> to work
-			with BIRT.
+			with BIRT.  The rest of this page discusses this option.
 		</p>
 		<p>
 			The first step is to <a href="/birt/phoenix/deploy/viewerSetup.php">install Tomcat and the BIRT
@@ -85,15 +85,13 @@
 			configuration variable in the BIRT viewer web app's <code>web.xml </code>file. Be sure to
 			encode the file name for use in a URL.
 		</p>
-		<p>
-			That's all there is to it!
-		</p>
+
 
 		<h2><a name="passing_parameters">Passing Parameters</a></h2>
 		<p>
 			Suppose your report takes parameters. The test report above has one parameter
 			called <code>sample</code>. We simply  add them to the report URL in the form
-			described in <a href="/birt/phoenix/deploy/viewerUsage.php">Using the Report Viewer</a>.
+			described in <a href="/birt/phoenix/deploy/viewerUsageMain.php">Using the Report Viewer</a>.
 		</p>
 		<blockquote>
 			\$fname = "c:/temp/test.rptdesign";<br>
@@ -128,47 +126,6 @@
 			<code>frameset</code> URL.
 		</p>
 
-
-		<h2><a name="dynamic">Generating Reports Dynamically</a></h2>
-		<p>
-			Finally, PHP provides one additional BIRT integration option: the ability to generate report designs dynamically for a specific task. For example, suppose you have a bug tracking system, and you'd like your user to create their own reports via the web. You can ask the user for the columns to display, then use PHP to create a BIRT report design customized to display those columns. PHP is ideal for this: it allows us to insert scripting directly into HTML. Since a BIRT design is XML, and XML is close enough to HTML for PHP, we can "trick" PHP into generating a BIRT report design instead of an HTML page.
-		</p>
-		<p>
-			To generate a report design, do the following:
-		</p>
-		<ul class="midlist">
-			<li>
-				Create a BIRT report design typical of the kind of report you want to create.
-			</li>
-			<li>
-				Create a PHP template file that contains this design. Insert the contents of the design file in place of the HTML you'd usually put into a PHP file.
-			</li>
-			<li>
-				Redirect PHP's output from the template file into a report design file.
-			</li>
-			<li>
-				Use PHP to generate BIRT XML for the table headings and cells the user wants. Use your report design as a template for what is needed. Consult the ROM spec for details on various elements and properties.
-			</li>
-			<li>
-				Within the data set in your template, create an SQL query that fetches the required columns. (Works with other data set types as well.)
-			</li>
-			<li>
-				Use the code above to redirect the browser to run that report using the BIRT viewer.
-			</li>
-		</ul>
-		<p>
-			The following PHP code  redirects the output of a PHP page, <code>template.inc</code>,
-			into a report design called <code>temp.rptdesign</code>:
-		</p>
-		<blockquote>
-			ob_start( );<br>
-			require "template.inc";<br>
-			\$page = ob_get_contents( );<br>
-			ob_end_clean( );<br>
-			\$fw = fopen( "temp.rptdesign", "w" );<br>
-			fputs( \$fw, \$page, strlen( \$page ) );<br>
-			fclose( \$fw );
-		</blockquote>
 
 	</div>
 	$deployLinksSideItem
