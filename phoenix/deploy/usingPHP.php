@@ -45,23 +45,18 @@
 		<p>
 			BIRT is designed to be integrated into a J2EE web application. But, what if your
 			chosen development environment is something else, such as PHP? Can you still use
-			BIRT? Yes, you can.&nbsp; This page discusses how to use BIRT from PHP, but the techniques apply to
-			any server-side scripting environment.
+			BIRT? Yes, you can.&nbsp; This page discusses how to use BIRT from PHP.
 		</p>
-		<p>
-			It turns out that the Eclipse website itself uses PHP for its web infrastructure.
-			This note explains what the BIRT team discovers as we figure out how to
-			integrate BIRT reporting with the PHP website infrastructure.
-		</p>
+
 
 		<h2><a name="setup"></a>Setup</h2>
 		<p>
 			PHP has the ability to call Java classes using a PHP/Java Bridge. So, one integration option is to have
-			the PHP engine call BIRT directly. The scenario is discussed in an article <a href="http://www.theserverside.com/tt/articles/article.tss?l=IntegratingBIRTwithPHP">here.</a>  The examples associated with the
+			the PHP engine call the BIRT BIRT directly. The scenario is discussed in an article <a href="http://www.theserverside.com/tt/articles/article.tss?l=IntegratingBIRTwithPHP">here.</a>  The examples associated with the
 			article are posted <a href=" http://www.birt-exchange.com/devshare/deploying-birt-reports/743-calling-birt-from-php/">here.</a> 
 		</p><p>	
 			Another option is to host BIRT on its own app server, such
-			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsage.php">BIRT Viewer URLs</a> to work
+			as Tomcat, and use the <a href="/birt/phoenix/deploy/viewerUsageMain.php">BIRT Viewer URLs</a> to work
 			with BIRT.
 		</p>
 		<p>
@@ -85,7 +80,8 @@
 		</blockquote
 		<p>
 			The name of the report is given as an absolute path, but a relative path is also
-			allowed once you set up the <code>BIRT_VIEWER_REPORT_ROOT</code>
+			allowed once you set up the <code>BIRT_VIEWER_WORKING_FOLDER
+</code>
 			configuration variable in the BIRT viewer web app's <code>web.xml </code>file. Be sure to
 			encode the file name for use in a URL.
 		</p>
