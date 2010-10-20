@@ -38,13 +38,7 @@
 	$html = <<<EOHTML
 <div id="maincontent">
 	<div id="midcolumn">	
-		<table>
-			<COLGROUP>
-				<COL width="2%">
-				<COL width="98%">
-		<tr>
-			<td></td>
-			<td>
+
 	
 	<h1>Eclipse Chart Engine</h1>
 	

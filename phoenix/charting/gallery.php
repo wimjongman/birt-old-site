@@ -36,14 +36,8 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	
-		<table>
-			<COLGROUP>
-				<COL width="2%">
-				<COL width="98%">
-		<tr>
-			<td></td>
-			<td>
+<div id="maincontent">
+	<div id="midcolumn">	
 	
 	<h1>Chart Gallery</h1>
 	<h2><a name="bar">BAR Charts</a></h2>
@@ -100,6 +94,8 @@
 <img src="images/combo2.png">
 <br><br>
 
+</div>
+</div>
 
 
 EOHTML;
