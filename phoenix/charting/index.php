@@ -36,7 +36,8 @@
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	
+<div id="maincontent">
+	<div id="midcolumn">	
 		<table>
 			<COLGROUP>
 				<COL width="2%">
@@ -253,7 +254,8 @@ The Chart engine also supports flipping the orienation of charts that contain ax
 		<li>Links to BPS on wiki</li>
 	</ul>
 </p>
-
+</div>
+</div>
 
 EOHTML;
 
