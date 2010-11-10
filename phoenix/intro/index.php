@@ -38,8 +38,7 @@
 		</p>
 		<p></p>
 		<p>
-			The BIRT Project currently supports two releases 2.3.2 (Included in many comercial applications) and 2.5 (Latest). We encourage you to download
-			BIRT, try it, and give us your feedback though the <a href="../community.php">newsgroups and Bugzilla</a>.
+			We encourage you to download BIRT, try it, and give us your feedback though the <a href="../community.php">newsgroups and Bugzilla</a>.
 		</p>
 		<p></p>
 		<p>
