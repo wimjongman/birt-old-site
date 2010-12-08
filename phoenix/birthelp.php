@@ -113,7 +113,7 @@ BIRT: A Field Guide to Reporting presents information about how to develop and c
 <img src="BIRT2_2ndEd_frontsmall.jpg">
 </td>
 <td>
-This book describes the key components of BIRT architecture, applications, and engines, including installing, deploying, and troubleshooting the Reporting and Charting engines in a J2EE application server environment.
+This book describes the key components of BIRT architecture, applications, and engines, including installing, deploying, and troubleshooting the Reporting and Charting engines in a Java EE application server environment.
 <br>
 <i>ISBN: 0321580303</i>
 </td>

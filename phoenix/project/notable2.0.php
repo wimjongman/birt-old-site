@@ -201,7 +201,7 @@
 
 <h1><a name="jump_16">Passing of External Object to Custom Data Sources</a></h1>
 
-<p>Often the BIRT engine is embedded in or is part of an existing J2EE application.  The ODA layer, which is responsible for data access, occasionally needs access to objects in the Context of the encapsulating application.  This might include things like security credentials, connection handles, or parameter objects.  To accommodate this requirement, BIRT 2.0 has added a Context Object within the ODA layer, which can be passed in from the external application.  This object can take many forms and can be used for all of the items mentioned above.</p>
+<p>Often the BIRT engine is embedded in or is part of an existing Java EE application.  The ODA layer, which is responsible for data access, occasionally needs access to objects in the Context of the encapsulating application.  This might include things like security credentials, connection handles, or parameter objects.  To accommodate this requirement, BIRT 2.0 has added a Context Object within the ODA layer, which can be passed in from the external application.  This object can take many forms and can be used for all of the items mentioned above.</p>
 
 <h1><a name="jump_17">Stored Procedures</a></h1>
 

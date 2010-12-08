@@ -33,7 +33,7 @@
 		<blockquote>
 			<ul>
 				<li><a href="#integration">Integration Points</a></li>
-				<li><a href="#viewer">Example Report Viewer (J2EE App/Plugin)</a></li>
+				<li><a href="#viewer">Example Report Viewer (Java EE App/Plugin)</a></li>
 				<li><a href="#designAPI">Design Engine API</a></li>
 				<li><a href="#reportAPI">Report Engine API</a></li>
 				<li><a href="#chartAPI">Chart Engine API</a></li>
@@ -44,14 +44,14 @@
 
 		<h2><a name="integration"></a>Integration Points</h2>
 		<p>
-			BIRT supplies several APIs and an Example J2EE application for generating and viewing reports.  The major APIs
+			BIRT supplies several APIs and an Example Java EE application for generating and viewing reports.  The major APIs
 			are the Design Engine API(DE API), Report Engine API(RE API) and the Chart Engine API (CE API).  These pages describe the various APIs and illustrate examples on their usage.  In addition
 			to the APIs, BIRT supports scripting using Rhino within report designs.  A primer is available to get started scripting.
 		</p>
 
 
 
-		<h2><a name="viewer"></a>Example Report Viewer (J2EE App/Plugin)</h2>
+		<h2><a name="viewer"></a>Example Report Viewer (Java EE App/Plugin)</h2>
 		<p>
 			The BIRT Viewer can be used in a variety of ways:<br>
 			Note that the BIRT Viewer requires that cookies be enabled.

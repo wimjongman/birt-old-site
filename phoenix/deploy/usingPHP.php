@@ -43,7 +43,7 @@
 
 		<h2><a name="motivation"></a>Motivation</h2>
 		<p>
-			BIRT is designed to be integrated into a J2EE web application. But, what if your
+			BIRT is designed to be integrated into a Java EE web application. But, what if your
 			chosen development environment is something else, such as PHP? Can you still use
 			BIRT? Yes, you can.&nbsp; This page discusses how to use BIRT from PHP.
 		</p>

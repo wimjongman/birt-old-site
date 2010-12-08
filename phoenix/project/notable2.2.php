@@ -129,7 +129,7 @@ After completing the mapping, standard Data Set features such as filtering, sort
 <i>Birt Web Project Wizard</i>
 
 <p>
-Using this project type allows the traditional benefits of the J2EE perspective to be used when deploying the BIRT Viewer such as adding servers, publishing, and debugging the application.
+Using this project type allows the traditional benefits of the Java EE perspective to be used when deploying the BIRT Viewer such as adding servers, publishing, and debugging the application.
 </p>
 <img src="images/2.2/webprojjboss.png"><br>
 <i>Example Project</i>

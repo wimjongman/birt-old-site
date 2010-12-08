@@ -50,7 +50,7 @@ To review the projects slated for the 2.2 release, see the draft project plan, w
 <center><i>Birt Web Project Wizard</i></center>
 
 <p>
-Using this project type allows the traditional benefits of the J2EE perspective to be used when deploying the BIRT Viewer, such as adding servers, publishing, and debugging the application.  Future milestones will expand on this integration to add BIRT Tag libraries to customize parameter entry and report viewing capabilities.
+Using this project type allows the traditional benefits of the Java EE perspective to be used when deploying the BIRT Viewer, such as adding servers, publishing, and debugging the application.  Future milestones will expand on this integration to add BIRT Tag libraries to customize parameter entry and report viewing capabilities.
 </p>
 <img src="images/2.2/webprojjboss.png"><br>
 <center><i>Example Project</i></center>

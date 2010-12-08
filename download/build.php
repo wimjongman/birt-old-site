@@ -277,7 +277,7 @@ the additional perspectives in the standard Eclipse platform.</p>
 
 <h1><a name="engine">Report Engine</a></h1>
 
-<p>Install the report engine in your J2EE application server to run
+<p>Install the report engine in your Java EE application server to run
 BIRT reports over the web. A preview engine is included with the
 Report Designer download.</p>
 

@@ -46,7 +46,7 @@
 <p>
 <h2><a name="overview"></a>Overview</h2>
 
-<p >This Viewer is an AJAX based J2EE application that illustrates using the BIRT engine to generate and render
+<p >This Viewer is an AJAX based Java EE application that illustrates using the BIRT engine to generate and render
 report content.</p>
 
 

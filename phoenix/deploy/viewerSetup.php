@@ -37,14 +37,14 @@
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
 				<li><a href="#testing">Testing a More Complex Report</a></li>
 				<li><a href="#jboss">Deploying to JBoss</a></li>
-				<li><a href="#other">Other J2EE Servers</a></li>
+				<li><a href="#other">Other Java EE Servers</a></li>
 	
 			</ul>
 		</blockquote>
 
 		<h2><a name="using"></a>Using Tomcat</h2>
 		<p>
-			This page explains how to deploy the BIRT viewer to a J2EE container.
+			This page explains how to deploy the BIRT viewer to a Java EE container.
 			We'll use <a href="http://jakarta.apache.org/tomcat/">Apache Tomcat</a>, since
 			it is open source and readily available. The same concepts,  perhaps
 			with different details, apply to other app servers. These instructions assume you'll
@@ -172,7 +172,7 @@
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report.
 			</li>
 		</ul>
-		<h2><a name="other">Other J2EE Servers</a></h2>
+		<h2><a name="other">Other Java EE Servers</a></h2>
 		<p>We are currently working on instructions for other application servers.</p>
 		<p>If you are deploying to Websphere please see this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=282448">bug.</a>
 	</div>

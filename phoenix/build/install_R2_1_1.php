@@ -36,7 +36,7 @@
 				<li><a href="#prototype">prototype.js</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
-				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
+				<li><a href="#j2ee">Deploying to Java EE Server</a></li>
 				<li><a href="#langpack">Installing BIRT Language Packs on Windows</a></li>
 				<li><a href="#common">Common Problems</a></li>
 
@@ -214,12 +214,12 @@ default location, this is "C:\program files\eclipse\plugins".
 
 
 
-<h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
+<h2><a name="j2ee"></a>Deploying to Java EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <div class="homeitem3col">
 <h3>Birt 2.0.2 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.0.2 Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.0.2 Runtime (Java EE Application Server Deployment),
  The iText and prototype files will need to be copied to the birt-runtime/Web Viewer Example directory structure.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /Web Viewer Example/plugins/org.eclipse.birt.report.engine.emitter.pdf/lib.
  <li>Copy <a href="http://dev.conio.net/repos/prototype/dist/prototype.js">prototype.js v1.4.0</a> to /Web Viewer Example/ajax/lib.
@@ -229,7 +229,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <div class="homeitem3col">
 <h3>Birt 2.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1 Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1 Runtime (Java EE Application Server Deployment),
  The iText file will need to be copied to the birt-runtime/WebViewerExample directory structure.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  </ul>
@@ -238,7 +238,7 @@ Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Vi
 <div class="homeitem3col">
 <h3>Birt 2.1.1 Runtime Note: </h3>
 <ul>
- <li>If you are installing the BIRT 2.1.1. or Later Runtime (J2EE Application Server Deployment),
+ <li>If you are installing the BIRT 2.1.1. or Later Runtime (Java EE Application Server Deployment),
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/itext-1.3.jar">itext-1.3.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
  <li>Copy <a href="http://prdownloads.sourceforge.net/itext/iTextAsian.jar">iTextAsian.jar</a> to /WebViewerExample/WEB-INF/platform/plugins/com.lowagie.itext/lib.
 

@@ -763,7 +763,7 @@ to extract report data as a CSV formatted file.
 <h4>Pass-through of external context objects</h4>
 <blockquote>
 The BIRT engine is often embedded as part of a middle-tier application server, where the BIRT
-components are added to the mix of various J2EE components. During report run-time, some of these
+components are added to the mix of various Java EE components. During report run-time, some of these
 other components may instantiate context objects, which are served to the BIRT engine for its custom
 data source to use. The BIRT engine will thus need to pass through such external Java objects into
 the BIRT data source components for consumption. These context objects are assumed to be dynamically

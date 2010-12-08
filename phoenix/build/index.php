@@ -29,7 +29,7 @@
 				<li><a href="#designer">Framework Designer Install</a></li>
 				<li><a href="#drivers">JDBC Drivers</a></li>
 				<li><a href="#updating">Updating a BIRT Installation</a></li>
-				<li><a href="#j2ee">Deploying to J2EE Server</a></li>
+				<li><a href="#j2ee">Deploying to Java EE Server</a></li>
 				<li><a href="#langpack">Installing BIRT Language Packs on Windows</a></li>
 				<li><a href="#common">Common Problems</a></li>
 
@@ -114,7 +114,7 @@ default location, this is "C:\program files\eclipse\plugins".
 </ul>
 
 
-<h2><a name="j2ee"></a>Deploying to J2EE Server</h2>
+<h2><a name="j2ee"></a>Deploying to Java EE Server</h2>
 Please see <a href="/birt/phoenix/deploy/viewerSetup.php">Setting up the BIRT Viewer</a>
 <br>
 

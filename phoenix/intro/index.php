@@ -31,7 +31,7 @@
 		<h2><a name="introduction"></a>Report Introduction</h2>
 		<p>
 			BIRT is an Eclipse-based open source reporting system for web applications,
-			especially those based on Java and J2EE. BIRT has two main components: a report
+			especially those based on Java and Java EE. BIRT has two main components: a report
 			designer based on Eclipse, and a runtime component that you can add to your
 			app server.
 			BIRT also offers a charting engine that lets you add charts to your own application.
