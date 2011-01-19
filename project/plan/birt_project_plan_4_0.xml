@@ -50,7 +50,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		<html:p><html:b>BIRT 4.0 Reference Stack for JDK 1.5</html:b></html:p>
 		<html:ul>
   		<html:li>Java 2 platform Java Development Kit (JDK) 1.5</html:li>
-  		<html:li>Eclipse Platform Runtime Binary 3.7</html:li>
+  		<html:li>Eclipse Platform Runtime Binary 3.7, 4.1</html:li>
   		<html:li>Graphical Editor Framework (GEF) Runtime 3.7</html:li>
   		<html:li>Eclipse Modeling Framework (EMF) 2.7</html:li>
   		<html:li>Data Tools Platform Project 1.9 (DTP)</html:li>
@@ -61,11 +61,11 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 
 		<html:ul>
   		<html:li>Java 2 platform Java Development Kit (JDK) 1.6 </html:li>
-  		<html:li>Eclipse Platform Runtime Binary &lt;TBD&gt; </html:li>
-  		<html:li>Graphical Editor Framework (GEF) Runtime &lt;TBD&gt; </html:li>
-  		<html:li>Eclipse Modeling Framework (EMF) &lt;TBD&gt; </html:li>
-  		<html:li>Data Tools Platform Project (DTP) &lt;TBD&gt; </html:li>
-  		<html:li>Web Tools Project (WTP) &lt;TBD&gt;</html:li>
+  		<html:li>Eclipse Platform Runtime Binary 3.7, 4.1 </html:li>
+  		<html:li>Graphical Editor Framework (GEF) Runtime 3.7 </html:li>
+  		<html:li>Eclipse Modeling Framework (EMF) 2.7 </html:li>
+  		<html:li>Data Tools Platform Project (DTP) 1.9 </html:li>
+  		<html:li>Web Tools Project (WTP) 3.3</html:li>
 		</html:ul>
 		
 
@@ -91,22 +91,28 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="453"><html:b>Java 2 Platform</html:b></html:td>
 		    </html:tr>
 		    <html:tr>
+		      <html:td width="205">Microsoft Windows 7</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
+		    </html:tr>
+		    <html:tr>
 		      <html:td width="205">Microsoft Windows XP</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td>Microsoft Windows Vista</html:td>
 		      <html:td>Intel x86</html:td>
 		      <html:td>Win32</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">
@@ -115,7 +121,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      </html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>
@@ -135,35 +141,41 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="453"><html:b>Java 2 Platform</html:b></html:td>
 		    </html:tr>
 		    <html:tr>
+		      <html:td width="205">Microsoft Windows 7</html:td>
+		      <html:td width="76">Intel x86</html:td>
+		      <html:td width="59">Win32*</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
+		    </html:tr>
+		    <html:tr>
 		      <html:td width="205">Microsoft Windows XP</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Microsoft Windows Server 2003</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td>Microsoft Windows Vista</html:td>
 		      <html:td>Intel x86</html:td>
 		      <html:td>Win32*</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">Red Hat Enterprise Linux WS 4.0, 5.0<html:br />
       		  Red Hat Enterprise Linux AS 4.0, 5.0</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">SUSE Linux Enterprise Server 9</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">YaST*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 5.0, 6.0</html:td>
+		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>
