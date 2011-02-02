@@ -371,10 +371,10 @@
                                         </span>
                                 </li>                        
                                 <li>
-                                        <a href="http://www.actuate.com/be/news-events/resources/?articleid=20188">
-                                                BIRT Roadshow 
+                                        <a href="http://www.birt-exchange.com/birt-roadshows">
+                                               Introductory BIRT Roadshow 
                                         </a>
-                                         - Introductory and Accelerated Series - Coming to a city near you
+                                         - FREE Software & Training
                                         <span class="dates">
                                                 08/06/10
                                         </span>
