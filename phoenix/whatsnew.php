@@ -35,6 +35,15 @@
 		
 			<ul>
                                 <li>
+                                        <a href="http://www.birt-exchange.com/birt-roadshows">
+                                               Introductory BIRT Roadshow 
+                                        </a>
+                                         - FREE Software & Training
+                                        <span class="dates">
+                                                02/02/11
+                                        </span>
+                                </li> 			
+                                <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 2.6.1
                                         </a>
@@ -43,15 +52,6 @@
                                                 09/24/10
                                         </span>
                                 </li>  			
-                                <li>
-                                        <a href="http://www.birt-exchange.com/birt-roadshows">
-                                               Introductory BIRT Roadshow 
-                                        </a>
-                                         - FREE Software & Training
-                                        <span class="dates">
-                                                08/06/10
-                                        </span>
-                                </li>  
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 2.6
