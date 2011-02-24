@@ -361,15 +361,7 @@
                 
                         <h6>What's New</h6>
                         <ul>
-                                <li>
-                                        <a href="http://download.eclipse.org/birt/downloads/">
-                                                BIRT 2.6.2
-                                        </a>
-                                         has been officially released. 
-                                        <span class="dates">
-                                                02/24/11
-                                        </span>
-                                </li>                          
+                         
                                 <li>
                                         <a href="http://www.birt-exchange.com/birt-roadshows">
                                                Introductory BIRT Roadshow 
