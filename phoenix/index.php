@@ -51,10 +51,10 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6-1.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.6.2.
+	Get started with the newest major release, BIRT 2.6.1.
 	</td>
 	</tr>	
 	<tr>
