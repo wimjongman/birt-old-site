@@ -209,6 +209,14 @@
 			<ul>
 			
 				<li>
+					<a href="http://birtworld.blogspot.com/2011/03/birt-262-enhancements.html">
+						BIRT 2.6.2 Enhancements
+					</a>
+					<span class="dates">
+						03/04/11
+					</span>
+				</li>
+				<li>
 					<a href="http://www.birt-exchange.org/org/forum/index.php/blog/6/entry-150-federal-birt-competition/ ">
 						Federal BIRT Competition
 					</a>
