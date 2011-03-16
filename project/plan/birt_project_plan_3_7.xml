@@ -326,6 +326,14 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		 <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=334326%2C334326"></p:proposed>
      </p:theme>
 
+     <p:theme name="Support for Hadoop 'Big Data'">
+        <p:description>
+        	<html:div>Apache Hadoop is a popular, open source Java framework for processing and querying vast amounts of data. This theme aims to provide support for Hadoop data sources. 
+        	</html:div>
+        </p:description>
+		 <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=339960%2C339960"></p:proposed>
+     </p:theme>
+
      <p:theme name="Misc">
         <p:description>
         	<html:div>This theme aims to address the misc. enhancement requests and bugs listed below.
