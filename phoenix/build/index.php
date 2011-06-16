@@ -45,7 +45,7 @@ BIRT can be downloaded and installed in different ways.<br>
 <ul>
 <li>The complete BIRT designer or RCP Designer can be installed by downloading the required package <a href="http://download.eclipse.org/birt/downloads">here</a>.
 </li>
-<li>or by downloading the <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-reporting-galileo-win32.zip">Galileo Eclipse IDE for Java and Report Developers Package</a>   
+<li>or by downloading the <a href="http://www.eclipse.org/downloads/">Eclipse IDE for Java and Report Developers Package</a>   
 </li>
 <li>or through the update manager as described <a href="http://download.eclipse.org/birt/downloads/updmaninst2.2.php">here</a>.
 <br><a href="http://wiki.eclipse.org/BIRT_Update_Site_URL">Update Manager URLs</a>
@@ -82,8 +82,8 @@ each, is listed on the specific build's download page. Unzip each package into y
 BIRT framework and unzip the contents to any directory.
 <ul>
 <li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse\links).
-<li>Within this directory create a file with a unique name like birt.2.3.link.
-<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt2.3)
+<li>Within this directory create a file with a unique name like birt.link.
+<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt)
 </ul>
 </p>
 
