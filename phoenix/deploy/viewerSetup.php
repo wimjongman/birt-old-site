@@ -112,7 +112,7 @@
 		</p>
 		<p>		
 <div class="homeitem3col">
-<h3>Birt JDBC Driver Location Note: </h3>
+<h3>BIRT JDBC Driver Location Note: </h3>
 <ul>
  If you are installing BIRT 2 series the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers directory.<br>
  If you are installing BIRT 3.7 or higher, the jdbc driver should be placed in the WebViewer's classpath (eg WEB-INF/lib).

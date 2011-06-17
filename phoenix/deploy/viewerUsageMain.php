@@ -603,6 +603,13 @@ The Example Web Viewer has the following directory structure.
 
 <img src="viewerarch.PNG" /><br/><br/></p>
 <p>
+<div class="homeitem3col">
+<h3>BIRT POJO Viewer: </h3>
+<ul>
+  If you are installing BIRT 3.7 or higher, The platform, configuration, and plugin directories has been removed from the Viewer.
+  See the <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a> for more details.
+ </ul>
+</div>
 Most of the directories are configurable using variables set within web.xml.  The WEB-INF/platform, webcontent, and WEB-INF/lib directories are exceptions.
 </p>
 <p>
