@@ -630,7 +630,6 @@ If breakpoints exist they will halt the code when the table or the row calls you
 To deploy the Java Event Handlers you can place the jar containing the event handler in the SCRIPTLIB directory of the web application.
 The SCRIPTLIB directory is defined in the web.xml of the Viewer application.  By default this
 directory is BIRTViewer/scriptlib.  To change this directory set the BIRT_VIEWER_SCRIPTLIB_DIR entry in the web.xml.
-</p>
 
 <pre style="font-size: 10pt">
 &lt;context-param&gt;
@@ -639,6 +638,15 @@ directory is BIRTViewer/scriptlib.  To change this directory set the BIRT_VIEWER
 &lt;/context-param&gt;
 </pre>
 <p>
+<p>
+<div class="homeitem3col">
+<h3>BIRT POJO Viewer Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or higher, the event handler jar can be placed in the WebViewer's classpath (eg WEB-INF/lib).
+ </ul>
+</div>
+</p>
+</p>
 If you are testing the event handler in the designer add the Java project that contains the event handler to the workspace which contains your BIRT report project. 
 Use the Window-Preferences-Report Design-Classpath to configure the BIRT Project Classpath so it has access to the Java Project.
 Additionally you can select the report, click the properties tab, select the resources property and add the jar.  When using this method import the jar to the BIRT Project 
