@@ -32,6 +32,7 @@
 
 		<blockquote>
 			<ul>
+				<li><a href="#pojoviewer">BIRT PJO Viewer</a></li>
 				<li><a href="#using">Using Tomcat</a></li>
 				<li><a href="#install_viewer">Install the Viewer</a></li>
 				<li><a href="#install_jdbc">Install your JDBC Drivers</a></li>
@@ -41,7 +42,13 @@
 	
 			</ul>
 		</blockquote>
-
+		<h2><a name="pojoviewer"></a>BIRT POJO Viewer</h2>
+		<p>
+			Starting with the release of BIRT 3.7 the Viewer has been changed to be POJO based.  All required BIRT 
+			plugins are now in the WEB-INF/lib folder of the Viewer, and the WEB-INF/platform directory has been removed.
+			The Viewer should continue to operate as in previous versions of BIRT.  More information about this change is available 
+			in the <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.	
+		</p>
 		<h2><a name="using"></a>Using Tomcat</h2>
 		<p>
 			This page explains how to deploy the BIRT viewer to a Java EE container.
@@ -53,16 +60,11 @@
 
 		<p>
 			If you don’t have Tomcat installed on your system you can download it from <a href="http://jakarta.apache.org/tomcat">http://jakarta.apache.org/tomcat</a>.
-			BIRT works with the 4.1.x and 5.5.x verisons of Tomcat.
 		</p>
-
 <div class="homeitem3col">
-<h3>Tomcat 6 Note: </h3>
+<h3>Birt 3.7 Note: </h3>
 <ul>
- <li>
-   If you are installing the Web Viewer on Tomcat 6, you will need to download the <a href="http://jakarta.apache.org/commons/logging">commons logging library</a>. You can add this library to  WebViewerExample/WEB-INF/lib or to Tomcat's lib directory.
- </li>
- 
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/BirtPOJO_Viewer_Tomcat_Deployment">BIRT POJO Viewer Tomcat Deployment</a>.
  </ul>
 </div>
 		<h2><a name="install_viewer"></a>Install the Viewer</h2>
@@ -108,17 +110,14 @@
 		<p>
 			Add the jar files for your JDBC drivers  to the Viewer. Copy the driver the following directory:
 		</p>
-		<p>
-			
-	
+		<p>		
 <div class="homeitem3col">
-<h3>Birt 2.1/2.2 Note: </h3>
+<h3>Birt JDBC Driver Location Note: </h3>
 <ul>
- If you are installing BIRT 2.1 or later the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers.
-
+ If you are installing BIRT 2 series the driver needs to be copied to birt-viewer\WEB-INF\platform\plugins\org.eclipse.birt.report.data.oda.jdbc\drivers directory.<br>
+ If you are installing BIRT 3.7 or higher, the jdbc driver should be placed in the WebViewer's classpath (eg WEB-INF/lib).
  </ul>
 </div>
-			
 		</p>
 
 
@@ -150,8 +149,7 @@
 		</ul>
 
 		<h2><a name="jboss">Deploying to JBoss</a></h2>
-		To deploy the BIRT Viewer application to JBoss, follow these steps:
-		
+		If you are deploying BIRT version 2 series to JBoss use the following steps:
 		<ul class="midlist">
 			<li>
 				Download the zip file with the BIRT report engine runtime. The file is named birt-runtime-version#.zip.
@@ -172,9 +170,20 @@
 				Start up JBoss and enter the URL to BIRT (ie http://localhost:8080/birt) and run the test report.
 			</li>
 		</ul>
+		
+		If you are deploying the BIRT Viewer version 3.7 or later to JBoss use the directions supplied on the following link:<br>
+		<a href="http://wiki.eclipse.org/BirtPOJO_Viewer_JBOSS_Deployment">BIRT POJO Viewer JBoss Deployment</a>
+		
+		
 		<h2><a name="other">Other Java EE Servers</a></h2>
-		<p>We are currently working on instructions for other application servers.</p>
-		<p>If you are deploying to Websphere please see this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=282448">bug.</a>
+		The <a href="http://wiki.eclipse.org/BIRT/FAQ/Deployment">BIRT FAQ</a> has instructions for many other deployement options.<br>
+		If you are installing BIRT 3.7 or later see these pages:<br>
+		<a href="http://wiki.eclipse.org/BirtPOJO_Viewer_WebSphere_Deployment">BIRT POJO Viewer Websphere Deployment</a><br>
+		<a href="http://wiki.eclipse.org/BirtPOJO_Viewer_WebLogic_Deployment">BIRT POJO Viewer WebLogic Deployment</a><br>
+		<a href="http://wiki.eclipse.org/BirtPOJO_Viewer_JBOSS_Deployment">BIRT POJO Viewer JBoss Deployment</a><br>
+		<a href="http://wiki.eclipse.org/BirtPOJO_Viewer_Tomcat_Deployment">BIRT POJO Viewer Tomcat Deployment</a><br>
+
+
 	</div>
 	$deployLinksSideItem
 </div>

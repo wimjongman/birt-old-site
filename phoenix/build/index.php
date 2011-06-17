@@ -66,7 +66,7 @@ contains eclipse.exe.  Run eclipse.exe to start the designer.
 <li>From the desktop, right click, choose New&rarr;Shortcut.
 <li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)
 <li>Click Next.
-<li>Enter “Eclipse” for the shortcut name.
+<li>Enter "Eclipse" for the shortcut name.
 </ul>
 
 
