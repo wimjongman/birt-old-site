@@ -131,7 +131,7 @@
 			</li>
 			<br>
 			<b>Several Examples, PPT files and Webinars are available on BIRT-Exchange</b>
-<li><a href="http://www.birt-exchange.com/be/info/chartingapi-websem/">Chart Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/designing-birt-reports/982-webinar-archive--using-the-birt-charting-apis/">Chart Engine API Webinar</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Chart Engine API Examples</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/designing-birt-reports/463-birt-chart-engine-api-webinar-examples/">Chart Engine API Webinar Examples</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=chart+api&contenttype=&timeperiod=0&results=10">Chart Engine API Examples in BIRT-Exchange DevShare</a></li>

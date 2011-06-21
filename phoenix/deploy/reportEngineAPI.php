@@ -841,7 +841,7 @@ which in turn reads Image locations from the web.xml file.
 <h2><a name="add"></a>Additional Resources</h2>
 <p>
 Several Examples, PPT files and Webinars are available on BIRT-Exchange
-<li><a href="http://www.birt-exchange.com/be/info/reportengineapi-websem/">Report Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/986-webinar-archive-using-the-birt-report-engine-apis/">Report Engine API Webinar</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Report Engine API Examples</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=engine+api&contenttype=&timeperiod=0&results=10">Report Engine API Examples in BIRT-Exchange DevShare</a></li>
 

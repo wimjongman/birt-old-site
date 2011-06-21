@@ -214,7 +214,7 @@
 <h2><a name="add"></a>Additional Resources</h2>
 <p>
 Several Examples, PPT files and Webinars are available on BIRT-Exchange
-<li><a href="http://www.birt-exchange.com/be/info/designengineapi-websem/">Design Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/designing-birt-reports/978-webinar-archive-using-the-birt-design-engine-apis/">Design Engine API Webinar</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Design Engine API Examples</a></li>
 <li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=de+api&contenttype=&timeperiod=0&results=10">Design Engine API Examples in BIRT-Exchange DevShare</a></li>
 
