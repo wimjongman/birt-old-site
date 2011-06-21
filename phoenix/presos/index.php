@@ -25,6 +25,12 @@
 	<div id="midcolumn">
 
 		<h1><a name="top"></a>$pageTitle</h1>
+		
+	<h2>EclipseCon Presentations</h2>
+	<p>
+		Many of the EclipseCon presentations on BIRT technology are available on BIRT-Exchange.  These include API usage, extension implementations, scripting and introductory talks.<br>
+		<a href="http://www.birt-exchange.org/org/devshare/all-topics/filtercontent-eclipsecon/contenttype/timeperiod0/results10/pageno/sortby-/type/">Browse the BIRT-Exchange DevShare for EclipseCon Material</a>
+	</p> 	
 
 	<h2>IBM Rational Software Devlopment Conference Presentations</h2>
 		
