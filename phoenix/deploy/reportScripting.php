@@ -41,6 +41,7 @@
 				<li><a href="#reportitemexamples">Report Element Event Examples</a></li>
 				<li><a href="#datasource">Report Data Source(Set) Events</a></li>
 				<li><a href="#javaevents">Writting Events in Java</a></li>
+				<li><a href="#add">Additional Resources</a></li>
 
 			</ul>
 		</blockquote>
@@ -653,7 +654,13 @@ Additionally you can select the report, click the properties tab, select the res
 workspace before adding the resource.
 
 </p>
+<h2><a name="add"></a>Additional Resources</h2>
+<p>
+Several Examples, PPT files and Webinars are available on BIRT-Exchange
+<li><a href="http://www.birt-exchange.com/be/info/birtscripting-websem/">Report Scripting Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/index.php?topicid=0&filtercontent=script&contenttype=&timeperiod=0&results=10">Report Script Examples in BIRT-Exchange DevShare</a></li>
 
+</p>
 </div>
 	$deployLinksSideItem
 </div>

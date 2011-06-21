@@ -64,7 +64,7 @@
 				As a starter web application that you can customize to your needs.
 			</li>
 			<li>
-			    Called through the BIRT tag library (BIRT 2.2 Required).
+			    Called through the BIRT tag library.
 			</li>
 			<li>
 				As a plugin in existing RCP applications.
@@ -129,6 +129,13 @@
 				Using the Chart Engine API explains how to use the
   				Chart Engine API.  TBD
 			</li>
+			<br>
+			<b>Several Examples, PPT files and Webinars are available on BIRT-Exchange</b>
+<li><a href="http://www.birt-exchange.com/be/info/chartingapi-websem/">Chart Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Chart Engine API Examples</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/designing-birt-reports/463-birt-chart-engine-api-webinar-examples/">Chart Engine API Webinar Examples</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=chart+api&contenttype=&timeperiod=0&results=10">Chart Engine API Examples in BIRT-Exchange DevShare</a></li>
+
 		</ul>
 
 
