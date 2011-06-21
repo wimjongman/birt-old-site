@@ -52,6 +52,7 @@
 				<li><a href="#miscellaneous">Miscellaneous</a></li>
 				<li><a href="#emitterconfiguration">Emitter Configuration</a></li>
 				<li><a href="http://wiki.eclipse.org/Integration_Examples_%28BIRT%29">BIRT Wiki RE API Examples</a></li>
+				<li><a href="#add">Additional Resources</a></li>
 			</ul>
 		</blockquote>
 
@@ -69,7 +70,7 @@ The engine supports the following operations:
 <ul>
 <li>Discover the set of parameters defined for a report. 
 <li>Get the default values for parameters. 
-<li>Run a report to produce HTML/Paginated HTML, WORD, XLS, PS, or PDF output. 
+<li>Run a report to produce HTML/Paginated HTML, WORD, XLS, PS, ODT, ODS, ODP or PDF output. 
 <li>Fetch an image or chart for a report. 
 <li>Export Report data to CSV
 <li>Retrieve TOCs, Bookmarks, etc
@@ -81,7 +82,13 @@ output formats. Extensions are discussed elsewhere. This section will focus on h
 your application integrates with the report engine.
 </p>
 
-
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ It is no longer necessary to set BIRT Home in the EngineConfig class.  Just add the BIRT jars to your classpath/buildpath.
+ </ul>
+</div>
 
 
 <h2><a name="config"></a>Installing the Engine</h2>
@@ -115,11 +122,18 @@ consult the Engine Javadoc.  These docs are available within BIRT Help.</p>
 
 <h2><a name="jdbc"></a>Configuring JDBC Drivers</h2>
 <p>You must configure the engine to include any JDBC drivers that you need.</p>
-
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ It is no longer necessary to add the driver to the jdbc plugin.  Add the driver jar to your classpath.
+ </ul>
+</div>
 <p>To do this, copy the driver jar file to the 
  ReportEngineInstall/birt-runtime-version/ReportEngine/plugins/org.eclipse.birt.report.data.oda.jdbc_version/drivers
  Directory.
 </p>
+
 
 <h2><a name="api"></a>API Overview</h2>
 
@@ -128,6 +142,13 @@ interfaces you use for each step.</p>
 
 <ol>
   <li>Create an instance of <code>EngineConfig</code> to set options for the report engine.</li>
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ It is no longer necessary to set BIRT Home.
+ </ul>
+</div>
   <li>Set the Engine Home and start the Platform (Loads the plug-ins).  If you are using the RE API in plugin format there is no need to set BIRT Home.  If you are using the RE API from within a servlet, be sure to read about PlatformServletContext later on this page.
   <li>Create an instance of the <code>ReportEngine</code> class. You can use this object to 
   perform multiple tasks.</li>
@@ -152,14 +173,27 @@ accomplish a given task.
 
 
 <h2><a name="engineconfig"></a>EngineConfig</h2>
-
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ It is no longer necessary to set BIRT Home.
+ </ul>
+</div>
 <p>Use the <code>EngineConfig</code> class to set global options for the report engine as a 
 whole. Use it to specify the location of engine plug-ins, the location of data 
-drivers, and to add application-wide scriptable objects.</p>
-<pre style="font-size: 10pt">>
+drivers, and to add application-wide scriptable objects.
+
+</p>
+<br>
+<p>
+<code>
+<pre style="font-size: 10pt">
 EngineConfig config = new EngineConfig( );
 config.setEngineHome( &quot;put engine path here&quot; );
 </pre>
+</code>
+</p>
 <br>The engine home should be set to installedlocation/birt-runtime-version/ReportEngine
 when deployed as a stand alone Java Application.  See the <a href="http://wiki.eclipse.org/index.php/BIRT_Report_Engine_API">wiki</a> examples for
 Servlet and RCP deployment.
@@ -188,11 +222,12 @@ This is important to remember when deploying the engine in a servlet as well.
 engine, you should start the Platform, which will load the appropriate plug-ins.  This is done by calling
 <code>Platform.startup(config)</code> that takes an 
 <code>EngineConfig</code> object as argument. After using the engine, call 
-<code>Plaform.shutdown()(&nbsp;)</code> function to do clean up work, which includes unloading the extensions.</p>
+<code>Plaform.shutdown()</code> function to do clean up work, which includes unloading the extensions.</p>
 
 <pre style="font-size: 10pt">
 try{
 	final config = new EngineConfig( );
+	//delete the following line if using BIRT 3.7 or later
 	config.setEngineHome( "C:\\birt-runtime-2_1_0\\birt-runtime-2_1_0\\ReportEngine" );
 	config.setLogConfig(c:/temp, Level.FINE);
 			
@@ -655,6 +690,13 @@ task.run();
 </pre>
 
 <h4>IPlatformContext - Web Based Plugin Loading</h4>
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ This section can be ignored if your are installing BIRT 3.7 or later.  Just add the BIRT plugins to the Web Application classpath.
+ </ul>
+</div>
 <p>
 By default BIRT loads plug-ins located in the BIRT_HOME/plugins directory.  The plug-ins loaded provide functionality for connecting to data sources,
 emitters (eg, PDF, WORD, XLS, HTML ...), and chart rendering.  BIRT_HOME in the examples on this page is set using the setEngineHome method of the <code>EngineConfig</code> class.
@@ -795,6 +837,14 @@ If your code is going to be run in a servlet, please review the
 ReportEngineService.java code in CVS <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/birt/WEB-INF/classes/org/eclipse/birt/report/services/ReportEngineService.java?rev=HEAD&cvsroot=BIRT_Project&content-type=text/vnd.viewcvs-markup">ReportEngineService.java</a>
 The BIRT Viewer uses this class to configure the engine.  The constructor for the ReportEngineService uses the <code>HTMLServerImageHandler</code> class,
 which in turn reads Image locations from the web.xml file.
+</p>
+<h2><a name="add"></a>Additional Resources</h2>
+<p>
+Several Examples, PPT files and Webinars are available on BIRT-Exchange
+<li><a href="http://www.birt-exchange.com/be/info/reportengineapi-websem/">Report Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Report Engine API Examples</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=engine+api&contenttype=&timeperiod=0&results=10">Report Engine API Examples in BIRT-Exchange DevShare</a></li>
+
 </p>
 
 <br><br>

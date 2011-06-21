@@ -37,11 +37,20 @@
 				<li><a href="#sdk">DEAPI SDK</a></li>
 				<li><a href="#example">Example</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/BIRT_Design_Engine_API">BIRT Wiki DE API Examples</a></li>
-				
+				<li><a href="#add">Additional Resources</a></li>				
 			</ul>
 		</blockquote>
 
 		<h2><a name="concepts"></a>Concepts</h2>
+
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+ It is no longer necessary to set BIRT Home in the DesignConfig class.  Just add the BIRT jars to your classpath/buildpath.
+ </ul>
+</div>
+
 		<p>
 			A report design consist of three key concepts:
 		</p>
@@ -202,7 +211,14 @@
 		<p>
 			You can now open the design within BIRT and preview it.
 		</p>
+<h2><a name="add"></a>Additional Resources</h2>
+<p>
+Several Examples, PPT files and Webinars are available on BIRT-Exchange
+<li><a href="http://www.birt-exchange.com/be/info/designengineapi-websem/">Design Engine API Webinar</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Design Engine API Examples</a></li>
+<li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=de+api&contenttype=&timeperiod=0&results=10">Design Engine API Examples in BIRT-Exchange DevShare</a></li>
 
+</p>
 	</div>
 	$deployLinksSideItem
 </div>
