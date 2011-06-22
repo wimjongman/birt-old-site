@@ -36,6 +36,16 @@
 			<ul>
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 3.7
+                                        </a>
+                                         has been officially released.  To discover what is available, see the
+                                         <a href="project/notable3.7.php">Notable Features - BIRT 3.7</a>.
+                                        <span class="dates">
+                                                06/22/11
+                                        </span>
+                                </li>   			
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 2.6.2
                                         </a>
                                          has been officially released. 

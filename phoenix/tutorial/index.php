@@ -42,6 +42,12 @@
 		<p>
 			<a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/tutorial/tutorial.html">This Flash movie</a> shows the creation of My First Report from the tutorial in  BIRT's online help.
 		</p>
+		<h2>Other Tutorials</h2>
+		<p>
+			<li><a href="http://www.youtube.com/watch?v=6TRndgUMUmU">Youtube -BIRT Report Designer Tutorial Part-1</a></li>
+			<li><a href="http://www.youtube.com/watch?v=Kdr_LeHjIH8">Youtube -BIRT Report Designer Tutorial Part-2</a></li>
+		</p>
+		
 		$linkToTop
 	</div>
 </div>

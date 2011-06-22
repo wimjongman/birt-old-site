@@ -51,18 +51,18 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB2-6-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB3-7.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 2.6.2.
+	Get started with the newest major release, BIRT 3.7.
 	</td>
 	</tr>	
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.5.2.php"><img src="DB2-5-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index2.6.2.php"><img src="DB2-6-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.5 series.
+	Get started with the latest in the BIRT 2.6.2 series.
 	</td>
 	</tr>
 
@@ -371,6 +371,16 @@
                         <ul>
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 3.7
+                                        </a>
+                                         has been officially released.  To discover what is available, see the
+                                         <a href="project/notable3.7.php">Notable Features - BIRT 3.7</a>.
+                                        <span class="dates">
+                                                06/22/11
+                                        </span>
+                                </li>                         
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 2.6.2
                                         </a>
                                          has been officially released. 
@@ -443,24 +453,7 @@
 											05/04/10
 										</span>
 								</li>                        
-								<li>				
-										<a href="http://download.eclipse.org/birt/downloads/">
-											BIRT 2.5.2
-										</a>
-					 					has been officially released.  
-										<span class="dates">
-											02/28/10
-										</span>
-								</li>	                        
-                                <li>
-                                        <a href="http://download.eclipse.org/birt/downloads/">
-                                                BIRT 2.5.1
-                                        </a>
-                                         has been officially released.
-                                        <span class="dates">
-                                                09/26/09
-                                        </span>
-                                </li>
+
 
 		</div>
 	</div>
