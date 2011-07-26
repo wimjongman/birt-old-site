@@ -369,6 +369,15 @@
                 
                         <h6>What's New</h6>
                         <ul>
+                        		<li>
+										Want to help improve BIRT?  Take the 
+										<a href="http://www.surveymonkey.com/s/5NV9XEC">
+										BIRT Developer Survey
+										</a>
+										<span class="dates">
+										07/26/11
+										</span>
+								</li>
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 3.7
