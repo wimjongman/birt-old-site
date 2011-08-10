@@ -1,5 +1,5 @@
 <birt-menu>
-<item name="About this project" url="http://www.eclipse.org/projects/project_summary.php?projectid=birt"/>
+<item name="About This Project" url="http://www.eclipse.org/projects/project_summary.php?projectid=birt"/>
 <item name="introduction" page="intro"/>
 <item name="download" url="http://download.eclipse.org/birt/downloads"/>
 <not-yet-space/>
