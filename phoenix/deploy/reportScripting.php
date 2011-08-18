@@ -511,6 +511,13 @@ hold the shared information.
 Within Eclipse, open your workspace that contains the reports that will use the Java event handlers.
 Create a new Java project and add scriptapi.jar from the Report Engine download.
 </p>
+<div class="homeitem3col">
+<h3>Birt POJO Runtime Note: </h3>
+<ul>
+ If you are using BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br>
+Add org.eclipse.birt.runtime_version.jar to the project instead of scriptapi.jar. 
+ </ul>
+</div>
 <img src="buildpath.jpg" width="594" height="532" /><br/><br/>
 <p>
 The scriptapi.jar file includes the event adapters that are needed to implement event handlers.
