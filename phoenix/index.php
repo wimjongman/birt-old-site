@@ -207,7 +207,14 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
-			
+				<li>
+					<a href="http://www.actuate.com/birt-roadshow-india-contest/">
+						BIRT Contest Announced 
+					</a>
+					<span class="dates">
+						08/30/11
+					</span>
+				</li>			
 				<li>
 					<a href="http://birtworld.blogspot.com/2011/03/birt-262-enhancements.html">
 						BIRT 2.6.2 Enhancements
