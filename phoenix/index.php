@@ -207,6 +207,16 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
+			
+				<li>
+					<a href="http://www.informit.com/articles/article.aspx?p=1748986&WT.rss_f=Article&WT.rss_a=Little-Known%20But%20Useful%20BIRT%20Extension%20Points&WT.rss_ev=a">
+						Little-Known But Useful BIRT Extension Points
+					</a>
+					<span class="dates">
+						09/13/11
+					</span>
+				</li>				
+			
 				<li>
 					<a href="http://www.actuate.com/birt-roadshow-india-contest/">
 						BIRT Contest Announced 
