@@ -105,9 +105,10 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">
-		      Red Hat Enterprise Linux WS 6.0<html:br />
-      		  Red Hat Enterprise Linux AS 5.0, 6.0
-		      </html:td>
+	         	Red Hat Enterprise Linux 6.0<html:br />
+      		  Red Hat Enterprise Linux AS 5.0 </html:td>
+
+
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK</html:td>
 		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
@@ -154,8 +155,9 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
-		      <html:td width="205">Red Hat Enterprise Linux WS 5.0, 6.0<html:br />
-      		  Red Hat Enterprise Linux AS 5.0, 6.0</html:td>
+		      <html:td width="205">
+			Red Hat Enterprise Linux 6.0<html:br />
+      		  Red Hat Enterprise Linux AS 5.0 <html:br /> Red Hat Enterprise Linux WS 5.0 </html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK*</html:td>
 		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
