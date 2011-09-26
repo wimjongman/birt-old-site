@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 		
 			<ul>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 3.7.1
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                09/24/11
+                                        </span>
+                                </li>  			
 				<li>
 					Want to help improve BIRT?  Take the 
 					<a href="http://www.surveymonkey.com/s/5NV9XEC">

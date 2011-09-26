@@ -51,10 +51,10 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB3-7.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB3-7-1.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 3.7.
+	Get started with the newest major release, BIRT 3.7.1
 	</td>
 	</tr>	
 	<tr>
@@ -386,6 +386,15 @@
                 
                         <h6>What's New</h6>
                         <ul>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 3.7.1
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                09/24/11
+                                        </span>
+                                </li>                            
                         		<li>
 										Want to help improve BIRT?  Take the 
 										<a href="http://www.surveymonkey.com/s/5NV9XEC">
@@ -460,25 +469,7 @@
 									<span class="dates">
 										05/25/10
 									</span>
-								</li>	                        
-								<li>
-									<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.6RC1-201005181142">
-										BIRT 2.6 RC1. 
-									</a>
-									is now available for download.
-									<span class="dates">
-										05/18/10
-									</span>
-								</li>                        
-								<li>
-										<a href="http://download.eclipse.org/birt/downloads/build.php?build=M-R1-2.6M7-201005041328">
-											BIRT 2.6 M7. 
-										</a>
-										is now available for download.
-										<span class="dates">
-											05/04/10
-										</span>
-								</li>                        
+								</li>	                                            
 
 
 		</div>
