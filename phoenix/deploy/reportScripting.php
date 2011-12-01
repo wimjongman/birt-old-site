@@ -41,7 +41,7 @@
 				<li><a href="#reportitemexamples">Report Element Event Examples</a></li>
 				<li><a href="#datasource">Report Data Source(Set) Events</a></li>
 				<li><a href="#javaevents">Writting Events in Java</a></li>
-				<li><a href="#debug">Debugging a Report/a></li>
+				<li><a href="#debug">Debugging a Report</a></li>
 				<li><a href="#add">Additional Resources</a></li>
 
 			</ul>
