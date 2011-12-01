@@ -631,7 +631,7 @@ Add breakpoints as usual and select the run->debug menu.
 Select BIRT Report under Configurations and click the new button.  Check Java under debug type.  Select the Classpath tab add the project that impements the event handler using the Add Projects button.
 Click on debug.  The breakpoints in your code will halt report generation.  You can now use the standard Eclipse Java Debugger features to diagnose your code.
 </p>
-<img src="birtdebug.jpg" width="737" height="587" /><br/><br/>
+<img src="debugjava.jpg" width="737" height="587" /><br/><br/>
 
 <h4>Debugging JavaScript Event Handlers</h4>
 <p>
@@ -641,7 +641,7 @@ Perspective.  Once the debug Perspective is open select Run->Debug Configuration
 These options allow you to recreate the deployed environment. For example when using the frameset servlet mapping in the example Web Viewer, the engine performs
  a Run Task to generate the report document and then performs a Render Task on the report document. 
  When debugging a report you can specify the Run+Render option to reproduce this behavior in the debugger.
-  The debugger also includes breakpoints, expressions, and variables and supports stepping through either Java or JavaScript event handlers.
+  The debugger also includes breakpoints, expressions, and variables and supports stepping through either Java or JavaScript event handlers.  
 </p>
 <img src="debugjs.png" /><br/><br/>
 
