@@ -41,6 +41,7 @@
 				<li><a href="#reportitemexamples">Report Element Event Examples</a></li>
 				<li><a href="#datasource">Report Data Source(Set) Events</a></li>
 				<li><a href="#javaevents">Writting Events in Java</a></li>
+				<li><a href="#debug">Debugging a Report/a></li>
 				<li><a href="#add">Additional Resources</a></li>
 
 			</ul>
@@ -621,17 +622,28 @@ Properties tab.
 Selecting Preview should result in the following output.
 </p>
 <img src="scriptoutput.jpg" width="580" height="268" /><br/><br/>
-<h4>Debugging the Report</h4>
+
+<h2><a name="debug"></a>Debugging a Report</h2>
+
 <p>
-Switch to the Java Perspective and select either of the Java classes implemented earlier.
+<h4>Debugging Java Event Handlers</h4>
+Switch to the Java Perspective and select the Java class that implements the event handler.
 Add breakpoints as usual and select the run->debug menu.
-Select BIRT Report under Configurations and click the new button.  Check the workspace containing the report created earlier and select debug.
+Select BIRT Report under Configurations and click the new button.  Check Java under debug type.  Select the Classpath tab add the project that impements the event handler using the Add Projects button.
+Click on debug.  The breakpoints in your code will halt report generation.  You can now use the standard Eclipse Java Debugger features to diagnose your code.
 </p>
 <img src="birtdebug.jpg" width="737" height="587" /><br/><br/>
-<p>
-This launch a new Eclipse instance with the selected workspace.  Load the sample report completed earlier and select Preview.
-If breakpoints exist they will halt the code when the table or the row calls your code.
-</p>
+
+<h4>Debugging JavaScript Event Handlers</h4>
+If you are only using JavaScript event handlers the JavaScript debugger can be used to debug your reprot.  Click Window->Open Perspective->Other and choose the debug
+Perspective.  Once the debug Perspective is open select Run->Debug Configurations.  You can create a new BIRT Report debug launch configuration that will use the currently opened report.
+ In addition you specify which Report Engine Task to run while debugging. These include the Run, RunAndRender, and the RenderTask. You can also set the debugger to do a Run and then a Render Task. 
+These options allow you to recreate the deployed environment. For example when using the frameset servlet mapping in the example Web Viewer, the engine performs
+ a Run Task to generate the report document and then performs a Render Task on the report document. 
+ When debugging a report you can specify the Run+Render option to reproduce this behavior in the debugger.
+  The debugger also includes breakpoints, expressions, and variables and supports stepping through either Java or JavaScript event handlers.
+<img src="debugjs.jpg" /><br/><br/>
+
 <br>
 <h4>Deploying Java Event Handlers</h4>
 <p>
