@@ -624,9 +624,8 @@ Selecting Preview should result in the following output.
 <img src="scriptoutput.jpg" width="580" height="268" /><br/><br/>
 
 <h2><a name="debug"></a>Debugging a Report</h2>
-
-<p>
 <h4>Debugging Java Event Handlers</h4>
+<p>
 Switch to the Java Perspective and select the Java class that implements the event handler.
 Add breakpoints as usual and select the run->debug menu.
 Select BIRT Report under Configurations and click the new button.  Check Java under debug type.  Select the Classpath tab add the project that impements the event handler using the Add Projects button.
@@ -635,14 +634,16 @@ Click on debug.  The breakpoints in your code will halt report generation.  You 
 <img src="birtdebug.jpg" width="737" height="587" /><br/><br/>
 
 <h4>Debugging JavaScript Event Handlers</h4>
-If you are only using JavaScript event handlers the JavaScript debugger can be used to debug your reprot.  Click Window->Open Perspective->Other and choose the debug
+<p>
+If you are only using JavaScript event handlers the JavaScript debugger can be used to debug your report.  Click Window->Open Perspective->Other and choose the debug
 Perspective.  Once the debug Perspective is open select Run->Debug Configurations.  You can create a new BIRT Report debug launch configuration that will use the currently opened report.
  In addition you specify which Report Engine Task to run while debugging. These include the Run, RunAndRender, and the RenderTask. You can also set the debugger to do a Run and then a Render Task. 
 These options allow you to recreate the deployed environment. For example when using the frameset servlet mapping in the example Web Viewer, the engine performs
  a Run Task to generate the report document and then performs a Render Task on the report document. 
  When debugging a report you can specify the Run+Render option to reproduce this behavior in the debugger.
   The debugger also includes breakpoints, expressions, and variables and supports stepping through either Java or JavaScript event handlers.
-<img src="debugjs.jpg" /><br/><br/>
+</p>
+<img src="debugjs.png" /><br/><br/>
 
 <br>
 <h4>Deploying Java Event Handlers</h4>
