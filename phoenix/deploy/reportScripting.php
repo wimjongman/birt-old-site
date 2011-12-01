@@ -631,7 +631,7 @@ Add breakpoints as usual and select the run->debug menu.
 Select BIRT Report under Configurations and click the new button.  Check Java under debug type.  Select the Classpath tab add the project that impements the event handler using the Add Projects button.
 Click on debug.  The breakpoints in your code will halt report generation.  You can now use the standard Eclipse Java Debugger features to diagnose your code.
 </p>
-<img src="debugjava.jpg" width="737" height="587" /><br/><br/>
+<img src="debugjava.png" width="737" height="587" /><br/><br/>
 
 <h4>Debugging JavaScript Event Handlers</h4>
 <p>
