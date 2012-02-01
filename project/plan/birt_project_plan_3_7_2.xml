@@ -252,7 +252,8 @@ Refer to general Eclipse document on <html:a href="http://wiki.eclipse.org/index
 
   <p:theme name="POJO and OSGi BIRT Runtime">
         <p:description>
-        	<html:div>To make it easier to migrate pre-BIRT 3.7 applications to the latest BIRT release, the current theme aims to reintroduce the OSGi version of the Eclipse BIRT Runtime.  As a result, depending on their deployment requirements, BIRT users will have the option to download and use either the OSGi or the standard, POJO Eclipse BIRT Runtime package.
+        	<html:div>
+To provide flexibility in deployment choices and to facilitate migration from pre-BIRT 3.7 releases, this release re-introduces the OSGi version of the BIRT Runtime. With this enhancement, BIRT developers now have the option to download and use either an OSGi or POJO version of the Eclipse BIRT Runtime package depending on their application  needs. 
         	</html:div>
         </p:description>
         <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=352510%2C352510"></p:proposed>
