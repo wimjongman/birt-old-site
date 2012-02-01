@@ -93,18 +93,6 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
-		      <html:td width="205">Microsoft Windows Server 2003</html:td>
-		      <html:td width="76">Intel x86</html:td>
-		      <html:td width="59">Win32</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
-		    </html:tr>
-		    <html:tr>
-		      <html:td>Microsoft Windows Vista</html:td>
-		      <html:td>Intel x86</html:td>
-		      <html:td>Win32</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
-		    </html:tr>
-		    <html:tr>
 		      <html:td width="205">
 	         	Red Hat Enterprise Linux 6.0, 6.1<html:br />
       		  Red Hat Enterprise Linux AS 5.0 </html:td>
@@ -142,18 +130,6 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">Win32*</html:td>
 		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
-		    </html:tr>
-		    <html:tr>
-		      <html:td width="205">Microsoft Windows Server 2003</html:td>
-		      <html:td width="76">Intel x86</html:td>
-		      <html:td width="59">Win32*</html:td>
-		      <html:td width="453">Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
-		    </html:tr>
-		    <html:tr>
-		      <html:td>Microsoft Windows Vista</html:td>
-		      <html:td>Intel x86</html:td>
-		      <html:td>Win32*</html:td>
-		      <html:td>Sun Java 2 Standard Edition, version 1.5, 1.6</html:td>
 		    </html:tr>
 		    <html:tr>
 		      <html:td width="205">
@@ -267,15 +243,22 @@ Refer to general Eclipse document on <html:a href="http://wiki.eclipse.org/index
      <p:preamble>
          <html:div>
          	<html:p>BIRT 3.7 SR2 is the second maintenance release in the BIRT 3.7 release series and is intended to be narrow in scope. 
-			The 3.7 SR2 release is primarily focused on addressing critical bugs identified by the community. 
+			The 3.7 SR2 release is primarily focused on addressing critical bugs and limitations identified by the community. 
 			The <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=BIRT&amp;product=BIRT&amp;target_milestone=3.7.2">list of defects</html:a> 
-           	targeted for resolution in BIRT 3.7 SR2	can be found in the bugzilla database at <html:a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</html:a>.</html:p>
-
-
-
+           	targeted for resolution in BIRT 3.7 SR2	can be found in the bugzilla database at <html:a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</html:a>. The release also aims to address the theme below.</html:p>
 
          </html:div>
      </p:preamble>
+
+  <p:theme name="POJO and OSGi BIRT Runtime">
+        <p:description>
+        	<html:div>To make it easier to migrate pre-BIRT 3.7 applications to the latest BIRT release, the current theme aims to reintroduce the OSGi version of the Eclipse BIRT Runtime.  As a result, depending on their deployment requirements, BIRT users will have the option to download and use either the OSGi or the standard, POJO Eclipse BIRT Runtime package.
+        	</html:div>
+        </p:description>
+        <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=352510%2C352510"></p:proposed>
+
+     </p:theme>
+
    </p:themes_and_priorities>
 
    <p:appendix name=": Help Wanted">
