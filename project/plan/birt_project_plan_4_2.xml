@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<!--<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>-->
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
+<!--<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>-->
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="4.2"/>
    <p:introduction><html:div><html:p>This document lays out the feature and API set for the next major feature release of the Eclipse BIRT project after 3.7, designated release 4.2 and code-named Juno. 
@@ -56,7 +56,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
   		<html:li>Eclipse Platform Runtime Binary 3.7, 3.8, 4.2</html:li>
   		<html:li>Graphical Editor Framework (GEF) Runtime 3.7</html:li>
   		<html:li>Eclipse Modeling Framework (EMF) 2.7</html:li>
-  		<html:li>Data Tools Platform Project 1.9 (DTP)</html:li>
+  		<html:li>Data Tools Platform Project (DTP) 1.10 </html:li>
   		<html:li>Web Tools Project (WTP) 3.3</html:li>
 		</html:ul>
 
@@ -67,7 +67,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
   		<html:li>Eclipse Platform Runtime Binary 3.7, 3.8, 4.2 </html:li>
   		<html:li>Graphical Editor Framework (GEF) Runtime 3.7 </html:li>
   		<html:li>Eclipse Modeling Framework (EMF) 2.7 </html:li>
-  		<html:li>Data Tools Platform Project (DTP) 1.9 </html:li>
+  		<html:li>Data Tools Platform Project (DTP) 1.10 </html:li>
   		<html:li>Web Tools Project (WTP) 3.3</html:li>
 		</html:ul>
 		
