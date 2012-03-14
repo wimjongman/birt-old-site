@@ -245,7 +245,7 @@ Refer to general Eclipse document on <html:a href="http://wiki.eclipse.org/index
          	<html:p>BIRT 3.7 SR2 is the second maintenance release in the BIRT 3.7 release series and is intended to be narrow in scope. 
 			The 3.7 SR2 release is primarily focused on addressing critical bugs and limitations identified by the community. 
 			The <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=BIRT&amp;product=BIRT&amp;target_milestone=3.7.2">list of defects</html:a> 
-           	targeted for resolution in BIRT 3.7 SR2	can be found in the bugzilla database at <html:a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</html:a>. The release also aims to address the theme below.</html:p>
+           	targeted for resolution in BIRT 3.7 SR2	can be found in the bugzilla database at <html:a href="https://bugs.eclipse.org/bugs">https://bugs.eclipse.org/bugs</html:a>. The release also aims to address the themes below.</html:p>
 
          </html:div>
      </p:preamble>
@@ -259,6 +259,37 @@ To provide flexibility in deployment choices and to facilitate migration from pr
         <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=352510%2C352510"></p:proposed>
 
      </p:theme>
+
+ <p:theme name="Compare KPIs Across Relative Time Periods">
+        <p:description>
+        	<html:div>Being able to monitor and compare KPIs across relative time periods, for example number of units produced in the last 45 days or sales YTD versus Previous YTD, are 
+common data visualization requirements.  This theme aims to enhance BIRT with the ability to easily address such requirements.
+        	</html:div>
+        </p:description>
+        <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=366907%2C366907"></p:proposed>
+     </p:theme>
+
+<p:theme name="Calculated Measures Efficiency Enhancements">
+        <p:description>
+        	<html:div>This theme aims to decrease the generation times for BIRT design containing crosstabs by providing a new, alternative approach to defining computed measures. 
+With this new approach, just the computed measures included in the crosstab will be calculated at generation time, as opposed to calculating all measures part of the underlying 
+BIRT cube powering the crosstab.
+        	</html:div>
+        </p:description>
+		 <p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=366910%2C366910"></p:proposed>
+     </p:theme>
+
+     <p:theme name="Option to Apply Filters After Computing the Totals">
+        <p:description>
+        	<html:div>This theme aims to give BIRT authors the option to specify that the filters in a BIRT design should be applied after the aggregations are computed 
+as opposed to before - which is the default option. The new option will make it possible to create designs that display unfiltered totals along with filtered detailed data. 
+For example a report that is filtered to display just the data for two countries: USA and Canada, but the totals for all countries, thus allowing for percentage of total analysis.
+        	</html:div>
+        </p:description>
+		<p:proposed  bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=366911%2C366911"></p:proposed>
+     </p:theme>
+
+
 
    </p:themes_and_priorities>
 
