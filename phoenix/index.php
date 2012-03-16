@@ -330,33 +330,7 @@
 					<span class="dates">
 						02/12/07
 					</span>
-				</li>
-						
-				<li>
-					<a href="http://jdj.sys-con.com/read/295339.htm">
-						Developing an Eclipse BIRT Report Item Extension 
-					</a>
-					<span class="dates">
-						11/20/06
-					</span>
 				</li>						
-			
-				<li>
-					<a href="http://www.itweek.co.uk/itweek/news/2164968/open-source-server-monitor">
-						Open-source server monitor boosts support 
-					</a>
-					<span class="dates">
-						09/26/06
-					</span>
-				</li>						
-				<li>
-					<a href="http://www.onjava.com/pub/a/onjava/2006/07/26/deploying-birt.html">
-						Deploying BIRT
-					</a>
-					<span class="dates">
-						07/26/06
-					</span>
-				</li>							
 		
 			</ul>
 			<ul>
