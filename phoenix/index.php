@@ -207,7 +207,14 @@
 		<div class="homeitem3col">
 			<h3>In the News</h3>
 			<ul>
-			
+				<li>
+					<a href="http://birtworld.blogspot.com/2012/03/birt-372-new-features.html">
+						BIRT 3.7.2 New Features Post
+					</a>
+					<span class="dates">
+						03/16/12
+					</span>
+				</li>			
 				<li>
 					<a href="http://www.informit.com/articles/article.aspx?p=1748986&WT.rss_f=Article&WT.rss_a=Little-Known%20But%20Useful%20BIRT%20Extension%20Points&WT.rss_ev=a">
 						Little-Known But Useful BIRT Extension Points
