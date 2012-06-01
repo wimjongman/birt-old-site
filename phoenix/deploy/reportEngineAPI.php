@@ -225,7 +225,7 @@ engine, you should start the Platform, which will load the appropriate plug-ins.
 <code>Plaform.shutdown()</code> function to do clean up work, which includes unloading the extensions.
 When shutting down the engine in some environments, it may also be required to call:
 <code>RegistryProviderFactory.releaseDefault();</code>  This should be added after the <code>Platform.shutdown()</code> method
-is called.  You will need to to import the <code>org.eclipse.core.internal.registry.RegistryProviderFactory</code> package.
+is called.  You will need to import the <code>org.eclipse.core.internal.registry.RegistryProviderFactory</code> package.
 See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=351052">Bugzilla 351052</a> for more details.
 </p>
 
@@ -233,7 +233,8 @@ See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=351052">Bugzilla 3510
 try{
 	final config = new EngineConfig( );
 	//delete the following line if using BIRT 3.7 (or later) POJO runtime
-	//As of BIRT 3.7.2  A POJO and an OSGi based runtime are avialable 
+	//As of 3.7.2, BIRT now provides an OSGi and a POJO Runtime.
+
 	config.setEngineHome( "C:\\birt-runtime-2_6_2\\birt-runtime-2_6_2\\ReportEngine" );
 	config.setLogConfig(c:/temp, Level.FINE);
 			
