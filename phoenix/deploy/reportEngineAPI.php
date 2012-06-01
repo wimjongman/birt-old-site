@@ -222,13 +222,19 @@ This is important to remember when deploying the engine in a servlet as well.
 engine, you should start the Platform, which will load the appropriate plug-ins.  This is done by calling
 <code>Platform.startup(config)</code> that takes an 
 <code>EngineConfig</code> object as argument. After using the engine, call 
-<code>Plaform.shutdown()</code> function to do clean up work, which includes unloading the extensions.</p>
+<code>Plaform.shutdown()</code> function to do clean up work, which includes unloading the extensions.
+When shutting down the engine in some environments, it may also be required to call:
+<code>RegistryProviderFactory.releaseDefault();</code>  This should be added after the <code>Platform.shutdown()</code> method
+is called.  You will need to to import the <code>org.eclipse.core.internal.registry.RegistryProviderFactory</code> package.
+See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=351052">Bugzilla 351052</a> for more details.
+</p>
 
 <pre style="font-size: 10pt">
 try{
 	final config = new EngineConfig( );
-	//delete the following line if using BIRT 3.7 or later
-	config.setEngineHome( "C:\\birt-runtime-2_1_0\\birt-runtime-2_1_0\\ReportEngine" );
+	//delete the following line if using BIRT 3.7 (or later) POJO runtime
+	//As of BIRT 3.7.2  A POJO and an OSGi based runtime are avialable 
+	config.setEngineHome( "C:\\birt-runtime-2_6_2\\birt-runtime-2_6_2\\ReportEngine" );
 	config.setLogConfig(c:/temp, Level.FINE);
 			
 	Platform.startup( config );  //If using RE API in Eclipse/RCP application this is not needed.
@@ -247,7 +253,10 @@ try{
 try
 {
 	engine.destroy();
-	Platform.shutdown();    
+	Platform.shutdown();
+	//Bugzilla 351052
+	RegistryProviderFactory.releaseDefault();
+	    
 }
 catch ( EngineException e1 )
 {
