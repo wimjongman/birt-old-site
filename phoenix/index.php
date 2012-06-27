@@ -51,18 +51,18 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB3-7-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB4-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 3.7.2
+	Get started with the newest major release, BIRT 4.2
 	</td>
 	</tr>	
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index2.6.2.php"><img src="DB2-6-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index3.7.2.php"><img src="DB3-7-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 2.6.2 series.
+	Get started with the latest in the BIRT 3.7.2 series.
 	</td>
 	</tr>
 
@@ -367,6 +367,15 @@
                 
                         <h6>What's New</h6>
                         <ul>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 4.2
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                06/27/12
+                                        </span>
+                                </li>                         
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 3.7.2
