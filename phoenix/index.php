@@ -371,10 +371,13 @@
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 4.2
                                         </a>
-                                         has been officially released. 
+                                         has been officially released.  To see what is now available take a look at the
+                                         <a href="project/notable4.2.php">Notable Features - BIRT 4.2</a>.
                                         <span class="dates">
                                                 06/27/12
-                                        </span>
+                                        </span>                                        
+                                        
+                                        
                                 </li>                         
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">

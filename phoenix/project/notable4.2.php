@@ -169,9 +169,9 @@ While many artifacts from previous versions of BIRT have made it into a Maven re
 </pre>
 </code>
 <p>
-For more information see the following bugzilla entries.
-<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=258911">bugzilla id 258911</a>
-<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=379081">bugzilla id 379081</a>
+For more information see the following bugzilla entries.<br>
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=258911">bugzilla id 258911</a><br>
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=379081">bugzilla id 379081</a><br>
 </p>
 <h1><a name="jump_5">Relative File Support</a></h1>
 <p>
