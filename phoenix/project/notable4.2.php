@@ -49,7 +49,7 @@
 In conjunction with the Juno release, the BIRT team is pleased to announce the availability of BIRT 4.2. This document describes some of the new features that are available within the 4.2 release.
 </p>
 <p>
-To review the projects included in the 4.2 release, see <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/birt/project/plan/birt_project_plan_4_2.xml">the BIRT 4.2 Project Plan.  Some features have also been back-ported to BIRT 3.7.2 – these are marked with an asterisk in the feature header in this document.
+To review the projects included in the 4.2 release, see <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/birt/project/plan/birt_project_plan_4_2.xml">the BIRT 4.2 Project Plan</a>.  Some features have also been back-ported to BIRT 3.7.2 – these are marked with an asterisk in the feature header in this document.
 </p>
 <p>
 As with all BIRT releases, the BIRT team appreciates your feedback and suggestions.  To get involved in the project take a look at the BIRT community links.
@@ -83,7 +83,7 @@ The inner radius property can be set as a percentage of the chart or as a specif
 </pre>
 </code>
 <img src="images/4.2/donutreport.png"><br>
-<i>Donut Chart Report</i>
+<i>Donut Chart Report</i><br><br>
 
 <h1><a name="jump_3">New Excel Data Source</a></h1>
 <p>
@@ -168,7 +168,7 @@ While many artifacts from previous versions of BIRT have made it into a Maven re
 &lt;/dependency&gt;  
 </pre>
 </code>
-
+<br><br>
 <h1><a name="jump_5">Relative File Support</a></h1>
 <p>
 Currently BIRT requires full paths or URLs when using some data sources and connection profiles.  With this release, BIRT now includes relative path support in these cases.  Included are data sources like Flat File and XML as well as connection profiles.  The browse button has been modified in these cases to offer relative or absolute paths.
@@ -185,7 +185,7 @@ With the Juno release of BIRT, Eclipse 4.2 is now the default workbench.  BIRT h
 
 <h1><a name="jump_7">*Enhanced Aggregate Filter Support</a></h1>
 <p>
-The BIRT project currently provides an Aggregation Report Item.  This Report Item supplies over 25 aggregate functions, like SUM, COUNT, TOPN, that can be used to analyze data.  The Aggregation Report Item even provides an extension point to add your own functions.  While this Report Item is very powerful it only aggregates the rows available to it.  If you apply filters to the container element, the Aggregation Item will only aggregate the filtered rows.   This is not always desired.   In some cases users filter rows for display purposes only.  In these cases, consumers of the data may still wish to have the filtered rows aggregated.  To accommodate this feature a check box has been added to the Filter Editor.  This checkbox “Recalculate Totals”, determines if aggregates will include the filtered out rows.  If the box is checked the rows will be filtered out of aggregation elements.  If the box is not checked, the filtered out rows will be included.
+The BIRT project currently provides an Aggregation Report Item.  This Report Item supplies over 25 aggregate functions, like SUM, COUNT, TOPN, that can be used to analyze data.  The Aggregation Report Item even provides an extension point to add your own functions.  While this Report Item is very powerful it only aggregates the rows available to it.  If you apply filters to the container element, the Aggregation Item will only aggregate the filtered rows.   This is not always desired.   In some cases users filter rows for display purposes only.  In these cases, consumers of the data may still wish to have the filtered rows aggregated.  To accommodate this feature a check box has been added to the Filter Editor.  This checkbox "Recalculate Totals", determines if aggregates will include the filtered out rows.  If the box is checked the rows will be filtered out of aggregation elements.  If the box is not checked, the filtered out rows will be included.
 </p>
 <img src="images/4.2/recalccheckbox.png"><br>
 <i>Recalculate Checkbox</i><br><br>
@@ -209,7 +209,7 @@ The Measure Editor has been enhanced to supply a check box to indicate whether t
 <i>Derived Cube Measure consumed by Crosstab</i><br><br>
 <h1><a name="jump_9">*Relative Time Period Report Item</a></h1>
 <p>
-When using crosstabs to display time based data, scripting is often required to implement complex time period calculations.  With this release, BIRT now offers a new report item that will handle time period based calculations automatically when used within a crosstab.    This report item “Relative Time Period” is located in the palette and can be dragged to the measure field of a crosstab.  The new report item can also be placed by right clicking on any measure in an existing crosstab.
+When using crosstabs to display time based data, scripting is often required to implement complex time period calculations.  With this release, BIRT now offers a new report item that will handle time period based calculations automatically when used within a crosstab.    This report item "Relative Time Period" is located in the palette and can be dragged to the measure field of a crosstab.  The new report item can also be placed by right clicking on any measure in an existing crosstab.
 </p>
 <img src="images/4.2/crosstabrightclick.png"><br>
 <i>Insert Relative Time Period Report Item into Crosstab</i><br><br>
