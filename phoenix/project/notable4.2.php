@@ -168,7 +168,11 @@ While many artifacts from previous versions of BIRT have made it into a Maven re
 &lt;/dependency&gt;  
 </pre>
 </code>
-<br><br>
+<p>
+For more information see the following bugzilla entries.
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=258911">bugzilla id 258911</a>
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=379081">bugzilla id 379081</a>
+</p>
 <h1><a name="jump_5">Relative File Support</a></h1>
 <p>
 Currently BIRT requires full paths or URLs when using some data sources and connection profiles.  With this release, BIRT now includes relative path support in these cases.  Included are data sources like Flat File and XML as well as connection profiles.  The browse button has been modified in these cases to offer relative or absolute paths.
