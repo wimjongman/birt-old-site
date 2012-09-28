@@ -208,6 +208,15 @@
 			<h3>In the News</h3>
 			<ul>
 				<li>
+					<a href="http://birtworld.blogspot.com/2012/06/birt-42-released.html">
+						BIRT 4.2 New Features Post
+					</a>
+					<span class="dates">
+						06/27/12
+					</span>
+				</li>			
+			
+				<li>
 					<a href="http://birtworld.blogspot.com/2012/03/birt-372-new-features.html">
 						BIRT 3.7.2 New Features Post
 					</a>
