@@ -34,6 +34,15 @@
 		<h3>What's New</h3>
 		
 			<ul>
+			                   <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 4.2.1
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                09/28/12
+                                        </span>
+                               </li> 
                                <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 4.2
