@@ -44,7 +44,7 @@
 
 	<h2>Business Intelligence and Reporting Tools</h2>
 	<p>
-	BIRT is an open source Eclipse-based reporting system that integrates
+	BIRT is an open source Eclipse based reporting system that integrates
 	with your Java/Java EE application to produce compelling reports.
 	</p>
 	<p>	
