@@ -374,7 +374,7 @@
 <br/>
 <div class="sideitem">
                 
-                        <h6>What s New</h6>
+                        <h6>What's New</h6>
                         <ul>
                         
                                 <li>
