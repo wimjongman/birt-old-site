@@ -151,7 +151,7 @@
 				Expand a table to see its columns.
 			</li>
 			<li>
-				This editor support drag and drop.
+				This editor supports drag and drop.
 			</li>
 		</ul>
 
