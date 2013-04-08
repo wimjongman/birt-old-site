@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
-<!--  <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
+<!--<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>-->
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="4.3"/>
    <p:introduction><html:div><html:p>This document lays out the feature and API set for the next feature release of the Eclipse BIRT project after 4.2, designated release 4.3.</html:p>
@@ -17,9 +17,9 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
    </p:release_deliverables>
    <p:release_milestones>
       <p:preamble>
-         <html:div><html:ul>
-		  <html:li>The BIRT 4.3 Release will follow the Kepler simultaneous release milestones</html:li>
-		  </html:ul>
+         <html:div>
+		  <html:p>The BIRT 4.3 Release will follow the Kepler simultaneous release milestones schedule.
+		  </html:p>
 			<html:p>Our target is to complete and release BIRT 4.3 with the Kepler Coordinated release.</html:p>
 			<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
 			database</html:a>. The bugzilla database will be updated on an ongoing basis as the plan progresses.</html:p>
@@ -33,7 +33,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
       <p:milestone date="6/14/2013" milestone="RC4"><html:div>4.3 RC4</html:div></p:milestone>
       <p:milestone date="6/26/2013" milestone="Release"><html:div>4.3 Release</html:div></p:milestone>
    </p:release_milestones>
-   <p:target_environments>
+<p:target_environments>
      	<html:p>In order to remain current, each release of an Eclipse project targets reasonably current versions of underlying operating environments and
 		other Eclipse projects on which it depends.</html:p>
 		<html:p>Most of Eclipse, and all of BIRT, is "pure" Java code and has no direct dependence on the underlying operating system. For BIRT, the chief
@@ -60,8 +60,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
   		<html:li>Web Tools Project (WTP) 3.5</html:li>
 		</html:ul>
 
-		<html:p>
-The Eclipse Platform and BIRT run in a variety of operating environments. Testing is focused on a handful of popular combinations of operating system and Java 2 Platform; these are our reference platforms. Eclipse BIRT undoubtedly runs fine in many operating environments beyond the reference platforms we test. However, since we do not systematically test them we cannot vouch for them. Problems encountered when running Eclipse BIRT on non-reference platforms that cannot be recreated on any reference platform will be given lower priority than problems with running Eclipse BIRT on a reference platform.
+		<html:p>The Eclipse Platform and BIRT run in a variety of operating environments. Testing is focused on a handful of popular combinations of operating system and Java 2 Platform; these are our reference platforms. Eclipse BIRT undoubtedly runs fine in many operating environments beyond the reference platforms we test. However, since we do not systematically test them we cannot vouch for them. Problems encountered when running Eclipse BIRT on non-reference platforms that cannot be recreated on any reference platform will be given lower priority than problems with running Eclipse BIRT on a reference platform.
                 </html:p>
 
 		<html:p>For BIRT 4.3, the project team plans to tests and validate the following reference platforms:</html:p>
@@ -306,5 +305,12 @@ The Eclipse Platform and BIRT run in a variety of operating environments. Testin
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403403"></p:proposed>      	
      </p:theme>
    </p:themes_and_priorities>
-   <p:appendix/>
+   <p:appendix name=": Help Wanted">
+     <html:div>We welcome any contributions from the community towards the BIRT project. This help can be in the form of adding new functionality to BIRT, 
+     submitting bug fixes/enhancements to the current BIRT code and testing BIRT on new platforms. 
+     <html:br />Please refer to <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?keywords=helpwanted;query_format=advanced;keywords_type=allwords;bug_status=NEW;classification=BIRT;product=BIRT">this bugzilla query</html:a> for 
+     the list of enhancements that we need help on. 
+     For more information on how you can contribute to the BIRT project, refer to <html:a href="http://www.eclipse.org/birt/phoenix/project/contribute.php">How to Contribute to the BIRT Project</html:a>
+     </html:div>
+   </p:appendix>	
 </p:plan>
