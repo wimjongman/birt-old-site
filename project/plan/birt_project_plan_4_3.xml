@@ -3,7 +3,10 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="4.3"/>
-   <p:introduction><html:div><html:p>This document lays out the feature and API set for the next feature release of the Eclipse BIRT project after 4.2, designated release 4.3.</html:p>
+   <p:introduction><html:div><html:p>This document lays out the feature and API set for the next major feature release of the Eclipse BIRT project after 4.2, designated release 4.3 and code-named Kepler. 
+This release is occurring simultaneously with the 4.3 release. The 4.3 release release contains significant new feature work, 
+while the 3.8 release focuses on stability and bug fixes.</html:p>
+
 <html:p>Plans do not materialize out of nowhere, nor are they entirely static. To ensure the planning process is transparent and open to the entire
 Eclipse community, plans are posted in an embryonic form and then revised from time to time throughout the release cycle.</html:p>
 <html:p>The first part of the plan deals with the important matters of release deliverables, release milestones, target operating environments, and
@@ -13,14 +16,13 @@ is to be added, or some aspect that is to be improved. Each plan item has its ow
 summary(usually a single paragraph) that explains the work item at a suitably high enough level so that everyone can readily understand what the work item
 is without having to understand the nitty-gritty detail.</html:p><html:p>Please send comments about this draft plan to the <html:a href="mailto:birt-dev@eclipse.org">BIRT Developer</html:a> mailing list.</html:p></html:div></p:introduction>
    <p:release_deliverables>
-	<html:p>This release of BIRT will focus on providing the same downloads as BIRT 4.3.</html:p>
+	<html:p>This release of BIRT will focus on providing the same downloads as BIRT 4.2.</html:p>
    </p:release_deliverables>
    <p:release_milestones>
       <p:preamble>
-         <html:div>
-		  <html:p>The BIRT 4.3 Release will follow the Kepler simultaneous release milestones schedule.
-		  </html:p>
-		<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
+         <html:div><html:p>The BIRT 4.3 Release will follow the Kepler simultaneous release milestone schedule.
+		  </html:p>			
+			<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
 			database</html:a>. The bugzilla database will be updated on an ongoing basis as the plan progresses.</html:p>
 		</html:div>
       </p:preamble>
@@ -31,14 +33,16 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
       <p:milestone date="6/7/2013" milestone="RC3"><html:div>4.3 RC3</html:div></p:milestone>
       <p:milestone date="6/14/2013" milestone="RC4"><html:div>4.3 RC4</html:div></p:milestone>
       <p:milestone date="6/26/2013" milestone="Release"><html:div>4.3 Release</html:div></p:milestone>
+      
    </p:release_milestones>
-<p:target_environments>
+
+ <p:target_environments>
      	<html:p>In order to remain current, each release of an Eclipse project targets reasonably current versions of underlying operating environments and
 		other Eclipse projects on which it depends.</html:p>
 		<html:p>Most of Eclipse, and all of BIRT, is "pure" Java code and has no direct dependence on the underlying operating system. For BIRT, the chief
 		dependence is on the Eclipse Platform, Graphical Editor Framework (GEF), Modeling Framework (EMF), and on the Java 2 Platform that runs it. </html:p>
 		<html:p>The Eclipse BIRT 4.3 release depends on the following compatibility stacks:</html:p>
-		
+
 		<html:p><html:b>BIRT 4.3 Reference Stack for Java SE 7</html:b></html:p>
 		<html:ul>
   		<html:li>Java SE 7</html:li>
@@ -50,6 +54,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		</html:ul>
 
 		<html:p><html:b>BIRT 4.3 Reference Stack for Java SE 6</html:b></html:p>
+
 		<html:ul>
   		<html:li>Java SE 6</html:li>
   		<html:li>Eclipse Platform Runtime Binary 4.3</html:li>
@@ -59,8 +64,12 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
   		<html:li>Web Tools Project (WTP) 3.5</html:li>
 		</html:ul>
 
-		<html:p>The Eclipse Platform and BIRT run in a variety of operating environments. Testing is focused on a handful of popular combinations of operating system and Java 2 Platform; these are our reference platforms. Eclipse BIRT undoubtedly runs fine in many operating environments beyond the reference platforms we test. However, since we do not systematically test them we cannot vouch for them. Problems encountered when running Eclipse BIRT on non-reference platforms that cannot be recreated on any reference platform will be given lower priority than problems with running Eclipse BIRT on a reference platform.
-                </html:p>
+		
+		<html:p>The Eclipse Platform and BIRT run in a variety of operating environments. Testing is focused on a handful of popular combinations
+		of operating system and Java 2 Platform; these are our reference platforms. Eclipse BIRT undoubtedly runs fine in many
+		operating environments beyond the reference platforms we test. However, since we do not systematically test them we cannot vouch for them. Problems encountered
+		when running Eclipse BIRT on non-reference platforms that cannot be recreated on any reference platform will be given lower priority than problems with
+		running Eclipse BIRT on a reference platform.</html:p>
 
 		<html:p>For BIRT 4.3, the project team plans to tests and validate the following reference platforms:</html:p>
 		<html:table style="width: 825px; height: 188px;" border="1">
@@ -87,7 +96,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		      CENTOS 6.3</html:td>
 		      <html:td width="76">Intel x86</html:td>
 		      <html:td width="59">GTK</html:td>
-		      <html:td width="453">Oracle Java SE 6.0, 7.0</html:td>
+		      <html:td width="453">Oracle Java SE 6, 7</html:td>
 		    </html:tr>
 		  </html:tbody>
 		</html:table>
@@ -201,6 +210,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		</html:table>
 		<html:br />
 
+
 		<html:span style="font-weight: bold;"><html:a name="CommunityOperatingEnvironments" id="CommunityOperatingEnvironments">Community
 		Tested Operating Environments</html:a></html:span>
 		<html:p>Due to the finite resources available to the BIRT project, we would like to encourage the BIRT community to contribute to testing BIRT in
@@ -251,6 +261,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
 		single release much less with an earlier releases.</html:p>
 	</html:div>
    </p:compatibility_with_previous_releases>
+
    <p:themes_and_priorities>
      <p:preamble>
          <html:div>
@@ -304,6 +315,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
         <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403403"></p:proposed>      	
      </p:theme>
    </p:themes_and_priorities>
+
    <p:appendix name=": Help Wanted">
      <html:div>We welcome any contributions from the community towards the BIRT project. This help can be in the form of adding new functionality to BIRT, 
      submitting bug fixes/enhancements to the current BIRT code and testing BIRT on new platforms. 
@@ -312,4 +324,5 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
      For more information on how you can contribute to the BIRT project, refer to <html:a href="http://www.eclipse.org/birt/phoenix/project/contribute.php">How to Contribute to the BIRT Project</html:a>
      </html:div>
    </p:appendix>	
+
 </p:plan>
