@@ -276,43 +276,43 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
                 This project provides the ability for BIRT developers to access data contained in MongoDB, a popular NoSQL repository.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402794"></p:proposed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402794%2C402794"></p:proposed>
      </p:theme>
      <p:theme name="Support access to Apache Cassandra">
         <p:description>
         	<html:div>This project provides the ability for BIRT developers to access data in Apache Cassandra.
         	</html:div>
         </p:description>
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402795"></p:proposed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402795%2C402795"></p:proposed>
      </p:theme>
      <p:theme name="Office 2010 PowerPoint and Word Emitters">
         <p:description>
         	<html:div>This project aims to provide the developer with the ability to output BIRT reports in Office 2010 PowerPoint and Word formats.
         	</html:div>
 	</p:description>  
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402796"></p:proposed>      	
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402797"></p:proposed>      	
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402796%2C402796"></p:proposed>
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402797%2C402797"></p:proposed>
      </p:theme>
      <p:theme name="Enhanced Microsoft Excel Emitter">
         <p:description>
         	<html:div>This project aims to provide the developer with an enhanced Microsoft Excel emitter.
         	</html:div>
 	</p:description>  
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402962"></p:proposed>      	
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402962%2C402962"></p:proposed>
      </p:theme>
      <p:theme name="Easy to Access POJO's">
         <p:description>
         	<html:div>This project makes it easy for BIRT developers to access data from POJO data sources.
         	</html:div>
 		</p:description>        	
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402798"></p:proposed>      	
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=402798%2C402798"></p:proposed>
      </p:theme>
      <p:theme name="Support Easy Inclusion of Client Side JavaScript Libraries">
         <p:description>
         	<html:div>This project makes it easy for advanced BIRT developers to include JavaScript libraries in a BIRT report.
         	</html:div>
 		</p:description>        	
-        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403403"></p:proposed>      	
+        <p:proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=403403%2C403403"></p:proposed>
      </p:theme>
    </p:themes_and_priorities>
 
