@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
-<!--<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>-->
+<!--<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Business Intelligence and Reporting Tools (BIRT)">
    <p:release projectid="birt" version="4.3"/>
    <p:introduction><html:div><html:p>This document lays out the feature and API set for the next feature release of the Eclipse BIRT project after 4.2, designated release 4.3.</html:p>
@@ -20,8 +20,7 @@ is without having to understand the nitty-gritty detail.</html:p><html:p>Please 
          <html:div>
 		  <html:p>The BIRT 4.3 Release will follow the Kepler simultaneous release milestones schedule.
 		  </html:p>
-			<html:p>Our target is to complete and release BIRT 4.3 with the Kepler Coordinated release.</html:p>
-			<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
+		<html:p>For information about new features assigned to each milestone please refer to the <html:a href="https://bugs.eclipse.org/bugs">bugzilla
 			database</html:a>. The bugzilla database will be updated on an ongoing basis as the plan progresses.</html:p>
 		</html:div>
       </p:preamble>
