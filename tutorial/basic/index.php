@@ -6,9 +6,9 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
 
-global $birtPath;
-$birtPath = "../../";
-require $birtPath . "include/viewer.inc";
-viewer( "tutorial/basic" );
-
+//global $birtPath;
+//$birtPath = "../../";
+//require $birtPath . "include/viewer.inc";
+//viewer( "tutorial/basic" );
+Header("Location: /birt/phoenix/tutorial")
 ?>
