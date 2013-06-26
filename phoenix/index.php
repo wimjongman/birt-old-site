@@ -51,18 +51,18 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB4-2-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB4-3.jpg"></a>
 	</td>
 	<td>
-	Get started with the newest major release, BIRT 4.2.2
+	Get started with the newest major release, BIRT 4.3.0
 	</td>
 	</tr>	
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads/index3.7.2.php"><img src="DB3-7-2.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads/index4.2.2.php"><img src="DB4-2-2.jpg"></a>
 	</td>
 	<td>
-	Get started with the latest in the BIRT 3.7.2 series.
+	Get started with the latest in the BIRT 4.2.2 series.
 	</td>
 	</tr>
 
