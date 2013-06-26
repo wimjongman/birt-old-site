@@ -56,7 +56,7 @@ For PowerPoint and Word, support for Office 2010 has been added with the inclusi
 
 All of the above export formats are available within the designer, in the viewer, or by using the Report Engine API.
 </p>
-<img src="images/4.3/Emitters_4.3.png"><br>
+<img src="images/4.3/Emitters_4.3.PNG"><br>
 <i>Export Options</i><br><br>
 <img src="images/4.3/PPTX_4.3.png"><br>
 <i>PPTX</i><br><br>
