@@ -83,15 +83,15 @@ You would create a POJO data source/set by following these steps:<br><br>
 Create a new data source, selecting the POJO type.<br>
 Then, hit next and add your POJO jar file so BIRT can locate your class files.
 </p>
-<img src="images/4.3/POJODataSourceAddJar_4.3.png"><br>
+<img src="images/4.3/POJODataSourceAddJar_4.3.png"><br><br>
 <p>Test your connection and then select finish.<br><br>
 
 Next, we create a new data set using our POJO data source and choose our CustomerDataset.java class.</p>
-<img src="images/4.3/POJODataSetRuntimeProperties_4.3.png"><br>
+<img src="images/4.3/POJODataSetRuntimeProperties_4.3.png"><br><br>
 <p>Then, select the column mapping class used to define the data set columns and hit next.</p>
-<img src="images/4.3/POJODataSetClassStructure_4.3.png"><br>
+<img src="images/4.3/POJODataSetClassStructure_4.3.png"><br><br>
 <p>Select the columns that you want to include in your data set.</p>
-<img src="images/4.3/POJODataSetColumnMappings_4.3.png"><br>
+<img src="images/4.3/POJODataSetColumnMappings_4.3.png"><br><br>
 <p>Finally, hit finish and preview your results.</p>
 <img src="images/4.3/POJODataSetResultSet_4.3.png"><br><br>
 
@@ -107,7 +107,7 @@ BIRT connects to and queries a Cassandra data source using the Hector API. You m
 
 With the Hector jars copied in, you can now create your data source by selecting the Cassandra Scripted Data Source data source type and clicking finish.  Then, create your Scripted Data Set by creating a new data set using the scripted data source and then defining your fields.  Now that you've created your data set, you can now write your script.  To get started with this, select your data set in the Data Explorer and then the Script tab under the design layout window.
 </p>
-<img src="images/4.3/CassandraScriptedDataSet_4.3.png"><br>
+<img src="images/4.3/CassandraScriptedDataSet_4.3.png"><br><br>
 <p>
 Now, you just need to connect to your data using the open script function and then map your data to your rows you defined in the fetch script.  To test your data set, open the data set and choose the preview results.
 </p>
@@ -120,11 +120,11 @@ To create a MongoDB data set, follow these steps:<br><br>
 
 First, choose to create a new data source and choose the MongoDB Data Source and hit next.  Then, you'll input your connection information, test your connection, and hit finish.
 </p>
-<img src="images/4.3/MongoDBODAConnection_4.3.png"><br>
+<img src="images/4.3/MongoDBODAConnection_4.3.png"><br><br>
 <p>
 Now that you have your source set up, you'll use it to create a new data set.  In the data set wizard, select the mongoDB data source and hit next.  Then, choose the collection you wish to use and select your fields.  You can also set up command operations for MapReduce, Aggregate, or Run Database Command.
 </p>
-<img src="images/4.3/MongoDBDataSet_4.3.png"><br>
+<img src="images/4.3/MongoDBDataSet_4.3.png"><br><br>
 <p>
 Once you've selected the fields you want and set up your desired command operations, hit finish and preview your results.
 </p>
@@ -134,15 +134,15 @@ Once you've selected the fields you want and set up your desired command operati
 <p>
 BIRT 4.3 introduces the use of head.js to allow for easy inclusion of JavaScript libraries.  To use this feature simply go to the script tab after selecting an empty spot in your report.  When here, choose "clientScripts" from the drop down.
 </p>
-<img src="images/4.3/JSLoaderClientScripts_4.3.png"><br>
+<img src="images/4.3/JSLoaderClientScripts_4.3.png"><br><br>
 <p>
 Here you'll write a head.js script to load your JavaScript libraries.  The head.js call uses the format head.js(file1,file2,...,[callback]);  This will look something like the following:
 </p>
-<img src="images/4.3/JSLoaderClientInitialize_4.3.png"><br>
+<img src="images/4.3/JSLoaderClientInitialize_4.3.png"><br><br>
 <p>
 In a HTML text box in your report layout, you'll write your script that uses the JavaScript library you've included.  Using head.js's head.ready() function to run your script after all the JavaScript libraries have been loaded will look something like this:
 </p>
-<img src="images/4.3/JSLoaderHTMLTextScript_4.3.png"><br>
+<img src="images/4.3/JSLoaderHTMLTextScript_4.3.png"><br><br>
 <p>
 Once completed, you can run your report and see the easy client-side use of your external JavaScript library.
 </p>
