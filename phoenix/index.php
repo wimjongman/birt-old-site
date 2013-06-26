@@ -378,6 +378,16 @@
                         <ul>
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 4.3
+                                        </a>
+                                         has been officially released.  To discover what is available, see the
+                                         <a href="project/notable4.3.php">Notable Features - BIRT 4.3</a>.
+                                        <span class="dates">
+                                                06/26/13
+                                        </span>
+                                </li>
+                                <li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 4.2.2
                                         </a>
                                          has been officially released. 
@@ -451,16 +461,7 @@
                                         <span class="dates">
                                                 02/28/11
                                         </span>
-                                </li>                          
-                                <li>
-                                        <a href="http://www.birt-exchange.com/birt-roadshows">
-                                               Introductory BIRT Roadshow 
-                                        </a>
-                                         - FREE Software & Training
-                                        <span class="dates">
-                                                02/02/11
-                                        </span>
-                                </li>                          
+                                </li>                                                    
                     
                                                                      
                                             
