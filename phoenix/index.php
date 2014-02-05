@@ -250,7 +250,7 @@
 					</span>
 				</li>
 				<li>
-					<a href="http://www.birt-exchange.org/org/forum/index.php/blog/6/entry-150-federal-birt-competition/ ">
+					<a href="http://developer.actuate.com/community/forum/index.php/blog/6/entry-150-federal-birt-competition/">
 						Federal BIRT Competition
 					</a>
 					<span class="dates">
