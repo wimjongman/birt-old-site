@@ -234,7 +234,7 @@
 				</li>				
 			
 				<li>
-					<a href="http://www.actuate.com/birt-roadshow-india-contest/ ">
+					<a href="http://www.actuate.com/birt-roadshow-india-contest/">
 						BIRT Contest Announced 
 					</a>
 					<span class="dates">
