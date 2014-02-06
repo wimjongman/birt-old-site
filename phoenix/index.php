@@ -355,7 +355,7 @@
 	<div id="rightcolumn">
   <br/>              
 <a href="http://developer.actuate.com" >
-<img border="0" alt="BIRT-Exchange Home" src="images/ActuateLogo2014.PNG"/>
+<img border="0" alt="BIRT Developer Center" src="images/Actuate_Logo_2014_200px.png"/>
 </a>
 <br/>
 <br/>
