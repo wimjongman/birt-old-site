@@ -72,7 +72,7 @@
 	<a href="birthelp.php"><img src="birthelpwide.jpg"></a>
 	</td>
 	<td>
-	Need help with BIRT?
+	Need help with BIRT? 
 	</td>
 	</tr>
 	</table>
