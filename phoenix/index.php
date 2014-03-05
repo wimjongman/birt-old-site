@@ -51,7 +51,7 @@
 	<table>		
 	<tr>
 	<td>
-	<a href="http://download.eclipse.org/birt/downloads"><img src="DB4-3-1.jpg"></a>
+	<a href="http://download.eclipse.org/birt/downloads"><img src="DB4-3-2.jpg"></a>
 	</td>
 	<td>
 	Get started with the newest major release, BIRT 4.3
@@ -376,6 +376,15 @@
                 
                         <h6>What's New</h6>
                         <ul>
+                        		<li>
+                                        <a href="http://download.eclipse.org/birt/downloads/">
+                                                BIRT 4.3.2
+                                        </a>
+                                         has been officially released. 
+                                        <span class="dates">
+                                                02/28/14
+                                        </span>
+                                </li>
                                 <li>
                                         <a href="http://download.eclipse.org/birt/downloads/">
                                                 BIRT 4.3.1
@@ -462,7 +471,7 @@
                                                 06/22/11
                                         </span>
                                 </li>                         
-                                                                                    
+                            </ul>                                                        
                     
                                                                      
                                             
