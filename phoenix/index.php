@@ -35,6 +35,10 @@
 
 	# End: page-specific settings
 	#
+
+	# Paste your HTML content between the EOHTML markers!
+	$html = <<<EOHTML
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW8LFV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,12 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PW8LFV');</script>
 <!-- End Google Tag Manager -->
-	# Paste your HTML content between the EOHTML markers!
-	$html = <<<EOHTML
-
-
-
-
 
 
 <div id="maincontent">
