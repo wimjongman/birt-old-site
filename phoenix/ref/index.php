@@ -22,6 +22,16 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW8LFV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PW8LFV');</script>
+<!-- End Google Tag Manager -->
+
 <div id="maincontent">
 	<div id="midcolumn">
 
@@ -47,16 +57,16 @@
 		<ul class="midlist">
 			<li>
 				Documentation is not yet done for the Style element and its properites.
-			<\li>
+			</li>
 			<li>
 				Some elements have no documenation at all.
-			<\li>
+			</li>
 			<li>
 				Some elements are not in Release 1. These show up in the index, but are not yet flagged as "reserved."
-			<\li>
+			</li>
 			<li>
 				Some of the wording needs correction and improvement.
-			<\li>
+			</li>
 			<li>
 				Overview text from the ROM specs are not yet incorporated. Refer to the ROM Specs below for this overview material.
     		</li>
@@ -67,13 +77,13 @@
     	<ul class="midlist">
     		<li>
 				A "Since" field indicates if the element or property is in Release 1.0, or is "reserved" for a future release.
-			<\li>
+			</li>
 			<li>
 				Alphabetical index of structures and elements.
-			<\li>
+			</li>
 			<li>
 				Lots of details such as data types, XML names, choice details, JavaScript types, etc.
-			<\li>
+			</li>
 			<li>
 				Auto-generated from the implementation: prevents the specs from being out of sync with respect to the code.
 			</li>
