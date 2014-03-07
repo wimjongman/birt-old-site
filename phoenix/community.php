@@ -25,6 +25,16 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW8LFV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PW8LFV');</script>
+<!-- End Google Tag Manager -->
+
 <div id="maincontent">
 	<div id="midcolumn">
 
@@ -117,15 +127,14 @@ into your bug report, preferably as a file attachment.
 <h2>External Resources</h2>
 		<ul class="midlist">
 				<li>
-<a href=http://www.birt-exchange.com>BIRT Exchange</a> is a community site where BIRT users can share ideas, technical tips and code snippets, as well as download software, documentation and examples.
+<a href=http://developer.actuate.com>BIRT Developer Center</a> is a developer site where BIRT users can find guides and documentation, share ideas, technical tips and code snippets, as well as download software, documentation and examples.
 </li><li>
-<a href=http://www.birt-exchange.com/modules/wfdownloads/index.php?contenttype=-1 >BIRT Exchange DevShare</a> – Browse the repository of developer-contributed report designs, code samples, tutorials and articles
+<a href=http://developer.actuate.com/community/devshare>BIRT Exchange DevShare</a> – Browse the repository of developer-contributed report designs, code samples, tutorials and articles
 </li><li>
-<a href=http://www.birt-exchange.com/modules/documentation/>Documentation</a> – Access and download online versions of BIRT documentation
+<a href=http://developer.actuate.com/design-center/creating-birt-designs/>Design Guides</a> – Access guides and documentation for creating BIRT designs.
 </li><li>
-<a href=http://www.birt-exchange.com/register.php?subflag=1 >BIRT Report Newsletter</a> – Subscribe to the monthly newsletter to get BIRT tips and tricks emailed to you
-
-				</li>
+<a href=http://developer.actuate.com/deployment-center/deployment-guides/>Deployment Guides</a> – Access guides and documentation for deploying BIRT applications.
+</li>
 				<li>
 				<a href=http://birtworld.blogspot.com>BIRT World</a> is a blog covering all things related to BIRT with frequent contributions from Jason Weathersby and Scott Rosenbaum
 				</li>
