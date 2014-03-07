@@ -22,6 +22,16 @@
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW8LFV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PW8LFV');</script>
+<!-- End Google Tag Manager -->
+
 <div id="maincontent">
 	<div id="midcolumn">
 
@@ -49,9 +59,7 @@
 
 		<h2><a name="demo">BIRT Demo</a></h2>
 		<p>
-			<a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT2.1Demo/EclipseDemo.html" target="_blank" class="top">BIRT Demo</a>
-			–
-			This demonstration is a Flash presentation of BIRT that showcases some
+			<a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT2.1Demo/EclipseDemo.html" target="_blank" class="top">BIRT Demo</a> - This demonstration is a Flash presentation of BIRT that showcases some
 			of its powerful features including summary and line graphs, JavaScript
 			for dynamic images, style usage, highlighting, grouping and detail
 			drill down..
@@ -61,23 +69,23 @@
 		<h2><a name="examples"></a>Examples</h2>
 		<ul class="midlist">
 			<li>
-				<a href="/birt/phoenix/examples/solution">Solution Reports</a> –
+				<a href="/birt/phoenix/examples/solution">Solution Reports</a> -
 				This section contains several example solution reports, such as Business Forms.
 			</li>
 			<li>
-				<a href="/birt/phoenix/examples/reports">Reporting Feature Examples</a> –
+				<a href="/birt/phoenix/examples/reports">Reporting Feature Examples</a> -
 				This section demonstrates features and functions of the BIRT Report Designer.
 			</li>
 			<li>
-				<a href="/birt/phoenix/examples/scripting">Scripting</a> –
+				<a href="/birt/phoenix/examples/scripting">Scripting</a> -
 				This section contains examples of scripting within the BIRT Designer
 			</li>
 			<li>
-				<a href="/birt/phoenix/examples/integrating">Integrating BIRT</a> –
+				<a href="/birt/phoenix/examples/integrating">Integrating BIRT</a> -
 				This section demonstrates several examples of deploying and using the APIs of BIRT
 			</li>
 			<li>
-				<a href="/birt/phoenix/examples/extending">Extending BIRT</a> –
+				<a href="/birt/phoenix/examples/extending">Extending BIRT</a> -
 				This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc
 			</li>
 		</ul>
