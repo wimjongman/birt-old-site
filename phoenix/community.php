@@ -129,11 +129,11 @@ into your bug report, preferably as a file attachment.
 				<li>
 <a href=http://developer.actuate.com>BIRT Developer Center</a> is a developer site where BIRT users can find guides and documentation, share ideas, technical tips and code snippets, as well as download software, documentation and examples.
 </li><li>
-<a href=http://developer.actuate.com/community/devshare>BIRT Developer Center DevShare</a> – Browse the repository of developer-contributed report designs, code samples, tutorials and articles
+<a href=http://developer.actuate.com/community/devshare>BIRT Developer Center DevShare</a> - Browse the repository of developer-contributed report designs, code samples, tutorials and articles
 </li><li>
-<a href=http://developer.actuate.com/design-center/creating-birt-designs/>Design Guides</a> – Access guides and documentation for creating BIRT designs.
+<a href=http://developer.actuate.com/design-center/creating-birt-designs/>Design Guides</a> - Access guides and documentation for creating BIRT designs.
 </li><li>
-<a href=http://developer.actuate.com/deployment-center/deployment-guides/>Deployment Guides</a> – Access guides and documentation for deploying BIRT applications.
+<a href=http://developer.actuate.com/deployment-center/deployment-guides/>Deployment Guides</a> - Access guides and documentation for deploying BIRT applications.
 </li>
 				<li>
 				<a href=http://birtworld.blogspot.com>BIRT World</a> is a blog covering all things related to BIRT with frequent contributions from Jason Weathersby and Scott Rosenbaum
