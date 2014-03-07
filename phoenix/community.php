@@ -112,7 +112,7 @@ If you encounter a problem such as "An error occurred", or failure to open views
 editors, please attach your Eclipse log file. To see the exception, use
 Window&rarr;Show View&rarr;Other. Open the PDE Runtime group and choose Error Log.
 Within the error log window, find the BIRT exception (if any) that just occurred.
-Double click on the error in question and you’ll see a stack trace. Paste that
+Double click on the error in question and you'll see a stack trace. Paste that
 into your bug report, preferably as a file attachment.
 
 		<ul class="midlist">
