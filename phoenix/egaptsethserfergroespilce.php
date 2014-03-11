@@ -1,3 +1,5 @@
 <?php 
-die($_SERVER['DOCUMENT_ROOT']);
+echo 'docroot: '.$_SERVER['DOCUMENT_ROOT'].'<br />';
+echo 'dir: '. __DIR__  .'<br />';
+die('test');
 ?>
