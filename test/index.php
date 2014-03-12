@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+echo $_SERVER['DOCUMENT_ROOT'];
+die('<br />test');
+
 require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/common/config.php");
 $PagePart 	= new PagePart();
 
