@@ -8,7 +8,7 @@
 	-
 ********************************************/
 			
-	$basePath = '/birt/test';
+	$basePath = '/birt/test/';
 
 	/* Use URL that you are currently on */ 
 	$currentUrl = "";
