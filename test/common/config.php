@@ -1,5 +1,4 @@
 <?php 
-die('test here');
 /******************************************* 
 	Things that you will need to configure before pushing environment. 
 	-Set basePath
