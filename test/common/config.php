@@ -74,7 +74,7 @@ class PagePart {
 
 		$sideMenu = '';
 		$sideMenu = '
-			<a href="/birt/"><img src="'.$basePath.'/img/logo/birt-logo.png" class="actu-birt-logo"/></a>
+			<a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
 			<div class="actu-eclipse-container">
 				<div class="actu-eclipse-container-inner">	
 					<ul class="actu-eclipse-nav">
