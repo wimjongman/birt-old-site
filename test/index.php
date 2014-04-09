@@ -1,6 +1,6 @@
 <?php
  if ($REMOTE_ADDR != "72.209.186.124") { 
- echo $REMOTE_ADDR; 
+ echo $_SERVER['REMOTE_ADDR']; 
  exit(); 
 } 
 session_start();
