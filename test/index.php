@@ -1,4 +1,8 @@
 <?php
+if (($REMOTE_ADDR,0,3) != "69.1.81.170") { 
+ echo "You are not allowed!"; 
+ exit(); 
+} 
 session_start();
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
