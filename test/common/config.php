@@ -1,4 +1,8 @@
 <?php 
+if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") { 
+ echo "You don't have access to view this page!"; 
+ exit(); 
+}
 /******************************************* 
 	Things that you will need to configure before pushing environment. 
 	-Set basePath
@@ -74,25 +78,17 @@ class PagePart {
 
 		$sideMenu = '';
 		$sideMenu = '
-			<a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
+			<a href="/birt/test/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
 			<div class="actu-eclipse-container">
 				<div class="actu-eclipse-container-inner">	
 					<ul class="actu-eclipse-nav">
-						<li><a href="#">Introduction</a></li>
+						<li><a href="#">About</a></li>
 						<li><a href="#">Download</a></li>
-						<li><a href="#">Install</a></li>
-						<li><a href="#">Tutorial</a></li>
-						<li><a href="#">Sample Database</a></li>
-						<li><a href="#">Examples</a></li>
-						<li><a href="#">Integration</a></li>
-						<li><a href="#">FAQ/Wiki</a></li>
-						<li><a href="#">Report a Bug</a></li>
 						<li><a href="#">Community</a></li>
-						<li><a href="#">Reference</a></li>
-						<li><a href="#">Project Organization</a></li>
-						<li><a href="#">Project Development Plan</a></li>
-						<li><a href="#">Building BIRT</a></li>
-						<li><a href="#">Introduction</a></li>
+						<li><a href="#">Getting Started</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Demos</a></li>
+						<li><a href="#">Built with BIRT</a></li>
 					</ul>
 					<hr>
 					<a href="http://www.actuate.com/" ><img src="'.$basePath.'/img/logo/actuate-logo.png" /></a>
