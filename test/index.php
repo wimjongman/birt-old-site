@@ -1,5 +1,5 @@
 <?php
-echo $REMOTE_ADDR; 
+ 
 session_start();
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
@@ -32,7 +32,8 @@ $PagePart 	= new PagePart();
 
 <body>
 
-<?php echo $PagePart->getAfterBody(); ?>
+<?php echo $REMOTE_ADDR;
+ echo $PagePart->getAfterBody(); ?>
 
 <div style="background-color:#f4f4f4;">
 	<div class="content-area">
