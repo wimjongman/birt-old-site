@@ -62,34 +62,9 @@ $PagePart 	= new PagePart();
 				</div>
 			</div>
 
-
-			<div class="dev-main eclipse-main bord-blue">
-				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">Who is Using BIRT?</h1>
-					<img src="<?php $basePath ?>img/logo/companies/ibm-logo.png" style="margin-right:50px;"/>
-					<img src="<?php $basePath ?>img/logo/companies/infor-logo.png" style="margin-right:50px;"/>
-					<img src="<?php $basePath ?>img/logo/companies/army-logo.png" style="margin-right:50px;"/>
-					<img src="<?php $basePath ?>img/logo/companies/cisco-logo.png" style="margin-right:50px;"/>
-					<img src="<?php $basePath ?>img/logo/companies/suzuki-logo.png" />
-					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
-					<p>
-						<ul class="eclipse-casestudy">
-							<li><span class="eclipse-casestudy-icon"><img src="<?php $basePath ?>img/icons/document-icon.png" /></span><span class="eclipse-casestudy-text"><a href="http://www.actuate.com/be/download/AssetWorks.pdf">How Government Agencies and Universities Keep up to date on their facility needs, with the help of AssetWorks</a><span></li>
-							<li><span class="eclipse-casestudy-icon"><img src="<?php $basePath ?>img/icons/document-icon.png" /></span><span class="eclipse-casestudy-text"><a href="#">Telecom Provider Leverages Actuate Platform to Drive Sales Performance and Profitability</a></span></li>
-							<li><span class="eclipse-casestudy-icon"><img src="<?php $basePath ?>img/icons/document-icon.png" /></span><span class="eclipse-casestudy-text"><a href="#">Telecom Provider Leverages Actuate Platform to Drive Sales Performance and Profitability</a></span></li>
-						</ul>
-					</p>
-					<div class="clearfix"></div>
-
-					
-				</div>
-			</div>
-
-
-
 			<div class="dev-main eclipse-main bord-yellow">
 				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">Learn More</h1>
+					<h1 class="eclipse-title-main">BIRT Buzz</h1>
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
