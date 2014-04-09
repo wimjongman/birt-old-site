@@ -1,5 +1,8 @@
 <?php
- 
+ if ($REMOTE_ADDR != "72.209.186.124") { 
+ echo $REMOTE_ADDR; 
+ exit(); 
+} 
 session_start();
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
@@ -32,8 +35,7 @@ $PagePart 	= new PagePart();
 
 <body>
 
-<?php echo $REMOTE_ADDR;
- echo $PagePart->getAfterBody(); ?>
+<?php echo $PagePart->getAfterBody(); ?>
 
 <div style="background-color:#f4f4f4;">
 	<div class="content-area">
