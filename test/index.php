@@ -1,5 +1,5 @@
 <?php
-if (($REMOTE_ADDR,0,3) != "69.1.81.170") { 
+if (($REMOTE_ADDR,0,3) != "72.209.186.124") { 
  echo "You are not allowed!"; 
  exit(); 
 } 
