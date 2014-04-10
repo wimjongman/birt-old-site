@@ -55,16 +55,17 @@ $PagePart 	= new PagePart();
 					<div class="topic-menu topic-menu-right">
                 
 		                <div class="topic-menu-title">Page Contents</div>
-		                <ol>
-		                    <li><a href="#designerinstall">Designer Install</a></li>
-		                    <li><a href="#frameworkinstall">Framework Designer Install</a></li>
-		                    <li><a href="#jdbcdriver">JDBC Drivers</a></li>
-		                    <li><a href="#updatebirtinstall">Updating a BIRT Installation</a></li>
-		                    <li><a href="#deploytojava">Deploying to Java EE Server</a></li>
-		                    <li><a href="#birtlanguage">Installing BIRT Language Packs on Windows</a></li>
-		                    <li><a href="#commonproblems">Common Problems</a></li>
-		                </ol>
-
+		                <ul>
+		                    <li><a href="'.$basePath.'/about/">What is BIRT?</a></li>
+		                    <li><a href="'.$basePath.'/about/design.php">BIRT Design Overview</a></li>
+		                    <li><a href="'.$basePath.'/about/architecture.php">Architecture Overview</a></li>
+		                    <li><a href="'.$basePath.'/about/designer.php">Designer Overview</a></li>
+		                    <li><a href="'.$basePath.'/about/customization.php">Customization Overview</a></li>
+		                    <li><a href="'.$basePath.'/about/extensibility.php">Extensibility Overview</a></li>
+		                    <li><a href="'.$basePath.'/about/project-organization.php">Project Organization</a></li>
+		                    <li><a href="'.$basePath.'/about/project-plan.php">Project Development Plan</a></li>
+		                    <li><a href="'.$basePath.'/about/birt-and-actuate.php">BIRT and Actuate</a></li>		                    
+		                </ul>
 			        </div>
 
 			        <a name="designerinstall"></a>
