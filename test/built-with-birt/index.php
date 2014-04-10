@@ -50,7 +50,7 @@ $PagePart 	= new PagePart();
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">Pre-Requisites and Detailed Installation Instructions for BIRT</h1>
+					<h1 class="eclipse-title-main">Built with BIRT</h1>
 					
 					<div class="topic-menu topic-menu-right">
                 
