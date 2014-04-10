@@ -69,98 +69,63 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-			        <a name="designerinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Designer Install</h2>
-					<p>BIRT can be downloaded and installed in different ways.
+					<h2 class="topic-section-header padding-top-small">Data Customization</h2>
+					<p>Reports often require additional business logic to prepare data for presentation. BIRT provides a number of tools to help:
 					<ul class="eclipse-list">
-						<li>The complete BIRT designer or RCP Designer can be installed by downloading the required package here.</li>
-						<li>or by downloading the Eclipse IDE for Java and Report Developers Package</li>
-						<li>or through the update manager as described here. Make sure to use the latest Update Site.<br />Update Manager URLs </li>
-						<li>as a package that only contains the BIRT plugins (Framework) from the download page. Note additional requirements are located on the download page as well. These include dependencies on other Eclipse projects. These dependencies are listed on the download page for the specific build.</li>
+						<li>Computed Columns - Databases organize data for storage, but often data must be combined to prepare it for presentation. Computed columns let you define additional data set columns based on business logic. The logic can be a simple expression, a script, or a call to existing Java logic.</li>
+						<br />
+						<li>Input and Output Parameters - Many data sources support parameters: the ability to pass data into or out of a query. For example, SQL Select statements can include input parameters. Stored procedures can have both input and output parameters.</li>
+						<br />
+						<li>Column Meta-data - You can provide column aliases when the names provided by the data source are unintuitive.</li>
+						<br />
+						<li>Filtering - Some data sources, especially SQL, provide excellent built-in filtering features. However, some data sources (flat files, application objects) may not provide filtering. In other cases, the filter conditions are defined in scripts or Java code. You can define such filters as part of the report, and the BIRT engine will apply them automatically.</li>
+						<br />
+						<li>Scripted Data Sets - Some reports require access to specialized or unusual data. You can create such access in Java or scripts and use the scripted data set to integrate that logic into your report.</li>
 					</ul>
 					</p>
-					<p>All of the above downloads contain the BIRT designer. The BIRT project has many additional downloads, including a runtime for deploying the BIRT engine in a web application or standalone Java application. The additional downloads are available for any build of BIRT by selecting the appropriate build here.</p>
-					<p>Once you have downloaded one of the above packages, unzip the package into your chosen directory. This will create an eclipse directory that contains eclipse.exe. Run eclipse.exe to start the designer.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Create a windows short cut</h2>
+					<h2 class="topic-section-header padding-top-small">Conditional Formatting</h2>
+					<p>While some reports have a fixed format, others require conditional formatting. For example, a report that lists transactions may want to present a sale differently than a return. Or, a customer service report may want to show colors that indicate which metrics are above, at or below plan. BIRT provides several conditional formatting features:
 					<ul class="eclipse-list">
-						<li>From the desktop, right click, choose New→Shortcut.</li>
-						<li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)</li>
-						<li>Click Next.</li>
-						<li>Enter "Eclipse" for the shortcut name.</li>
+						<li>Conditional Visibility - You can hide report elements based on data. In the transaction report above, you can create sections for both sales and return transactions, then hide the one that is not required for a given record.</li>
+						<br />
+						<li>Value Mapping - Database data often uses code values: M/F for male or female, 1/2 for sales and returns, etc. Value mapping lets you define a mapping from database value to display value. For example, we can map the value "1" to "Sale" and the value "2" to "Return."</li>
+						<br />
+						<li>Highlighting - Simple expressions let you select the style to apply to a given report item. For example, in the customer service report, we can use green to show metrics above plan, and red to show those below plan.</li>
 					</ul>
+					</p>
 					
-					<a name="frameworkinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Framework Designer Install</h2>
-					<p>As stated above, the framework install only contains the required BIRT plugins. The Framework install requires that you already have the Eclipse Platform, GEF, EMF, DTP and WTP packages. The specific version of each, is listed on the specific build's download page. Unzip each package into your eclipse directory.</p>
-
-					<h2 class="topic-section-header padding-top-small">Optional Eclipse Link File</h2>
-					<p>If you are installing the framework, you can download the BIRT framework and unzip the contents to any directory.</p>
+					<h2 class="topic-section-header padding-top-small">Scripting</h2>
+					<p>BIRT provides scripting based on JavaScript (formally known as ECMAScript). JavaScript is often thought of as a client-side scripting language, but it works just as well on a server for expressing report logic. In particular, JavaScript provides excellent integration with your existing Java logic, making it very simple to call your logic from BIRT reports.</p>
+					<p>BIRT provides a complete set of JavaScript objects to access the Report Object Model: a representation of both the design and runtime aspects of your report, allowing complete control of the report to handle even the most complex report formatting tasks.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Java Event Coding</h2>
+					<p>In addition to JavaScript, event handlers can be coded in Java. BIRT supplies a set of interfaces for report item creation and data collection. Once the event handler is written in Java and associated with a report element, the report can be debugged through the Eclipse Java Development Tools.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Project Management</h2>
+					<p>BIRT integrates with the Eclipse project management features to organize related reports. BIRT also works with Eclipse CVS support for source management. BIRT's XML report design format makes it easy to compare two reports, or two versions of the same report, to track changes.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Styles</h2>
+					<p>Anyone who has designed a web page knows that the same visual styles get used over and over. Cascading Style Sheets (CSS) allow web designers to extract style information from content, and to reuse style over and over.</p>
+					<p>BIRT provides a similar style feature. Indeed, BIRT styles are based on CSS styles, making BIRT's visual properties familiar to web application developers. BIRT styles cascade, allowing you to set a style in one place and have it affect the entire report, a section of the report, or a single report item. BIRT also allows importing or referencing of existing Cascading Style Sheets.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Libraries</h2>
+					<p>Typical applications include many related reports. A simple customer application may include an alphabetical customer listing, customers sorted by geography, customers assigned to specific sales reps, customers filtered by status and more. In general, users frequently want another variation to solve specific business needs.</p>
+					<p>The result is that reporting applications consist of suites of closely related reports. The same data sources, styles, business logic, report items and more are used across many reports.</p>
+					<p>BIRT supports libraries that organize these shared resources. Libraries can contain any report element including styles, data sources, report items, scripts and so on.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Internationalization</h2>
+					<p>The web allows worldwide access to your application. BIRT provides excellent support for internationalization and localization.</p>				
 					<ul class="eclipse-list">
-						<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse\links).</li>
-						<li>Within this directory create a file with a unique name like birt.link.</li>
-						<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt)</li>
-					</ul>
-
-					<a name="jdbcdriver"></a>
-					<h2 class="topic-section-header padding-top-small">JDBC Drivers</h2>
-					<p>You will likely want to use your own JDBC driver with BIRT. Use the data source editor's JDBC driver management wizard. To start the wizard, open a BIRT report design, go to the Data Explorer view, right click on "Data Sources" and select "New Data Source". Choose "JDBC Data Source" and click "Next". In the next dialog, choose "Manage Drivers..." to bring up the "Manage JDBC Drivers" dialog.</p>
-					<p>In the "JAR Files" tab, click on "Add..." to add the JAR file required by your JDBC driver. Then go to the "Driver" tab to confirm that the list of drivers includes the new drivers added. You may also want to assign a display name and URL template for the new drivers in this tab.</p>
-
-					<a name="updatebirtinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Updating a BIRT Installation</h2>
-					<p>If you have a version of BIRT installed, and want to install a newer version, do the following:</p>
-					<ul class="eclipse-list">
-						<li>Close Eclipse.</li>
-						<li>Locate your Eclipse plugins directory. If you installed on Windows in the default location, this is "C:\program files\eclipse\plugins".</li>
-						<li>Delete all directories that start with "org.eclipse.birt".</li>
-						<li>Download and install BIRT as described in the BIRT section above.</li>
-						<li>Restart Eclipse with the -clean option: eclipse -clean</li>
-					</ul>
-
-					<a name="deploytojava"></a>
-					<h2 class="topic-section-header padding-top-small">Deploying to Java EE Server</h2>
-					<p>Please see Setting up the BIRT Viewer </p>
-
-					<a name="birtlanguage"></a>
-					<h2 class="topic-section-header padding-top-small">Installing BIRT Language Packs on Windows</h2>
-					<ol class="eclipse-list">
-						<li>Download the Language Pack for the desired product and extract into your eclipse install.</li>
-						<li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.</li>
-						<li>Select the group 1 language you desire from the drop-down combo box.</li>
-						<li>Save changes and restart the system.</li>
-						<li>Launch Eclipse and select Window->Preferences->Report Design->Preview. Select the desired language from the drop-down combo box.</li>
-						<li>Restart Eclipse.</li>
-					</ol>
-
-					<a name="commonproblems"></a>
-					<h2 class="topic-section-header padding-top-small">Common Problems</h2>
-					<p>Some problems are due to cached information within Eclipse. Eclipse caches information about plugins for faster startup. Adding BIRT as we did above may result in stale cached information. Symptoms of this problem include:</p>
-					<ul class="eclipse-list">
-						<li>The BIRT perspective does not appear in Eclipse.</li>
-						<li>You receive "An error occurred" dialogs when opening reports or using the BIRT UI.</li>
-					</ul>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning Cached Plugin Information</h2>
-					<p>The solution is to clean up the cached information. The recommended practice is to start Eclipse with the -clean option:</p>
-					<p>eclipse -clean</p>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning the Cache on Windows</h2>
-					<p>If you are on Windows, and are not familiar with how to invoke Eclipse from the command line, do the following:</p>
-					<ul class="eclipse-list">
-						<li>Choose Start→All Programs→Accessories→Command Prompt</li>
-						<li>Move to the directory where you installed eclipse. If you installed Eclipse in the standard location, enter:
-							<ul class="eclipse-list">
-								<li>cd "\Program Files\eclipse"</li>
-							</ul>
-						</li>
-						<li>Run Eclipse with the -clean option:
-							<ul class="eclipse-list">
-								<li>eclipse -clean</li>
-							</ul>
-						</li>
-						<li>Eclipse will restart. Again check for the BIRT perspective.</li>
-					</ul>
+						<li>Text Localization - You can create a single report that automatically displays strings in the user's language. All labels and report text can be externalized and translated using the standard Java localization rules. At runtime, BIRT uses resource keys to locate the correct translations of your text.</li>
+						<br />
+						<li>Language Packs - Language Packs are available to translate the BIRT offerings into many different languages.</li>
+						<br />
+						<li>Localization - BIRT provides locale-aware data formatting, meaning that a date can appear in mm/dd/yy format for US users, and dd-mm-yy format for Europeans.</li>
+						<br />
+						<li>Dynamic Formatting - Chinese text is very compact, German is often quite lengthy, and English of medium size. BIRT automatically adjusts the size of report items to fit their content to avoid the need to test the report with every possible translation. BIRT works like HTML in this regard: the size of content expands as needed to hold its data.</li>
+						<br />
+						<li>Bidirectional Support - BIRT supports bidirectional(BIDI) formatting for report content. No only can content be formatted RTL or LTR, this feature supports combining both within a single report.</li>
 
 				</div>
 			</div>
