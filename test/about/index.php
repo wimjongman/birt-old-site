@@ -77,7 +77,7 @@ $PagePart 	= new PagePart();
 					
 					<h2 class="topic-section-header padding-top-small">BIRT: The Groundswell</h2>
 					<p>Today, BIRT technology platform is one of the most widely adopted data visualization and reporting technologies with over 12 million downloads and over 2.5M developers across 157 countries. BIRT also has a large, active and growing developer community representing all types of organizations. Major technology companies such as IBM, Cisco, S1 and ABS Nautical Systems have incorporated BIRT into their product lines.</p>
-					<p><a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">Click here to see a list of some BIRT Adopters</a><br /><br /></p>
+					<p><a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">Click here to see a list of BIRT Adopters</a></p>
 
 					<h2 class="topic-section-header padding-top-small">BIRT: The Technology Platform</h2>
 					<p>BIRT has two main components: a visual report designer for creating BIRT Designs, and a runtime component for generating those designs that can be deployed to any Java environment. The BIRT project also includes a charting engine that is both fully integrated into the BIRT designer and can be used standalone to integrate charts into an application.</p>
