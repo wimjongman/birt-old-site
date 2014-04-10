@@ -56,7 +56,7 @@ $PagePart 	= new PagePart();
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> reporting system that integrates with your <span class="eclipse-txt-bloodorange">Java/Java EE</span> application to produce <span class="eclipse-txt-lightgreen">compelling reports.</span></div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="#" class="square-button button-color-yellow" style="margin-right:15px;padding:0 12px;border-bottom-style:none;height:22px;line-height:22px;">Download</a><a href="#" class="square-button button-color-yellow" style="margin-right:15px;padding:0 12px;border-top-style:none;height:22px;line-height:22px;">BIRT 4.3.2</a></td><td>  
-							<a href="#" class="square-button button-color-yellow" style="padding:0 12px;">Actuate Supported Version</a></td></tr></tbody></table></div>
+							<a href="#" class="square-button button-color-yellow" style="padding:0 12px;border-bottom-style:none;height:22px;line-height:22px;">Download Actuate</a><a href="#" class="square-button button-color-yellow" style="padding:0 12px;border-top-style:none;height:22px;line-height:22px;">Supported Version</a></td></tr></tbody></table></div>
 						</div>
 					</div>
 				</div>
