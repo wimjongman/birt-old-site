@@ -82,13 +82,13 @@ class PagePart {
 			<div class="actu-eclipse-container">
 				<div class="actu-eclipse-container-inner">	
 					<ul class="actu-eclipse-nav">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Download</a></li>
-						<li><a href="#">Community</a></li>
-						<li><a href="#">Getting Started</a></li>
-						<li><a href="#">Documentation</a></li>
-						<li><a href="#">Demos</a></li>
-						<li><a href="#">Built with BIRT</a></li>
+						<li><a href="about/">About</a></li>
+						<li><a href="download/">Download</a></li>
+						<li><a href="community/">Community</a></li>
+						<li><a href="getting-started/">Getting Started</a></li>
+						<li><a href="documentation/">Documentation</a></li>
+						<li><a href="demos/">Demos</a></li>
+						<li><a href="built-with-birt/">Built with BIRT</a></li>
 					</ul>
 					<hr>
 					<a href="http://www.actuate.com/" ><img src="'.$basePath.'/img/logo/actuate-logo.png" /></a>

@@ -15,7 +15,7 @@ $PagePart 	= new PagePart();
 <head>
 	<?php 
 		/* Set Page Level Meta Details */
-		$metaTitle 		= "Eclipse BIRT Home";
+		$metaTitle 		= "BIRT Home";
 		$metaKeywords	= "Eclipse Keywords";
 		$metaAuthor		= "";
 		$metaDescription = "Eclipse Super Description for SEO in da House";
