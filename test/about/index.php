@@ -85,9 +85,9 @@ $PagePart 	= new PagePart();
 					<p><a href="architecture.php" target="_blank">Click here to learn more about BIRT Architecture</a></p>
 
 					<h2 class="topic-section-header padding-top-small">BIRT: The Actuate Product Line</h2>
-					<p>Today, the complete Actuate product line draws on BIRT as a key component. Actuate’s commercial product suite, leverages BIRT as its sole design environment for building applications that deliver insights and analytics through interactive data visualizations and reports.</p>
+					<p>Today, the complete Actuate product line draws on BIRT as a key component. Actuate's commercial product suite, leverages BIRT as its sole design environment for building applications that deliver insights and analytics through interactive data visualizations and reports.</p>
 					<p>Delivering truly personalized analytics throughout and beyond the organization stresses traditional application and business intelligence platforms beyond their limits. Actuate speeds delivery of these applications by resolving the deployment challenges that stall typical development projects. We deliver visually engaging, interactive content, from a variety of data sources, including big data, via a secure, massively scalable platform called BIRT iHub.</p>
-					<p>To learn more about Actuate’s BIRT based product line, click <a href="birt-and-actuate.php" target="_blank">here</a></p>
+					<p>To learn more about Actuate's BIRT based product line, click <a href="birt-and-actuate.php" target="_blank">here</a></p>
 
 					<h2 class="topic-section-header padding-top-small">BIRT: The Philosophy</h2>
 					<p>BIRT is about open standards. It integrates with any data source in any environment. BIRT represents a commitment to the highest standards in software design and quality. Finally, BIRT is about developers. Actuate, The BIRT Company, stands behind the BIRT community to ensure all questions are answers, problems solved, and applications deployed quickly and reliably.</p>
