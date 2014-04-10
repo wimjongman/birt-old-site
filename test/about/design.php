@@ -75,14 +75,18 @@ $PagePart 	= new PagePart();
 					<p>With BIRT, you can add a rich variety of reports to your application.
 					<ul class="eclipse-list">
 						<li>Lists - The simplest reports are lists of data. As the lists get longer, you can add grouping to organize related data together (orders grouped by customer, products grouped by supplier). If your data is numeric, you can easily add totals, averages and other summaries.</li>
+						<br />
 						<li>Charts - Numeric data is much easier to understand when presented as a chart. BIRT provides pie charts, line & bar charts and many more. BIRT charts can be rendered in SVG and support events to allow user interaction.</li>
+						<br />
 						<li>Crosstabs - Crosstabs (also called a cross-tabulation or matrix) shows data in two dimensions: sales per quarter or hits per web page.</li>
+						<br />
 						<li>Letters & Documents - Notices, form letters, and other textual documents are easy to create with BIRT. Documents can include text, formatting, lists, charts and more.</li>
+						<br />
 						<li>Compound Reports - Many reports need to combine the above into a single document. For example, a customer statement may list the information for the customer, provide text about current promotions, and provide side-by-side lists of payments and charges. A financial report may include disclaimers, charts, tables all with extensive formatting that matches corporate color schemes.</li>
 					</ul>
 					</p>
 
-					<h2 class="topic-section-header padding-top-small">Report Introduction</h2>
+					<h2 class="topic-section-header padding-top-small">The Anatomy of a Report</h2>
 					<p>BIRT reports consist of four main parts: data, data transforms, business logic and presentation.
 					<ul class="eclipse-list">
 						<li>Data - Databases, web services, Java objects all can supply data to your BIRT report. BIRT provides JDBC, XML, Web Services, and Flat File support, as well as support for using code to get at other sources of data. BIRT's use of the Open Data Access (ODA) framework allows anyone to build new UI and runtime support for any kind of tabular data. Further, a single report can include data from any number of data sources. BIRT also supplies a feature that allows disparate data sources to be combined using inner and outer joins.</li>
