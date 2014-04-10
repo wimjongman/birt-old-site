@@ -56,7 +56,7 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Page Contents</div>
 		                <ul>
-		                    <li><a href="<?php $basePath ?>/">What is BIRT?</a></li>
+		                    <li><a href="<?php $basePath ?>birt/test/about/">What is BIRT?</a></li>
 		                    <li><a href="<?php $basePath ?>design.php">BIRT Design Overview</a></li>
 		                    <li><a href="<?php $basePath ?>architecture.php">Architecture Overview</a></li>
 		                    <li><a href="<?php $basePath ?>designer.php">Designer Overview</a></li>
