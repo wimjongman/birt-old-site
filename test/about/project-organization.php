@@ -56,15 +56,15 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Section Contents</div>
 		                <ul>
-		                    <li><a href="<?php $basePath ?>/about/">What is BIRT?</a></li>
-		                    <li><a href="<?php $basePath ?>/about/design.php">BIRT Design Overview</a></li>
-		                    <li><a href="<?php $basePath ?>/about/architecture.php">Architecture Overview</a></li>
-		                    <li><a href="<?php $basePath ?>/about/designer.php">Designer Overview</a></li>
-		                    <li><a href="<?php $basePath ?>/about/customization.php">Customization Overview</a></li>
-		                    <li><a href="<?php $basePath ?>/about/extensibility.php">Extensibility Overview</a></li>
-		                    <li><a href="<?php $basePath ?>/about/project-organization.php">Project Organization</a></li>
-		                    <li><a href="<?php $basePath ?>/about/project-plan.php">Project Development Plan</a></li>
-		                    <li><a href="<?php $basePath ?>/about/birt-and-actuate.php">BIRT and Actuate</a></li>		                    
+		                    <li><a href="<?php $basePath ?>">What is BIRT?</a></li>
+		                    <li><a href="<?php $basePath ?>design.php">BIRT Design Overview</a></li>
+		                    <li><a href="<?php $basePath ?>architecture.php">Architecture Overview</a></li>
+		                    <li><a href="<?php $basePath ?>designer.php">Designer Overview</a></li>
+		                    <li><a href="<?php $basePath ?>customization.php">Customization Overview</a></li>
+		                    <li><a href="<?php $basePath ?>extensibility.php">Extensibility Overview</a></li>
+		                    <li><a href="<?php $basePath ?>project-organization.php">Project Organization</a></li>
+		                    <li><a href="<?php $basePath ?>project-plan.php">Project Development Plan</a></li>
+		                    <li><a href="<?php $basePath ?>birt-and-actuate.php">BIRT and Actuate</a></li>		                    
 		                </ul>
 
 			        </div>
