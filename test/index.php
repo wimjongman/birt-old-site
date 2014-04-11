@@ -56,7 +56,7 @@ $PagePart 	= new PagePart();
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> reporting system that integrates with your <span class="eclipse-txt-bloodorange">Java/Java EE</span> application to produce <span class="eclipse-txt-lightgreen">compelling reports.</span></div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="http://download.eclipse.org/birt/downloads" class="square-button button-color-yellow" style="margin-right:15px;padding:10 30px;line-height:22px;">Download<br />BIRT 4.3.2</a></td><td>  
-							<a href="<?php $basePath ?>about/birt-and-actuate.php" class="square-button button-color-yellow" style="padding:10 30px;line-height:22px;">Download Actuate<br />Extended Version</a></td></tr></tbody></table></div>
+							<a href="<?php $basePath ?>about/birt-and-actuate.php" class="square-button button-color-yellow" style="padding:10 30px;line-height:22px;">Other BIRT-<br />Based Products</a></td></tr></tbody></table></div>
 						</div>
 					</div>
 				</div>
