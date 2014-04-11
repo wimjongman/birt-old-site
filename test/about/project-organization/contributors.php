@@ -77,15 +77,29 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-			        <h2 class="topic-section-header padding-top-small">Designer Install</h2>
-					<p>BIRT can be downloaded and installed in different ways.
+			        <h2 class="topic-section-header padding-top-small">Project Committers</h2>
+					<p>Companies that are contributing committer's time to the project are:
 					<ul class="eclipse-list">
-						<li>The complete BIRT designer or RCP Designer can be installed by downloading the required package here.</li>
-						<li>or by downloading the Eclipse IDE for Java and Report Developers Package</li>
-						<li>or through the update manager as described here. Make sure to use the latest Update Site.<br />Update Manager URLs </li>
-						<li>as a package that only contains the BIRT plugins (Framework) from the download page. Note additional requirements are located on the download page as well. These include dependencies on other Eclipse projects. These dependencies are listed on the download page for the specific build.</li>
+					<li>Actuate - <a href="http://developer.actuate.com">http://developer.actuate.com</a> and <a href="http://www.actuate.com">http://www.actuate.com</a></li><br />
+					<li>Innovent Solutions - <a href="http://www.innoventsolutions.com/">http://www.innoventsolutions.com/</a></li><br />
+					<li>IBM - <a href="http://www.ibm.com/">http://www.ibm.com/</a></li><br />
+					<li>InetSoft - <a href="http://www.inetsoft.com/">http://www.inetsoft.com/</a></li><br />
+					<li>Tsinghua University (Beijing, China) - <a href="http://www.sist.tsinghua.edu.cn/docinfo/index.jsp">http://www.sist.tsinghua.edu.cn/docinfo/index.jsp</a></li>
 					</ul>
 					</p>
+					<p>BIRT uses the standard <a href="http://www.eclipse.org/projects/dev_process/new-committer.php">Eclipse process</a> to elect new committers.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Initial Code Contribution</h2>
+					<p>During the six months prior to the creation of the Eclipse BIRT project, Actuate was actively researching and developing capabilities that correspond to the initial BIRT projects. This involved researching the requirements, developing design for the BIRT XML Report Design, and development of initial code. Actuate seeded the BIRT project by donating the work from this research and development. Specifically:
+					<ul class="eclipse-list">
+					<li>XML Report Design Schema - A schema for representing the data access and layout aspects of reports ranging from simple listing style reports through complex, highly formatted reports.</li><br />
+					<li>Report Design Object Model Component - A component that encapsulates the logic of resolving report element properties based on report object hierarchy, style sheets and report scripting, as well as providing report design read/write and persistency. Initial design work, implementation, and unit tests were contributed.</li><br />
+					<li>Report Execution and Rending Engine Component - A component that takes a report design file as input and generates various report output format such as HTML, PDF, and PostScript for printing. Initial design work, implementation, and unit tests were contributed.</li><br />
+					<li>Report Designer - An Eclipse plug-in that helps users design report layout through a user friendly GUI. Initial design work, implementation, and unit tests were contributed.</li>
+					</ul>
+					</p>
+					<p>Innovent and Actuate have over 10 years of experience each in the business intelligence market. The initial contribution for the BIRT project involved a significant number of experienced developers in this field and, going forward, the project is working with the Eclipse community to build on this initial code to deliver market leading reporting functionality to the open source Eclipse ecosystem.</p>
+					<p>In addition to the Actuate research and development work, Actuate is working with other Eclipse members to leverage existing code in other areas.</p>
 
 				</div>
 			</div>
