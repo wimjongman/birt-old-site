@@ -56,15 +56,15 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Section Contents</div>
 		                <ul>
-		                    <li><a href="index.php">What is BIRT?</a></li>
-		                    <li><a href="design.php">BIRT Design Overview</a></li>
-		                    <li><a href="architecture.php">Architecture Overview</a></li>
-		                    <li><a href="designer.php">Designer Overview</a></li>
-		                    <li><a href="customization.php">Customization Overview</a></li>
-		                    <li><a href="extensibility.php">Extensibility Overview</a></li>
-		                    <li><a href="project-organization.php">Project Organization</a></li>
+		                    <li><a href="/birt/test/about/index.php">What is BIRT?</a></li>
+		                    <li><a href="/birt/test/about/design.php">BIRT Design Overview</a></li>
+		                    <li><a href="/birt/test/about/architecture.php">Architecture Overview</a></li>
+		                    <li><a href="/birt/test/about/designer.php">Designer Overview</a></li>
+		                    <li><a href="/birt/test/about/customization.php">Customization Overview</a></li>
+		                    <li><a href="/birt/test/about/extensibility.php">Extensibility Overview</a></li>
+		                    <li><a href="index.php">Project Organization</a></li>
 		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
-		                    <li><a href="birt-and-actuate.php">BIRT and Actuate</a></li>		                    
+		                    <li><a href="/birt/test/about/birt-and-actuate.php">BIRT and Actuate</a></li>		                    
 		                </ul>
 
 			        </div>
