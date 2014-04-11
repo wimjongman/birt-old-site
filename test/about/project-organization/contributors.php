@@ -101,6 +101,7 @@ $PagePart 	= new PagePart();
 					<p>Innovent and Actuate have over 10 years of experience each in the business intelligence market. The initial contribution for the BIRT project involved a significant number of experienced developers in this field and, going forward, the project is working with the Eclipse community to build on this initial code to deliver market leading reporting functionality to the open source Eclipse ecosystem.</p>
 					<p>In addition to the Actuate research and development work, Actuate is working with other Eclipse members to leverage existing code in other areas.</p>
 
+
 				</div>
 			</div>
 
