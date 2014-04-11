@@ -63,7 +63,7 @@ $PagePart 	= new PagePart();
 		                    <li><a href="customization.php">Customization Overview</a></li>
 		                    <li><a href="extensibility.php">Extensibility Overview</a></li>
 		                    <li><a href="project-organization.php">Project Organization</a></li>
-		                    <li><a href="project-plan.php">Project Development Plan</a></li>
+		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
 		                    <li><a href="birt-and-actuate.php">BIRT and Actuate</a></li>		                    
 		                </ul>
 
@@ -73,7 +73,7 @@ $PagePart 	= new PagePart();
 					<p>BIRT is an open source software project that provides the BIRT technology platform to create data visualizations and reports that can be embedded into rich client and web applications, especially those based on Java and Java EE. BIRT is a top-level software project within the Eclipse Foundation, an independent not-for-profit consortium of software industry vendors and an open source community.</p>
 					<p>Actuate founded and co-leads the BIRT project.</p>
 					<p>The project is supported by an active community of users here at Eclipse.org and at the BIRT Developer Center. It is licensed under the Eclipse Public License (EPL).</p>
-					<a href="project-organization.php">Project Organization</a> | <a href="project-plan.php">Project Development Plan</a>
+					<a href="project-organization.php">Project Organization</a> | <a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a>
 					
 					<h2 class="topic-section-header padding-top-small">BIRT: The Groundswell</h2>
 					<p>Today, BIRT technology platform is one of the most widely adopted data visualization and reporting technologies with over 12 million downloads and over 2.5M developers across 157 countries. BIRT also has a large, active and growing developer community representing all types of organizations. Major technology companies such as IBM, Cisco, S1 and ABS Nautical Systems have incorporated BIRT into their product lines.</p>

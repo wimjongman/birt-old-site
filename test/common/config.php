@@ -83,11 +83,11 @@ class PagePart {
 				<div class="actu-eclipse-container-inner">	
 					<ul class="actu-eclipse-nav">
 						<li><a href="'.$basePath.'/about/">About</a></li>
-						<li><a href="'.$basePath.'/download/">Download</a></li>
-						<li><a href="'.$basePath.'/community/">Community</a></li>
 						<li><a href="'.$basePath.'/getting-started/">Getting Started</a></li>
-						<li><a href="'.$basePath.'/documentation/">Documentation</a></li>
+						<li><a href="'.$basePath.'/download/">Download</a></li>
 						<li><a href="'.$basePath.'/demos/">Demos</a></li>
+						<li><a href="'.$basePath.'/documentation/">Documentation</a></li>
+						<li><a href="'.$basePath.'/community/">Community</a></li>
 						<li><a href="'.$basePath.'/built-with-birt/">Built with BIRT</a></li>
 					</ul>
 					<hr>

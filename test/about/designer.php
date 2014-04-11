@@ -63,7 +63,7 @@ $PagePart 	= new PagePart();
 		                    <li><a href="customization.php">Customization Overview</a></li>
 		                    <li><a href="extensibility.php">Extensibility Overview</a></li>
 		                    <li><a href="project-organization.php">Project Organization</a></li>
-		                    <li><a href="project-plan.php">Project Development Plan</a></li>
+		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
 		                    <li><a href="birt-and-actuate.php">BIRT and Actuate</a></li>		                    
 		                </ul>
 
