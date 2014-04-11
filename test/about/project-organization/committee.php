@@ -84,8 +84,8 @@ $PagePart 	= new PagePart();
 					<li>Paul Clenahan, Actuate - Paul has over 15 years experience in the enterprise business intelligence industry working in a variety of Product Management roles with diverse customer applications. Paul is currently responsible for coordinating overall product direction and vision for Actuate. He is also a member of the Eclipse Planning and Requirements Councils.</li><br />
 					<li>Michael Fox, IBM / Rational - Mike has over 20 years experience with software product development and software project management. Mike has been responsible for developing reporting solutions for several companies. He is now the Technical Lead and Architect for the reporting components of IBM/Rational's Team Products, and involved with reporting work in other parts of IBM Software Group.</li><br />
 					<li>Scott Rosenbaum, Innovent Solutions - Scott has been providing professional services consulting in the business intelligence space for more than seven years and has been involved in software development for more than 15.</li><br />
-					<li></li>
-					</ul>Jason Weathersby - Jason has 15 years experience in the software development and consulting fields, with in-depth experience in identifying and addressing customer's business intelligence needs. As part of the BIRT PMC, Jason is responsible for supporting and encouraging adoption of BIRT in the Open Source community.
+					<li>Jason Weathersby - Jason has 15 years experience in the software development and consulting fields, with in-depth experience in identifying and addressing customer's business intelligence needs. As part of the BIRT PMC, Jason is responsible for supporting and encouraging adoption of BIRT in the Open Source community.</li>
+					</ul>
 					</p>
 					
 					<h2 class="topic-section-header padding-top-small">Project Leaders</h2>
