@@ -77,13 +77,24 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-			        <h2 class="topic-section-header padding-top-small">Designer Install</h2>
-					<p>BIRT can be downloaded and installed in different ways.
+			        <h2 class="topic-section-header padding-top-small">PMC Membership</h2>
+					<p>
 					<ul class="eclipse-list">
-						<li>The complete BIRT designer or RCP Designer can be installed by downloading the required package here.</li>
-						<li>or by downloading the Eclipse IDE for Java and Report Developers Package</li>
-						<li>or through the update manager as described here. Make sure to use the latest Update Site.<br />Update Manager URLs </li>
-						<li>as a package that only contains the BIRT plugins (Framework) from the download page. Note additional requirements are located on the download page as well. These include dependencies on other Eclipse projects. These dependencies are listed on the download page for the specific build.</li>
+					<li>Wenfeng Li, Actuate - Wenfeng led development of versions 6-8 of Actuate's enterprise reporting product suite, and prior to that, led the development of MicroStrategy's version 7 OLAP server. He is a co-inventor of three patents in business intelligence technology and is currently serving as the PMC Lead for the Eclipse BIRT Project. He is a member of the Eclipse Architecture Council.</li><br />
+					<li>Paul Clenahan, Actuate - Paul has over 15 years experience in the enterprise business intelligence industry working in a variety of Product Management roles with diverse customer applications. Paul is currently responsible for coordinating overall product direction and vision for Actuate. He is also a member of the Eclipse Planning and Requirements Councils.</li><br />
+					<li>Michael Fox, IBM / Rational - Mike has over 20 years experience with software product development and software project management. Mike has been responsible for developing reporting solutions for several companies. He is now the Technical Lead and Architect for the reporting components of IBM/Rational's Team Products, and involved with reporting work in other parts of IBM Software Group.</li><br />
+					<li>Scott Rosenbaum, Innovent Solutions - Scott has been providing professional services consulting in the business intelligence space for more than seven years and has been involved in software development for more than 15.</li><br />
+					<li></li>
+					</ul>Jason Weathersby - Jason has 15 years experience in the software development and consulting fields, with in-depth experience in identifying and addressing customer's business intelligence needs. As part of the BIRT PMC, Jason is responsible for supporting and encouraging adoption of BIRT in the Open Source community.
+					</p>
+					
+					<h2 class="topic-section-header padding-top-small">Project Leaders</h2>
+					<p>
+					<ul class="eclipse-list">
+					<li>Wenbin He, Actuate - Wenbin is the project lead for the BIRT Report Designer. Prior to working on BIRT, he led the development of Actuate's iStudio product, which is an Eclipse-based integration platform for Actuate's client products. His interests are in the areas of UI design, XML, web services and Java technology.<br /><br />
+					Wenbin is also the project lead for the BIRT Web-based Report Designer.</li><br />
+					<li>Hank Christensen, Actuate - Hank is the project lead for the BIRT Charting Engine. He also manages the development of Actuate's Information Object Designer, an Eclipse-based IDE for Enterprise Information Integration (EII), as well as components of Actuate's BIRT Report Designer. Prior to working with BIRT, he led the development of Actuate's e.Report Designer Professional, and has developed enterprise reporting technologies for the last 10 years.</li><br />
+					<li>Gary Xue, Actuate - Gary leads the BIRT Report Engine and Data Engine projects. Gary has 11 years of experience in developing Business Intelligence software, 7 of which are with Actuate working on the iServer reporting platform. His interest and expertise are in areas of databases, data access technologies, distributed and high performance system design and Web technologies.</li>
 					</ul>
 					</p>
 
