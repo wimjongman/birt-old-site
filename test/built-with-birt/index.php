@@ -60,13 +60,13 @@ $PagePart 	= new PagePart();
 
 			        </div>
 					
-					<a name="casestudies" />
+					<a name="casestudies"></a>
 					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
 					
-					<a name="adopters" />
+					<a name="adopters"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT Adopters</h2>
 					
-					<a name="products" />
+					<a name="products"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT-based Products</h2>
 					<p>There are many products that are built using BIRT. Some of those products are listed below:
 					<ul class="eclipse-list">
