@@ -78,13 +78,13 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Bugzilla</h2>
 					<p>BIRT uses Bugzilla to track bugs and enhancements.
 					<ul class="eclipse-list">
-						<li><a href="https://bugs.eclipse.org/bugs/" target="_blank">Sign Up</a> Create a Bugzilla account. Learn how to use Bugzilla.</li><br />
-						<li><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=BIRT" target="_blank">Report a Bug or Enhancement</a> When reporting a bug, please give the exact steps to reproduce the problem. Please explain what went wrong, and what you expected to happen. For an enhancement, please explain how you'd use the new feature.</li>
+						<li><a href="https://bugs.eclipse.org/bugs/" target="_blank">Sign Up</a> - Create a Bugzilla account. Learn how to use Bugzilla.</li><br />
+						<li><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=BIRT" target="_blank">Report a Bug or Enhancement</a> - When reporting a bug, please give the exact steps to reproduce the problem. Please explain what went wrong, and what you expected to happen. For an enhancement, please explain how you'd use the new feature.</li>
 					</ul>
 					</p>
 					<p>BIRT bugs are often associated with a report design. Please attach your design to your Bugzilla entry.</p>
 					<p>If you encounter a problem such as "An error occurred", or failure to open views or editors, please attach your Eclipse log file. To see the exception, use Window -> Show View -> Other. Open the PDE Runtime group and choose Error Log. Within the error log window, find the BIRT exception (if any) that just occurred. Double click on the error in question and you'll see a stack trace. Paste that into your bug report, preferably as a file attachment.</p>
-					<p><a href="https://bugs.eclipse.org/bugs/query.cgi?product=BIRT" target=_blank">Search Bugs</a>Find BIRT-related bugs using the Bugzilla search facility.</p>
+					<p><a href="https://bugs.eclipse.org/bugs/query.cgi?product=BIRT" target=_blank">Search Bugs</a> - Find BIRT-related bugs using the Bugzilla search facility.</p>
 					
 					<a name="externalresources"></a>
 					<h2 class="topic-section-header padding-top-small">External Resources</h2>
