@@ -66,7 +66,7 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Newsgroup</h2>
 					<p>The BIRT newsgroup is for users of the project to ask questions, discuss ideas and so on. Join in and get involved!
 					<ul class="eclipse-list">
-						<li><a href="" target="_blank">Information and Signup</a> Guidelines for using the newsgroups. Instructions for signing up.</li><br />
+						<li><a href="http://www.eclipse.org/newsgroups" target="_blank">Information and Signup</a> Guidelines for using the newsgroups. Instructions for signing up.</li><br />
 						<li><a href="news://news.eclipse.org/eclipse.birt" target="_blank">news://news.eclipse.org/eclipse.birt</a> The easiest way to access the newsgroup is using your favorite news reader.</li><br />
 						<li><a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.birt" target="_blank">Simple Web Interface</a> If you don't have a newsreader, or can't access the NNTP server, use this simple web interface.</li><br />
 						<li><a href="http://dev.eclipse.org/newslists/news.eclipse.birt/maillist.html" target="_blank">Archive</a> Eclipse keeps a history of past newsgroup postings for your reference.</li><br />
