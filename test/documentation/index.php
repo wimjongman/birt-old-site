@@ -52,15 +52,14 @@ $PagePart 	= new PagePart();
 					<div class="topic-menu topic-menu-right">
                 
 		                <div class="topic-menu-title">Section Contents</div>
-		                <ol>
+		                <ul>
 		                    <li><a href="install.php">Installation Guide</a></li>
 		                    <li><a href="tutorial/">Design Tutorial</a></li>
 		                    <li><a href="integrating/">Integrating BIRT</a></li>
 		                    <li><a href="sample-database.php">Sample Database</a></li>
 		                    <li><a href="reference.php">Technical Reference</a></li>
 		                    <li><a href="building-birt.php">Building BIRT</a></li>
-		                    <li>
-		           		</ol>
+		           		</ul>
 
 			        </div>
 

@@ -47,7 +47,7 @@ $PagePart 	= new PagePart();
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">Install</h1>
+					<h1 class="eclipse-title-main">Integrating BIRT</h1>
 					
 					<div class="topic-menu topic-menu-right">
                 
@@ -59,7 +59,7 @@ $PagePart 	= new PagePart();
 		                    <li><a href="sample-database.php">Sample Database</a></li>
 		                    <li><a href="reference.php">Technical Reference</a></li>
 		                    <li><a href="building-birt.php">Building BIRT</a></li>
-		                </ul>
+		           		</ul>
 
 			        </div>
 

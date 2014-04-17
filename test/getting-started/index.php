@@ -79,7 +79,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="install"></a>
 					<h2 class="topic-section-header padding-top-small">Install</h2>
-					<p>Once you've downloaded your BIRT component, you need to install it. For instructions on how to install BIRT, take a look at the <a href="/birt/test/documentation/install/" target="_blank">Install Guide</a> in the documentation.</p>
+					<p>Once you've downloaded your BIRT component, you need to install it. For instructions on how to install BIRT, take a look at the <a href="/birt/test/documentation/install.php" target="_blank">Install Guide</a> in the documentation.</p>
 					
 					<a name="tutorial"></a>
 					<h2 class="topic-section-header padding-top-small">Tutorial</h2>
