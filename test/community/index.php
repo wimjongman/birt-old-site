@@ -70,7 +70,7 @@ $PagePart 	= new PagePart();
 						<li><a href="news://news.eclipse.org/eclipse.birt" target="_blank">news://news.eclipse.org/eclipse.birt</a> The easiest way to access the newsgroup is using your favorite news reader.</li><br />
 						<li><a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.birt" target="_blank">Simple Web Interface</a> If you don't have a newsreader, or can't access the NNTP server, use this simple web interface.</li><br />
 						<li><a href="http://dev.eclipse.org/newslists/news.eclipse.birt/maillist.html" target="_blank">Archive</a> Eclipse keeps a history of past newsgroup postings for your reference.</li><br />
-						<li><a href="http://www.eclipse.org/search/search.cgi?q=&cmd=Search%21&form=extended&wf=574a74&ps=10&m=all&t=5&ul=%2Fnewslists%2Fnews.eclipse.birt&wm=wrd&t=News&t=Mail" target="_blank"Search the BIRT Newsgroup Archives></a> for previously asked questions.</li>
+						<li><a href="http://www.eclipse.org/search/search.cgi?q=&cmd=Search%21&form=extended&wf=574a74&ps=10&m=all&t=5&ul=%2Fnewslists%2Fnews.eclipse.birt&wm=wrd&t=News&t=Mail" target="_blank">Search the BIRT Newsgroup Archives</a> for previously asked questions.</li>
 					</ul>
 					</p>
 					
