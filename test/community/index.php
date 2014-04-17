@@ -51,111 +51,76 @@ $PagePart 	= new PagePart();
 					
 					<div class="topic-menu topic-menu-right">
                 
-		                <div class="topic-menu-title">Page Contents</div>
+		                <div class="topic-menu-title">Section Contents</div>
 		                <ol>
-		                    <li><a href="#designerinstall">Designer Install</a></li>
-		                    <li><a href="#frameworkinstall">Framework Designer Install</a></li>
-		                    <li><a href="#jdbcdriver">JDBC Drivers</a></li>
-		                    <li><a href="#updatebirtinstall">Updating a BIRT Installation</a></li>
-		                    <li><a href="#deploytojava">Deploying to Java EE Server</a></li>
-		                    <li><a href="#birtlanguage">Installing BIRT Language Packs on Windows</a></li>
-		                    <li><a href="#commonproblems">Common Problems</a></li>
+		                    <li><a href="#newsgroup">Newsgroup</a></li>
+		                    <li><a href="#bugzilla">Bugzilla</a></li>
+		                    <li><a href="#externalresources">External Resources</a></li>
+		                    <li><a href="#mailinglists">Mailing Lists</a></li>
+		                    <li><a href="#contributions">Contributions</a></li>
 		                </ol>
 
 			        </div>
 
-			        <a name="designerinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Designer Install</h2>
-					<p>BIRT can be downloaded and installed in different ways.
+			        <a name="newsgroup"></a>
+					<h2 class="topic-section-header padding-top-small">Newsgroup</h2>
+					<p>The BIRT newsgroup is for users of the project to ask questions, discuss ideas and so on. Join in and get involved!
 					<ul class="eclipse-list">
-						<li>The complete BIRT designer or RCP Designer can be installed by downloading the required package here.</li>
-						<li>or by downloading the Eclipse IDE for Java and Report Developers Package</li>
-						<li>or through the update manager as described here. Make sure to use the latest Update Site.<br />Update Manager URLs </li>
-						<li>as a package that only contains the BIRT plugins (Framework) from the download page. Note additional requirements are located on the download page as well. These include dependencies on other Eclipse projects. These dependencies are listed on the download page for the specific build.</li>
+						<li><a href="" target="_blank">Information and Signup</a> Guidelines for using the newsgroups. Instructions for signing up.</li><br />
+						<li><a href="news://news.eclipse.org/eclipse.birt" target="_blank">news://news.eclipse.org/eclipse.birt</a> The easiest way to access the newsgroup is using your favorite news reader.</li><br />
+						<li><a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.birt" target="_blank">Simple Web Interface</a> If you don't have a newsreader, or can't access the NNTP server, use this simple web interface.</li><br />
+						<li><a href="http://dev.eclipse.org/newslists/news.eclipse.birt/maillist.html" target="_blank">Archive</a> Eclipse keeps a history of past newsgroup postings for your reference.</li><br />
+						<li><a href="http://www.eclipse.org/search/search.cgi?q=&cmd=Search%21&form=extended&wf=574a74&ps=10&m=all&t=5&ul=%2Fnewslists%2Fnews.eclipse.birt&wm=wrd&t=News&t=Mail" target="_blank"Search the BIRT Newsgroup Archives></a> for previously asked questions.</li>
 					</ul>
 					</p>
-					<p>All of the above downloads contain the BIRT designer. The BIRT project has many additional downloads, including a runtime for deploying the BIRT engine in a web application or standalone Java application. The additional downloads are available for any build of BIRT by selecting the appropriate build here.</p>
-					<p>Once you have downloaded one of the above packages, unzip the package into your chosen directory. This will create an eclipse directory that contains eclipse.exe. Run eclipse.exe to start the designer.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Create a windows short cut</h2>
+					<a name="bugzilla"></a>
+					<h2 class="topic-section-header padding-top-small">Bugzilla</h2>
+					<p>BIRT uses Bugzilla to track bugs and enhancements.
 					<ul class="eclipse-list">
-						<li>From the desktop, right click, choose New→Shortcut.</li>
-						<li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)</li>
-						<li>Click Next.</li>
-						<li>Enter "Eclipse" for the shortcut name.</li>
+						<li><a href="https://bugs.eclipse.org/bugs/" target="_blank">Sign Up</a> Create a Bugzilla account. Learn how to use Bugzilla.</li><br />
+						<li><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=BIRT" target="_blank">Report a Bug or Enhancement</a> When reporting a bug, please give the exact steps to reproduce the problem. Please explain what went wrong, and what you expected to happen. For an enhancement, please explain how you'd use the new feature.</li>
 					</ul>
+					</p>
+					<p>BIRT bugs are often associated with a report design. Please attach your design to your Bugzilla entry.</p>
+					<p>If you encounter a problem such as "An error occurred", or failure to open views or editors, please attach your Eclipse log file. To see the exception, use Window -> Show View -> Other. Open the PDE Runtime group and choose Error Log. Within the error log window, find the BIRT exception (if any) that just occurred. Double click on the error in question and you'll see a stack trace. Paste that into your bug report, preferably as a file attachment.</p>
+					<p><a href="https://bugs.eclipse.org/bugs/query.cgi?product=BIRT" target=_blank">Search Bugs</a>Find BIRT-related bugs using the Bugzilla search facility.</p>
 					
-					<a name="frameworkinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Framework Designer Install</h2>
-					<p>As stated above, the framework install only contains the required BIRT plugins. The Framework install requires that you already have the Eclipse Platform, GEF, EMF, DTP and WTP packages. The specific version of each, is listed on the specific build's download page. Unzip each package into your eclipse directory.</p>
-
-					<h2 class="topic-section-header padding-top-small">Optional Eclipse Link File</h2>
-					<p>If you are installing the framework, you can download the BIRT framework and unzip the contents to any directory.</p>
+					<a name="externalresources"></a>
+					<h2 class="topic-section-header padding-top-small">External Resources</h2>
+					<p>
 					<ul class="eclipse-list">
-						<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse\links).</li>
-						<li>Within this directory create a file with a unique name like birt.link.</li>
-						<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt)</li>
+						<li><a href="http://developer.actuate.com/" target="_blank">BIRT Developer Center (BDC)</a> is a developer site where BIRT users can find guides and documentation, share ideas, technical tips and code snippets, as well as download software, documentation and examples.</li><br />
+						<li><a href="http://developer.actuate.com/community/devshare" target="_blank">BDC DevShare</a> - Browse the repository of developer-contributed report designs, code samples, tutorials and articles.</li><br />
+						<li><a href="http://developer.actuate.com/design-center/creating-birt-designs/" target="_blank">BDC Design Guides</a> - Access guides and documentation for creating BIRT designs.</li><br />
+						<li><a href="http://developer.actuate.com/deployment-center/deployment-guides/" target="_blank">BDC Deployment Guides</a> - Access guides and documentation for deploying BIRT applications.</li><br />
+						<li><a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> is a blog covering all things related to BIRT with frequent contributions from Jason Weathersby and Scott Rosenbaum</li>
 					</ul>
-
-					<a name="jdbcdriver"></a>
-					<h2 class="topic-section-header padding-top-small">JDBC Drivers</h2>
-					<p>You will likely want to use your own JDBC driver with BIRT. Use the data source editor's JDBC driver management wizard. To start the wizard, open a BIRT report design, go to the Data Explorer view, right click on "Data Sources" and select "New Data Source". Choose "JDBC Data Source" and click "Next". In the next dialog, choose "Manage Drivers..." to bring up the "Manage JDBC Drivers" dialog.</p>
-					<p>In the "JAR Files" tab, click on "Add..." to add the JAR file required by your JDBC driver. Then go to the "Driver" tab to confirm that the list of drivers includes the new drivers added. You may also want to assign a display name and URL template for the new drivers in this tab.</p>
-
-					<a name="updatebirtinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Updating a BIRT Installation</h2>
-					<p>If you have a version of BIRT installed, and want to install a newer version, do the following:</p>
+					</p>
+					
+					<a name="mailinglists"></a>
+					<h2 class="topic-section-header padding-top-small">Mailing Lists</h2>
+					<p>Eclipse provides <a href="http://www.eclipse.org/mail/index.html" target="_blank">mailing lists</a> for each project. BIRT provides one general-purpose list:
 					<ul class="eclipse-list">
-						<li>Close Eclipse.</li>
-						<li>Locate your Eclipse plugins directory. If you installed on Windows in the default location, this is "C:\program files\eclipse\plugins".</li>
-						<li>Delete all directories that start with "org.eclipse.birt".</li>
-						<li>Download and install BIRT as described in the BIRT section above.</li>
-						<li>Restart Eclipse with the -clean option: eclipse -clean</li>
+						<li><a href="http://dev.eclipse.org/mhonarc/lists/birt-news/maillist.html" target="_blank">birt-news</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-news/maillist.html" target="_blank">archive</a>) - Notifications to BIRT users about BIRT milestone and stable builds and other noteworthy information.</li>
+						<p>BIRT also provides mailing lists for developers contributing to BIRT:</p>
+						<li><a href="http://dev.eclipse.org/mailman/listinfo/birt-dev" target="_blank">birt-dev</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-dev/maillist.html" target="_blank">archive</a>) - Development discussions about BIRT of interest to all BIRT committers. Topics include PMC meeting minutes, source code structure, CVS management, and integration among the various BIRT components.	 contributors and committers. Topics include PMC meeting minutes, source code structure, CVS management, and integration among the various BIRT components. Suggestions on how to improve the website or wiki are also welcome. Note: This mailing list receives numerous check-in and build notices. If you are not interested in these notifications setting up a filter in your email client will allow you to delete these messages or filter to a different folder for reading at a later time.</li><br />
+						<li><a href="http://dev.eclipse.org/mailman/listinfo/birt-charting-dev" target="_blank">birt-charting-dev</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-charting-dev/maillist.html" target="_blank">archive</a>) - Discussions about the charting subproject.</li><br />
+						<li><a href="http://dev.eclipse.org/mailman/listinfo/birt-report-engine-dev" target="_blank">birt-report-engine-dev</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-report-engine-dev/maillist.html" target="_blank">archive</a>) - Discussions about the reporting engine subproject.</li><br />
+						<li><a href="http://dev.eclipse.org/mailman/listinfo/birt-report-designer-dev" target="_blank">birt-report-designer-dev</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-report-designer-dev/maillist.html" target="_blank">archive</a>) - Discussions about the report designer subproject.</li>
 					</ul>
-
-					<a name="deploytojava"></a>
-					<h2 class="topic-section-header padding-top-small">Deploying to Java EE Server</h2>
-					<p>Please see Setting up the BIRT Viewer </p>
-
-					<a name="birtlanguage"></a>
-					<h2 class="topic-section-header padding-top-small">Installing BIRT Language Packs on Windows</h2>
-					<ol class="eclipse-list">
-						<li>Download the Language Pack for the desired product and extract into your eclipse install.</li>
-						<li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.</li>
-						<li>Select the group 1 language you desire from the drop-down combo box.</li>
-						<li>Save changes and restart the system.</li>
-						<li>Launch Eclipse and select Window->Preferences->Report Design->Preview. Select the desired language from the drop-down combo box.</li>
-						<li>Restart Eclipse.</li>
-					</ol>
-
-					<a name="commonproblems"></a>
-					<h2 class="topic-section-header padding-top-small">Common Problems</h2>
-					<p>Some problems are due to cached information within Eclipse. Eclipse caches information about plugins for faster startup. Adding BIRT as we did above may result in stale cached information. Symptoms of this problem include:</p>
+					</p>
+					
+					<a name="contributions"></a>
+					<h2 class="topic-section-header padding-top-small">Contributions</h2>
+					<p>
 					<ul class="eclipse-list">
-						<li>The BIRT perspective does not appear in Eclipse.</li>
-						<li>You receive "An error occurred" dialogs when opening reports or using the BIRT UI.</li>
+						<li><a href="/birt/test/documentation/building-birt/">Build Instructions</a> - How to download BIRT source and build it.</li><br />
+						<li><a href="/birt/test/about/project-organization/">Project</a> - How the project is structured, who's on the PMC, project roles, etc.</li><br />
+						<li><a href="http://www.eclipse.org/mail" target="_blank">Mailing List</a> - While the newsgroup is for people who use BIRT, the mailing list is for those who help develop BIRT.</li><br />
+						<li><a href="/birt/test/about/project-organization/contributors.php">Contribute Fixes and Code</a> - Interested in joining the BIRT project as a contributor? Maybe you found a bug and made a patch to the source code to address this, or perhaps you would like to make significant contribution in a specific area. This page provides more information on how to contribute code to the project.</li>
 					</ul>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning Cached Plugin Information</h2>
-					<p>The solution is to clean up the cached information. The recommended practice is to start Eclipse with the -clean option:</p>
-					<p>eclipse -clean</p>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning the Cache on Windows</h2>
-					<p>If you are on Windows, and are not familiar with how to invoke Eclipse from the command line, do the following:</p>
-					<ul class="eclipse-list">
-						<li>Choose Start→All Programs→Accessories→Command Prompt</li>
-						<li>Move to the directory where you installed eclipse. If you installed Eclipse in the standard location, enter:
-							<ul class="eclipse-list">
-								<li>cd "\Program Files\eclipse"</li>
-							</ul>
-						</li>
-						<li>Run Eclipse with the -clean option:
-							<ul class="eclipse-list">
-								<li>eclipse -clean</li>
-							</ul>
-						</li>
-						<li>Eclipse will restart. Again check for the BIRT perspective.</li>
-					</ul>
+					</p>
 
 				</div>
 			</div>
