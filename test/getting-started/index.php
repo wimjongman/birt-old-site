@@ -79,19 +79,19 @@ $PagePart 	= new PagePart();
 					
 					<a name="install"></a>
 					<h2 class="topic-section-header padding-top-small">Install</h2>
-					<p>Once you've downloaded your BIRT component, you need to install it. For instructions on how to install BIRT, take a look at the <a href="/birt/test/documentation/install/" target="_blank">Install Guide</a> in the documentation.</p>
+					<p>Once you've downloaded your BIRT component, you need to install it. For instructions on how to install BIRT, take a look at the <a href="<?php $basePath ?>documentation/install/" target="_blank">Install Guide</a> in the documentation.</p>
 					
 					<a name="tutorial"></a>
 					<h2 class="topic-section-header padding-top-small">Tutorial</h2>
 					<p>This brief tutorial walks you through building a simple report with BIRT. It introduces the major UI features, and many of the BIRT reporting elements. At the completion of this tutorial, you should be able to start building your own reports using your own database.</p>
 					<p>In this tutorial, you'll create a simple customer listing report, with the customers grouped by state and city. For each customer, you'll display a name and phone number.</p>
-					<p><a href="/birt/test/documentation/tutorial/" target="_blank">Get Started</a></p>
+					<p><a href="<?php $basePath ?>documentation/tutorial/" target="_blank">Get Started</a></p>
 					
 					<a name="documentation"></a>
 					<h2 class="topic-section-header padding-top-small">Documentation</h2>
 					<p>Now that you know enough about BIRT to be dangerous, you'll probably want to see some documentation. A couple places you can find documentation are:
 					<ul class="eclipse-list">
-						<li>On the <a href="/birt/test/demos/" target="_blank">Documentation</a> page.</li>
+						<li>On the <a href="<?php $basePath ?>demos/" target="_blank">Documentation</a> page.</li>
 						<li>In the <a href="http://download.actuate.com/design-center/" target="_blank">Design</a> and <a href="http://download.actuate.com/deployment-center/" target="_blank">Deployment</a> Centers on the BIRT Developer Center.</li>
 					</ul>
 					</p>
