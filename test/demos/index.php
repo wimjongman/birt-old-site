@@ -113,23 +113,22 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<a name="scripting"></a>
-					<p><h3>Scripting</h3> - This section contains examples of scripting within the BIRT Designer.
+					<h3>Scripting</h3>
+					<p>This section of Examples focuses on scripting within BIRT. Simple reports are used to illustrate scripting functionallity. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation.
 					<ul class="eclipse-list">
-						<li></li><br />
+						<li><a href="http://download.eclipse.org/birt/downloads/examples/scripting/scripteddatasource/after.html" target="_blank">Scripted Data Source</a> (<a href="http://download.eclipse.org/birt/downloads/examples/scripting/scripteddatasource/reports/ScriptedDatasourceExampleAfter.rptdesign" target="_blank">rptdesign</a> | <a href="http://download.eclipse.org/birt/downloads/examples/scripting/scripteddatasource/javacode/SimpleClass.java" target="_blank">Java code</a> | <a href="http://download.eclipse.org/birt/downloads/examples/scripting/scripteddatasource/scripteddatasource.html" target="_blank">demo</a>) - This example is intended to illustrate using BIRT's Scripted Data Source. This example simulates retrieving results from an online survey. The results of the survey are accessed using a Java Object, which is called from a BIRT Scripted Data Source.</li>
 					</ul>
 					</p>
 					
 					<a name="integrating"></a>
-					<p><h3>Integrating BIRT</h3> -  This section demonstrates several examples of deploying and using the APIs of BIRT.
-					<ul class="eclipse-list">
-						<li></li><br />
-					</ul>
-					</p>
+					<h3>Integrating BIRT</h3>
+					<p>This section of Examples focuses on integrating BIRT. You can find several examples demonstrating the design engine API and the report engine API in the <a href="https://wiki.eclipse.org/Integration_Examples_(BIRT)" target="_blank">wiki</a>. These examples focus on using the BIRT APIs, to embedd or integrated BIRT. </p>
 					
 					<a name="extending"></a>
-					<p><h3>Extending BIRT</h3> - This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc.
+					<h3>Extending BIRT</h3>
+					<p>This section of Examples focuses on Extending BIRT. The examples here focus on implementing BIRT supplied extension points, giving the BIRT developer the capability to add to, or change the default behavior of the designer or runtime engine. This includes adding Chart Types, aggregate functions, Data Sources and Report Items.
 					<ul class="eclipse-list">
-						<li></li><br />
+						<li><strong>Aggregate Function Extension Point</strong> (<a href="http://www.eclipse.org/birt/phoenix/examples/extending/aggregate/optim.rptdesign" target="_blank">rptdesign</a> | <a href="http://www.eclipse.org/birt/phoenix/examples/extending/aggregate/optimiticSum.zip" target="_blank">Java code</a> | <a href="http://download.eclipse.org/birt/downloads/examples/extension/aggregate/aggregate.html" target="_blank">demo</a>) - This example shows how to create a BIRT Aggregate Data Extension. Imagine your manager wants you to create a new more optimistic way to sum up data in a report. Is there a way that you can create a common solution that can be consistently re-used across all of your reports? Through the Birt Aggregate Data Extension you can create new custom functions that show up as native BIRT functions.</li><br />
 					</ul>
 					</p>
 
