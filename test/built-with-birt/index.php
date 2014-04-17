@@ -53,50 +53,30 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Page Contents</div>
 		                <ol>
-		                    <li><a href="#designerinstall">Designer Install</a></li>
-		                    <li><a href="#frameworkinstall">Framework Designer Install</a></li>
-		                    <li><a href="#jdbcdriver">JDBC Drivers</a></li>
-		                    <li><a href="#updatebirtinstall">Updating a BIRT Installation</a></li>
-		                    <li><a href="#deploytojava">Deploying to Java EE Server</a></li>
-		                    <li><a href="#birtlanguage">Installing BIRT Language Packs on Windows</a></li>
-		                    <li><a href="#commonproblems">Common Problems</a></li>
+		                    <li><a href="#casestudies">Case Studies</a></li>
+		                    <li><a href="#adopters">BIRT Adopters</a></li>
+		                    <li><a href="#products">BIRT-based Products</a></li>
 		                </ol>
 
 			        </div>
-
-					<h2 class="topic-section-header padding-top-small">BIRT Designer Professional</h2>
-					<p>Description
-					<ul class="eclipse-list">
-					<li>Features</li>
-					</ul>
-					<a href="#">Download</a> | <a href="#">Learn More</a>
-					</p>
 					
-					<h2 class="topic-section-header padding-top-small">BIRT Viewer Toolkit</h2>
-					<p>Description
-					<ul class="eclipse-list">
-					<li>Features</li>
-					</ul>
-					<a href="#">Download</a> | <a href="#">Learn More</a>
-					</p>
+					<a name="casestudies" />
+					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
 					
-					<h2 class="topic-section-header padding-top-small">BIRT iHub F-Type</h2>
-					<p>Description
-					<ul class="eclipse-list">
-					<li>Features</li>
-					</ul>
-					<a href="#">Download</a> | <a href="#">Learn More</a>
-					</p>
+					<a name="adopters" />
+					<h2 class="topic-section-header padding-top-small">BIRT Adopters</h2>
 					
-					<h2 class="topic-section-header padding-top-small">BIRT onDemand</h2>
-					<p>Description
+					<a name="products" />
+					<h2 class="topic-section-header padding-top-small">BIRT-based Products</h2>
+					<p>There are many products that are built using BIRT. Some of those products are listed below:
 					<ul class="eclipse-list">
-					<li>Features</li>
+						<li>BIRT Designer Professional (Actuate)</li>
+						<li>BIRT Viewer Toolkit (Actuate)</li>
+						<li>BIRT iHub F-Type (Actuate)</li>
+						<li>BIRT onDemand (Actuate)</li>
 					</ul>
-					<a href="#">Request a Trial Account</a> | <a href="#">Learn More</a>
 					</p>
-					
-					<p>If you have a BIRT-based product you'd like to include on this page, send an email to the <a href="mailto:webmaster@actuate.com?Subject=Eclipse.org%20BIRT-based%20Product">Actuate webmaster</a>.</p>
+					<p>If you have a BIRT-based product you'd like to include on this page, send an email to the <a href="mailto:webmaster@actuate.com?Subject=BIRT-based%20Product">Actuate webmaster</a>.</p>
 
 				</div>
 			</div>
