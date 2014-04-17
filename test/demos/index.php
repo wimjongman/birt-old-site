@@ -51,111 +51,67 @@ $PagePart 	= new PagePart();
 					
 					<div class="topic-menu topic-menu-right">
                 
-		                <div class="topic-menu-title">Page Contents</div>
+		                <div class="topic-menu-title">Section Contents</div>
 		                <ol>
-		                    <li><a href="#designerinstall">Designer Install</a></li>
-		                    <li><a href="#frameworkinstall">Framework Designer Install</a></li>
-		                    <li><a href="#jdbcdriver">JDBC Drivers</a></li>
-		                    <li><a href="#updatebirtinstall">Updating a BIRT Installation</a></li>
-		                    <li><a href="#deploytojava">Deploying to Java EE Server</a></li>
-		                    <li><a href="#birtlanguage">Installing BIRT Language Packs on Windows</a></li>
-		                    <li><a href="#commonproblems">Common Problems</a></li>
+		                    <li><a href="#introduction">Introduction</a></li>
+		                    <li><a href="#birtdemo">BIRT Demo</a></li>
+		                    <li><a href="#examples">Examples</a></li>
 		                </ol>
 
 			        </div>
 
-			        <a name="designerinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Designer Install</h2>
-					<p>BIRT can be downloaded and installed in different ways.
+			        <a name="introduction"></a>
+					<h2 class="topic-section-header padding-top-small">Introduction</h2>
+					<p>Welcome to the examples section of the BIRT site. Here you will find examples that illustrate some of the features of BIRT. This section will be changed frequently to add new examples. The example types are classified below. Feel free to make comments within the news group. Let us know what examples you would like to see.</p>
+					
+					<a name="birtdemo"></a>
+					<h2 class="topic-section-header padding-top-small">BIRT Demo</h2>
+					<p><a href="http://download.eclipse.org/birt/downloads/examples/misc/BIRT2.1Demo/EclipseDemo.html">BIRT Demo</a> - This demonstration is a Flash presentation of BIRT that showcases some of its powerful features including summary and line graphs, JavaScript for dynamic images, style usage, highlighting, grouping and detail drill down..</p>
+					
+					<a name="examples"></a>
+					<h2 class="topic-section-header padding-top-small">Examples</h2>
+					<p><strong>Solution Reports</strong> - The example reports here show just a few of the things you can do with BIRT. Unless otherwise noted, the reports are meant to be run against the "Classic Models Inc." sample database that is included in the BIRT download.</p>
+					<p>Preview a report by clicking on the title link. To try a report for yourself, click on the rptdesign link to display the ROM file, save it to disk and then use File-->Import to bring the file into your Eclipse workspace. If the report uses the Classic Models database, you should be able to run the report immediately. If the report uses another database, follow the instructions provided in the "Other Notes" section of its description.
 					<ul class="eclipse-list">
-						<li>The complete BIRT designer or RCP Designer can be installed by downloading the required package here.</li>
-						<li>or by downloading the Eclipse IDE for Java and Report Developers Package</li>
-						<li>or through the update manager as described here. Make sure to use the latest Update Site.<br />Update Manager URLs </li>
-						<li>as a package that only contains the BIRT plugins (Framework) from the download page. Note additional requirements are located on the download page as well. These include dependencies on other Eclipse projects. These dependencies are listed on the download page for the specific build.</li>
+						<li>Listing
+							<ul class="eclipse-list">
+								<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/ProductCatalog.html" target="_blank">Product Catalog</a> (<a href="" target="_blank">rptdesign</a>) - Prints the Classic Models product catalog, grouped by product category. Provides product name, cost and description. Demonstrates one level grouping and using a grid within a table row to structure spacing. Also shows image inclusion and use of the <value-of> tag in text item to include the content of a database column. Finally, the report makes use of styles to simplify maintenance and achieve a consistent look.</li><br />
+								<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/TopSellingProducts.html" target="_blank">Top Selling Products</a> (<a href="" target="_blank">rptdesign</a>) - Displays a pie chart showing revenue by product line. Lists the top selling products, sorted by revenue. Demonstrates use of a chart and sorting a result set. Also shows image inclusion and use of grid and tables to organize report content. Finally, the report makes use of styles to simplify maintenance and achieve a consistent look.</li><br />
+								<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/TopNPercent.html" target="_blank">Top N / Top M% Customers</a> (<a href="" target="_blank">rptdesign</a>) - Making use of the top n and top precent filter capabilities added in BIRT 2.0, this report shows a bar chart with the top N customers by revenue, followed by a listing of the top M% customers by revenue sorted by customer name. This requires multiple passes over the data, but it is all done "under the covers" by the BIRT report engine. N and M are passed into the report as parameters to allow report users to select the number and percentage at run time.</li><br />
+								<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/crosstab.html" target="_blank">Annual Sales By Product Lines</a> (<a href="" target="_blank">rptdesign</a>) - This example illustrates building a static crosstab report using the BIRT Total function. The report presents annual sales revenue by quarter for each of the product lines that Classic Models Inc currently sales. In addition totals are aggregated across horizontal and vertical dimensions. The BIRT Total function can accept a second parameter that filters the aggregate data. In this example this feature is used to only display values that pertain to a product offering, such as Trains. The first parameter in the Total function is the value to aggregate, and in this example it is set to quantity sold multiplied by price each. The second parameter is the filter. So if the filter where specified as dataSetRow["Products::PRODUCTLINE"]=="Motorcycles", only the Motorcycles product line would be aggregated.</li>
+							</ul>
+						</li><br />
+						<li>Business Forms
+							<ul class="eclipse-list">
+								<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/SalesInvoice.html" target="_blank">Sales Invoice</a> (<a href="http://www.eclipse.org/birt/phoenix/examples/solution/SalesInvoice.rptdesign" target="_blank">rptdesign</a>) - Prints an invoice for the selected order, including customer and invoice details and products ordered. Demonstrates use of a parameter to select the order to invoice and expressions for several calculated fields, including discount and order total. Uses expression to build customer address string and illustrates suppression of nulls in database fields with javascript function replace. Also shows image inclusion and sophisticated use of grids and tables to organize report content. Finally, the report makes use of styles to simplify maintenance and achieve a consistent look.</li>
+							</ul>
+						</li>
 					</ul>
 					</p>
-					<p>All of the above downloads contain the BIRT designer. The BIRT project has many additional downloads, including a runtime for deploying the BIRT engine in a web application or standalone Java application. The additional downloads are available for any build of BIRT by selecting the appropriate build here.</p>
-					<p>Once you have downloaded one of the above packages, unzip the package into your chosen directory. This will create an eclipse directory that contains eclipse.exe. Run eclipse.exe to start the designer.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Create a windows short cut</h2>
+					<p><strong>Reporting Feature Examples</strong> - This section demonstrates features and functions of the BIRT Report Designer.
 					<ul class="eclipse-list">
-						<li>From the desktop, right click, choose New→Shortcut.</li>
-						<li>For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)</li>
-						<li>Click Next.</li>
-						<li>Enter "Eclipse" for the shortcut name.</li>
+						<li></li><br />
 					</ul>
+					</p>
 					
-					<a name="frameworkinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Framework Designer Install</h2>
-					<p>As stated above, the framework install only contains the required BIRT plugins. The Framework install requires that you already have the Eclipse Platform, GEF, EMF, DTP and WTP packages. The specific version of each, is listed on the specific build's download page. Unzip each package into your eclipse directory.</p>
-
-					<h2 class="topic-section-header padding-top-small">Optional Eclipse Link File</h2>
-					<p>If you are installing the framework, you can download the BIRT framework and unzip the contents to any directory.</p>
+					<p><strong>Scripting</strong> - This section contains examples of scripting within the BIRT Designer.
 					<ul class="eclipse-list">
-						<li>After doing this, create a links directory in your installed Eclipse location (ie C:\eclipse\links).</li>
-						<li>Within this directory create a file with a unique name like birt.link.</li>
-						<li>Open the file you just created and enter path=drive:/pathtobirt (ie path=c:/birt)</li>
+						<li></li><br />
 					</ul>
-
-					<a name="jdbcdriver"></a>
-					<h2 class="topic-section-header padding-top-small">JDBC Drivers</h2>
-					<p>You will likely want to use your own JDBC driver with BIRT. Use the data source editor's JDBC driver management wizard. To start the wizard, open a BIRT report design, go to the Data Explorer view, right click on "Data Sources" and select "New Data Source". Choose "JDBC Data Source" and click "Next". In the next dialog, choose "Manage Drivers..." to bring up the "Manage JDBC Drivers" dialog.</p>
-					<p>In the "JAR Files" tab, click on "Add..." to add the JAR file required by your JDBC driver. Then go to the "Driver" tab to confirm that the list of drivers includes the new drivers added. You may also want to assign a display name and URL template for the new drivers in this tab.</p>
-
-					<a name="updatebirtinstall"></a>
-					<h2 class="topic-section-header padding-top-small">Updating a BIRT Installation</h2>
-					<p>If you have a version of BIRT installed, and want to install a newer version, do the following:</p>
+					</p>
+					
+					<p><strong>Integrating BIRT</strong> -  This section demonstrates several examples of deploying and using the APIs of BIRT.
 					<ul class="eclipse-list">
-						<li>Close Eclipse.</li>
-						<li>Locate your Eclipse plugins directory. If you installed on Windows in the default location, this is "C:\program files\eclipse\plugins".</li>
-						<li>Delete all directories that start with "org.eclipse.birt".</li>
-						<li>Download and install BIRT as described in the BIRT section above.</li>
-						<li>Restart Eclipse with the -clean option: eclipse -clean</li>
+						<li></li><br />
 					</ul>
-
-					<a name="deploytojava"></a>
-					<h2 class="topic-section-header padding-top-small">Deploying to Java EE Server</h2>
-					<p>Please see Setting up the BIRT Viewer </p>
-
-					<a name="birtlanguage"></a>
-					<h2 class="topic-section-header padding-top-small">Installing BIRT Language Packs on Windows</h2>
-					<ol class="eclipse-list">
-						<li>Download the Language Pack for the desired product and extract into your eclipse install.</li>
-						<li>Open the Regional and Language Options in the Control Panel and switch to the advanced tab.</li>
-						<li>Select the group 1 language you desire from the drop-down combo box.</li>
-						<li>Save changes and restart the system.</li>
-						<li>Launch Eclipse and select Window->Preferences->Report Design->Preview. Select the desired language from the drop-down combo box.</li>
-						<li>Restart Eclipse.</li>
-					</ol>
-
-					<a name="commonproblems"></a>
-					<h2 class="topic-section-header padding-top-small">Common Problems</h2>
-					<p>Some problems are due to cached information within Eclipse. Eclipse caches information about plugins for faster startup. Adding BIRT as we did above may result in stale cached information. Symptoms of this problem include:</p>
+					</p>
+					
+					<p><strong>Extending BIRT</strong> - This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc.
 					<ul class="eclipse-list">
-						<li>The BIRT perspective does not appear in Eclipse.</li>
-						<li>You receive "An error occurred" dialogs when opening reports or using the BIRT UI.</li>
+						<li></li><br />
 					</ul>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning Cached Plugin Information</h2>
-					<p>The solution is to clean up the cached information. The recommended practice is to start Eclipse with the -clean option:</p>
-					<p>eclipse -clean</p>
-
-					<h2 class="topic-section-header padding-top-small">Cleaning the Cache on Windows</h2>
-					<p>If you are on Windows, and are not familiar with how to invoke Eclipse from the command line, do the following:</p>
-					<ul class="eclipse-list">
-						<li>Choose Start→All Programs→Accessories→Command Prompt</li>
-						<li>Move to the directory where you installed eclipse. If you installed Eclipse in the standard location, enter:
-							<ul class="eclipse-list">
-								<li>cd "\Program Files\eclipse"</li>
-							</ul>
-						</li>
-						<li>Run Eclipse with the -clean option:
-							<ul class="eclipse-list">
-								<li>eclipse -clean</li>
-							</ul>
-						</li>
-						<li>Eclipse will restart. Again check for the BIRT perspective.</li>
-					</ul>
+					</p>
 
 				</div>
 			</div>
