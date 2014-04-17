@@ -98,7 +98,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="morehelp"></a>
 					<h2 class="topic-section-header padding-top-small">More Help</h2>
-					<p>Still looking for direction? Plenty of help can be had by visiting the <a href="" target="_blank">Community</a> page or by heading over to the <a href="http://developer.actuate.com/community/" target="_blank">BIRT Developer Center Community</a>.</p>
+					<p>Still looking for direction? Plenty of help can be had by visiting the <a href="" target="_blank">Community</a> page or by heading over to the <a href="http://developer.actuate.com/community/" target="_blank">BIRT Developer Center Community</a>. You can also see the <a href="http://wiki.eclipse.org/index.php/BIRT_Project" target="_blank">FAQ/Wiki</a></p>
 
 				</div>
 			</div>
