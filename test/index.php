@@ -47,7 +47,6 @@ $PagePart 	= new PagePart();
 
 			</div>
 
-
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
