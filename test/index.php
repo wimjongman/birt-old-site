@@ -1,8 +1,5 @@
 <?php
- if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") { 
- echo "You don't have access to view this page!"; 
- exit(); 
-} 
+ 
 session_start();
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
