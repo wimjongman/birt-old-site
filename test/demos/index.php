@@ -78,9 +78,10 @@ $PagePart 	= new PagePart();
 					
 					<a name="examples"></a>
 					<h2 class="topic-section-header padding-top-small">Examples</h2>
-					<p><p>If a preview exists, you can see it by clicking on the title link. To try a report for yourself, click on the rptdesign link to display the ROM file, save it to disk and then use File-->Import to bring the file into your Eclipse workspace. If the report uses the Classic Models database, you should be able to run the report immediately. If the report uses another database, follow the instructions provided in the "Other Notes" section of its description. If there is a demo or other downloads required, there will also be a link for those with the .rptdesign download link.</p>
+					<p>If a preview exists, you can see it by clicking on the title link. To try a report for yourself, click on the rptdesign link to display the ROM file, save it to disk and then use File-->Import to bring the file into your Eclipse workspace. If the report uses the Classic Models database, you should be able to run the report immediately. If the report uses another database, follow the instructions provided in the "Other Notes" section of its description. If there is a demo or other downloads required, there will also be a link for those with the .rptdesign download link.</p>
 					<a name="solution"></a>
-					<p><h3>Solution Reports</h3> - The example reports here show just a few of the things you can do with BIRT. Unless otherwise noted, the reports are meant to be run against the "Classic Models Inc." sample database that is included in the BIRT download.
+					<h3>Solution Reports</h3>
+					<p>The example reports here show just a few of the things you can do with BIRT. Unless otherwise noted, the reports are meant to be run against the "Classic Models Inc." sample database that is included in the BIRT download.
 					<ul class="eclipse-list">
 						<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/ProductCatalog.html" target="_blank">Product Catalog</a> (<a href="" target="_blank">rptdesign</a>) - Prints the Classic Models product catalog, grouped by product category. Provides product name, cost and description. Demonstrates one level grouping and using a grid within a table row to structure spacing. Also shows image inclusion and use of the <value-of> tag in text item to include the content of a database column. Finally, the report makes use of styles to simplify maintenance and achieve a consistent look.</li><br />
 						<li><a href="http://www.eclipse.org/birt/phoenix/examples/solution/TopSellingProducts.html" target="_blank">Top Selling Products</a> (<a href="" target="_blank">rptdesign</a>) - Displays a pie chart showing revenue by product line. Lists the top selling products, sorted by revenue. Demonstrates use of a chart and sorting a result set. Also shows image inclusion and use of grid and tables to organize report content. Finally, the report makes use of styles to simplify maintenance and achieve a consistent look.</li><br />
@@ -91,7 +92,8 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<a name="features"></a>
-					<p><strong>Reporting Feature Examples</strong> - This section of Examples focuses on the feature set within BIRT. Simple reports are used to illustrate a function within BIRT. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation. The examples use popups to explain the process and provide no sound.
+					<h3>Reporting Feature Examples</h3>
+					<p>This section of Examples focuses on the feature set within BIRT. Simple reports are used to illustrate a function within BIRT. Most examples will have a before and after report that can be downloaded. In addition, the example is illustrated in a Flash presentation. The examples use popups to explain the process and provide no sound.
 					<ul class="eclipse-list">
 						<li><a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/after.jpg" target="_blank">XML Data Source</a> (<a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/XMLDS_After.rptdesign" target="_blank">rptdesign</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/Classic-Models-Minimal-M-Trans%20(smaller).png" target="_blank">image</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/xmlds/XMLDS.html" target="_blank">demo</a>) - This example demonstrates how BIRT can be used to build reports on XML data sources. An XML file or an URI can serve as data sources for a BIRT report. In this example, we utilize URI's to the Eclipse RSS Newsfeed as the data source for a report.</li><br />
 						<li><strong>Libraries</strong> (<a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/Newsfeeds_After.rptdesign" target="_blank">rptdesign</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/Newsfeeds.rptlibrary" target="_blank">rptlibrary</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/blue.css" target="_blank">CSS1</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/green.css" target="_blank">CSS2</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/CreatingLibrary/CreatingLib.html" target="_blank">creating demo</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/UsingLibrary/UsingLib.html" target="_blank">using demo</a> | <a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/lib/UpdatingLibrary/UpdatingLib.html" target="_blank">updating demo</a>) - This example demonstrates how BIRT can be used to build reusable component report libraries. In this example, we start by creating a library. We utilize URI's to the Eclipse RSS Newsfeed as the data source for a report and store it in the library. We then publish the library to a resource folder. This example demonstrates the creation of non-visual items in a library. It is important to note that visual items can also be created and stored in a library.</li><br />
@@ -111,21 +113,21 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<a name="scripting"></a>
-					<p><strong>Scripting</strong> - This section contains examples of scripting within the BIRT Designer.
+					<p><h3>Scripting</h3> - This section contains examples of scripting within the BIRT Designer.
 					<ul class="eclipse-list">
 						<li></li><br />
 					</ul>
 					</p>
 					
 					<a name="integrating"></a>
-					<p><strong>Integrating BIRT</strong> -  This section demonstrates several examples of deploying and using the APIs of BIRT.
+					<p><h3>Integrating BIRT</h3> -  This section demonstrates several examples of deploying and using the APIs of BIRT.
 					<ul class="eclipse-list">
 						<li></li><br />
 					</ul>
 					</p>
 					
 					<a name="extending"></a>
-					<p><strong>Extending BIRT</strong> - This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc.
+					<p><h3>Extending BIRT</h3> - This section covers extending the feature set of BIRT, such as Open Data Access (ODA), Report Items, etc.
 					<ul class="eclipse-list">
 						<li></li><br />
 					</ul>
