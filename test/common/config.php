@@ -1,6 +1,9 @@
 <?php 
 
-
+if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") { 
+ echo "You don't have access to view this page!"; 
+ exit(); 
+}
 
 /******************************************* 
 	Things that you will need to configure before pushing environment. 
@@ -111,7 +114,14 @@ class PagePart {
 	function getFooter() {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
-			<div>footer</div>
+			<div><ul style="display:inline;">
+<li><a href="/">Home</a></li>
+<li><a href="/legal/privacy.php">Privacy Policy</a></li>
+<li><a href="/legal/termsofuse.php">Terms of Use</a></li>
+<li><a href="/legal/copyright.php">Copyright Agent</a></li>
+<li><a href="/legal/">Legal</a></li>
+<li><a href="/org/foundation/contact.php">Contact Us</a></li></ul>
+			<span id="copyright">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span></div>
 		<!-- Footer End -->';
 		return $footer;
 	}
