@@ -114,7 +114,7 @@ class PagePart {
 	function getFooter() {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
-			<div class="footer"><ul style="display:inline;">
+			<div id="footer"><ul style="display:inline;">
 <li style="display:inline;"><a href="/">Home</a></li>
 <li style="display:inline;"><a href="/legal/privacy.php">Privacy Policy</a></li>
 <li style="display:inline;"><a href="/legal/termsofuse.php">Terms of Use</a></li>
