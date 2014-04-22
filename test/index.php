@@ -50,7 +50,7 @@ $PagePart 	= new PagePart();
 						<img src = "<?php $basePath ?>img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:110px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
-							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> technology platform used to create data visualizations and reports that can be embedded into <span class="eclipse-txt-lightgreen">rich client and web applications</span>, especially those based on <span class="eclipse-txt-bloodorange">Java and Java EE</span>.</div>
+							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> technology platform used to create <span class="eclipse-txt-bloodorange">data visualizations</span> and reports that can be embedded into rich client and <span class="eclipse-txt-lightgreen">web applications</span>.</div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="http://download.eclipse.org/birt/downloads" class="square-button button-color-yellow" style="padding:10 30px;">Download BIRT 4.3.2</a></td></tr></tbody></table></div>
 						</div>
 					</div>
