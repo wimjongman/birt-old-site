@@ -80,19 +80,28 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Basic Tutorial</h2>
-					<p>The Basic Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. This is the place to start. To begin the tutorial click <a href="tutorial-1.php">here</a>.</p>
+					<h2 class="topic-section-header padding-top-small">Introduction</h2>
+					<p>This brief tutorial walks you through building a simple report with BIRT. It introduces the major UI features, and many of the BIRT reporting elements. At the completion of this tutorial, you should be able to start building your own reports using your own database.</p>
+					<p>We'll create a simple customer listing report, with the customers grouped by state and city. For each customer, we'll display a name and phone number.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Flash Movie of "My First Report"</h2>
-					<p><a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/tutorial/tutorial.html" target="_blank">This Flash movie</a> shows the creation of My First Report from the tutorial in BIRT's online help.</p>
+					<h2 class="topic-section-header padding-top-small">Install BIRT</h2>
+					<p>If you have not yet done so, install Eclipse, GEF, EMF and BIRT. You'll find complete instructions for doing so on the <a href="/birt/test/documentation/install.php" target="_blank">BIRT Install</a> page.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Other Tutorials</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Open BIRT</h2>
+					<p>BIRT is a perspective within Eclipse. To open it, use the Window item on the Eclipse main menu. Choose Open Perspective, then Report Design. If report Design does not appear directly in the Open Perspective window, then choose Other... A list of perspectives will appear. Choose Report Design.</p>
+					<p>Eclipse will switch to display the BIRT perspective.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Example Report</h2>
+					<p>If you get stuck as you work through the tutorial, or if you want to see the finished report right away, simply download it:
 					<ul class="eclipse-list">
-						<li><a href="http://www.youtube.com/watch?v=6TRndgUMUmU" target="_blank">Youtube -BIRT Report Designer Tutorial Part-1</a></li><br />
-						<li><a href="http://www.youtube.com/watch?v=Kdr_LeHjIH8" target="_blank">Youtube -BIRT Report Designer Tutorial Part-2</a></li>
+						<li>Use your browser to download the report: <a href="http://www.eclipse.org/birt/phoenix/tutorial/basic/customers.rptdesign" target="_blank">customers.rptdesign</a>.</li><br />
+						<li>Save the file into an Eclipse project directory. (See the next page if you don't yet have a project.)</li><br />
+						<li>Your browser may store this as an XML file. If so, rename it back the the name above.</li><br />
+						<li>Within Eclipse, select your project in the Navigator view and choose Refresh from the right-click context menu.</li><br />
+						<li>Double-click the report to open it in the BIRT report designer.</li>
 					</ul>
 					</p>
+					<p><a href="tutorial-2.php">Next: Creating a Report</a></p>
 					
 				</div>
 			</div>
