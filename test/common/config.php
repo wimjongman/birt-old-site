@@ -122,7 +122,7 @@ class PagePart {
 <li><a href="/legal/privacy.php">Privacy Policy</a></li>
 <li><a href="/legal/termsofuse.php">Terms of Use</a></li>
 </ul></div>
-<div class="col-3" style="width:1850px;">
+<div class="col-3" style="width:185px;">
 <ul>
 <li><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li><a href="/legal/">Legal</a></li>
