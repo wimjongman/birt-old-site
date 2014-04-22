@@ -80,92 +80,50 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Create a Project</h2>
+					<p>Eclipse uses projects to organize your files. So, the first step is to create a new project. For this demo, let's create a project called "My Reports":
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Choose File->New->Project. The new project dialog appears.</li><br />
+						<li>Open the "Business Intelligence and Reporting Tools" group and choose "Report Project".</li><br />
+						<li>Click Next.</li><br />
+						<li>Type "My Reports" (without the quotes) as the project name.</li><br />
+						<li>Click Finish.</li><br />
+						<li>Click OK if asked to switch to the Report Design perspective. (This occurs if you create a BIRT project while in a perspective other than Report Design.)</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Create a Report</h2>
+					<p>We're now ready to create our first report:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Choose File->New->Report. The new report dialog appears.</li><br />
+						<li>In the tree view, choose the project we just created: My Reports.</li><br />
+						<li>Enter the following in the file name field: Customers.rptdesign.</li><br />
+						<li>Click Next.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<p>You can create a report in three ways: as a blank report, by using a BIRT-defined template, or by copying one of your report designs. In this tutorial we will use a Template descibed in the next section.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Choose a Template</h2>
+					<p>The next page of the New Report dialog presents a selection of report templates. Before we choose the one we want, let's walk though what's available.
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>My First Report - Starts a report template that takes you through a tutorial using on-line help. (That tutorial will eventually replace this one.)</li><br />
+						<li>Blank Report - Creates a blank report with no predefined content.</li><br />
+						<li>Simple Listing - A tabular listing with no grouping.</li><br />
+						<li>Grouped Listing - A tabular listing with grouping. Grouping shows repeated values just once. Grouping also allows you to create subtotals.</li><br />
+						<li>Dual Column Listing - Produces a listing with two columns side-by-side.</li><br />
+						<li>Chart & Listing - A tabular listing that adds a chart to the top of the report.</li><br />
+						<li>Dual Column Chart & Listing - Combines charts and tables so you can display two sets of related data in a single report.</li><br />
+						<li>Side by Side Chart & Listing - Creates a grouped report where each group contains a chart and a listing side by side.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
-					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<p>We're now ready to choose our template:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Select the Grouped Listing.</li><br />
+						<li>Click Finish.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p>BIRT opens your new report in the Eclipse workspace.</p>
+					<p><a href="tutorial-1.php"><< Previous: Introduction</a> | <a href="tutorial-3.php">Brief UI Tour >></a></p>	
 					
 				</div>
 			</div>
