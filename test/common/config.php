@@ -130,7 +130,7 @@ class PagePart {
 			<div class="col-3" style="width:349px;">
 			<img style="width:175px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
 			<div class="clearfix"></div>
-			Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.
+			<span style="font-size:10px">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
 			</div>
 			</div>
 			</div>
