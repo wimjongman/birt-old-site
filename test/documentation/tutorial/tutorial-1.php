@@ -101,7 +101,7 @@ $PagePart 	= new PagePart();
 						<li>Double-click the report to open it in the BIRT report designer.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial-2.php">Next: Creating a Report</a></p>
+					<p><br /><a href="tutorial-2.php">Next: Creating a Report</a></p>
 					
 				</div>
 			</div>

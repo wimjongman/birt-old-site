@@ -123,7 +123,7 @@ $PagePart 	= new PagePart();
 					</ul>
 					</p>
 					<p>BIRT opens your new report in the Eclipse workspace.</p>
-					<p><a href="tutorial-1.php"><< Previous: Introduction</a> | <a href="tutorial-3.php">Brief UI Tour >></a></p>	
+					<p><br /><a href="tutorial-1.php"><< Previous: Introduction</a> | <a href="tutorial-3.php">Brief UI Tour >></a></p>	
 					
 				</div>
 			</div>
