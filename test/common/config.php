@@ -115,8 +115,8 @@ class PagePart {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
 			<div id="footer" class="content-area" style="margin-top:0px;">
-					<div class="content-area-inner" style="padding-top:30px;">
-<div class="col-3" style="width:150px;  margin-left:311px;">
+					<div class="content-area-inner" style="padding-top:30px; padding-bottom:30px;">
+<div class="col-3" style="width:150px;  margin-left:335px;">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/legal/privacy.php">Privacy Policy</a></li>
@@ -127,7 +127,7 @@ class PagePart {
 <li><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
-			<div class="col-3" style="width:349px;">
+			<div class="col-3" style="width:300px;">
 			<img style="width:175px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
 			<div class="clearfix"></div>
 			<span style="font-size:10px">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
