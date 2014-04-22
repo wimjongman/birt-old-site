@@ -127,7 +127,7 @@ class PagePart {
 <li><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
-			<div class="col-3" style="width:400px;">
+			<div class="col-3" style="width:300px;">
 			<img style="width:175px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
 			<p>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</p>
 			</div>
