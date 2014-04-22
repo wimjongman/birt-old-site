@@ -60,9 +60,10 @@ $PagePart 	= new PagePart();
 			<div class="dev-main eclipse-main bord-yellow">
 				<div class="eclipse-main-container">	
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
+					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
-					<p>(Items in the Events list are hosted in the BIRT Developer Center Calendar)
+					<p>
 						<ul class="eclispe-list-default">
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower<br />Government Clients with<br />Secure and Enhanced<br />Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/182-birt-live-new-york/">BIRT Live! | New York</a><br />New York, NY<br />April 30<br />8:30 AM - 4:30 PM ET</li>
@@ -71,24 +72,24 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<div class="clearfix"></div>
-					<p><br /><br /><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Full Calendar</a></p>
+					<p><br /><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Full Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blog/61/entry-524-birt-to-make-a-big-showing-at-eclipsecon/">BIRT to Make a Big Showing at EclipseCon</a><br />
-					An original contributor to the Eclipse Foundation, Actuate is gearing up to demonstrate how BIRT can visualize and embed even your most complex data sets including the so-called Internet of things.</p>
+					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
+					BIRT and BIRT iHub are now certified with Cloudera 5!...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/" target="_blank">Read More</a></p>
 					
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blog/61/entry-523-3-ways-birt-adds-value-to-embedded-systems/">3 Ways BIRT Adds Value to Embedded Systems</a><br />
-					If scale and functionality are what your reporting needs, BIRT is the most embeddable tool around.
+					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-531-creating-a-custom-oda-part-1/">Creating a Custom ODA (Part 1)</a><br />
+					In BIRT there are several ways we can connect to data. Some of these methods are out of the box such as MySQL while others require a little more work. This blog series aims to teach you how to bring in the power of scripted data sources and POJO's while adding an easy to use interface for the report designer. By the end of this series you should know how to...<a href="" target="_blank">Read More</a>
 					</p>
 
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-522-the-new-birt-developer-center/">The New BIRT Developer Center</a><br />
-					If you've logged into BIRT Exchange during the past few months, you've surely noticed some changes! There has been a complete structure and domain change.</p>
+					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-530-creating-data-driven-web-apps-using-birt-eclipsecon2014/">Creating Data Driven Web Apps Using BIRT - EclipseCon 2014</a><br />
+					This past week at EclipseCon 2014, I had a session about creating data driven web applications with BIRT. This session was meant to walk you through the entire process of design and deployment of a BIRT web application. I started with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-530-creating-data-driven-web-apps-using-birt-eclipsecon2014/" target="_blank">Read More</a></p>
 					
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blog/61/entry-521-implementing-ihub-3-what-you-need-to-know-now/">Implementing iHub 3, What You Need to Know Now</a><br />
-					The latest version brings a host of improvements to big data and mobile apps including animated HTML5 visualizations.</p>
+					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/">Creating an IoT Dashboard with BIRT</a><br />
+					This month marked the 10th annual EclipseCon and I was able to attend and talk about BIRT with the community and show off some of the cool things we’ve been working on at Actuate. One of the main themes that I was able to contribute to was the Internet of Things. If you’re not familiar with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/" target="_blank">Read More</a></p>
 					
 
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blogs/">Go to Actuate Blog ></a></p>
+					<p><a href="http://developer.actuate.com/community/forum/index.php?/blogs/">See More Blogs</a></p>
 
 				</div>
 			</div>
