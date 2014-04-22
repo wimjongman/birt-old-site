@@ -71,7 +71,7 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<div class="clearfix"></div>
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Calendar</a></p>
+					<p><br /><br /><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Full Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
 					<p><a href="http://developer.actuate.com/community/forum/index.php?/blog/61/entry-524-birt-to-make-a-big-showing-at-eclipsecon/">BIRT to Make a Big Showing at EclipseCon</a><br />
