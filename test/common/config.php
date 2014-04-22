@@ -116,13 +116,13 @@ class PagePart {
 		$footer = '<!-- Footer Begin -->
 			<div id="footer" class="content-area" style="margin-top:0px; padding-bottom:10px;">
 					<div class="content-area-inner" style="padding-top:10px;">
-<div class="col-3" style="width:180px;  margin-left:325px;">
+<div class="col-3" style="width:190px;  margin-left:325px;">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/legal/privacy.php">Privacy Policy</a></li>
 <li><a href="/legal/termsofuse.php">Terms of Use</a></li>
 </ul></div>
-<div class="col-3" style="width:180px;">
+<div class="col-3" style="width:190px;">
 <ul>
 <li><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li><a href="/legal/">Legal</a></li>
