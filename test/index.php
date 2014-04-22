@@ -62,11 +62,11 @@ $PagePart 	= new PagePart();
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
-					<p>
+					<p>(Items inthe Events list are hosted in the BIRT Developer Center Calendar)
 						<ul class="eclispe-list-default">
-							<li><a href="#">BIRT Live! | Chicago</a><br />Chicago, IL<br />March 4<br />8:30 am - 4:45pm CT</li>
-							<li>BIRT Live! | Toronto</li>
-							<li>BIRT Live! | Seattle</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower Government Clients with Secure and Enhanced Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/182-birt-live-new-york/">BIRT Live! | New York</a><br />New York, NY<br />April 30<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/185-birt-live-boston/">BIRT Live! | Boston</a><br />Boston, MA<br />May 1<br />8:30 AM - 4:30 PM ET</li>
 						</ul>
 					</p>
 					
