@@ -114,7 +114,7 @@ class PagePart {
 	function getFooter() {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
-			<div id="footer" class="content-area" style="margin-top:0px; height:210px; padding-bottom:10px;">
+			<div id="footer" class="content-area" style="margin-top:0px; padding-bottom:10px;">
 					<div class="content-area-inner" style="padding-top:10px;">
 <div class="col-3" style="width:150px;  margin-left:335px;">
 <ul>
