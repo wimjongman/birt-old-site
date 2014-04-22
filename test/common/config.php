@@ -116,20 +116,20 @@ class PagePart {
 		$footer = '<!-- Footer Begin -->
 			<div id="footer" class="content-area" style="margin-top:0px;">
 					<div class="content-area-inner" style="padding-top:30px;">
-<div class="col-3"
+<div class="col-3" style="width:200px">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/legal/privacy.php">Privacy Policy</a></li>
 <li><a href="/legal/termsofuse.php">Terms of Use</a></li>
 </ul></div>
-<div class="col-3">
+<div class="col-3" style="width:200px">
 <ul>
 <li><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
-			<div class="col-3">
+			<div class="col-3" style="width:400px">
 			<img style="width:200px; padding-bottom:20px;" src="/eclipse.org-common/themes/Nova/images/eclipse-800x426.png" />
-			<span>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
+			<p>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</p>
 			</div>
 			</div>
 			</div>
