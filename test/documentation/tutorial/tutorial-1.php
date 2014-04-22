@@ -80,7 +80,6 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Introduction</h2>
 					<p>This brief tutorial walks you through building a simple report with BIRT. It introduces the major UI features, and many of the BIRT reporting elements. At the completion of this tutorial, you should be able to start building your own reports using your own database.</p>
 					<p>We'll create a simple customer listing report, with the customers grouped by state and city. For each customer, we'll display a name and phone number.</p>
 					

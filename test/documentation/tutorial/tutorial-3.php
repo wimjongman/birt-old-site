@@ -80,92 +80,41 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<p>Before we start work on the report, let's take a quick tour of the UI. We'll be looking at most of the UI in detail as we build our report.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
-					</ul>
-					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<h2 class="topic-section-header padding-top-small">Cheat Sheets</h2>
+					<p>Notice at the right of your Eclipse workspace (for the default configuration) is a view called "Cheat Sheets." This view walks you though the process of building a report based on the template you selected.</p>
+					<p>For now, let's go ahead and close that view by clicking on the X (close) button in the upper left corner of the view, since we'll be following the steps in this tutorial.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Layout Editor</h2>
+					<p>The central area is the Layout Editor. This is the place where you create your report design. The editor has five tabs:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Layout - Where you edit your report design.</li><br />
+						<li>Preview - Runs your report and shows the output.</li><br />
+						<li>Script - Where you add JavaScript to your report to customize its behavior.</li><br />
+						<li>XML Source - You can view and modify the XML source of a report from here.</li><br />
+						<li>Master Page - Used to format page data such as page headers.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Views</h2>
+					<p>Around the editor are a number of views: The views below can be arranged to the left, right or bottom of the Layout Editor
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Palette - BIRT View that shows the standard report items you can add to your report using drag & drop.</li><br />
+						<li>Outline - BIRT View that shows the structure of your report as a tree view.</li><br />
+						<li>Navigator - Standard Eclipse view that shows your projects, and the reports within your projects.</li><br />
+						<li>Data Explorer - BIRT View that shows your data sources (connections), data sets (queries) and report parameters. You also use this view to add data set columns to your report layout.</li><br />
+						<li>Property Editor - BIRT View that displays properties for many report items. It has tabs and groupings that organize properties into categories.</li><br />
+						<li>Properties View - Standard Eclipse view that shows all properties for a report item as a simple list. This view is optional, and we will not use it in this tutorial.</li><br />
+						<li>Library Explorer View - BIRT allows the reuse of report objects, such as tables, data sources and styles. Objects created for reuse are stored in a library file. The Library Explorer will display Libraries that exist in the resource folder. Developed libraries can be added to the resource folder by selecting File->Publish Library to Resource Folder or by right clicking in Library Explorer and selecting add. The resource folder location can be configured at Window->Preferences->Report Design->Resource.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
+					<h2 class="topic-section-header padding-top-small">Displaying Views</h2>
+					<p>You can arrange your views any way you like. You can also hide them by clicking the "X" button next to the view tab. If you accidentally hide a view, you can display it again by using the Window->Show View menu item.</p>
+					<p>Many people find that a convenient layout is to have the Palette, Navigator, Outline and Data Explorer docked at the left edge of your workspace, and the Property Editor and Properties view docked at the bottom of the workspace.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-2.php"><< Previous: Creating a Report</a> | <a href="tutorial-4.php">Next: Building a Data Source >></a></p>
 					
 				</div>
 			</div>
