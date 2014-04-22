@@ -129,7 +129,7 @@ class PagePart {
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
 			<div class="col-4-fixed" style="width:400px">
-			<img src="/birt/test/img/Eclipse-Logo2014.png" />
+			<img src="/birt/test/img/logo/Eclipse_Logo2014.png" />
 			<span>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
 			</div>
 			</div>
