@@ -69,6 +69,7 @@ $PagePart 	= new PagePart();
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/185-birt-live-boston/">BIRT Live! | Boston</a><br />Boston, MA<br />May 1<br />8:30 AM - 4:30 PM ET</li>
 						</ul>
 					</p>
+					<p><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Calendar</a></p>
 					
 					<div class="clearfix"></div>
 
