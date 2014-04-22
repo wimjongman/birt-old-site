@@ -128,7 +128,7 @@ class PagePart {
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
 			<div class="col-3" style="width:270px;">
-			<img style="width:160px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
+			<img style="width:150px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
 			<div class="clearfix"></div>
 			<span style="font-size:10px">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
 			</div>
