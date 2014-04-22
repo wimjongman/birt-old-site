@@ -114,14 +114,20 @@ class PagePart {
 	function getFooter() {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
-			<div id="footer"><ul style="display:inline;">
+			<div id="footer" class="content-area" style="margin-top:0px;">
+					<div class="content-area-inner" style="padding-top:30px;">
+<div style="display:inline;"><ul style="display:inline;">
 <li style="display:inline;"><a href="/">Home</a></li>
 <li style="display:inline;"><a href="/legal/privacy.php">Privacy Policy</a></li>
 <li style="display:inline;"><a href="/legal/termsofuse.php">Terms of Use</a></li>
+</ul></div>
+<div style="display:inline;"><ul style="display:inline;">
 <li style="display:inline;"><a href="/legal/copyright.php">Copyright Agent</a></li>
 <li style="display:inline;"><a href="/legal/">Legal</a></li>
-<li style="display:inline;"><a href="/org/foundation/contact.php">Contact Us</a></li></ul>
-			<span style="display:inline;">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span></div>
+<li style="display:inline;"><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
+			<div style="display:inline;"><span>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</span>
+			<img style="width:200px;" src="/eclipse.org-common/themes/Nova/images/eclipse-800x426.png" />
+			</div>
 		<!-- Footer End -->';
 		return $footer;
 	}
