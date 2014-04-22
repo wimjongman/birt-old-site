@@ -129,7 +129,7 @@ class PagePart {
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
 			<div class="col-3" style="width:325px;">
 			<img style="width:175px;" src="/birt/test/img/logo/eclipse_logo_colour.png" />
-			<p>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</p>
+			<p style="color:#535353;">Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</p>
 			</div>
 			</div>
 			</div>
