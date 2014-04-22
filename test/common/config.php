@@ -129,7 +129,7 @@ class PagePart {
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/org/foundation/contact.php">Contact Us</a></li></ul></div>
 			<div class="col-4-fixed" style="width:400px">
-			<img style="width:200px; padding-bottom:20px; float:left;" src="/eclipse.org-common/themes/Nova/images/eclipse-800x426.png" />
+			<div style="width:200px;" background="url(../eclipse.org-common/themes/Nova/images/eclipse-800x426.png)"></div>
 			<p>Copyright &copy; 2014 The Eclipse Foundation. All Rights Reserved.</p>
 			</div>
 			</div>
