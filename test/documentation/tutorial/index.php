@@ -94,7 +94,7 @@ $PagePart 	= new PagePart();
 					</ul>
 					</p>
 					
-					<div style="height:400px"></div>
+					<div style="height:200px"></div>
 					
 				</div>
 			</div>
