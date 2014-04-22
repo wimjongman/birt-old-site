@@ -115,7 +115,7 @@ class PagePart {
 		$footer = '';
 		$footer = '<!-- Footer Begin -->
 			<div id="footer" class="content-area" style="margin-top:0px;">
-					<div class="content-area-inner" style="padding-top:30px; padding-bottom:30px;">
+					<div class="content-area-inner" style="padding-top:30px; margin-bottom:20px;">
 <div class="col-3" style="width:150px;  margin-left:335px;">
 <ul>
 <li><a href="/">Home</a></li>
