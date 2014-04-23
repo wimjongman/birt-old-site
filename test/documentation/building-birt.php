@@ -297,34 +297,27 @@ contains other classes that can be used by any other module</td>
 					
 					<h2 class="topic-section-header padding-top-small">Import Additional Files</h2>
 					<p>Import iText 1.3 and iTextAsian into the com.lowagie.itext/lib directory.</p>
-					<img src="/birt/test/img/itext.jpg" />
-					<ul class="eclipse-list">
-						<li>Introduction</li>
-						<li>Requirements</li>
-						<li>Configuring Eclipse</li>
-						<li>Understanding the CVS Structure</li>
-						<li>Checking out Code from CVS</li>
-						<li>Checking out the Data Tools Projects</li>
-						<li>Import Additional Files</li>
-						<li>Preparing the Viewer</li>
-						<li>Running BIRT</li>
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
+					<img src="/birt/test/img/itext.jpg" /><br /><br />
+					<p>If your Eclipse environment is not setup to build automatically, build the source now. This designer should build correctly. If you wish to build the Web Viewer proceed to the next section. Do this if you wish to make changes to the deployable Web Viewer Example.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<h2 class="topic-section-header padding-top-small">Preparing the Viewer</h2>
+					<p>The viewer project contains an ant build script that builds the Web Viewer. When executed it will create a birt_web directory in the root of the viewer project. This directory can then be exported and deployed in a similar fasion to the Web Viewer example in the Report Engine download. To use this script, perform the following steps.
 					<ul class="eclipse-list">
-						<li>Introduction</li>
-						<li>Requirements</li>
-						<li>Configuring Eclipse</li>
-						<li>Understanding the CVS Structure</li>
-						<li>Checking out Code from CVS</li>
-						<li>Checking out the Data Tools Projects</li>
-						<li>Import Additional Files</li>
-						<li>Preparing the Viewer</li>
-						<li>Running BIRT</li>
-						<li>Instructions for Running JUnit Tests</li>
+						<li>Copy the following plugins from the all in one download to the source directory of the workspace you are currently using to build BIRT.<br /><br />
+							org.apache.batik.pdf_1.6.0.v20060623-1511<br />
+							org.apache.batik_1.6.0.v20060623-1511<br />
+							org.apache.xerces_2.8.0.v20060815-0630<br /><br />
+							When copying these plugins rename them to the following:<br /><br />
+							org.apache.batik.pdf<br />
+							org.apache.batik<br />
+							org.apache.xerces<br /><br />
+							eg. If you have checked the projects out to c:/work/birt2.1.1/source and your all in one distribution is located under c:/birt2.1.1, copy the three plugins from c:/birt2.1.1/eclipse/plugins to c:/work/birt2.1.1/source and rename them as stated above.
+						</li><br />
+						<li>In Package Explorer, expand the org.eclipse.birt.report.viewer project.</li><br />
+						<li>Right-click the BuildWebViewer.xml file. From the context menu, choose Run -> Ant Build....<br /><br />
+						<img src="/birt/test/img/antbuild.jpg" /></li><br />
+						<li>In the org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. Unselect Use global properties specified in the Ant runtime preferences as shown in the following illustration. Add the eclipse.home property and set it to your all in one Eclipse install directory.<br /><br />
+						<img src="/birt/test/img/eclipsehome.jpg" /></li>
 					</ul>
 					</p>
 					
