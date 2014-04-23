@@ -63,49 +63,26 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li>
-						<li>Framework Designer Install</li>
-						<li>JDBC Drivers</li>
-						<li>Updating a BIRT Installation</li>
-						<li>Deploying to a Java EE Server</li>
-						<li>Installing BIRT Language Packs on Windows</li>
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<h2 class="topic-section-header padding-top-small">Introduction</h2>
+					<p>This document describes how to get the BIRT source from CVS and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build.</p>
+					<p>Building BIRT 2.1.1 is described below.<br />
+					For the latest instructions, see the <a href="http://wiki.eclipse.org/BIRT/FAQ/Birt_Project#Q:_How_do_I_build_BIRT.3F">BIRT Wiki</a>.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
-					<ul class="eclipse-list">
-						<li>Introduction</li>
-						<li>Creating a Report</li>
-						<li>Brief UI Tour</li>
-						<li>Building a Data Source</li>
-						<li>Building a Data Set</li>
-						<li>Building a Table</li>
-						<li>Testing Your Report</li>
-						<li>Setting Visual Properties</li>
-						<li>Setting Data Properties</li>
-						<li>Using Styles</li>
-						<li>Cascading Styles</li>
-						<li>Using a Grid</li>
-						<li>Using a Text Item</li>
-						<li>Next Steps</li>
-					</ul>
-					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<h2 class="topic-section-header padding-top-small">Requirements</h2>
+					<p>Download the BIRT all in one designer. It is listed under "Report Designer Full Eclipse Install" on the download page. It is possible to build BIRT with an existing Eclipse install, but this method is the quickest, as all the required files, with the exception of iText.jar and iTextAsian.jar are present.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Configuring Eclipse</h2>
+					<p>The BIRT source code uses some features that are only present in JDK 1.4.2 or later. In order for it to successfully build you need to set your compiler compliance to 1.4. Make sure this is not set to 5.0. You can set this for the entire workbench as follows:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li>
-						<li>Viewer Usage</li>
-						<li>Using PHP</li>
-						<li>Report Scripting</li>
-						<li>Design Engine API</li>
+						<li>From the menu, choose Window->Preferences.</li><br />
+						<li>In the tree, expand Java and choose Compiler.</li><br />
+						<li>On Compiler compliance level, select 1.4.</li><br />
+						<li>Unselect Use default compliance settings.</li><br />
+						<li>On Generated .class files compatibility, select 1.4.</li><br />
+						<li>On Source compatibility, select 1.4.<br /><br />
+							The following illustration shows these settings.<br />
+							<img src="/birt/test/img/compliancepreference.jpg" />
+						</li><br />
 						<li>Report Engine API</li>
 					</ul>
 					</p>
