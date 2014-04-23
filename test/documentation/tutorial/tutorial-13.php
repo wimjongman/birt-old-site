@@ -118,9 +118,21 @@ $PagePart 	= new PagePart();
 								&lt;/CENTER&gt;<br />
 							</blockquote>
 						</li>
+						<li>Click OK and save your changes.</li>
 					</ul>
 					</p>
 					
+					<h2 class="topic-section-header padding-top-small">Dynamic Text</h2>
+					<p>While we won't use it in this tutorial, there is one other feature of Text Elements to note. Select the Dynamic Text category and you'll see a tag. This allows you to insert expressions directly into your HTML. For example, to display an address line in US format, we could type:</p>
+					<blockquote>
+						&lt;value-of&gt;row["city"]&lt;/value-of&gt;,<br>
+						&lt;value-of&gt;row["state"]&lt;/value-of&gt;<br>
+						&lt;value-of format="@@@@@-@@@@"&gt;row["zip"]&lt;value-of&gt;
+					</blockquote>
+					<p>The row values correspond to the name column within the Binding Editor for the given report container element. So for example if we added a Text Element to our Table, we could use row["CUSTOMERNAME"] within the value-of tag.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Final Test</h2>
+					<p>We're now ready to give the report a final test. Click the Preview tab to see the report with formatting applied.</p>
 					
 					<p><br /><a href="tutorial-12.php"><< Previous: Using a Grid</a> | <a href="tutorial-14.php">Next: Next Steps >></a></p>
 					
