@@ -90,15 +90,37 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Create a Text Item</h2>
 					<p>Let's create our text item. To do this:
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Drag a Text Element from the palette and drop it into the center cell within our grid.</li><br />
+						<li>The Edit Text Item dialog appears.</li><br />
+						<li>In the top combo box, choose HTML/Dynamic Text. The dialog displays a variety of HTML tags we can insert.</li><br />
+						<li>Using the button next to Formatting, pull down the list and choose Layout.</li><br />
+						<li>Click the &lt;CENTER&gt; tag to add it.</li><br />
+						<li>From the list near the top of the dialog, insert a &lt;FONT&gt; element.</li><br />
+						<li>In the attributes provided, set the size to 6 and the color to blue. Erase the face attribute. The text should now look like this:
+					
+					
+							<blockquote>
+								&lt;CENTER&gt;<br />
+								&lt;FONT size="6" color=blue&gt;<br /><br />
+
+								&lt;/FONT&gt;<br />
+								&lt;/CENTER&gt;<br />
+							</blockquote>
+						</li>
+						<li>Continue using the editor to create the text below:
+							<blockquote>
+								&lt;CENTER&gt;<br />
+								&lt;FONT size="6" color=blue&gt;<br />
+								Customer Listing<br />
+								&lt;/FONT&gt;<br />
+								&lt;BR&gt;<br />
+								&lt;I&gt;For internal use only&lt;/I&gt;<br />
+								&lt;/CENTER&gt;<br />
+							</blockquote>
+						</li>
 					</ul>
 					</p>
+					
 					
 					<p><br /><a href="tutorial-12.php"><< Previous: Using a Grid</a> | <a href="tutorial-14.php">Next: Next Steps >></a></p>
 					
