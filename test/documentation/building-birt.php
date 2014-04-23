@@ -296,7 +296,7 @@ contains other classes that can be used by any other module</td>
 					</p>
 					
 					<h2 class="topic-section-header padding-top-small">Import Additional Files</h2>
-					<p>Import iText 1.3 and iTextAsian into the com.lowagie.itext/lib directory.</p>
+					<p>Import <a href="http://sourceforge.net/projects/itext/files/" target="_blank">iText 1.3</a> and <a href="http://sourceforge.net/projects/itext/files/" target="_blank">iTextAsian</a> into the com.lowagie.itext/lib directory.</p>
 					<img src="/birt/test/img/itext.jpg" /><br /><br />
 					<p>If your Eclipse environment is not setup to build automatically, build the source now. This designer should build correctly. If you wish to build the Web Viewer proceed to the next section. Do this if you wish to make changes to the deployable Web Viewer Example.</p>
 					
@@ -317,39 +317,35 @@ contains other classes that can be used by any other module</td>
 						<li>Right-click the BuildWebViewer.xml file. From the context menu, choose Run -> Ant Build....<br /><br />
 						<img src="/birt/test/img/antbuild.jpg" /></li><br />
 						<li>In the org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. Unselect Use global properties specified in the Ant runtime preferences as shown in the following illustration. Add the eclipse.home property and set it to your all in one Eclipse install directory.<br /><br />
-						<img src="/birt/test/img/eclipsehome.jpg" /></li>
+						<img src="/birt/test/img/eclipsehome.jpg" /></li><br />
+						<li>Choose Run. The ant build of the Web Viewer runs in the console. This will create the birt_web directory within the project that contains the Web Viewer. Refresh the viewer project and the birt_web directory will be displayed.</li>
 					</ul>
 					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<h2 class="topic-section-header padding-top-small">Running BIRT</h2>
+					<p>Start BIRT by running it as an Eclipse Application. This can be done as follows:
 					<ul class="eclipse-list">
-						<li>Introduction</li>
-						<li>Requirements</li>
-						<li>Configuring Eclipse</li>
-						<li>Understanding the CVS Structure</li>
-						<li>Checking out Code from CVS</li>
-						<li>Checking out the Data Tools Projects</li>
-						<li>Import Additional Files</li>
-						<li>Preparing the Viewer</li>
-						<li>Running BIRT</li>
-						<li>Instructions for Running JUnit Tests</li>
+						<li>Select Run... from the Run menu on the menu bar</li><br />
+						<li>Select Eclipse Applicaiton from the list on the left and click on the New button as shown in the following illustration:<br /><br />
+						<img src="/birt/test/img/runconfig1.jpg" /></li><br />
+						<li>Click the Run button to launch the Eclipse Application. In the new Eclipse application start a new BIRT project and build reports as usual. You should be able to step through and debug the BIRT code.<br /><br />
+						<img src="/birt/test/img/runconfig2.jpg" /></li>
 					</ul>
 					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<h2 class="topic-section-header padding-top-small">Instructions for Running JUnit Tests</h2>
+					<p>
 					<ul class="eclipse-list">
-						<li>Introduction</li>
-						<li>Requirements</li>
-						<li>Configuring Eclipse</li>
-						<li>Understanding the CVS Structure</li>
-						<li>Checking out Code from CVS</li>
-						<li>Checking out the Data Tools Projects</li>
-						<li>Import Additional Files</li>
-						<li>Preparing the Viewer</li>
-						<li>Running BIRT</li>
-						<li>Instructions for Running JUnit Tests</li>
+						<li>Open debug perspective</li><br />
+						<li>click on Run --> Run --> Double click on JUnit Plug-in Test , this will create a new configuration. In the window, you can select among different options.<br /><br />
+							To run all tests in a selected project, click on the option 'Run all tests in selected project,package or source folder'. On the right side, select the package to run tests for by clicking on Search and selecting a required source folder.<br /><br />
+							In this example, we will run tests in org.eclipse.birt.report.engine project. So lets name this configuration as ReportEngineTests in the 'Name:' box on the top of the configuration window. And then click 'Apply' to save the changes.<br /><br />
+							<img src="/birt/test/img/runcreateconfig.jpg" /><br /><br />
+							To run the test, in the ReportEngineTests window, click on 'Run'. This will run all tests in org.eclipse.birt.report.engine.<br /><br />
+							<img src="/birt/test/img/runtests75.jpg" /><br /><br />
+							If you want to see the progress of the tests, look at the JUnit window.<br /><br />
+							The results for birt2_1_1_Release_20060927 should be 613 tests ran, with 2 failures and no errors. 
+						</li>
 					</ul>
 					</p>
 					
