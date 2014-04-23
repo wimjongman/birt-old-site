@@ -106,7 +106,8 @@ $PagePart 	= new PagePart();
 					
 					<h2 class="topic-section-header padding-top-small">Web Viewer Web.xml Settings</h2>
 					<p>The web.xml file contains many settings used to configure the Viewer.  These settings are illustrated below.</p>
-
+					
+					<p>
 					<table border="1">
  						<tr><td><p><b>Attribute</b></p></td><td><p><b>Description</b></p></td></tr>
  						<tr><td><p>BIRT_VIEWER_LOCALE</p></td><td><p>This setting sets the default locale for the Web Viewer.</p></td></tr>
@@ -128,421 +129,93 @@ $PagePart 	= new PagePart();
  						<tr><td><p>BIRT_RESOURCE_PATH</p></td><td><p>This setting specifies the resource path used by report engine. The resource path is used to search for libraries, images, and properties files used by a report. If this setting is left blank, resources will be searched for in the same directory as the report.</p></td></tr>
  						<tr><td><p >BIRT_VIEWER_MAX_ROWS</p></td><td><p>Specifies the maximum number of rows to retrieve from a dataset.</p></td></tr>
  						<tr><td><p>BIRT_OVERWRITE_DOCUMENT</p></td><td><p>Specifies whether to overwrite the report document every time a report is executed. The default is set to true. Valid values are true and false.</p></td></tr>
+ 						<tr><td><p >BIRT_VIEWER_CONFIG_FILE</p></td><td><p >Specifies the location of the viewer.properties file. This file contains various settings used by the viewer.</p></td></tr>
+ 						<tr><td><p >BIRT_VIEWER_PRINT_SERVERSIDE</p></td><td><p >This setting specifies whether server side printing is supported. If set to OFF the toolbar icon used for server side printing will be removed automatically. Valid values are ON and OFF.</p></td></tr>
+ 						<tr><td><p >HTML_ENABLE_AGENTSTYLE_ENGINE</p></td><td><p >This setting determines how BIRT styles are handled with the HTML emitter. If set to TRUE, the BIRT engine will output the styles directly to the report and depends on the browser to implement the style calculations. If set to FALSE the emitter will use the BIRT style engine to calculate the styles and will output the results directly to the report.</p></td></tr>
+ 					</table>
+ 					</p>
  						
- <tr>
-  <td
-  >
-  <p >BIRT_VIEWER_CONFIG_FILE</p>
-  </td>
-  <td
-  
-  >
-  <p >Specifies
-  the location of the viewer.properties file. This file contains various
-  settings used by the viewer.</p>
-  </td>
- </tr>
- <tr>
-  <td
-  >
-  <p >BIRT_VIEWER_PRINT_SERVERSIDE</p>
-  </td>
-  <td
-  
-  >
-  <p >This
-  setting specifies whether server side printing is supported. If set to OFF
-  the toolbar icon used for server side printing will be removed
-  automatically. Valid values are ON and OFF.</p>
-  </td>
- </tr>
- <tr>
-  <td
-  >
-  <p >HTML_ENABLE_AGENTSTYLE_ENGINE</p>
-  </td>
-  <td
-  
-  >
-  <p >This
-  setting determines how BIRT styles are handled with the HTML emitter. If set
-  to TRUE, the BIRT engine will output the styles directly to the report and
-  depends on the browser to implement the style calculations. If set to FALSE
-  the emitter will use the BIRT style engine to calculate the styles and will
-  output the results directly to the report.</p>
-  </td>
- </tr>
-</table>
+ 					<h2 class="topic-section-header padding-top-small">Parameters</h2>
+ 					<p >The example viewer has a distinction between report parameters and viewer configuration parameters. Report parameters are used by the report designs and configuration parameters affect the appearance and features available to the example Viewer application. In either case these parameters can be passed as URL parameters by entering the &amp;parmname=value syntax, passed in a html form, or passed using the jsp:parm tag. Configuration parameters by default start with two underscore characters "__" prefixed to the parameter name.</p>
+ 					<p >Report parameters that are designated in the design as required and are not entered in one of the above methods will cause the viewer to launch a parameter entry dialog box. Additionally the example Viewer tag library contains tags to configure and set parameters as well.</p>
+ 						
+ 					<p>
+ 					<table border="1">
+ 						<tr><td><p ><b>Attribute</b></p></td><td><p ><b>Description</b></p></td></tr>
+ 						<tr><td><p >__id</p></td><td><p >A unique identifier for the viewer.</p></td></tr>
+ 						<tr><td><p >__title</p></td><td ><p >Sets the report title.</p></td></tr>
+ 						<tr><td ><p >__showtitle</p></td><td ><p >Determines if the report title is shown in the frameset viewer. Defaults to true. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__toolbar</p></td><td ><p >Determines if the report toolbar is shown in the frameset viewer. Defaults to true. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__navigationbar</p></td><td ><p >Determines if the navigation bar is shown in the frameset viewer. Defaults to true. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__parameterpage</p></td><td ><p >Determines if the parameter page is displayed. By default the frameset, run and preview mappings will automatically determine if the parameter page is required. This setting will override this behavior. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__report</p></td><td ><p >Sets the name of the report design to process. This can be an absolute path or relative to the working folder (See web.xml settings).</p></td></tr>
+ 						<tr><td ><p >__document</p></td><td ><p >Sets the name for the rptdocument. The document is created when the report engine separates run and render tasks, and is used to support features like table of contents and pagination. This setting can be an absolute path or relative to the working folder (See web.xml settings). If no document parameter is used, a unique document is created in the document folder (see web.xml settings).</p></td></tr>
+ 						<tr><td ><p >__format</p></td><td ><p >Specifies the desired output format, such as pdf, html, doc, ppt, or xls.</p></td></tr>
+ 						<tr><td ><p >__locale</p></td><td ><p >Specifies the locale for the specific operation. Note that this will override the default locale. Order of precedence is as follows:</p>
+ 						<p >__locale parameter.</p>
+ 						<p >Locale from client browser.</p>
+ 						<p >Locale web.xml setting.</p>
+ 						<p >Locale for the application server.</p></td></tr>
+ 						<tr><td ><p >__svg</p></td><td ><p >Specifies whether SVG is supported.</p></td></tr>
+ 						<tr><td ><p >__page</p></td><td ><p >Specifies specific page to render.</p></td></tr>
+ 						<tr><td ><p >__pagerange</p></td><td ><p >Specifies page range to render. Eg 1-4,7.</p></td></tr>
+ 						<tr><td ><p >__isnull</p></td><td ><p >Specifies that a report parameter has a null value. Eg __isnull=Myparameter.</p></td></tr>
+ 						<tr><td ><p >__islocale</p></td><td ><p >Specifies whether the parameter is localized.</p></td></tr>
+ 						<tr><td ><p >__masterpage</p></td><td ><p >Indicates that the report master page should be used or not. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__overwrite</p></td><td ><p >This setting if set to true will force an overwrite of the existing report document. This setting will override the initial setting in the web.xml. By default the report document is overwritten anytime the report design is changed.</p></td></tr>
+ 						<tr><td ><p >__bookmark</p></td><td ><p >Specifies a specific bookmark within the report to load. The viewer will automatically load the appropriate page.</p></td></tr>
+ 						<tr><td ><p >__rtl</p></td><td ><p >Specifies whether to display the report in right to left format. This setting defaults to false.</p></td></tr>
+ 						<tr><td ><p >__fittopage</p></td><td ><p >Specifies whether PDF generation should fit content to a page. Valid values are true and false.</p></td></tr>
+ 						<tr><td ><p >__resourceFolder</p></td><td ><p >Specifies the resource folder to use. This setting will override the default setting in the web.xml. The resource folder is used to locate libraries, images, and resource files.</p></td></tr>
+ 					</table>						
+ 					</p>
 
-
-<h2><a name=" "></a>Parameters</h2>
-
-<p >The example viewer has a distinction between report
-parameters and viewer configuration parameters. Report parameters are used by
-the report designs and configuration parameters affect the appearance and
-features available to the example Viewer application. In either case these
-parameters can be passed as URL parameters by entering the &amp;parmname=value
-syntax, passed in a html form, or passed using the jsp:parm tag. Configuration
-parameters by default start with two underscore characters "__" prefixed to the parameter name.</p>
-
-<p >Report parameters that are designated in the design as
-required and are not entered in one of the above methods will cause the viewer
-to launch a parameter entry dialog box. Additionally the example Viewer tag
-library contains tags to configure and set parameters as well.</p>
-
-<table border="1">
- <tr>
-  <td>
-  <p ><b>Attribute</b></p>
-  </td>
-  <td>
-  <p ><b>Description</b></p>
-  </td>
- </tr>
- <tr>
-  <td>
-  <p >__id</p>
-  </td>
-  <td>
-  <p >A
-  unique identifier for the viewer.</p>
-  </td>
- </tr>
- <tr>
-  <td>
-  <p >__title</p>
-  </td>
-  <td >
-  <p >Sets the report title.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__showtitle</p>
-  </td>
-  <td 
-  
->
-  <p >Determines
-  if the report title is shown in the frameset viewer. Defaults to true. 
-  Valid values are true and false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__toolbar</p>
-  </td>
-  <td 
-  
->
-  <p >Determines
-  if the report toolbar is shown in the frameset viewer. Defaults to true. 
-  Valid values are true and false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__navigationbar</p>
-  </td>
-  <td 
-  
->
-  <p >Determines
-  if the navigation bar is shown in the frameset viewer. Defaults to true. Valid
-  values are true and false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__parameterpage</p>
-  </td>
-  <td 
-  
->
-  <p >Determines
-  if the parameter page is displayed. By default the frameset, run and preview
-  mappings will automatically determine if the parameter page is required. 
-  This setting will override this behavior. Valid values are true and false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__report</p>
-  </td>
-  <td 
-  
->
-  <p >Sets
-  the name of the report design to process. This can be an absolute path or relative
-  to the working folder (See web.xml settings).</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__document</p>
-  </td>
-  <td 
-  
->
-  <p >Sets
-  the name for the rptdocument. The document is created when the report engine
-  separates run and render tasks, and is used to support features like table of
-  contents and pagination. This setting can be an absolute path or relative to
-  the working folder (See web.xml settings). If no document parameter is used,
-  a unique document is created in the document folder (see web.xml settings).</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__format</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  the desired output format, such as pdf, html, doc, ppt, or xls.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__locale</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  the locale for the specific operation. Note that this will override the
-  default locale. Order of precedence is as follows:</p>
-  <p >__locale
-  parameter.</p>
-  <p >Locale
-  from client browser.</p>
-  <p >Locale
-  web.xml setting.</p>
-  <p >Locale
-  for the application server.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__svg</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  whether SVG is supported.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__page</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  specific page to render.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__pagerange</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  page range to render. Eg 1-4,7.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__isnull</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  that a report parameter has a null value. Eg __isnull=Myparameter.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__islocale</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  whether the parameter is localized.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__masterpage</p>
-  </td>
-  <td 
-  
->
-  <p >Indicates
-  that the report master page should be used or not. Valid values are true and
-  false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__overwrite</p>
-  </td>
-  <td 
-  
->
-  <p >This
-  setting if set to true will force an overwrite of the existing report
-  document. This setting will override the</p>
-  <p >initial
-  setting in the web.xml. By default the report document is overwritten
-  anytime the report design is changed.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__bookmark</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  a specific bookmark within the report to load. The viewer will automatically
-  load the appropriate page.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__rtl</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  whether to display the report in right to left format. This setting defaults
-  to false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__fittopage</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  whether PDF generation should fit content to a page. Valid values are true
-  and false.</p>
-  </td>
- </tr>
- <tr>
-  <td 
-  >
-  <p >__resourceFolder</p>
-  </td>
-  <td 
-  
->
-  <p >Specifies
-  the resource folder to use. This setting will override the default setting
-  in the web.xml. The resource folder is used to locate libraries, images, and
-  resource files.</p>
-  </td>
- </tr>
-</table>
-</p>
-
-<h2><a name="directory"></a>Viewer Directory Structure</h2>
-<p>
-The Example Web Viewer has the following directory structure.
-
-<img src="viewerarch.PNG" /><br/><br/></p>
-<p>
-<div class="homeitem3col">
-<h3>BIRT POJO Viewer: </h3>
-<ul>
-  If you are installing BIRT 3.7 or higher, The platform, configuration, and plugin directories has been removed from the Viewer.
-  See the <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a> for more details.
- </ul>
-</div>
-Most of the directories are configurable using variables set within web.xml.  The WEB-INF/platform, webcontent, and WEB-INF/lib directories are exceptions.
-</p>
-<p>
-The BIRT plugins and associated OSGi configuration files are located in the WEB-INF/platform directory.  This directory is hard coded in the Viewer, but allows the application to be deployed in WAR format.  When deployed in this manner the Viewer source will create a copy of the platform directory in a directory that is set with the system variable <b>javax.servlet.context.tempdir</b>.  Once the platform directory is created the BIRT plugins will be copied to the tempdir and the Platform is then started.
-</p>
-<p>
-The webcontent directory contains the JavaScript files used for AJAX communications, the JSP fragments used to construct the Viewer instance, image files used by the Viewer, and the cascading style sheets used within the Viewer.
-</p>
-<p>
-The WEBINF/lib directory contains the required Jars for the Viewer to operate.  
-</p>
-<p>
-Additional Jar files that are used by deployed reports can be placed in the WEB-INF/lib or the scriptlib directories.  See the web.xml settings section for additional details.
-</p>
-<h2><a name="tags"></a>Viewer Tag Library</h2>
-<p>
-The Web Viewer now contains a tag library that can be used to customize the behavior of the Viewer.  This tag library can be deployed by either deploying the viewer as normal or by using the BIRT Web Deployment project wizard.  In addition, if you desire to have BIRT deployed in one context and include the tag library in a separate context this can be done by copying the birt.tld file to your WEB-INF/tlds directory and copying coreapi.jar, modelapi,jar, viewerservlets.jar, engineapi.jar,  and com.ibm.icu_version.jar from the Viewer libs directory to the new context/web-inf/lib directory.  Add the following reference to your web.xml
-<br />
-<pre>
-	&lt;jsp-config>
-		&lt;taglib>
-			&lt;taglib-uri>/birt.tld&lt;/taglib-uri>
-			&lt;taglib-location>/WEB-INF/tlds/birt.tld&lt;/taglib-location>
-		&lt;/taglib>
-	&lt;/jsp-config>
-</pre>
-</p>
-<p>
- Using this approach reports are referenced in relation to the BIRT Viewer not the new context.
-</p>
-<p>
-The Viewer tag library contains five tags param, paramDef, parameterPage, report and viewer.  Each tag has multiple attributes that control the behavior of the Viewer.
-<img src="birttags.PNG" />
-<br />Example JSP
-<pre>
-&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-&lt;%@ taglib uri="/birt.tld" prefix="birt" %>
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-&lt;html>
-&lt;head>
-&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-&lt;title>Insert title here&lt;/title>
-&lt;/head>
-&lt;body>
-&lt;birt:viewer id="birtViewer" reportDesign="TopNPercent.rptdesign"
-pattern="frameset"
-height="450"
-width="700"
-format="html"
- >&lt;/birt:viewer>
-&lt;/body>
-&lt;/html>
-</pre>
+					<h2 class="topic-section-header padding-top-small">Viewer Directory Structure</h2>
+					<p>The Example Web Viewer has the following directory structure.
+					<img src="/birt/test/img/documentation/integrating/viewerarch.PNG" /></p>
+					
+					<h3>BIRT POJO Viewer: </h3>
+					<p>If you are installing BIRT 3.7 or higher, The platform, configuration, and plugin directories has been removed from the Viewer. See the <a target="_blank" href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a> for more details.</p>
+					<p>Most of the directories are configurable using variables set within web.xml.  The WEB-INF/platform, webcontent, and WEB-INF/lib directories are exceptions.</p>
+					<p>The BIRT plugins and associated OSGi configuration files are located in the WEB-INF/platform directory. This directory is hard coded in the Viewer, but allows the application to be deployed in WAR format. When deployed in this manner the Viewer source will create a copy of the platform directory in a directory that is set with the system variable <b>javax.servlet.context.tempdir</b>. Once the platform directory is created the BIRT plugins will be copied to the tempdir and the Platform is then started.</p>
+					<p>The webcontent directory contains the JavaScript files used for AJAX communications, the JSP fragments used to construct the Viewer instance, image files used by the Viewer, and the cascading style sheets used within the Viewer.</p>
+					<p>The WEBINF/lib directory contains the required Jars for the Viewer to operate.</p>
+					<p>Additional Jar files that are used by deployed reports can be placed in the WEB-INF/lib or the scriptlib directories. See the web.xml settings section for additional details.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Viewer Tag Library</h2>
+					<p>The Web Viewer now contains a tag library that can be used to customize the behavior of the Viewer. This tag library can be deployed by either deploying the viewer as normal or by using the BIRT Web Deployment project wizard. In addition, if you desire to have BIRT deployed in one context and include the tag library in a separate context this can be done by copying the birt.tld file to your WEB-INF/tlds directory and copying coreapi.jar, modelapi,jar, viewerservlets.jar, engineapi.jar,  and com.ibm.icu_version.jar from the Viewer libs directory to the new context/web-inf/lib directory. Add the following reference to your web.xml<br />
+					<pre>&lt;jsp-config>
+					&lt;taglib>
+					&lt;taglib-uri>/birt.tld&lt;/taglib-uri>
+					&lt;taglib-location>/WEB-INF/tlds/birt.tld&lt;/taglib-location>
+					&lt;/taglib>
+					&lt;/jsp-config></pre>
+					</p>
+					
+					<p>Using this approach reports are referenced in relation to the BIRT Viewer not the new context.</p>
+					<p>The Viewer tag library contains five tags param, paramDef, parameterPage, report and viewer. Each tag has multiple attributes that control the behavior of the Viewer.<br /><br />
+					<img src="/birt/test/img/documentation/integrating/birttags.PNG" /><br />
+					Example JSP
+					
+					<pre>&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+					pageEncoding="ISO-8859-1"%>
+					&lt;%@ taglib uri="/birt.tld" prefix="birt" %>
+					&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+					   "http://www.w3.org/TR/html4/loose.dtd">
+					&lt;html>
+					&lt;head>
+					&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+					&lt;title>Insert title here&lt;/title>
+					&lt;/head>
+					&lt;body>
+					&lt;birt:viewer id="birtViewer" reportDesign="TopNPercent.rptdesign"
+					pattern="frameset"
+					height="450"
+					width="700"
+					format="html"
+					 >&lt;/birt:viewer>
+					 &lt;/body>
+					 &lt;/html></pre>
 </p>
 
 <h3>The viewer Tag Attributes</h3>
