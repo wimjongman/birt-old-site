@@ -606,8 +606,8 @@ format="html"
   used in the same context as the BIRT viewer this attribute is not
   required. If the tag library is used
   in a separate context but in the same application server, this setting may
-  contain a value such as baseURL=”/
-  WebViewerExample”.</p>
+  contain a value such as baseURL="/
+  WebViewerExample".</p>
   </td>
  </tr>
  <tr>
@@ -1089,8 +1089,8 @@ format="html"
   used in the same context as the BIRT viewer this attribute is not
   required. If the tag library is used
   in a separate context but in the same application server, this setting may
-  contain a value such as baseURL=”/
-  WebViewerExample”.
+  contain a value such as baseURL="/
+  WebViewerExample".
   The reportContainer attribute must be set to
   iframe if this attribute is used.</p>
   </td>
@@ -1670,8 +1670,8 @@ format="html"
   used in the same context as the BIRT viewer this attribute is not
   required. If the tag library is used
   in a separate context but in the same application server, this setting may
-  contain a value such as baseURL=”/
-  WebViewerExample”.</p>
+  contain a value such as baseURL="/
+  WebViewerExample".</p>
   </td>
  </tr>
  <tr>
