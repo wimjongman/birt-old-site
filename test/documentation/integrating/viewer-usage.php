@@ -175,14 +175,14 @@ $PagePart 	= new PagePart();
 </table>
 
 
-<h2><a name="parameters"></a>Parameters</h2>
+<h2><a name=" "></a>Parameters</h2>
 
 <p >The example viewer has a distinction between report
 parameters and viewer configuration parameters. Report parameters are used by
 the report designs and configuration parameters affect the appearance and
-features available to the example Viewer application.  In either case these
+features available to the example Viewer application. In either case these
 parameters can be passed as URL parameters by entering the &amp;parmname=value
-syntax, passed in a html form, or passed using the jsp:parm tag.  Configuration
+syntax, passed in a html form, or passed using the jsp:parm tag. Configuration
 parameters by default start with two underscore characters “__” prefixed to the parameter name.</p>
 
 <p >Report parameters that are designated in the design as
@@ -251,7 +251,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the navigation bar is shown in the frameset viewer. Defaults to true.  Valid
+  if the navigation bar is shown in the frameset viewer. Defaults to true. Valid
   values are true and false.</p>
   </td>
  </tr>
@@ -266,7 +266,7 @@ library contains tags to configure and set parameters as well.</p>
   <p >Determines
   if the parameter page is displayed. By default the frameset, run and preview
   mappings will automatically determine if the parameter page is required. 
-  This setting will override this behavior.  Valid values are true and false.</p>
+  This setting will override this behavior. Valid values are true and false.</p>
   </td>
  </tr>
  <tr>
@@ -416,7 +416,7 @@ library contains tags to configure and set parameters as well.</p>
   setting if set to true will force an overwrite of the existing report
   document. This setting will override the</p>
   <p >initial
-  setting in the web.xml.  By default the report document is overwritten
+  setting in the web.xml. By default the report document is overwritten
   anytime the report design is changed.</p>
   </td>
  </tr>
