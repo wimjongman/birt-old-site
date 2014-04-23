@@ -80,35 +80,237 @@ $PagePart 	= new PagePart();
 						<li>Unselect Use default compliance settings.</li><br />
 						<li>On Generated .class files compatibility, select 1.4.</li><br />
 						<li>On Source compatibility, select 1.4.<br /><br />
-							The following illustration shows these settings.<br />
+							The following illustration shows these settings.<br /><br />
 							<img src="/birt/test/img/compliancepreference.jpg" />
 						</li><br />
-						<li>Report Engine API</li>
+						<li>Choose OK.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Understanding the CVS Structure</h2>
+					<p>The BIRT modules are available in CVS in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/?cvsroot=BIRT_Project">source</a> folder under <a href="http://dev.eclipse.org/viewcvs/index.cgi/?cvsroot=BIRT_Project">/home/birt</a>. BIRT has over 150 modules, some of these are described below.
+					<table BORDER="1">
+ <thead>
+  <th>Project Folder </th>
+  <th>Contents</th>
+ </thead>
+ <tbody>
+  <tr>
+   <td>org.eclipse.birt.chart.device.extension</td>
+   <td>Extension classes for the device renderer framework for charts</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.engine</td>
+   <td>Chart model and factory classes</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.engine.extension</td>
+   <td>Extension classes for the model renderer framework for charts</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.reportitem</td>
+   <td>Classes for the chart module to interact with the BIRT designer and 
+   runtime engine</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.shared</td>
+   <td>Classes shared between different components of the chart module</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.ui</td>
+   <td>Chart builder UI classes</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.chart.ui.extension</td>
+  <td>Extensions for the chart builder UI</td>
+  </tr>
+   <tr>
+   <td>org.eclipse.birt.chart.device.extension</td>
+  <td>Chart engine extension plugin containing device renderers implementations (Swing, SWT, PNG, GIF, JPG, BMP)</td>
+  </tr>
+   <tr>
+   <td>org.eclipse.birt.chart.device.svg</td>
+  <td>Chart engine extension plugin containing SVG device renderer's implementation</td>
+  </tr>  
+  <tr>
+   <td>org.eclipse.birt.converters</td>
+  <td>Contains converters that can convert reports from other formats to the BIRT report format</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.core</td>
+   <td>Provides the framework for loading the plugins at run-time and 
+contains other classes that can be used by any other module</td>
+   </tr>
+  <tr>
+   <td>org.eclipse.birt.data</td>
+   <td>Provides the data engine implementation and the ODA factory implementation. It also contains classes for applying transformations on the data.</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.data.oda</td>
+   <td>ODA public interface: the classes and interfaces used to create data 
+   extensions.</td>
+  </tr>
+
+  <tr>
+   <td>org.eclipse.birt.data.oda.adapter.dtp</td>
+   <td>Adapter for Data Tools project</td>
+  </tr>
+  
+  <tr>
+   <td>org.eclipse.birt.report.data.oda.flatfile</td>
+   <td>The ODA driver for accessing flat file data sources</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.data.oda.flatfile.ui</td>
+   <td>The user interface for the ODA flat file driver</td>
+  </tr>
+
+  <tr>
+   <td>org.eclipse.birt.data.oda.jdbc</td>
+   <td>The ODA driver for accessing JDBC data sources</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.data.oda.jdbc.ui</td>
+   <td>The user interface for the ODA JDBC driver</td>
+  </tr>  
+  
+  <tr>
+   <td>org.eclipse.birt.report.data.oda.sampledb</td>
+   <td>The ODA driver for accessing the sample Derby data base</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.data.oda.sampledb.ui</td>
+   <td>The user interface for the ODA sample database driver</td>
+  </tr>
+
+  <tr>
+   <td>org.eclipse.birt.data.oda.xml</td>
+   <td>The ODA driver for accessing XML data sources</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.data.oda.xml.ui</td>
+   <td>The user interface for the ODA XML driver</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.debug.ui</td>
+   <td>Used for creating launch configuration when debugging reports
+   that contain Java events</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.designer.core</td>
+   <td>The core classes of the BIRT report designer, including classes that 
+       interact with the BIRT model, and localization and other utility classes</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.designer.lib</td>
+   <td>The classes used for library manipulation</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.designer.lib.explorer</td>
+   <td>Handles browsing and exploring library contents</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.designer.ui</td>
+   <td>The BIRT report designer</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.designer.ui.rcp</td>
+   <td>The BIRT RCP report designer</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.engine</td>
+   <td>The BIRT reporting engine that generates the report from a report design</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.engine.emitter.fo</td>
+   <td>The emitter for generating report output using FO</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.engine.emitter.html</td>
+   <td>The emitter that generates report output in HTML</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.engine.emitter.pdf</td>
+   <td>The emitter that generates report output in PDF</td>
+  </tr>
+
+  <tr>
+   <td>org.eclipse.birt.report.model</td>
+   <td>The BIRT report model</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt.report.viewer</td>
+   <td>The BIRT report viewer (BIRT web app)</td>
+  </tr>
+  <tr>
+   <td>org.eclipse.birt-feature</td>
+   <td>The BIRT feature</td>
+  </tr> 
+ </tbody>
+</table>
+					
+					<h2 class="topic-section-header padding-top-small">Checking out Code from CVS</h2>
+					<h3>Configure the Repository Under Eclipse</h3>
+					<p>
+					<ul class="eclipse-list">
+						<li>To open the CVS Repository Exploring perspective, choose Window -> Open Perspective -> Other. In Select Perspective, select CVS Repository Exploring and choose OK.<br /><br />
+						<img src="/birt/test/img/selectperspective.jpg" /></li><br />
+						<li>Right-click on the CVS repositories window. From the context menu, choose New -> Repository Location.<br /><br />
+						<img src="/birt/test/img/newrepository.jpg" /></li><br />
+						<li>On Add CVS Repository, set the following values:<br /><br />
+						<table border="1"><tbody>
+						<tr><td>Host</td><td>dev.eclipse.org</td></tr>
+						<tr><td>Repository path</td><td>/cvsroot/birt</td></tr>
+						<tr><td>User</td><td>anonymous</td></tr>
+						<tr><td>Connection type</td><td>pserver</td></tr>
+						<tr><td>Use Default Port</td><td>Selected</td></tr>
+						</tbody></table>
+						<img src="/birt/test/img/addcvsrepository.jpg" /></li><br />
+						<li>Choose Finish</li>
+					</ul>
+					<p>A new node appears in the CVS Repositories window.</p>
+					
+					<h3>Check Out Code for the First Time</h3>
+					<p>
+					<ul class="eclipse-list">						
+						<li>Expand the new node in the repositories tree.</li><br />
+						<li>Select Versions</li><br />
+						<li>Select source</li><br />
+						<li>Open the source BIRT_2_1_1_Release_20060927 node<br /><br />
+						<img src="/birt/test/img/projects.jpg" /></li><br />
+						<li>Select all the nodes under this node, with the exception of the these projects:<br /><br />
+							org.eclipse.birt.report.data.oda.flatfile<br />
+							org.eclipse.birt.report.data.oda.flatfile.nl<br />
+							org.eclipse.birt.report.data.oda.flatfile.ui<br />
+							org.eclipse.birt.report.data.oda.flatfile.ui.nl<br />
+							org.eclipse.birt.report.tests.engine<br />
+							org.eclipse.birt.report.tests.model<br />
+							org.eclipse.birt.report.tests.viewer<br />
+							org.eclipse.birt.test.performance<br />
+							org.eclipse.birt.tests.core<br />
+							org.eclipse.birt.tests.data
+						</li><br />
+						<li>On CVS Repositories, right-click and choose Check Out from the context menu.<br /><br />
+						This will get the BIRT projects from CVS and load them into your Eclipse workspace folder. This will take some time. Once finished, change to the Java perspective.</li>
+					</ul>
+					</p>
+					
+					<h2 class="topic-section-header padding-top-small">Import Additional Files</h2>
+					<p>Import iText 1.3 and iTextAsian into the com.lowagie.itext/lib directory.</p>
+					<img src="/birt/test/img/itext.jpg" />
 					<ul class="eclipse-list">
 						<li>Introduction</li>
-						<li>Schema</li>
-						<li>Install</li>
-						<li>Apache Derby Version</li>
-						<li>MySQL Version</li>
+						<li>Requirements</li>
+						<li>Configuring Eclipse</li>
+						<li>Understanding the CVS Structure</li>
+						<li>Checking out Code from CVS</li>
+						<li>Checking out the Data Tools Projects</li>
+						<li>Import Additional Files</li>
+						<li>Preparing the Viewer</li>
+						<li>Running BIRT</li>
+						<li>Instructions for Running JUnit Tests</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li>
-						<li>Report Object Model Specification Suite</li>
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
 					
 					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
 					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
@@ -125,7 +327,38 @@ $PagePart 	= new PagePart();
 						<li>Instructions for Running JUnit Tests</li>
 					</ul>
 					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					
+					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
+					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<ul class="eclipse-list">
+						<li>Introduction</li>
+						<li>Requirements</li>
+						<li>Configuring Eclipse</li>
+						<li>Understanding the CVS Structure</li>
+						<li>Checking out Code from CVS</li>
+						<li>Checking out the Data Tools Projects</li>
+						<li>Import Additional Files</li>
+						<li>Preparing the Viewer</li>
+						<li>Running BIRT</li>
+						<li>Instructions for Running JUnit Tests</li>
+					</ul>
+					</p>
+					
+					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
+					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<ul class="eclipse-list">
+						<li>Introduction</li>
+						<li>Requirements</li>
+						<li>Configuring Eclipse</li>
+						<li>Understanding the CVS Structure</li>
+						<li>Checking out Code from CVS</li>
+						<li>Checking out the Data Tools Projects</li>
+						<li>Import Additional Files</li>
+						<li>Preparing the Viewer</li>
+						<li>Running BIRT</li>
+						<li>Instructions for Running JUnit Tests</li>
+					</ul>
+					</p>
 					
 				</div>
 			</div>
