@@ -138,7 +138,7 @@ $PagePart 	= new PagePart();
   
   >
   <p >Specifies
-  the location of the viewer.properties file.  This file contains various
+  the location of the viewer.properties file. This file contains various
   settings used by the viewer.</p>
   </td>
  </tr>
@@ -151,9 +151,9 @@ $PagePart 	= new PagePart();
   
   >
   <p >This
-  setting specifies whether server side printing is supported.  If set to OFF
+  setting specifies whether server side printing is supported. If set to OFF
   the toolbar icon used for server side printing will be removed
-  automatically.  Valid values are ON and OFF.</p>
+  automatically. Valid values are ON and OFF.</p>
   </td>
  </tr>
  <tr>
@@ -165,9 +165,9 @@ $PagePart 	= new PagePart();
   
   >
   <p >This
-  setting determines how BIRT styles are handled with the HTML emitter.  If set
+  setting determines how BIRT styles are handled with the HTML emitter. If set
   to TRUE, the BIRT engine will output the styles directly to the report and
-  depends on the browser to implement the style calculations.  If set to FALSE
+  depends on the browser to implement the style calculations. If set to FALSE
   the emitter will use the BIRT style engine to calculate the styles and will
   output the results directly to the report.</p>
   </td>
@@ -178,7 +178,7 @@ $PagePart 	= new PagePart();
 <h2><a name="parameters"></a>Parameters</h2>
 
 <p >The example viewer has a distinction between report
-parameters and viewer configuration parameters.  Report parameters are used by
+parameters and viewer configuration parameters. Report parameters are used by
 the report designs and configuration parameters affect the appearance and
 features available to the example Viewer application.  In either case these
 parameters can be passed as URL parameters by entering the &amp;parmname=value
@@ -187,7 +187,7 @@ parameters by default start with two underscore characters “__” prefixed to the 
 
 <p >Report parameters that are designated in the design as
 required and are not entered in one of the above methods will cause the viewer
-to launch a parameter entry dialog box.  Additionally the example Viewer tag
+to launch a parameter entry dialog box. Additionally the example Viewer tag
 library contains tags to configure and set parameters as well.</p>
 
 <table border="1">
@@ -225,7 +225,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the report title is shown in the frameset viewer.  Defaults to true. 
+  if the report title is shown in the frameset viewer. Defaults to true. 
   Valid values are true and false.</p>
   </td>
  </tr>
@@ -238,7 +238,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the report toolbar is shown in the frameset viewer.  Defaults to true. 
+  if the report toolbar is shown in the frameset viewer. Defaults to true. 
   Valid values are true and false.</p>
   </td>
  </tr>
@@ -251,7 +251,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the navigation bar is shown in the frameset viewer.  Defaults to true.  Valid
+  if the navigation bar is shown in the frameset viewer. Defaults to true.  Valid
   values are true and false.</p>
   </td>
  </tr>
@@ -264,7 +264,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the parameter page is displayed.  By default the frameset, run and preview
+  if the parameter page is displayed. By default the frameset, run and preview
   mappings will automatically determine if the parameter page is required. 
   This setting will override this behavior.  Valid values are true and false.</p>
   </td>
@@ -278,7 +278,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Sets
-  the name of the report design to process.  This can be an absolute path or relative
+  the name of the report design to process. This can be an absolute path or relative
   to the working folder (See web.xml settings).</p>
   </td>
  </tr>
@@ -291,10 +291,10 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Sets
-  the name for the rptdocument.  The document is created when the report engine
+  the name for the rptdocument. The document is created when the report engine
   separates run and render tasks, and is used to support features like table of
-  contents and pagination.  This setting can be an absolute path or relative to
-  the working folder (See web.xml settings).  If no document parameter is used,
+  contents and pagination. This setting can be an absolute path or relative to
+  the working folder (See web.xml settings). If no document parameter is used,
   a unique document is created in the document folder (see web.xml settings).</p>
   </td>
  </tr>
@@ -319,8 +319,8 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  the locale for the specific operation.  Note that this will override the
-  default locale.  Order of precedence is as follows:</p>
+  the locale for the specific operation. Note that this will override the
+  default locale. Order of precedence is as follows:</p>
   <p >__locale
   parameter.</p>
   <p >Locale
@@ -376,7 +376,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  that a report parameter has a null value.  Eg __isnull=Myparameter.</p>
+  that a report parameter has a null value. Eg __isnull=Myparameter.</p>
   </td>
  </tr>
  <tr>
@@ -400,7 +400,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Indicates
-  that the report master page should be used or not.  Valid values are true and
+  that the report master page should be used or not. Valid values are true and
   false.</p>
   </td>
  </tr>
@@ -429,7 +429,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  a specific bookmark within the report to load.  The viewer will automatically
+  a specific bookmark within the report to load. The viewer will automatically
   load the appropriate page.</p>
   </td>
  </tr>
@@ -442,7 +442,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  whether to display the report in right to left format.  This setting defaults
+  whether to display the report in right to left format. This setting defaults
   to false.</p>
   </td>
  </tr>
@@ -455,7 +455,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  whether PDF generation should fit content to a page.  Valid values are true
+  whether PDF generation should fit content to a page. Valid values are true
   and false.</p>
   </td>
  </tr>
@@ -468,8 +468,8 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Specifies
-  the resource folder to use.  This setting will override the default setting
-  in the web.xml.  The resource folder is used to locate libraries, images, and
+  the resource folder to use. This setting will override the default setting
+  in the web.xml. The resource folder is used to locate libraries, images, and
   resource files.</p>
   </td>
  </tr>
@@ -638,7 +638,7 @@ format="html"
   >
   <p>If
   this value is set to true the viewer tag will occupy the entire page.
-    The default value is false, which allows
+   The default value is false, which allows
   multiple reports to be contained in one JSP Page.</p>
   </td>
  </tr>
@@ -672,7 +672,7 @@ format="html"
   <p>Sets
   the IFRAME position style attribute.
   Valid values are static, absolute, relative and fixed.
-    If isHostPage is
+   If isHostPage is
   true these values are ignored.</p>
   </td>
  </tr>
@@ -765,7 +765,7 @@ format="html"
   >
   <p>Specifies
   whether or not to display a border around the IFRAME.
-    Valid values are yes or
+   Valid values are yes or
   no. If isHostPage
   is true this value is ignored.</p>
   </td>
@@ -802,8 +802,8 @@ format="html"
   <p>Sets
   the name of the report document file.
   This setting can be relative or set to a full path, or a URL.
-    If using a URL it must be a file URL.
-    File://. </p>
+   If using a URL it must be a file URL.
+   File://. </p>
   </td>
  </tr>
  <tr>
@@ -820,7 +820,7 @@ format="html"
   >
   <p>Specifies
   the instance id of the portion of the report to be displayed.
-    Note this only works with the run pattern
+   Note this only works with the run pattern
   and a reportDocument setting.</p>
   </td>
  </tr>
@@ -951,7 +951,7 @@ format="html"
   >
   <p>Specifies
   the resource folder, which contains libraries and images.
-    This is usually specified in the 
+   This is usually specified in the 
   Web.xml, but this parameter will override that value.</p>
   </td>
  </tr>
@@ -969,7 +969,7 @@ format="html"
   >
   <p>Specifies
   whether the report document that is created is overwritten.
-    Only valid with the frameset mapping.</p>
+   Only valid with the frameset mapping.</p>
   </td>
  </tr>
  <tr>
@@ -1109,7 +1109,7 @@ format="html"
   >
   <p>If
   this value is set to true the viewer tag will occupy the entire page.
-    The default value is false, which allows
+   The default value is false, which allows
   multiple reports to be contained in one JSP Page.</p>
   </td>
  </tr>
@@ -1143,7 +1143,7 @@ format="html"
   <p>Sets
   the DIV/IFRAME position style attribute.
   Valid values are static, absolute, relative and fixed.
-    If isHostPage is
+   If isHostPage is
   true these values are ignored.</p>
   </td>
  </tr>
@@ -1236,7 +1236,7 @@ format="html"
   >
   <p>Specifies
   whether or not to display a border around the IFRAME.
-    Valid values are yes or
+   Valid values are yes or
   no. If isHostPage
   is true this value is ignored. 
   reportContainer must be set to 
@@ -1275,8 +1275,8 @@ format="html"
   <p>Sets
   the name of the report document file.
   This setting can be relative or set to a full path, or a URL.
-    If using a URL it must be a file URL.
-    File://. 
+   If using a URL it must be a file URL.
+   File://. 
   Note that a report document will not be created, but if the 
   reportDocument exist it will be rendered.</p>
   </td>
@@ -1295,7 +1295,7 @@ format="html"
   >
   <p>Specifies
   the instance id of the portion of the report to be displayed.
-    Note this only works with the run pattern
+   Note this only works with the run pattern
   and a reportDocument setting.</p>
   </td>
  </tr>
@@ -1429,7 +1429,7 @@ format="html"
   >
   <p>Specifies
   the resource folder, which contains libraries and images.
-    This is usually specified in the 
+   This is usually specified in the 
   Web.xml, but this parameter will override that value.</p>
   </td>
  </tr>
@@ -1465,7 +1465,7 @@ format="html"
   >
   <p>Specifies
   if the report is rendered in an IFRAME or a DIV element.
-    This attribute affects other attributes.</p>
+   This attribute affects other attributes.</p>
   </td>
  </tr>
 </table>
@@ -1541,7 +1541,7 @@ format="html"
   >
   <p>Specifies
   whether the report parameter value is a locale/format related string.
-    Valid values are true or false.</p>
+   Valid values are true or false.</p>
   </td>
  </tr>
  <tr>
@@ -1633,7 +1633,7 @@ format="html"
   >
   <p>Indicates
   whether the default BIRT parameter page is used or a custom page.
-    Valid values are true and false.</p>
+   Valid values are true and false.</p>
   </td>
  </tr>
  <tr>
@@ -1731,7 +1731,7 @@ format="html"
   <p>Sets
   the IFRAME position style attribute.
   Valid values are static, absolute, relative and fixed.
-    </p>
+   </p>
   </td>
  </tr>
  <tr>
@@ -1818,7 +1818,7 @@ format="html"
   >
   <p>Specifies
   whether or not to display a border around the IFRAME.
-    Valid values are yes or
+   Valid values are yes or
   no. If isCustom
   is true this value is ignored.</p>
   </td>
@@ -1855,8 +1855,8 @@ format="html"
   <p>Sets
   the name of the report document file.
   This setting can be relative or set to a full path, or a URL.
-    If using a URL it must be a file URL.
-    File://. </p>
+   If using a URL it must be a file URL.
+   File://. </p>
   </td>
  </tr>
  <tr>
@@ -1873,7 +1873,7 @@ format="html"
   >
   <p>Specifies
   the instance id of the portion of the report to be displayed.
-    Note this only works with the run pattern
+   Note this only works with the run pattern
   and a reportDocument setting.</p>
   </td>
  </tr>
@@ -1972,7 +1972,7 @@ format="html"
   >
   <p>Specifies
   the resource folder, which contains libraries and images.
-    This is usually specified in the 
+   This is usually specified in the 
   Web.xml, but this parameter will override that value.</p>
   </td>
  </tr>
@@ -1990,7 +1990,7 @@ format="html"
   >
   <p>Specifies
   whether the report document that is created is overwritten.
-    Only valid with the frameset mapping.</p>
+   Only valid with the frameset mapping.</p>
   </td>
  </tr>
  <tr>
@@ -2092,7 +2092,7 @@ format="html"
   >
   <p>Indicates
   whether the default BIRT parameter page is used or a custom page.
-    Valid values are true and false.</p>
+   Valid values are true and false.</p>
   </td>
  </tr>
  <tr>
@@ -2155,7 +2155,7 @@ format="html"
   >
   <p>Specifies
   whether the report parameter value is a locale/format related string.
-    Valid values are true or false.</p>
+   Valid values are true or false.</p>
   </td>
  </tr>
  <tr>
