@@ -63,65 +63,50 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<h2 class="topic-section-header padding-top-small">Introduction</h2>
+					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer.</p>
+					<p>The sample database is open source; you are free to use it for your own use to experiment with other tools; to create samples for other tools, etc. The sample database is provided under the terms Eclipse.org <a href="http://www.eclipse.org/legal/notice.html" target="_blank">Software User Agreement</a>.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Schema</h2>
+					<p>The database consists of eight tables:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Offices: sales offices</li><br />
+						<li>Employees: All employees, including sales reps who work with customers.</li><br />
+						<li>Customers</li><br />
+						<li>Orders: Orders placed by customers</li><br />
+						<li>Order Details: Line items within an order.</li><br />
+						<li>Payments: Payments made by customers against their account</li><br />
+						<li>Products: The list of scale model cars</li><br />
+						<li>Product Lines: The list of product line classifcation</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<p>This <a href="/birt/test/img/documentation/sample-database/ClassicModelsDBSchema.jpg" target="_blank">ER-diagram</a> shows the table structure and relationships. (<a href="/birt/test/resources/documentation/sample-database/ClassicModelsDBSchema.pdf" target="_blank">PDF version</a>)</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Install</h2>
+					<p>The sample database is available in two forms:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Apache Derby database, which is included in the BIRT download</li><br />
+						<li>Scripts to load a MySQL database (Instructions below)</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
+					<p>The scripts to load a MySQL database are contained in the <a href="/birt/test/resources/documentation/sample-database/ClassicModels-MySQL.zip" target="_blank">sample database</a> zip file. This zip also has documentation and logos for the sample database.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">MySQL Version</h2>
+					<p>To install the MySQL version of the sample database, you must have MySQL installed. See <a href="http://www.mysql.com" target="_blank">mysql.com</a> for instructions.</p>
+					<p>Install the MySQL JDBC driver into BIRT:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Download and unzip MySQL Connector/J 3.1 JDBC driver located at:<br /><br />
+						<a target="_blank" href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a></li><br />
+						<li>Install the JDBC driver using the instructions on the install page. Enter the following for the URL template:<br /><br />
+						jdbc:mysql://[host][,failoverhost...][:port]/[database]...</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
+					<p>You are now ready to create the Classic Models database:
+					<ul class="eclipse-list">
+						
+					</ul>
+					</p>
+					
 					
 					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
 					<p>The topics in this guide include:

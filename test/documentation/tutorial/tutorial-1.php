@@ -93,7 +93,7 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Example Report</h2>
 					<p>If you get stuck as you work through the tutorial, or if you want to see the finished report right away, simply download it:
 					<ul class="eclipse-list">
-						<li>Use your browser to download the report: <a href="http://www.eclipse.org/birt/test/tutorial/customers.rptdesign" target="_blank">customers.rptdesign</a>.</li><br />
+						<li>Use your browser to download the report: <a href="http://www.eclipse.org/birt/test/resources/documentation/tutorial/customers.rptdesign" target="_blank">customers.rptdesign</a>.</li><br />
 						<li>Save the file into an Eclipse project directory. (See the next page if you don't yet have a project.)</li><br />
 						<li>Your browser may store this as an XML file. If so, rename it back the the name above.</li><br />
 						<li>Within Eclipse, select your project in the Navigator view and choose Refresh from the right-click context menu.</li><br />

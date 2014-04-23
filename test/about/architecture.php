@@ -82,7 +82,7 @@ $PagePart 	= new PagePart();
 					</p>
 
 					<h2 class="topic-section-header padding-top-small">Architecture Diagram</h2>
-					<img src="/birt/test/img/birtarch.png" />
+					<img src="/birt/test/img/about/birtarch.png" />
 				</div>
 			</div>
 

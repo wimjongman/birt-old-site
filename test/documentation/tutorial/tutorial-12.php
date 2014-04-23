@@ -126,7 +126,7 @@ $PagePart 	= new PagePart();
 						<li>Drag an Image item from the palette into the left-most cell of your grid.</li><br />
 						<li>The Image Builder dialog appears.</li><br />
 						<li>Ensure that the URL radio button is selected.</li><br />
-						<li>Enter the following URL: "http://www.eclipse.org/birt/tutorial/multichip-4.jpg". (don't forget to add the quotes.)</li><br />
+						<li>Enter the following URL: "http://www.eclipse.org/birt/resources/documentation/tutorial/multichip-4.jpg". (don't forget to add the quotes.)</li><br />
 						<li>Click the Preview button to ensure that the URL is correct.</li><br />
 						<li>Click Insert to add the image to your report.</li>
 					</ul>
@@ -145,7 +145,7 @@ $PagePart 	= new PagePart();
 						<li>Choose the date format that looks like this: May 12, 2005. (The actual date will be today's date.) This is the BIRT "Medium Date" date format.</li>
 					</ul>
 					</p>
-					<p>BIRT uses Java formatting for dates, numbers and strings. In addition, BIRT adds a number of specialized, locale-aware date formats described in the <a href="/birt/test/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a>.</p>
+					<p>BIRT uses Java formatting for dates, numbers and strings. In addition, BIRT adds a number of specialized, locale-aware date formats described in the <a href="/birt/test/resources/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a>.</p>
 					
 					<p><br /><a href="tutorial-11.php"><< Previous: Cascading Styles</a> | <a href="tutorial-13.php">Next: Using a Text Item >></a></p>
 					

@@ -81,7 +81,7 @@ $PagePart 	= new PagePart();
 						<li>On Generated .class files compatibility, select 1.4.</li><br />
 						<li>On Source compatibility, select 1.4.<br /><br />
 							The following illustration shows these settings.<br /><br />
-							<img src="/birt/test/img/compliancepreference.jpg" />
+							<img src="/birt/test/img/documentation/building-birt/compliancepreference.jpg" />
 						</li><br />
 						<li>Choose OK.</li>
 					</ul>
@@ -254,9 +254,9 @@ contains other classes that can be used by any other module</td>
 					<p>
 					<ul class="eclipse-list">
 						<li>To open the CVS Repository Exploring perspective, choose Window -> Open Perspective -> Other. In Select Perspective, select CVS Repository Exploring and choose OK.<br /><br />
-						<img src="/birt/test/img/selectperspective.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/selectperspective.jpg" /></li><br />
 						<li>Right-click on the CVS repositories window. From the context menu, choose New -> Repository Location.<br /><br />
-						<img src="/birt/test/img/newrepository.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/newrepository.jpg" /></li><br />
 						<li>On Add CVS Repository, set the following values:<br /><br />
 						<table border="1"><tbody>
 						<tr><td>Host</td><td>dev.eclipse.org</td></tr>
@@ -265,7 +265,7 @@ contains other classes that can be used by any other module</td>
 						<tr><td>Connection type</td><td>pserver</td></tr>
 						<tr><td>Use Default Port</td><td>Selected</td></tr>
 						</tbody></table>
-						<img src="/birt/test/img/addcvsrepository.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/addcvsrepository.jpg" /></li><br />
 						<li>Choose Finish</li>
 					</ul>
 					<p>A new node appears in the CVS Repositories window.</p>
@@ -277,7 +277,7 @@ contains other classes that can be used by any other module</td>
 						<li>Select Versions</li><br />
 						<li>Select source</li><br />
 						<li>Open the source BIRT_2_1_1_Release_20060927 node<br /><br />
-						<img src="/birt/test/img/projects.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/projects.jpg" /></li><br />
 						<li>Select all the nodes under this node, with the exception of the these projects:<br /><br />
 							org.eclipse.birt.report.data.oda.flatfile<br />
 							org.eclipse.birt.report.data.oda.flatfile.nl<br />
@@ -297,7 +297,7 @@ contains other classes that can be used by any other module</td>
 					
 					<h2 class="topic-section-header padding-top-small">Import Additional Files</h2>
 					<p>Import <a href="http://sourceforge.net/projects/itext/files/" target="_blank">iText 1.3</a> and <a href="http://sourceforge.net/projects/itext/files/" target="_blank">iTextAsian</a> into the com.lowagie.itext/lib directory.</p>
-					<img src="/birt/test/img/itext.jpg" /><br /><br />
+					<img src="/birt/test/img/documentation/building-birt/itext.jpg" /><br /><br />
 					<p>If your Eclipse environment is not setup to build automatically, build the source now. This designer should build correctly. If you wish to build the Web Viewer proceed to the next section. Do this if you wish to make changes to the deployable Web Viewer Example.</p>
 					
 					<h2 class="topic-section-header padding-top-small">Preparing the Viewer</h2>
@@ -315,9 +315,9 @@ contains other classes that can be used by any other module</td>
 						</li><br />
 						<li>In Package Explorer, expand the org.eclipse.birt.report.viewer project.</li><br />
 						<li>Right-click the BuildWebViewer.xml file. From the context menu, choose Run -> Ant Build....<br /><br />
-						<img src="/birt/test/img/antbuild.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/antbuild.jpg" /></li><br />
 						<li>In the org.eclipse.birt.report.viewer BuildViewer.xml, select the Properties tab. Unselect Use global properties specified in the Ant runtime preferences as shown in the following illustration. Add the eclipse.home property and set it to your all in one Eclipse install directory.<br /><br />
-						<img src="/birt/test/img/eclipsehome.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/eclipsehome.jpg" /></li><br />
 						<li>Choose Run. The ant build of the Web Viewer runs in the console. This will create the birt_web directory within the project that contains the Web Viewer. Refresh the viewer project and the birt_web directory will be displayed.</li>
 					</ul>
 					</p>
@@ -327,9 +327,9 @@ contains other classes that can be used by any other module</td>
 					<ul class="eclipse-list">
 						<li>Select Run... from the Run menu on the menu bar</li><br />
 						<li>Select Eclipse Applicaiton from the list on the left and click on the New button as shown in the following illustration:<br /><br />
-						<img src="/birt/test/img/runconfig1.jpg" /></li><br />
+						<img src="/birt/test/img/documentation/building-birt/runconfig1.jpg" /></li><br />
 						<li>Click the Run button to launch the Eclipse Application. In the new Eclipse application start a new BIRT project and build reports as usual. You should be able to step through and debug the BIRT code.<br /><br />
-						<img src="/birt/test/img/runconfig2.jpg" /></li>
+						<img src="/birt/test/img/documentation/building-birt/runconfig2.jpg" /></li>
 					</ul>
 					</p>
 					
@@ -340,9 +340,9 @@ contains other classes that can be used by any other module</td>
 						<li>click on Run --> Run --> Double click on JUnit Plug-in Test , this will create a new configuration. In the window, you can select among different options.<br /><br />
 							To run all tests in a selected project, click on the option 'Run all tests in selected project,package or source folder'. On the right side, select the package to run tests for by clicking on Search and selecting a required source folder.<br /><br />
 							In this example, we will run tests in org.eclipse.birt.report.engine project. So lets name this configuration as ReportEngineTests in the 'Name:' box on the top of the configuration window. And then click 'Apply' to save the changes.<br /><br />
-							<img src="/birt/test/img/runcreateconfig.jpg" /><br /><br />
+							<img src="/birt/test/img/documentation/building-birt/runcreateconfig.jpg" /><br /><br />
 							To run the test, in the ReportEngineTests window, click on 'Run'. This will run all tests in org.eclipse.birt.report.engine.<br /><br />
-							<img src="/birt/test/img/runtests75.jpg" /><br /><br />
+							<img src="/birt/test/img/documentation/building-birt/runtests75.jpg" /><br /><br />
 							If you want to see the progress of the tests, look at the JUnit window.<br /><br />
 							The results for birt2_1_1_Release_20060927 should be 613 tests ran, with 2 failures and no errors. 
 						</li>

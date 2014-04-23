@@ -103,7 +103,7 @@ $PagePart 	= new PagePart();
 					<p>The names "serif" and "sans-serif" are defined by CSS: they are generic font styles that don't depend on the specific fonts installed on a machine. CSS generic font names avoid dependencies on specific fonts installed on the browser machine; something that is important if your reports will be appear as part of a public web site. You can also use font lists as in CSS. For example: "Helvetica, Arial, sans-serif".</p>
 					
 					<h2 class="topic-section-header padding-top-small">Other Default Styles</h2>
-					<p>BIRT defines default styles for most report items and for list and table bands. See the <a href="/birt/test/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a> for the complete list.</p>
+					<p>BIRT defines default styles for most report items and for list and table bands. See the <a href="/birt/test/resources/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a> for the complete list.</p>
 					<p>The Styles node displays the styles that apply to each of the report items. However, there are additional styles that apply to grouping levels and other contexts. If you wish to use one of these, simply create a style with the required name.</p>
 					
 					<h2 class="topic-section-header padding-top-small">Check the Reporte</h2>
