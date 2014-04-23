@@ -183,7 +183,7 @@ the report designs and configuration parameters affect the appearance and
 features available to the example Viewer application. In either case these
 parameters can be passed as URL parameters by entering the &amp;parmname=value
 syntax, passed in a html form, or passed using the jsp:parm tag. Configuration
-parameters by default start with two underscore characters “__” prefixed to the parameter name.</p>
+parameters by default start with two underscore characters "__" prefixed to the parameter name.</p>
 
 <p >Report parameters that are designated in the design as
 required and are not entered in one of the above methods will cause the viewer
@@ -225,7 +225,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the report title is shown in the frameset viewer. Defaults to true. 
+  if the report title is shown in the frameset viewer. Defaults to true. 
   Valid values are true and false.</p>
   </td>
  </tr>
@@ -238,7 +238,7 @@ library contains tags to configure and set parameters as well.</p>
   
 >
   <p >Determines
-  if the report toolbar is shown in the frameset viewer. Defaults to true. 
+  if the report toolbar is shown in the frameset viewer. Defaults to true. 
   Valid values are true and false.</p>
   </td>
  </tr>
@@ -265,7 +265,7 @@ library contains tags to configure and set parameters as well.</p>
 >
   <p >Determines
   if the parameter page is displayed. By default the frameset, run and preview
-  mappings will automatically determine if the parameter page is required. 
+  mappings will automatically determine if the parameter page is required. 
   This setting will override this behavior. Valid values are true and false.</p>
   </td>
  </tr>
@@ -506,7 +506,7 @@ Additional Jar files that are used by deployed reports can be placed in the WEB-
 <h2><a name="tags"></a>Viewer Tag Library</h2>
 <p>
 The Web Viewer now contains a tag library that can be used to customize the behavior of the Viewer.  This tag library can be deployed by either deploying the viewer as normal or by using the BIRT Web Deployment project wizard.  In addition, if you desire to have BIRT deployed in one context and include the tag library in a separate context this can be done by copying the birt.tld file to your WEB-INF/tlds directory and copying coreapi.jar, modelapi,jar, viewerservlets.jar, engineapi.jar,  and com.ibm.icu_version.jar from the Viewer libs directory to the new context/web-inf/lib directory.  Add the following reference to your web.xml
-<br>
+<br />
 <pre>
 	&lt;jsp-config>
 		&lt;taglib>
@@ -522,7 +522,7 @@ The Web Viewer now contains a tag library that can be used to customize the beha
 <p>
 The Viewer tag library contains five tags param, paramDef, parameterPage, report and viewer.  Each tag has multiple attributes that control the behavior of the Viewer.
 <img src="birttags.PNG" />
-<br>Example JSP
+<br />Example JSP
 <pre>
 &lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -1276,7 +1276,7 @@ format="html"
   the name of the report document file.
   This setting can be relative or set to a full path, or a URL.
    If using a URL it must be a file URL.
-   File://. 
+   File://. 
   Note that a report document will not be created, but if the 
   reportDocument exist it will be rendered.</p>
   </td>
