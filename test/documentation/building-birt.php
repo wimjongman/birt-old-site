@@ -47,7 +47,7 @@ $PagePart 	= new PagePart();
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">Documentation</h1>
+					<h1 class="eclipse-title-main">Building BIRT</h1>
 					
 					<div class="topic-menu topic-menu-right">
                 
