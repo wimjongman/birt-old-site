@@ -102,7 +102,7 @@ $PagePart 	= new PagePart();
 					eg http://localhost:8080/viewer/run?__report=myreport.rptdesign&parm1=value1</p>
 					<p>The <b>/preview</b> mapping runs and renders the report and does not generate a report document, although an existing report document can be used in which case just the render operation occurs.  The output from the run and render operation is sent directly to the browser.<br />
 					eg http://localhost:8080/viewer/preview?__report=myreport.rptdesign&parm1=value1</p>
-					<img src="/birt/test/img/documentation/integration/servletmappings.PNG" />
+					<img src="/birt/test/img/documentation/integrating/servletmappings.PNG" />
 					
 					<h2 class="topic-section-header padding-top-small">Web Viewer Web.xml Settings</h2>
 					<p>The web.xml file contains many settings used to configure the Viewer.  These settings are illustrated below.</p>
