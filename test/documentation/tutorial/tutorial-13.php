@@ -79,9 +79,16 @@ $PagePart 	= new PagePart();
 		           		</ul>
 
 			        </div>
+			        
+			        <p>The final step in our report is to create the actual header text. We want it to look something like this:</p>
+			        <p><FONT size="6" color=blue>Customer Listing</FONT><br />
+			        <I>For internal use only</I>
+			        </p>
+			        
+			        <p>We could create this with two labels. But, we'll take this opportunity to try out the Text element which allows us to use HTML formatting within the text.</p>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Create a Text Item</h2>
+					<p>Let's create our text item. To do this:
 					<ul class="eclipse-list">
 						<li>Designer Install</li><br />
 						<li>Framework Designer Install</li><br />
@@ -92,80 +99,8 @@ $PagePart 	= new PagePart();
 						<li>Common Problems</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
-					</ul>
-					</p>
-					<p><a href="tutorial/">Get Started</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
-					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
-					</ul>
-					</p>
-					<p><a href="integrating/">Learn More</a>
-					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
-					</ul>
-					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-12.php"><< Previous: Using a Grid</a> | <a href="tutorial-14.php">Next: Next Steps >></a></p>
 					
 				</div>
 			</div>

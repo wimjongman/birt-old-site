@@ -80,92 +80,47 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<h2 class="topic-section-header padding-top-small">About Styles</h2>
+					<p>We mentioned that BIRT uses CSS to define the styles for report items. BIRT also allows you to define the properties in a style sheet, then to apply the style to a report item, just as in HTML. The result is that you create the style once and use it multiple times. If you need to change the look of a report, you can change the style in one place rather then in many different report items. If you've defined your own styles when creating HTML pages, you're well on your way to understanding the BIRT style system. Styles can also be placed into BIRT libraries (Using Themes) and shared across reports.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Creating a Style</h2>
+					<p>Let's use the style feature to format the table header. Let's make the table header a blue bar with contrasting text. Instead of formatting each label one-by-one, we'll define a style, then apply it. To do this:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Select the first label (State label) in the Table Header band.</li><br />
+						<li>Right-click and select Style->New Style from the context menu.</li><br />
+						<li>The Style Properties dialog appears.</li><br />
+						<li>Enter "Header" in the Custom Style (Name) field on the General page and make sure that the Custom Style radio button is selected.</li><br />
+						<li>Switch to the Background page from the left most column of the New Style dialog.</li><br />
+						<li>Click the Background color button and choose the same blue: third from the right in the top row.</li><br />
+						<li>Switch to the Font page.</li><br />
+						<li>Set the Color to white.</li><br />
+						<li>Set the Weight to Bold.</li><br />
+						<li>Click OK.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<p>Notice that the new style has been applied to the label.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Applying a Style</h2>
+					<p>Next, let's apply the style to the other three header labels. (We could have done this in a single step by selecting all four when we defined the style. We're doing it in two steps just to show how it's done.)
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Select the other three labels: click on the City label, then use Ctrl+click to add the other two to the selection.</li><br />
+						<li>Choose Style->Apply Style->Header from the context menu.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
+					<p>The other three cells are now also formatted.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Editing a Style</h2>
+					<p>Suppose we wanted to change the style we just created. Here's how we find and change it.
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Find or open the Outline view.</li><br />
+						<li>Scroll down to the bottom and find the Styles node.</li><br />
+						<li>Open the Styles node to reveal our styles.</li><br />
+						<li>Double-click the style you want to edit.</li><br />
+						<li>You can also edit a style by selecting Style->Edit Style->Style Name from the context menu when a report item is selected.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-9.php"><< Previous: Setting Data Properties</a> | <a href="tutorial-11.php">Next: Cascading Styles >></a></p>
 					
 				</div>
 			</div>

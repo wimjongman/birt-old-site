@@ -80,92 +80,74 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Create a Grid</h2>
+					<p>Let's add a suitable heading to our report. It will use the classic "left/center/right" layout: a logo on the left, the report title in the center, and the run date on the right. Before you do this you may want to remove the current basic heading, which simply says "Report Header". To do this:
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Select the Grid item containing the "Report Header" which is located above your table.</li><br />
+						<li>Delete it by right-clicking on it and selecting the delete option from the context menu.</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<p>The easiest way to create such a layout is to use a grid. A grid is like an HTML table, it tells BIRT the desired layout, and BIRT does the work to make it happen. In this case, we want a one-row grid with three columns each 1/3 the width of the page.
+						<ul class="eclipse-list">
+							<li>Drag a Grid item from the palette into your report above your table. The Insert Grid dialog appears.</li><br />
+							<li>Choose 3 columns and 2 rows.</li><br />
+							<li>Click OK.</li>
+						</ul>
+					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Row Properties</h2>
+					<p>We want the contents of the header to be top-aligned. And we'll use the second row as a spacer between the header proper and the report body:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Select the entire first row of the Grid that you just added.</li><br />
+						<li>In the General page of the Property Editor, set the vertical alignment to Top.</li><br />
+						<li>Select the second row.</li><br />
+						<li>In the General page of the Property Editor, set the height to 0.25 in.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Column Properties</h2>
+					<p>We want each of the three columns to be 1/3 the width of the page, and we want them to be left, center and right aligned:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Select the first column header.</li><br />
+						<li>Switch to the General tab in the Property Editor. Notice that the width	is unset. As in HTML, if the column width is not set, BIRT will size the column to its content.</li><br />
+						<li>Set the column widths to 33%. Do this by typing "33" in the width field, then selecting "%" from the adjacent pull-down.s</li><br />
+						<li>Select the middle column.</li><br />
+						<li>Repeat the step above to set the width to 33%.</li><br />
+						<li>In the General page of the Property Editor, set the text alignment to Center.</li><br />
+						<li>Select the rightmost column.</li><br />
+						<li>Repeat the step above to set the width to 33%.</li><br />
+						<li>In the General page of the Property Editor, set the text alignment to Right.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Insert an Image</h2>
+					<p>Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need the report heading. To do this:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Drag an Image item from the palette into the left-most cell of your grid.</li><br />
+						<li>The Image Builder dialog appears.</li><br />
+						<li>Ensure that the URL radio button is selected.</li><br />
+						<li>Enter the following URL: "http://www.eclipse.org/birt/tutorial/multichip-4.jpg". (don't forget to add the quotes.)</li><br />
+						<li>Click the Preview button to ensure that the URL is correct.</li><br />
+						<li>Click Insert to add the image to your report.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
+					<p>You can also embed an image from your local disk. Embedding the image copies the image into the report design. Using a URL is more efficient.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
+					<h2 class="topic-section-header padding-top-small">Insert a Run Date</h2>
+					<p>Next, let's display the current date in the right-most cell in the heading. To do this:
 					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
+						<li>Drag a Data item from the Palette into the right-most cell of your grid.</li><br />
+						<li>The New Data Item dialog will be displayed. Change the name to current_date.</li><br />
+						<li>Set the Data Type column to Date Time. Select the ellipse next to the Expression. The expression builder will appear.</li><br />
+						<li>Type "new Date( )" (without the quotes) to display the current date.</li><br />
+						<li>Click OK.</li><br />
+						<li>Set the date format. Select the Format DateTime page within the Property Editor.</li><br />
+						<li>Choose the date format that looks like this: May 12, 2005. (The actual date will be today's date.) This is the BIRT "Medium Date" date format.</li>
 					</ul>
 					</p>
-					<p><a href="reference.php">Learn More</a></p>
+					<p>BIRT uses Java formatting for dates, numbers and strings. In addition, BIRT adds a number of specialized, locale-aware date formats described in the <a href="/birt/test/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a>.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-11.php"><< Previous: Cascading Styles</a> | <a href="tutorial-13.php">Next: Using a Text Item >></a></p>
 					
 				</div>
 			</div>

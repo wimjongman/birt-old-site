@@ -80,92 +80,36 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<h2 class="topic-section-header padding-top-small">About Style Cascade</h2>
+					<p>We've mentioned that BIRT uses CSS to define the styles for report items, and we saw how to define and apply our own style. BIRT also follows the "cascade" part of Cascading Style Sheets: you can set a property once for the report, or a container, and have that value cascade down through the contents of the container.</p>
+					<p>In BIRT, Grid, List and Table items are containers: they can hold other report items. The report itself is the ultimate container for all report items.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Setting Report-Wide Properties</h2>
+					<p>Our report currently uses the default font: a serif style. (Actually, by default BIRT uses the font set in your browser. Many browsers use a serif style by default, but if you've changed your default browser font, that is how the report will appear.)</p>
+					<p>Let's use a sans-serif style instead. We do this by using a pre-defined BIRT style called report, which specifies the default style for report items. If you are familiar with CSS, this is like defining a style that selects the HTML body tag.
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Open or locate the Outline view.</li><br />
+						<li>Scroll down to the bottom to find the Styles node.</li><br />
+						<li>Open the Styles node.</li><br />
+						<li>Right-click and select New Style.</li><br />
+						<li>From the General page, check the Predefined Style radio button and select "report" from the associated drop down list.</li><br />
+						<li>Click OK</li><br />
+						<li>Go to the Styles node in the Outline view and find the style named "report". Double-click it to open the Style editor.</li><br />
+						<li>In the Font page, choose "sans serif" as the font type.</li><br />
+						<li>Click OK.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<p>All items in your report will change to sans-serif font.</p>
+					<p>The names "serif" and "sans-serif" are defined by CSS: they are generic font styles that don't depend on the specific fonts installed on a machine. CSS generic font names avoid dependencies on specific fonts installed on the browser machine; something that is important if your reports will be appear as part of a public web site. You can also use font lists as in CSS. For example: "Helvetica, Arial, sans-serif".</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
-					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
-					</ul>
-					</p>
-					<p><a href="integrating/">Learn More</a>
+					<h2 class="topic-section-header padding-top-small">Other Default Styles</h2>
+					<p>BIRT defines default styles for most report items and for list and table bands. See the <a href="/birt/test/documentation/ROM_Styles_SPEC.pdf" target="_blank">ROM Styles Specification</a> for the complete list.</p>
+					<p>The Styles node displays the styles that apply to each of the report items. However, there are additional styles that apply to grouping levels and other contexts. If you wish to use one of these, simply create a style with the required name.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
-					</ul>
-					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
+					<h2 class="topic-section-header padding-top-small">Check the Reporte</h2>
+					<p>Let's click the preview tab to see how our report looks after the formatting. Not bad, but we still need a better report heading.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-10.php"><< Previous: Using Styles</a> | <a href="tutorial-12.php">Next: Using a Grid >></a></p>
 					
 				</div>
 			</div>
