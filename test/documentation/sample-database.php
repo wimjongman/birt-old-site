@@ -103,37 +103,46 @@ $PagePart 	= new PagePart();
 					</p>
 					<p>You are now ready to create the Classic Models database:
 					<ul class="eclipse-list">
-						
+						<li><a href="/birt/test/resources/documentation/sample-database/birt-database-2_0_1.zip" target="_blank">Download the zip file</a> containing the MySQL database scripts.</li></br />
+						<li>Expand the zip file into a convenient location.</li><br />
+						<li>Expanding the zip file created the ClassicModels/mysql directory with some MySQL scripts. From the command line, move to the this directory:<br /><br />
+						% cd /ClassicModels/mysql</li><br />
+						<li>Start the mysql utility, giving the name (and password, if needed) of a user permission to create databases. For example, to use the default root user:<br /><br />
+						% mysql --user=root</li><br />
+						<li>Create the ClassicModels database and load the schema. (Loading the schema the schema the first time will give error messages as it attemps to empty any existing tables, just ignore these.)<br /><br />
+						mysql> create database ClassicModels;<br />
+						mysql> use ClassicModels;<br />
+						mysql> source create_classicmodels.sql;</li><br />
+						<li>Load the table contents:<br /><br />
+						mysql> source load_classicmodels.sql;</li><br />
+						<li>Exit from mysql:<br /><br />
+						mysql> quit;</li>
 					</ul>
 					</p>
 					
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
+					<h2 class="topic-section-header padding-top-small">Localized Version of the Sample Database</h2>
+					<p>Following is the Derby Database localized into French, German, Spanish, Japanese, Korean, and Simplified Chinese.
 					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
+						<li><a href="/birt/test/resources/documentation/sample-database/Localized_Derby_Sample_DB.zip" target="_blank">Localized Derby Sample Database</a></li>
 					</ul>
 					</p>
-					<p><a href="reference.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
+					<h2 class="topic-section-header padding-top-small">Usage</h2>
+					<p>You can now use the sample database within BIRT to create reports. The key information you need to get started is how to create a data source for the database. The details vary depending on the database system you selected.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Apache Derby</h2>
+					<p>The Apache Derby version of the database is included in the BIRT download as a built-in data source. To access it, simply select the "Classic Models Inc. Sample Database" entry in the new data source dialog.</p>
+					
+					<h2 class="topic-section-header padding-top-small">MySQL</h2>
+					<p>Data source properties for the MySQL sample database:
+					<table border="1"><tbody>
+					<tr><td>Driver Class:</td><td>com.mysql.jdbc.Driver</td></tr>
+					<tr><td>URL:</td><td>jdbc:mysql://localhost/classicmodels</td></tr>
+					<tr><td>User Name:</td><td>root</td></tr>
+					<tr><td>Password:</td><td></td></tr>
+					</tbody></table>
 					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
 					
 				</div>
 			</div>
