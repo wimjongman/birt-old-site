@@ -72,29 +72,13 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Integration Points</h2>
-					<p>BIRT supplies several APIs and an Example Java EE application for generating and viewing reports. The major APIs are the Design Engine API(DE API), Report Engine API(RE API) and the Chart Engine API (CE API). These pages describe the various APIs and illustrate examples on their usage. In addition to the APIs, BIRT supports scripting using Rhino within report designs. A primer is available to get started scripting.</p>
-					
-					<h2 class="topic-section-header padding-top-small">Example Report Viewer (Java EE App/Plugin)</h2>
-					<p>The BIRT Viewer can be used in a variety of ways:<br />
-					Note that the BIRT Viewer requires that cookies be enabled.
-					<ul class="eclipse-list">
-						<li>As a stand-alone, pre-built web application for running and viewing reports.</li><br />
-						<li>As a starter web application that you can customize to your needs.</li><br />
-						<li>Called through the BIRT tag library.</li><br />
-						<li>As a plugin in existing RCP applications.</li>
-					</ul>
-					</p>
-					
-					
-					
 					<h2 class="topic-section-header padding-top-small">BIRT POJO Viewer</h2>
 					<p>Starting with the release of BIRT 3.7 the Viewer has been changed to be POJO based.  All required BIRT plugins are now in the WEB-INF/lib folder of the Viewer, and the WEB-INF/platform directory has been removed.	The Viewer should continue to operate as in previous versions of BIRT.  More information about this change is available in the <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.</p>
 					
 					<h2><a name="using"></a>Using Tomcat</h2>
 					<p>This page explains how to deploy the BIRT viewer to a Java EE container.	We'll use <a href="http://jakarta.apache.org/tomcat/" target="_blank">Apache Tomcat</a>, since it is open source and readily available. The same concepts,  perhaps	with different details, apply to other app servers. These instructions assume you'll install Tomcat on your own machine using the default port number of 8080.</p>
 
-					<p>If you don’t have Tomcat installed on your system you can download it from <a href="http://jakarta.apache.org/tomcat" target="_blank">http://jakarta.apache.org/tomcat</a>.</p>
+					<p>If you don't have Tomcat installed on your system you can download it from <a href="http://jakarta.apache.org/tomcat" target="_blank">http://jakarta.apache.org/tomcat</a>.</p>
 					
 					<h3>Birt 3.7 Note: </h3>
 					<p>If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/BirtPOJO_Viewer_Tomcat_Deployment" target="_blank">BIRT POJO Viewer Tomcat Deployment</a>.</p>
