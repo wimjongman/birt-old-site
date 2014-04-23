@@ -63,92 +63,47 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Concepts</h2>
+					<p>The <a href="/birt/phoenix/ref/rom/index.html" target="_blank">ROM documentation</a> is available in new "RomDoc" format complete with indexes, cross references, information taken directly from implementation, and so on. This version is an early draft. Note the following caveats:
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Documentation is not yet done for the Style element and its properites.</li><br />
+						<li>Some elements have no documenation at all.</li><br />
+						<li>Some elements are not in Release 1. These show up in the index, but are not yet flagged as "reserved."</li><br />
+						<li>Some of the wording needs correction and improvement.</li><br />
+						<li>Overview text from the ROM specs are not yet incorporated. Refer to the ROM Specs below for this overview material.</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<p>Key features include:
+					<ul class="eclipse-list">
+						<li>A "Since" field indicates if the element or property is in Release 1.0, or is "reserved" for a future release.</li><br />
+						<li>Alphabetical index of structures and elements.</li><br />
+						<li>Lots of details such as data types, XML names, choice details, JavaScript types, etc.</li><br />
+						<li>Auto-generated from the implementation: prevents the specs from being out of sync with respect to the code.</li>
+					</ul>
+					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Report Object Model Specification Suite</h2>
+					<p>The Report Object Model (ROM) is the report design format that the ERD creates and the ERE executes. The following suite of documents provides a full description of the model. Note: these are the original design specs, and are now somewhat out of date with respect to the implementation. See the above "RomDocs" for the most recent details.
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Overview_SPEC.pdf" target="_blank">Overview</a> - Overall introduction to the ROM (read this first.)</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Base_Elements_SPEC.pdf" target="_blank">Base Elements</a> - Properties common to all ROM elements</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Design_SPEC.pdf" target="_blank">Report Design</a> - Report design, report libraries and report parameters</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Layout_SPEC.pdf" target="_blank">Layout Model</a> - Layout rules and elements: grids and free-form</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_List_and_Table_SPEC.pdf" target="_blank">Lists & Tables</a> - The two elements for displaying data from a data set</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Text_SPEC.pdf" target="_blank">Textual Elements</a> - Including Data, Label, Text and Multi-Line Data</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Page_Setup_SPEC.pdf" target="_blank">Page Setup</a> - Master pages and page sequences</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Styles_SPEC.pdf" target="_blank">Styles</a> - Defines BIRT-defined and user-defined styles.</li><br />
+						<li><a href="/birt/phoenix/resources/documentation/ROM_Scripting_SPEC.pdf" target="_blank">Expressions & Scripting</a> - The programming model and objects</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">BPS Specifications</h2>
+					<p>BIRT Project Specification documents.
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li><a href="http://www.eclipse.org/birt/release20specs/listspecs.php" target="_blank">BPS Specs</a></li><br />
+						<li><a href="http://wiki.eclipse.org/BPS" target="_blank">BPS Wiki Pages</a></li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
-					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
-					</ul>
-					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
 					
 				</div>
 			</div>

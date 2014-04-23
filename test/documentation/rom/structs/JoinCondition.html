@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
+<html>
+<head>
+<title>Join Condition Element (Eclipse BIRT ROM Documentation)</title>
+<link rel="stylesheet" href="../style/style.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<p class="title">Eclipse BIRT Report Object Model (ROM)</p>
+<p class="subtitle">JoinCondition Structure</p>
+<h1>Structure Overview</h1>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Display Name:</td>
+<td>Join Condition</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+</table>
+
+<h3>Property Summary</h3>
+
+<dl class="section-text">
+<dt><a href="#Property-joinOperator">joinOperator</a></dt>
+<dd></dd>
+<dt><a href="#Property-joinType">joinType</a></dt>
+<dd></dd>
+<dt><a href="#Property-leftDataSet">leftDataSet</a></dt>
+<dd></dd>
+<dt><a href="#Property-leftExpression">leftExpression</a></dt>
+<dd></dd>
+<dt><a href="#Property-rightDataSet">rightDataSet</a></dt>
+<dd></dd>
+<dt><a href="#Property-rightExpression">rightExpression</a></dt>
+<dd></dd>
+</dl>
+
+<h1>Property Detail</h1>
+
+<h2><a name="Property-joinOperator">joinOperator Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (joinOperator)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Join operator</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>eq</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>eq</td>
+<td>equals</td>
+<td>eq</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
+<h2><a name="Property-joinType">joinType Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#choice">choice</a> (joinType)</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>No</td></tr>
+<tr><td>Display Name:</td>
+<td>Join type</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>inner</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+<h3>Choices</h3>
+
+<table class="section-table">
+<thead><tr><td>Name</td><td>Display Name</td>
+<td>Value</td><td>Description</td></tr></thead>
+<tbody>
+<tr><td>inner</td>
+<td>inner join</td>
+<td>inner</td>
+<td></td></tr>
+<tr><td>left-out</td>
+<td>left out join</td>
+<td>left-out</td>
+<td></td></tr>
+<tr><td>right-out</td>
+<td>right out join</td>
+<td>right-out</td>
+<td></td></tr>
+<tr><td>full-out</td>
+<td>full out join</td>
+<td>full-out</td>
+<td></td></tr>
+</tbody></table><br>
+
+<hr>
+<h2><a name="Property-leftDataSet">leftDataSet Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Left data set</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-leftExpression">leftExpression Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#expression">expression</a></td></tr>
+<tr><td>Context:</td>
+<td></td></tr>
+<tr><td>Expression Type:</td>
+<td>any</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Left expression</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-rightDataSet">rightDataSet Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#string">string</a></td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Right data set</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+
+<hr>
+<h2><a name="Property-rightExpression">rightExpression Property</a></h2>
+
+<p class="section-text"></p>
+<h3>Details</h3>
+
+<table class="detail-table">
+<tr><td>Type:</td>
+<td><a href="../types.html#expression">expression</a></td></tr>
+<tr><td>Context:</td>
+<td></td></tr>
+<tr><td>Expression Type:</td>
+<td>any</td></tr>
+<tr><td>Since:</td>
+<td>2.1</td></tr>
+<tr><td>Required:</td>
+<td>Yes</td></tr>
+<tr><td>Display Name:</td>
+<td>Right expression</td></tr>
+<tr><td>JavaScript Type:</td>
+<td></td></tr>
+<tr><td>Default Value:</td>
+<td>None</td></tr>
+<tr><td>Runtime Settable:</td>
+<td>Yes</td></tr>
+</table>
+
+</body>
+</html>

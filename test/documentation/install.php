@@ -113,7 +113,7 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<h2 class="topic-section-header padding-top-small">Deploying to a Java EE Sever</h2>
-					<p>Please see <a href="viewer-setup.php">Setting up the BIRT Viewer</a>.</p>
+					<p>Please see <a href="integrating/viewer-setup.php">Setting up the BIRT Viewer</a>.</p>
 					
 					<h2 class="topic-section-header padding-top-small">Installing BIRT Language Packs on Windows</h2>
 					<p>BIRT can be downloaded and installed in different ways:
