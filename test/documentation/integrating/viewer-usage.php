@@ -90,7 +90,7 @@ $PagePart 	= new PagePart();
 					
 					<h2 class="topic-section-header padding-top-small">Overview</h2>
 					<p>This Viewer is an AJAX based Java EE application that illustrates using the BIRT engine to generate and render report content.</p>
-					<p>The Web Viewer can be used to generate and render reports, and also supports more interactive features such as table of contents, exporting report content to several formats, client and server side printing, as well as report pagination. The features available will depend on what servlet mapping is used, the settings available in the web.xml file and what values are passed as parameters.</p>
+					<p>The Web Viewer can be used to generate and render reports, and also supports more interactive features such as table of contents, exporting report content to several formats, client and server side printing, as well as report pagination. The features available will depend on what servlet mapping is used, the settings available in the web.xml file and what values are passed as parameters.</p>
 					<p>The Example Viewer can also be deployed as an Eclipse plugin in an RCP application.</p>
 					<p>The Example Viewer also ships with a tag library which can be used to provide report functionality within your existing web applications.</p>
 					
@@ -108,8 +108,8 @@ $PagePart 	= new PagePart();
 					<p>The web.xml file contains many settings used to configure the Viewer.  These settings are illustrated below.</p>
 
 					<table border="1">
- 						<tr><td><b>Attribute</b></td><td><b>Description</b></td></tr>
- 						<tr><td>BIRT_VIEWER_LOCALE</td><td>This setting sets the default locale for the Web Viewer.</td></tr>
+ 						<tr><td><p><b>Attribute</b></p></td><td><p><b>Description</b></p></td></tr>
+ 						<tr><td><p>BIRT_VIEWER_LOCALE</p></td><td><p>This setting sets the default locale for the Web Viewer.</p></td></tr>
  						<tr>
   <td>
   <p >BIRT_VIEWER_WORKING_FOLDER</p>
