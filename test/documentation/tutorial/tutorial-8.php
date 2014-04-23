@@ -80,92 +80,78 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Resizing Table Columns</h2>
+					<p>Let's adjust the size of the table columns. Tables & columns can be sized using absolute sizes (inches, centimeters), or relative sizes (percentage of the width of the page.) Here, we'll adjust the column widths by directly changing them in the report layout. To do this:
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Click the Layout tab to switch back to the report layout.</li><br />
+						<li>Display, then click on the table tab to display the "scaffolding."</li><br />
+						<li>Find the black line that separates the "City" and "State" column headings.</li><br />
+						<li>With the cursor over this line, hold down the left mouse button and resize the column to be about big enough to hold the two-letter state code and label.</li><br />
+						<li>Repeat the above to resize the city column.</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Setting the Background Color</h2>
+					<p>Let's dress up the state heading by setting the row's background color. To do this:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Select the state group header row (first group header) by clicking on the shaded box to the left of the row. (Remember to display, then click on the table tab to display the scaffolding.)</li><br />
+						<li>Locate or open the Property Editor.</li><br />
+						<li>A list of property types appears at the left of the view. Click on the General group.</li><br />
+						<li>Find the Background color field. Click on the empty gray button to display the color picker.</li><br />
+						<li>Pick the blue color third from the right in the top row. This is a standard color, but is a bit too dark for our needs.</li><br />
+						<li>Click on the "Define Custom Colors" button.</li><br />
+						<li>Take the right-most slider (saturation) and move it up to produce a very light blue.</li><br />
+						<li>Click OK.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Setting the Font</h2>
+					<p>Now, let's give the state a bold font. We'll also dress up the city group heading by giving it a dark blue, bold, larger font. To do this:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Select the state Data Element. (it's located below the state label.)</li><br />
+						<li>Switch to the General property group in the Property Editor.</li><br />
+						<li>Find the Font size field. Change the size to "Large".</li><br />
+						<li>Click the [B] (bold) button to make the font bold.</li><br />
+						<li>Select the city Data Element.</li><br />
+						<li>Again, switch to the General property group.</li><br />
+						<li>Set the font size to Large.</li><br />
+						<li>Click on the Font Color button.</li><br />
+						<li>The color chooser again opens. Again choose the blue that is third from the right in the top row.</li><br />
+						<li>Click OK.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Formatting Data</h2>
+					<p>We want to format the phone numbers so that they have correct North American format: (123) 555-1212. We do this by applying a string format to the phone number field. Formats are also available for dates and numbers.
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Select the phone number Data Element.</li><br />
+						<li>Switch to the Format String page in the Property Editor.</li><br />
+						<li>Choose Custom for Format String as.</li><br />
+						<li>Choose Phone Number from the list.</li><br />
+						<li>In the Format Code field, add a space after the closing parenthesis to produce the following:<br /><br />
+						(@@@) @@@-@@@@</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
+					<h2 class="topic-section-header padding-top-small">Setting a Border</h2>
+					<p>Next, let's put a "drop shadow" border around our table.
 					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
+						<li>Click on the table tab.</li><br />
+						<li>Select the Borders page in the Property Editor.</li><br />
+						<li>Set the Style field to a solid line. (This is the default.)</li><br />
+						<li>Set the Color field to a black. (Use the color name pull-down, or choose the bottom left color in the color picker.)  (This is the default.)</li><br />
+						<li>Set the Width property to the thinnest line.</li><br />
+						<li>Click the top, bottom, left and right border buttons. A thin border appears around the table.</li><br />
+						<li>Switch to the Properties view (Window->Show View->Properties) to specify that a wider border should be used for the bottom and right sides.</li><br />
+						<li>Click on the table tab to initialize the Properties view with the table's properties.</li><br />
+						<li>Expand the Box node in the Properties View and set the Border bottom width and Border left width fields to medium.</li>
 					</ul>
 					</p>
-					<p><a href="reference.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<h2 class="topic-section-header padding-top-small">More on Properties</h2>
+					<p>BIRT provides a wide variety of properties for formatting report items. The properties are based on the <a href="http://www.w3.org/TR/CSS21/" target="_blank">W3C CSS</a> (Cascading Style Sheet) standard. If you've ever used CSS to format HTML, you are well on your way to understanding formatting in BIRT.</p>
+					
+					<p><br /><a href="tutorial-7.php"><< Previous: Testing Your Report</a> | <a href="tutorial-9.php">Next: Setting Data Properties >></a></p>
 					
 				</div>
 			</div>

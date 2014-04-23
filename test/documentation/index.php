@@ -75,7 +75,7 @@ $PagePart 	= new PagePart();
 						<li>Common Problems</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<p><a href="install.php">Learn More</a></p>
 					
 					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
 					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
@@ -109,7 +109,7 @@ $PagePart 	= new PagePart();
 						<li>Report Engine API</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
+					<p><a href="integrating/">Learn More</a></p>
 					
 					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
 					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:

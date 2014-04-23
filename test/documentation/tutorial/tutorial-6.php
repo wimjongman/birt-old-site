@@ -80,92 +80,89 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
-					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<h2 class="topic-section-header padding-top-small">Report Layout</h2>
+					<p>Our customer listing report will display customer information in the form of a table: just like an HTML table, with the added ability to iterate over report data. The Grouped Listing template we chose earlier created the table for us, we just need to fill in the details. Before we do, let's introduce the various BIRT report items.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Report Items (Elements)</h2>
+					<p>BIRT provides a variety of report items or Elements for use when creating your report. Report items appear in the Palette view. Report items include:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Label - Displays a simple piece of text such as "Customer Name".</li><br />
+						<li>Text - Text that can include HTML formatting and computed values. Used to create headings, form letters, "mail-merge" effects, etc.</li><br />
+						<li>Dynamic Text - Displays a database column that can contain HTML formatted (CLOB) data. Allows for advanced CLOB data manipulation through expressions.</li><br />
+						<li>Data - Displays a database column or a computed value. Provides formatting.</li><br />
+						<li>Image - Any kind of image supported by a web browser. Images can be embedded in the report, referenced through a URI, read from the resource folder or retrieved from a BLOB field in a data set.</li><br />
+						<li>Grid - Provides a tabular arrangement of report items, much like an HTML table. This element doesnt iterate over data sets like a List or a Table.</li><br />
+						<li>List - Presents data from a data set in any kind of format. Used when the layout for each row is more sophisticated than a simple table row. This Element will iterate over a bound Data Set.</li><br />
+						<li>Table - Presents data from a data set in the form of a table. Can contain grouping levels. Like an HTML table that has a table row for each data set row. This Element, like a list will iterate over a bound Data Set.</li><br />
+						<li>Chart - Displays a business chart such as a pie chart, line chart, etc.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<p>This tutorial will use all the elements except for List, Chart and Dynamic Text.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Create the Table Detail</h2>
+					<p>The New Report dialog created a starter report that contains a table item with one level of grouping. If we'd chosen a blank report, we could create the table simply by dragging it from the palette.</p>
+					<p>The next step is to add content to the table. We'll start with the detail band which repeats to display each row from our data set. Here's how:
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Display the Data Explorer if it's not already visible.</li><br />
+						<li>Expand the Data Sets node of the tree.</li><br />
+						<li>Expand the entry for the Customers data set that we created. This will display the columns available from the data set.</li><br />
+						<li>Select the CUSTOMERNAME column.</li><br />
+						<li>Locate the detail band within the table. (It is has a gray "Detail Row" label.)</li><br />
+						<li>Drag the CUSTOMERNAME column into the detail band cell second from the left. This operation adds a Data Element and a Label Element to the Table Element. The Binding Editor maps the Data Element to the Data Set row column CUSTOMERNAME. The Binding Editor is available by selecting the Binding tab in the Property Editor for the Table. You can change this value by selecting the ellipse next to the expression within the Binding Editor. You will now see that the Table Element contains the new Label Element and the new Data Element.</li><br />
+						<li>Drag the PHONE column into the rightmost cell of the detail band.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Create the State Group</h2>
+					<p>We want our customer listing to be grouped by state, then city. Using a group causes all rows within the same state to appear together. Let's create the group header for states:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Locate the group header row in your table. It has a light gray "Group Header Row" label.</li><br />
+						<li>Drag the STATE column into the leftmost cell within the Group Header row.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
+					<h2 class="topic-section-header padding-top-small">Creating Groups on your Own</h2>
+					<p>We are using the group created for us by the New Report dialog. If we'd started by dragging the table from the palette, we'd create this first group as we'll explain in the next section.</p>
+					<p>You must bind (associate) the table to a data set before you can create a group. The binding happened automatically when we dropped the first data set column into the table. However, if you build a table on your own, you can use the Binding tab in the Property Editor to bind the table to a data set.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
+					<h2 class="topic-section-header padding-top-small">Create the City Group</h2>
+					<p>Next, we'll create a city group within the state. This groups customers first by state, then by city.
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
+						<li>Hover the cursor over the table and a Table tab will be displayed.</li><br />
+						<li>Click on the Table tab to display the table scaffolding.</li><br />
+						<li>Select the Property Editor->Binding Tab. You will see that the Table is bound to the Customers Data Set. Under Data Column Binding you will notice the three Table columns that have already been created.</li><br />
+						<li>Select Add. Then Data Binding dialog will be displayed.</li><br />
+						<li>Enter City in the Name field and select ellipse next to Expression. The BIRT Expression Builder will be displayed.</li><br />
+						<li>Select Available Data Sets under Category, Customers under Sub-Category and then double-click on the CITY column.</li><br />
+						<li>Select OK and change the Binding name from New Binding to CITY. The Data Set Row column CITY is now available to be used within the Table.</li><br />
+						<li>Right-click on the row header for the state group header and a context menu will be displayed.</li><br />
+						<li>From the context menu choose Insert Group->Below. The Group Details dialog appears.</li><br />
+						<li>Chose the CITY column in the Group On field and type City in the Name field.</li><br />
+						<li>Click OK.</li>
 					</ul>
 					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p>Notice that BIRT automatically inserted a Data element for the city group.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Add a Table Column</h2>
+					<p>We need another table column to display our group heading:
+					<ul class="eclipse-list">
+						<li>Ensure the table scaffolding appears. Right-click on the shaded column header for the first column.</li><br />
+						<li>Choose Insert->Column to the Right from the context menu. A new column appears.</li><br />
+						<li>Move the CITY Data Element (the Element in the first column of the second group header) to the second column of the second group header by dragging it.</li>
+					</ul>
+					</p>
+					
+					<h2 class="topic-section-header padding-top-small">Create Column Headings</h2>
+					<p>We're almost done with the basic setup of our table. We just need to refine our column headings. BIRT added headings for us for each column we added to the table.
+					<ul class="eclipse-list">
+						<li>Double-click on the first column header text to change it. Type "State" and press Enter.</li><br />
+						<li>Drag a label from the palette into the second column heading, type "City" and press Enter.</li><br />
+						<li>Change the third column header to "Name".</li><br />
+						<li>Change the last column header to "Phone".</li>
+					</ul>
+					</p>
+					
+					<p><br /><a href="tutorial-5.php"><< Previous: Building a Data Set</a> | <a href="tutorial-7.php">Next: Testing Your Report >></a></p>
 					
 				</div>
 			</div>

@@ -80,92 +80,34 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
-					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
-					</ul>
+					<p>We're now ready to test the report layout. We verified the data set earlier, so now we want to verify that the report is presenting the data as we expect.</p>
+					<p>We preview the report by clicking on the Preview tab in the lower left corner of the report editor. This report has no parameters, but if it did, they could be modified by selecting the Show Report Parameters button.</p>
+					<p>The window that appears is an embedded web browser, which displays the report in HTML format. The report appears as a single page. This works best for smaller data sets. Since the sample database has quite a bit of data, we used a WHERE clause to limit the results. We could also use a report parameter or a data set filter to limit the amount of data displayed at any one time.</p>
+					<p>There are a number of ways we can improve the report's appearance:</p>
+					<p>
+						<ul class="eclipse-list">
+							<li>Add a title to the top of the report.</li><br />
+							<li>Add some color to enhance the column headings.</li><br />
+							<li>Shrink the size of the city and state columns.</li><br />
+							<li>Add some color to make the state and city group headers stand out.</li><br />
+							<li>Format the phone numbers.</li><br />
+							<li>Sort customers by name.</li>
+						</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
+					<p>Before we apply these aesthetic enhancements, let's look at other ways to preview the report.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
-					</ul>
-					</p>
-					<p><a href="tutorial/">Get Started</a></p>
+					<h2 class="topic-section-header padding-top-small">Preview as HTML</h2>
+					<p>The Preview tab is handy for a quick review of your report. BIRT runs the report each time you switch to Preview. However, you can have either the Layout or the Preview tab open, but not both.</p>
+					<p>Instead, we can preview the report in a separate window. Find the Preview button in the toolbar. Use the little arrow next to it to open the pull-down. You can then Preview as HTML in a separate window. This allows you to switch back and forth between your layout editor and your preview without rerunning the report.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
-					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
-					</ul>
-					</p>
-					<p><a href="integrating/">Learn More</a>
+					<h2 class="topic-section-header padding-top-small">Preview in Web Viewer</h2>
+					<p>This option is similar to the one above. It allows the report to be previewed as HTML in a separate browser window using the BIRT Web Viewer. The viewer provides powerful navigation capabilities such as TOC, Previous Page, Next Page, Goto Page as well as search and export capabilities.</p>
+					<p>To preview the report in the Web Viewer use the toolbar Preview button and select the Web Viewer option or alternatively invoke File->Preview in Web Viewer.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
-					</ul>
-					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
-					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
-					</ul>
-					</p>
-					<p><a href="reference.php">Learn More</a></p>
-					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<h2 class="topic-section-header padding-top-small">Preview as PDF</h2>
+					<p>You can also choose Preview as PDF. This converts the layout to a multi-page PDF format.</p>
+										
+					<p><br /><a href="tutorial-6.php"><< Previous: Building a Table</a> | <a href="tutorial-8.php">Next: Setting Visual Properties >></a></p>
 					
 				</div>
 			</div>

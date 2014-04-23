@@ -80,92 +80,78 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Installation Guide</h2>
-					<p>This guide will take you through the BIRT installation process. The topics included in this guide include:
+					<h2 class="topic-section-header padding-top-small">Build a Data Set</h2>
+					<p>Now we're ready to build and test our data set.
 					<ul class="eclipse-list">
-						<li>Designer Install</li><br />
-						<li>Framework Designer Install</li><br />
-						<li>JDBC Drivers</li><br />
-						<li>Updating a BIRT Installation</li><br />
-						<li>Deploying to a Java EE Server</li><br />
-						<li>Installing BIRT Language Packs on Windows</li><br />
-						<li>Common Problems</li>
+						<li>Find or open the Data Explorer view.</li><br />
+						<li>Select the Data Sets node in the tree view.</li><br />
+						<li>Right-click to open the context menu. (We'll just say "open the context menu" or "choose x from the context menu" from now on.)</li><br />
+						<li>Select New Data Set. The New Data Set dialog will appear.</li><br />
+						<li>Enter "Customers" for the Data Set Name field.</li><br />
+						<li>Ensure that the Data Source field shows the Sample data source created above.</li><br />
+						<li>Ensure that the Data Set Type field shows "SQL Select Query".</li><br />
+						<li>Click Next.</li><br />
+						<li>Enter the following Query:
+							<em>SELECT *<br />
+							FROM CUSTOMERS<br />
+							WHERE COUNTRY = 'USA'</em></li><br />
+						<li>Click Finish.</li>
 					</ul>
 					</p>
-					<p><a href="install.php">Learn More</a>	</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Tutorial</h2>
-					<p>If you're new to BIRT, this tutorial is a good place to start. The Tutorial walks you though the steps to build a basic listing report and introduces the basic BIRT concepts. The topics include:
+					<h2 class="topic-section-header padding-top-small">Data Set Editor Pages</h2>
+					<p>The data set editor now opens. Let's take a look at the pages within this editor. The data set editor provides the following pages:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Creating a Report</li><br />
-						<li>Brief UI Tour</li><br />
-						<li>Building a Data Source</li><br />
-						<li>Building a Data Set</li><br />
-						<li>Building a Table</li><br />
-						<li>Testing Your Report</li><br />
-						<li>Setting Visual Properties</li><br />
-						<li>Setting Data Properties</li><br />
-						<li>Using Styles</li><br />
-						<li>Cascading Styles</li><br />
-						<li>Using a Grid</li><br />
-						<li>Using a Text Item</li><br />
-						<li>Next Steps</li>
+						<li>Query - Displays your SQL SELECT statement. This is where you create and change your SQL query. Once you have the basic query, you can add a WHERE clause, adjust the set of selected columns, and more. Use the SQL editor to add computed columns that are to be calculated by the database engine. Give such columns a name using the SQL ALIAS clause.</li><br />
+						<li>Data Source - Displays the name of the data source for this data set so you can view or change it.</li><br />
+						<li>Preview Results - Lets you test your query and see the output. Very handy to make sure that the data is right before you proceed with report design.</li><br />
+						<li>Computed Columns - Computed columns are calculated by BIRT and appear to the rest of the report just like any other column. You can use JavaScript expressions, and even call into Java for advanced business logic.</li><br />
+						<li>Parameters - SQL SELECT statements can include input parameters that pass data into the query. They are marked using the SQL "?" symbol in the query. This page lets you give the parameters a name, a default value, and so on. There must be a one-to-one correspondence between entries on this page and the "?" symbols in your query.</li><br />
+						<li>Filters - Additional filters that BIRT applies to your data. Filters restrict the data passed to the report. The WHERE clause is also a filter: one executed by the database. This tab lets you define additional filters using BIRT (JavaScript) scripting.</li><br />
+						<li>Output Columns - Shows the columns within the query, and lets you define a column alias for use in the report. Note that this view shows the columns as the report will see them. The Query page shows the columns as selected from the database.</li>
 					</ul>
 					</p>
-					<p><a href="tutorial/">Get Started</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Integrating BIRT</h2>
-					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
+					<h2 class="topic-section-header padding-top-small">Database Browser</h2>
+					<p>Switch to the Query page if you're not already there. This page provides a simple database browser.
 					<ul class="eclipse-list">
-						<li>Viewer Setup</li><br />
-						<li>Viewer Usage</li><br />
-						<li>Using PHP</li><br />
-						<li>Report Scripting</li><br />
-						<li>Design Engine API</li><br />
-						<li>Report Engine API</li>
+						<li>Expand the Sample data source to see the schemas within this database. There is only one: "CLASSICMODELS".</li><br />
+						<li>Expand "CLASSICMODELS" to see the list of tables in the database.</li><br />
+						<li>Expand a table to see its columns.</li><br />
+						<li>This editor supports drag and drop.</li>
 					</ul>
 					</p>
-					<p><a href="integrating/">Learn More</a>
 					
-					<h2 class="topic-section-header padding-top-small">Sample Database</h2>
-					<p>The BIRT sample database provides a simple set of tables and data that form the basis for BIRT sample reports. The schema is for Classic Models, a retailer of scale models of classic cars. The database contains typical business data such as customers, orders, order line items, products and so on. It was designed to illustrate many of the features of the BIRT report designer. The sections included in this guid are:
+					<h2 class="topic-section-header padding-top-small">Test the Query</h2>
+					<p>With the data set editor open, do the following:
 					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Schema</li><br />
-						<li>Install</li><br />
-						<li>Apache Derby Version</li><br />
-						<li>MySQL Version</li>
+						<li>Click on the Preview Results item.</li>
 					</ul>
 					</p>
-					<p><a href="sample-database.php">Learn More</a></p>
+					<p>The preview page appears. This page shows the columns selected in your query listed across the top. The actual rows in your query appear down the page.
+					<ul class="eclipse-list">
+						<li>Verify that the list of customers appears.</li><br />
+						<li>Click OK to close the data set editor.</li>
+					</ul>
+					</p>
+					<p>If an error dialog appears, check the following:
+					<ul class="eclipse-list">
+						<li>Your Eclipse is installed in a directory without spaces.</li><br />
+						<li>You have typed the SQL statement as shown above.</li><br />
+						<li>You have not put a semi-colon at the end of your statement.</li>
+					</ul>
+					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Technical Reference</h2>
-					<p>The topics in this guide include:
+					<h2 class="topic-section-header padding-top-small">Edit a Data Set</h2>
+					<p>Your new data set appears in the Data Explorer along with your data source. We can use the data set editor to change the data set, and to test it to make sure it returns the correct data.
 					<ul class="eclipse-list">
-						<li>Report Object Model Documentation</li><br />
-						<li>Report Object Model Specification Suite</li><br />
-						<li>BIRT Project Specifications</li>
+						<li>Find or open the Data Explorer.</li><br />
+						<li>Open the Data Sets node.</li><br />
+						<li>Double-click the Customers data set. The Data Set editor opens.</li>
 					</ul>
 					</p>
-					<p><a href="reference.php">Learn More</a></p>
 					
-					<h2 class="topic-section-header padding-top-small">Building BIRT</h2>
-					<p>This guide describes how to get the BIRT source and build it under Eclipse. If you simply want to use BIRT, it is easier to simply <a href="http://download.eclipse.org/birt/downloads">download</a> an existing build. The topics included are:
-					<ul class="eclipse-list">
-						<li>Introduction</li><br />
-						<li>Requirements</li><br />
-						<li>Configuring Eclipse</li><br />
-						<li>Understanding the CVS Structure</li><br />
-						<li>Checking out Code from CVS</li><br />
-						<li>Checking out the Data Tools Projects</li><br />
-						<li>Import Additional Files</li><br />
-						<li>Preparing the Viewer</li><br />
-						<li>Running BIRT</li><br />
-						<li>Instructions for Running JUnit Tests</li>
-					</ul>
-					</p>
-					<p><a href="building-birt.php">Learn More</a></p>
+					<p><br /><a href="tutorial-4.php"><< Previous: Building a Data Source</a> | <a href="tutorial-6.php">Next: Building a Table >></a></p>
 					
 				</div>
 			</div>
