@@ -212,15 +212,15 @@ $PagePart 	= new PagePart();
 					pattern="frameset"
 					height="450"
 					width="700"
-					format="html"
-					 >&lt;/birt:viewer>
-					 &lt;/body>
-					 &lt;/html></pre>
-</p>
-
-<h3>The viewer Tag Attributes</h3>
-<table border="1">
- <tr>
+					format="html">
+					&lt;/birt:viewer>
+					&lt;/body>
+					&lt;/html></pre>
+					</p>
+					
+					<h3>The viewer Tag Attributes</h3>
+					<table border="1">
+					<tr>
   <td
   >
   <p>Attribute</p>
