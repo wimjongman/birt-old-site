@@ -504,7 +504,8 @@ $PagePart 	= new PagePart();
 					</pre>
 					</p>
 					
-					<h4>IPlatformContext - Web Based Plugin Loading</h4>
+					<h4>IPlatformContext - Web Based Plugin Loading</h4><br />
+					
 					<h3>Birt POJO Runtime Note: </h3>
 					<p>If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br />
 					This section can be ignored if your are installing BIRT 3.7 or later. Just add the BIRT plugins to the Web Application classpath.</p>
