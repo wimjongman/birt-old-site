@@ -84,10 +84,10 @@ $PagePart 	= new PagePart();
 					<p>Next step is to run a report from within a PHP script. Let's assume we have a report named test.rptdesign stored in C:/temp. We use a browser redirect to run the report. The redirect appears in an HTML header. Headers must be written before adding any content to the page:</p>
 					
 					<blockquote>
-						\$fname = "c:/temp/test.rptdesign";<br />
+						$fname = "c:/temp/test.rptdesign";<br />
 						// Redirect browser<br />
-						\$dest = "http://localhost:8080/birt-viewer/run?__report=";<br />
-						\$dest .= urlencode( realpath( \$fname ) );<br />
+						$dest = "http://localhost:8080/birt-viewer/run?__report=";<br />
+						$dest .= urlencode( realpath( \$fname ) );<br />
 						header("Location: \$dest" );<br />
 					</blockquote>
 					
@@ -100,12 +100,12 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Passing Parameters</h2>
 					<p>Suppose your report takes parameters. The test report above has one parameter called <code>sample</code>. We simply add them to the report URL in the form described in <a href="viewer-usage.php">Using the Report Viewer</a>.</p>
 					<blockquote>
-						\$fname = "c:/temp/test.rptdesign";<br />
-						\$paramValue = "Hi there!";<br />
+						$fname = "c:/temp/test.rptdesign";<br />
+						$paramValue = "Hi there!";<br />
 						// Redirect browser<br />
-						\$dest = "http://localhost:8080/birt-viewer/run?__report=";<br />
-						\$dest .= urlencode( realpath( \$fname ) );<br />
-						\$dest .= ";sample=" . urlencode( \$paramValue );<br />
+						$dest = "http://localhost:8080/birt-viewer/run?__report=";<br />
+						$dest .= urlencode( realpath( \$fname ) );<br />
+						$dest .= ";sample=" . urlencode( \$paramValue );<br />
 						header("Location: \$dest" );<br />
 					</blockquote>
 					
