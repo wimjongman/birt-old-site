@@ -72,23 +72,6 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Integration Points</h2>
-					<p>BIRT supplies several APIs and an Example Java EE application for generating and viewing reports. The major APIs are the Design Engine API(DE API), Report Engine API(RE API) and the Chart Engine API (CE API). These pages describe the various APIs and illustrate examples on their usage. In addition to the APIs, BIRT supports scripting using Rhino within report designs. A primer is available to get started scripting.</p>
-					
-					<h2 class="topic-section-header padding-top-small">Example Report Viewer (Java EE App/Plugin)</h2>
-					<p>The BIRT Viewer can be used in a variety of ways:<br />
-					Note that the BIRT Viewer requires that cookies be enabled.
-					<ul class="eclipse-list">
-						<li>As a stand-alone, pre-built web application for running and viewing reports.</li><br />
-						<li>As a starter web application that you can customize to your needs.</li><br />
-						<li>Called through the BIRT tag library.</li><br />
-						<li>As a plugin in existing RCP applications.</li>
-					</ul>
-					</p>
-					
-					
-
-
 					<h2 class="topic-section-header padding-top-small">Concepts</h2>
 					<h3>Birt POJO Runtime Note: </h3>
 					<p>If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br />
