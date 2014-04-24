@@ -72,20 +72,6 @@ $PagePart 	= new PagePart();
 
 			        </div>
 
-					<h2 class="topic-section-header padding-top-small">Integration Points</h2>
-					<p>BIRT supplies several APIs and an Example Java EE application for generating and viewing reports. The major APIs are the Design Engine API(DE API), Report Engine API(RE API) and the Chart Engine API (CE API). These pages describe the various APIs and illustrate examples on their usage. In addition to the APIs, BIRT supports scripting using Rhino within report designs. A primer is available to get started scripting.</p>
-					
-					<h2 class="topic-section-header padding-top-small">Example Report Viewer (Java EE App/Plugin)</h2>
-					<p>The BIRT Viewer can be used in a variety of ways:<br />
-					Note that the BIRT Viewer requires that cookies be enabled.
-					<ul class="eclipse-list">
-						<li>As a stand-alone, pre-built web application for running and viewing reports.</li><br />
-						<li>As a starter web application that you can customize to your needs.</li><br />
-						<li>Called through the BIRT tag library.</li><br />
-						<li>As a plugin in existing RCP applications.</li>
-					</ul>
-					</p>
-					
 					<h2 class="topic-section-header padding-top-small">Background</h2>
 					<p>BIRT provides a rich scripting model based on the Mozilla Rhino engine. The processes that the Report engine uses to create reports can be classified in two phases, Report Generation and Presentation. The Generation phase consumes the report design and creates an intermediate file, called the report document. The Presentation phase uses the report document to render to HTML or PDF. The report creation pipeline can execute these phases as one task or in two task. If executed in one phase the report document is created in memory. This is the default behavior of the designer when "Preview as HTML" is chosen. If executed in two phases the report document is created and stored to disk. This is the default behavior of the designer when "Preview in Web Viewer" is selected.</p>
 					<p>Events within each phase can be overridden, by creating event handlers, to alter report content. BIRT allows these event handlers to be written in either JavaScript or Java. If you code your event handler in both Java and JavaScript the JavaScript version will be executed by default.</p>
@@ -116,13 +102,15 @@ $PagePart 	= new PagePart();
 					</pre>
 					This global variable can be assigned to a data element using the binding editor. Simply reference the variable in the expression builder for the desired column. For example, if a column exist in the binding editor that retrieves a string from a data base, you could append your global variable to the value by entering the following expression:
 					<pre style="font-size: 10pt">
-					dataSetRow["MyString"] + "-" + reportContext.getPersistentGlobalVariable('testglobal');
+					dataSetRow["MyString"] + "-" + reportContext
+					     .getPersistentGlobalVariable('testglobal');
 					</pre>
 					<br />
 					The reportContext also allows access to session variables.
 					<pre style="font-size: 10pt">
 					//attributeBean is a Birt Viewer supplied session variable
-					myAttributeBean = reportContext.getHttpServletRequest().getAttribute('attributeBean');
+					myAttributeBean = reportContext.getHttpServletRequest()
+					     .getAttribute('attributeBean');
 					reportDoc = myAttributeBean.getReportDocumentName( );
 					this.text = reportDoc;
 					</pre>
@@ -181,7 +169,8 @@ $PagePart 	= new PagePart();
 					<pre style="font-size: 10pt">
 					function beforeGeneration( chart, context ){
 						importPackage(Packages.org.eclipse.birt.chart.model.type.impl);
-						newChartTitle = context.getExternalContext().getScriptable().getPersistentGlobalVariable("testglobal");
+						newChartTitle = context.getExternalContext().getScriptable()
+						    .getPersistentGlobalVariable("testglobal");
 						chart.getTitle().getLabel().getCaption().setValue(newChartTitle);
 					}
 					</pre>
@@ -335,7 +324,7 @@ $PagePart 	= new PagePart();
 					</pre>
 					
 					<h4>Using Named Expressions</h4>
-					<p>A named expression is an expression that is created on an element and given a name. The expression definition can be edited in onPrepare, and the value of the evaluated expression can be accessed in onCreate and onRender. These are often useful when scripting in Java and use of a function like Total is needed. For example a named expression my be defined as totalCreditValue and it's value set to Total.sum(row[“CREDITLIMIT”]). The named expression would then be available to other elements in JavaScript as well as Java.<br />
+					<p>A named expression is an expression that is created on an element and given a name. The expression definition can be edited in onPrepare, and the value of the evaluated expression can be accessed in onCreate and onRender. These are often useful when scripting in Java and use of a function like Total is needed. For example a named expression my be defined as totalCreditValue and it's value set to Total.sum(row["CREDITLIMIT"]). The named expression would then be available to other elements in JavaScript as well as Java.<br />
 					So if you define a Named Expression on a table named 'RWC' and set it's value to row[0], you would access it on the row like:<br /><br />
 					<pre style="font-size: 10pt">
 					rc = this.parent.getNamedExpressionValue("RWC");
@@ -390,7 +379,8 @@ $PagePart 	= new PagePart();
 					An example of changing the query with JavaScript is presented below.<br /><br />
 					<pre style="font-size: 10pt">
 					beforeOpen of the Data Set
-					this.queryText = "SELECT * FROM Customers where CustomerID IN (" + params["customersInClause"] +")";
+					this.queryText = "SELECT * FROM Customers where CustomerID 
+					     IN (" + params["customersInClause"] +")";
 					</pre>
 					
 					When implementing a Scripted Data Set, use the open event to initialize variables, classes etc. Use the Fetch event to load your row data. Remember to return false when your data set is finished. Use close to close any external objects.</p>
@@ -445,7 +435,8 @@ $PagePart 	= new PagePart();
 					     /* table onPrepare event */
 					     public void onPrepare( ITable table, IReportContext reportContext ){
 					         	try {
-					         	    table.setNamedExpression( "total_limit_avg", "Total.ave(row[\"CREDITLIMIT\"])" );
+					         	    table.setNamedExpression( "total_limit_avg",
+					         	         "Total.ave(row[\"CREDITLIMIT\"])" );
 					         	} catch ( Exception e ) {
 					         	    e.printStackTrace( );
 					         	}
@@ -466,9 +457,11 @@ $PagePart 	= new PagePart();
 					public class RowEH extends RowEventAdapter {
 						public void onCreate(IRowInstance row, IReportContext context) {
 							IRowData data = row.getRowData();
-							double avgCreditLimit = ((Double) row.getParent().getNamedExpressionValue("total_limit_avg")).doubleValue();
+							double avgCreditLimit = ((Double) row.getParent()
+							     .getNamedExpressionValue("total_limit_avg")).doubleValue();
 							try {
-								if (((Double) data.getExpressionValue("row[\"CREDITLIMIT\"]")).doubleValue() > avgCreditLimit ) {
+								if (((Double) data.getExpressionValue("row[\"CREDITLIMIT\"]"))
+								     .doubleValue() > avgCreditLimit ) {
 									row.getStyle( ).setFontWeight( "bolder" );
 									row.getStyle( ).setFontSize( "larger" );
 									row.getStyle( ).setColor( "olive" );
@@ -486,7 +479,9 @@ $PagePart 	= new PagePart();
 					
 					<p>Build a listing report using the sample database "Classic Models". Enter the following query.<br /><br />
 					<pre style="font-size: 10pt">
-					select CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER,CLASSICMODELS.CUSTOMERS.CUSTOMERNAME,CLASSICMODELS.CUSTOMERS.CREDITLIMIT
+					select CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER,
+					CLASSICMODELS.CUSTOMERS.CUSTOMERNAME,
+					CLASSICMODELS.CUSTOMERS.CREDITLIMIT
 					from CLASSICMODELS.CUSTOMERS
 					</pre>
 					Drag the data set to the report view and a table should be created automatically. Select the newly created table and enter my.test.events.TableEH in the Event Handler entry on the Properties tab.</p>

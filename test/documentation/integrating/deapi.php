@@ -86,56 +86,118 @@ $PagePart 	= new PagePart();
 					</ul>
 					</p>
 					
-					<h3>Web Viewer Links</h3>
-					<p>
+					
+
+
+					<h2 class="topic-section-header padding-top-small">Concepts</h2>
+					<h3>Birt POJO Runtime Note: </h3>
+					<p>If you are installing BIRT 3.7 or later See <a href="http://wiki.eclipse.org/Birt_3.7_Migration_Guide">BIRT 3.7 Migration Guide</a>.<br />
+					It is no longer necessary to set BIRT Home in the DesignConfig class. Just add the BIRT jars to your classpath/buildpath.</p>
+					
+					<p>A report design consist of three key concepts:
 					<ul class="eclipse-list">
-						<li><a href="viewer-setup.php">Integrating the BIRT Viewer</a> explains how to deploy the BIRT viewer onto your own application server. The explanation uses Apache Jakarta Tomcat as the sample deployment target.</li><br />
-						<li><a href="viewer-usage.php">Using the BIRT Viewer</a> discusses the viewer operation URLs, parameters and settings.</li><br />
-						<li><a href="using-php.php">Using the Viewer from PHP</a> discusses how to run BIRT reports from a non-Java scripting environment such as PHP.</li><br />
-						<li><a href="viewer-usage.php">Viewer Tag Lirary</a> discusses how to integrate BIRT using the Tag Libraries.</li><br />
-						<li>The viewer code is available in the BIRT CVS repository in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.viewer/?cvsroot=BIRT_Project">org.eclipse.birt.report.viewer</a> project. See the <a href="/birt/test/documentation/building-birt.php">BIRT build instructions</a> for information on how to access CVS and build the viewer.</li>
+						<li>Elements<br />
+						An "object" within the design such as the report itself, a data set, a style, a table, a label, etc.</li><br />
+						<li>Property<br />
+						Properties customize an element. For example, a data set has a name and a query. A style has CSS-like style properties. A label has style properties and display text. Properties further divide into <i>property definitions</i> provided by BIRT's Report Object Model (ROM), and <i>property values</i> set by you as you create a report design.</li><br />
+						<li>Slots<br />
+						A slot describes how elements assemble to form a report. A slot is a place where one element can contain other elements. For example, a report has slots for data sources, data sets, styles and the report body. A table has slots for	the header, detail, footer and groups.</li>
 					</ul>
 					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Design Engine API</h2>
-					<p>Use the Design Engine API (DE API) to create a custom report designer tool, or to explore or modify BIRT report designs. The BIRT Designer is built using this API. This API can also be called within BIRT script to modify the currently running report.
+					<h2 class="topic-section-header padding-top-small">API Services</h2>
+					<p>The BIRT Design Engine API (DEAPI) provides a number of services to applications that work with report designs:
 					<ul class="eclipse-list">
-						<li><a href="deapi.php">Using the Design Engine API</a> is a brief primer for using the DE API.</li><br />
-						<li>The Design Engine code is available in the BIRT CVS repository in the org.eclipse.birt.report.model project. See the BIRT build instructions for information on how to access CVS and build the code.</li>
+						<li>Create report designs</li><br />
+						<li>Read and write report design files</li><br />
+						<li>Create and delete report elements</li><br />
+						<li>Put report elements into a slot, or move them from slot to slot</li><br />
+						<li>Get and set the value of parameters</li><br />
+						<li>Retrieve metadata about report elements, properties and slots</li><br />
+						<li>Support undo/redo of changes</li><br />
+						<li>Perform semantic checks of report designs</li>
 					</ul>
-					</p>
 					
-					<h2 class="topic-section-header padding-top-small">Report Engine API</h2>
-					<p>Use the Design Engine API (DE API) to create a custom report designer tool, or to explore or modify BIRT report designs. The BIRT Designer is built using this API. This API can also be called within BIRT script to modify the currently running report.
+					<h2 class="topic-section-header padding-top-small">DEAPI SDK</h2>
+					<p>To create an application that uses the DEAPI, you'll need the design engine SDK.</p>
+					<p>At present, you'll need to download the project source code and build the Javadoc yourself. In time, the Javadoc will be available as part of a BIRT download. The model Jar is available as part of the runtime download.
 					<ul class="eclipse-list">
-						<li><a href="reapi.php">Using the Engine API</a> explains how to use the Report Engine API to create a simple command-line program that runs reports.</li>
+						<li>See the <a href="/birt/test/documentation/building-birt.php">BIRT build instructions</a> for information on how to access CVS and build the code. You only need to build the model and core projects.</li><br />
+						<li>If you don't have access to CVS, you can also obtain the code from the web interface to the <a href="http://dev.eclipse.org/viewcvs/index.cgi/source/org.eclipse.birt.report.model/?cvsroot=BIRT_Project"> org.eclipse.birt.report.model</a> project.</li>
 					</ul>
 					</p>
+					<p>This API is described in Javadoc in the <code>org.eclipse.birt.report.model.api</code> package within the <code>org.eclipse.birt.report.model project</code>. Read the package overview for general information about getting started with this API.</p>
 					
-					<h2 class="topic-section-header padding-top-small">Chart Engine API</h2>
-					<p>Use the Chart Engine API to create and render charts apart from BIRT. Several examples can be found on the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a>.
+					<h2 class="topic-section-header padding-top-small">Example</h2>
+					<p>The following code shows a simple example that creates a working report design. Here are the files you'll need:
 					<ul class="eclipse-list">
-						<li><a href="http://developer.actuate.com/community/devshare/_/designing-birt-reports/webinar-archive-using-the-birt-charting-apis-r288" target="_blank">Chart Engine API Webinar</a></li><br />
-						<li><a href="http://developer.actuate.com/community/devshare/_/designing-birt-reports/463-birt-chart-engine-api-webinar-examples/" target="_blank">Chart Engine API Webinar Examples</a></li><br />
-						<li><a href="http://developer.actuate.com/community/devshare/_/designing-birt-reports/1344-eclipsecon-2011-api-examples" target="_blank">Chart Engine API Examples</a></li><br />						
-						<li><a href="http://developer.actuate.com/resources/search/" target="_blank">Search the BIRT Developer Center DevShare</a></li>
+						<li><a href="/birt/test/resources/documentation/integrating/DeDemo.java" target="_new">Sample Java code</a></li><br />
+						<li><a href="/birt/test/resources/documentation/integrating/sample.rptdesign" target="_new">Report produced by the example</a></li><br />
+						<li><a href="/birt/test/resources/documentation/integrating/sample.html" target="_new">HTML output of the above report</a></li>
 					</ul>
 					</p>
+					<p>The first step is to create an instance of the design engine.</p>
+					<blockquote>
+					SessionHandle session = DesignEngine.newSession( null );
+					</blockquote>
 					
-					<h2 class="topic-section-header padding-top-small">BIRT Scripting</h2>
-					<p>BIRT uses Mozilla's Rhino engine to perform server side scripting. Scripting is used in BIRT expressions and at key events during the generation and presentation phases of report creation.
-					<ul class="eclipse-list">
-						<li><a href="scripting.php">Scripting Primer</a> explains scripting in more detail.</li>
-					</ul>
-					</p>
+					<p>Then, create a new report design.</p>
+					<blockquote>
+					ReportDesignHandle design = session.createDesign( );
+					</blockquote>
 					
-					<h2 class="topic-section-header padding-top-small">Extending BIRT</h2>
-					<p>Your application can extend BIRT for your specific needs:
+					<p>Next, get the "element factory" that creates new elements within your design:</p>
+					<blockquote>
+					ElementFactory factory = design.getElementFactory( );
+					</blockquote>
+					
+					<p>Next, we add a page master that determines how the report will appear when printed:</p>
+					<blockquote>
+					DesignElementHandle element = factory.newSimpleMasterPage( "Page Master" );<br />
+					design.getMasterPages( ).add( element );
+					</blockquote>
+					
+					<p>This design will contain a grid that contains an image and a label. Let's first create the grid and add it to the report's body slot.</p>
+					<blockquote>
+					GridHandle grid = factory.newGridItem( null, 2 /* cols */, 1 /* row */ );<br />
+					design.getBody( ).add( grid );<br />
+					grid.setWidth( "100%" );
+					</blockquote>
+					
+					<p>Next, create the image and add it to the first cell within the grid.</p>
+					<blockquote>
+					RowHandle row = (RowHandle) grid.getRows( ).get( 0 );<br />
+					ImageHandle image = factory.newImage( null );<br />
+					CellHandle cell = (CellHandle) row.getCells( ).get( 0 );<br />
+					cell.getContent( ).add( image );<br />
+					image.setURI( "http://www.eclipse.org/birt/resources/documentation/tutorial/multichip-4.jpg");
+					</blockquote>
+					
+					<p>Then, create a label and add it to the second cell.</p>
+					<blockquote>
+					LabelHandle label = factory.newLabel( null );<br />
+					cell = (CellHandle) row.getCells( ).get( 1 );<br />
+					cell.getContent( ).add( label );<br />
+					label.setText( "Hello, world!" );<br />
+					</blockquote>
+					
+					<p>Finally, save and close the report design.</p>
+					<blockquote>
+					design.saveAs( "sample.rptdesign" );<br />
+					design.close( );
+					</blockquote>
+					
+					<p>You can now open the design within BIRT and preview it.</p>
+					
+					<h2 class="topic-section-header padding-top-small">Additional Resources</h2>
+					<p>Several Examples, PPT files and Webinars are available on BIRT-Exchange:
 					<ul class="eclipse-list">
-						<li>Open Data Access (ODA) Extension API - BIRT provides a JDBC data source. Use the ODA API to create custom data sources drivers. Each driver has run-time behavior along with optional design-time UI.</li><br />
-						<li>Report Item Extension API - The BIRT model is extensible; you can add new report items. Use this API to include design-time, run-time or presentation-time behavior. A two part tutuorial is available: <a href="http://www.eclipse.org/articles/article.php?file=Article-BIRT-ExtensionTutorial1/index.html" target="_blank">Part 1</a> <a href="http://www.eclipse.org/articles/article.php?file=Article-BIRT-ExtensionTutorial2/index.html" target="_blank">Part 2</a></li>
+						<li><a href="http://www.birt-exchange.org/org/devshare/designing-birt-reports/978-webinar-archive-using-the-birt-design-engine-apis/">Design Engine API Webinar</a></li><br />
+						<li><a href="http://www.birt-exchange.org/org/devshare/deploying-birt-reports/1344-eclipsecon-2011-api-examples/">Design Engine API Examples</a></li><br />
+						<li><a href="http://www.birt-exchange.org/org/devshare/?topicid=0&filtercontent=de+api&contenttype=&timeperiod=0&results=10">Design Engine API Examples in BIRT-Exchange DevShare</a></li>
 					</ul>
 					</p>
+
 					
 				</div>
 			</div>
