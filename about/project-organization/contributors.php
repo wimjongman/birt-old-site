@@ -68,7 +68,7 @@ $PagePart 	= new PagePart();
 		                    		<li><a href="contributors.php">Contributors</a></li>
 		                    	</ul>
 		                    </li>
-		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
+		                    <li><a target="_blank" href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
 		                    <!--<li><a href="/birt/about/birt-and-actuate.php">BIRT and Actuate</a></li>-->		                    
 		                </ul>
 

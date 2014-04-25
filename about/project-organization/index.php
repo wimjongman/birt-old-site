@@ -68,7 +68,7 @@ $PagePart 	= new PagePart();
 		                    		<li><a href="contributors.php">Contributors</a></li>
 		                    	</ul>
 		                    </li>
-		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
+		                    <li><a target="_blank" href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
 		                    <!--<li><a href="/birt/about/birt-and-actuate.php">BIRT and Actuate</a></li>-->		                    
 		                </ul>
 
@@ -86,6 +86,13 @@ $PagePart 	= new PagePart();
 			        <h2 class="topic-section-header padding-top-small">Project Resources</h2>
 			        
 			        <h2 class="topic-section-header padding-top-small">Project Processes</h2>
+			        <p>The BIRT Project leverages and follows the processes used by the Eclipse Platform projects and others within the Eclipse Foundation. Below are links to help answer frequently asked questions in this area.
+			        <ul class="eclipse-list">
+			        	<li><a href="http://www.eclipse.org/projects/dev_process/development_process.php" target="_blank">Eclipse Development Process</a> -  Information on how projects work within the Eclipse ecosystem.</li><br />
+			        	<li><a href="http://www.eclipse.org/projects/dev_process/index.php" target="_blank">Eclipse Contributions FAQ</a> - Common questions around contributing to the Eclipse community.</li><br />
+			        	<li><a href="/birt/about/project-organization/contribute.php" target="_blank">How to Contribute to the BIRT Project</a> - Find out how to contribute development work to the BIRT project.</li><br />
+			        	<li><a href="/birt/about/project-organization/development-discussions.php" target="_blank">Development Discussions in the BIRT Project Community</a> - Learn how development discussions happen in the BIRT community.</li>
+			        </ul>
 			        
 			        <h2 class="topic-section-header padding-top-small">PMC Minutes</h2>
 			        
