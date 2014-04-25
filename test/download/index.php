@@ -5,7 +5,7 @@ if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") {
 }
 session_start();
 
-require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
+require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/common/config.php");
 $PagePart 	= new PagePart();
 
 ?>

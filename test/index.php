@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
+require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/common/config.php");
 $PagePart 	= new PagePart();
 
 ?>
@@ -52,7 +52,7 @@ $PagePart 	= new PagePart();
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> technology platform used to create <span class="eclipse-txt-bloodorange">data visualizations</span> and reports that can be embedded into rich client and <span class="eclipse-txt-lightgreen">web applications</span>.</div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="http://download.eclipse.org/birt/downloads" class="square-button button-color-yellow" style="padding:10 30px; margin-right:30px;">Download BIRT 4.3.2</a></td>
-							<td><a href="/birt/test/about/" class="square-button button-color-yellow" style="padding:10 30px;">Learn More</a></td></tr></tbody></table></div>
+							<td><a href="/birt/about/" class="square-button button-color-yellow" style="padding:10 30px;">Learn More</a></td></tr></tbody></table></div>
 						</div>
 					</div>
 				</div>

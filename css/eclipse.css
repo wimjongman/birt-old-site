@@ -1,0 +1,141 @@
+/* eclipse.org/birt/ specific css */
+
+
+.actu-eclipse-side-menu {
+  position: relative;
+  float: left;
+  width: 266px;
+}
+.actu-eclipse-container {
+  border-top:5px solid #42187e;
+  padding:20px 0;
+  background: #fff;
+}
+
+.actu-eclipse-container-inner {
+  margin:0 20px;
+}
+
+.actu-eclipse-nav {
+  list-style:none;
+}
+
+.actu-eclipse-nav a {
+  text-decoration:none;
+}
+
+.actu-eclipse-nav a:hover {
+  text-decoration:underline;
+}
+
+/* set the background color and the border top */
+.eclipse-main {
+  background-color:#fff;
+  border-top:5px solid #f1784b;
+  padding-bottom:20px;
+  margin-bottom:30px;
+}
+/* set the individual border colors */
+.eclipse-main.bord-blue {
+  border-top:5px solid #2997fa;
+}
+.eclipse-main.bord-yellow {
+  border-top:5px solid #f5bf2f;
+}
+
+.eclipse-main-container {
+  margin: 0 20px;
+}
+.eclipse-main p {
+  color: #969696;
+  line-height: 20px;
+  font-size: 14px;
+  margin:0 0 15px 0;
+}
+.eclipse-main a {
+  text-decoration:none;
+  font-size:14px;
+}
+.eclipse-main a:hover {
+  text-decoration:underline;
+}
+
+.eclipse-home-banner {
+  background-image:url('../img/small-grid.png');
+  min-height:355px;
+  background-repeat:no-repeat;
+  margin-top:20px;
+}
+
+/* birt Logo above menu */
+.actu-birt-logo {
+  margin: 0 0 20px 50px;
+}
+
+.eclipse-title-main {
+  color: #333;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 20px 0 12px 0;
+  font-weight: 100;
+}
+
+/* homepage banner */
+.eclipse-txt-lightgreen {
+  color:#aecc5c;
+}
+.eclipse-txt-purple {
+  color:#450582;
+}
+.eclipse-txt-bloodorange {
+  color:#f1784b;
+}
+
+/* Default Listing style */
+.eclipse-list {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #969696;
+}
+.eclipse-list li {
+  margin-left: 10px;
+}
+.eclispe-list-default {
+  list-style:none;
+}
+.eclispe-list-default li {
+  display:inline;
+  width:33%;
+  float:left;
+}
+
+/* case study listing */
+.eclipse-casestudy {
+  list-style:none;
+}
+.eclipse-casestudy li {
+  display:inline;
+  width:33%;
+  float:left;
+} 
+.eclipse-casestudy a {
+  font-size:12px;
+  float:left;
+}
+.eclipse-casestudy-icon {
+  width:40px;
+  float:left;
+}
+.eclipse-casestudy-text {
+  width:170px;
+  float:left;  
+}
+
+
+
+/*this needs to be after the topic-menu-right a class so it does not overwrite the font-size */
+.topic-menu-right a {
+  font-size:13px;
+}
+
+
