@@ -69,7 +69,7 @@ $PagePart 	= new PagePart();
 		                    	</ul>
 		                    </li>
 		                    <li><a href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></li>
-		                    <li><a href="/birt/test/about/birt-and-actuate.php">BIRT and Actuate</a></li>		                    
+		                    <!--<li><a href="/birt/test/about/birt-and-actuate.php">BIRT and Actuate</a></li>-->		                    
 		                </ul>
 
 			        </div>
