@@ -65,10 +65,10 @@ $PagePart 	= new PagePart();
 
 			        <a name="examples"></a>
 					<h2 class="topic-section-header padding-top-small">Examples</h2>
-					<p>Before you get started, take a look at some examples. There are a couple different places you can find examples:
+					<p>Before you get started, take a look at some examples.<!-- There are a couple different places you can find examples:-->
 					<ul class="eclipse-list">
 						<li>On the <a href="/birt/test/demos/" target="_blank">Demos</a> page.</li>
-						<li>Check out the <a href="http://developer.actuate.com/design-center/design-gallery/" target="_blank">Design Gallery</a> on the BIRT Developer Center.</li>
+						<!--<li>Check out the <a href="http://developer.actuate.com/design-center/design-gallery/" target="_blank">Design Gallery</a> on the BIRT Developer Center.</li>-->
 					</ul>
 					</p>
 					
