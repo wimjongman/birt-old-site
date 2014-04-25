@@ -82,8 +82,18 @@ $PagePart 	= new PagePart();
 			        <p>We encourage active participation in the BIRT project - read on and get involved through the <a href="http://developer.actuate.com/community/forum/">BIRT Developer Center Forums</a>, <a href="news://news.eclipse.org/eclipse.birt">BIRT newsgroup</a>, and the <a href="http://www.eclipse.org/projects/dev_process/development_process.php">Eclipse Development Process</a>.</p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Getting Help Using BIRT</h2>
+			        <p>For help using BIRT, see the <a href="/birt/documentation/">Documentation</a> section or the design and deployment guides on the the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a>.</p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Project Resources</h2>
+			        <p>The material here is for people who want know more about the BIRT project or who wish to contribute to BIRT.
+			        <ul class="eclipse-list">
+			        	<li><a href="description.php">Project Description and Scope</a> - Description of the project and it's scope.</li><br />
+			        	<li><a href="charter.php">Project Charter</a> - The Charter under which this project is run.</li><br />
+			        	<li><a href="principles.php">Project Principles</a> - The key principles on which this project is run.</li><br />
+			        	<li><a href="committee.php">Project Management Committee (PMC) and Project Leads</a> - Who is running the project?</li><br />
+			        	<li><a href="contributors.php">Project Contributors and Committers</a> - List of the project contributors and committers.</li>
+			        </ul>
+			        </p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Project Processes</h2>
 			        <p>The BIRT Project leverages and follows the processes used by the Eclipse Platform projects and others within the Eclipse Foundation. Below are links to help answer frequently asked questions in this area.
@@ -95,6 +105,7 @@ $PagePart 	= new PagePart();
 			        </ul>
 			        
 			        <h2 class="topic-section-header padding-top-small">PMC Minutes</h2>
+			        <p>The BIRT PMC meets weekly. All minutes are posted to the <a href="http://wiki.eclipse.org/BIRT_PMC_Minutes" target="_blank">BIRT Wiki</a>.</p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Projects</h2>
 			        <p>Projects within BIRT include the following:
