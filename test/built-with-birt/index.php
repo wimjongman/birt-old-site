@@ -62,7 +62,8 @@ $PagePart 	= new PagePart();
 					
 					<a name="adopters"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT Adopters</h2>
-					
+					<p>See the <a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">BIRT Adopters</a> list on actuate.com to learn how companies are embedding and using BIRT in their solutions or applications.
+										
 					<a name="products"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT-based Products</h2>
 					<p>There are many products that are built using BIRT. Some of those products are listed below:
@@ -77,6 +78,16 @@ $PagePart 	= new PagePart();
 
 					<a name="casestudies"></a>
 					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
+					<p>Here are a few case studies of BIRT users:
+					<ul class="eclipse-list">
+						<li><a href="http://www.birt-exchange.com/be/download/Perform-Reporting-House.pdf" target="_blank">Reporting House</a></li><br />
+						<li><a href="http://www.actuate.com/be/download/Recombo.pdf" target="_blank">Recombo</a></li><br />
+						<li><a href="http://www.actuate.com/download/casestudy/Maximus-case-study.pdf" target="_blank">Maximus</a></li><br />
+						<li><a href="http://www.actuate.com/be/download/Perform-RedHat.pdf" target="_blank">Red Hat</a></li><br />
+						<li><a href="http://www.actuate.com/be/download/Perform-mLogica.pdf" target="_blank">mLogica Inc.</a></li>
+					</ul>
+					</p>
+					<p>More case studies can be found in the <a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">BIRT Adopters List</a>.</p>
 					<p>If you have a BIRT-based product or are working with BIRT in your application, we want to hear from you about your products. Please visit the <a href="http://developer.actuate.com" target="_blank"BIRT Developer Center</a> for more information.</p>
 
 				</div>
