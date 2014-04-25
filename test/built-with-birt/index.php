@@ -88,7 +88,7 @@ $PagePart 	= new PagePart();
 					</ul>
 					</p>
 					<p>More case studies can be found in the <a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">BIRT Adopters List</a>.</p>
-					<p>If you have a BIRT-based product or are working with BIRT in your application, we want to hear from you about your products. Please visit the <a href="http://developer.actuate.com" target="_blank"BIRT Developer Center</a> for more information.</p>
+					<p>If you have a BIRT-based product or are working with BIRT in your application, we want to hear from you about your products. Please visit the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a> for more information.</p>
 
 				</div>
 			</div>
