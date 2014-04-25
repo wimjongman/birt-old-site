@@ -51,17 +51,14 @@ $PagePart 	= new PagePart();
 					
 					<div class="topic-menu topic-menu-right">
                 
-		                <div class="topic-menu-title">Page Contents</div>
+		                <div class="topic-menu-title">Section Contents</div>
 		                <ol>
-		                    <li><a href="#casestudies">Case Studies</a></li>
 		                    <li><a href="#adopters">BIRT Adopters</a></li>
 		                    <li><a href="#products">BIRT-based Products</a></li>
+		                    <li><a href="#casestudies">Case Studies</a></li>
 		                </ol>
 
 			        </div>
-					
-					<a name="casestudies"></a>
-					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
 					
 					<a name="adopters"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT Adopters</h2>
@@ -70,13 +67,17 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">BIRT-based Products</h2>
 					<p>There are many products that are built using BIRT. Some of those products are listed below:
 					<ul class="eclipse-list">
-						<li>BIRT Designer Professional (Actuate)</li>
-						<li>BIRT Viewer Toolkit (Actuate)</li>
-						<li>BIRT iHub F-Type (Actuate)</li>
-						<li>BIRT onDemand (Actuate)</li>
+						<li><a href="http://www.actuate.com/products/birt-designers/birt-designer-pro/" target="_blank">BIRT Designer Professional</a> (Actuate)</li>
+						<li><a href="http://developer.actuate.com/deployment-center/deployment-guides/birt-viewer-toolkit/" target="_blank">BIRT Viewer Toolkit</a> (Actuate)</li>
+						<li><a href="http://www.actuate.com/products/birt-ihub-visualization-platform/" target="_blank">BIRT iHub</a> (Actuate)</li>
+						<li><a href="http://www.actuate.com/products/birt-ihub-ondemand/" target="_blank">BIRT onDemand</a> (Actuate)</li>
 					</ul>
 					</p>
-					<p>If you have a BIRT-based product you'd like to include on this page, send an email to the <a href="mailto:webmaster@actuate.com?Subject=BIRT-based%20Product">Actuate webmaster</a>.</p>
+					<p>If you have a BIRT-based product you'd like to include on this page, send an email to the <a href="mailto:webmaster@actuate.com?Subject=BIRT-based%20Product">BIRT webmaster</a>.</p>
+
+					<a name="casestudies"></a>
+					<h2 class="topic-section-header padding-top-small">Case Studies</h2>
+					<p>If you have a BIRT-based product or are working with BIRT in your application, we want to hear from you about your products. Please visit the <a href="http://developer.actuate.com" target="_blank"BIRT Developer Center</a> for more information.</p>
 
 				</div>
 			</div>
