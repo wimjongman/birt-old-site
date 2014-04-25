@@ -76,8 +76,6 @@ $PagePart 	= new PagePart();
 					<a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">See a list of BIRT Adopters</a></p>
 					
 					<iframe width="560" height="315" src="//www.youtube.com/embed/_gvL58G41CA" frameborder="0" allowfullscreen></iframe>
-					
-					<a href="http://www.actuate.com/partners/birt-adopters/" target="_blank">See a list of BIRT Adopters</a>
 
 					<h2 class="topic-section-header padding-top-small">BIRT: The Technology Platform</h2>
 					<p>BIRT has two main components: a visual report designer for creating BIRT Designs, and a runtime component for generating those designs that can be deployed to any Java environment. The BIRT project also includes a charting engine that is both fully integrated into the BIRT designer and can be used standalone to integrate charts into an application.</p>
