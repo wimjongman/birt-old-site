@@ -82,7 +82,7 @@ $PagePart 	= new PagePart();
 			        <p>We encourage active participation in the BIRT project - read on and get involved through the <a href="http://developer.actuate.com/community/forum/">BIRT Developer Center Forums</a>, <a href="news://news.eclipse.org/eclipse.birt">BIRT newsgroup</a>, and the <a href="http://www.eclipse.org/projects/dev_process/development_process.php">Eclipse Development Process</a>.</p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Getting Help Using BIRT</h2>
-			        <p>For help using BIRT, see the <a href="/birt/documentation/">Documentation</a> section or the design and deployment guides on the the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a>.</p>
+			        <p>The rest of these pages provide information for people who want to know more about the BIRT project, how it runs and how to contribute. For help using BIRT, see the <a href="/birt/documentation/">Documentation</a> section or the design and deployment guides on the the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a>.</p>
 			        
 			        <h2 class="topic-section-header padding-top-small">Project Resources</h2>
 			        <p>The material here is for people who want know more about the BIRT project or who wish to contribute to BIRT.
