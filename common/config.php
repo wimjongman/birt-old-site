@@ -93,7 +93,10 @@ class PagePart {
 						<li><a href="'.$basePath.'/built-with-birt/">Built with BIRT</a></li>
 					</ul>
 					<hr>
-					<a href="http://www.actuate.com/" ><img src="'.$basePath.'/img/logo/actuate-logo.png" /></a>
+					<span style="font-size:8px;">Project Sponsors:</span>
+					<a href="http://developer.actuate.com/" ><img src="'.$basePath.'/img/logo/actuate-logo.png" /></a><br />
+					<a href="http://www.innoventsolutions.com/birt-overview.html" ><img src="http://www.innoventsolutions.com/pics/logo_innovent.gif" /></a><br />
+					<a href="http://www.ibm.com/" ><img src="'.$basePath.'/img/logo/companies/ibm-logo.png" /></a>
 				</div>
 			</div>
 		';
