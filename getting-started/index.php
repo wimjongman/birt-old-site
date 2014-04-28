@@ -53,30 +53,20 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Section Contents</div>
 		                <ul>
-		                    <li><a href="#examples">Examples</a></li>
 		                    <li><a href="#download">Download BIRT</a></li>
 		                    <li><a href="#install">Install</a></li>
 		                    <li><a href="#tutorial">Tutorial</a></li>
+		                    <li><a href="#examples">Examples</a></li>
 		                    <li><a href="#documentation">Documentation</a></li>
 		                    <li><a href="#morehelp">More Help</a></li>
 		                </ul>
 
 			        </div>
 
-			        <a name="examples"></a>
-					<h2 class="topic-section-header padding-top-small">Examples</h2>
-					<p>Before you get started, take a look at some examples.<!-- There are a couple different places you can find examples:-->
-					<ul class="eclipse-list">
-						<li>On the <a href="/birt/demos/" target="_blank">Demos</a> page.</li>
-						<!--<li>Check out the <a href="http://developer.actuate.com/design-center/design-gallery/" target="_blank">Design Gallery</a> on the BIRT Developer Center.</li>-->
-					</ul>
-					</p>
-					
-					<a name="download"></a>
+			        <a name="download"></a>
 					<h2 class="topic-section-header padding-top-small">Download</h2>
 					<p>BIRT has a design and runtime component. Both can be found in several different forms and versions, on the <a href="http://download.eclipse.org/birt/downloads" target="_blank">download</a> page.</p>
-					<p>If you're looking for the commercially supported BIRT product line, see the Actuate <a href="http://www.actuate.com/resources/product-downloads/" target="_blank">download page</a>.</p>
-					
+										
 					<a name="install"></a>
 					<h2 class="topic-section-header padding-top-small">Install</h2>
 					<p>Once you've downloaded your BIRT component, you need to install it. For instructions on how to install BIRT, take a look at the <a href="/birt/documentation/install.php" target="_blank">Install Guide</a> in the documentation.</p>
@@ -86,6 +76,15 @@ $PagePart 	= new PagePart();
 					<p>This brief tutorial walks you through building a simple report with BIRT. It introduces the major UI features, and many of the BIRT reporting elements. At the completion of this tutorial, you should be able to start building your own reports using your own database.</p>
 					<p>In this tutorial, you'll create a simple customer listing report, with the customers grouped by state and city. For each customer, you'll display a name and phone number.</p>
 					<p><a href="/birt/documentation/tutorial/" target="_blank">Get Started</a></p>
+					
+					<a name="examples"></a>
+					<h2 class="topic-section-header padding-top-small">Examples</h2>
+					<p>Now that you've learned the basics creating a BIRT design, check out some examples of what you can do with BIRT.<!-- There are a couple different places you can find examples:-->
+					<ul class="eclipse-list">
+						<li>On the <a href="/birt/demos/" target="_blank">Demos</a> page.</li>
+						<!--<li>Check out the <a href="http://developer.actuate.com/design-center/design-gallery/" target="_blank">Design Gallery</a> on the BIRT Developer Center.</li>-->
+					</ul>
+					</p>
 					
 					<a name="documentation"></a>
 					<h2 class="topic-section-header padding-top-small">Documentation</h2>

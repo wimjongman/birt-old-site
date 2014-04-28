@@ -64,7 +64,7 @@ $PagePart 	= new PagePart();
 
 			        <a name="newsgroup"></a>
 					<h2 class="topic-section-header padding-top-small">Newsgroup</h2>
-					<p>The BIRT newsgroup is for users of the project to ask questions, discuss ideas and so on. Join in and get involved!
+					<p>The BIRT newsgroup is for users of the project to ask questions, discuss ideas and so on. Join in and get involved! There is also a forum area to search and ask questions on the <a href="http://developer.actuate.com/community/forum/" target="_blank">BIRT Developer Center</a>.
 					<ul class="eclipse-list">
 						<li><a href="http://www.eclipse.org/newsgroups" target="_blank">Information and Signup</a> - Guidelines for using the newsgroups. Instructions for signing up.</li><br />
 						<li><a href="news://news.eclipse.org/eclipse.birt" target="_blank">news://news.eclipse.org/eclipse.birt</a> - The easiest way to access the newsgroup is using your favorite news reader.</li><br />
@@ -92,6 +92,7 @@ $PagePart 	= new PagePart();
 					<ul class="eclipse-list">
 						<li><a href="http://developer.actuate.com/" target="_blank">BIRT Developer Center (BDC)</a> is a developer site where BIRT users can find guides and documentation, share ideas, technical tips and code snippets, as well as download software, documentation and examples.</li><br />
 						<li><a href="http://developer.actuate.com/community/devshare" target="_blank">BDC DevShare</a> - Browse the repository of developer-contributed report designs, code samples, tutorials and articles.</li><br />
+						<li><a href="http://developer.actuate.com/community/forum/" target="_blank">BDC Forums</a> - Ask questions or search through past posts to find the answer(s) that you're looking for regarding BIRT.</li>
 						<li><a href="http://developer.actuate.com/design-center/creating-birt-designs/" target="_blank">BDC Design Guides</a> - Access guides and documentation for creating BIRT designs.</li><br />
 						<li><a href="http://developer.actuate.com/deployment-center/deployment-guides/" target="_blank">BDC Deployment Guides</a> - Access guides and documentation for deploying BIRT applications.</li><br />
 						<li><a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> is a blog covering all things related to BIRT with frequent contributions from Jason Weathersby and Scott Rosenbaum</li>
