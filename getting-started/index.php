@@ -79,7 +79,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="examples"></a>
 					<h2 class="topic-section-header padding-top-small">Examples</h2>
-					<p>Now that you've learned the basics creating a BIRT design, check out some examples of what you can do with BIRT.<!-- There are a couple different places you can find examples:-->
+					<p>Now that you've learned the basics of creating a BIRT design, check out some examples of what you can do with BIRT.<!-- There are a couple different places you can find examples:-->
 					<ul class="eclipse-list">
 						<li>On the <a href="/birt/demos/" target="_blank">Demos</a> page.</li>
 						<!--<li>Check out the <a href="http://developer.actuate.com/design-center/design-gallery/" target="_blank">Design Gallery</a> on the BIRT Developer Center.</li>-->
