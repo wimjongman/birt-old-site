@@ -61,7 +61,6 @@ $PagePart 	= new PagePart();
 			<div class="dev-main eclipse-main bord-yellow">
 				<div class="eclipse-main-container">	
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
-					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
@@ -73,7 +72,7 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<div class="clearfix"></div>
-					<p><br /><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Full Calendar</a></p>
+					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
 					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
@@ -90,7 +89,7 @@ $PagePart 	= new PagePart();
 					This month marked the 10th annual EclipseCon and I was able to attend and talk about BIRT with the community and show off some of the cool things we've been working on at Actuate. One of the main themes that I was able to contribute to was the Internet of Things. If you're not familiar with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/" target="_blank">Read More</a></p>
 					
 
-					<p><a href="http://developer.actuate.com/community/forum/index.php?/blogs/">See More Blogs</a></p>
+					<p>See More Blogs: <a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blogs/">BIRT Developer Center Community Blogs</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
 				</div>
 			</div>
