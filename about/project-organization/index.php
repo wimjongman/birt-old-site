@@ -53,7 +53,6 @@ $PagePart 	= new PagePart();
                 
 		                <div class="topic-menu-title">Section Contents</div>
 		                <ul>
-		                    <li><a href="/birt/about/index.php">What is BIRT?</a></li>
 		                    <li><a href="/birt/about/design.php">BIRT Design Overview</a></li>
 		                    <li><a href="/birt/about/architecture.php">Architecture Overview</a></li>
 		                    <li><a href="/birt/about/designer.php">Designer Overview</a></li>
