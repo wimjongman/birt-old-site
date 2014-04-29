@@ -89,7 +89,7 @@ $PagePart 	= new PagePart();
 					This month marked the 10th annual EclipseCon and I was able to attend and talk about BIRT with the community and show off some of the cool things we've been working on at Actuate. One of the main themes that I was able to contribute to was the Internet of Things. If you're not familiar with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/" target="_blank">Read More</a></p>
 					
 
-					<p>See More Blogs: <a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blogs/">BIRT Developer Center Community Blogs</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
+					<p>See More Blogs: <a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blogs/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
 				</div>
 			</div>
