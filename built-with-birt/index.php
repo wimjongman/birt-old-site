@@ -82,7 +82,6 @@ $PagePart 	= new PagePart();
 					<ul class="eclipse-list">
 						<li><a href="http://www.birt-exchange.com/be/download/Perform-Reporting-House.pdf" target="_blank">Reporting House</a></li><br />
 						<li><a href="http://www.actuate.com/be/download/Recombo.pdf" target="_blank">Recombo</a></li><br />
-						<li><a href="http://www.actuate.com/download/casestudy/Maximus-case-study.pdf" target="_blank">Maximus</a></li><br />
 						<li><a href="http://www.actuate.com/be/download/Perform-RedHat.pdf" target="_blank">Red Hat</a></li><br />
 						<li><a href="http://www.actuate.com/be/download/Perform-mLogica.pdf" target="_blank">mLogica Inc.</a></li>
 					</ul>
