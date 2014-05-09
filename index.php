@@ -82,7 +82,7 @@ $PagePart 	= new PagePart();
 					<p><a target="_blank" href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/">Become a BIRT Expert with the BIRT Developer Video Series</a><br />
 					Want to learn more about BIRT but feel like you don't have the time? Then you'll want to check out our series of YouTube videos that teach you more about Design, Deploying and Extending the functionality of your BIRT content. Actuate has a fantastic series of short videos that you can watch in between meetings or while you are at lunch. You'll be greeted by one of our BIRT Ex...<a href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/whats-new-in-ihub-3/">What’s New in BIRT iHub 3?</a><br />
+					<p><a target="_blank" href="http://blogs.actuate.com/whats-new-in-ihub-3/">What's New in BIRT iHub 3?</a><br />
 					In December, Actuate released the latest generation of the BIRT iHub (iHub3) for distribution. The completely updated iHub 3 simplifies the design and deployment of personalized analytics and insights via a single platform that integrates BIRT based, visually appealing, interactive application services, predictive analytics services, and customer content services. This release pr...<a href="http://blogs.actuate.com/whats-new-in-ihub-3/" target="_blank">Read More</a></p>
 					
 					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
