@@ -75,21 +75,20 @@ $PagePart 	= new PagePart();
 					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
+					<p><a target="_blank" href="http://blogs.actuate.com/ids-streamlines-and-secures-dod-reporting-with-birt/">IDS Streamlines and Secures DoD Reporting with BIRT</a><br />
+					Imagine a web-based reporting application that manages financial and project data for some of the biggest projects in the largest department of the United States government. An application accessing multiple data sources, used by thousands of people, and creating thousands of reports. That describes the Comprehensive Cost and Requirement System (CCaR) by Integrated Data Services...<a href="http://blogs.actuate.com/ids-streamlines-and-secures-dod-reporting-with-birt/" target="_blank">Read More</a>
+					</p>
+
+					<p><a target="_blank" href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/">Become a BIRT Expert with the BIRT Developer Video Series</a><br />
+					Want to learn more about BIRT but feel like you don't have the time? Then you'll want to check out our series of YouTube videos that teach you more about Design, Deploying and Extending the functionality of your BIRT content. Actuate has a fantastic series of short videos that you can watch in between meetings or while you are at lunch. You'll be greeted by one of our BIRT Ex...<a href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/" target="_blank">Read More</a></p>
+					
+					<p><a target="_blank" href="http://blogs.actuate.com/whats-new-in-ihub-3/">What’s New in BIRT iHub 3?</a><br />
+					In December, Actuate released the latest generation of the BIRT iHub (iHub3) for distribution. The completely updated iHub 3 simplifies the design and deployment of personalized analytics and insights via a single platform that integrates BIRT based, visually appealing, interactive application services, predictive analytics services, and customer content services. This release pr...<a href="http://blogs.actuate.com/whats-new-in-ihub-3/" target="_blank">Read More</a></p>
+					
 					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
 					BIRT and BIRT iHub are now certified with Cloudera 5!...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-531-creating-a-custom-oda-part-1/">Creating a Custom ODA (Part 1)</a><br />
-					In BIRT there are several ways we can connect to data. Some of these methods are out of the box such as MySQL while others require a little more work. This blog series aims to teach you how to bring in the power of scripted data sources and POJO's while adding an easy to use interface for the report designer. By the end of this series you should know how to...<a href="" target="_blank">Read More</a>
-					</p>
-
-					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-530-creating-data-driven-web-apps-using-birt-eclipsecon2014/">Creating Data Driven Web Apps Using BIRT - EclipseCon 2014</a><br />
-					This past week at EclipseCon 2014, I had a session about creating data driven web applications with BIRT. This session was meant to walk you through the entire process of design and deployment of a BIRT web application. I started with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-530-creating-data-driven-web-apps-using-birt-eclipsecon2014/" target="_blank">Read More</a></p>
-					
-					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/">Creating an IoT Dashboard with BIRT</a><br />
-					This month marked the 10th annual EclipseCon and I was able to attend and talk about BIRT with the community and show off some of the cool things we've been working on at Actuate. One of the main themes that I was able to contribute to was the Internet of Things. If you're not familiar with...<a href="http://developer.actuate.com/community/forum/index.php?/blog/45/entry-529-creating-an-iot-dashboard-with-birt/" target="_blank">Read More</a></p>
-					
-
-					<p>See More Blogs: <a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blogs/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
+					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
 				</div>
 			</div>
