@@ -17,7 +17,7 @@ $PagePart 	= new PagePart();
 		$metaAuthor		= "";
 		$metaDescription = "BIRT is an open source technology platform used to create data visualizations and reports that can be embedded into rich client and web applications.";
 		$ogTitle		= "Eclipse BIRT Project Home";
-		$ogImage		= "http://www.actuate.com/images/logo.png";
+		$ogImage		= "http://www.eclipse.org/birt/img/logo/Birt-logo.png";
 		$ogDescription  = "BIRT is an open source technology platform used to create data visualizations and reports that can be embedded into rich client and web applications.";
 		
 		//only use following if you know what you are doing - else just leave them as is.
@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower<br />Government Clients with<br />Secure and Enhanced<br />Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/182-birt-live-new-york/">BIRT Live! | New York</a><br />New York, NY<br />April 30<br />8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/185-birt-live-boston/">BIRT Live! | Boston</a><br />Boston, MA<br />May 1<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/188-birt-live-atlanta/">BIRT Live! | Atlanta</a><br />Atlanta, GA<br />May 14<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/189-birt-live-tysons-corner/">BIRT Live! | Tysons Corner</a><br />McLean, VA<br />May 15<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/190-birt-live-stuttgart-germany/">BIRT Live! | Stuttgart</a><br />Stuttgart, Germany<br />May 27<br />8:30-17:00 Uhr</li>
 						</ul>
 					</p>
 					
