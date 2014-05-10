@@ -13,12 +13,12 @@ $PagePart 	= new PagePart();
 	<?php 
 		/* Set Page Level Meta Details */
 		$metaTitle 		= "Demos";
-		$metaKeywords	= "Eclipse Keywords";
+		$metaKeywords	= "Eclipse,BIRT,Java,Java EE,Web,RCP,Data,Visualization,Reports,Reporting,Embed,Rich-Client,Dashboards";
 		$metaAuthor		= "";
-		$metaDescription = "Eclipse Super Description for SEO in da House";
-		$ogTitle		= "This is the OG Super Title";
-		$ogImage		= "http://www.actuate.com/images/logo.png";
-		$ogDescription  = "This is the ogDescription to be displayed in share options.";
+		$metaDescription = "BIRT is an open source technology platform used to create data visualizations and reports that can be embedded into rich client and web applications.";
+		$ogTitle		= "Eclipse BIRT Project Home";
+		$ogImage		= "http://www.eclipse.org/birt/img/logo/Birt-logo.png";
+		$ogDescription  = "BIRT is an open source technology platform used to create data visualizations and reports that can be embedded into rich client and web applications.";
 		
 		//only use following if you know what you are doing - else just leave them as is.
 		$robotsIndex 	= "index"; // ** *Only usable values are 'index', 'noindex'
