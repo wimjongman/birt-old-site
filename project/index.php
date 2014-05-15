@@ -1,6 +1,6 @@
 <?php
 
-Header("Location: /birt/about/project-organization/);	
+Header("Location: /birt/about/project-organization/");	
 
 /*
  * Created on Feb 26, 2005

@@ -1,6 +1,6 @@
 <?php
 
-Header("Location: /birt/);	
+Header("Location: /birt/");	
 
 /*
  * Created on Feb 27, 2005

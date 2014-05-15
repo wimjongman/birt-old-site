@@ -1,6 +1,6 @@
 <?php
 
-Header("Location: /birt/documentation/reference.php);	
+Header("Location: /birt/documentation/reference.php");	
 
 /*
  * Created on Feb 26, 2005
