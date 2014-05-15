@@ -11,6 +11,6 @@ Header("Location: /birt/");
  
 //require "include/viewer.inc";
 //viewer( $_GET['page'] );
-Header("Location: /birt/phoenix/contest")
+
 
 ?>

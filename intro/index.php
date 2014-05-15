@@ -1,4 +1,7 @@
 <?php
+
+Header("Location: /birt/about/");
+
 /*
  * Created on Feb 26, 2005
  *
