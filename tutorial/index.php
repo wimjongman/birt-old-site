@@ -8,6 +8,6 @@
  
 //require "include/viewer.inc";
 //viewer( $_GET['page'] );
-Header("Location: /birt/phoenix/tutorial")
+Header("Location: /birt/documentation/tutorial")
 
 ?>

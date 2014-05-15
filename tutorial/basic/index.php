@@ -10,5 +10,5 @@
 //$birtPath = "../../";
 //require $birtPath . "include/viewer.inc";
 //viewer( "tutorial/basic" );
-Header("Location: /birt/phoenix/tutorial")
+Header("Location: /birt/documentation/tutorial")
 ?>

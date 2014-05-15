@@ -1,5 +1,7 @@
 <?php
 
+
+
 $lst="";
 foreach (glob("*.pdf") as $filename) {
 	$lst = $lst . "<a href='$filename'>$filename</a><br>";

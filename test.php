@@ -1,3 +1,5 @@
+<?php Header("Location: /birt/);	 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 transitional//EN">
 <html>
 
