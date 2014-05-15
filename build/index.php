@@ -1,4 +1,7 @@
 <?php
+
+Header("Location: http://download.eclipse.org/birt/downloads/build.php");
+
 /*
  * Created on Feb 26, 2005
  *
