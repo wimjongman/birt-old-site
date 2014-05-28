@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/188-birt-live-atlanta/">BIRT Live! | Atlanta</a><br />Atlanta, GA<br />May 14<br />8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/189-birt-live-tysons-corner/">BIRT Live! | Tysons Corner</a><br />McLean, VA<br />May 15<br />8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/190-birt-live-stuttgart-germany/">BIRT Live! | Stuttgart</a><br />Stuttgart, Germany<br />May 27<br />8:30-17:00 Uhr</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/191-camp-it-conference/">CAMP IT Conf</a><br />Chicago, IL<br />Jun 5<br />9:00 AM - 5:00 PM CT</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/192-birt-live-paris/">BIRT Live! | Paris</a><br />Paris France<br />Jun 11<br />8:30 AM - 4:30 PM CET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/194-enterprise-apps-world/">Enterprise Apps World</a><br />London, UK<br />June 17-18</li>
 						</ul>
 					</p>
 					
