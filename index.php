@@ -72,7 +72,7 @@ $PagePart 	= new PagePart();
 					</p>
 					
 					<div class="clearfix"></div>
-					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
+					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar </a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
 					<p><a target="_blank" href="http://blogs.actuate.com/ids-streamlines-and-secures-dod-reporting-with-birt/">IDS Streamlines and Secures DoD Reporting with BIRT</a><br />
