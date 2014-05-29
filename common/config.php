@@ -91,7 +91,7 @@ class PagePart {
 					<hr>
 					<span style="font-size:10px;">Project Sponsors:</span><br /><br />
 					<a href="http://developer.actuate.com/" ><img src="'.$basePath.'/img/logo/actuate-logo.png" /></a><br /><br />
-					<a href="http://www.innoventsolutions.com/birt-overview.html" ><img style="width:125px;" src="http://www.innoventsolutions.com/pics/logo_innovent.gif" /></a><br /><br />
+					<a href="http://www.innoventsolutions.com/birt-overview.html" ><img style="width:125px;" src="'.$basePath.'/img/logo/companies/logo_innovent.gif" /></a><br /><br />
 					<a href="http://www.ibm.com/" ><img style="width:125px;" src="'.$basePath.'/img/logo/companies/ibm-logo.png" /></a>
 				</div>
 			</div>
