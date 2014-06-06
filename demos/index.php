@@ -74,7 +74,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="birtdemo"></a>
 					<h2 class="topic-section-header padding-top-small">BIRT Demo</h2>
-					<p><a href="http://demo.actuate.com/videos/EclipseDemo/EclipseDemo.html">BIRT Demo</a> - This demonstration is a Flash presentation of BIRT that showcases some of its powerful features including summary and line graphs, JavaScript for dynamic images, style usage, highlighting, grouping and detail drill down..</p>
+					<p><a href="http://demo.actuate.com/videos/EclipseDemo/EclipseDemo.swf">BIRT Demo</a> - This demonstration is a Flash presentation of BIRT that showcases some of its powerful features including summary and line graphs, JavaScript for dynamic images, style usage, highlighting, grouping and detail drill down..</p>
 					
 					<a name="examples"></a>
 					<h2 class="topic-section-header padding-top-small">Examples</h2>
