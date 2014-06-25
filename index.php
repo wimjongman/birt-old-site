@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/198-easy-embedded-dashboards-and-data-visualizations/">Easy Embedded Dashboards and Data Visualizations</a><br />San Francisco, CA<br />June 6<br /> 8:30 AM - 11:00 AM PT</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/192-birt-live-paris/">BIRT Live! | Paris</a><br />Paris France<br />Jun 11<br />8:30 AM - 4:30 PM CET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/194-enterprise-apps-world/">Enterprise Apps World</a><br />London, UK<br />Jun 17-18</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/207-new-free-birt-deployment-option-release-event/">New, Free BIRT Deployment Option Release Event</a><br />San Jose, CA<br />July 10<br />5:30 PM - 8:30 PM PT</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/201-birt-live-philadelphia/">BIRT Live! | Philadelphia</a><br />Philadelphia, PA<br />July 16<br /> 8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/202-birt-live-princeton/">BIRT Live! | Princeton</a><br /Plainsboro, NJ<br />July 17<br />8:30 AM - 4:30 PM ET</li>
 						</ul>
 					</p>
 					
