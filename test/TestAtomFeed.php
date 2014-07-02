@@ -37,7 +37,6 @@ $PagePart 	= new PagePart();
 
 <p>
 <?php
-	require_once("atomlib.php");
 	$url = "http://blogs.actuate.com/feed/atom/";
 	echo Atom_Display($title, 5);
 ?>
