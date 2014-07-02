@@ -14,7 +14,7 @@
 <br>
 <p>
 <?php
-	require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/common/config.php");
+	require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/atomlib.php");
 	$url = "http://www.xul.fr/atom.xml";
 	echo Atom_Display($url, 25);
 ?>
