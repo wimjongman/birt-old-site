@@ -126,7 +126,7 @@ function gfj_parse_feed(src) {
 
 <?php
 
-	echo file_get_contents($_GET['url']);
+	echo get_feed_json('http://blogs.actuate.com/feed/atom/');
 
 ?>
 
