@@ -28,7 +28,7 @@ $PagePart 	= new PagePart();
 	 	# Generate Meta Info
 		echo $PagePart->getMetaInfo($metaTitle, $metaKeywords, $metaAuthor, $metaDescription, $ogTitle, $ogImage, $ogDescription, $robotsIndex, $robotsFollow, $canonicalTag);
 	 ?>
-	 
+	 <script type="text/javascript" src="jquery-1.5.1.min.js"></script>
 <script type="text/javascript">function get_feed_json(url) {
 
 	if (window.XMLHttpRequest)
