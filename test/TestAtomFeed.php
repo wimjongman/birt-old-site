@@ -124,11 +124,39 @@ function gfj_parse_feed(src) {
 
 <?php echo $PagePart->getAfterBody(); ?>
 
-<?php
+<script>
+var anfeed=0, ai;
+var  afeed, aitems;
+$().ready(function() { 
+	
 
-	echo get_feed_json('http://blogs.actuate.com/feed/atom/').toString();
+	 afeed = jQuery.parseJSON(get_feed_json("http://www.tomshardware.com/feeds/atom/tom-s-hardware-us,18-2.xml"));
+	 aitems = afeed.feed.entry; 
 
-?>
+	display_feed(); 
+	setTimeout( function() { display_atom_feed(); }, 5000);
+})
+
+
+function display_atom_feed() {
+		
+		ai=anfeed;
+		anfeed++; if (anfeed == aitems.length) anfeed=0;
+				
+		$("#amain").fadeOut(1000, function() {
+			$("#amain").html("<div><b><a href='"+aitems[ai].link.href+"' target='_black'><h3>"+aitems[ai].title+"<h3></a></b></div>");
+			var afDate = new Date(aitems[ai].updated);
+			$("#amain").append("<h4><a href='"+afeed.feed.link.href+"' target='_black'>"+afeed.feed.title+"</a>&nbsp;&nbsp;&nbsp;&nbsp;"+afDate+"</h4>");
+			$("#amain").append("<div>"+aitems[i].summary+"</div>");
+			$("#amain").fadeIn("fast");
+		});		
+
+		var t=setTimeout("display_atom_feed()",10000);
+		
+};
+</script>
+
+<div id="amain" > </div>
 
 <div style="background-color:#f4f4f4;">
 	<div class="content-area">
