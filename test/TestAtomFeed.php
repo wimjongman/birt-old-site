@@ -2,7 +2,7 @@
   require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/atomlib.php");
 
   # where is the feed located?
-  $url = "http://www.example.net/atom.xml";
+  $url = "http://www.xul.fr/atom.xml";
 
   # create object to hold data and display output
   $atom_parser = new myAtomParser($url);
