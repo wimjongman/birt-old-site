@@ -122,7 +122,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="integrating"></a>
 					<h3>Integrating BIRT</h3>
-					<p>This section of Examples focuses on integrating BIRT. You can find several examples demonstrating the design engine API and the report engine API in the <a href="https://wiki.eclipse.org/Integration_Examples_(BIRT)" target="_blank">wiki</a>. These examples focus on using the BIRT APIs, to embedd or integrated BIRT. </p>
+					<p>This section of Examples focuses on integrating BIRT. You can find several examples demonstrating the design engine API and the report engine API in the <a href="https://wiki.eclipse.org/Integration_Examples_(BIRT)" target="_blank">wiki</a>. These examples focus on using the BIRT APIs to embed or integrate BIRT. </p>
 					
 					<a name="extending"></a>
 					<h3>Extending BIRT</h3>
