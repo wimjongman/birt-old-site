@@ -1,206 +1,216 @@
-<?php
-/*
-	Atom Extractor and Displayer
-	(c) 2007  Scriptol.com - Licence Mozilla 1.1.
-	atomlib.php
-	
-	Requirements:
-	- PHP 5.
-	- A RSS feed.
-	
-	Using the library:
-	Insert this code into the page that displays the RSS feed:
-	
-	<?php
-	require_once("atomlib.php");
-	echo Atom_Display("http://www.xul.fr/atom.xml", 25);
-	?>
-	
-*/
+<?PHP
+  // Original PHP code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
 
-$Atom_Content = array();
+  class myAtomParser
+  {
+    // keeps track of current and preceding elements
+    var $tags = array();
 
-function Atom_Tags($item, $type)
-{
-		$y = array();
-		$tnl = $item->getElementsByTagName("title");
-		$tnl = $tnl->item(0);
-		$title = $tnl->firstChild->textContent;
+    // array containing all feed data
+    var $output = array();
 
-		$tnl = $item->getElementsByTagName("link");
-		$tnl = $tnl->item(0);		
-		$link = $tnl->getAttribute("href");
+    // return value for display functions
+    var $retval = "";
 
-		$tnl = $item->getElementsByTagName("summary");
-		$tnl = $tnl->item(0);
-		$description = $tnl->firstChild->textContent;
+    var $errorlevel = 0;
 
-		$y["title"] = $title;
-		$y["link"] = $link;
-		$y["description"] = $description;
-		$y["type"] = $type;
-		
-		return $y;
-}
+    var $encoding = array();
 
+    // constructor for new object
+    function myAtomParser($file)
+    {
+      $errorlevel = error_reporting();
+      error_reporting($errorlevel & ~E_NOTICE);
 
-function Atom_Feed($doc)
-{
-	global $Atom_Content;
+      // instantiate xml-parser and assign event handlers
+      $xml_parser = xml_parser_create("");
+      xml_set_object($xml_parser, $this);
+      xml_set_element_handler($xml_parser, "startElement", "endElement");
+      xml_set_character_data_handler($xml_parser, "parseData");
 
-	$entries = $doc->getElementsByTagName("entry");
-	
-	// Processing feed
-	
-	$y = array();
-	$tnl = $doc->getElementsByTagName("title");
-	$tnl = $tnl->item(0);
-	$title = $tnl->firstChild->textContent;
+      // open file for reading and send data to xml-parser
+      $fp = @fopen($file, "r") or die("<b>myAtomParser:</b> Could not open $file for input");
+      while($data = fread($fp, 4096)) {
+        xml_parse($xml_parser, $data, feof($fp)) or die(
+          sprintf("myAtomParser: Error <b>%s</b> at line <b>%d</b><br>",
+          xml_error_string(xml_get_error_code($xml_parser)),
+          xml_get_current_line_number($xml_parser))
+        );
+      }
+      fclose($fp);
 
-	$tnl = $doc->getElementsByTagName("link");
-	$tnl = $tnl->item(0);	
-	$link = $tnl->getAttribute("href");
+      // dismiss xml parser
+      xml_parser_free($xml_parser);
 
-	$tnl = $doc->getElementsByTagName("subtitle");
-	$tnl = $tnl->item(0);
-	$description = $tnl->firstChild->textContent;
+      error_reporting($errorlevel);
+    }
 
-	$y["title"] = $title;
-	$y["link"] = $link;
-	$y["description"] = $description;
-	$y["type"] = 0;
+    function startElement($parser, $tagname, $attrs=array())
+    {
+      if($this->encoding) {
+        // content is encoded - so keep elements intact
+        $tmpdata = "<$tagname";
+        if($attrs) foreach($attrs as $key => $val) $tmpdata .= " $key=\"$val\"";
+        $tmpdata .= ">";
+        $this->parseData($parser, $tmpdata);
+      } else {
+        if($attrs['HREF'] && $attrs['REL'] && $attrs['REL'] == 'alternate') {
+          $this->startElement($parser, 'LINK', array());
+          $this->parseData($parser, $attrs['HREF']);
+          $this->endElement($parser, 'LINK');
+        }
+        if($attrs['TYPE']) $this->encoding[$tagname] = $attrs['TYPE'];
 
-	array_push($Atom_Content, $y);
-	
-	// Processing articles
-	
-	foreach($entries as $entry)
-	{
-		$y = Atom_Tags($entry, 1);		// get description of article, type 1
-		array_push($Atom_Content, $y);
-	}
-}
+        // check if this element can contain others - list may be edited
+        if(preg_match("/^(FEED|ENTRY)$/", $tagname)) {
+          if($this->tags) {
+            $depth = count($this->tags);
+            list($parent, $num) = each($tmp = end($this->tags));
+            if($parent) $this->tags[$depth-1][$parent][$tagname]++;
+          }
+          array_push($this->tags, array($tagname => array()));
+        } else {
+          // add tag to tags array
+          array_push($this->tags, $tagname);
+        }
+      }
+    }
 
+    function endElement($parser, $tagname)
+    {
+      // remove tag from tags array
+      if($this->encoding) {
+        if(isset($this->encoding[$tagname])) {
+          unset($this->encoding[$tagname]);
+          array_pop($this->tags);
+        } else {
+          if(!preg_match("/(BR|IMG)/", $tagname)) $this->parseData($parser, "</$tagname>");
+        }
+      } else {
+        array_pop($this->tags);
+      }
+    }
 
-function Atom_Retrieve($url)
-{
-	global $Atom_Content;
+    function parseData($parser, $data)
+    {
+      // return if data contains no text
+      if(!trim($data)) return;
 
-	$doc  = new DOMDocument();
-	$doc->load($url);
+      $evalcode = "\$this->output";
+      foreach($this->tags as $tag) {
+        if(is_array($tag)) {
+          list($tagname, $indexes) = each($tag);
+          $evalcode .= "[\"$tagname\"]";
+          if(${$tagname}) $evalcode .= "[" . (${$tagname} - 1) . "]";
+          if($indexes) extract($indexes);
+        } else {
+          if(preg_match("/^([A-Z]+):([A-Z]+)$/", $tag, $matches)) {
+            $evalcode .= "[\"$matches[1]\"][\"$matches[2]\"]";
+          } else {
+            $evalcode .= "[\"$tag\"]";
+          }
+        }
+      }
 
-	$Atom_Content = array();
-	
-	Atom_Feed($doc);
-	
-}
+      if(isset($this->encoding['CONTENT']) && $this->encoding['CONTENT'] == "text/plain") {
+        $data = "<pre>$data</pre>";
+      }
 
+      eval("$evalcode .= '" . addslashes($data) . "';");
+    }
 
-function Atom_RetrieveLinks($url)
-{
-	global $Atom_Content;
+    // display a single feed as HTML
+    function display_feed($data, $limit)
+    {
+      extract($data);
+      if($TITLE) {
+        // display feed information
+        $this->retval .= "<h1>";
+        if($LINK) $this->retval .= "<a href=\"$LINK\" target=\"_blank\">";
+        $this->retval .= stripslashes($TITLE);
+        if($LINK) $this->retval .= "</a>";
+        $this->retval .= "</h1>\n";
+        if($TAGLINE) $this->retval .= "<P>" . stripslashes($TAGLINE) . "</P>\n\n";
+        $this->retval .= "<div class=\"divider\"><!-- --></div>\n\n";
+      }
+      if($ENTRY) {
+        // display feed entry(s)
+        foreach($ENTRY as $item) {
+          $this->display_entry($item, "FEED");
+          if(is_int($limit) && --$limit <= 0) break;
+        }
+      }
+    }
 
-	$doc  = new DOMDocument();
-	$doc->load($url);
+    // display a single entry as HTML
+    function display_entry($data, $parent)
+    {
+      extract($data);
+      if(!$TITLE) return;
 
-	$entries = $doc->getElementsByTagName("entry");
-	
-	$Atom_Content = array();
-	
-	foreach($entries as $entry)
-	{
-		$y = Atom_Tags($entry, 1);	// get description of article, type 1
-		array_push($Atom_Content, $y);
-	}
+      $this->retval .=  "<p><b>";
+      if($LINK) $this->retval .=  "<a href=\"$LINK\" target=\"_blank\">";
+      $this->retval .= stripslashes($TITLE);
+      if($LINK) $this->retval .= "</a>";
+      $this->retval .=  "</b>";
+      if($ISSUED) $this->retval .= " <small>($ISSUED)</small>";
+      $this->retval .=  "</p>\n";
 
-}
+      if($AUTHOR) {
+        $this->retval .=  "<P><b>Author:</b> " . stripslashes($AUTHOR['NAME']) . "</P>\n\n";
+      }
+      if($CONTENT) {
+        $this->retval .=  "<P>" . stripslashes($CONTENT) . "</P>\n\n";
+      } elseif($SUMMARY) {
+        $this->retval .=  "<P>" . stripslashes($SUMMARY) . "</P>\n\n";
+      }
+    }
 
+    function fixEncoding(&$input, $key, $output_encoding)
+    {
+      if(!function_exists('mb_detect_encoding')) return $input;
 
-function Atom_Links($url, $size = 15, $site = 0)
-{
-	global $Atom_Content;
+      $encoding = mb_detect_encoding($input);
+      switch($encoding)
+      {
+        case 'ASCII':
+        case $output_encoding:
+          break;
+        case '':
+          $input = mb_convert_encoding($input, $output_encoding);
+          break;
+        default:
+          $input = mb_convert_encoding($input, $output_encoding, $encoding);
+      }
+    }
 
-	$page = "";
-	$site = (intval($site) == 0) ? 1 : 0;
+    // display entire feed as HTML
+    function getOutput($limit=false, $output_encoding='UTF-8')
+    {
+      $this->retval = "";
+      $start_tag = key($this->output);
 
-	Atom_RetrieveLinks($url);
-	if($size > 0)
-		$recents = array_slice($Atom_Content, $site, $size);
+      switch($start_tag)
+      {
+        case "FEED":
+          foreach($this->output as $feed) $this->display_feed($feed, $limit);
+          break;
+        default:
+          die("Error: unrecognized start tag '$start_tag' in getOutput()");
+      }
 
-	foreach($recents as $article)
-	{
-		$type = $article["type"];
-		if($type == 0) continue;
-		$title = $article["title"];
-		$link = $article["link"];
-		$page .= "<li><a href=\"$link\">$title</a></li>\n";			
-	}
+      if($this->retval && is_array($this->retval)) {
+        array_walk_recursive($this->retval, 'myAtomParser::fixEncoding', $output_encoding);
+      }
+      return $this->retval;
+    }
 
-	$page .="</ul>\n";
-
-	return $page;
-	
-}
-
-
-
-function Atom_Display($url, $size = 15, $site = 0)
-{
-	global $Atom_Content;
-
-	$opened = false;
-	$page = "";
-	$site = (intval($site) == 0) ? 1 : 0;
-
-	Atom_Retrieve($url);
-	if($size > 0)
-		$recents = array_slice($Atom_Content, $site, $size);
-
-	foreach($recents as $article)
-	{
-		$type = $article["type"];
-		if($type == 0)
-		{
-			if($opened == true)
-			{
-				$page .="</ul>\n";
-				$opened = false;
-			}
-			$page .="<b>";
-		}
-		else
-		{
-			if($opened == false) 
-			{
-				$page .= "<ul>\n";
-				$opened = true;
-			}
-		}
-		$title = $article["title"];
-		$link = $article["link"];
-		$description = $article["description"];
-		$page .= "<li><a href=\"$link\">$title</a>";
-		if($description != false)
-		{
-			$page .= "<br>$description";
-		}
-		$page .= "</li>\n";			
-		
-		if($type==0)
-		{
-			$page .="</b><br />";
-		}
-
-	}
-
-	if($opened == true)
-	{	
-		$page .="</ul>\n";
-	}
-
-	return $page."\n";
-	
-}
-
-
+    // return raw data as array
+    function getRawOutput($output_encoding='UTF-8')
+    {
+      array_walk_recursive($this->output, 'myAtomParser::fixEncoding', $output_encoding);
+      return $this->output;
+    }
+  }
 ?>
