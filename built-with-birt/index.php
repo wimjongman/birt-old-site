@@ -69,7 +69,6 @@ $PagePart 	= new PagePart();
 					<p>There are many products that are built using BIRT. Some of those products are listed below:
 					<ul class="eclipse-list">
 						<li><a href="http://www.actuate.com/products/birt-designers/birt-designer-pro/" target="_blank">BIRT Designer Professional</a> (Actuate)</li>
-						<li><a href="http://developer.actuate.com/deployment-center/deployment-guides/birt-viewer-toolkit/" target="_blank">BIRT Viewer Toolkit</a> (Actuate)</li>
 						<li><a href="http://www.actuate.com/products/birt-ihub-visualization-platform/" target="_blank">BIRT iHub</a> (Actuate)</li>
 						<li><a href="http://www.actuate.com/products/birt-ihub-ondemand/" target="_blank">BIRT onDemand</a> (Actuate)</li>
 					</ul>
