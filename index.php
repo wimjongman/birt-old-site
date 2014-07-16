@@ -66,7 +66,7 @@ $PagePart 	= new PagePart();
 					<p>
 						<ul class="eclispe-list-default">
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/201-birt-live-philadelphia/">BIRT Live! | Philadelphia</a><br />Philadelphia, PA<br />July 16<br /> 8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/202-birt-live-princeton/">BIRT Live! | Princeton</a><br /Plainsboro, NJ<br />July 17<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/202-birt-live-princeton/">BIRT Live! | Princeton</a><br />Plainsboro, NJ<br />July 17<br />8:30 AM - 4:30 PM ET</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/215-actuate-healthcare-breakfast-series-st-louis/">Healthcare Breakfast Series | St. Louis</a><br />St. Louis, MO<br />July 18<br />8:30 AM - 11:00 AM CT</li>
 						</ul>
 					</p>
