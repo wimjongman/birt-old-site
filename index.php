@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/207-new-free-birt-deployment-option-release-event/">New, Free BIRT Deployment Option Release Event</a><br />San Jose, CA<br />July 10<br />5:30 PM - 8:30 PM PT</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/201-birt-live-philadelphia/">BIRT Live! | Philadelphia</a><br />Philadelphia, PA<br />July 16<br /> 8:30 AM - 4:30 PM ET</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/202-birt-live-princeton/">BIRT Live! | Princeton</a><br /Plainsboro, NJ<br />July 17<br />8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/215-actuate-healthcare-breakfast-series-st-louis/">Healthcare Breakfast Series | St. Louis</a><br />St. Louis, MO<br />July 18<br />8:30 AM - 11:00 AM CT</li>
 						</ul>
 					</p>
 					
@@ -75,18 +75,18 @@ $PagePart 	= new PagePart();
 					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
-					<p><a target="_blank" href="http://blogs.actuate.com/ids-streamlines-and-secures-dod-reporting-with-birt/">IDS Streamlines and Secures DoD Reporting with BIRT</a><br />
-					Imagine a web-based reporting application that manages financial and project data for some of the biggest projects in the largest department of the United States government. An application accessing multiple data sources, used by thousands of people, and creating thousands of reports. That describes the Comprehensive Cost and Requirement System (CCaR) by Integrated Data Services...<a href="http://blogs.actuate.com/ids-streamlines-and-secures-dod-reporting-with-birt/" target="_blank">Read More</a>
+					<p><a target="_blank" href="http://blogs.actuate.com/actuate-launches-birt-ihub-f-type-the-evolution-of-birt-is-now/">Actuate Launches BIRT iHub F-Type: The Evolution of BIRT is Now</a><br />
+					Every once in a while you get lucky enough to see the evolution of a product. Consider yourselves privileged to download a FREE way to make your data visualizations and reporting sizzle. This morning, Actuate, The BIRT Company™ took the wraps off of BIRT iHub F-Type. This is a FREE report server for open source Eclipse BIRT developers and other Java developers who are interest...<a href="http://blogs.actuate.com/actuate-launches-birt-ihub-f-type-the-evolution-of-birt-is-now/" target="_blank">Read More</a>
 					</p>
 
-					<p><a target="_blank" href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/">Become a BIRT Expert with the BIRT Developer Video Series</a><br />
-					Want to learn more about BIRT but feel like you don't have the time? Then you'll want to check out our series of YouTube videos that teach you more about Design, Deploying and Extending the functionality of your BIRT content. Actuate has a fantastic series of short videos that you can watch in between meetings or while you are at lunch. You'll be greeted by one of our BIRT Ex...<a href="http://blogs.actuate.com/become-a-birt-expert-with-the-birt-developer-video-series/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/changing-the-series-type-of-a-specific-chart-series/">Changing the Series Type of a Specific Chart Series</a><br />
+					"Can I have two different series types in a single chart in BIRT?" Questions seem to come up on this subject fairly often. The answer: Yes, you can for certain chart types. In the simpler scenario where you define each series individually with the chart builder, it's very straightforward in either open source BIRT or BIRT Designer Pro. Say you have a simple 2-series chart that looks l...<a href="http://blogs.actuate.com/changing-the-series-type-of-a-specific-chart-series/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/whats-new-in-ihub-3/">What's New in BIRT iHub 3?</a><br />
-					In December, Actuate released the latest generation of the BIRT iHub (iHub3) for distribution. The completely updated iHub 3 simplifies the design and deployment of personalized analytics and insights via a single platform that integrates BIRT based, visually appealing, interactive application services, predictive analytics services, and customer content services. This release pr...<a href="http://blogs.actuate.com/whats-new-in-ihub-3/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/using-google-maps-in-a-text-item-and-other-posts-from-this-week/">Using Google Maps in a Text Item, and Other Posts From This Week</a><br />
+					This week in the BIRT Forums, someone asked about using Google Maps in a BIRT report. While there is a plugin for this already, in some cases you might want to use a text item instead. In this post I'll show you some code I've used to display a Google Map in a report. As you would expect, you'll need to start with an empty text item on your report. Make sure to change it from “Auto...<a href="http://blogs.actuate.com/using-google-maps-in-a-text-item-and-other-posts-from-this-week/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
-					BIRT and BIRT iHub are now certified with Cloudera 5!...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/3-questions-eclipse-foundation-director-mike-milinkovich-discusses-the-next-big-app/">3 Questions: Eclipse Foundation Director Mike Milinkovich Discusses ‘The Next Big App’</a><br />
+					If anyone has seen the evolution of software and what it takes to build the next big app, it's Mike Milinkovich (@mmilinkov). As executive director of the Eclipse Foundation, Mike oversees an organization that boasts 190 participating companies with 177 active open source projects, including your favorite: the top-level BIRT Project. He has a unique industry perspective on build...<a href="http://blogs.actuate.com/3-questions-eclipse-foundation-director-mike-milinkovich-discusses-the-next-big-app/" target="_blank">Read More</a></p>
 					
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
