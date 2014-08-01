@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/212-chicago-coders-conference/">Chicago Coders Conference</a><br />Chicago, IL<br />August 1<br /> 8:30 AM - 6:00 PM CT</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/209-gartner-catalyst-conference/">Gartner Catalyst Conference</a><br />San Diego, CA<br />August 11-14</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/221-marketing-analytics-for-todays-marketers/">Marketing Analytics for Today's Marketers</a><br />Webcast<br />August 19</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/213-birt-live-columbus/">BIRT Live! | Columbus</a><br />Dublin, OH<br />August 26<br /> 8:30 AM - 4:30 PM ET</li>
 						</ul>
 					</p>
 					
