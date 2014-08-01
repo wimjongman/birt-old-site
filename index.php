@@ -79,7 +79,7 @@ $PagePart 	= new PagePart();
 					Last week, Actuate released a new, free BIRT server called the BIRT iHub F-Type. It incorporates all the functionality of BIRT iHub and is limited only by the capacity of output it can deliver on a daily basis. It is ideal for departmental and smaller scale applications. When BIRT F-Type reaches its maximum output capacity, additional capacity can be purchased on a subscription based mod...<a href="http://blogs.actuate.com/introducing-birt-ihub-f-type-running-the-vmware-image/" target="_blank">Read More</a>
 					</p>
 
-					<p><a target="_blank" href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/">Employment Opportunity: Project Lead – Eclipse BIRT</a><br />
+					<p><a target="_blank" href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/">Employment Opportunity: Project Lead - Eclipse BIRT</a><br />
 					How would you like to have a leadership role in the development of an open source project that has over 3.5 million developers using it in their applications worldwide? If you would and you live in or would relocate to the Bay Area, you're in luck. Actuate, the founders of the Eclipse BIRT open source project, are looking for an architect and hands-on developer to lead the open sourc...<a href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/" target="_blank">Read More</a></p>
 					
 					<p><a target="_blank" href="http://blogs.actuate.com/how-to-charge-credit-cards-from-a-birt-design-and-other-posts-from-this-week/">How to Charge Credit Cards from a BIRT Design, and Other Posts From This Week</a><br />
