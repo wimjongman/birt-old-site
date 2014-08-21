@@ -70,7 +70,7 @@ $PagePart 	= new PagePart();
 			        <h3>BIRT: The Project</h3>
 					<p>BIRT is an open source software project that provides the BIRT technology platform to create data visualizations and reports that can be embedded into rich client and web applications, especially those based on Java and Java EE. BIRT is a top-level software project within the Eclipse Foundation, an independent not-for-profit consortium of software industry vendors and an open source community.</p>
 					<p>The project is sponsored by Actuate along with contributions from IBM, and Innovent Solutions. BIRT is supported by an active community of users here at Eclipse.org and at the <a href="http://developer.actuate.com" target="_blank">BIRT Developer Center</a>. It is licensed under the Eclipse Public License (EPL).</p>
-					<p><a href="project-organization.php">Project Organization</a> | <a target="_blank" href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></p>
+					<p><a href="project-organization/">Project Organization</a> | <a target="_blank" href="https://wiki.eclipse.org/BIRT_Project_Plan">Project Development Plan</a></p>
 					
 					<h3>BIRT: The Groundswell</h3>
 					<p>Today, BIRT technology platform is one of the most widely adopted data visualization and reporting technologies with over 12 million downloads and over 2.5M developers across 157 countries. BIRT also has a large, active and growing developer community representing all types of organizations. Major technology companies such as IBM, Cisco, S1 and ABS Nautical Systems have incorporated BIRT into their product lines.<br /><br />

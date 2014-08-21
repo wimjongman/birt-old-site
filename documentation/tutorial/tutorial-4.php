@@ -82,7 +82,6 @@ $PagePart 	= new PagePart();
 
 					<h2 class="topic-section-header padding-top-small">About Data Sources and Data Sets</h2>
 					<p>BIRT reports use a data source element to connect to a database or other data provider. BIRT uses a data set element to retrieve data from the data provider. Think of the data source as a connection, and the data set as a query.</p>
-					<p><a href="install.php">Learn More</a>	</p>
 					
 					<h2 class="topic-section-header padding-top-small">Build a Data Source</h2>
 					<p>Let's build our data source:

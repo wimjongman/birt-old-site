@@ -85,15 +85,15 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Report Object Model Specification Suite</h2>
 					<p>The Report Object Model (ROM) is the report design format that the ERD creates and the ERE executes. The following suite of documents provides a full description of the model. Note: these are the original design specs, and are now somewhat out of date with respect to the implementation. See the above "RomDocs" for the most recent details.
 					<ul class="eclipse-list">
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Overview_SPEC.pdf" target="_blank">Overview</a> - Overall introduction to the ROM (read this first.)</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Base_Elements_SPEC.pdf" target="_blank">Base Elements</a> - Properties common to all ROM elements</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Design_SPEC.pdf" target="_blank">Report Design</a> - Report design, report libraries and report parameters</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Layout_SPEC.pdf" target="_blank">Layout Model</a> - Layout rules and elements: grids and free-form</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_List_and_Table_SPEC.pdf" target="_blank">Lists & Tables</a> - The two elements for displaying data from a data set</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Text_SPEC.pdf" target="_blank">Textual Elements</a> - Including Data, Label, Text and Multi-Line Data</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Page_Setup_SPEC.pdf" target="_blank">Page Setup</a> - Master pages and page sequences</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Styles_SPEC.pdf" target="_blank">Styles</a> - Defines BIRT-defined and user-defined styles.</li><br />
-						<li><a href="/birt/phoenix/resources/documentation/ROM_Scripting_SPEC.pdf" target="_blank">Expressions & Scripting</a> - The programming model and objects</li>
+						<li><a href="/birt/resources/documentation/ROM_Overview_SPEC.pdf" target="_blank">Overview</a> - Overall introduction to the ROM (read this first.)</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Base_Elements_SPEC.pdf" target="_blank">Base Elements</a> - Properties common to all ROM elements</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Design_SPEC.pdf" target="_blank">Report Design</a> - Report design, report libraries and report parameters</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Layout_SPEC.pdf" target="_blank">Layout Model</a> - Layout rules and elements: grids and free-form</li><br />
+						<li><a href="/birt/resources/documentation/ROM_List_and_Table_SPEC.pdf" target="_blank">Lists & Tables</a> - The two elements for displaying data from a data set</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Text_SPEC.pdf" target="_blank">Textual Elements</a> - Including Data, Label, Text and Multi-Line Data</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Page_Setup_SPEC.pdf" target="_blank">Page Setup</a> - Master pages and page sequences</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Styles_SPEC.pdf" target="_blank">Styles</a> - Defines BIRT-defined and user-defined styles.</li><br />
+						<li><a href="/birt/resources/documentation/ROM_Scripting_SPEC.pdf" target="_blank">Expressions & Scripting</a> - The programming model and objects</li>
 					</ul>
 					</p>
 					

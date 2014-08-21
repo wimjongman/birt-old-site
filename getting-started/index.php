@@ -91,13 +91,13 @@ $PagePart 	= new PagePart();
 					<p>Now that you know enough about BIRT to be dangerous, you'll probably want to see some documentation. A couple places you can find documentation are:
 					<ul class="eclipse-list">
 						<li>On the <a href="/birt/demos/" target="_blank">Documentation</a> page.</li>
-						<li>In the <a href="http://download.actuate.com/design-center/" target="_blank">Design</a> and <a href="http://download.actuate.com/deployment-center/" target="_blank">Deployment</a> Centers on the BIRT Developer Center.</li>
+						<li>In the <a href="http://developer.actuate.com/design-center/" target="_blank">Design</a> and <a href="http://developer.actuate.com/deployment-center/" target="_blank">Deployment</a> Centers on the BIRT Developer Center.</li>
 					</ul>
 					</p>
 					
 					<a name="morehelp"></a>
 					<h2 class="topic-section-header padding-top-small">More Help</h2>
-					<p>Still looking for direction? Plenty of help can be had by visiting the <a href="" target="_blank">Community</a> page or by heading over to the <a href="http://developer.actuate.com/community/" target="_blank">BIRT Developer Center Community</a>. You can also see the <a href="http://wiki.eclipse.org/index.php/BIRT_Project" target="_blank">FAQ/Wiki</a>.</p>
+					<p>Still looking for direction? Plenty of help can be had by visiting the <a href="/birt/community/" target="_blank">Community</a> page or by heading over to the <a href="http://developer.actuate.com/community/" target="_blank">BIRT Developer Center Community</a>. You can also see the <a href="http://wiki.eclipse.org/index.php/BIRT_Project" target="_blank">FAQ/Wiki</a>.</p>
 
 				</div>
 			</div>

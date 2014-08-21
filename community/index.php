@@ -101,7 +101,7 @@ $PagePart 	= new PagePart();
 					
 					<a name="mailinglists"></a>
 					<h2 class="topic-section-header padding-top-small">Mailing Lists</h2>
-					<p>Eclipse provides <a href="http://www.eclipse.org/mail/index.html" target="_blank">mailing lists</a> for each project. BIRT provides one general-purpose list:
+					<p>Eclipse provides <a href="http://www.eclipse.org/mail/" target="_blank">mailing lists</a> for each project. BIRT provides one general-purpose list:
 					<ul class="eclipse-list">
 						<li><a href="http://dev.eclipse.org/mhonarc/lists/birt-news/maillist.html" target="_blank">birt-news</a> (<a href="http://dev.eclipse.org/mhonarc/lists/birt-news/maillist.html" target="_blank">archive</a>) - Notifications to BIRT users about BIRT milestone and stable builds and other noteworthy information.</li>
 					</ul>
@@ -120,7 +120,7 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Contributions</h2>
 					<p>
 					<ul class="eclipse-list">
-						<li><a href="/birt/documentation/building-birt/">Build Instructions</a> - How to download BIRT source and build it.</li><br />
+						<li><a href="/birt/documentation/building-birt.php">Build Instructions</a> - How to download BIRT source and build it.</li><br />
 						<li><a href="/birt/about/project-organization/">Project</a> - How the project is structured, who's on the PMC, project roles, etc.</li><br />
 						<li><a href="http://www.eclipse.org/mail" target="_blank">Mailing List</a> - While the newsgroup is for people who use BIRT, the mailing list is for those who help develop BIRT.</li><br />
 						<li><a href="/birt/about/project-organization/contributors.php">Contribute Fixes and Code</a> - Interested in joining the BIRT project as a contributor? Maybe you found a bug and made a patch to the source code to address this, or perhaps you would like to make significant contribution in a specific area. This page provides more information on how to contribute code to the project.</li>
