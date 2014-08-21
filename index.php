@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/209-gartner-catalyst-conference/">Gartner Catalyst Conference</a><br />San Diego, CA<br />August 11-14</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/221-marketing-analytics-for-todays-marketers/">Marketing Analytics for Today's Marketers</a><br />Webcast<br />August 19</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/213-birt-live-columbus/">BIRT Live! | Columbus</a><br />Dublin, OH<br />August 26<br /> 8:30 AM - 4:30 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/223-how-to-manage-customer-service-data-webcast/">How to Best Manage Customer Service Data Complexity</a><br />Webcast<br />12:00 PM CT<br />August 26</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/228-canmug-calgary/">CanMUG | Calgary</a><br />Calgary, AB<br />September 3</li>
 						</ul>
 					</p>
 					
@@ -75,18 +75,17 @@ $PagePart 	= new PagePart();
 					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
-					<p><a target="_blank" href="http://blogs.actuate.com/introducing-birt-ihub-f-type-running-the-vmware-image/">Introducing BIRT iHub F-Type: Running the VMware Image</a><br />
-					Last week, Actuate released a new, free BIRT server called the BIRT iHub F-Type. It incorporates all the functionality of BIRT iHub and is limited only by the capacity of output it can deliver on a daily basis. It is ideal for departmental and smaller scale applications. When BIRT F-Type reaches its maximum output capacity, additional capacity can be purchased on a subscription based mod...<a href="http://blogs.actuate.com/introducing-birt-ihub-f-type-running-the-vmware-image/" target="_blank">Read More</a>
-					</p>
-
 					<p><a target="_blank" href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/">Employment Opportunity: Project Lead - Eclipse BIRT</a><br />
 					How would you like to have a leadership role in the development of an open source project that has over 3.5 million developers using it in their applications worldwide? If you would and you live in or would relocate to the Bay Area, you're in luck. Actuate, the founders of the Eclipse BIRT open source project, are looking for an architect and hands-on developer to lead the open sourc...<a href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/" target="_blank">Read More</a></p>
 					
+					<p><a target="_blank" href="http://blogs.actuate.com/introducing-birt-ihub-f-type-connecting-to-data-and-creating-a-design/">Introducing BIRT iHub F-Type: Connecting to Data and Creating a Design</a><br />
+					So, you heard about this new, fancy tool from Actuate called BIRT iHub F-Type that will help you display your data in interactive and meaningful ways. You’ve installed it, however, you’re not really familiar with BIRT and are lost looking for where you create your data connections. Don’t worry, you’re not alone. The BIRT data visualization suite starts with the BIRT Designer. Wit...<a href="http://blogs.actuate.com/introducing-birt-ihub-f-type-connecting-to-data-and-creating-a-design/" target="_blank">Read More</a></p>
+
 					<p><a target="_blank" href="http://blogs.actuate.com/how-to-charge-credit-cards-from-a-birt-design-and-other-posts-from-this-week/">How to Charge Credit Cards from a BIRT Design, and Other Posts From This Week</a><br />
 					Last weekend I had the opportunity to attend a local hackathon put together by hackmidwest. If you're not familiar with hackathons, I encourage you to seek one out. They are a lot of fun. Rules can change from event to event, but typically you have 24 hours to create an application of your choosing, either by yourself or as a team. For my hack, I used BIRT iHub F-Type and Masterc...<a href="http://blogs.actuate.com/how-to-charge-credit-cards-from-a-birt-design-and-other-posts-from-this-week/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/changing-the-series-type-of-a-specific-chart-series/">Changing the Series Type of a Specific Chart Series</a><br />
-					"Can I have two different series types in a single chart in BIRT?" Questions seem to come up on this subject fairly often. The answer: Yes, you can for certain chart types. In the simpler scenario where you define each series individually with the chart builder, it's very straightforward in either open source BIRT or BIRT Designer Pro. Say you have a simple 2-series chart that looks l...<a href="http://blogs.actuate.com/changing-the-series-type-of-a-specific-chart-series/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/introducing-birt-ihub-f-type-installing-on-windows/">Introducing BIRT iHub F-Type: Installing on Windows</a><br />
+					Actuate recently released a new, free BIRT server called the BIRT iHub F-Type. It incorporates all the functionality of BIRT iHub and is limited only by the capacity of output it can deliver on a daily basis. It is ideal for departmental and smaller scale applications. When BIRT F-Type reaches its maximum output capacity, additional capacity can be purchased on a subscription based mode...<a href="http://blogs.actuate.com/introducing-birt-ihub-f-type-installing-on-windows/" target="_blank">Read More</a></p>
 					
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
