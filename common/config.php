@@ -62,6 +62,7 @@ class PagePart {
 
 	<link href="'.$basePath.'/css/actuate.css" rel="stylesheet" />
 	<link href="'.$basePath.'/css/eclipse.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="https://projects.eclipse.org/sites/all/themes/solstice/_themes/solstice_projects/favicon.ico" type="image/vnd.microsoft.icon" />
 
 	<!--[if lt IE 8]><link href="'.$basePath.'/css/yggdrasil-icon-font-ie7.css" rel="stylesheet" /><![endif]-->
 
