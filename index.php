@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/213-birt-live-columbus/">BIRT Live! | Columbus</a><br />Dublin, OH<br />August 26<br /> 8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/223-how-to-manage-customer-service-data-webcast/">How to Best Manage Customer Service Data Complexity</a><br />Webcast<br />12:00 PM CT<br />August 26</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/228-canmug-calgary/">CanMUG | Calgary</a><br />Calgary, AB<br />September 3</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/184-javaone-2014/">JavaOne 2014</a><br />San Francisco, CA<br />September 28 - October 2</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/237-visualize-iot-data-with-birt-webinar/">Visualize IoT Data with BIRT</a><br />Webinar<br />October 7<br />8:00 AM PT</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/232-greater-atlanta-maximo-ugatlanta-birt-ug/">Greater Atlanta Maximo UG/Atlanta BIRT UG</a><br />Marietta, GA<br />October 16<br />8:00 AM - 1:00 PM ET</li>
 						</ul>
 					</p>
 					
