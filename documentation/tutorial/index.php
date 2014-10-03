@@ -86,7 +86,7 @@ $PagePart 	= new PagePart();
 					<!--<h2 class="topic-section-header padding-top-small">Flash Movie of "My First Report"</h2>
 					<p><a href="http://download.eclipse.org/birt/downloads/examples/reports/2.1/tutorial/tutorial.html" target="_blank">This Flash movie</a> shows the creation of My First Report from the tutorial in BIRT's online help.</p>-->
 					
-					<h2 class="topic-section-header padding-top-small">Other Tutorials</h2>
+					<h2 class="topic-section-header padding-top-small">Video Tutorials</h2>
 					<p>This guide takes you through what you'll need to know to get started with integrating BIRT into your application. The topics include:
 					<ul class="eclipse-list">
 						<li><a href="http://www.youtube.com/watch?v=6TRndgUMUmU" target="_blank">Youtube -BIRT Report Designer Tutorial Part-1</a></li><br />
