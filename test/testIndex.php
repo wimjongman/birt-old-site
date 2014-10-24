@@ -48,7 +48,7 @@ $PagePart 	= new PagePart();
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
-					<div class="eclipse-home-banner">
+					<div class="eclipse-home-banner" style="background-color:#f4f4f4;">
 						<img src = "<?php $basePath ?>img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:110px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
