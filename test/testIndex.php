@@ -19,6 +19,7 @@ $PagePart 	= new PagePart();
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
 	<div id="midcolumn">
+	<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
 						<img src = "https://www.eclipse.org/birt/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
@@ -67,6 +68,7 @@ $PagePart 	= new PagePart();
 					<p><a href="http://developer.actuate.com/community/forum/index.php?/blogs/">See More Blogs</a></p>
 
 				</div>
+			</div>
 			</div>
 
 EOHTML;
