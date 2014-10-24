@@ -44,7 +44,7 @@ $PagePart 	= new PagePart();
 		  <div class="container background-image-none" id="novaContent">
 				
 				<?php echo $PagePart->getSideMenu(); ?>
-<div id="midcolumn">
+
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
@@ -98,7 +98,7 @@ $PagePart 	= new PagePart();
 			</div>
 
 
-		</div>
+		
 	</div>
 </main>
 	
