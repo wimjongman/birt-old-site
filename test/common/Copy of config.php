@@ -14,7 +14,7 @@ if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") {
 	-
 ********************************************/
 			
-	$basePath = '/birt/test';
+	$basePath = '/birt';
 
 	/* Use URL that you are currently on */ 
 	$currentUrl = "";
