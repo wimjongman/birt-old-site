@@ -85,14 +85,13 @@ class PagePart {
 
 		$sideMenu = '';
 		$sideMenu = '
-			<a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
+			
 			<aside id="leftcol" class="col-md-4">
     <ul id="leftnav" class="ul-left-nav fa-ul hidden-print">
 	  
 			
 			  				  <li class="separator">
-				    <a class="separator" href="http://www.eclipse.org/birt/">
-					    BIRT Home						</a>
+				    <a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
 					</li>
 			  
 					
