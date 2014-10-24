@@ -1,28 +1,53 @@
 <?php
 
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
-	require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
+session_start();
+
+require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/test/common/config.php");
 $PagePart 	= new PagePart();
-	$App 	= new App();
-	$Nav	= new Nav();
-	$Menu 	= new Menu();
-	
-	
-	include($App->getProjectCommon());
 
-	$pageTitle 		= "Eclipse BIRT Home";
-	$pageKeywords	= "";
-	$pageAuthor		= "";
+?>
 
-	# Paste your HTML content between the EOHTML markers!
-	$html = <<<EOHTML
-	<div id="midcolumn">
-	<div class="dev-main eclipse-main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<?php 
+		/* Set Page Level Meta Details */
+		$metaTitle 		= "BIRT Home";
+		$metaKeywords	= "Eclipse Keywords";
+		$metaAuthor		= "";
+		$metaDescription = "Eclipse Super Description for SEO in da House";
+		$ogTitle		= "This is the OG Super Title";
+		$ogImage		= "http://www.actuate.com/images/logo.png";
+		$ogDescription  = "This is the ogDescription to be displayed in share options.";
+		
+		//only use following if you know what you are doing - else just leave them as is.
+		$robotsIndex 	= "index"; // ***Only usable values are 'index', 'noindex'
+		$robotsFollow	= "follow"; // ***Only usable values are 'follow', 'nofollow'
+		$canonicalTag	= ""; //this is a canonical tag used for duplicate content *** DO NOT USE UNLESS YOU KNOW WHAT YOU ARE DOING *** Default is blank! ex:http://www.actuate.com/products/
+	 	
+	 	# Generate Meta Info
+		echo $PagePart->getMetaInfo($metaTitle, $metaKeywords, $metaAuthor, $metaDescription, $ogTitle, $ogImage, $ogDescription, $robotsIndex, $robotsFollow, $canonicalTag);
+	 ?>
+</head>	
+
+<body>
+<?php echo $PagePart->getHeader(); ?>
+<?php echo $PagePart->getAfterBody(); ?>
+
+<div style="background-color:#f4f4f4;">
+	<div class="content-area">
+		<div class="content-area-inner" style="padding-top:40px;">
+			
+			<div class="actu-eclipse-side-menu">
+				
+				<?php echo $PagePart->getSideMenu(); ?>
+
+			</div>
+
+			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
-						<img src = "https://www.eclipse.org/birt/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
+						<img src = "<?php $basePath ?>img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:110px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span class="eclipse-txt-purple">open source</span> technology platform used to create <span class="eclipse-txt-bloodorange">data visualizations</span> and reports that can be embedded into rich client and <span class="eclipse-txt-lightgreen">web applications</span>.</div>
@@ -69,12 +94,15 @@ $PagePart 	= new PagePart();
 
 				</div>
 			</div>
-			</div>
-
-EOHTML;
 
 
-	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
-?>
+		</div>
+	</div>
 
+	
+	
+		<?php echo $PagePart->getFooter(); ?>
+	
+</div>
+</body>
+</html>
