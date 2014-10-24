@@ -99,6 +99,6 @@ $PagePart 	= new PagePart();
 	
 		<?php echo $PagePart->getFooter(); ?>
 	
-</div>
+
 </body>
 </html>
