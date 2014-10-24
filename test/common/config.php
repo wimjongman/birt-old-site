@@ -4,7 +4,7 @@ if ($_SERVER['REMOTE_ADDR'] != "72.209.186.124") {
  echo "You don't have access to view this page!"; 
  exit(); 
 }
-
+echo $_SERVER['DOCUMENT_ROOT'];
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
