@@ -35,7 +35,7 @@ $PagePart 	= new PagePart();
 <section id="breadcrumb" class="defaut-breadcrumbs hidden-print">
 			  <div class="container">
 			    <div class="col-xs-24">
-						<ol class="breadcrumb"><li><a href="https://www.eclipse.org/">Home</a></li><li><a href="https://www.eclipse.org/projects/">Projects</a></li><li><a href="https://www.eclipse.org/eclipse">eclipse</a></li></ol>					</div>
+						<ol class="breadcrumb"><li><a href="https://www.eclipse.org/">Home</a></li><li><a href="https://www.eclipse.org/projects/">Projects</a></li><li><a href="https://www.eclipse.org/birt">BIRT</a></li><li class="active">BIRT Home</li></ol>					</div>
 			    			    </div>
 		    </section>
 <?php echo $PagePart->getAfterBody(); ?>
