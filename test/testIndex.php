@@ -30,7 +30,7 @@ $PagePart 	= new PagePart();
 	 ?>
 </head>	
 
-<body>
+<body class="" id="body_solstice">
 <?php echo $PagePart->getHeader(); ?>
 <?php echo $PagePart->getAfterBody(); ?>
 
