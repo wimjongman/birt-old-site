@@ -18,7 +18,15 @@ $PagePart 	= new PagePart();
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
-	<div class="content-area">
+	
+
+EOHTML;
+
+
+	# Generate the web page
+	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle);
+?>
+<div class="content-area">
 		<div class="content-area-inner" style="padding-top:40px;">
 <div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
@@ -72,10 +80,3 @@ $PagePart 	= new PagePart();
 			</div>
 		</div>
 	</div>
-
-EOHTML;
-
-
-	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle);
-?>
