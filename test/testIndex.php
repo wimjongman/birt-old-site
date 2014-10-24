@@ -34,7 +34,7 @@ $PagePart 	= new PagePart();
 <?php echo $PagePart->getHeader(); ?>
 <?php echo $PagePart->getAfterBody(); ?>
 
-<div style="background-color:#f4f4f4;">
+<div style="background-color:#ffffff;">
 	<div class="content-area">
 		<div class="content-area-inner" style="padding-top:40px;">
 			
