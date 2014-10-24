@@ -46,9 +46,9 @@ $PagePart 	= new PagePart();
 				<?php echo $PagePart->getSideMenu(); ?>
 
 
-			<div class="dev-main eclipse-main">
+			<div class="dev-main eclipse-main"  style="background-color:#f4f4f4;">
 				<div class="eclipse-main-container">	
-					<div class="eclipse-home-banner" style="background-color:#f4f4f4;">
+					<div class="eclipse-home-banner">
 						<img src = "<?php $basePath ?>img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:110px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
@@ -60,7 +60,7 @@ $PagePart 	= new PagePart();
 				</div>
 			</div>
 
-			<div class="dev-main eclipse-main bord-yellow">
+			<div class="dev-main eclipse-main bord-yellow"  style="background-color:#f4f4f4;">
 				<div class="eclipse-main-container">	
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
 					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
