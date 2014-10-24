@@ -254,7 +254,7 @@ class PagePart {
 			  <div id="row-logo-search">
 				  <div id="header-left" class="col-sm-14 col-md-16 col-lg-19">
 				    <div class="row">
-		          <div class="hidden-xs">
+		          <div align="left" class="hidden-xs">
 		            <a href="https://www.eclipse.org/"><img src="/eclipse.org-common/themes/solstice/public/images/logo/eclipse-800x188.png" alt="Eclipse.org logo" class="logo-eclipse-default"/></a>		          </div>
 						   <div id="main-menu" class="navbar row yamm">
 				        <div id="navbar-collapse-1" class="navbar-collapse collapse">
