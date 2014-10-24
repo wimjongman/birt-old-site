@@ -247,7 +247,7 @@ class PagePart {
 		      <div id="row-toolbar-col" class="col-md-24">
 		        <ul class="list-inline">
 		          <li><a href="https://dev.eclipse.org/site_login/createaccount.php"><i class="fa fa-user fa-fw"></i> Create account</a></li>
-		          <li><a href="https://dev.eclipse.org/site_login/?takemeback=https://www.eclipse.org/birt/test/testIndex.php"><i class="fa fa-sign-in fa-fw"></i> Log in</a></li>
+		          <li><a href="https://dev.eclipse.org/site_login/?takemeback=https://www.eclipse.org/eclipse/"><i class="fa fa-sign-in fa-fw"></i> Log in</a></li>
 		          		        </ul>
 		      </div>
 		    </div>
@@ -306,12 +306,6 @@ class PagePart {
 
 		  </div>
 		</header>
-					<section id="breadcrumb" class="defaut-breadcrumbs hidden-print">
-			  <div class="container">
-			    <div class="col-xs-24">
-						<ol class="breadcrumb"><li><a href="https://www.eclipse.org/">Home</a></li><li><a href="https://www.eclipse.org/projects/">Projects</a></li><li><a href="https://www.eclipse.org/birt">birt</a></li><li class="active">Eclipse BIRT Home</li></ol>					</div>
-			    			    </div>
-		    </section>
 		<!-- Header End -->';
 		return $header;
 	}

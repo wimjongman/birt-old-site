@@ -32,6 +32,12 @@ $PagePart 	= new PagePart();
 
 <body class="" id="body_solstice">
 <?php echo $PagePart->getHeader(); ?>
+<section id="breadcrumb" class="defaut-breadcrumbs hidden-print">
+			  <div class="container">
+			    <div class="col-xs-24">
+						<ol class="breadcrumb"><li><a href="https://www.eclipse.org/">Home</a></li><li><a href="https://www.eclipse.org/projects/">Projects</a></li><li><a href="https://www.eclipse.org/eclipse">eclipse</a></li></ol>					</div>
+			    			    </div>
+		    </section>
 <?php echo $PagePart->getAfterBody(); ?>
 
 <main role="main" class=" no-promo">
