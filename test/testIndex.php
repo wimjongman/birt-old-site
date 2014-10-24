@@ -18,6 +18,8 @@ $PagePart 	= new PagePart();
 
 	# Paste your HTML content between the EOHTML markers!
 	$html = <<<EOHTML
+	<div class="content-area">
+		<div class="content-area-inner" style="padding-top:40px;">
 <div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
@@ -68,6 +70,8 @@ $PagePart 	= new PagePart();
 
 				</div>
 			</div>
+		</div>
+	</div>
 
 EOHTML;
 
