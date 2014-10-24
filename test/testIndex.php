@@ -34,15 +34,11 @@ $PagePart 	= new PagePart();
 <?php echo $PagePart->getHeader(); ?>
 <?php echo $PagePart->getAfterBody(); ?>
 
-<div style="background-color:#ffffff;">
-	<div class="content-area">
-		<div class="content-area-inner" style="padding-top:40px;">
-			
-			<div class="actu-eclipse-side-menu">
+<main role="main" class=" no-promo">
+		  <div class="container background-image-none" id="novaContent">
 				
 				<?php echo $PagePart->getSideMenu(); ?>
-
-			</div>
+<div id="midcolumn">
 
 			<div class="dev-main eclipse-main">
 				<div class="eclipse-main-container">	
@@ -98,7 +94,7 @@ $PagePart 	= new PagePart();
 
 		</div>
 	</div>
-
+</main>
 	
 	
 		<?php echo $PagePart->getFooter(); ?>
