@@ -86,7 +86,7 @@ class PagePart {
 		$sideMenu = '';
 		$sideMenu = '
 			
-			<aside id="leftcol" class="col-md-4">
+			<aside id="leftcol" class="col-md-4" align="left">
 			<a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
     <ul id="leftnav" class="ul-left-nav fa-ul hidden-print" align="left">
 			  
