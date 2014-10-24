@@ -88,7 +88,7 @@ class PagePart {
 			
 			<aside id="leftcol" class="col-md-4">
 			<a href="/birt/"><img src="'.$basePath.'/img/logo/Birt-logo.png" class="actu-birt-logo"/></a>
-    <ul id="leftnav" class="ul-left-nav fa-ul hidden-print">
+    <ul id="leftnav" class="ul-left-nav fa-ul hidden-print" align="left">
 			  
 					
 			
