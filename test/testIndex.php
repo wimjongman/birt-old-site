@@ -12,6 +12,8 @@ $pageTitle 		= "Eclipse BIRT Test Home";
 $html = <<<EOHTML
 echo $PagePart->getAfterBody();
 
+<div id="maincontent">
+        <div id="midcolumn">
 <div style="background-color:#f4f4f4;">
 	<div class="content-area">
 		<div class="content-area-inner" style="padding-top:40px;">
@@ -75,6 +77,8 @@ echo $PagePart->getAfterBody();
 
 
 		</div>
+	</div>
+	</div>
 	</div>
 
 EOHTML;
