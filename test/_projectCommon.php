@@ -16,7 +16,7 @@
 	}
 
 	$Nav->setLinkList( array() );
-    $Nav->addNavSeparator("<img src='http://www.eclipse.org/birt/img/logo/Birt-logo.png' style='padding-bottom:20px;'/>", "http://www.eclipse.org/birt/", "_self");
+    $Nav->addNavSeparator("<img src='http://www.eclipse.org/birt/img/logo/Birt-logo.png'/><br /><br /><br />", "http://www.eclipse.org/birt/", "_self");
 	$Nav->addCustomNav("About", "http://www.eclipse.org/birt/about/", "_self", 1);
 	$Nav->addCustomNav("Getting Started", "http://www.eclipse.org/birt/getting-started/", "_self", 1);
 	$Nav->addCustomNav("Download", "http://download.eclipse.org/birt/downloads/", "_self", 1);
