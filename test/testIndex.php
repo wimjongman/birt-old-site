@@ -12,9 +12,9 @@ $pageTitle 		= "Eclipse BIRT Test Home";
 $html = <<<EOHTML
 echo $PagePart->getAfterBody();
 
-<div id="maincontent">
+<div id="maincontent" style="background-color:#f4f4f4;">
         <div id="midcolumn">
-<div style="background-color:#f4f4f4;">
+<div>
 	<div class="content-area">
 		<div class="content-area-inner" style="padding-top:40px;">
 			
