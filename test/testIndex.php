@@ -10,7 +10,7 @@ $pageTitle 		= "Eclipse BIRT Test Home";
 	$pageAuthor		= "";
 
 $html = <<<EOHTML
-echo $PagePart->getAfterBody();
+$PagePart->getAfterBody();
 
 <div id="maincontent" style="background-color:#f4f4f4;">
         <div id="midcolumn">
