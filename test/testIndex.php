@@ -21,18 +21,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <div id="maincontent">
-        <div id="midcolumn" style="background-color:#f4f4f4;">
+        <div id="midcolumn">
 <div>
 	<div class="content-area">
 		<div class="content-area-inner" style="padding-top:40px;">
-			
-			<div class="actu-eclipse-side-menu">
-				
-				<?php echo $PagePart->getSideMenu(); ?>
 
-			</div>
-
-			<div class="dev-main eclipse-main">
+			<div class="dev-main eclipse-main" style="background-color:#f4f4f4;">
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
 						<img src = "<?php $basePath ?>img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
@@ -46,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 			</div>
 
-			<div class="dev-main eclipse-main bord-yellow">
+			<div class="dev-main eclipse-main bord-yellow" style="background-color:#f4f4f4;">
 				<div class="eclipse-main-container">	
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
 					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
