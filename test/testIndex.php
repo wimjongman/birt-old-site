@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="eclipse-main-container">	
 					<div class="eclipse-home-banner">
 						<img src = "http://www.eclipse.org/birt/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
-						<div class="eclipse-home-banner-inner" style="padding-top:110px;">
+						<div class="eclipse-home-banner-inner" style="padding-top:55px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:30px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span style="color:purple;">open source</span> technology platform used to create <span style="color:orange">data visualizations</span> and reports that can be embedded into rich client and <span style="color:green">web applications</span>.</div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="http://download.eclipse.org/birt/downloads" class="square-button button-color-yellow" style="padding:10 30px; margin-right:30px;">Download BIRT 4.3.2</a></td>
