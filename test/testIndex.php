@@ -27,7 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div style="background-color:#f4f4f4; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
 				<div style="margin: 0 20px;">	
 					<div style="background-image:url('http://www.eclipse.org/birt/img/small-grid.png'); min-height:355px; background-repeat:no-repeat; margin-top:20px;">
-						<img src = "http://www.eclipse.org/birt/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
+						<img src = "http://www.eclipse.org/birt/test/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:75px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:10px;"><strong>BIRT</strong></div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span style="color:purple;">open source</span> technology platform used to create <span style="color:orange">data visualizations</span> and reports that can be embedded into rich client and <span style="color:green">web applications</span>.</div>
