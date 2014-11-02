@@ -22,9 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div id="maincontent">
         <div id="midcolumn">
-<div>
-	<div class="content-area">
-		<div class="content-area-inner">
+
 
 			<div class="dev-main eclipse-main" style="background-color:#f4f4f4;">
 				<div class="eclipse-main-container">	
@@ -75,11 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<p><a href="http://developer.actuate.com/community/forum/index.php?/blogs/">See More Blogs</a></p>
 
 				</div>
-			</div>
-
-
-		</div>
-	</div>
+			
 	</div>
 	</div>
 
