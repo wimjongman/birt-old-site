@@ -24,9 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div id="midcolumn">
 
 
-			<div class="dev-main eclipse-main" style="background-color:#f4f4f4; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
-				<div class="eclipse-main-container">	
-					<div class="eclipse-home-banner">
+			<div style="background-color:#f4f4f4; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
+				<div style="margin: 0 20px;">	
+					<div style="background-image:url('http://www.eclipse.org/birt/img/small-grid.png'); min-height:355px; background-repeat:no-repeat; margin-top:20px;">
 						<img src = "http://www.eclipse.org/birt/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
 						<div class="eclipse-home-banner-inner" style="padding-top:75px;">
 							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:10px;"><strong>BIRT</strong></div>
@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</div>
 
 			<div class="dev-main eclipse-main bord-yellow" style="background-color:#f4f4f4; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
-				<div class="eclipse-main-container">	
+				<div style="margin: 0 20px;">	
 					<h1 class="eclipse-title-main">BIRT Buzz</h1>
 					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
 					
