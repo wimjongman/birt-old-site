@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<h1 style="color: #333; font-size: 36px; line-height: 40px; margin: 20px 0 12px 0; font-weight: 100;">BIRT Buzz</h1>
 					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
 					
-					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
+					<h2 style="color: #464646; margin: 10px 0px; font-size: 18px; font-weight: 600; border-bottom: 2px solid #464646; padding-top:16px;">Upcoming Events</h2>
 					<p>
 						<ul style="list-style:none;">
 							<li style="display:inline; width:33%; float:left;"><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower<br />Government Clients with<br />Secure and Enhanced<br />Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="clearfix"></div>
 					<p><br /><a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">View Full Calendar</a></p>
 
-					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
+					<h2 style="color: #464646; margin: 10px 0px; font-size: 18px; font-weight: 600; border-bottom: 2px solid #464646; padding-top:16px;">Recent Blogs</h2>
 					<p><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/">BIRT and Cloudera: Give Your Hadoop Data Meaning</a><br />
 					BIRT and BIRT iHub are now certified with Cloudera 5!...<a href="http://developer.actuate.com/community/forum/index.php?/blog/14/entry-532-birt-and-cloudera-give-your-hadoop-data-meaning/" target="_blank">Read More</a></p>
 					
