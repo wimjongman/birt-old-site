@@ -28,8 +28,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div style="margin: 0 20px;">	
 					<div style="background-image:url('http://www.eclipse.org/birt/test/img/small-grid.png'); min-height:355px; background-repeat:no-repeat; margin-top:20px;">
 						<img src = "http://www.eclipse.org/birt/test/img/logo/birt-purple-logo.png" style="margin-left: 45px;margin-top: 50px;margin-right:50px;float:left;" />
-						<div class="eclipse-home-banner-inner" style="padding-top:70px;">
-							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:10px;"><strong>BIRT</strong></div>
+						<div style="padding-top:70px;">
+							<div style="font-size:60px;font-weight:100;color:#42187e;margin-bottom:10px;">BIRT</div>
 							<div style="font-size: 18px;font-weight: 600;color: #777777;margin-bottom:30px;margin-right:20px;">An <span style="color:purple;">open source</span> technology platform used to create <span style="color:orange">data visualizations</span> and reports that can be embedded into rich client and <span style="color:green">web applications</span>.</div>
 							<div style="margin-left: 249px;margin-right: 20px;"><table><tbody><tr><td><a href="http://download.eclipse.org/birt/downloads" class="square-button button-color-yellow" style="padding:10 30px; margin-right:30px;">Download BIRT 4.3.2</a></td>
 							<td><a href="/birt/about/" class="square-button button-color-yellow" style="padding:10 30px;">Learn More</a></td></tr></tbody></table></div>
@@ -38,17 +38,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 			</div>
 
-			<div class="dev-main eclipse-main bord-yellow" style="background-color:#fafafa; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
+			<div style="background-color:#fafafa; border-top:5px solid #42187e; padding-bottom:20px; margin-bottom:30px;">
 				<div style="margin: 0 20px;">	
-					<h1 class="eclipse-title-main">BIRT Buzz</h1>
+					<h1 style="color: #333; font-size: 36px; line-height: 40px; margin: 20px 0 12px 0; font-weight: 100;">BIRT Buzz</h1>
 					<p>(Items in the BIRT Buzz section link to the BIRT Developer Center.)</p>
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
-						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower<br />Government Clients with<br />Secure and Enhanced<br />Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/182-birt-live-new-york/">BIRT Live! | New York</a><br />New York, NY<br />April 30<br />8:30 AM - 4:30 PM ET</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/185-birt-live-boston/">BIRT Live! | Boston</a><br />Boston, MA<br />May 1<br />8:30 AM - 4:30 PM ET</li>
+						<ul style="list-style:none;">
+							<li style="display:inline; width:33%; float:left;"><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/183-using-birt-to-empower-government-clients-with-secu/">Using BIRT to Empower<br />Government Clients with<br />Secure and Enhanced<br />Reporting Functionality</a><br />Webinar<br />April 29<br />11:00 AM PT</li>
+							<li style="display:inline; width:33%; float:left;"><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/182-birt-live-new-york/">BIRT Live! | New York</a><br />New York, NY<br />April 30<br />8:30 AM - 4:30 PM ET</li>
+							<li style="display:inline; width:33%; float:left;"><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/185-birt-live-boston/">BIRT Live! | Boston</a><br />Boston, MA<br />May 1<br />8:30 AM - 4:30 PM ET</li>
 						</ul>
 					</p>
 					
