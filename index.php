@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/184-javaone-2014/">JavaOne 2014</a><br />San Francisco, CA<br />September 28 - October 2</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/237-visualize-iot-data-with-birt-webinar/">Visualize IoT Data with BIRT</a><br />Webinar<br />October 7<br />8:00 AM PT</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/232-greater-atlanta-maximo-ugatlanta-birt-ug/">Greater Atlanta Maximo UG/Atlanta BIRT UG</a><br />Marietta, GA<br />October 16<br />8:00 AM - 1:00 PM ET</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/244-data-driven-summit-singapore/">Data Driven Summit | Singapore</a><br />Singapore<br />November 11</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/226-birt-live-arlington/">BIRT Live! | Arlington</a><br />Arlington, VA<br />November 12</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/227-birt-live-research-triangle-park/">BIRT Live! | Research Triangle Park</a><br />Research Triangle Park, NC<br />November 13</li>
 						</ul>
 					</p>
 					
