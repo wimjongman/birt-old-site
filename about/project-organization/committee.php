@@ -63,7 +63,7 @@ $PagePart 	= new PagePart();
 		                    		<li><a href="description.php">Description and Scope</a></li>
 		                    		<li><a href="charter.php">Charter</a></li>
 		                    		<li><a href="principles.php">Principles</a></li>
-		                    		<li><a href="committee.php">Management Committee</a></li>
+		                    		<!--<li><a href="committee.php">Management Committee</a></li>-->
 		                    		<li><a href="contributors.php">Contributors</a></li>
 		                    	</ul>
 		                    </li>
