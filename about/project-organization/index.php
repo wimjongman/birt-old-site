@@ -89,7 +89,7 @@ $PagePart 	= new PagePart();
 			        	<li><a href="description.php">Project Description and Scope</a> - Description of the project and it's scope.</li><br />
 			        	<li><a href="charter.php">Project Charter</a> - The Charter under which this project is run.</li><br />
 			        	<li><a href="principles.php">Project Principles</a> - The key principles on which this project is run.</li><br />
-			        	<li><a href="committee.php">Project Management Committee (PMC) and Project Leads</a> - Who is running the project?</li><br />
+			        	<!--<li><a href="committee.php">Project Management Committee (PMC) and Project Leads</a> - Who is running the project?</li><br />-->
 			        	<li><a href="contributors.php">Project Contributors and Committers</a> - List of the project contributors and committers.</li>
 			        </ul>
 			        </p>
