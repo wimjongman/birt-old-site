@@ -75,9 +75,6 @@ $PagePart 	= new PagePart();
 					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
 
 					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
-					<p><a target="_blank" href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/">Employment Opportunity: Project Lead - Eclipse BIRT</a><br />
-					How would you like to have a leadership role in the development of an open source project that has over 3.5 million developers using it in their applications worldwide? If you would and you live in or would relocate to the Bay Area, you're in luck. Actuate, the founders of the Eclipse BIRT open source project, are looking for an architect and hands-on developer to lead the open sourc...<a href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/" target="_blank">Read More</a></p>
-					
 					<p><a target="_blank" href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/">How to Add Custom Visualizations in BIRT iHub 3.1</a><br />
 					OpenText recently released BIRT iHub 3.1, the latest version of iHub. The release adds several features, including a REST API and support for Custom Visualizations. In this post, I will explain what custom visualizations are and show you how you can include third-party visualizations in BIRT content with essentially no coding. Custom Visualization Basics Data visualization...<a href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/" target="_blank">Read More</a></p>
 					
@@ -87,6 +84,9 @@ $PagePart 	= new PagePart();
 					<p><a target="_blank" href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/">Under the Hood - BIRT iHub F-Type: Troubleshooting</a><br />
 					Welcome to the third installment of the Under the Hood - BIRT iHub F-Type blog series. Today, I will discuss troubleshooting practices in a iHub environment. I'll share a process flow for isolating issues, offer details about using log files to investigate issues, and suggest a few tips and third-party tools that can make all the difference when troubleshooting. Isolating an ...<a href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/" target="_blank">Read More</a></p>
 
+					<p><a target="_blank" href="http://blogs.actuate.com/announcing-birt-ihub-f-type-3-1/">Announcing BIRT iHub F-Type 3.1</a><br />
+					Actuate (now OpenText) has released BIRT iHub F-Type 3.1, the latest version of our free report server. Like its commercial cousin BIRT iHub 3.1, the new release of BIRT iHub F-Type now features a REST API and support for third-party custom data visualizations, among other new features. For details about what's new in the product, see the Technical Summary of New Features. These new ...<a href="http://blogs.actuate.com/announcing-birt-ihub-f-type-3-1/" target="_blank">Read More</a></p>
+					
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
 				</div>
