@@ -65,9 +65,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/253-cio-perspectives-dallas/">CIO Perspectives | Dallas</a><br />Dallas, TX<br />February 26</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/256-eclipsecon-north-america/">EclipseCon | North America</a><br />Burlingame, CA<br />March 9-12</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/254-big-data-techcon-boston/">Big Data TechCon | Boston</a><br />Boston, MA<br />April 26-28</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/263-birt-live-m%C3%BCnchen/">BIRT Live! | München</a><br />München<br />March 12</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/254-big-data-techcon-boston/">Big Data TechCon | Boston</a><br />Boston, MA<br />April 26-28</li>							
 						</ul>
 					</p>
 					
@@ -78,14 +78,14 @@ $PagePart 	= new PagePart();
 					<p><a target="_blank" href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/">Employment Opportunity: Project Lead - Eclipse BIRT</a><br />
 					How would you like to have a leadership role in the development of an open source project that has over 3.5 million developers using it in their applications worldwide? If you would and you live in or would relocate to the Bay Area, you're in luck. Actuate, the founders of the Eclipse BIRT open source project, are looking for an architect and hands-on developer to lead the open sourc...<a href="http://blogs.actuate.com/employment-opportunity-project-lead-eclipse-birt/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/master-birt-ihub-f-type-in-30-minutes/">Master BIRT iHub F-Type in 30 Minutes</a><br />
-					TV personality and celebrity chef Rachael Ray is known for her no-nonsense, hands-on approach to cooking. According to her popular cookbook series, 30 minutes is all you need to really master some impressive, "Yum-O" meals. That got us thinking what else people could master in 30 minutes? Riding a unicycle?... Parallel parking?... Underwater basket weaving? We here at Actuate f...<a href="http://blogs.actuate.com/master-birt-ihub-f-type-in-30-minutes/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/">How to Add Custom Visualizations in BIRT iHub 3.1</a><br />
+					OpenText recently released BIRT iHub 3.1, the latest version of iHub. The release adds several features, including a REST API and support for Custom Visualizations. In this post, I will explain what custom visualizations are and show you how you can include third-party visualizations in BIRT content with essentially no coding. Custom Visualization Basics Data visualization...<a href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/extend-birt-with-font-symbols-code/">Extend BIRT with Font Symbols</a><br />
-					Third in a series. Font symbols (like those above) are a great way to embed graphics into BIRT reports and dashboards. We like them because they are vector rather than raster graphics, meaning they look great no matter how much you scale them, and are small in size. Since BIRT reports are HTML5, you can do almost anything with font symbols in your reports. There are numerous ...<a href="http://blogs.actuate.com/extend-birt-with-font-symbols-code/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/">Step Aside Cloud, Mobile and Big Data, IoT has just Entered the Room</a><br />
+					This article provides a review of the ARC Advisory Group Forum in Orlando and expands on the ever increasing importance of analytics in relation to the Internet of Things The room I am referring to here is the office of the CIO, or should that be CTO or CDO (Chief Digital Officer), you see even as technology is evolving, the corporate role to manage digital transformation is evolving ...<a href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/introducing-birt-ihub-f-type-integrating-into-applications/">Introducing BIRT iHub F-Type: Integrating into Applications</a><br />
-					If you're familiar with open source BIRT and what the out-of-the-box options for integration are, you know that you had the viewer that could be called by URL, the viewer tag library that allowed you to embed the viewer into a JSP page, or a custom solution you built using the BIRT APIs. With BIRT iHub F-Type, you still have the ability to call visualizations by URL, but you also add t...<a href="http://blogs.actuate.com/introducing-birt-ihub-f-type-integrating-into-applications/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/">Under the Hood – BIRT iHub F-Type: Troubleshooting</a><br />
+					Welcome to the third installment of the Under the Hood – BIRT iHub F-Type blog series. Today, I will discuss troubleshooting practices in a iHub environment. I'll share a process flow for isolating issues, offer details about using log files to investigate issues, and suggest a few tips and third-party tools that can make all the difference when troubleshooting. Isolating an ...<a href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/" target="_blank">Read More</a></p>
 
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
