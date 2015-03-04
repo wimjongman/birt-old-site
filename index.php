@@ -66,7 +66,7 @@ $PagePart 	= new PagePart();
 					<p>
 						<ul class="eclispe-list-default">
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/256-eclipsecon-north-america/">EclipseCon | North America</a><br />Burlingame, CA<br />March 9-12</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/263-birt-live-m%C3%BCnchen/">BIRT Live! | München</a><br />München<br />March 12</li>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/263-birt-live-m%C3%BCnchen/">BIRT Live! | Munich</a><br />Munich, Germany<br />March 12</li>
 							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/254-big-data-techcon-boston/">Big Data TechCon | Boston</a><br />Boston, MA<br />April 26-28</li>							
 						</ul>
 					</p>
@@ -84,8 +84,8 @@ $PagePart 	= new PagePart();
 					<p><a target="_blank" href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/">Step Aside Cloud, Mobile and Big Data, IoT has just Entered the Room</a><br />
 					This article provides a review of the ARC Advisory Group Forum in Orlando and expands on the ever increasing importance of analytics in relation to the Internet of Things The room I am referring to here is the office of the CIO, or should that be CTO or CDO (Chief Digital Officer), you see even as technology is evolving, the corporate role to manage digital transformation is evolving ...<a href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/" target="_blank">Read More</a></p>
 					
-					<p><a target="_blank" href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/">Under the Hood – BIRT iHub F-Type: Troubleshooting</a><br />
-					Welcome to the third installment of the Under the Hood – BIRT iHub F-Type blog series. Today, I will discuss troubleshooting practices in a iHub environment. I'll share a process flow for isolating issues, offer details about using log files to investigate issues, and suggest a few tips and third-party tools that can make all the difference when troubleshooting. Isolating an ...<a href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/" target="_blank">Read More</a></p>
+					<p><a target="_blank" href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/">Under the Hood - BIRT iHub F-Type: Troubleshooting</a><br />
+					Welcome to the third installment of the Under the Hood - BIRT iHub F-Type blog series. Today, I will discuss troubleshooting practices in a iHub environment. I'll share a process flow for isolating issues, offer details about using log files to investigate issues, and suggest a few tips and third-party tools that can make all the difference when troubleshooting. Isolating an ...<a href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/" target="_blank">Read More</a></p>
 
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
