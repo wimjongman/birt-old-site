@@ -68,10 +68,9 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">BIRT-based Products</h2>
 					<p>There are many products that are built using BIRT. Some of those products are listed below:
 					<ul class="eclipse-list">
-						<li><a href="http://www.actuate.com/products/birt-designers/birt-designer-pro/" target="_blank">BIRT Designer Professional</a> (Actuate)</li>
-						<li><a href="http://www.actuate.com/resources/product-downloads/#ihub" target="_blank">BIRT iHub F-Type</a> - Free BIRT Server (Actuate)</li>
-						<li><a href="http://www.actuate.com/products/birt-ihub-visualization-platform/" target="_blank">BIRT iHub</a> (Actuate)</li>
-						<li><a href="http://www.actuate.com/products/birt-ihub-ondemand/" target="_blank">BIRT onDemand</a> (Actuate)</li>
+						<li><a href="http://birt.actuate.com/products/analytics-designers/analytics-designer" target="_blank">OpenText Actuate Analytics Designer</a></li>
+
+						<li><a href="http://birt.actuate.com/products/ihub" target="_blank">OpenText Actuate Information Hub (iHub)</a></li>
 					</ul>
 					</p>
 					<p>If you have a BIRT-based product you'd like to include on this page, send an email to the <a href="mailto:webmaster@actuate.com?Subject=BIRT-based%20Product">BIRT webmaster</a>.</p>
