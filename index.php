@@ -65,10 +65,7 @@ $PagePart 	= new PagePart();
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
 						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/256-eclipsecon-north-america/">EclipseCon | North America</a><br />Burlingame, CA<br />March 9-12</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/263-birt-live-m%C3%BCnchen/">BIRT Live! | Munich</a><br />Munich, Germany<br />March 12</li>
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/254-big-data-techcon-boston/">Big Data TechCon | Boston</a><br />Boston, MA<br />April 26-28</li>							
-						</ul>
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/255-oscon-2015/">OSCON</a><br />Portland, OR<br />July 20-24</li></ul>
 					</p>
 					
 					<div class="clearfix"></div>
@@ -84,8 +81,7 @@ $PagePart 	= new PagePart();
 					<p><a target="_blank" href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/">Under the Hood - BIRT iHub F-Type: Troubleshooting</a><br />
 					Welcome to the third installment of the Under the Hood - BIRT iHub F-Type blog series. Today, I will discuss troubleshooting practices in a iHub environment. I'll share a process flow for isolating issues, offer details about using log files to investigate issues, and suggest a few tips and third-party tools that can make all the difference when troubleshooting. Isolating an ...<a href="http://blogs.actuate.com/under-the-hood-birt-ihub-f-type-troubleshooting/" target="_blank">Read More</a></p>
 
-					<p><a target="_blank" href="http://blogs.actuate.com/announcing-birt-ihub-f-type-3-1/">Announcing BIRT iHub F-Type 3.1</a><br />
-					Actuate (now OpenText) has released BIRT iHub F-Type 3.1, the latest version of our free report server. Like its commercial cousin BIRT iHub 3.1, the new release of BIRT iHub F-Type now features a REST API and support for third-party custom data visualizations, among other new features. For details about what's new in the product, see the Technical Summary of New Features. These new ...<a href="http://blogs.actuate.com/announcing-birt-ihub-f-type-3-1/" target="_blank">Read More</a></p>
+
 					
 					<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
 
