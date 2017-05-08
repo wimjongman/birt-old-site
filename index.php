@@ -64,8 +64,8 @@ $PagePart 	= new PagePart();
 					
 					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
 					<p>
-						<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/255-oscon-2015/">OSCON</a><br />Portland, OR<br />July 20-24</li></ul>
+						<!--<ul class="eclispe-list-default">
+							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/255-oscon-2015/">OSCON</a><br />Portland, OR<br />July 20-24</li></ul>-->
 					</p>
 					
 					<div class="clearfix"></div>
