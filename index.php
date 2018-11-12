@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once( $_SERVER['DOCUMENT_ROOT'] . "birt/common/config.php");
+require_once( $_SERVER['DOCUMENT_ROOT'] . "/birt/common/config.php");
 $PagePart 	= new PagePart();
 
 ?>
@@ -57,33 +57,6 @@ $PagePart 	= new PagePart();
 					</div>
 				</div>
 			</div>
-
-			<div class="dev-main eclipse-main bord-yellow">
-				<div class="eclipse-main-container">	
-					<h1 class="eclipse-title-main">BIRT Buzz</h1>
-					
-					<h2 class="topic-section-header padding-top-small">Upcoming Events</h2>
-					<p>
-						<!--<ul class="eclispe-list-default">
-							<li><a target="_blank" href="http://developer.actuate.com/community/forum/index.php?/calendar/event/255-oscon-2015/">OSCON</a><br />Portland, OR<br />July 20-24</li></ul>-->
-					</p>
-					
-					<div class="clearfix"></div>
-					<p><br />View Full Calendars: <a href="http://developer.actuate.com/community/forum/index.php?/calendar/" target="_blank">BIRT Developer Center Community Calendar</a> | <a href="http://events.eclipse.org/" target="_blank">Eclipse Calendar</a></p>
-
-					<h2 class="topic-section-header padding-top-small">Recent Blogs</h2>
-					<p><a target="_blank" href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/">How to Add Custom Visualizations in BIRT iHub 3.1</a><br />
-					OpenText recently released BIRT iHub 3.1, the latest version of iHub. The release adds several features, including a REST API and support for Custom Visualizations. In this post, I will explain what custom visualizations are and show you how you can include third-party visualizations in BIRT content with essentially no coding. Custom Visualization Basics Data visualization...<a href="http://blogs.actuate.com/how-to-add-custom-visualizations-in-birt-ihub-3-1/" target="_blank">Read More</a></p>
-					
-					<p><a target="_blank" href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/">Step Aside Cloud, Mobile and Big Data, IoT has just Entered the Room</a><br />
-					This article provides a review of the ARC Advisory Group Forum in Orlando and expands on the ever increasing importance of analytics in relation to the Internet of Things The room I am referring to here is the office of the CIO, or should that be CTO or CDO (Chief Digital Officer), you see even as technology is evolving, the corporate role to manage digital transformation is evolving ...<a href="http://blogs.actuate.com/step-aside-cloud-mobile-and-big-data-iot-has-just-entered-the-room/" target="_blank">Read More</a></p>
-					
-									<p>See More Blogs: <a target="_blank" href="http://blogs.actuate.com/">BIRT Developer Center Community Blogs</a> | <a href="http://birtworld.blogspot.com/" target="_blank">BIRT World</a> | <a href="http://www.planeteclipse.org/planet/" target="_blank">Planet Eclipse Blog</a></p>
-
-				</div>
-			</div>
-
-
 		</div>
 	</div>
 
