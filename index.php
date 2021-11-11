@@ -1,5 +1,8 @@
 <?php
 
+header("Location: https://eclipse.github.io/birt-website");
+die();
+
 session_start();
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . "/birt/common/config.php");
